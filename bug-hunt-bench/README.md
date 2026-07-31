@@ -20,7 +20,7 @@ and 59 of its 60 original fixes were written by an AI agent rather than a person
 **The task (identical for every model, both repos):** find and fix as many planted bugs as you can,
 edit the source in place, keep the checks green (do not weaken tests), and write a `BUGS_FOUND.md`.
 One round per model per repo, reasoning effort `high`, each in its native harness. Exact prompts:
-[prompt.md](prompt.md) (repo 1) and [v2-prompt.md](v2-prompt.md) (repo 2).
+[repo1-prompt.md](repo1-prompt.md) and [repo2-prompt.md](repo2-prompt.md).
 
 **Grading:** each model's diff against the pristine repo is the ground truth — not its own report.
 Scored against a withheld answer key by an independent blind judge per arm, submissions anonymized
@@ -45,11 +45,11 @@ Strict fixes only — no partial credit. [combined-scoreboard.csv](combined-scor
 below). Zero false-positive fixes from any arm on either repo: every extra fix any model applied
 was a genuine unplanted defect.
 
-Per-repo detail: [scoreboard.csv](scoreboard.csv) (repo 1) · [v2-scoreboard.csv](v2-scoreboard.csv)
-(repo 2). Wall-clock, tokens and reconstructed cost: [metrics.csv](metrics.csv) ·
-[v2-metrics.csv](v2-metrics.csv).
+Per-repo detail: [repo1-scoreboard.csv](repo1-scoreboard.csv) · [repo2-scoreboard.csv](repo2-scoreboard.csv).
+Wall-clock, tokens and reconstructed cost: [repo1-metrics.csv](repo1-metrics.csv) ·
+[repo2-metrics.csv](repo2-metrics.csv).
 
-![combined](68-105-bugs-seven-models.png)
+![combined](previous-editions/68-105-bugs-seven-models.png)
 
 ## Findings
 
@@ -107,9 +107,12 @@ same prompts, same blind-judging pipeline:
   nor defect).
 
 New rows are appended to the same CSVs: [combined-scoreboard.csv](combined-scoreboard.csv),
-[scoreboard.csv](scoreboard.csv), [v2-scoreboard.csv](v2-scoreboard.csv),
-[metrics.csv](metrics.csv), [v2-metrics.csv](v2-metrics.csv) (voided false-start rows kept, marked
-`VOID` in notes — the log wins).
+[repo1-scoreboard.csv](repo1-scoreboard.csv), [repo2-scoreboard.csv](repo2-scoreboard.csv),
+[repo1-metrics.csv](repo1-metrics.csv), [repo2-metrics.csv](repo2-metrics.csv) (voided
+false-start rows kept, marked `VOID` in notes — the log wins).
+
+Naming note: earlier commits used a `v2-` file prefix meaning "bench v2" (repo 2). That collided
+with the card edition numbers (V3/V4/V5), so files are now named by repo.
 
 Source post for this wave: [@PawelHuryn on X](https://x.com/PawelHuryn/status/2083279026299588816).
 
@@ -145,11 +148,10 @@ Source post for this wave: [@PawelHuryn on X](https://x.com/PawelHuryn/status/20
   described only by its stack. Private paths are scrubbed; numbers, timestamps and verdicts are as
   produced.
 
-## Per-repo cards
+## Previous editions
 
-![repo 1](70-45-bugs-seven-models.png)
-
-![repo 2](69-60-shipped-bugs-seven-models.png)
+Superseded cards (six- and seven-model boards, per-repo seven-model cards) live in
+[previous-editions/](previous-editions/). The current board is the nine-model card above.
 
 ## Source posts
 

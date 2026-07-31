@@ -1,4 +1,4 @@
-# bug-hunt-bench — 105 planted bugs, two real repos, seven coding models
+# bug-hunt-bench — 105 planted bugs, two real repos, nine coding models
 
 **Question:** Hide bugs in a real codebase, keep the test suite green so nothing points at the
 answers, then ask each frontier coding model — in its own native agentic CLI — to find and fix as
@@ -12,7 +12,7 @@ Run twice, on two codebases that share nothing but a language.
 | What it is | A VS Code / Cursor sidebar extension (ACP client for a coding-agent CLI), ~28K lines TypeScript | A Vite/React/TypeScript LMS backed by Supabase Edge Functions and Clerk, ~60K lines |
 | Bugs | **45** — 16 real shipped bugs reverted from the repo's own fix history, 29 authored in the same style | **60** — *every one* a real regression that shipped and was later fixed, each carrying its own fix-commit SHA |
 | Green checks kept | 922 tests | 53 unit tests + typecheck + production build |
-| Run | Jul 19–26, 2026 | Jul 26, 2026 |
+| Run | Jul 19–26 + Jul 31, 2026 | Jul 26 + Jul 31, 2026 |
 
 Repo 2 is the stronger construction: no authored bugs at all. It was also built largely by AI,
 and 59 of its 60 original fixes were written by an AI agent rather than a person.
@@ -41,8 +41,9 @@ Strict fixes only — no partial credit. [combined-scoreboard.csv](combined-scor
 | **Opus 4.8** | Claude Code | **9** | 2 | 7 | 1 | 34.8 min | $19.35 |
 | **Sonnet 5** | Claude Code | **9** | 1 | 8 | 4 | 32.8 min | $15.12 |
 
-**63 of the 105 bugs survived every model.** Zero false-positive fixes from any arm on either repo:
-every extra fix any model applied was a genuine unplanted defect.
+**63 of the 105 bugs survived every model** in this seven-model wave (60 after the Jul 31 wave
+below). Zero false-positive fixes from any arm on either repo: every extra fix any model applied
+was a genuine unplanted defect.
 
 Per-repo detail: [scoreboard.csv](scoreboard.csv) (repo 1) · [v2-scoreboard.csv](v2-scoreboard.csv)
 (repo 2). Wall-clock, tokens and reconstructed cost: [metrics.csv](metrics.csv) ·
@@ -69,6 +70,49 @@ Per-repo detail: [scoreboard.csv](scoreboard.csv) (repo 1) · [v2-scoreboard.csv
   arm by a wide margin and placed fifth. Kimi K3 matched Opus 5 for a third less money and three
   times the wall clock.
 
+## The Jul 31 wave — two new models, the effort dial, a Sol re-run
+
+On Jul 30 OpenAI cut GPT-5.6 Luna's API price by 80% and shipped serving improvements; DeepSeek
+released V4-Flash the next morning. Four new arms ran the identical two-repo battery on Jul 31,
+same prompts, same blind-judging pipeline:
+
+| Arm | Effort | Fixed /105 | Repo 1 /45 | Repo 2 /60 | Genuine extras | Wall | Cost (list-equiv) |
+|---|---|--:|--:|--:|--:|--:|--:|
+| **GPT-5.6 Sol (re-run)** | high | **34** | 13 | 21 | 28 | 66.7 min | $33.92 |
+| **GPT-5.6 Luna** | **max** | **33** | 17 | 16 | 31 | 85.7 min | $1.80 floor |
+| **GPT-5.6 Luna** | high | **13** | 5 | 8 | 22 | 64.1 min | $0.57 floor |
+| **DeepSeek V4-Flash** | high | **8** | 4 | 4 | 4 | 24.9 min | $0.61 |
+
+![jul 31 wave — full nine-model board](73-bug-hunt-bench-v5.png)
+
+- **Luna at max effort beats Fable 5 on both axes** — 33 strict fixes vs 24, $1.80 vs $68.07 —
+  and lands one fix behind the flagship Sol re-run at ~1/19th of its cost. Post-price-cut list
+  rates ($0.20/M input, $1.20/M output); the estimate is a **floor** because requests over 272K
+  input tokens bill at 2x input / 1.5x output and the flat estimate cannot see them.
+- **The effort dial is worth 2.5x on Luna.** Same model, same prices: 13 strict fixes at `high`,
+  33 at `max`. On repo 1, `max` was also 2.4x *faster* than `high` (21.5 vs 51.1 min).
+- **The Sol re-run measures OpenAI's serving update.** Repo 2: 21 fixes vs 18 in the Jul 26 run,
+  29.5 min vs 48.3, $14.36 vs $18.40 — better on all three axes. Repo 1: the same 13-fix count as
+  Jul 26 but a partially different set of bugs, slower and pricier on that leg. List prices
+  unchanged; the wall/cost gains are serving-side.
+- **DeepSeek V4-Flash is last on coverage and untouchable on absolute price**: 8 of 105 for $0.61
+  total (real OpenRouter bill cross-checked at $0.62). Ran through the same OpenRouter shim as
+  Kimi K3, reasoning effort high, 1M context.
+- **Survivors: 63 → 60.** Luna-high fixed one repo-1 bug that had survived all prior arms
+  (including Luna-max — different effort levels catch different bugs), and the Sol re-run fixed
+  two repo-2 survivors. Every other new-arm fix was already covered. 60 of 105 have now survived
+  every arm ever run, across nine models and eleven scored runs.
+- **Zero false-positive fixes again.** All extras across the four new arms were judged genuine;
+  two arms each made one additional cosmetic, non-functional change (classified as neither fix
+  nor defect).
+
+New rows are appended to the same CSVs: [combined-scoreboard.csv](combined-scoreboard.csv),
+[scoreboard.csv](scoreboard.csv), [v2-scoreboard.csv](v2-scoreboard.csv),
+[metrics.csv](metrics.csv), [v2-metrics.csv](v2-metrics.csv) (voided false-start rows kept, marked
+`VOID` in notes — the log wins).
+
+Source post for this wave: [@PawelHuryn on X](https://x.com/PawelHuryn/status/2083279026299588816).
+
 ## Method notes & caveats
 
 - **n = 1 per cell.** One round per model per repo. Re-scoring repo 2 under the same judge moved one
@@ -82,7 +126,12 @@ Per-repo detail: [scoreboard.csv](scoreboard.csv) (repo 1) · [v2-scoreboard.csv
   grades so no model scores its own submission. Re-judging repo 1 under the new routing reproduced
   **all six previously published arms exactly** — strict fixes and extras, zero delta. That is what
   makes the two halves of the /105 addable. Details and two further controls:
-  [judge-calibration.md](judge-calibration.md).
+  [judge-calibration.md](judge-calibration.md). The Jul 31 wave keeps the same rule: the three
+  GPT-5.6 arms were graded by Grok 4.5, DeepSeek V4-Flash by GPT-5.5.
+- **Jul 31 wall-clock ran under concurrent load.** The four new arms ran two-at-a-time to four-at-
+  a-time on one machine (the earlier waves were sequential), so their wall-clock is comparable
+  within the wave but overstated against the sequential baselines. Fixes, tokens and cost are
+  unaffected.
 - **"Planted" undersells the set.** All 60 repo-2 bugs are real shipped regressions. On repo 1, 16 of
   45 are (a documented floor — squashed release commits hide bugs fixed inside one cycle).
 - **The benchmarks are withheld to keep them usable.** The **answer keys, the seeded sources, and the
@@ -106,6 +155,12 @@ Per-repo detail: [scoreboard.csv](scoreboard.csv) (repo 1) · [v2-scoreboard.csv
 
 [@PawelHuryn on X](https://x.com/PawelHuryn/status/2078834615519731832) — the original single-repo
 run. The two-repo result follows.
+
+[@PawelHuryn on X](https://x.com/PawelHuryn/status/2081510124439417200) — the two-repo,
+seven-model thread.
+
+[@PawelHuryn on X](https://x.com/PawelHuryn/status/2083279026299588816) — the Jul 31 wave: Luna at
+max effort, better and cheaper than Fable 5.
 
 ## License
 

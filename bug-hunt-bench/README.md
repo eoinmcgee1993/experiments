@@ -79,16 +79,17 @@ same prompts, same blind-judging pipeline:
 | Arm | Effort | Fixed /105 | Repo 1 /45 | Repo 2 /60 | Genuine extras | Wall | Cost (list-equiv) |
 |---|---|--:|--:|--:|--:|--:|--:|
 | **GPT-5.6 Sol (re-run)** | high | **34** | 13 | 21 | 28 | 66.7 min | $33.92 |
-| **GPT-5.6 Luna** | **max** | **33** | 17 | 16 | 31 | 85.7 min | $1.80 floor |
-| **GPT-5.6 Luna** | high | **13** | 5 | 8 | 22 | 64.1 min | $0.57 floor |
+| **GPT-5.6 Luna** | **max** | **33** | 17 | 16 | 31 | 85.7 min | $1.80 |
+| **GPT-5.6 Luna** | high | **13** | 5 | 8 | 22 | 64.1 min | $0.57 |
 | **DeepSeek V4-Flash** | high | **8** | 4 | 4 | 4 | 24.9 min | $0.61 |
 
 ![jul 31 wave — full nine-model board](73-bug-hunt-bench-v5.png)
 
 - **Luna at max effort beats Fable 5 on both axes** — 33 strict fixes vs 24, $1.80 vs $68.07 —
   and lands one fix behind the flagship Sol re-run at ~1/19th of its cost. Post-price-cut list
-  rates ($0.20/M input, $1.20/M output); the estimate is a **floor** because requests over 272K
-  input tokens bill at 2x input / 1.5x output and the flat estimate cannot see them.
+  rates ($0.20/M input, $1.20/M output). Exact, not a floor: re-derived per-request from the
+  Codex CLI session rollouts - the CLI pins context at 258,400 tokens, below OpenAI's 272K
+  long-context surcharge line, so no request in any run hit surcharge pricing.
 - **The effort dial is worth 2.5x on Luna.** Same model, same prices: 13 strict fixes at `high`,
   33 at `max`. On repo 1, `max` was also 2.4x *faster* than `high` (21.5 vs 51.1 min).
 - **The Sol re-run measures OpenAI's serving update.** Repo 2: 21 fixes vs 18 in the Jul 26 run,

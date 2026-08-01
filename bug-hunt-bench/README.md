@@ -73,8 +73,8 @@ Wall-clock, tokens and reconstructed cost: [repo1-metrics.csv](repo1-metrics.csv
 ## The Jul 31 wave — two new models, the effort dial, a Sol re-run
 
 On Jul 30 OpenAI cut GPT-5.6 Luna's API price by 80% and shipped serving improvements; DeepSeek
-released V4-Flash the next morning. Four new arms ran the identical two-repo battery on Jul 31,
-same prompts, same blind-judging pipeline:
+shipped a re-post-trained V4-Flash revision (`-0731`) the next morning. Four new arms ran the
+identical two-repo battery on Jul 31, same prompts, same blind-judging pipeline:
 
 | Arm | Effort | Fixed /105 | Repo 1 /45 | Repo 2 /60 | Genuine extras | Wall | Cost (list-equiv) |
 |---|---|--:|--:|--:|--:|--:|--:|
@@ -98,7 +98,11 @@ same prompts, same blind-judging pipeline:
   unchanged; the wall/cost gains are serving-side.
 - **DeepSeek V4-Flash is last on coverage and untouchable on absolute price**: 8 of 105 for $0.61
   total (real OpenRouter bill cross-checked at $0.62). Ran through the same OpenRouter shim as
-  Kimi K3, reasoning effort high, 1M context.
+  Kimi K3, reasoning effort high, 1M context. **Version correction (Aug 1):** the base OpenRouter
+  slug this run used resolves to the **April snapshot** (`deepseek-v4-flash-20260423` on every
+  provider behind it, per the endpoints API) — not the Jul 31 re-post-trained revision, which is
+  a separate `-0731` model id. So this row measures the April model. The `-0731` revision was
+  benched separately on Aug 1.
 - **Survivors: 63 → 60.** Luna-high fixed one repo-1 bug that had survived all prior arms
   (including Luna-max — different effort levels catch different bugs), and the Sol re-run fixed
   two repo-2 survivors. Every other new-arm fix was already covered. 60 of 105 have now survived

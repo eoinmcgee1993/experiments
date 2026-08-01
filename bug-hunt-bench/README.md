@@ -1,4 +1,4 @@
-# bug-hunt-bench — 105 planted bugs, two real repos, nine coding models
+# bug-hunt-bench — 105 planted bugs, two real repos, ten coding models
 
 **Question:** Hide bugs in a real codebase, keep the test suite green so nothing points at the
 answers, then ask each frontier coding model — in its own native agentic CLI — to find and fix as
@@ -164,6 +164,38 @@ see method notes) are kept and marked `VOID`.
 
 Source post for this wave: [@PawelHuryn on X](https://x.com/PawelHuryn/status/2083465617697333411)
 — the model-routing table the 14 runs add up to.
+
+## The DeepSeek follow-up (Aug 1) — the `-0731` revision and V4-Pro
+
+The version correction above raised the obvious question: what does the actual Jul 31 revision
+score? Two more arms ran the identical battery on Aug 1 through the same OpenRouter shim,
+judged blind by GPT-5.5:
+
+| Arm | Fixed /105 | Repo 1 /45 | Repo 2 /60 | Genuine extras | Wall | Cost (list-est) | Real OR bill |
+|---|--:|--:|--:|--:|--:|--:|--:|
+| **DeepSeek V4-Flash `-0731`** | **14** | 6 | 8 | 0 | 48.5 min | $1.74 | **$1.52** |
+| **DeepSeek V4-Pro** | **10** | 5 | 5 | 1 | 27.6 min | $1.26 | **$5.54** |
+
+![current board — 10 models, 15 runs](75-bug-hunt-bench-v7.png)
+
+- **The re-post-training is real on this bench too**: 8 → 14 strict fixes (+75%) over the April
+  snapshot, same prompts, same judging. That moves V4-Flash from last place to just under
+  Grok 4.5, at the second-lowest real bill on the board after Luna-high.
+- **It killed an all-time survivor.** One repo-2 bug had survived every previous run; the
+  `-0731` revision fixed it. **53 of 105 have now survived everything** — ten models, seventeen
+  scored runs.
+- **The revision changed the model's character**: zero extra fixes (the April weights found 4
+  genuine unplanted defects) and two claimed-only report entries (April had none). Better at
+  the assignment, less exploratory, slightly overclaiming.
+- **Bug-level churn**: on repo 1 the revision's fixes are a strict superset of April's; on
+  repo 2 it found 6 bugs April missed but *lost* 2 that April had fixed.
+- **V4-Pro underdelivers its price class**: 10 of 105 — above Sonnet 5 and Opus 4.8, below both
+  Grok runs — and its real bill came out **4.4x the list-price estimate**: cached context billed
+  at ~$0.36/M against a listed $0.003625/M cache-read rate. Flash's cache pricing was honored
+  both times, to the cent in April. On agentic workloads (~80% of tokens are cached re-reads),
+  V4-Pro's effective price is several times list.
+- The April V4-Flash run stays in the CSVs under the correction note above; the current board
+  carries the `-0731` revision in its place.
 
 ## Method notes & caveats
 

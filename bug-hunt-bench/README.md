@@ -181,7 +181,7 @@ judged blind by GPT-5.5:
 | **DeepSeek V4-Flash `-0731`** | **14** | 6 | 8 | 0 | 48.5 min | $1.74 | **$1.52** |
 | **DeepSeek V4-Pro** | **10** | 5 | 5 | 1 | 27.6 min | $1.26 | **$5.54** |
 
-![current board — 10 models, 15 runs](75-bug-hunt-bench-v7.png)
+![current board — 10 models, 14 runs](75-bug-hunt-bench-v7.png)
 
 - **The re-post-training is real on this bench too**: 8 → 14 strict fixes (+75%) over the April
   snapshot, same prompts, same judging. That moves V4-Flash from last place to just under

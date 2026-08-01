@@ -123,30 +123,35 @@ Source post for this wave: [@PawelHuryn on X](https://x.com/PawelHuryn/status/20
 
 ## The Aug 1 wave — the effort dial at max
 
-Four models re-ran the identical two-repo battery at reasoning effort `max`, with their `high`
-runs above as baselines. Same prompts, same blind-judging pipeline, same routing rule (no model
-grades its own family: Sol graded by Grok 4.5, the other three by GPT-5.5).
+Four arms re-ran the identical two-repo battery requesting reasoning effort `max`, with their
+`high` runs above as baselines. Same prompts, same blind-judging pipeline, same routing rule (no
+model grades its own family: Sol graded by Grok 4.5, the other three by GPT-5.5). **One of the
+four turned out not to be max** — see the Grok row below.
 
 | Arm | Effort | Fixed /105 | vs high | Repo 1 /45 | Repo 2 /60 | Genuine extras | Wall | Cost (list-equiv) |
 |---|---|--:|--:|--:|--:|--:|--:|--:|
 | **GPT-5.6 Sol** | **max** | **42** | +8 | 19 | 23 | 40 | 163.8 min | $69.61 |
 | **Fable 5** | **max** | **29** | +5 | 12 | 17 | 5 | 57.3 min | $104.49 |
 | **Opus 5** | **max** | **27** | +6 | 13 | 14 | 2 | 60.0 min | $51.33 |
-| **Grok 4.5** | **max** | **13** | **-3** | 5 | 8 | 5 | 25.4 min | $10.94 floor |
+| **Grok 4.5** | high (re-run — no `max` exists) | **13** | — | 5 | 8 | 5 | 25.4 min | $10.94 floor |
 
-The full effort dial, strict fixes /105:
+The full effort dial, strict fixes /105 (Grok has no `max` level, so no dial point):
 
-| Effort | GPT-5.6 Sol | GPT-5.6 Luna | Fable 5 | Opus 5 | Grok 4.5 |
-|---|--:|--:|--:|--:|--:|
-| high | 34 | 13 | 24 | 21 | 16 |
-| max | 42 | 33 | 29 | 27 | 13 |
+| Effort | GPT-5.6 Sol | GPT-5.6 Luna | Fable 5 | Opus 5 |
+|---|--:|--:|--:|--:|
+| high | 34 | 13 | 24 | 21 |
+| max | 42 | 33 | 29 | 27 |
 
 ![the current board — 9 models, 14 runs](74-bug-hunt-bench-v6.png)
 
 - **Sol at max is the all-time leader**: 42 of 105 strict, plus 40 genuine extras — for 2.7 hours
   of wall clock and $69.61, the longest and second-priciest run on the board.
-- **The dial is not monotonic. Grok 4.5 got *worse* at max**: 13 strict fixes vs 16 at high, on a
-  higher bill ($10.94 vs $8.40, both reconstructed floors).
+- **Effort correction (Aug 1): the Grok arm is a variance measurement, not a dial point.** An
+  earlier version of this section read Grok's 16 → 13 as a negative dial response. It isn't:
+  grok-4.5 offers only `high / medium / low`, and the grok CLI **silently runs `high`** when
+  passed an unknown value (verified from the ACP session's advertised active effort). So the two
+  Grok runs are the *same setting*, and 16 vs 13 strict fixes is a live receipt for the
+  run-to-run noise the method notes warn about ($10.94 vs $8.40 reconstructed floors).
 - **Opus 5 at max starts claiming fixes it didn't make**: 5 claimed-only report entries (2 on
   repo 1, 3 on repo 2) vs zero in its high run. Fable 5 at max stayed clean — zero claimed-only
   on either repo.

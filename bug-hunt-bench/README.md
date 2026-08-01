@@ -12,7 +12,7 @@ Run twice, on two codebases that share nothing but a language.
 | What it is | A VS Code / Cursor sidebar extension (ACP client for a coding-agent CLI), ~28K lines TypeScript | A Vite/React/TypeScript LMS backed by Supabase Edge Functions and Clerk, ~60K lines |
 | Bugs | **45** — 16 real shipped bugs reverted from the repo's own fix history, 29 authored in the same style | **60** — *every one* a real regression that shipped and was later fixed, each carrying its own fix-commit SHA |
 | Green checks kept | 922 tests | 53 unit tests + typecheck + production build |
-| Run | Jul 19–26 + Jul 31, 2026 | Jul 26 + Jul 31, 2026 |
+| Run | Jul 19–26 + Jul 31 – Aug 1, 2026 | Jul 26 + Jul 31 – Aug 1, 2026 |
 
 Repo 2 is the stronger construction: no authored bugs at all. It was also built largely by AI,
 and 59 of its 60 original fixes were written by an AI agent rather than a person.
@@ -41,9 +41,9 @@ Strict fixes only — no partial credit. [combined-scoreboard.csv](combined-scor
 | **Opus 4.8** | Claude Code | **9** | 2 | 7 | 1 | 34.8 min | $19.35 |
 | **Sonnet 5** | Claude Code | **9** | 1 | 8 | 4 | 32.8 min | $15.12 |
 
-**63 of the 105 bugs survived every model** in this seven-model wave (60 after the Jul 31 wave
-below). Zero false-positive fixes from any arm on either repo: every extra fix any model applied
-was a genuine unplanted defect.
+**63 of the 105 bugs survived every model** in this seven-model wave (60 after the Jul 31 wave,
+54 after the Aug 1 max wave below). Zero false-positive fixes from any arm on either repo: every
+extra fix any model applied was a genuine unplanted defect.
 
 Per-repo detail: [repo1-scoreboard.csv](repo1-scoreboard.csv) · [repo2-scoreboard.csv](repo2-scoreboard.csv).
 Wall-clock, tokens and reconstructed cost: [repo1-metrics.csv](repo1-metrics.csv) ·
@@ -117,6 +117,47 @@ with the card edition numbers (V3/V4/V5), so files are now named by repo.
 
 Source post for this wave: [@PawelHuryn on X](https://x.com/PawelHuryn/status/2083279026299588816).
 
+## The Aug 1 wave — the effort dial at max
+
+Four models re-ran the identical two-repo battery at reasoning effort `max`, with their `high`
+runs above as baselines. Same prompts, same blind-judging pipeline, same routing rule (no model
+grades its own family: Sol graded by Grok 4.5, the other three by GPT-5.5).
+
+| Arm | Effort | Fixed /105 | vs high | Repo 1 /45 | Repo 2 /60 | Genuine extras | Wall | Cost (list-equiv) |
+|---|---|--:|--:|--:|--:|--:|--:|--:|
+| **GPT-5.6 Sol** | **max** | **42** | +8 | 19 | 23 | 40 | 163.8 min | $69.61 |
+| **Fable 5** | **max** | **29** | +5 | 12 | 17 | 5 | 57.3 min | $104.49 |
+| **Opus 5** | **max** | **27** | +6 | 13 | 14 | 2 | 60.0 min | $51.33 |
+| **Grok 4.5** | **max** | **13** | **-3** | 5 | 8 | 5 | 25.4 min | $10.94 floor |
+
+The full effort dial, strict fixes /105:
+
+| Effort | GPT-5.6 Sol | GPT-5.6 Luna | Fable 5 | Opus 5 | Grok 4.5 |
+|---|--:|--:|--:|--:|--:|
+| high | 34 | 13 | 24 | 21 | 16 |
+| max | 42 | 33 | 29 | 27 | 13 |
+
+![the current board — 9 models, 14 runs](74-bug-hunt-bench-v6.png)
+
+- **Sol at max is the all-time leader**: 42 of 105 strict, plus 40 genuine extras — for 2.7 hours
+  of wall clock and $69.61, the longest and second-priciest run on the board.
+- **The dial is not monotonic. Grok 4.5 got *worse* at max**: 13 strict fixes vs 16 at high, on a
+  higher bill ($10.94 vs $8.40, both reconstructed floors).
+- **Opus 5 at max starts claiming fixes it didn't make**: 5 claimed-only report entries (2 on
+  repo 1, 3 on repo 2) vs zero in its high run. Fable 5 at max stayed clean — zero claimed-only
+  on either repo.
+- **Fable 5 at max is the priciest run on the board and added zero new coverage**: $104.49 for
+  29 fixes, every one already fixed by some earlier run.
+- **Survivors: 60 → 54.** Six bugs that had survived every earlier arm fell in this wave.
+  **54 of 105 have survived everything** — nine models, fourteen scored runs.
+- **Zero false-positive fixes, again**, now across all fourteen runs: every extra fix in this
+  wave was judged genuine (three further changes classified cosmetic, not fixes).
+- Sol-max's cost is exact, not a floor, for the same reason as Luna's: the Codex CLI's
+  258,400-token context pin keeps every request below OpenAI's long-context surcharge line.
+
+New rows are appended to the same CSVs as before; the two grok false-starts (a CLI auth clash,
+see method notes) are kept and marked `VOID`.
+
 ## Method notes & caveats
 
 - **n = 1 per cell.** One round per model per repo. Re-scoring repo 2 under the same judge moved one
@@ -131,11 +172,16 @@ Source post for this wave: [@PawelHuryn on X](https://x.com/PawelHuryn/status/20
   **all six previously published arms exactly** — strict fixes and extras, zero delta. That is what
   makes the two halves of the /105 addable. Details and two further controls:
   [judge-calibration.md](judge-calibration.md). The Jul 31 wave keeps the same rule: the three
-  GPT-5.6 arms were graded by Grok 4.5, DeepSeek V4-Flash by GPT-5.5.
+  GPT-5.6 arms were graded by Grok 4.5, DeepSeek V4-Flash by GPT-5.5. The Aug 1 max wave likewise:
+  Sol-max by Grok 4.5, the Fable, Opus and Grok max arms by GPT-5.5. One GPT-5.5 packet came back
+  schema-invalid, was recorded as `judge_failed`, and scored clean on retry.
 - **Jul 31 wall-clock ran under concurrent load.** The four new arms ran two-at-a-time to four-at-
   a-time on one machine (the earlier waves were sequential), so their wall-clock is comparable
   within the wave but overstated against the sequential baselines. Fixes, tokens and cost are
-  unaffected.
+  unaffected. The Aug 1 max wave ran under mixed concurrency with one hard exception: the grok CLI
+  refreshes a shared credentials file on read, so two concurrent grok processes can race and wipe
+  it — both initial grok-max starts died exactly that way (the `VOID` rows in the metrics CSVs),
+  and every grok run and grok-judged verdict after that ran serialized.
 - **"Planted" undersells the set.** All 60 repo-2 bugs are real shipped regressions. On repo 1, 16 of
   45 are (a documented floor — squashed release commits hide bugs fixed inside one cycle).
 - **The benchmarks are withheld to keep them usable.** The **answer keys, the seeded sources, and the

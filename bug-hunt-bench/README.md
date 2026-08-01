@@ -158,6 +158,9 @@ The full effort dial, strict fixes /105:
 New rows are appended to the same CSVs as before; the two grok false-starts (a CLI auth clash,
 see method notes) are kept and marked `VOID`.
 
+Source post for this wave: [@PawelHuryn on X](https://x.com/PawelHuryn/status/2083465617697333411)
+— the model-routing table the 14 runs add up to.
+
 ## Method notes & caveats
 
 - **n = 1 per cell.** One round per model per repo. Re-scoring repo 2 under the same judge moved one
@@ -210,6 +213,9 @@ seven-model thread.
 
 [@PawelHuryn on X](https://x.com/PawelHuryn/status/2083279026299588816) — the Jul 31 wave: Luna at
 max effort, better and cheaper than Fable 5.
+
+[@PawelHuryn on X](https://x.com/PawelHuryn/status/2083465617697333411) — the Aug 1 max wave:
+which model for which job, after 105 bugs, 9 models, 14 runs.
 
 ## License
 

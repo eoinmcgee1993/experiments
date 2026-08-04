@@ -1,0 +1,68 @@
+{
+ "version": 1,
+ "anonymization_seed": null,
+ "partial_weight": 0.5,
+ "benchmark": {
+  "pristine_repo": "<GH-ROOT>\\grok-build-vscode-benchmark",
+  "runs_root": "<GH-ROOT>\\gbvb-runs",
+  "answer_key": "{editor}\\experiments\\grok-build-vscode-benchmark\\answer-key.md",
+  "results_dir": "{editor}\\experiments\\grok-build-vscode-benchmark\\results\\scoring",
+  "report_file": "BUGS_FOUND.md",
+  "expected_bug_count": 45,
+  "bug_id_pattern": "[A-Z]\\d{1,2}"
+ },
+ "arms": {
+  "qwen38max": {
+   "display_name": "Qwen3.8-Max",
+   "status": "auto",
+   "redact_terms": [
+    "Qwen3.8-Max",
+    "Qwen3.8-27B",
+    "Qwen3.8",
+    "Qwen3-Max",
+    "Qwen",
+    "Alibaba",
+    "Tongyi",
+    "3.8-Max"
+   ]
+  }
+ },
+ "diff": {
+  "exclude_dirs": [
+   ".git",
+   "node_modules",
+   "dist"
+  ],
+  "exclude_files": [
+   "BUGS_FOUND.md"
+  ],
+  "context_lines": 5,
+  "max_diff_bytes": 2000000
+ },
+ "max_parallel_judges": 1,
+ "default_judge": "codex",
+ "judge_routing": {
+  "*": "codex"
+ },
+ "judges": {
+  "codex": {
+   "command": [
+    "{codex_binary}",
+    "exec",
+    "-",
+    "--skip-git-repo-check",
+    "-s",
+    "read-only",
+    "-c",
+    "model_reasoning_effort={reasoning_effort}",
+    "-m",
+    "{model}",
+    "-o",
+    "{output_file}"
+   ],
+   "model": "gpt-5.5",
+   "reasoning_effort": "high",
+   "timeout_seconds": 7200
+  }
+ }
+}

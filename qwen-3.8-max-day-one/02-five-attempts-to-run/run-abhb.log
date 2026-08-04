@@ -1,0 +1,272 @@
+
+=== qwen38max run (qwen3.8-max) ===
+[prepare] dependency install (repo): npm ci
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: vite@8.1.0
+npm warn Found: @types/node@22.7.9
+npm warn node_modules/@types/node
+npm warn   dev @types/node@"^22.5.5" from the root project
+npm warn   3 more (@types/ws, vite, vitest)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peerOptional @types/node@"^20.19.0 || >=22.12.0" from vite@8.1.0
+npm warn node_modules/vitest/node_modules/vite
+npm warn   vite@"^6.0.0 || ^7.0.0 || ^8.0.0" from vitest@4.1.9
+npm warn   node_modules/vitest
+npm warn   1 more (@vitest/mocker)
+npm warn
+npm warn Conflicting peer dependency: @types/node@26.1.2
+npm warn node_modules/@types/node
+npm warn   peerOptional @types/node@"^20.19.0 || >=22.12.0" from vite@8.1.0
+npm warn   node_modules/vitest/node_modules/vite
+npm warn     vite@"^6.0.0 || ^7.0.0 || ^8.0.0" from vitest@4.1.9
+npm warn     node_modules/vitest
+npm warn     1 more (@vitest/mocker)
+npm warn deprecated @types/dompurify@3.2.0: This is a stub types definition. dompurify provides its own type definitions, so you do not need this installed.
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated npmlog@5.0.1: This package is no longer supported.
+npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm warn deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+npm warn deprecated are-we-there-yet@2.0.0: This package is no longer supported.
+npm warn deprecated domexception@4.0.0: Use your platform's native DOMException instead
+npm warn deprecated gauge@3.0.2: This package is no longer supported.
+npm warn deprecated node-domexception@1.0.0: Use your platform's native DOMException instead
+
+added 722 packages, and audited 723 packages in 4m
+
+126 packages are looking for funding
+  run `npm fund` for details
+
+33 vulnerabilities (3 low, 6 moderate, 21 high, 3 critical)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues possible (including breaking changes), run:
+  npm audit fix --force
+
+Some issues need review, and may require choosing
+a different dependency.
+
+Run `npm audit` for details.
+[prepare] health check 1 (repo): npm test
+
+> vite_react_shadcn_ts@0.0.0 test
+> vitest run tests/unit && tsc -p . --noEmit && node scripts/check-syntax.mjs
+
+
+ RUN  v4.1.9 <GH-ROOT>/abhb-runs/.qwen38max.staging-89b5b6abaee74c1c92a3680b284db86b
+
+
+ Test Files  5 passed (5)
+      Tests  53 passed (53)
+   Start at  09:11:23
+   Duration  38.77s (transform 1.05s, setup 0ms, import 12.65s, tests 182ms, environment 1ms)
+
+309 files parsed, 0 with syntax errors
+[prepare] health check 2 (repo): npm run build
+
+> vite_react_shadcn_ts@0.0.0 build
+> vite build
+
+[36mvite v5.4.10 [32mbuilding for production...[36m[39m
+transforming...
+Browserslist: browsers data (caniuse-lite) is 22 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[33m[vite:css] @import must precede all other statements (besides @charset or empty @layer)
+424|  
+425|  /* Clerk UI overrides moved to a dedicated stylesheet */
+426|  @import "./styles/clerk-overrides.css";
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+427|  [39m
+[32m✓[39m 4026 modules transformed.
+rendering chunks...
+computing gzip size...
+[2mdist/[22m[32mindex.html                                       [39m[1m[2m    2.46 kB[22m[1m[22m[2m │ gzip:   0.84 kB[22m
+[2mdist/[22m[32massets/kajabi-logo-BmbEFT72.jpg                  [39m[1m[2m    7.34 kB[22m[1m[22m
+[2mdist/[22m[32massets/apple-logo-B78uWSC9.png                   [39m[1m[2m   11.53 kB[22m[1m[22m
+[2mdist/[22m[32massets/meta-logo-B4iSuiSp.png                    [39m[1m[2m   13.19 kB[22m[1m[22m
+[2mdist/[22m[32massets/salesforce-logo-C9xV-Gw_.png              [39m[1m[2m   20.73 kB[22m[1m[22m
+[2mdist/[22m[32massets/credly-logo-CMhjqbD2.svg                  [39m[1m[2m   21.21 kB[22m[1m[22m[2m │ gzip:   9.33 kB[22m
+[2mdist/[22m[32massets/google-logo-DBIJS0XQ.png                  [39m[1m[2m   32.76 kB[22m[1m[22m
+[2mdist/[22m[32massets/aws-logo-C9NdpTSX.png                     [39m[1m[2m   34.67 kB[22m[1m[22m
+[2mdist/[22m[32massets/zapier_integration-CjekkGmG.png           [39m[1m[2m  134.23 kB[22m[1m[22m
+[2mdist/[22m[32massets/example_branding-n7nm7ZkW.png             [39m[1m[2m  170.89 kB[22m[1m[22m
+[2mdist/[22m[32massets/made_for_sharing-BSBgW3l5.png             [39m[1m[2m  201.35 kB[22m[1m[22m
+[2mdist/[22m[32massets/analytics-BAB-o96T.png                    [39m[1m[2m  223.31 kB[22m[1m[22m
+[2mdist/[22m[32massets/full_learning_experience-BWQ_qftq.png     [39m[1m[2m  269.62 kB[22m[1m[22m
+[2mdist/[22m[32massets/example_branding_2-C3G5SRCO.png           [39m[1m[2m  300.47 kB[22m[1m[22m
+[2mdist/[22m[32massets/landing-hero-background-new-XejQp_2v.jpg  [39m[1m[2m  304.08 kB[22m[1m[22m
+[2mdist/[22m[32massets/share_1-ULChNp2u.png                      [39m[1m[2m  311.61 kB[22m[1m[22m
+[2mdist/[22m[32massets/verifiable_by_design-CkivUDI9.png         [39m[1m[2m  374.92 kB[22m[1m[22m
+[2mdist/[22m[32massets/certificate_designer-1J0b4FWH.png         [39m[1m[2m  414.94 kB[22m[1m[22m
+[2mdist/[22m[32massets/certificate_designer_2-CYBO9T2l.png       [39m[1m[2m  415.11 kB[22m[1m[22m
+[2mdist/[22m[32massets/certificate_templates-D3M5E0jp.png        [39m[1m[2m  504.33 kB[22m[1m[22m
+[2mdist/[22m[32massets/share_2-CrvswhzP.png                      [39m[1m[2m  735.63 kB[22m[1m[22m
+[2mdist/[22m[35massets/index-Cytde3nQ.css                        [39m[1m[2m  149.39 kB[22m[1m[22m[2m │ gzip:  24.07 kB[22m
+[2mdist/[22m[36massets/index.es-CpWyrL6T.js                      [39m[1m[2m  150.53 kB[22m[1m[22m[2m │ gzip:  51.48 kB[22m
+[2mdist/[22m[36massets/html2canvas.esm-CBrSDip1.js               [39m[1m[2m  201.42 kB[22m[1m[22m[2m │ gzip:  48.03 kB[22m
+[2mdist/[22m[36massets/index-BFuoZCUp.js                         [39m[1m[33m1,625.63 kB[39m[22m[2m │ gzip: 492.40 kB[22m
+[33m
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.[39m
+[32m✓ built in 1m 48s[39m
+[09:13:59] abhb/qwen38max start (cwd=<GH-ROOT>\abhb-runs\qwen38max, timeout=14400s)
+
+=== qwen38max abhb run (PAYG concurrent, hot-swap session) ===
+[prepare] dependency install (repo): npm ci
+=== qwen38max abhb run (watchdog-proxy attempt) ===
+[prepare] dependency install (repo): npm ci
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: vite@8.1.0
+npm warn Found: @types/node@22.7.9
+npm warn node_modules/@types/node
+npm warn   dev @types/node@"^22.5.5" from the root project
+npm warn   3 more (@types/ws, vite, vitest)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peerOptional @types/node@"^20.19.0 || >=22.12.0" from vite@8.1.0
+npm warn node_modules/vitest/node_modules/vite
+npm warn   vite@"^6.0.0 || ^7.0.0 || ^8.0.0" from vitest@4.1.9
+npm warn   node_modules/vitest
+npm warn   1 more (@vitest/mocker)
+npm warn
+npm warn Conflicting peer dependency: @types/node@26.1.2
+npm warn node_modules/@types/node
+npm warn   peerOptional @types/node@"^20.19.0 || >=22.12.0" from vite@8.1.0
+npm warn   node_modules/vitest/node_modules/vite
+npm warn     vite@"^6.0.0 || ^7.0.0 || ^8.0.0" from vitest@4.1.9
+npm warn     node_modules/vitest
+npm warn     1 more (@vitest/mocker)
+npm warn deprecated @types/dompurify@3.2.0: This is a stub types definition. dompurify provides its own type definitions, so you do not need this installed.
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated npmlog@5.0.1: This package is no longer supported.
+npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm warn deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+npm warn deprecated are-we-there-yet@2.0.0: This package is no longer supported.
+npm warn deprecated domexception@4.0.0: Use your platform's native DOMException instead
+npm warn deprecated gauge@3.0.2: This package is no longer supported.
+npm warn deprecated node-domexception@1.0.0: Use your platform's native DOMException instead
+=== qwen38max abhb run (billing-live attempt, 17:35) ===
+[prepare] dependency install (repo): npm ci
+npm warn ERESOLVE overriding peer dependency
+npm warn While resolving: vite@8.1.0
+npm warn Found: @types/node@22.7.9
+npm warn node_modules/@types/node
+npm warn   dev @types/node@"^22.5.5" from the root project
+npm warn   3 more (@types/ws, vite, vitest)
+npm warn
+npm warn Could not resolve dependency:
+npm warn peerOptional @types/node@"^20.19.0 || >=22.12.0" from vite@8.1.0
+npm warn node_modules/vitest/node_modules/vite
+npm warn   vite@"^6.0.0 || ^7.0.0 || ^8.0.0" from vitest@4.1.9
+npm warn   node_modules/vitest
+npm warn   1 more (@vitest/mocker)
+npm warn
+npm warn Conflicting peer dependency: @types/node@26.1.2
+npm warn node_modules/@types/node
+npm warn   peerOptional @types/node@"^20.19.0 || >=22.12.0" from vite@8.1.0
+npm warn   node_modules/vitest/node_modules/vite
+npm warn     vite@"^6.0.0 || ^7.0.0 || ^8.0.0" from vitest@4.1.9
+npm warn     node_modules/vitest
+npm warn     1 more (@vitest/mocker)
+npm warn deprecated @types/dompurify@3.2.0: This is a stub types definition. dompurify provides its own type definitions, so you do not need this installed.
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated npmlog@5.0.1: This package is no longer supported.
+npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm warn deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+npm warn deprecated are-we-there-yet@2.0.0: This package is no longer supported.
+npm warn deprecated domexception@4.0.0: Use your platform's native DOMException instead
+npm warn deprecated gauge@3.0.2: This package is no longer supported.
+npm warn deprecated node-domexception@1.0.0: Use your platform's native DOMException instead
+
+added 722 packages, and audited 723 packages in 1m
+
+126 packages are looking for funding
+  run `npm fund` for details
+
+33 vulnerabilities (3 low, 6 moderate, 21 high, 3 critical)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues possible (including breaking changes), run:
+  npm audit fix --force
+
+Some issues need review, and may require choosing
+a different dependency.
+
+Run `npm audit` for details.
+[prepare] health check 1 (repo): npm test
+
+> vite_react_shadcn_ts@0.0.0 test
+> vitest run tests/unit && tsc -p . --noEmit && node scripts/check-syntax.mjs
+
+
+ RUN  v4.1.9 <GH-ROOT>/abhb-runs/.qwen38max.staging-3fd79ba518a742eb80c5a6236357a598
+
+
+ Test Files  5 passed (5)
+      Tests  53 passed (53)
+   Start at  17:37:10
+   Duration  33.96s (transform 520ms, setup 0ms, import 10.49s, tests 249ms, environment 1ms)
+
+309 files parsed, 0 with syntax errors
+[prepare] health check 2 (repo): npm run build
+
+> vite_react_shadcn_ts@0.0.0 build
+> vite build
+
+[36mvite v5.4.10 [32mbuilding for production...[36m[39m
+transforming...
+Browserslist: browsers data (caniuse-lite) is 22 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[33m[vite:css] @import must precede all other statements (besides @charset or empty @layer)
+424|  
+425|  /* Clerk UI overrides moved to a dedicated stylesheet */
+426|  @import "./styles/clerk-overrides.css";
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+427|  [39m
+[32m✓[39m 4026 modules transformed.
+rendering chunks...
+computing gzip size...
+[2mdist/[22m[32mindex.html                                       [39m[1m[2m    2.46 kB[22m[1m[22m[2m │ gzip:   0.84 kB[22m
+[2mdist/[22m[32massets/kajabi-logo-BmbEFT72.jpg                  [39m[1m[2m    7.34 kB[22m[1m[22m
+[2mdist/[22m[32massets/apple-logo-B78uWSC9.png                   [39m[1m[2m   11.53 kB[22m[1m[22m
+[2mdist/[22m[32massets/meta-logo-B4iSuiSp.png                    [39m[1m[2m   13.19 kB[22m[1m[22m
+[2mdist/[22m[32massets/salesforce-logo-C9xV-Gw_.png              [39m[1m[2m   20.73 kB[22m[1m[22m
+[2mdist/[22m[32massets/credly-logo-CMhjqbD2.svg                  [39m[1m[2m   21.21 kB[22m[1m[22m[2m │ gzip:   9.33 kB[22m
+[2mdist/[22m[32massets/google-logo-DBIJS0XQ.png                  [39m[1m[2m   32.76 kB[22m[1m[22m
+[2mdist/[22m[32massets/aws-logo-C9NdpTSX.png                     [39m[1m[2m   34.67 kB[22m[1m[22m
+[2mdist/[22m[32massets/zapier_integration-CjekkGmG.png           [39m[1m[2m  134.23 kB[22m[1m[22m
+[2mdist/[22m[32massets/example_branding-n7nm7ZkW.png             [39m[1m[2m  170.89 kB[22m[1m[22m
+[2mdist/[22m[32massets/made_for_sharing-BSBgW3l5.png             [39m[1m[2m  201.35 kB[22m[1m[22m
+[2mdist/[22m[32massets/analytics-BAB-o96T.png                    [39m[1m[2m  223.31 kB[22m[1m[22m
+[2mdist/[22m[32massets/full_learning_experience-BWQ_qftq.png     [39m[1m[2m  269.62 kB[22m[1m[22m
+[2mdist/[22m[32massets/example_branding_2-C3G5SRCO.png           [39m[1m[2m  300.47 kB[22m[1m[22m
+[2mdist/[22m[32massets/landing-hero-background-new-XejQp_2v.jpg  [39m[1m[2m  304.08 kB[22m[1m[22m
+[2mdist/[22m[32massets/share_1-ULChNp2u.png                      [39m[1m[2m  311.61 kB[22m[1m[22m
+[2mdist/[22m[32massets/verifiable_by_design-CkivUDI9.png         [39m[1m[2m  374.92 kB[22m[1m[22m
+[2mdist/[22m[32massets/certificate_designer-1J0b4FWH.png         [39m[1m[2m  414.94 kB[22m[1m[22m
+[2mdist/[22m[32massets/certificate_designer_2-CYBO9T2l.png       [39m[1m[2m  415.11 kB[22m[1m[22m
+[2mdist/[22m[32massets/certificate_templates-D3M5E0jp.png        [39m[1m[2m  504.33 kB[22m[1m[22m
+[2mdist/[22m[32massets/share_2-CrvswhzP.png                      [39m[1m[2m  735.63 kB[22m[1m[22m
+[2mdist/[22m[35massets/index-Cytde3nQ.css                        [39m[1m[2m  149.39 kB[22m[1m[22m[2m │ gzip:  24.07 kB[22m
+[2mdist/[22m[36massets/index.es-CpWyrL6T.js                      [39m[1m[2m  150.53 kB[22m[1m[22m[2m │ gzip:  51.48 kB[22m
+[2mdist/[22m[36massets/html2canvas.esm-CBrSDip1.js               [39m[1m[2m  201.42 kB[22m[1m[22m[2m │ gzip:  48.03 kB[22m
+[2mdist/[22m[36massets/index-BFuoZCUp.js                         [39m[1m[33m1,625.63 kB[39m[22m[2m │ gzip: 492.40 kB[22m
+[33m
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.[39m
+[32m✓ built in 1m 13s[39m
+[17:39:54] abhb/qwen38max start (cwd=<GH-ROOT>\abhb-runs\qwen38max, timeout=14400s)
+[19:01:34] abhb/qwen38max DONE exit=0 wall=4899.6s cost=$14.4555 report=YES

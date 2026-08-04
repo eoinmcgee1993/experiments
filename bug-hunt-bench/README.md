@@ -202,6 +202,40 @@ judged blind by GPT-5.5:
 - The April V4-Flash run stays in the CSVs under the correction note above; the current board
   carries the `-0731` revision in its place.
 
+## The effort-dial probe (Aug 4) — the dial is a serving-path feature, not a model feature
+
+A `max` follow-up was commissioned for V4-Flash-0731 ("run V4-Flash on max"). It never became an
+arm — because the probe that has to precede any effort label came back negative. OpenRouter accepts
+*any* string in `reasoning.effort` with a 200 (no validation), so the only way to know a level is
+real is behavioral: one pinned provider (DeepInfra), temperature 0, fixed seed, the same hard
+prompt, n=3 per level ([effort-dial-probe-dsv4.py](effort-dial-probe-dsv4.py)):
+
+| `reasoning.effort` | reasoning tokens (3 runs) | mean |
+|---|---|--:|
+| (omitted) | 6027 · 5748 · 6219 | 5,998 |
+| low | 6406 · 5836 · 6093 | 6,112 |
+| high | 6174 · 5928 · 6049 | 6,050 |
+| max | 6247 · 6621 · 6147 | 6,338 |
+
+Every level collapses to one trajectory — `low` lands *above* `high`, and omitting the parameter
+entirely is indistinguishable from any setting. The parameter is dropped somewhere between
+OpenRouter and the weights. Raw output: [effort-dial-probe-dsv4.log](effort-dial-probe-dsv4.log).
+
+- **The commissioned max arm was cancelled, not run.** It would have been a second default-effort
+  run published under a `max` label — the exact shape of the Grok effort correction above, this
+  time caught in advance.
+- **The DeepSeek rows above are requested-high, served-default.** The comparison stays
+  apples-to-apples (every DeepSeek arm got identical treatment), but no dial claim can be made for
+  this model on this path.
+- **The dial is per-serving-path, not per-model.** The same discriminator against Qwen3.8-Max on
+  Alibaba's own Anthropic-compatible gateway separates **~10x** between thinking budgets
+  ([qwen-3.8-max-day-one/01](../qwen-3.8-max-day-one/01-two-repo-bug-hunt/)). Third data point in a
+  pattern: GLM-5.2's high-vs-max no-op ([frontier-vs-open-audit/](../frontier-vs-open-audit/)), the
+  grok CLI's silent clamp, now an aggregator dropping the parameter. **Verify the dial before
+  labeling an arm with it.**
+- Caveat: single pinned provider, one prompt, n=3 — enough to cancel a mislabeled arm, thin for
+  claims about DeepSeek's first-party API.
+
 ## Method notes & caveats
 
 - **n = 1 per cell.** One round per model per repo. Re-scoring repo 2 under the same judge moved one

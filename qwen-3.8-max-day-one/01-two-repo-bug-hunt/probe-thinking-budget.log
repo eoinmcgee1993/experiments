@@ -1,0 +1,57 @@
+budget=  1024  ERRORS: ['HTTP 403: {"message":"invalid api-key","type":"authentication_error","param":null,"code":null}', 'HTTP 403: {"message":"invalid api-key","type":"authentication_error","param":null,"code":null}', 'HTTP 403: {"message":"invalid api-key","type":"authentication_error","param":null,"code":null}']
+budget=  8192  ERRORS: ['HTTP 403: {"message":"invalid api-key","type":"authentication_error","param":null,"code":null}', 'HTTP 403: {"message":"invalid api-key","type":"authentication_error","param":null,"code":null}', 'HTTP 403: {"message":"invalid api-key","type":"authentication_error","param":null,"code":null}']
+budget= 28000  ERRORS: ['HTTP 403: {"message":"invalid api-key","type":"authentication_error","param":null,"code":null}', 'HTTP 403: {"message":"invalid api-key","type":"authentication_error","param":null,"code":null}', 'HTTP 403: {"message":"invalid api-key","type":"authentication_error","param":null,"code":null}']
+budget=  1024  think_chars=[2153, 2249, 1912] mean=2104  out_tok=[1792, 2063, 2408]  stop=['end_turn', 'end_turn', 'end_turn']  wall=[32.5, 40.7, 41.4]
+    digest: ...', or the tiling leads to a dead end).\n\n0'
+    digest: ...'raight trominoes), the answer is:\n\n**4**'
+    digest: ...'of the remainder), the answer is:\n\n**4**'
+budget=  8192  think_chars=[19087, 19898, 21888] mean=20291  out_tok=[9094, 9172, 8937]  stop=['end_turn', 'end_turn', 'end_turn']  wall=[154.6, 156.3, 157.4]
+    digest: ...'l number of valid tilings is **11**.\n\n11'
+    digest: ...'g tilability of the remainder:\n\n**8**\n\n8'
+    digest: ...'d placements yield tilings count = 8.\n\n8'
+Traceback (most recent call last):
+  File "<WORKDIR>\Temp\scripts\probe_qwen_effort_20260804.py", line 90, in <module>
+    main()
+    ~~~~^^
+  File "<WORKDIR>\Temp\scripts\probe_qwen_effort_20260804.py", line 74, in main
+    rows = [call(budget) for _ in range(N)]
+            ~~~~^^^^^^^^
+  File "<WORKDIR>\Temp\scripts\probe_qwen_effort_20260804.py", line 58, in call
+    with urllib.request.urlopen(req, timeout=600) as resp:
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\urllib\request.py", line 189, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\urllib\request.py", line 489, in open
+    response = self._open(req, data)
+  File "C:\Python313\Lib\urllib\request.py", line 506, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+                              '_open', req)
+  File "C:\Python313\Lib\urllib\request.py", line 466, in _call_chain
+    result = func(*args)
+  File "C:\Python313\Lib\urllib\request.py", line 1367, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        context=self._context)
+                        ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\urllib\request.py", line 1323, in do_open
+    r = h.getresponse()
+  File "C:\Python313\Lib\http\client.py", line 1428, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Python313\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "C:\Python313\Lib\http\client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\socket.py", line 719, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Python313\Lib\ssl.py", line 1304, in recv_into
+    return self.read(nbytes, buffer)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\ssl.py", line 1138, in read
+    return self._sslobj.read(len, buffer)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+TimeoutError: The read operation timed out

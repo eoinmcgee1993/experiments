@@ -1,4 +1,4 @@
-# bug-hunt-bench — 105 planted bugs, two real repos, ten coding models
+# bug-hunt-bench — 105 planted bugs, two real repos, twelve coding models
 
 **Question:** Hide bugs in a real codebase, keep the test suite green so nothing points at the
 answers, then ask each frontier coding model — in its own native agentic CLI — to find and fix as
@@ -19,7 +19,7 @@ and 59 of its 60 original fixes were written by an AI agent rather than a person
 
 **The task (identical for every model, both repos):** find and fix as many planted bugs as you can,
 edit the source in place, keep the checks green (do not weaken tests), and write a `BUGS_FOUND.md`.
-One round per model per repo, reasoning effort `high`, each in its native harness. Exact prompts:
+One round per model per repo, reasoning effort `high` **as requested** (see the Aug 6-7 wave: some providers silently ignore it), each in its native harness. Exact prompts:
 [repo1-prompt.md](repo1-prompt.md) and [repo2-prompt.md](repo2-prompt.md).
 
 **Grading:** each model's diff against the pristine repo is the ground truth — not its own report.
@@ -42,7 +42,8 @@ Strict fixes only — no partial credit. [combined-scoreboard.csv](combined-scor
 | **Sonnet 5** | Claude Code | **9** | 1 | 8 | 4 | 32.8 min | $15.12 |
 
 **63 of the 105 bugs survived every model** in this seven-model wave (60 after the Jul 31 wave,
-54 after the Aug 1 max wave below). Zero false-positive fixes from any arm on either repo: every
+54 after the Aug 1 max wave, 53 after the DeepSeek follow-up, **52 after the Aug 3 wave** and
+still 52 after Aug 6-7). Zero false-positive fixes from any arm on either repo: every
 extra fix any model applied was a genuine unplanted defect.
 
 Per-repo detail: [repo1-scoreboard.csv](repo1-scoreboard.csv) · [repo2-scoreboard.csv](repo2-scoreboard.csv).
@@ -202,6 +203,19 @@ judged blind by GPT-5.5:
 - The April V4-Flash run stays in the CSVs under the correction note above; the current board
   carries the `-0731` revision in its place.
 
+## The Aug 3 wave — Qwen3.8-Max
+
+Alibaba's Qwen3.8-Max ran the same two-repo battery and scored **19/105** (repo 1 5/45, repo 2
+14/60, 6 genuine extras, 1 claimed-only, 148.1 min, $31.10 list-equivalent). Its rows are in the
+scoreboards above; the full write-up, including the day-one access gauntlet and the
+thinking-budget probe, is its own set: [qwen-3.8-max-day-one/](../qwen-3.8-max-day-one/).
+
+Two things it contributes to this file: its repo 2 leg **beats Opus 5's high run** (14/60 vs
+10/60) while its repo 1 leg is DeepSeek-tier — another instance of one repo failing to rank the
+middle. And it ran at its **maximum** tier, not a middle one: QwenCloud documents
+`reasoning_effort` for qwen3.8-max as `low|medium|xhigh` (default `xhigh`) and maps the
+OpenAI-standard names onto them, `high` → `xhigh`, erroring outside that set. **Survivors 53 → 52.**
+
 ## The effort-dial probe (Aug 4) — the dial is a serving-path feature, not a model feature
 
 A `max` follow-up was commissioned for V4-Flash-0731 ("run V4-Flash on max"). It never became an
@@ -235,6 +249,51 @@ OpenRouter and the weights. Raw output: [effort-dial-probe-dsv4.log](effort-dial
   labeling an arm with it.**
 - Caveat: single pinned provider, one prompt, n=3 — enough to cancel a mislabeled arm, thin for
   claims about DeepSeek's first-party API.
+
+## The Aug 6-7 wave — Muse Spark scores the effort-dial probe
+
+The Aug 4 probe above showed OpenRouter drops `reasoning.effort` on a synthetic prompt. This wave
+measures what that costs on the actual benchmark, because Meta's Muse Spark 1.2 (shipped Aug 5)
+ran the full battery **twice, by two routes**, with everything else identical. A third Grok 4.5 run
+at settings matching its two predecessors went alongside it.
+
+| Arm | Effort (actual) | Fixed /105 | Repo 1 /45 | Repo 2 /60 | Claimed-only | Genuine extras | Wall | Cost |
+|---|---|--:|--:|--:|--:|--:|--:|--:|
+| **Muse Spark 1.2** (Meta API) | **xhigh** | **17** | 6 | 11 | 0 | 12 | 35.7 min | $13.99 list-equiv |
+| **Grok 4.5** (re-run Aug 6) | high | **17** | 5 | 12 | 1 | 10 | 27.9 min | $8.50 floor |
+| **Muse Spark 1.2** (OpenRouter) | **default** | **14** | 3 | 11 | 0 | 3 | 65.2 min | $19.52 real bill |
+
+Both Muse runs requested the same tier. Only the first-party one got it. The one-call check —
+send a **nonsense** effort value and read the status code — now has four data points:
+
+| Provider | invalid effort value | verdict |
+|---|---|---|
+| Meta (first-party) | `400` | validates — the tier is real |
+| xAI (first-party) | `400` | validates — the tier is real |
+| Alibaba (first-party) | error (documented) | validates — `high` maps to `xhigh` |
+| **OpenRouter** | **`200`** | **accepts anything, applies none** |
+
+- **The label correction is now applied, not just noted.** The Aug 4 section called the DeepSeek
+  rows "requested-high, served-default". That is also true of **Kimi K3**, and the `effort` column
+  in both metrics CSVs said `high` for all four. It now reads `default`, and each corrected row
+  carries a note. **No score changed** — only the label was ever wrong.
+- **The scored cost of a dropped tier: 17/105 vs 14/105.** One variable, the route.
+- **But it is smaller than one repo suggests.** Repo 1 reads 6 vs 3, which looks like a doubling.
+  Across both repos it is **+3 of 105**, and repo 2 scored **11/60 in both conditions — identical**.
+  The single-repo version overstates the effect about threefold and was nearly published; it is
+  recorded here because that near-miss is the point of the caveat.
+- **What the tier bought was breadth, not coverage**: 12 genuine unplanted bugs at `xhigh` against
+  3 at default, while planted-bug coverage moved by 3.
+- **Grok's three same-setting runs: 16 → 13 → 17.** Spread 4, gain over best prior 1 — no serving
+  improvement is detectable. Its repo 1 leg scored **5/45 all three times**; every point of movement
+  is on repo 2. Rounds were not a factor: the ACP mode this harness drives exposes no turn cap, the
+  config carries none, and every recorded turn ended `completed`.
+- **Muse Spark has the cleanest honesty profile on the board**: zero claimed-only across all four
+  legs, on both routes.
+- **Survivors hold at 52 of 105** — neither Aug 6-7 arm killed a bug that had survived everything.
+
+![the current board — 12 models, 17 runs](81-bug-hunt-bench-v9.png)
+
 
 ## Method notes & caveats
 

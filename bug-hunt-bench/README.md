@@ -1,4 +1,4 @@
-# bug-hunt-bench — 105 planted bugs, two real repos, twelve coding models
+# bug-hunt-bench — 105 planted bugs, two real repos, thirteen coding models
 
 **Question:** Hide bugs in a real codebase, keep the test suite green so nothing points at the
 answers, then ask each frontier coding model — in its own native agentic CLI — to find and fix as
@@ -42,8 +42,8 @@ Strict fixes only — no partial credit. [combined-scoreboard.csv](combined-scor
 | **Sonnet 5** | Claude Code | **9** | 1 | 8 | 4 | 32.8 min | $15.12 |
 
 **63 of the 105 bugs survived every model** in this seven-model wave (60 after the Jul 31 wave,
-54 after the Aug 1 max wave, 53 after the DeepSeek follow-up, **52 after the Aug 3 wave** and
-still 52 after Aug 6-7). Zero false-positive fixes from any arm on either repo: every
+54 after the Aug 1 max wave, 53 after the DeepSeek follow-up, **52 after the Aug 3 wave**,
+still 52 after Aug 6-7 and **51 after the Aug 12 Grok 4.6 wave**). Zero false-positive fixes from any arm on either repo: every
 extra fix any model applied was a genuine unplanted defect.
 
 Per-repo detail: [repo1-scoreboard.csv](repo1-scoreboard.csv) · [repo2-scoreboard.csv](repo2-scoreboard.csv).
@@ -294,6 +294,34 @@ send a **nonsense** effort value and read the status code — now has four data 
 
 ![the current board — 12 models, 17 runs](81-bug-hunt-bench-v9.png)
 
+
+## The Aug 12 wave — Grok 4.6, day one
+
+xAI shipped Grok 4.6 on Aug 12 and it ran the identical two-repo battery the same day, in the
+same grok CLI harness over ACP, judged blind by GPT-5.5. The CLI exposes a **new top reasoning
+tier for 4.6, `xhigh`**, above 4.5's `high` ceiling — verified *active* before the run: the ACP
+session's advertised effort echoes `xhigh` back, while unknown values (including the plausible
+misspelling `x-high`) still clamp silently to `high`, the same clamp the Aug 1 correction
+documents. The run below is the tier it says it is.
+
+| Arm | Effort (actual) | Fixed /105 | Repo 1 /45 | Repo 2 /60 | Claimed-only | Genuine extras | Wall | Cost |
+|---|---|--:|--:|--:|--:|--:|--:|--:|
+| **Grok 4.6** | **xhigh** (its max) | **27** | 10 | 17 | 0 | 15 | 34.4 min | $22.73 floor |
+
+- **The first generational jump this board has measured from xAI.** Grok 4.5's three same-setting
+  runs scored 16, 13 and 17 (spread 4); 4.6 lands **+10 over the best of them**. Sharpest on
+  repo 1, where 4.5 scored 5/45 three times without moving a point — 4.6 doubled it to 10/45.
+- **It killed an all-time survivor**: one repo-2 bug that had outlived all twelve models before
+  it. **51 of 105 have now survived everything** — thirteen models, twenty-two scored runs.
+- **It ties Opus 5's `max` run** (27/105) at well under half the cost and roughly half the wall
+  clock, and lands two fixes behind Fable 5's $104.49 max run for $22.73.
+- **Honesty profile clean**: zero claimed-only entries on either repo, 15 genuine extras.
+- **Caveats.** The two legs ran concurrently (wall-clock overstated vs the sequential baselines;
+  fixes, tokens and cost unaffected). The 4.5-vs-4.6 comparison is each model at its own ceiling —
+  best-vs-best, but model and tier move together, so it is not a dial isolation. n=1 per cell as
+  ever, and Grok's cost remains a reconstructed floor, not a bill.
+
+![the current board — 13 models, 18 runs](85-bug-hunt-bench-v10.png)
 
 ## Method notes & caveats
 

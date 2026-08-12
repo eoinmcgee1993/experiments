@@ -323,6 +323,8 @@ documents. The run below is the tier it says it is.
 
 ![the current board — 13 models, 18 runs](85-bug-hunt-bench-v10.png)
 
+Source post for this wave: [@PawelHuryn on X](https://x.com/PawelHuryn/status/2087600689337835811) — the day-one run, QT of Musk's "try Grok 4.6 on tough real-world tasks."
+
 ## Method notes & caveats
 
 - **n = 1 per cell.** One round per model per repo. Re-scoring repo 2 under the same judge moved one
@@ -378,6 +380,9 @@ max effort, better and cheaper than Fable 5.
 
 [@PawelHuryn on X](https://x.com/PawelHuryn/status/2083465617697333411) — the Aug 1 max wave:
 which model for which job, after 105 bugs, 9 models, 14 runs.
+
+[@PawelHuryn on X](https://x.com/PawelHuryn/status/2087600689337835811) — the Aug 12 wave: Grok 4.6, day one, 27/105 at
+its new verified `xhigh` ceiling.
 
 ## License
 

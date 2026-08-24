@@ -1,4 +1,4 @@
-# bug-hunt-bench — 105 planted bugs, two real repos, thirteen coding models
+# bug-hunt-bench — 105 planted bugs, two real repos, fourteen coding models
 
 **Question:** Hide bugs in a real codebase, keep the test suite green so nothing points at the
 answers, then ask each frontier coding model — in its own native agentic CLI — to find and fix as
@@ -324,6 +324,48 @@ documents. The run below is the tier it says it is.
 ![the current board — 13 models, 18 runs](85-bug-hunt-bench-v10.png)
 
 Source post for this wave: [@PawelHuryn on X](https://x.com/PawelHuryn/status/2087600689337835811) — the day-one run, QT of Musk's "try Grok 4.6 on tough real-world tasks."
+
+## The Aug 24 wave — Gemini 3.7 Flash, in Google's own CLI
+
+Google's Gemini 3.7 Flash ran the identical two-repo battery in Google's own agentic CLI
+(Gemini CLI 0.56.0, headless), judged blind by GPT-5.5. Effort was `high` — the ceiling: Google's
+`thinkingLevel` enum on this model is `low|medium|high`, `xhigh`/`max` are rejected with HTTP 400,
+and an n=5 probe separated the levels cleanly (low 1.7–2.4K / medium 3.5–4.1K / high 6.5–7.4K
+thinking tokens on one reasoning prompt; the no-parameter default is `medium`):
+[effort-dial-probe-gemini37flash.txt](effort-dial-probe-gemini37flash.txt).
+
+**The harness lied about the model before it ran a single bug.** Gemini CLI accepted
+`-m gemini-3.7-flash`, echoed it in its startup event, and sent every API call to
+`gemini-3.5-flash` — the CLI clamps any flash model id it does not know to its built-in default,
+and 3.7 is not in its list (same on the 0.57 preview and the Aug 24 nightly). The run below went
+through a local gateway that rewrites the model on the wire, pins `thinkingLevel: high`, and logs
+Google's own `modelVersion` per response: **498 of 498 calls came back `gemini-3.7-flash` at
+`high`** ([gemini-cli-wire-readback.md](gemini-cli-wire-readback.md)). Same class as the grok CLI
+clamping `max` to `high` on Aug 1: the request is not the setting — and the model id is not the
+model, either.
+
+| Arm | Effort (actual) | Fixed /105 | Repo 1 /45 | Repo 2 /60 | Claimed-only | Genuine extras | Wall | Cost |
+|---|---|--:|--:|--:|--:|--:|--:|--:|
+| **Gemini 3.7 Flash** | **high** (its max) | **22** | 8 | 14 | 0 | 4 | 132.3 min* | $8.43 list |
+
+- **A Flash-tier model in the middle of the frontier pack.** 22/105 sits just under Fable 5 at
+  `high` (24) and above Opus 5 at `high` and Kimi K3 (21), Qwen3.8-Max (19), Muse Spark (17) and
+  every Grok 4.5 run — at $8.43 against Opus-high's $38.77 and Fable-high's $68.08.
+- **Honesty profile clean:** zero claimed-only entries on either repo; 4 genuine extras, all on repo 2.
+- **No new coverage.** All 22 fixes were bugs an earlier model had already fixed; **51 of 105
+  still survive everything** — fourteen models, twenty-three scored runs.
+- **Repo 1 stayed hard** (8/45) and repo 2 was the better leg (14/60) — the usual shape for
+  non-frontier arms on this board.
+- **Caveats.** *The wall clock includes a 37-minute harness stall: the repo-1 suite spawns a
+  keep-alive child that outlives the test runner, and Gemini CLI's shell tool has no timeout
+  (Claude Code's returns after two minutes), so the agent's first `npm test` hung until that one
+  process was killed; the model-side wall is ~95 min. Both legs ran concurrently on one API key
+  (23 rate-limit retries, all absorbed by the CLI's own backoff). Cost is Google's standard list
+  rate ($0.75 / $3.75 per MTok, doubling on 2027-01-01) computed from Google's own usage metadata,
+  not a bill; a further $0.15 of calls was billed during a two-minute DNS outage to nobody's
+  benefit. n=1 per cell, as ever.
+
+![the current board — 14 models, 19 runs](86-bug-hunt-bench-v11.png)
 
 ## Method notes & caveats
 

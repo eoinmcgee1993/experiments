@@ -356,6 +356,8 @@ grok CLI's `max`→`high` clamp, one layer up.
 
 ![the current board — 14 models, 19 runs](86-bug-hunt-bench-v11.png)
 
+Source post for this wave: [@PawelHuryn on X](https://x.com/PawelHuryn/status/2091979928288002164) — Google's cheapest agent model against OpenAI's cheapest: 22 vs 33 of 105, $8.43 vs $1.80.
+
 ## Method notes & caveats
 
 - **n = 1 per cell.** One round per model per repo. Re-scoring repo 2 under the same judge moved one
@@ -414,6 +416,9 @@ which model for which job, after 105 bugs, 9 models, 14 runs.
 
 [@PawelHuryn on X](https://x.com/PawelHuryn/status/2087600689337835811) — the Aug 12 wave: Grok 4.6, day one, 27/105 at
 its new verified `xhigh` ceiling.
+
+[@PawelHuryn on X](https://x.com/PawelHuryn/status/2091979928288002164) — the Aug 24 wave: Gemini 3.7 Flash, 22/105 at
+verified `high`, against GPT-5.6 Luna's 33 for a quarter of the bill.
 
 ## License
 

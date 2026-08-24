@@ -1,0 +1,206 @@
+{
+ "model": "meta/muse-spark-1.2",
+ "card": {
+  "tokenizer": "Other",
+  "modality": "text+image+file+audio+video->text",
+  "context_length": 1048576,
+  "max_completion_tokens": null,
+  "provider_name": "Meta",
+  "quantization": "unknown",
+  "supported_parameters": [
+   "include_reasoning",
+   "max_tokens",
+   "reasoning",
+   "reasoning_effort",
+   "repetition_penalty",
+   "response_format",
+   "structured_outputs",
+   "temperature",
+   "tool_choice",
+   "tools",
+   "top_k",
+   "top_p"
+  ],
+  "pricing": {
+   "prompt": "0.00000125",
+   "completion": "0.00000425",
+   "web_search": "0.0025",
+   "input_cache_read": "0.00000015",
+   "discount": 0
+  },
+  "implicit_caching": false,
+  "latency_p50_ms": 1260,
+  "throughput_p50": 76,
+  "created": 1785959287,
+  "description": "Muse Spark 1.2 is a reasoning model from Meta, designed for complex agentic tasks. It accepts text, images, video, audio, and PDF documents, returns text, and offers a 1M-token context..."
+ },
+ "meta": {
+  "status": 200,
+  "provider": "Meta",
+  "model_echo": "meta/muse-spark-1.2",
+  "id": "gen-1787606111-rUNXEaCYjENrw0r4RI2K",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "finish_reason": "stop",
+  "native_finish_reason": "completed",
+  "usage_keys": [
+   "completion_tokens",
+   "completion_tokens_details",
+   "cost",
+   "cost_details",
+   "is_byok",
+   "prompt_tokens",
+   "prompt_tokens_details",
+   "total_tokens"
+  ],
+  "usage_detail_keys": [
+   "completion_tokens_details.audio_tokens",
+   "completion_tokens_details.image_tokens",
+   "completion_tokens_details.reasoning_tokens",
+   "cost_details.upstream_inference_completions_cost",
+   "cost_details.upstream_inference_cost",
+   "cost_details.upstream_inference_prompt_cost",
+   "prompt_tokens_details.audio_tokens",
+   "prompt_tokens_details.cache_write_tokens",
+   "prompt_tokens_details.cached_tokens",
+   "prompt_tokens_details.video_tokens"
+  ],
+  "extra_top_keys": [
+   "service_tier"
+  ],
+  "message_keys": [
+   "content",
+   "reasoning",
+   "reasoning_details",
+   "refusal",
+   "role"
+  ],
+  "content": "OK",
+  "headers_of_interest": {
+   "x-generation-id": "gen-1787606111-rUNXEaCYjENrw0r4RI2K",
+   "x-content-type-options": "nosniff",
+   "server": "cloudflare",
+   "cf-ray": "<CF-RAY>"
+  },
+  "elapsed": 2.87
+ },
+ "tokenizer": {
+  "baseline_x": 8,
+  "passage_delta": 153,
+  "specials": {
+   "<|endoftext|>": {
+    "delta": 6,
+    "error": null
+   },
+   "<|im_start|>": {
+    "delta": 5,
+    "error": null
+   },
+   "<|begin_of_text|>": {
+    "delta": 6,
+    "error": null
+   },
+   "<|eot_id|>": {
+    "delta": 6,
+    "error": null
+   },
+   "<｜begin▁of▁sentence｜>": {
+    "delta": 11,
+    "error": null
+   },
+   "<start_of_turn>": {
+    "delta": 5,
+    "error": null
+   },
+   "[INST]": {
+    "delta": 3,
+    "error": null
+   },
+   "<|startoftext|>": {
+    "delta": 6,
+    "error": null
+   },
+   "<|reserved_special_token_0|>": {
+    "delta": 8,
+    "error": null
+   },
+   "<|fim_prefix|>": {
+    "delta": 5,
+    "error": null
+   },
+   "<think>": {
+    "delta": 3,
+    "error": null
+   }
+  }
+ },
+ "reasoning": {
+  "status": 200,
+  "answer": "639",
+  "reasoning_len": 0,
+  "reasoning_tokens": 497,
+  "details_types": [
+   "reasoning.encrypted"
+  ],
+  "details_formats": [
+   "meta-responses-v1"
+  ],
+  "details_n": 1,
+  "details_id_sample": "rs_6a8cb4785e1eccb5a73a49c0:rs_01a035a0f5fc704184eddebb853b2cec",
+  "has_signature": false,
+  "reasoning_head": "",
+  "error": null,
+  "elapsed": 2.613
+ },
+ "tool": {
+  "status": 200,
+  "n_calls": 1,
+  "id": "call_01a035a101df7632a0b8d5039339559b",
+  "id_shape": "aaaa_99a999a999aa9999a9a9a9999999999a",
+  "arguments": "{\"city\":\"Warsaw\",\"unit\":\"c\"}",
+  "extra_keys": [],
+  "finish_reason": "tool_calls",
+  "native_finish_reason": "completed",
+  "content_alongside": false,
+  "error": null
+ },
+ "timing": {
+  "runs": [
+   {
+    "ttfb": 5.008739233016968,
+    "ttf_reasoning": 5.008739233016968,
+    "ttf_content": 5.008795738220215,
+    "total": 5.354,
+    "completion_tokens": 1188,
+    "tok_per_s": 3441.4,
+    "status": 200
+   },
+   {
+    "ttfb": 5.839483261108398,
+    "ttf_reasoning": 5.839483261108398,
+    "ttf_content": 5.839568853378296,
+    "total": 7.444,
+    "completion_tokens": 782,
+    "tok_per_s": 487.4,
+    "status": 200
+   }
+  ],
+  "ttf_content_median": 5.839568853378296,
+  "tok_per_s_median": 3441.4
+ },
+ "behaviour": {
+  "identity": "I was trained by Meta, my exact model name is Muse Spark, and my knowledge cutoff date is 2026-01-04.",
+  "style": {
+   "chars": 445,
+   "em_dashes": 0,
+   "en_dashes": 0,
+   "headers": 0,
+   "bullets": 0,
+   "bold": 0,
+   "sentences": 4,
+   "first_person": 0
+  },
+  "style_head": "A failing test consistently signals a real defect, giving you a clear and actionable problem to fix. A flaky test, by contrast, fails unpred",
+  "logprobs": "error:{'message': 'Provider returned error', 'code': 400, 'metadata': {'raw': '{\"error"
+ }
+}

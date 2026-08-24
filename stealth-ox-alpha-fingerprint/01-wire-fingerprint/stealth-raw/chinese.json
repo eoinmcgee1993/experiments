@@ -1,0 +1,46 @@
+{
+ "id": "gen-1787607523-VCzuvx7rsmY0jGc88LT4",
+ "object": "chat.completion",
+ "created": 1787607523,
+ "model": "stealth/ox-alpha",
+ "provider": "Stealth",
+ "system_fingerprint": null,
+ "service_tier": null,
+ "choices": [
+  {
+   "index": 0,
+   "logprobs": null,
+   "finish_reason": "stop",
+   "native_finish_reason": "stop",
+   "message": {
+    "role": "assistant",
+    "content": "单元测试静默失败通常是因为测试代码中使用了 try-catch 块捕获了异常，却没有重新抛出或断言失败，导致错误被“吞掉”后测试依然显示通过。另一个常见原因是异步操作未被正确等待，比如忘记使用 await 或回调处理不当，使得断言在测试结束前根本没有执行。此外，条件判断逻辑写错（如 if 语句包住了断言但条件永远不成立）也会让断言被跳过而不报错。最后，测试框架配置问题（例如错误的超时设置或未注册的测试用例）可能让部分测试根本没运行，却给人一切正常的假象。",
+    "refusal": null,
+    "reasoning": null
+   }
+  }
+ ],
+ "usage": {
+  "prompt_tokens": 104,
+  "completion_tokens": 141,
+  "total_tokens": 245,
+  "cost": 0,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 64,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0,
+   "upstream_inference_prompt_cost": 0,
+   "upstream_inference_completions_cost": 0
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

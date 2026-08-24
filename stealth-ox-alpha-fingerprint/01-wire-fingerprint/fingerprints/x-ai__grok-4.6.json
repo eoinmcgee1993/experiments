@@ -1,0 +1,216 @@
+{
+ "model": "x-ai/grok-4.6",
+ "card": {
+  "tokenizer": "Grok",
+  "modality": "text+image+file->text",
+  "context_length": 500000,
+  "max_completion_tokens": null,
+  "provider_name": "xAI",
+  "quantization": "unknown",
+  "supported_parameters": [
+   "include_reasoning",
+   "logprobs",
+   "max_tokens",
+   "reasoning",
+   "reasoning_effort",
+   "response_format",
+   "seed",
+   "structured_outputs",
+   "temperature",
+   "tool_choice",
+   "tools",
+   "top_logprobs",
+   "top_p"
+  ],
+  "pricing": {
+   "prompt": "0.000002",
+   "completion": "0.000006",
+   "web_search": "0.005",
+   "input_cache_read": "0.0000005",
+   "discount": 0,
+   "overrides": [
+    {
+     "min_prompt_tokens": 200000,
+     "prompt": "0.000004",
+     "completion": "0.000012",
+     "input_cache_read": "0.000001"
+    }
+   ]
+  },
+  "implicit_caching": false,
+  "latency_p50_ms": 1098,
+  "throughput_p50": 54,
+  "created": 1786548957,
+  "description": "Grok 4.6 is SpaceXAI's smartest model with frontier performance on coding, knowledge work, and STEM."
+ },
+ "meta": {
+  "status": 200,
+  "provider": "xAI",
+  "model_echo": "x-ai/grok-4.6",
+  "id": "gen-1787605496-KPoRmVAIdmjMtyNENN9R",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "finish_reason": "stop",
+  "native_finish_reason": "completed",
+  "usage_keys": [
+   "completion_tokens",
+   "completion_tokens_details",
+   "cost",
+   "cost_details",
+   "is_byok",
+   "prompt_tokens",
+   "prompt_tokens_details",
+   "total_tokens"
+  ],
+  "usage_detail_keys": [
+   "completion_tokens_details.audio_tokens",
+   "completion_tokens_details.image_tokens",
+   "completion_tokens_details.reasoning_tokens",
+   "cost_details.upstream_inference_completions_cost",
+   "cost_details.upstream_inference_cost",
+   "cost_details.upstream_inference_prompt_cost",
+   "prompt_tokens_details.audio_tokens",
+   "prompt_tokens_details.cache_write_tokens",
+   "prompt_tokens_details.cached_tokens",
+   "prompt_tokens_details.video_tokens"
+  ],
+  "extra_top_keys": [
+   "service_tier"
+  ],
+  "message_keys": [
+   "content",
+   "reasoning",
+   "reasoning_details",
+   "refusal",
+   "role"
+  ],
+  "content": "OK",
+  "headers_of_interest": {
+   "x-generation-id": "gen-1787605496-KPoRmVAIdmjMtyNENN9R",
+   "x-content-type-options": "nosniff",
+   "server": "cloudflare",
+   "cf-ray": "<CF-RAY>"
+  },
+  "elapsed": 1.865
+ },
+ "tokenizer": {
+  "baseline_x": 207,
+  "passage_delta": 161,
+  "specials": {
+   "<|endoftext|>": {
+    "delta": 5,
+    "error": null
+   },
+   "<|im_start|>": {
+    "delta": 5,
+    "error": null
+   },
+   "<|begin_of_text|>": {
+    "delta": 7,
+    "error": null
+   },
+   "<|eot_id|>": {
+    "delta": 6,
+    "error": null
+   },
+   "<｜begin▁of▁sentence｜>": {
+    "delta": 9,
+    "error": null
+   },
+   "<start_of_turn>": {
+    "delta": 7,
+    "error": null
+   },
+   "[INST]": {
+    "delta": 3,
+    "error": null
+   },
+   "<|startoftext|>": {
+    "delta": 5,
+    "error": null
+   },
+   "<|reserved_special_token_0|>": {
+    "delta": 9,
+    "error": null
+   },
+   "<|fim_prefix|>": {
+    "delta": 5,
+    "error": null
+   },
+   "<think>": {
+    "delta": 3,
+    "error": null
+   }
+  }
+ },
+ "reasoning": {
+  "status": 200,
+  "answer": "639",
+  "reasoning_len": 124,
+  "reasoning_tokens": 429,
+  "details_types": [
+   "reasoning.encrypted",
+   "reasoning.summary"
+  ],
+  "details_formats": [
+   "xai-responses-v1"
+  ],
+  "details_n": 2,
+  "details_id_sample": "rs_2989adab-2c5f-946a-8ed4-156af7a0f68d",
+  "has_signature": false,
+  "reasoning_head": "The problem asks: \"What is the sum of the first 20 prime numbers? Work it out carefully, then answer with just the number.\" ",
+  "error": null,
+  "elapsed": 6.702
+ },
+ "tool": {
+  "status": 200,
+  "n_calls": 1,
+  "id": "call-5e065efd-3021-4cb4-8e70-b9c2307bdcd3-0",
+  "id_shape": "aaaa-9a999aaa-9999-9aa9-9a99-a9a9999aaaa9-9",
+  "arguments": "{\"city\":\"Warsaw\",\"unit\":\"c\"}",
+  "extra_keys": [],
+  "finish_reason": "tool_calls",
+  "native_finish_reason": "completed",
+  "content_alongside": false,
+  "error": null
+ },
+ "timing": {
+  "runs": [
+   {
+    "ttfb": 0.9242093563079834,
+    "ttf_reasoning": 0.9242093563079834,
+    "ttf_content": 32.288503885269165,
+    "total": 34.708,
+    "completion_tokens": 1855,
+    "tok_per_s": 766.7,
+    "status": 200
+   },
+   {
+    "ttfb": 1.094379186630249,
+    "ttf_reasoning": 1.094379186630249,
+    "ttf_content": 24.820033073425293,
+    "total": 27.473,
+    "completion_tokens": 1536,
+    "tok_per_s": 579.0,
+    "status": 200
+   }
+  ],
+  "ttf_content_median": 32.288503885269165,
+  "tok_per_s_median": 766.7
+ },
+ "behaviour": {
+  "identity": "xAI trained me; I am Grok 4; no fixed knowledge cutoff is specified.",
+  "style": {
+   "chars": 483,
+   "em_dashes": 0,
+   "en_dashes": 0,
+   "headers": 0,
+   "bullets": 0,
+   "bold": 0,
+   "sentences": 4,
+   "first_person": 0
+  },
+  "style_head": "A failing test consistently signals a reproducible defect that developers can isolate and resolve with certainty. A flaky test instead fails",
+  "logprobs": "returned"
+ }
+}

@@ -1,0 +1,207 @@
+{
+ "model": "z-ai/glm-5.2",
+ "card": {
+  "tokenizer": "Other",
+  "modality": "text->text",
+  "context_length": 1048576,
+  "max_completion_tokens": 131072,
+  "provider_name": "Baidu",
+  "quantization": "fp8",
+  "supported_parameters": [
+   "frequency_penalty",
+   "include_reasoning",
+   "max_tokens",
+   "presence_penalty",
+   "reasoning",
+   "reasoning_effort",
+   "repetition_penalty",
+   "response_format",
+   "stop",
+   "structured_outputs",
+   "temperature",
+   "tool_choice",
+   "tools",
+   "top_p"
+  ],
+  "pricing": {
+   "prompt": "0.00000049",
+   "completion": "0.00000154",
+   "input_cache_read": "0.000000091",
+   "discount": 0.65
+  },
+  "implicit_caching": false,
+  "latency_p50_ms": 1423,
+  "throughput_p50": 28,
+  "created": 1781631930,
+  "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,..."
+ },
+ "meta": {
+  "status": 200,
+  "provider": "DigitalOcean",
+  "model_echo": "z-ai/glm-5.2",
+  "id": "gen-1787606185-GktoEX0qCyVoOoNjmNam",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "finish_reason": "stop",
+  "native_finish_reason": "stop",
+  "usage_keys": [
+   "completion_tokens",
+   "completion_tokens_details",
+   "cost",
+   "cost_details",
+   "is_byok",
+   "prompt_tokens",
+   "prompt_tokens_details",
+   "total_tokens"
+  ],
+  "usage_detail_keys": [
+   "completion_tokens_details.audio_tokens",
+   "completion_tokens_details.image_tokens",
+   "completion_tokens_details.reasoning_tokens",
+   "cost_details.upstream_inference_completions_cost",
+   "cost_details.upstream_inference_cost",
+   "cost_details.upstream_inference_prompt_cost",
+   "prompt_tokens_details.audio_tokens",
+   "prompt_tokens_details.cache_write_tokens",
+   "prompt_tokens_details.cached_tokens",
+   "prompt_tokens_details.video_tokens"
+  ],
+  "extra_top_keys": [
+   "service_tier"
+  ],
+  "message_keys": [
+   "content",
+   "reasoning",
+   "reasoning_details",
+   "refusal",
+   "role"
+  ],
+  "content": "OK",
+  "headers_of_interest": {
+   "x-generation-id": "gen-1787606185-GktoEX0qCyVoOoNjmNam",
+   "x-content-type-options": "nosniff",
+   "server": "cloudflare",
+   "cf-ray": "<CF-RAY>"
+  },
+  "elapsed": 3.379
+ },
+ "tokenizer": {
+  "baseline_x": 13,
+  "passage_delta": 172,
+  "specials": {
+   "<|endoftext|>": {
+    "delta": 2,
+    "error": null
+   },
+   "<|im_start|>": {
+    "delta": 5,
+    "error": null
+   },
+   "<|begin_of_text|>": {
+    "delta": 6,
+    "error": null
+   },
+   "<|eot_id|>": {
+    "delta": 6,
+    "error": null
+   },
+   "<｜begin▁of▁sentence｜>": {
+    "delta": 11,
+    "error": null
+   },
+   "<start_of_turn>": {
+    "delta": 5,
+    "error": null
+   },
+   "[INST]": {
+    "delta": 3,
+    "error": null
+   },
+   "<|startoftext|>": {
+    "delta": 6,
+    "error": null
+   },
+   "<|reserved_special_token_0|>": {
+    "delta": 8,
+    "error": null
+   },
+   "<|fim_prefix|>": {
+    "delta": 6,
+    "error": null
+   },
+   "<think>": {
+    "delta": 2,
+    "error": null
+   }
+  }
+ },
+ "reasoning": {
+  "status": 200,
+  "answer": "639",
+  "reasoning_len": 1239,
+  "reasoning_tokens": 334,
+  "details_types": [
+   "reasoning.text"
+  ],
+  "details_formats": [
+   "unknown"
+  ],
+  "details_n": 1,
+  "details_id_sample": null,
+  "has_signature": false,
+  "reasoning_head": "The user wants the sum of the first 20 prime numbers. First, list the first 20 prime numbers: 1. 2 2. 3 3. 5 4. 7 5. 11 6. 13 7. 17 8. 19 9. 23 10. 29 11. 31 12",
+  "error": null,
+  "elapsed": 3.512
+ },
+ "tool": {
+  "status": 200,
+  "n_calls": 1,
+  "id": "call_ea294f6de040423f96017aa4",
+  "id_shape": "aaaa_aa999a9aa999999a99999aa9",
+  "arguments": "{\"city\": \"Warsaw\", \"unit\": \"c\"}",
+  "extra_keys": [],
+  "finish_reason": "tool_calls",
+  "native_finish_reason": "tool_calls",
+  "content_alongside": false,
+  "error": null
+ },
+ "timing": {
+  "runs": [
+   {
+    "ttfb": 1.9553742408752441,
+    "ttf_reasoning": 1.9553742408752441,
+    "ttf_content": 11.070263862609863,
+    "total": 12.847,
+    "completion_tokens": 1046,
+    "tok_per_s": 588.7,
+    "status": 200
+   },
+   {
+    "ttfb": 2.4015719890594482,
+    "ttf_reasoning": 2.4015719890594482,
+    "ttf_content": 35.78294825553894,
+    "total": 41.44,
+    "completion_tokens": 1152,
+    "tok_per_s": 203.6,
+    "status": 200
+   }
+  ],
+  "ttf_content_median": 35.78294825553894,
+  "tok_per_s_median": 588.7
+ },
+ "behaviour": {
+  "identity": "I was trained by Google, my exact model name is Gemini, and my knowledge cutoff date is January 2024.",
+  "style": {
+   "chars": 573,
+   "em_dashes": 0,
+   "en_dashes": 0,
+   "headers": 0,
+   "bullets": 0,
+   "bold": 0,
+   "sentences": 4,
+   "first_person": 0
+  },
+  "style_head": "A failing test provides a clear, consistent signal that something is broken, allowing developers to immediately diagnose and fix the underly",
+  "logprobs": "ignored"
+ }
+}

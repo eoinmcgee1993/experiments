@@ -1,0 +1,208 @@
+{
+ "model": "moonshotai/kimi-k3",
+ "card": {
+  "tokenizer": "Other",
+  "modality": "text+image+video->text",
+  "context_length": 974842,
+  "max_completion_tokens": 974842,
+  "provider_name": "Sail Research",
+  "quantization": "fp4",
+  "supported_parameters": [
+   "frequency_penalty",
+   "include_reasoning",
+   "max_tokens",
+   "presence_penalty",
+   "reasoning",
+   "reasoning_effort",
+   "response_format",
+   "seed",
+   "stop",
+   "structured_outputs",
+   "temperature",
+   "tool_choice",
+   "tools",
+   "top_k",
+   "top_p"
+  ],
+  "pricing": {
+   "prompt": "0.0000026",
+   "completion": "0.000013",
+   "input_cache_read": "0.00000029",
+   "discount": 0
+  },
+  "implicit_caching": false,
+  "latency_p50_ms": 1168,
+  "throughput_p50": 42,
+  "created": 1784215858,
+  "description": "Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at..."
+ },
+ "meta": {
+  "status": 200,
+  "provider": "DeepInfra",
+  "model_echo": "moonshotai/kimi-k3",
+  "id": "gen-1787605818-3aqyBnJSFMC2Jr1lpcFu",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "finish_reason": "stop",
+  "native_finish_reason": "stop",
+  "usage_keys": [
+   "completion_tokens",
+   "completion_tokens_details",
+   "cost",
+   "cost_details",
+   "is_byok",
+   "prompt_tokens",
+   "prompt_tokens_details",
+   "total_tokens"
+  ],
+  "usage_detail_keys": [
+   "completion_tokens_details.audio_tokens",
+   "completion_tokens_details.image_tokens",
+   "completion_tokens_details.reasoning_tokens",
+   "cost_details.upstream_inference_completions_cost",
+   "cost_details.upstream_inference_cost",
+   "cost_details.upstream_inference_prompt_cost",
+   "prompt_tokens_details.audio_tokens",
+   "prompt_tokens_details.cache_write_tokens",
+   "prompt_tokens_details.cached_tokens",
+   "prompt_tokens_details.video_tokens"
+  ],
+  "extra_top_keys": [
+   "service_tier"
+  ],
+  "message_keys": [
+   "content",
+   "reasoning",
+   "reasoning_details",
+   "refusal",
+   "role"
+  ],
+  "content": "OK",
+  "headers_of_interest": {
+   "x-generation-id": "gen-1787605818-3aqyBnJSFMC2Jr1lpcFu",
+   "x-content-type-options": "nosniff",
+   "server": "cloudflare",
+   "cf-ray": "<CF-RAY>"
+  },
+  "elapsed": 2.552
+ },
+ "tokenizer": {
+  "baseline_x": 89,
+  "passage_delta": 160,
+  "specials": {
+   "<|endoftext|>": {
+    "delta": 6,
+    "error": null
+   },
+   "<|im_start|>": {
+    "delta": 5,
+    "error": null
+   },
+   "<|begin_of_text|>": {
+    "delta": 6,
+    "error": null
+   },
+   "<|eot_id|>": {
+    "delta": 6,
+    "error": null
+   },
+   "<｜begin▁of▁sentence｜>": {
+    "delta": 13,
+    "error": null
+   },
+   "<start_of_turn>": {
+    "delta": 5,
+    "error": null
+   },
+   "[INST]": {
+    "delta": 3,
+    "error": null
+   },
+   "<|startoftext|>": {
+    "delta": 6,
+    "error": null
+   },
+   "<|reserved_special_token_0|>": {
+    "delta": 8,
+    "error": null
+   },
+   "<|fim_prefix|>": {
+    "delta": 3,
+    "error": null
+   },
+   "<think>": {
+    "delta": 3,
+    "error": null
+   }
+  }
+ },
+ "reasoning": {
+  "status": 200,
+  "answer": "639",
+  "reasoning_len": 739,
+  "reasoning_tokens": 199,
+  "details_types": [
+   "reasoning.text"
+  ],
+  "details_formats": [
+   "unknown"
+  ],
+  "details_n": 1,
+  "details_id_sample": null,
+  "has_signature": false,
+  "reasoning_head": "The user wants the sum of the first 20 prime numbers. Let me list them carefully.  First 20 primes: 1. 2 2. 3 3. 5 4. 7 5. 11 6. 13 7. 17 8. 19 9. 23 10. 29 11.",
+  "error": null,
+  "elapsed": 16.468
+ },
+ "tool": {
+  "status": 200,
+  "n_calls": 1,
+  "id": "get_weather_0",
+  "id_shape": "aaa_aaaaaaa_9",
+  "arguments": "{\"city\": \"Warsaw\", \"unit\": \"c\"}",
+  "extra_keys": [],
+  "finish_reason": "tool_calls",
+  "native_finish_reason": "tool_calls",
+  "content_alongside": false,
+  "error": null
+ },
+ "timing": {
+  "runs": [
+   {
+    "ttfb": 1.9914064407348633,
+    "ttf_reasoning": 1.9914064407348633,
+    "ttf_content": 2.906529426574707,
+    "total": 9.28,
+    "completion_tokens": 268,
+    "tok_per_s": 42.0,
+    "status": 200
+   },
+   {
+    "ttfb": 1.477233648300171,
+    "ttf_reasoning": 1.477233648300171,
+    "ttf_content": 1.7537126541137695,
+    "total": 8.508,
+    "completion_tokens": 294,
+    "tok_per_s": 43.5,
+    "status": 200
+   }
+  ],
+  "ttf_content_median": 2.906529426574707,
+  "tok_per_s_median": 43.5
+ },
+ "behaviour": {
+  "identity": "Trained by Moonshot AI (月之暗面); model: Kimi (exact version not disclosed); knowledge cutoff: not specified.",
+  "style": {
+   "chars": 565,
+   "em_dashes": 0,
+   "en_dashes": 0,
+   "headers": 0,
+   "bullets": 0,
+   "bold": 0,
+   "sentences": 4,
+   "first_person": 0
+  },
+  "style_head": "A failing test is a clear, reliable signal that something is broken, so developers can trust it and act on it immediately. A flaky test, by ",
+  "logprobs": "ignored"
+ }
+}

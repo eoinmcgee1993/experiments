@@ -1,0 +1,211 @@
+{
+ "model": "qwen/qwen3.8-max",
+ "card": {
+  "tokenizer": "Qwen",
+  "modality": "text+image+video->text",
+  "context_length": 1000000,
+  "max_completion_tokens": 131072,
+  "provider_name": "Alibaba",
+  "quantization": "unknown",
+  "supported_parameters": [
+   "frequency_penalty",
+   "include_reasoning",
+   "logprobs",
+   "max_tokens",
+   "presence_penalty",
+   "reasoning",
+   "reasoning_effort",
+   "response_format",
+   "seed",
+   "stop",
+   "structured_outputs",
+   "temperature",
+   "tool_choice",
+   "tools",
+   "top_k",
+   "top_logprobs",
+   "top_p"
+  ],
+  "pricing": {
+   "prompt": "0.000002",
+   "completion": "0.000006",
+   "input_cache_read": "0.00000025",
+   "input_cache_write": "0.0000025",
+   "discount": 0
+  },
+  "implicit_caching": false,
+  "latency_p50_ms": 1666,
+  "throughput_p50": 45,
+  "created": 1785731612,
+  "description": "Qwen3.8 Max is the flagship model in Alibaba's Qwen3.8 series, the general-availability successor to the Qwen3.8 Max Preview. It is a multimodal reasoning model intended for complex reasoning, visual understanding,..."
+ },
+ "meta": {
+  "status": 200,
+  "provider": "Alibaba",
+  "model_echo": "qwen/qwen3.8-max",
+  "id": "gen-1787605914-MLCFngpvuLagP5svqSqx",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "finish_reason": "stop",
+  "native_finish_reason": "stop",
+  "usage_keys": [
+   "completion_tokens",
+   "completion_tokens_details",
+   "cost",
+   "cost_details",
+   "is_byok",
+   "prompt_tokens",
+   "prompt_tokens_details",
+   "total_tokens"
+  ],
+  "usage_detail_keys": [
+   "completion_tokens_details.audio_tokens",
+   "completion_tokens_details.image_tokens",
+   "completion_tokens_details.reasoning_tokens",
+   "cost_details.upstream_inference_completions_cost",
+   "cost_details.upstream_inference_cost",
+   "cost_details.upstream_inference_prompt_cost",
+   "prompt_tokens_details.audio_tokens",
+   "prompt_tokens_details.cache_write_tokens",
+   "prompt_tokens_details.cached_tokens",
+   "prompt_tokens_details.video_tokens"
+  ],
+  "extra_top_keys": [
+   "service_tier"
+  ],
+  "message_keys": [
+   "content",
+   "reasoning",
+   "reasoning_details",
+   "refusal",
+   "role"
+  ],
+  "content": "OK",
+  "headers_of_interest": {
+   "x-generation-id": "gen-1787605914-MLCFngpvuLagP5svqSqx",
+   "x-content-type-options": "nosniff",
+   "server": "cloudflare",
+   "cf-ray": "<CF-RAY>"
+  },
+  "elapsed": 2.483
+ },
+ "tokenizer": {
+  "baseline_x": 49,
+  "passage_delta": 200,
+  "specials": {
+   "<|endoftext|>": {
+    "delta": 8,
+    "error": null
+   },
+   "<|im_start|>": {
+    "delta": 7,
+    "error": null
+   },
+   "<|begin_of_text|>": {
+    "delta": 6,
+    "error": null
+   },
+   "<|eot_id|>": {
+    "delta": 6,
+    "error": null
+   },
+   "<｜begin▁of▁sentence｜>": {
+    "delta": 11,
+    "error": null
+   },
+   "<start_of_turn>": {
+    "delta": 5,
+    "error": null
+   },
+   "[INST]": {
+    "delta": 3,
+    "error": null
+   },
+   "<|startoftext|>": {
+    "delta": 6,
+    "error": null
+   },
+   "<|reserved_special_token_0|>": {
+    "delta": 8,
+    "error": null
+   },
+   "<|fim_prefix|>": {
+    "delta": 2,
+    "error": null
+   },
+   "<think>": {
+    "delta": 4,
+    "error": null
+   }
+  }
+ },
+ "reasoning": {
+  "status": 200,
+  "answer": "639",
+  "reasoning_len": 530,
+  "reasoning_tokens": 397,
+  "details_types": [
+   "reasoning.text"
+  ],
+  "details_formats": [
+   "unknown"
+  ],
+  "details_n": 1,
+  "details_id_sample": null,
+  "has_signature": false,
+  "reasoning_head": "I need to find the first 20 prime numbers and sum them up.  Let me list the first 20 prime numbers: 1. 2 2. 3 3. 5 4. 7 5. 11 6. 13 7. 17 8. 19 9. 23 10. 29 11.",
+  "error": null,
+  "elapsed": 7.566
+ },
+ "tool": {
+  "status": 200,
+  "n_calls": 1,
+  "id": "call_7fd1764388644924a5ad5728",
+  "id_shape": "aaaa_9aa9999999999999a9aa9999",
+  "arguments": "{\"city\": \"Warsaw\", \"unit\": \"c\"}",
+  "extra_keys": [],
+  "finish_reason": "tool_calls",
+  "native_finish_reason": "tool_calls",
+  "content_alongside": false,
+  "error": null
+ },
+ "timing": {
+  "runs": [
+   {
+    "ttfb": 1.9460818767547607,
+    "ttf_reasoning": 1.9460818767547607,
+    "ttf_content": 3.860860586166382,
+    "total": 8.335,
+    "completion_tokens": 331,
+    "tok_per_s": 74.0,
+    "status": 200
+   },
+   {
+    "ttfb": 2.074457883834839,
+    "ttf_reasoning": 2.074457883834839,
+    "ttf_content": 3.2519900798797607,
+    "total": 7.995,
+    "completion_tokens": 315,
+    "tok_per_s": 66.4,
+    "status": 200
+   }
+  ],
+  "ttf_content_median": 3.860860586166382,
+  "tok_per_s_median": 74.0
+ },
+ "behaviour": {
+  "identity": "I was trained by Alibaba Group's Tongyi Lab, my model name is Qwen (Tongyi Qianwen), and my knowledge cutoff is 2026.",
+  "style": {
+   "chars": 605,
+   "em_dashes": 0,
+   "en_dashes": 0,
+   "headers": 0,
+   "bullets": 0,
+   "bold": 0,
+   "sentences": 4,
+   "first_person": 0
+  },
+  "style_head": "A failing test provides a clear, actionable signal that something is broken, whereas a flaky test produces intermittent results that are dif",
+  "logprobs": "ignored"
+ }
+}

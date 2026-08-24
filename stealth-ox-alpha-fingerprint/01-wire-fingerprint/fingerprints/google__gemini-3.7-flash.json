@@ -1,0 +1,209 @@
+{
+ "model": "google/gemini-3.7-flash",
+ "card": {
+  "tokenizer": "Gemini",
+  "modality": "text+image+file+audio+video->text",
+  "context_length": 1048576,
+  "max_completion_tokens": 65536,
+  "provider_name": "Google",
+  "quantization": "unknown",
+  "supported_parameters": [
+   "include_reasoning",
+   "max_tokens",
+   "reasoning",
+   "reasoning_effort",
+   "response_format",
+   "seed",
+   "stop",
+   "structured_outputs",
+   "tool_choice",
+   "tools"
+  ],
+  "pricing": {
+   "prompt": "0.000000375",
+   "completion": "0.000001875",
+   "image": "0.000000375",
+   "audio": "0.000000375",
+   "input_audio_cache": "0.0000000375",
+   "web_search": "0.014",
+   "internal_reasoning": "0.000001875",
+   "input_cache_read": "0.0000000375",
+   "input_cache_write": "0.0000000208333333333333",
+   "discount": 0.75
+  },
+  "implicit_caching": true,
+  "latency_p50_ms": 2005.5,
+  "throughput_p50": 80,
+  "created": 1786640581,
+  "description": "Gemini 3.7 Flash is a multimodal model from Google for fast agentic workflows, coding, and complex multi-step reasoning. It is designed for tasks that require responsive performance and reliable multi-step..."
+ },
+ "meta": {
+  "status": 200,
+  "provider": "Google",
+  "model_echo": "google/gemini-3.7-flash",
+  "id": "gen-1787605389-kMbMYtwX9262Sl4JFiTb",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "finish_reason": "length",
+  "native_finish_reason": "MAX_TOKENS",
+  "usage_keys": [
+   "completion_tokens",
+   "completion_tokens_details",
+   "cost",
+   "cost_details",
+   "is_byok",
+   "prompt_tokens",
+   "prompt_tokens_details",
+   "total_tokens"
+  ],
+  "usage_detail_keys": [
+   "completion_tokens_details.audio_tokens",
+   "completion_tokens_details.image_tokens",
+   "completion_tokens_details.reasoning_tokens",
+   "cost_details.upstream_inference_completions_cost",
+   "cost_details.upstream_inference_cost",
+   "cost_details.upstream_inference_prompt_cost",
+   "prompt_tokens_details.audio_tokens",
+   "prompt_tokens_details.cache_write_tokens",
+   "prompt_tokens_details.cached_tokens",
+   "prompt_tokens_details.video_tokens"
+  ],
+  "extra_top_keys": [
+   "service_tier"
+  ],
+  "message_keys": [
+   "content",
+   "reasoning",
+   "reasoning_details",
+   "refusal",
+   "role"
+  ],
+  "content": "OK",
+  "headers_of_interest": {
+   "x-generation-id": "gen-1787605389-kMbMYtwX9262Sl4JFiTb",
+   "x-content-type-options": "nosniff",
+   "server": "cloudflare",
+   "cf-ray": "<CF-RAY>"
+  },
+  "elapsed": 2.357
+ },
+ "tokenizer": {
+  "baseline_x": 1,
+  "passage_delta": 207,
+  "specials": {
+   "<|endoftext|>": {
+    "delta": 6,
+    "error": null
+   },
+   "<|im_start|>": {
+    "delta": 6,
+    "error": null
+   },
+   "<|begin_of_text|>": {
+    "delta": 8,
+    "error": null
+   },
+   "<|eot_id|>": {
+    "delta": 7,
+    "error": null
+   },
+   "<｜begin▁of▁sentence｜>": {
+    "delta": 13,
+    "error": null
+   },
+   "<start_of_turn>": {
+    "delta": 7,
+    "error": null
+   },
+   "[INST]": {
+    "delta": 3,
+    "error": null
+   },
+   "<|startoftext|>": {
+    "delta": 6,
+    "error": null
+   },
+   "<|reserved_special_token_0|>": {
+    "delta": 10,
+    "error": null
+   },
+   "<|fim_prefix|>": {
+    "delta": 6,
+    "error": null
+   },
+   "<think>": {
+    "delta": 3,
+    "error": null
+   }
+  }
+ },
+ "reasoning": {
+  "status": 200,
+  "answer": "639",
+  "reasoning_len": 448,
+  "reasoning_tokens": 1090,
+  "details_types": [
+   "reasoning.text"
+  ],
+  "details_formats": [
+   "google-gemini-v1"
+  ],
+  "details_n": 1,
+  "details_id_sample": null,
+  "has_signature": false,
+  "reasoning_head": "**Calculating Prime Sum**  I'm currently identifying the initial sequence of prime numbers needed for the calculation. I've successfully listed the first eleven",
+  "error": null,
+  "elapsed": 7.422
+ },
+ "tool": {
+  "status": 200,
+  "n_calls": 1,
+  "id": "call_7951297",
+  "id_shape": "aaaa_9999999",
+  "arguments": "{\"city\":\"Warsaw\",\"unit\":\"c\"}",
+  "extra_keys": [],
+  "finish_reason": "tool_calls",
+  "native_finish_reason": "STOP",
+  "content_alongside": false,
+  "error": null
+ },
+ "timing": {
+  "runs": [
+   {
+    "ttfb": 3.431919813156128,
+    "ttf_reasoning": 3.431919813156128,
+    "ttf_content": 6.907099723815918,
+    "total": 7.467,
+    "completion_tokens": 596,
+    "tok_per_s": 1064.5,
+    "status": 200
+   },
+   {
+    "ttfb": 3.564826250076294,
+    "ttf_reasoning": 3.564826250076294,
+    "ttf_content": 7.1698644161224365,
+    "total": 7.817,
+    "completion_tokens": 596,
+    "tok_per_s": 921.0,
+    "status": 200
+   }
+  ],
+  "ttf_content_median": 7.1698644161224365,
+  "tok_per_s_median": 1064.5
+ },
+ "behaviour": {
+  "identity": "I was trained by Google, my",
+  "style": {
+   "chars": 57,
+   "em_dashes": 0,
+   "en_dashes": 0,
+   "headers": 0,
+   "bullets": 0,
+   "bold": 0,
+   "sentences": 1,
+   "first_person": 0
+  },
+  "style_head": ", making it straightforward to diagnose and fix. (1)     ",
+  "logprobs": "ignored"
+ }
+}

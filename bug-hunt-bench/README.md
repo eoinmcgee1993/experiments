@@ -50,7 +50,7 @@ Per-repo detail: [repo1-scoreboard.csv](repo1-scoreboard.csv) · [repo2-scoreboa
 Wall-clock, tokens and reconstructed cost: [repo1-metrics.csv](repo1-metrics.csv) ·
 [repo2-metrics.csv](repo2-metrics.csv).
 
-![combined](previous-editions/68-105-bugs-seven-models.png)
+![combined](images/previous-editions/68-105-bugs-seven-models.png)
 
 ## Findings
 
@@ -84,7 +84,7 @@ identical two-repo battery on Jul 31, same prompts, same blind-judging pipeline:
 | **GPT-5.6 Luna** | high | **13** | 5 | 8 | 22 | 64.1 min | $0.57 |
 | **DeepSeek V4-Flash** | high | **8** | 4 | 4 | 4 | 24.9 min | $0.61 |
 
-![jul 31 wave — full nine-model board](73-bug-hunt-bench-v5.png)
+![jul 31 wave — full nine-model board](images/73-bug-hunt-bench-v5.png)
 
 - **Luna at max effort beats Fable 5 on both axes** — 33 strict fixes vs 24, $1.80 vs $68.07 —
   and lands one fix behind the flagship Sol re-run at ~1/19th of its cost. Post-price-cut list
@@ -143,7 +143,7 @@ The full effort dial, strict fixes /105 (Grok has no `max` level, so no dial poi
 | high | 34 | 13 | 24 | 21 |
 | max | 42 | 33 | 29 | 27 |
 
-![the current board — 9 models, 14 runs](74-bug-hunt-bench-v6.png)
+![the current board — 9 models, 14 runs](images/74-bug-hunt-bench-v6.png)
 
 - **Sol at max is the all-time leader**: 42 of 105 strict, plus 40 genuine extras — for 2.7 hours
   of wall clock and $69.61, the longest and second-priciest run on the board.
@@ -182,7 +182,7 @@ judged blind by GPT-5.5:
 | **DeepSeek V4-Flash `-0731`** | **14** | 6 | 8 | 0 | 48.5 min | $1.74 | **$1.52** |
 | **DeepSeek V4-Pro** | **10** | 5 | 5 | 1 | 27.6 min | $1.26 | **$5.54** |
 
-![current board — 10 models, 14 runs](75-bug-hunt-bench-v7.png)
+![current board — 10 models, 14 runs](images/75-bug-hunt-bench-v7.png)
 
 - **The re-post-training is real on this bench too**: 8 → 14 strict fixes (+75%) over the April
   snapshot, same prompts, same judging. That moves V4-Flash from last place to just under
@@ -292,7 +292,7 @@ send a **nonsense** effort value and read the status code — now has four data 
   legs, on both routes.
 - **Survivors hold at 52 of 105** — neither Aug 6-7 arm killed a bug that had survived everything.
 
-![the current board — 12 models, 17 runs](81-bug-hunt-bench-v9.png)
+![the current board — 12 models, 17 runs](images/81-bug-hunt-bench-v9.png)
 
 
 ## The Aug 12 wave — Grok 4.6, day one
@@ -321,7 +321,7 @@ documents. The run below is the tier it says it is.
   best-vs-best, but model and tier move together, so it is not a dial isolation. n=1 per cell as
   ever, and Grok's cost remains a reconstructed floor, not a bill.
 
-![the current board — 13 models, 18 runs](85-bug-hunt-bench-v10.png)
+![the current board — 13 models, 18 runs](images/85-bug-hunt-bench-v10.png)
 
 Source post for this wave: [@PawelHuryn on X](https://x.com/PawelHuryn/status/2087600689337835811) — the day-one run, QT of Musk's "try Grok 4.6 on tough real-world tasks."
 
@@ -360,7 +360,7 @@ grok CLI's `max`→`high` clamp, one layer up.
   retries, absorbed by the CLI's backoff). Cost is Google's standard list rate ($0.75 / $3.75 per
   MTok, doubling on 2027-01-01) from Google's own usage metadata, not a bill. n=1 per cell.
 
-![the current board — 14 models, 19 runs](86-bug-hunt-bench-v11.png)
+![the current board — 14 models, 19 runs](images/86-bug-hunt-bench-v11.png)
 
 ### Aug 25 retest — the same 105 bugs in Google's current CLI (Antigravity CLI, `agy`)
 
@@ -387,7 +387,7 @@ subscription, so cost is a token-estimate at Google's API list, not a bill.
   pass's rationale is the correct one (the fix breaks containment for the root workspace), so 4 + 1
   partial stands. Survivors unchanged at 51 of 105.
 
-![the current board — 14 models, 20 runs](89-bug-hunt-bench-v12.png)
+![the current board — 14 models, 20 runs](images/89-bug-hunt-bench-v12.png)
 
 Source post for this wave: [@PawelHuryn on X](https://x.com/PawelHuryn/status/2091979928288002164) — Google's cheapest agent model against OpenAI's cheapest: 22 vs 33 of 105, $8.43 vs $1.80.
 
@@ -461,7 +461,7 @@ so running the named model is the behavioural control for that claim.
 ## Previous editions
 
 Superseded cards (six- and seven-model boards, per-repo seven-model cards) live in
-[previous-editions/](previous-editions/). The current board is the nine-model card above.
+[previous-editions/](images/previous-editions/). The current board is the nine-model card above.
 
 ## Source posts
 

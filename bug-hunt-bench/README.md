@@ -391,6 +391,36 @@ subscription, so cost is a token-estimate at Google's API list, not a bill.
 
 Source post for this wave: [@PawelHuryn on X](https://x.com/PawelHuryn/status/2091979928288002164) — Google's cheapest agent model against OpenAI's cheapest: 22 vs 33 of 105, $8.43 vs $1.80.
 
+## The Aug 25 wave, part two — two Chinese-lab runs, and the survivor count moves twice
+
+Two runs on the same rig, hours apart: **Ox Alpha**, a free OpenRouter *stealth* slug, and
+**GLM-5.3** from Z.ai. They are here together on purpose — the wire fingerprint of the stealth slug
+matches GLM-5.3's serving stack ([stealth-ox-alpha-fingerprint/](../stealth-ox-alpha-fingerprint/)),
+so running the named model is the behavioural control for that claim.
+
+| Arm | Effort (actual) | Fixed /105 | Repo 1 /45 | Repo 2 /60 | Claimed-only | Genuine extras | Wall | Cost |
+|---|---|--:|--:|--:|--:|--:|--:|--:|
+| **GLM-5.3** | default | **19** | 8 | 11 | 1 | 4 | 66.7 min | $19.73 billed |
+| **Ox Alpha** (stealth) | default | **16** | 8 | 8 | 1 | 3 | 59.4 min | free |
+
+- **The survivor count moved twice in one day, after weeks of standing still.** Ox Alpha fixed
+  **H3** and GLM-5.3 fixed **G2** — two repo-1 bugs that had survived every model in every prior run.
+  **49 of 105 now survive everything**; four bugs have ever come off that list. The models that did it
+  are mid-table, which is the point: coverage and ranking are different questions.
+- **Effort is `default` on both rows because there was nothing to set.** An n=4 probe of OpenRouter's
+  reasoning dial on GLM-5.3 found the levels nest completely — spread *within* a level is 17.5x
+  against 2.0x *between* them, and `high` produced the least reasoning of the three. Reasoning is on
+  (this endpoint refuses to run without it); the tier is not selectable.
+- **Same neighbourhoods, different catches.** The two models' reports read like the same document —
+  both flagged the off-by-one selection chip, terminal output snapshotted after release, output
+  posted into the wrong session, renamed sessions swept, pagination counting rows instead of slots.
+  But the *graded* fixes overlap only **10 of 25** (40%). That is consistent with two runs of one
+  family, given this board's measured 4-point same-setting spread — and it is n=1 each, so it is
+  corroboration, not proof. The tokenizer evidence is what identifies the stealth slug.
+- **Caveat.** Both ran their legs sequentially, so wall clock is comparable to the other sequential
+  rows but not to the concurrent ones. GLM-5.3's dollar figure is a real OpenRouter bill; Ox Alpha
+  was genuinely free at the time of the run.
+
 ## Method notes & caveats
 
 - **n = 1 per cell.** One round per model per repo. Re-scoring repo 2 under the same judge moved one

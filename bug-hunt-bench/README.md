@@ -362,6 +362,33 @@ grok CLI's `max`→`high` clamp, one layer up.
 
 ![the current board — 14 models, 19 runs](86-bug-hunt-bench-v11.png)
 
+### Aug 25 retest — the same 105 bugs in Google's current CLI (Antigravity CLI, `agy`)
+
+Same model, same prompts, same blind judge, Google's current harness: `agy` 1.1.20 headless, model slug
+`gemini-3.7-flash-high` (effort verified active via the slugs: low 874–1,044 vs high 3,324–4,799 thinking
+tokens, n=3), no gateway needed — the current CLI lists 3.7 Flash natively. Auth is the Antigravity
+subscription, so cost is a token-estimate at Google's API list, not a bill.
+
+| Arm | Effort (actual) | Fixed /105 | Repo 1 /45 | Repo 2 /60 | Partial | Claimed-only | Genuine extras | Wall | Cost |
+|---|---|--:|--:|--:|--:|--:|--:|--:|--:|
+| **Gemini 3.7 Flash, Antigravity CLI** | **high** (its max) | **18** | 4 | 14 | 3 | 0 | 11 | 37.5 min | $8.57 list |
+| Gemini 3.7 Flash, Gemini CLI (retired), Aug 24 | high (its max) | 22 | 8 | 14 | 0 | 0 | 4 | 96.8 min* | $8.43 list |
+
+- **The harness swap did not rescue the number.** Google's own CLI scored three planted fixes lower
+  (repo 1: 8 → 4, its fixes a strict subset of the Gemini CLI run's; repo 2 flat at 14 with 11 of 14
+  shared), inside this board's same-setting variance band (Grok 4.5's three runs: 16, 13, 17).
+- **It is a different kind of run:** 2.6x faster (37 vs 97 minutes), a third of the tool calls on repo 1,
+  and **11 genuine extras** against 4 — the current CLI is quicker and more eager to fix what it finds
+  beyond the brief, and slightly less thorough on the plants. Zero claimed-only on both legs, both harnesses.
+- **Ops.** The first repo-1 attempt died at 67 s on a Google backend `INTERNAL (code 500)` that `agy`
+  retries only twice, one second apart, before terminating the run; the identical step reproduced clean two
+  minutes later, and the leg was re-run (the runner now retries that signature itself). One bug (H1)
+  received two blind verdicts on the same diff — partial in the first pass, full in a replicate; the first
+  pass's rationale is the correct one (the fix breaks containment for the root workspace), so 4 + 1
+  partial stands. Survivors unchanged at 51 of 105.
+
+![the current board — 14 models, 20 runs](89-bug-hunt-bench-v12.png)
+
 Source post for this wave: [@PawelHuryn on X](https://x.com/PawelHuryn/status/2091979928288002164) — Google's cheapest agent model against OpenAI's cheapest: 22 vs 33 of 105, $8.43 vs $1.80.
 
 ## Method notes & caveats

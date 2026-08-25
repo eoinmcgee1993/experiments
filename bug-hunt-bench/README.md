@@ -461,7 +461,7 @@ so running the named model is the behavioural control for that claim.
 ## Previous editions
 
 Superseded cards (six- and seven-model boards, per-repo seven-model cards) live in
-[previous-editions/](images/previous-editions/). The current board is the nine-model card above.
+[images/previous-editions/](images/previous-editions/). The current board is the nine-model card above.
 
 ## Source posts
 

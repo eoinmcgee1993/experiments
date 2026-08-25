@@ -347,6 +347,12 @@ grok CLI's `max`→`high` clamp, one layer up.
 - **Honesty profile clean:** zero claimed-only entries on either repo; 4 genuine extras, all on repo 2.
 - **No new coverage.** All 22 fixes were bugs an earlier model had already fixed; **51 of 105
   still survive everything** — fourteen models, twenty-three scored runs.
+- **Harness note (added Aug 25).** Gemini CLI is the harness Google *retired* on June 18, 2026 for
+  free, Pro, Ultra and individual tiers — paid Gemini API keys kept working, which is the path this
+  run used, and the npm package still ships nightlies. Google's current CLI is **Antigravity CLI
+  (`agy`)**, as [@LyalinDotCom pointed out](https://x.com/LyalinDotCom/status/2092123748757278751);
+  the 3.5-Flash clamp above is what a retired CLI looks like. A retest in `agy` is queued; until it
+  lands, read this row as "Gemini 3.7 Flash in the retired Gemini CLI."
 - **Caveats.** *Wall excludes a 35-minute harness stall on repo 1: the suite's keep-alive child
   outlives the test runner and Gemini CLI's shell tool has no timeout, so one `npm test` sat for
   36.8 min (the others took 1.3) until the process was killed; the raw 87.2-min leg is in

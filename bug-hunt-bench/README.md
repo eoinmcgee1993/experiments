@@ -455,8 +455,9 @@ request unless told not to; pinning keeps the row single-path.
   "reported a fix it did not ship". The score is unaffected either way: the diff is the ground truth.
 - **Effort is `default` because no tier was asserted.** Reasoning was on (this endpoint refuses to
   run without it); the CLI's thinking request was passed through and OpenRouter's dial was not
-  relied on. The n=4 probe that showed the dial inert on GLM-5.3 is being repeated on this slug and
-  will be filed here as `effort-dial-probe-glm53flash.txt`.
+  relied on. The n=4 probe that showed the dial inert on GLM-5.3 was
+  repeated on this slug and reads **INERT** the same way (between-level 3.99x does not clear the
+  14.06x within-level spread; the `low` range nests inside `high`): `effort-dial-probe-glm53flash.txt`.
 - **Caveat.** Sequential legs, so wall clock is comparable to the other sequential rows only.
   Provider pinned with fallbacks off, so the number is one serving path, not a blend.
 

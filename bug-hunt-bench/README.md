@@ -421,6 +421,45 @@ so running the named model is the behavioural control for that claim.
   rows but not to the concurrent ones. GLM-5.3's dollar figure is a real OpenRouter bill; Ox Alpha
   was genuinely free at the time of the run.
 
+## Aug 27 — the stealth slug, named and priced: GLM-5.3 Flash
+
+Z.ai confirmed on Aug 26 that `stealth/ox-alpha` was **GLM-5.3-Flash** (a 320B/18B MoE, open
+weights). So the named model ran the same rig — same harness, same prompt, same sequential shape as
+the Aug 25 pair — with one change: a paid endpoint, **pinned to Z.AI's own first-party host**. Twelve
+hosts served the slug at three prices on launch day, and OpenRouter load-balances across them per
+request unless told not to; pinning keeps the row single-path.
+
+| Arm | Effort (actual) | Fixed /105 | Repo 1 /45 | Repo 2 /60 | Claimed-only | Genuine extras | Wall | Cost |
+|---|---|--:|--:|--:|--:|--:|--:|--:|
+| **GLM-5.3 Flash** | default | **13** | 6 | 7 | 5 | 4 | 57.1 min | $0.79 billed |
+| Ox Alpha (stealth, Aug 25) | default | 16 | 8 | 8 | 1 | 3 | 59.4 min | free |
+| GLM-5.3 (Aug 25) | default | 19 | 8 | 11 | 1 | 4 | 66.7 min | $19.73 billed |
+
+- **The score held, within what one run can say.** 13 against the stealth run's 16 is inside this
+  board's measured same-setting spread (Grok 4.5 at one setting: 16 · 13 · 17). The graded fixes
+  overlap **10 of 19** with Ox Alpha (53%) — a closer pair than either is to GLM-5.3 (40–45%), which
+  is what two runs of one model should look like. n=1 each: this is not a regression, and it is not
+  "the same score" either.
+- **No survivor moved.** 49 of 105 still survive everything. H3, which the stealth run fixed, was
+  missed this time — a survivor kill is a variance event, not a capability a model repeats on demand.
+- **$0.79 for 13/105 — the cheapest paid row on the board.** Twenty-five times cheaper than GLM-5.3's
+  $19.73 for 19. The figure is a real OpenRouter credits delta, per leg ($0.29 + $0.50), at the 50%
+  launch price ($0.075 / $0.25 per million tokens in / out, $0.015 cache read); list doubles after
+  Sep 9, which would make the same run about $1.59. Zero throttling across 57 minutes on the paid
+  endpoint (the free stealth pool had 429'd for minutes at a stretch).
+- **The five "claimed-only" are not claims.** All five sit in the model's own *"Suspected but not
+  fixed"* section — it named them and deliberately left them alone ("couldn't confirm as planted vs
+  original design"). The blind judge's rubric counts a bug as claimed-only whenever the report
+  *identifies* it without a fixing hunk, and has applied that the same way before (GLM-5.3's J11 on
+  Aug 25), so the column is comparable across rows — but read it as "named, not fixed", not as
+  "reported a fix it did not ship". The score is unaffected either way: the diff is the ground truth.
+- **Effort is `default` because no tier was asserted.** Reasoning was on (this endpoint refuses to
+  run without it); the CLI's thinking request was passed through and OpenRouter's dial was not
+  relied on. The n=4 probe that showed the dial inert on GLM-5.3 is being repeated on this slug and
+  will be filed here as `effort-dial-probe-glm53flash.txt`.
+- **Caveat.** Sequential legs, so wall clock is comparable to the other sequential rows only.
+  Provider pinned with fallbacks off, so the number is one serving path, not a blend.
+
 ## Method notes & caveats
 
 - **n = 1 per cell.** One round per model per repo. Re-scoring repo 2 under the same judge moved one

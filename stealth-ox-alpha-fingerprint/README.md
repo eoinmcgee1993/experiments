@@ -16,6 +16,27 @@ No benchmark. A few prompts per model, the same prompts against nine named refer
 4. **Reasoning shape.** Raw chain-of-thought with `reasoning_details.format: "unknown"` — which excludes OpenAI, xAI, Google, Anthropic and Meta outright, each of which gets a named format through OpenRouter — and the same terse arithmetic register as GLM-5.3 on the same prompt (`Primes: 2,3,5,… Sum: 2+3=5, +5=10, …`, 158 vs 134 reasoning tokens; GLM-5.2 narrates in 2,957).
 5. **The wrapper.** The hidden system prompt, recovered verbatim: `You are "ox-alpha", an LLM developed by an undisclosed organization…` — ~75 tokens of identity denial, exactly the gap between ox-alpha's 88-token bare-prompt overhead and GLM's 13. Nothing else in it.
 
+## Aug 26 — the reveal, and the named model on the same probes
+
+Z.ai confirmed on Aug 26, 2026 that `stealth/ox-alpha` was **GLM-5.3-Flash** (OpenRouter slug
+`z-ai/glm-5.3-flash`, listed the same day). The verdict above — *a GLM model from Z.ai* — stands; the
+specific release was the one this set could not name from the wire, because it did not exist as a
+named slug yet. The named model, run through the same tool on Aug 27
+([fingerprints/z-ai__glm-5.3-flash.json](01-wire-fingerprint/fingerprints/z-ai__glm-5.3-flash.json)):
+
+- **Bare-prompt overhead 14 tokens** (GLM-5.3: 13; the stealth slug: 88 with 64 cached). The ~75-token
+  identity-denial wrapper is gone, as expected for a named release.
+- **Same tokenizer, one token lower on every delta.** Passage 171 (stealth and GLM-5.3: 172),
+  `<|im_start|>` +4 (+5), `<|begin_of_text|>` +5 (+6), DeepSeek-BOS +10 (+11), `<think>` +2 (+3): the
+  *absolute* counts of "x + string" match GLM-5.3 to the token, and only the one-character baseline moved.
+- **One real change: `<|endoftext|>` is now +1** (stealth and GLM-5.3: +6). The named endpoint treats
+  that string as a single special token where the stealth serving stack split it — a serving-side
+  change at launch, not a different tokenizer family.
+- Reasoning register (`Primes: 2,3,5,… Sum: 2+3=5,+5=10,…`, 53 reasoning tokens), `reasoning.text` /
+  `unknown`, `call_`+24-hex tool ids, `stop`: identical to the stealth rows.
+
+The priced benchmark run of the named model is in [bug-hunt-bench/](../bug-hunt-bench/) (Aug 27).
+
 ## Method notes & caveats
 
 - **What leaks through OpenRouter, ranked by how hard a stealth system prompt can fake it.** Immune: `usage.prompt_tokens` on a fixed passage (the tokenizer counts the user text before the model runs; the delta between two user strings cancels any hidden prefix), special-token deltas, the model card (context, max output, `supported_parameters`). Serving-side, could be shaped by a gateway: `reasoning_details.format`, tool-call id style, `native_finish_reason` vocabulary, live endpoint latency/throughput. Worthless: self-identification — GLM-5.2 answers "Google Gemini", Fable 5 answers "Claude Sonnet 4.5", and Ox Alpha answers "an undisclosed organization" because its wrapper tells it to.

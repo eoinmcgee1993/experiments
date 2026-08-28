@@ -461,6 +461,19 @@ request unless told not to; pinning keeps the row single-path.
 - **Caveat.** Sequential legs, so wall clock is comparable to the other sequential rows only.
   Provider pinned with fallbacks off, so the number is one serving path, not a blend.
 
+## Per-bug coverage
+
+`coverage.csv` gives, for every run, exactly which of the 105 planted bugs it fixed, so you can
+check overlap yourself rather than taking a headline number on trust. Bugs are identified by a
+stable **index**: 1-45 are repo 1, 46-105 are repo 2. The bug *ids* are deliberately not
+published - they are the namespace of the withheld answer key, and the bench only works while
+that stays withheld. The indices are frozen, so a given number means the same bug across every
+regeneration and every run.
+
+Each row's index count always equals that run's `fixed_of_105` in the scoreboards; the file is
+generated from the same verdict files, never hand-edited. The live board renders this as its
+Coverage view: https://bughunt.productcompass.pm
+
 ## Method notes & caveats
 
 - **n = 1 per cell.** One round per model per repo. Re-scoring repo 2 under the same judge moved one

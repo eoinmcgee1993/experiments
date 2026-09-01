@@ -1,4 +1,4 @@
-# bug-hunt-bench — 105 planted bugs, two real repos, fourteen coding models
+# bug-hunt-bench — 105 planted bugs, two real repos, twenty coding models
 
 **Question:** Hide bugs in a real codebase, keep the test suite green so nothing points at the
 answers, then ask each frontier coding model — in its own native agentic CLI — to find and fix as
@@ -460,6 +460,47 @@ request unless told not to; pinning keeps the row single-path.
   14.06x within-level spread; the `low` range nests inside `high`): `effort-dial-probe-glm53flash.txt`.
 - **Caveat.** Sequential legs, so wall clock is comparable to the other sequential rows only.
   Provider pinned with fallbacks off, so the number is one serving path, not a blend.
+
+## Sep 1 — Claude Fable 5.1, day one, at `max`
+
+Anthropic shipped Claude Fable 5.1 and it ran the identical two-repo battery the same day, in Claude
+Code, at `max` effort — the same harness and the same tier as the Fable 5 run already on this board,
+so the two are directly comparable. Judged blind by GPT-5.5 (a non-sibling judge; no model grades its
+own family).
+
+| Arm | Effort | Fixed /105 | Repo 1 /45 | Repo 2 /60 | Claimed-only | Genuine extras | Wall | Cost |
+|---|---|--:|--:|--:|--:|--:|--:|--:|
+| **Claude Fable 5.1** | **max** (its ceiling) | **43** | 19 | 24 | 4 | 11 | 73.1 min | $77.55 |
+| Fable 5 (same harness, same tier) | max | 29 | 12 | 17 | 0 | 5 | 57.3 min | $104.49 |
+
+- **It is the top score this board has measured — by one fix, which is not a lead.** 43 beats
+  GPT-5.6 Sol at `max` (42), but this board's own same-setting spread is ±2–3 points (see the Opus
+  replicates: 23 and 26 on identical conditions). Treat 43 and 42 as a tie until someone runs n>1.
+  Both are n=1.
+- **The generational jump is the real result.** Against its own predecessor at the same tier in the
+  same harness, 29 → 43 is **+14**, far outside that variance band. Repo 1 went 12 → 19, repo 2
+  17 → 24. Unlike the cross-vendor comparison, nothing moves here except the model.
+- **It killed two bugs nothing had ever fixed** — both in repo 1. Across 45 scored runs and 20
+  models, the never-fixed count drops **45 → 43**.
+- **It costs 26% less while doing more work.** $77.55 against Fable 5's $104.49, and that is not a
+  smaller job: it read **2.35× more cached context** (194.6M vs 83.0M tokens) and wrote **1.55× more
+  output** (256.7K vs 165.9K). The entire saving is Fable 5.1's cache-read repricing to $0.25/MTok,
+  a quarter of Fable 5's rate. Priced at the old rate the same run bills **$223.52** — more than
+  double Fable 5. On a long agentic bench that re-reads a large cached prefix, that one line item
+  decides the cost column.
+- **It is slower**: 73.1 min vs 57.3, +27%. Faster per turn, but more turns and a larger transcript.
+- **Honesty profile**: zero claimed-only on repo 1, four on repo 2, and **zero false-positive fixes**
+  on either. The 11 genuine extras are real bugs outside the answer key.
+- **Reproducibility note, and a trap.** This model postdates the Claude Code build used here, so the
+  CLI has no entry for it and falls back to **assuming a 200K context window**; Fable 5.1's is 1M.
+  Left alone that forces auto-compaction roughly five times earlier than the model needs, on a bench
+  whose runs read tens of millions of cached tokens — and it fails silently: clean exit, no error,
+  just a worse score and a longer wall clock that reads as "the model is slow". The arm pins the
+  window explicitly (`[1m]`). The CLI was deliberately *not* upgraded to a build that recognises the
+  name, because that would have changed the harness underneath the Fable 5 comparison.
+- **Caveats.** n=1 per cell, as everywhere on this board. Day-one run. Cost is a list-price estimate
+  from measured tokens, not an invoice. `max` is a first-party documented tier taken at face value,
+  not separately probed as binding.
 
 ## Per-bug coverage
 

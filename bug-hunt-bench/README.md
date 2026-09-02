@@ -1,4 +1,4 @@
-# bug-hunt-bench — 105 planted bugs, two real repos, twenty coding models
+# bug-hunt-bench — 105 planted bugs, two real repos, twenty-one coding models
 
 **Question:** Hide bugs in a real codebase, keep the test suite green so nothing points at the
 answers, then ask each frontier coding model — in its own native agentic CLI — to find and fix as
@@ -516,6 +516,45 @@ and was judged blind by a non-sibling judge (no model grades its own family).
   dial step is one sample per level. Day-one runs. Cost is a list-price estimate from measured
   tokens, not an invoice. All three tiers are first-party documented enums taken at face value, not
   separately probed as binding.
+
+## Sep 2 — Gemini 3.8 Flash, day one, in Google's Antigravity CLI
+
+Google shipped Gemini 3.8 Flash and it ran the identical two-repo battery in Google's own current
+CLI (Antigravity, `agy` 1.1.22), at `high` — the top tier that CLI offers for this model. Legs ran
+sequentially on an idle machine; judged blind by GPT-5.5.
+
+| Arm | Effort | Fixed /105 | Repo 1 /45 | Repo 2 /60 | Claimed-only | Genuine extras | Wall | Cost |
+|---|---|--:|--:|--:|--:|--:|--:|--:|
+| **Gemini 3.8 Flash** | **high** (its ceiling) | **20** | 7 | 13 | 1 | 6 | 29.8 min | $9.78 |
+| Gemini 3.7 Flash (Antigravity, retest) | high | 18 | 4 | 14 | — | — | 37.5 min | $8.57 |
+| Gemini 3.7 Flash (Antigravity, seq) | high | 16 | 4 | 12 | — | — | 22.7 min | $6.36 |
+| Gemini 3.7 Flash (Gemini CLI, retired) | high | 22 | 8 | 14 | — | — | 96.8 min | $8.43 |
+
+- **Read this against the Antigravity rows only.** In the same CLI, 3.7 Flash scored 18 and 16
+  (n=2, mean 17); 3.8 scores **20** — **+3 over that mean, +2 over the better of the two**. This
+  board's same-setting spread is ±2–3, so that is a modest improvement sitting at the edge of the
+  noise band, not a clean generational jump. The one 3.7 row that beats it (22/105) ran in the
+  *retired* Gemini CLI on a different harness, so it is not a like-for-like comparison in either
+  direction.
+- **Where it gained is repo 1**: 7/45 against 3.7's 4/45 in the same CLI, twice. Repo 2 is flat
+  (13 vs 14 and 12).
+- **It is not cheaper.** $9.78 against $6.36 and $8.57 for 3.7 in the same CLI — more output tokens
+  at the same per-token price. Wall clock sits between the two 3.7 Antigravity runs.
+- **Honesty profile is good**: zero claimed-only and zero extras on repo 1 (it claimed nothing it
+  did not do), one claimed-only on repo 2, and **zero false-positive fixes** on either.
+- **It killed no bugs that were previously unfixed** — the never-fixed count stays 43.
+- **Effort dial verified on this serving path.** n=3 per tier on the standard probe prompt gives
+  three non-overlapping thinking-token bands: low 0–70, medium 91–131, high 151–367. `high` is the
+  top slug `agy models` offers for this model, and asking for more is rejected outright
+  (`invalid --effort "max" (valid: low, medium, high)`) rather than silently clamped — so the
+  ceiling label is honest and the CLI cannot serve a lower tier while reporting a higher one.
+- **Generational note on the meter itself.** 3.7 Flash produced 874–1,044 thinking tokens at `low`
+  and 3,324–4,799 at `high` on the identical prompt and harness. 3.8 produces 0–70 and 151–367 — an
+  order of magnitude less thinking at every tier, while scoring slightly higher. Do not compare the
+  two generations' thinking counts as if they were the same meter.
+- **Caveats.** n=1, day-one. Cost is a list-price estimate from measured tokens, not an invoice.
+  agy has no wire readback (it talks Google's cloudcode backend, not the public API), so the token
+  accounting is the CLI's own meter — the same trust level as Codex or grok reporting theirs.
 
 ## Per-bug coverage
 

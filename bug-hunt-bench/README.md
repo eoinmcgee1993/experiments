@@ -461,46 +461,55 @@ request unless told not to; pinning keeps the row single-path.
 - **Caveat.** Sequential legs, so wall clock is comparable to the other sequential rows only.
   Provider pinned with fallbacks off, so the number is one serving path, not a blend.
 
-## Sep 1 — Claude Fable 5.1, day one, at `max`
+## Sep 1 — Claude Fable 5.1, day one, two tiers
 
 Anthropic shipped Claude Fable 5.1 and it ran the identical two-repo battery the same day, in Claude
-Code, at `max` effort — the same harness and the same tier as the Fable 5 run already on this board,
-so the two are directly comparable. Judged blind by GPT-5.5 (a non-sibling judge; no model grades its
-own family).
+Code, at `high` and at `max` — the same harness and the same tiers as the Fable 5 rows already on
+this board, so the comparison is like-for-like. Both tiers ran sequentially on an otherwise idle
+machine and were judged blind by GPT-5.5 (a non-sibling judge; no model grades its own family).
 
 | Arm | Effort | Fixed /105 | Repo 1 /45 | Repo 2 /60 | Claimed-only | Genuine extras | Wall | Cost |
 |---|---|--:|--:|--:|--:|--:|--:|--:|
 | **Claude Fable 5.1** | **max** (its ceiling) | **43** | 19 | 24 | 4 | 11 | 73.1 min | $77.55 |
-| Fable 5 (same harness, same tier) | max | 29 | 12 | 17 | 0 | 5 | 57.3 min | $104.49 |
+| **Claude Fable 5.1** | **high** | **33** | 15 | 18 | **0** | 7 | 36.3 min | $41.52 |
+| Fable 5 | max | 29 | 12 | 17 | 0 | 5 | 57.3 min | $104.49 |
+| Fable 5 | high | 24 | 9 | 15 | 1 | 5 | 31.4 min | $68.07 |
 
-- **It is the top score this board has measured — by one fix, which is not a lead.** 43 beats
-  GPT-5.6 Sol at `max` (42), but this board's own same-setting spread is ±2–3 points (see the Opus
-  replicates: 23 and 26 on identical conditions). Treat 43 and 42 as a tie until someone runs n>1.
-  Both are n=1.
-- **The generational jump is the real result.** Against its own predecessor at the same tier in the
-  same harness, 29 → 43 is **+14**, far outside that variance band. Repo 1 went 12 → 19, repo 2
-  17 → 24. Unlike the cross-vendor comparison, nothing moves here except the model.
-- **It killed two bugs nothing had ever fixed** — both in repo 1. Across 45 scored runs and 20
-  models, the never-fixed count drops **45 → 43**.
-- **It costs 26% less while doing more work.** $77.55 against Fable 5's $104.49, and that is not a
-  smaller job: it read **2.35× more cached context** (194.6M vs 83.0M tokens) and wrote **1.55× more
-  output** (256.7K vs 165.9K). The entire saving is Fable 5.1's cache-read repricing to $0.25/MTok,
-  a quarter of Fable 5's rate. Priced at the old rate the same run bills **$223.52** — more than
-  double Fable 5. On a long agentic bench that re-reads a large cached prefix, that one line item
-  decides the cost column.
-- **It is slower**: 73.1 min vs 57.3, +27%. Faster per turn, but more turns and a larger transcript.
-- **Honesty profile**: zero claimed-only on repo 1, four on repo 2, and **zero false-positive fixes**
-  on either. The 11 genuine extras are real bugs outside the answer key.
+- **43 is the top score this board has measured — by one fix, which is not a lead.** It beats
+  GPT-5.6 Sol at `max` (42), but this board's own same-setting spread is ±2–3 points (the Opus
+  replicates scored 23 and 26 on identical conditions). Treat 43 and 42 as a tie until someone runs
+  n>1. Both are n=1.
+- **The generational jump is the durable result**, because nothing moves but the model: at `max`,
+  29 → 43 (**+14**); at `high`, 24 → 33 (**+9**). Both are far outside the variance band.
+- **The dial is real and it is large.** 33 → 43 from `high` to `max`, **+10** — measured the same
+  night, same harness, same box, sequential. Fable 5's own dial over the same two tiers moved +5
+  (24 → 29). This is one of the cleanest effort separations on the board.
+- **Fable 5.1 at `high` beats Fable 5 at `max`** — 33 vs 29 — for **40% of the cost** ($41.52 vs
+  $104.49) and 21 fewer minutes. If you were running Fable 5 at its ceiling, the cheaper tier of the
+  new model is now strictly the better buy on this bench.
+- **Cost falls while work rises.** `max` cost 26% less than Fable 5's `max` while reading **2.35×
+  more cached context** (194.6M vs 83.0M tokens) and writing **1.55× more output**. The entire
+  saving is Fable 5.1's cache-read repricing to $0.25/MTok, a quarter of Fable 5's rate: priced at
+  the old rate that same run bills **$223.52**, more than double. On a long agentic bench that
+  re-reads a large cached prefix, that one line item decides the cost column.
+- **It is slower per unit of work**: `max` took 73.1 min vs 57.3 (+27%), `high` 36.3 vs 31.4 (+16%).
+  Faster per turn, but more turns and larger transcripts.
+- **Honesty profile is the best on the board at `high`**: **zero** claimed-only on *both* repos, and
+  **zero false-positive fixes** at either tier. At `max` it claimed four on repo 2 that the diff did
+  not support — the one place the cheaper tier is cleaner than the expensive one.
+- **`max` killed two bugs nothing had ever fixed** (both repo 1); the never-fixed count drops
+  **45 → 43**. `high` found no first-evers.
 - **Reproducibility note, and a trap.** This model postdates the Claude Code build used here, so the
   CLI has no entry for it and falls back to **assuming a 200K context window**; Fable 5.1's is 1M.
   Left alone that forces auto-compaction roughly five times earlier than the model needs, on a bench
   whose runs read tens of millions of cached tokens — and it fails silently: clean exit, no error,
-  just a worse score and a longer wall clock that reads as "the model is slow". The arm pins the
+  just a worse score and a longer wall clock that reads as "the model is slow". Both arms pin the
   window explicitly (`[1m]`). The CLI was deliberately *not* upgraded to a build that recognises the
   name, because that would have changed the harness underneath the Fable 5 comparison.
-- **Caveats.** n=1 per cell, as everywhere on this board. Day-one run. Cost is a list-price estimate
-  from measured tokens, not an invoice. `max` is a first-party documented tier taken at face value,
-  not separately probed as binding.
+- **Caveats.** n=1 per cell, as everywhere on this board — including the two tiers here, so the +10
+  dial is one sample per level. Day-one runs. Cost is a list-price estimate from measured tokens,
+  not an invoice. Both tiers are first-party documented enums taken at face value, not separately
+  probed as binding.
 
 ## Per-bug coverage
 

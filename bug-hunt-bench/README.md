@@ -569,6 +569,7 @@ otherwise idle machine, judged blind by Grok 4.6 (non-sibling — no model grade
 |---|---|--:|--:|--:|--:|--:|--:|--:|
 | **GPT-6 Astra** | **max** (its ceiling) | **48** | **24** | 24 | **0** | 45 | 78.9 min | $31.20 |
 | **GPT-6 Astra** | **xhigh** | **43** | 23 | 20 | 1 | 53 | 58.8 min | $24.22 |
+| **GPT-6 Astra** | **high** | **35** | 19 | 16 | 2 | 40 | 40.5 min | $20.60 |
 | Claude Fable 5.1 | max | 43 | 19 | 24 | 4 | 11 | 73.1 min | $77.55 |
 | GPT-5.6 Sol | max | 42 | 19 | 23 | 0 | 40 | 163.8 min | $69.61 |
 
@@ -620,6 +621,18 @@ otherwise idle machine, judged blind by Grok 4.6 (non-sibling — no model grade
   planted fixes** — more unplanted defects than planted ones. A model spending less effort on the
   assigned task drifting toward incidental finds is a pattern worth watching across the remaining
   tiers rather than concluding from one row.
+- **`high` is where the dial stops being a discount and starts being a different model.** 48 → 43 → 35:
+  **-5** from max to xhigh, then **-8** more to high. At `high` Astra scores below its own repo-1 field
+  average and lands under Fable 5.1 at max (43) and Sol at max (42) — a frontier model, run one notch
+  down, is no longer competitive with last generation's ceilings. Cost does fall in step ($31.21 →
+  $24.22 → $20.60), but the fixes fall faster: **$0.65 per fix at max, $0.59 at high** — the cheaper
+  tier is barely cheaper *per unit of work delivered*.
+- **Repo 2 carries the entire collapse again.** Repo 1 goes 24 → 23 → 19; repo 2 goes 24 → 20 → **16**.
+  Across all three tiers so far, this bench's effort dial is almost entirely a repo-2 phenomenon.
+- **The honesty trend holds and steepens**: claimed-only 0 → 1 → 2, and at `high` the model reported
+  **30 unplanted extras against 16 planted fixes on repo 2** — nearly two incidental finds for every
+  bug it was actually asked to fix. Lower effort is not just finding less; it is spending a larger
+  share of what it does find away from the task.
 - **No first-ever kills at `xhigh`** — the never-fixed count stays at 40. Every bug it fixed, some
   model had already fixed.
 - **Not solved.** 57 of 105 planted bugs survived a frontier model at its ceiling, and 40 have now

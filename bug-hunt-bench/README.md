@@ -568,6 +568,7 @@ otherwise idle machine, judged blind by Grok 4.6 (non-sibling — no model grade
 | Arm | Effort | Fixed /105 | Repo 1 /45 | Repo 2 /60 | Claimed-only | Genuine extras | Wall | Cost |
 |---|---|--:|--:|--:|--:|--:|--:|--:|
 | **GPT-6 Astra** | **max** (its ceiling) | **48** | **24** | 24 | **0** | 45 | 78.9 min | $31.20 |
+| **GPT-6 Astra** | **xhigh** | **43** | 23 | 20 | 1 | 53 | 58.8 min | $24.22 |
 | Claude Fable 5.1 | max | 43 | 19 | 24 | 4 | 11 | 73.1 min | $77.55 |
 | GPT-5.6 Sol | max | 42 | 19 | 23 | 0 | 40 | 163.8 min | $69.61 |
 
@@ -609,6 +610,18 @@ otherwise idle machine, judged blind by Grok 4.6 (non-sibling — no model grade
   confirmed serving it (`model: gpt-6-astra`, `reasoning effort: max`) before either leg started;
   the probe is filed under `effort-dial-probes/`. This row is `first_party`, not a requested-and-hoped
   tier.
+- **The dial is not free, and `xhigh` is not a cheap `max`.** Dropping one step costs **5 fixes**
+  (48 → 43) for a 25% saving in wall clock and 22% in cost. That is the same size as the gap between
+  Astra at max and the entire previous field, spent in one notch of the dial. The drop is also
+  lopsided in the mirror image of the max row's lead: repo 1 barely moves (24 → 23) while repo 2 falls
+  **24 → 20**. Whatever `max` is buying on this bench, it is buying most of it on repo 2.
+- **The honesty profile degrades with the dial too.** `xhigh` posted its first claimed-only (1) and
+  first partial (1), against a clean sweep at `max`, and produced **53 genuine extras against 43
+  planted fixes** — more unplanted defects than planted ones. A model spending less effort on the
+  assigned task drifting toward incidental finds is a pattern worth watching across the remaining
+  tiers rather than concluding from one row.
+- **No first-ever kills at `xhigh`** — the never-fixed count stays at 40. Every bug it fixed, some
+  model had already fixed.
 - **Not solved.** 57 of 105 planted bugs survived a frontier model at its ceiling, and 40 have now
   survived every model ever run here.
 

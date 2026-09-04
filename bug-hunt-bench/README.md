@@ -43,7 +43,7 @@ Strict fixes only — no partial credit. [combined-scoreboard.csv](combined-scor
 
 **63 of the 105 bugs survived every model** in this seven-model wave (60 after the Jul 31 wave,
 54 after the Aug 1 max wave, 53 after the DeepSeek follow-up, **52 after the Aug 3 wave**,
-still 52 after Aug 6-7 and **51 after the Aug 12 Grok 4.6 wave**). Zero false-positive fixes from any arm on either repo: every
+still 52 after Aug 6-7, **51 after the Aug 12 Grok 4.6 wave**, and **40 after the Sep 4 GPT-6 Astra wave** — see each wave's section below for the kills). Zero false-positive fixes from any arm on either repo: every
 extra fix any model applied was a genuine unplanted defect.
 
 Per-repo detail: [repo1-scoreboard.csv](repo1-scoreboard.csv) · [repo2-scoreboard.csv](repo2-scoreboard.csv).
@@ -555,6 +555,62 @@ sequentially on an idle machine; judged blind by GPT-5.5.
 - **Caveats.** n=1, day-one. Cost is a list-price estimate from measured tokens, not an invoice.
   agy has no wire readback (it talks Google's cloudcode backend, not the public API), so the token
   accounting is the CLI's own meter — the same trust level as Codex or grok reporting theirs.
+
+## Sep 4 — GPT-6 Astra, day one, at max
+
+OpenAI announced GPT-6 Astra on Sep 3 with plan and API access "in the coming days". It reached this
+account at 20:46 CEST on Sep 4 — on the Codex/ChatGPT path only; the raw API key still answered
+`model_not_found` throughout, and does at the time of writing. A watcher had been polling since the
+announcement, so the battery started ten seconds after the model first answered. Both repos ran
+sequentially at `max` in the Codex CLI, the same harness every other OpenAI row here ran in, on an
+otherwise idle machine, judged blind by Grok 4.6 (non-sibling — no model grades its own family).
+
+| Arm | Effort | Fixed /105 | Repo 1 /45 | Repo 2 /60 | Claimed-only | Genuine extras | Wall | Cost |
+|---|---|--:|--:|--:|--:|--:|--:|--:|
+| **GPT-6 Astra** | **max** (its ceiling) | **48** | **24** | 24 | **0** | 45 | 78.9 min | $31.20 |
+| Claude Fable 5.1 | max | 43 | 19 | 24 | 4 | 11 | 73.1 min | $77.55 |
+| GPT-5.6 Sol | max | 42 | 19 | 23 | 0 | 40 | 163.8 min | $69.61 |
+
+- **48/105 is the top score this board has measured, and this time the margin clears the noise.** The
+  previous top two were separated by one fix, which this repo called a tie and still does. Astra is
+  **+5 over Fable 5.1** and **+6 over Sol**, against a measured same-setting spread of ±2–3 points
+  (three Grok 4.5 runs on identical settings scored 16, 13 and 17). It is still n=1, and n=1 is how
+  every row here is produced — but a 5-point gap is the first lead on this board that survives its own
+  variance band.
+- **The entire lead is on repo 1.** Repo 2 is a dead tie with Fable 5.1 at 24/60. On repo 1 Astra
+  scored **24/45 against a field that had never beaten 19** — a 26% jump on one codebase and nothing
+  on the other. Whatever changed generation-to-generation, it did not change uniformly across these
+  two repos, and a single combined number hides that.
+- **A clean honesty profile, and it is the cleanest here.** **Zero claimed-only on both repos**, zero
+  partials, one false-positive fix. Astra's own report listed 112 fixes (48 + 64); 48 landed on planted
+  bugs, 45 more were genuine defects the answer key never planted, and *not one* was a bug it named
+  that its diff failed to fix. Fable 5.1 at max leaked four of those on repo 2. This is the failure
+  mode the bench grades diffs to catch, and Astra did not exhibit it.
+- **Fastest-per-point on the board, and by a wide margin on cost.** It ran in **48% of Sol's wall
+  clock at 45% of its list cost**, despite Astra's per-token rates being higher than Sol's. Against
+  Fable 5.1 it is marginally slower (78.9 vs 73.1 min) at **40% of the cost**.
+- **It killed three bugs nothing had ever fixed**, dropping the never-fixed count **43 → 40**:
+  - `J8` (repo 1) — queued sends for a dead session are never cleared on process exit, so they can
+    misfire against a session that no longer exists.
+  - `P032` (repo 2) — the CORS allow-list omits mutation verbs, so browser `PUT`/`DELETE` lesson edits
+    fail preflight.
+  - `P038` (repo 2) — the certificate detail cache is not written after an edit, so detail and list
+    views disagree.
+- **Cost is a list-equivalent, and probably a floor.** The run went through a ChatGPT-account login,
+  so it was plan-covered in fact; $31.20 is a token estimate at published rates ($10/$1/$50 per MTok).
+  Astra bills **2× input / 1.5× output above 272K input tokens**, which is not modelled here — with
+  8.6M and 9.5M input tokens per leg, a metered API run of this same work would very likely cost more
+  than the figure in the table.
+- **Launch-night caveat on the wall clock specifically.** This ran inside the first hour of the model
+  being reachable on this account, which is when serving capacity is least representative. Wall clock
+  is the least portable column on this board at the best of times; treat the speed result as weaker
+  evidence than the score.
+- **Effort honesty.** `max` is a first-party tier on this model, and the CLI was asked for it and
+  confirmed serving it (`model: gpt-6-astra`, `reasoning effort: max`) before either leg started;
+  the probe is filed under `effort-dial-probes/`. This row is `first_party`, not a requested-and-hoped
+  tier.
+- **Not solved.** 57 of 105 planted bugs survived a frontier model at its ceiling, and 40 have now
+  survived every model ever run here.
 
 ## Per-bug coverage
 

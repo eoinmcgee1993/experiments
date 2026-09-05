@@ -35,7 +35,7 @@ named slug yet. The named model, run through the same tool on Aug 27
 - Reasoning register (`Primes: 2,3,5,… Sum: 2+3=5,+5=10,…`, 53 reasoning tokens), `reasoning.text` /
   `unknown`, `call_`+24-hex tool ids, `stop`: identical to the stealth rows.
 
-The priced benchmark run of the named model is in [bug-hunt-bench/](../bug-hunt-bench/) (Aug 27).
+The priced benchmark run of the named model is in [bug-hunt-bench](https://github.com/phuryn/bug-hunt-bench/tree/main/results) (Aug 27).
 
 ## Method notes & caveats
 

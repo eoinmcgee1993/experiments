@@ -2,7 +2,7 @@
 
 Alibaba announced **Qwen3.8-Max** on Aug 3, 2026, ~02:15 UTC — 2.4 trillion parameters, "a new bar for coding and cowork," open weights promised for the following week. This set is the receipts behind one claim: **on my rig it is a mid-field bug hunter, and getting it to run at all was most of the day's work.**
 
-Qwen3.8-Max is a **new arm bolted onto an existing rig**: the same two seeded repos, 105 bugs, prompts, and blind Codex judging as [bug-hunt-bench/](../bug-hunt-bench/) (Jul 19 – Aug 1: GPT-5.6 Sol/Luna, Opus 5, Fable 5, Grok 4.5, Kimi K3, Sonnet 5, Opus 4.8, DeepSeek V4). The comparison numbers quoted here are that set's numbers, not re-runs — read it first for the full method, the bench construction (repo B's bugs are real shipped regressions, reverted with their fix-commit SHAs), and the per-arm receipts. One thing this arm changes about its conclusions: P022, one of the "53 of 105 that survived every model" through Aug 1, is now fixed.
+Qwen3.8-Max is a **new arm bolted onto an existing rig**: the same two seeded repos, 105 bugs, prompts, and blind Codex judging as [bug-hunt-bench](https://github.com/phuryn/bug-hunt-bench/tree/main/results) (Jul 19 – Aug 1: GPT-5.6 Sol/Luna, Opus 5, Fable 5, Grok 4.5, Kimi K3, Sonnet 5, Opus 4.8, DeepSeek V4). The comparison numbers quoted here are that set's numbers, not re-runs — read it first for the full method, the bench construction (repo B's bugs are real shipped regressions, reverted with their fix-commit SHAs), and the per-arm receipts. One thing this arm changes about its conclusions: P022, one of the "53 of 105 that survived every model" through Aug 1, is now fixed.
 
 | # | Experiment | Question | Headline result |
 |---|---|---|---|

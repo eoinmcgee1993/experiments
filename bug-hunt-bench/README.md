@@ -556,7 +556,7 @@ sequentially on an idle machine; judged blind by GPT-5.5.
   agy has no wire readback (it talks Google's cloudcode backend, not the public API), so the token
   accounting is the CLI's own meter — the same trust level as Codex or grok reporting theirs.
 
-## Sep 4 — GPT-6 Astra, day one, at max
+## Sep 4-5 — GPT-6 Astra, day one, and the full dial
 
 OpenAI announced GPT-6 Astra on Sep 3 with plan and API access "in the coming days". It reached this
 account at 20:46 CEST on Sep 4 — on the Codex/ChatGPT path only; the raw API key still answered
@@ -570,6 +570,7 @@ otherwise idle machine, judged blind by Grok 4.6 (non-sibling — no model grade
 | **GPT-6 Astra** | **max** (its ceiling) | **48** | **24** | 24 | **0** | 45 | 78.9 min | $31.20 |
 | **GPT-6 Astra** | **xhigh** | **43** | 23 | 20 | 1 | 53 | 58.8 min | $24.22 |
 | **GPT-6 Astra** | **high** | **35** | 19 | 16 | 2 | 40 | 40.5 min | $20.60 |
+| **GPT-6 Astra** | **medium** | **34** | 19 | 15 | 1 | 33 | 28.0 min | $15.78 |
 | Claude Fable 5.1 | max | 43 | 19 | 24 | 4 | 11 | 73.1 min | $77.55 |
 | GPT-5.6 Sol | max | 42 | 19 | 23 | 0 | 40 | 163.8 min | $69.61 |
 
@@ -633,8 +634,26 @@ otherwise idle machine, judged blind by Grok 4.6 (non-sibling — no model grade
   **30 unplanted extras against 16 planted fixes on repo 2** — nearly two incidental finds for every
   bug it was actually asked to fix. Lower effort is not just finding less; it is spending a larger
   share of what it does find away from the task.
+- **The dial's whole story is one step.** 48 → 43 → 35 → 34. The drop from `high` to `medium` is
+  **one fix** — those two tiers are the same result on this bench, separated by nothing that clears
+  the ±2–3 variance band. Everything the dial actually buys sits in the two steps above `high`, and
+  the biggest single step is the top one.
+- **Cost per fix is flat-to-inverted, which is the uncomfortable part.** $0.65 at max, $0.56 at xhigh,
+  $0.59 at high, **$0.46 at medium** — and throughput rises monotonically (0.61 → 1.21 fixes/min). If
+  you are buying fixes per dollar, `medium` wins outright. `max` is not the efficient choice; it is
+  the choice you make when you want the 14 extra fixes and are willing to pay a premium per fix for
+  them. That is a real decision, not a ranking.
+- **`medium` killed a bug that nothing had ever fixed — including Astra at `max`.** `P037` (repo 2):
+  publish/unpublish succeeds but the list keeps the old visibility, because the mutation no longer
+  merges the authoritative returned row. The never-fixed count drops **40 → 39**. A lower tier finding
+  what the ceiling missed is a useful reminder that these runs are n=1 and that "more effort" is a
+  distribution shift, not a superset.
 - **No first-ever kills at `xhigh`** — the never-fixed count stays at 40. Every bug it fixed, some
   model had already fixed.
+- **Effort honesty across the sweep.** All four tiers are `first_party`: each was requested from the
+  CLI and confirmed served (`model: gpt-6-astra`, `reasoning effort: <tier>`) before its first leg ran,
+  with the probes filed under `effort-dial-probes/`. A tier the CLI would not serve was set to be
+  skipped rather than quietly run at another effort; none had to be.
 - **Not solved.** 57 of 105 planted bugs survived a frontier model at its ceiling, and 40 have now
   survived every model ever run here.
 

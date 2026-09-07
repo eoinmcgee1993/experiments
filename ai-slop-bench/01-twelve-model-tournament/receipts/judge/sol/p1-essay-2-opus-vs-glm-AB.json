@@ -1,0 +1,140 @@
+{
+ "judge": "sol",
+ "model": "gpt-5.6-sol",
+ "key": "p1-essay-2-opus-vs-glm-AB",
+ "wall_s": 5.0,
+ "run_utc": "2026-09-07T07:55:42Z",
+ "request_body": {
+  "model": "gpt-5.6-sol",
+  "input": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite an essay of up to 500 words on why most product roadmaps fail.\n\n=== TEXT A ===\n# Why Most Product Roadmaps Fail\n\nMost product roadmaps fail not because teams lack discipline in following them, but because they follow them too faithfully. The roadmap, meant to be an instrument of strategy, becomes an instrument of obligation — and once that inversion happens, failure is nearly guaranteed.\n\n**They promise certainty the future cannot supply.**\nA typical roadmap presents next quarter and next year with identical confidence: neat bars on a timeline, features assigned to dates. But product development is a search problem. What a team will build in nine months depends on what it learns in the next three, and that learning hasn't happened yet. False precision doesn't reduce risk; it hides it. When reality intervenes, the team faces a choice between honesty and credibility, and credibility usually wins — so the roadmap is quietly defended long after it stopped being true.\n\n**They measure output instead of outcome.**\nShipping fourteen of fifteen planned features looks like success and is reported as such. But no customer ever wanted a feature; they wanted a problem solved. A roadmap organized around deliverables gives teams no way to notice that a shipped feature failed, and no incentive to look. Success becomes adherence, and adherence is the one metric that can be perfect while the business declines.\n\n**They are political documents.**\nRoadmaps are frequently assembled by aggregating requests — sales needs this to close a deal, the executive sponsor wants that, support has a list. The result is a negotiated settlement rather than a strategy. Strategy requires saying no, and a roadmap built to make everyone feel heard has said no to nothing. Such roadmaps are always overcommitted, because their real function is reassurance, not planning.\n\n**They ignore the actual cost of running a product.**\nPlans routinely allocate one hundred percent of capacity to new work, leaving nothing for defects, migrations, security, infrastructure decay, or the discovery work needed to make the next decision well. The unplanned work doesn't disappear; it consumes the plan from within, and every roadmap slips for reasons that were entirely foreseeable.\n\n**They lack a mechanism for change.**\nA plan without a revision process is a wish. Most organizations have elaborate rituals for creating roadmaps and none for revisiting them. Nobody is authorized to remove an item, so items accumulate. New information arrives and finds no door to enter through.\n\nThe alternative is not to abandon planning. Teams need shared direction, and stakeholders legitimately need to coordinate. But a roadmap works better when it is organized around problems rather than solutions, when confidence is expressed honestly — committed, next, later — and when it is reviewed on a known cadence with explicit permission to change course. Above all, it works when the surrounding organization judges teams by the outcomes they produce rather than the promises they keep.\n\nRoadmaps fail when they are asked to be contracts. They succeed when they remain arguments: this is what we believe, this is why, and this is what would change our minds.\n=== END OF TEXT A ===\n\n=== TEXT B ===\n# Why Most Product Roadmaps Fail\n\nThe product roadmap occupies a strange place in modern business: the most requested document in any software company, and the least believed. Executives demand it, sales sells against it, engineers distrust it, and product managers suffer under it. Most roadmaps fail not occasionally but structurally—and for reasons that have less to do with poor planning than with what roadmaps are asked to do in the first place.\n\nThe first and deepest problem is that most roadmaps answer the wrong question. They specify what will be built and when; the questions that matter are why, and for whom. A typical roadmap promises \"Feature X, Q3\" rather than \"reduce onboarding friction for small-business users.\" By committing to solutions before problems are validated, teams lock in their riskiest assumptions. The roadmap becomes a schedule of guesses, and discovery—the work of testing those guesses—gets subordinated to delivery.\n\nSecond, roadmaps become contracts, and contracts create fragility. Once a date is printed, it becomes a promise. Sales sells it, executives anchor to it, and organizational trust gets wired to estimates that software development has never reliably produced. When the inevitable slip occurs, credibility leaks away. After a few cycles, everyone quietly discounts the roadmap, and it stops functioning as an instrument of alignment.\n\nThird, most roadmaps measure output rather than outcome. They list features to ship, not problems to solve or metrics to move. This turns organizations into feature factories: success means delivering the list, so teams optimize for delivering the list. A feature can ship on time, on budget, and to specification—and still create no value for anyone. The roadmap records the failure as a success.\n\nFourth, many roadmaps are assembled rather than derived. Without a clear strategy—defined audiences, prioritized problems, explicit trade-offs—a roadmap becomes an aggregation of stakeholder requests, competitor checklists, and executive pet projects. Prioritization degrades into politics. Everything is important, so nothing is. The document that should force hard choices becomes a tool for avoiding them.\n\nFinally, roadmaps are static artifacts in a dynamic environment. Markets shift, experiments invalidate assumptions, competitors move. A roadmap drafted quarterly and never revisited is a snapshot masquerading as a strategy, and teams face a losing choice: ignore it and lose alignment, or follow it and ignore reality.\n\nNone of this argues against planning; it argues against a particular kind of theater. Roadmaps work when they abandon false precision—replacing dates with \"now, next, later\"—and communicate direction, intent, and desired outcomes rather than feature commitments. They work when they are living documents, revised as learning arrives, anchored in a strategy strong enough to say no.\n\nThe uncomfortable truth is that most roadmaps fail because organizations want them to provide certainty, and product development offers none. A roadmap built as a contract will eventually break. A roadmap built as a hypothesis—where we are going, what we believe, what we expect to learn—can bend without breaking. The choice is not whether to plan, but whether to plan honestly.\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n",
+  "max_output_tokens": 16000,
+  "store": false,
+  "reasoning": {
+   "effort": "medium"
+  }
+ },
+ "usage": {
+  "input_tokens": 1998,
+  "output_tokens": 255,
+  "reasoning_tokens": 166,
+  "effort_echoed": "medium",
+  "served_model": "gpt-5.6-sol"
+ },
+ "verdict": {
+  "more_ai": "A",
+  "confidence": 4,
+  "tells_A": [
+   "Repeated bold-label paragraph openers",
+   "Multiple negative-parallel constructions",
+   "Frequent em-dash clause joining",
+   "Polished recap ending with parallel contrast"
+  ],
+  "tells_B": [
+   "Formulaic First/Second/Third/Fourth/Finally progression",
+   "Frequent em-dash clause joining",
+   "Triadic lists",
+   "Recap ending with negative parallelism"
+  ]
+ },
+ "response_raw": {
+  "id": "resp_0d446dcea9c53fc8016a9e6df8219c87d28dd93b15ba54b14e",
+  "object": "response",
+  "created_at": 1788767736,
+  "status": "completed",
+  "background": false,
+  "billing": {
+   "payer": "developer"
+  },
+  "completed_at": 1788767740,
+  "error": null,
+  "frequency_penalty": 0.0,
+  "incomplete_details": null,
+  "instructions": null,
+  "max_output_tokens": 16000,
+  "max_tool_calls": null,
+  "model": "gpt-5.6-sol",
+  "moderation": null,
+  "output": [
+   {
+    "id": "rs_0d446dcea9c53fc8016a9e6df91df487d2bbca039eaf4b3147",
+    "type": "reasoning",
+    "content": [],
+    "encrypted_content": "gAAAAABqnm38sQE2XtV9fyhrXTXsxAHLR1pi8meDfDl2sZqOxsPUueqLS4uVcnTBGRnd9MIgQwxP9bdlJfwEM5hZ604M78o_GJHdVM5cdakdZ7QxERMo6c8PFllfVJcXJIjVvRzhB04ELIW_y-vCTQ5exkWMZBtxqnQ2Ie8s1oRfCIVhcxRt4prOTbf4e_5d3DDcVRdKtpUTsMZwtrACD6H2yRhCY5F8PAGjlokwqPmnZ5lCyh8ARERpBgsXUYbW3xwf--JkD1MQ-qNje0ZVkE-G8wqncXh8jL_eEheHSIC2JkDfj_Je0Bws5Ajtcls2dKzxWS4-khfaPIFbv683L2w3Ax0jCD3K4qL6J7PWczNnZaCjXS7jVI94tPPw19dYgzpR5gs9IgruuyH6t4IZksxgYP8hx0VdCJBQfRTF0qDqoXQqW1tLP08SFI4ECYtMTsecCPpEv14tvZZvvBOmyKS3g3Yi_DkJK7GIqxNT0gvGC-luF2xlf9IJct6xTXNLwdCzrUVJccGpFUSKpnKoKDxZ_VlpT27hnQQCXl8-YLzLs8WXHGiXTyw3J0GVvMi_s3k_Uq2kjez7G8RlCcw6X-2RkG1TlFy4W7_JEQiCYu9ocLegkLcTpG6Xp9uVRFvfT6HdQkJKrp7W_C0bhgCbb9hSEYcSNHSmg0sXJyWUWx8qRYSzpeC-KBr2DaECmAnfWpnexQTnMluk0EBDEuc97DiqJSCf2VjjihPX9kgo4IcZ2MvHeOeMKC9xgIyd8M7GkveMOCPKVPC_KSWxXQ7msTYBoG1ZcZrU7HeVfndtfk_f-TtSLVbAjc4DMUzsNkJgzVy9hxqd0y3See3FcHFfZvNnESTTuddSdks60srgnFvq6r8Ala7bchCImmpkrzDi3jFR6DNCKgce2QtecGRI9nyVY-ebANCv5kb0HwJTXAYSrM8H3_BA4oTNdswzsxfLRRWAK-59dvnkClgNh_tCPKtUjfCrk55LXoxONPhXuSrDjVKJVQPn4S9f72aODcdrbpD53gFd2_0J-SVcEZMI8dnH9hfpQ2BS9RDi-dUmK0MNR7LSMA9zVyao0ZxnMuQixcSx0bMeDmIzZvAVRBP5hvTvHZ8r8YXzO6Prgs3wy4mng5IDfM-1wGy5e931klbdYBRHJy_Dg0DPl__9zLMI-x9vsLtS0NVE-_FOkgtTfCqYsEBV0JyVW_DvYpEt-CufLMjgkthlAk5NkztmwF2s6zD-nL-b1O6uRfKMwyHjCL7Jex5ttNZ0DbqiYu5__NLk-SEHimatTs08FCjUqt3Kt40U2vWR86uGMcINEhrq90vjj5wQq1RX_LkrJ8VoIlSE-_zYLMRTxbiJvuUhXuHdHvbewdS9ubOcvth3GYSA6Vr3jFTztR6nu1YB5NO08np57cE4kHmJCebVJY1OvCHpy2VSGUPHCnmcZibmUVgwrioEfGSskfW_tH9zIZSIt2dBK-E4Hvymb2jBQqP_yoAKcvLyLkiHvpNbLF6I-TPk9XrO5gZUuJ7J4yHFJ9AYeAiPQZH0tgNFBsw31VHhsFLGavXuWr1eBJFOd9DgFM8MT_UQEi6d7GeSxTzcwoAvaxjZ8SDtRwSiopCxZEgWKLBC-y5t8SzUDvCAs6tBn_OqqDng-2S-p5NKwAAYJ816PhN9tyNzyOP1cP1uaPT3-aqRaUUwa6uzaFeDkf-GO6DW21sRc49IQBS5Da2wb2h72DeIuEhlMD-GlXe_p2d3nSuT3NksPfTUYmkng8MEOs2OUfYgYPGmyWhaNa0WbNUq9Dm1psAJzObwGExfzDE6vJD2jS8T5R8Wfz2cKZsv0uBl5V3CitvqpPzB5F5BxqE9xRmX1MIIKXvhbbbjvXE3bTaXsa9QepdSWTQSway2Uc9EWQkGkysa7gmnYOeWV18-CkWp6YbMXLTg4p8XOo1qlHORhAoqSxhrZgNhByIjKBFCHdhXqvLc-PxD469KRPXS29VtW90gpigo5TI0cwZiybLaQH4VDTkP5uVTx-RGjbMvdVkwuh6fYDW4wv9M65MuHovmvztVJn2O7qwBxoajTN5KbJk8h3janzFM_Dk2RKD-RbxZ0Um-oIuEpSeP-gcCtO616IQleXljXMxRKvLNw8kZqU6asCqz5RLBSR8yH4LrtU1O5kSywshyi460fZlKdr_MmvmvFXt5_iKNeSv5KeC9sXamJ3vj2GiTotIBvATV-DTyvOSLtAUrTH0=",
+    "summary": []
+   },
+   {
+    "id": "msg_0d446dcea9c53fc8016a9e6dfbb73487d28f79fd1e87907818",
+    "type": "message",
+    "status": "completed",
+    "content": [
+     {
+      "type": "output_text",
+      "annotations": [],
+      "logprobs": [],
+      "text": "{\"more_ai\":\"A\",\"confidence\":4,\"tells_A\":[\"Repeated bold-label paragraph openers\",\"Multiple negative-parallel constructions\",\"Frequent em-dash clause joining\",\"Polished recap ending with parallel contrast\"],\"tells_B\":[\"Formulaic First/Second/Third/Fourth/Finally progression\",\"Frequent em-dash clause joining\",\"Triadic lists\",\"Recap ending with negative parallelism\"]}"
+     }
+    ],
+    "phase": "final_answer",
+    "role": "assistant"
+   }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0.0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+   "context": "all_turns",
+   "effort": "medium",
+   "mode": "standard",
+   "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": false,
+  "temperature": 1.0,
+  "text": {
+   "format": {
+    "type": "text"
+   },
+   "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+   "image_gen": {
+    "input_tokens": 0,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "output_tokens": 0,
+    "output_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "total_tokens": 0
+   },
+   "web_search": {
+    "num_requests": 0
+   }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+   "input_tokens": 1998,
+   "input_tokens_details": {
+    "cache_write_tokens": 1995,
+    "cached_tokens": 0
+   },
+   "output_tokens": 255,
+   "output_tokens_details": {
+    "reasoning_tokens": 166
+   },
+   "total_tokens": 2253
+  },
+  "user": null,
+  "metadata": {}
+ }
+}

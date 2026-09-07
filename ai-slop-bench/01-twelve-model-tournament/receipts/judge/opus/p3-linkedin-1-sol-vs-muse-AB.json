@@ -1,0 +1,108 @@
+{
+ "judge": "opus",
+ "model": "anthropic/claude-opus-5",
+ "key": "p3-linkedin-1-sol-vs-muse-AB",
+ "wall_s": 13.3,
+ "run_utc": "2026-09-06T22:39:53Z",
+ "request_body": {
+  "model": "anthropic/claude-opus-5",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n\n=== TEXT A ===\nWe once shipped a feature we were convinced customers would love.\n\nThe idea was solid.  \nThe roadmap said it mattered.  \nThe team spent weeks designing, building, testing, and polishing it.\n\nThen we launched.\n\nAlmost nobody used it.\n\nOur first instinct was to blame discoverability. So we added onboarding prompts, updated documentation, and highlighted the feature in customer emails.\n\nUsage barely moved.\n\nThe uncomfortable truth: we had validated that customers understood the problem—but not that the problem was important enough for them to change their behavior.\n\nWe had mistaken polite interest for genuine demand.\n\nThat experience changed how I think about product development.\n\nNow, before committing significant time to a feature, I look for stronger signals:\n\n- Are customers already using a workaround?\n- How frequently does the problem occur?\n- What does the problem cost them today?\n- Will they commit time, data, money, or reputation to a proposed solution?\n- Can we test the behavior before building the full product?\n\nInterviews still matter, but behavior is usually more reliable than enthusiasm.\n\nA customer saying, “I’d use that,” is useful feedback.\n\nA customer asking, “When can I have it?” is better.\n\nA customer changing their workflow—or paying—to get it is better still.\n\nShipping an unused feature wasn’t a failure because the idea was wrong. It was a failure because we learned too late.\n\nThe goal isn’t to avoid every bad bet. That’s impossible.\n\nThe goal is to make bets smaller, test assumptions earlier, and treat evidence—not excitement—as the signal to scale.\n\nSometimes the most valuable feature you build is the one that teaches you how not to build the next one.\n\n#ProductManagement #ProductDevelopment #Startups #Leadership #CustomerDiscovery\n=== END OF TEXT A ===\n\n=== TEXT B ===\nI spent 6 weeks shipping a feature our users begged for.\n\nCustom dashboards. Drag-and-drop widgets. Export to PDF. Beautiful, fast, on time.\n\nLaunch day: 🎉\n\nWeek 1: 3% adoption.\nWeek 4: basically zero.\n\nI was crushed. Then I got curious and called 15 of the users who'd requested it.\n\nHere's what I learned:\n\n**1. They didn't want dashboards. They wanted answers.**\nWhat they really meant by \"custom dashboards\" was \"tell me if we're on track on Monday morning without digging.\" We built a power tool. They needed a 30-second email digest.\n\n**2. \"Everyone wants it\" meant 3 loud voices.**\nWe'd confused feedback volume with feedback breadth. We never validated with data, prototypes, or the silence from the other 97%.\n\n**3. We shipped output, not outcome.**\nSuccess was \"launch on time,\" not \"solve the problem weekly.\" We celebrated merging PRs instead of changing behavior.\n\nNow I live by this: Fall in love with the problem, not your solution.\n\nBefore I build anything, I ask:\n→ What's the job to be done in the user's words?\n→ How will we know it's working 30 days after launch?\n→ What's the smallest version that could deliver value?\n\nThat failed feature? We replaced it with a simple Monday Slack summary. 68% weekly open rate. Took 4 days to build.\n\nSometimes the best product work is unbuilding your assumptions.\n\nWhat's a feature YOU shipped that nobody used — and what did it teach you? 👇\n\n#ProductManagement #Startups #UX #Leadership #LessonsLearned\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n"
+   }
+  ],
+  "max_tokens": 16000,
+  "provider": {
+   "allow_fallbacks": false
+  },
+  "usage": {
+   "include": true
+  }
+ },
+ "usage": {
+  "input_tokens": 2375,
+  "output_tokens": 1016,
+  "reasoning_tokens": 598,
+  "cost_usd": 0.03690225,
+  "served_model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS"
+ },
+ "verdict": {
+  "more_ai": "B",
+  "confidence": 3,
+  "tells_A": [
+   "negative parallelism: \"wasn't a failure because... It was a failure because\", \"The goal isn't... The goal is\"",
+   "bulleted list inside a prose post",
+   "em dash as default joint (\"evidence—not excitement\")",
+   "uniform one-line-paragraph rhythm",
+   "triads/stacked series (\"designing, building, testing, and polishing\"; \"smaller, earlier, evidence\")",
+   "aphoristic uplift ending where every point lands"
+  ],
+  "tells_B": [
+   "bold-label numbered paragraph openers (\"**1. They didn't want dashboards...**\")",
+   "signposting: \"Here's what I learned\"",
+   "negative parallelism repeated: \"didn't want dashboards, wanted answers\", \"shipped output, not outcome\", \"Fall in love with the problem, not your solution\"",
+   "rhetorical question answered by itself (\"That failed feature? We replaced it...\")",
+   "coined mantra/label (\"Now I live by this\")",
+   "arrow-bullet question list",
+   "engagement-bait closing question with emoji",
+   "triads throughout (\"data, prototypes, or the silence\"; \"Beautiful, fast, on time\")"
+  ]
+ },
+ "response_raw": {
+  "id": "gen-1788734379-CJZXrKl7XsAxyh1gNeii",
+  "object": "chat.completion",
+  "created": 1788734379,
+  "model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"more_ai\": \"B\", \"confidence\": 3, \"tells_A\": [\"negative parallelism: \\\"wasn't a failure because... It was a failure because\\\", \\\"The goal isn't... The goal is\\\"\", \"bulleted list inside a prose post\", \"em dash as default joint (\\\"evidence—not excitement\\\")\", \"uniform one-line-paragraph rhythm\", \"triads/stacked series (\\\"designing, building, testing, and polishing\\\"; \\\"smaller, earlier, evidence\\\")\", \"aphoristic uplift ending where every point lands\"], \"tells_B\": [\"bold-label numbered paragraph openers (\\\"**1. They didn't want dashboards...**\\\")\", \"signposting: \\\"Here's what I learned\\\"\", \"negative parallelism repeated: \\\"didn't want dashboards, wanted answers\\\", \\\"shipped output, not outcome\\\", \\\"Fall in love with the problem, not your solution\\\"\", \"rhetorical question answered by itself (\\\"That failed feature? We replaced it...\\\")\", \"coined mantra/label (\\\"Now I live by this\\\")\", \"arrow-bullet question list\", \"engagement-bait closing question with emoji\", \"triads throughout (\\\"data, prototypes, or the silence\\\"; \\\"Beautiful, fast, on time\\\")\"]}",
+     "refusal": null,
+     "reasoning": "Text B leans on bold-label lists, repeated negative parallelism, and rhetorical engagement bait, but it's grounded with concrete specifics like 68%, 15 users, 4 days. Text A relies on triads, negative parallelism, bullets, and a uniform rhythmic cadence with em dashes—B seems to have more structural artificiality overall.\n\nWeighing tell counts, A reads flatter and more generic while lacking any concrete details, which is itself a strong AI signal, but B's stacked tells—bold openers, signposting, repeated parallelism, rhetorical question, invented mantra, emoji—tip the scale. I'm settling on B with moderate confidence, around a 3.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "Text B leans on bold-label lists, repeated negative parallelism, and rhetorical engagement bait, but it's grounded with concrete specifics like 68%, 15 users, 4 days. Text A relies on triads, negative parallelism, bullets, and a uniform rhythmic cadence with em dashes—B seems to have more structural artificiality overall.\n\nWeighing tell counts, A reads flatter and more generic while lacking any concrete details, which is itself a strong AI signal, but B's stacked tells—bold openers, signposting, repeated parallelism, rhetorical question, invented mantra, emoji—tip the scale. I'm settling on B with moderate confidence, around a 3.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "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"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2375,
+   "completion_tokens": 1016,
+   "total_tokens": 3391,
+   "cost": 0.03690225,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.037275,
+    "upstream_inference_prompt_cost": 0.011875,
+    "upstream_inference_completions_cost": 0.0254
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 598,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

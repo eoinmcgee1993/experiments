@@ -1,0 +1,95 @@
+{
+ "variant": "steered",
+ "arm": "opus",
+ "label": "Opus 5",
+ "vendor": "Anthropic",
+ "transport": "openrouter",
+ "model_requested": "anthropic/claude-opus-5",
+ "serving_path": "OpenRouter -> Anthropic (first-party key unavailable at run time)",
+ "prompt_id": "p1-essay",
+ "sample": 1,
+ "prompt_text": "Write an essay of up to 500 words on why most product roadmaps fail.\n\nPlain prose only: no headers, no bullet points, no bold text, no em dashes. Write like a person.",
+ "run_utc": "2026-09-06T14:06:33Z",
+ "wall_s": 22.9,
+ "request_body": {
+  "model": "anthropic/claude-opus-5",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Write an essay of up to 500 words on why most product roadmaps fail.\n\nPlain prose only: no headers, no bullet points, no bold text, no em dashes. Write like a person."
+   }
+  ],
+  "max_tokens": 8000,
+  "provider": {
+   "allow_fallbacks": false
+  },
+  "usage": {
+   "include": true
+  }
+ },
+ "usage": {
+  "input_tokens": 65,
+  "output_tokens": 1015,
+  "reasoning_tokens": 120,
+  "cost_usd": 0.025443,
+  "served_model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS"
+ },
+ "essay_sha256": "8ad56ac31166bb8ab93c0c2c0fe42764607b5d784499a22c16e13cda5a2d168f",
+ "essay_words": 510,
+ "response_raw": {
+  "id": "gen-1788703568-9lCUIq4K5uHe4BUEpD6b",
+  "object": "chat.completion",
+  "created": 1788703568,
+  "model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "Most product roadmaps fail because they are asked to do two incompatible jobs at once. They are supposed to be a strategic instrument, a way of saying what matters and what doesn't, and they are also supposed to be a promise, a schedule of things that will exist by certain dates. Strategy requires the freedom to change your mind when the world tells you something new. Promises require that you don't. Put both demands on a single document and it will quietly become a promise, because promises are what other people remember.\n\nThe first failure, then, is that roadmaps get treated as commitments by everyone except the people who wrote them. A sales leader sees a feature in the Q3 column and mentions it to a prospect. A support director tells an angry customer relief is coming in the spring. Marketing starts drafting the launch. By the time the product team learns something that should change the plan, the plan has been socialized into an obligation. Changing it now looks like failure rather than learning, so the team ships the thing anyway, late and diminished, and calls it a win.\n\nThe second failure is that roadmaps are usually lists of outputs rather than statements of intent. A row that says \"notifications revamp\" tells you nothing about what problem is being solved or how you would know if it worked. Teams building against output lists optimize for shipping, because shipping is the only thing being measured. You end up with a year of completed items and no discernible improvement in the business, which is how organizations arrive at the strange conclusion that they are executing well and losing anyway.\n\nThird, roadmaps are built on estimates that everyone knows are fiction and no one is allowed to say so. Effort guesses made before discovery are wrong by large multiples, and they are wrong in one direction. So the calendar is fantasy from the first day, and every subsequent week is spent negotiating which parts of the fantasy to abandon. This is exhausting and corrosive, and it teaches engineers that planning is theater.\n\nFourth, most roadmaps are aggregations rather than choices. Each stakeholder gets something, so nothing gets enough. The document becomes a peace treaty among departments, which is a perfectly reasonable political achievement and a terrible allocation of attention. Real roadmaps say no loudly, and saying no loudly is expensive for the person holding the pen, which is why it so rarely happens.\n\nWhat tends to work better is modesty about time and clarity about purpose. Be specific about what you are doing now, name the problem you expect to solve next and why it matters, and keep the far future deliberately vague, described in terms of the outcomes you are chasing rather than the features you imagine will produce them. Revisit it often enough that changing it feels normal. Tell the rest of the company how to read it, including which parts are firm and which are hypotheses.\n\nNone of this makes planning easy. It just stops the plan from lying.",
+     "refusal": null,
+     "reasoning": "I'll aim for around 480 words on why product roadmaps fail, written as plain conversational prose without headers, bullets, or em dashes.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'll aim for around 480 words on why product roadmaps fail, written as plain conversational prose without headers, bullets, or em dashes.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAIS0AQKrgEIERgCKkDyP3RIkreOfV3IictxgZEKuAg8wEc+Kt0N0sB+KIafFZW3BqfA2N0VP1EJzxen91tBThQhagHwGQtyooahAwocMg1jbGF1ZGUtb3B1cy01OAFCCHRoaW5raW5nWiQ0YzBmMDQ2Zi0yNWZkLTQ1ZmItYmZiMy1hMDhhOGUyNDljYTd6HnVwcm9mXzAxMUNlbkZSYjRqeFBLcXdMUXFXN3dtNqgB2Ob11AYSDPLxO4STsG4Qa9gfpBoM33bUKCDjtTFHmx9MIjDaNtp1i4pyuP1gOGrZuj/QAv4hrdIUWwWKsry4R+mavyKNEXkTgayHNej3h/1nze4qzgJnfcMVfpLnPN3n+a5Ze31146gTXK1SjBICkV8lk+bxdlsLtpyZSsrSLFcFH39Lgl2hd8taBfHcZrcmqwbllw5TmDBuwM/NF/psreUtXD+NmyNCMisBx+/ZNvBA690vzdDKVF2qY9NKj7ULbjEENTyqwdGYz2i9OVjz+gwLLh9PG7oen8iuD6x3oBtFxLSy1NxItrSC+Dh+lxxT7au+KVv4iE3dMGECl2ToH0pevlzfvdPrH/lnSWZbG8qCk6FZnT6P4n/8MoW7CVxILkvdnWVZZbyPnnX8kk0EqjSpNqleYyMQstXc30ZCUg1wPzr9hcvhLToqt9HTSEAH1YhkBRQ6QlaQ0e7ue+bAttal5ZCCvkTgKF5qtDru9GxN9cZjbiyEOAEM63t7J9FYi25DmRHCgpYWfBJQKD+T2n/OdsfJizoXinlkPUOxGsXIptWgGAE="
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 65,
+   "completion_tokens": 1015,
+   "total_tokens": 1080,
+   "cost": 0.025443,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0257,
+    "upstream_inference_prompt_cost": 0.000325,
+    "upstream_inference_completions_cost": 0.025375
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 120,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

@@ -1,0 +1,71 @@
+{
+ "arm": "grok",
+ "label": "Grok 4.6",
+ "vendor": "xAI",
+ "transport": "xai_chat",
+ "model_requested": "grok-4.6",
+ "serving_path": "xAI first-party, chat completions",
+ "prompt_id": "p3-linkedin",
+ "sample": 1,
+ "run_utc": "2026-09-06T13:25:10Z",
+ "wall_s": 18.2,
+ "request_body": {
+  "model": "grok-4.6",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Write a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used."
+   }
+  ],
+  "max_tokens": 8000
+ },
+ "usage": {
+  "input_tokens": 659,
+  "output_tokens": 583,
+  "reasoning_tokens": 287,
+  "cost_usd": null,
+  "served_model": "grok-4.6",
+  "provider": null
+ },
+ "essay_sha256": "697aeab94c824f93958fa647e70e2d28479291cb1c20e8608b19db9f6809cbc9",
+ "essay_words": 481,
+ "response_raw": {
+  "id": "3d638cdd-8d9c-9e01-b9a3-950d2997ffe9",
+  "object": "chat.completion",
+  "created": 1788701091,
+  "model": "grok-4.6",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "We spent three months building a feature nobody asked for.\n\nIt was elegant. It was well-engineered. It shipped on time. And in the first 90 days, almost no one used it.\n\nI still remember the launch thread. Screenshots. Confetti emoji. A demo that made the product look smarter than it actually was. We told ourselves we were being proactive — solving a problem users would have eventually. We had internal data. We had a slide that said “high intent.” We had conviction.\n\nWhat we did not have was a single person who had said, “I need this.”\n\nThe usage graph was a flat line with a few polite clicks from people on our team. Support tickets did not mention it. Sales did not sell it. Power users found workarounds around it, which is a polite way of saying they ignored it.\n\nThe hard part was not the wasted engineering time. It was the story we had to tell ourselves afterward. We had not failed because we shipped slowly. We had failed because we shipped a solution in search of a problem.\n\nHere is what I learned, and what I still repeat in kickoffs:\n\n1. Usage is the only honest launch metric. Applause is not a metric. “Looks great in the demo” is not a metric. If the feature does not change a weekly habit, it did not ship. It just deployed.\n\n2. “Nobody asked for it” is not automatically a virtue. Sometimes users cannot articulate the next step. Often they can. We skipped the unglamorous work: five conversations, a prototype, a fake door, a waitlist. We protected our idea from contact with reality.\n\n3. Beautiful unused features have a cost beyond the sprint. They add surface area, docs, edge cases, and cognitive load. Every unused control is a tax on the people who actually use the product.\n\n4. Kill criteria should be written before the build, not after the embarrassment. We should have said: if fewer than X people complete this flow in 30 days, we remove it. Sunsetting something you were proud of is cheaper than carrying it forever.\n\n5. The team did not fail. The process did. Smart people will fill a vacuum of evidence with taste and optimism. That is not a character flaw. It is a design problem for how you decide what to build.\n\nI used to think shipping was the brave part. Now I think the brave part is admitting a feature is a hypothesis, not a gift. Talk to users before you write the ticket. Instrument the thing you think they will do. Be willing to delete your favorite screen.\n\nIf you have a feature sitting at 2% adoption and a roadmap full of “phase 2,” that is not momentum. That is inventory.\n\nWhat is a feature you shipped that the data quietly retired? I would rather hear that story than another launch post.",
+     "reasoning_content": "The user wants a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used. This is a creative writing request - completely benign. I should write a professional...",
+     "refusal": null
+    },
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 659,
+   "completion_tokens": 583,
+   "total_tokens": 1529,
+   "prompt_tokens_details": {
+    "text_tokens": 659,
+    "audio_tokens": 0,
+    "image_tokens": 0,
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 287,
+    "audio_tokens": 0,
+    "accepted_prediction_tokens": 0,
+    "rejected_prediction_tokens": 0
+   },
+   "num_sources_used": 0,
+   "cost_in_usd_ticks": 57700000
+  },
+  "system_fingerprint": "fp_e41c6060b2628547",
+  "service_tier": "default"
+ }
+}

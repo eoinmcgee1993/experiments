@@ -1,0 +1,99 @@
+{
+ "judge": "opus",
+ "model": "anthropic/claude-opus-5",
+ "key": "calib-human-09-2022-08-07-vs-gemini38-3-MH",
+ "wall_s": 5.1,
+ "run_utc": "2026-09-07T08:26:14Z",
+ "request_body": {
+  "model": "anthropic/claude-opus-5",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n(One of the texts is a real LinkedIn post by a person, written on its own topic; judge tells, not topic.)\n\n=== TEXT A ===\nWe spent 3 months building a feature. \n\nIt was elegant. It was technically complex. The code was pristine. \n\nAnd on launch day, exactly zero people used it. \n\nHere’s the story of my most humbling product failure—and the single best lesson of my career.\n\nA while back, our team became obsessed with an idea. In a couple of discovery calls, a few customers had mentioned offhand that it would be “cool” to have an advanced, multi-tier filtering dashboard. \n\nWe took that feedback and ran a marathon with it. \n\nWe mapped out sprints, designed pixel-perfect mockups, and spent hundreds of engineering hours handling edge cases. We felt like rockstars.\n\nLaunch day arrived. We pushed to production, sent a blast email, and pulled up the real-time analytics dashboard, waiting for the surge.\n\n…Crickets. \n\nDay 1: 12 clicks.\nWeek 1: 1 active user.\nMonth 1: The only person using it was me, checking to see if the tracking script was broken. (It wasn't.)\n\nWe had burned nearly a quarter of our roadmap on a feature nobody actually needed. \n\nIt was a painful gut punch, but it fundamentally changed how I build products. Here is what that ghost-town feature taught me:\n\n**1. \"Nice to have\" is the graveyard of software.**\nCustomers will happily tell you an idea is \"cool\" or \"useful\" during an interview. But polite interest does not equal intent. If a feature doesn't solve a burning, hair-on-fire problem that users would actively pay or change workflows for, they will ignore it. \n\n**2. Validate behavior, not opinions.**\nWe asked people what they *thought*, rather than testing what they *did*. A simple clickable prototype, a painted-door test, or a manual concierge MVP could have proven there was zero demand in 48 hours. Instead, we used our most expensive resource—production code—to run an experiment.\n\n**3. Fall in love with the problem, never the solution.**\nWe fell in love with our own cleverness. We were so excited to build the thing that we stopped asking if the thing should exist in the first place. \n\nWe ended up quietly deprecating the feature four months later. Deleting thousands of lines of code hurt, but shipping nothing is worse than admitting a mistake. \n\nToday, before our team writes a single line of code, we ask: *\"What is the fastest, cheapest way to prove that nobody cares about this?\"*\n\nEvery experienced builder has a graveyard of unused features. \n\nWhat’s the most valuable lesson you’ve learned from a project that flopped? Let’s normalize talking about the misses. 👇\n=== END OF TEXT A ===\n\n=== TEXT B ===\nThe #Agile Manifesto was a success.\n\nBut it is outdated.\n\nIt did its job; it helped us move away from the waterfall. I support many of its values and principles.\n\nAt the same time, I think it wasn't well prepared. And most importantly, it has not been updated since 2001.\n\nWhat holds on, and what's missing?\n\nLet's start with the \"Working software is the primary measure of progress\" principle. Working software is just an output. How do we know it delivers any value? It's a perfect recipe for a feature factory. Today we understand we need to focus on the outcomes.\n\nThe Agile Manifesto also doesn't mention product discovery. Building a feature to find out nobody needs it, that it doesn't scale due to technical limitations, or that it doesn't produce value for the business is a waste, no matter how much you \"Welcome that change.\" We can mitigate those risks by validating our ideas with the help of prototypes.\n\nThe Agile Manifesto also lacks many necessary ingredients for a successful product organization:\n\n- Data and information are not present. Those are strategic assets every PM should understand and leverage.\n\n- Leadership is not even mentioned. In this context, \"Build projects around motivated individuals\" is just wishful thinking. \n\n- DevOps couldn't be included, as the term was born in 2008 - 7 years later.\n\n\nThe Agile Manifesto may be outdated, but the Agile principles and values existed long before it was created. And they have evolved significantly since 2001.\n\nI do not doubt that agility will thrive. Nothing, not even fake Agile frameworks like #SAFe, can change it.\n\nDo you agree? What are your thoughts?\n\nLet me know in the comments.\n\n- - - - -\n\nA few sources I highly recommend:\n\n- Product Discovery is perfectly described in \"Inspired\" by Marty Cagan\n\n- \"Outcomes Over Output: Why Customer Behavior is the Key Metric for Business Success\" by Joshua Seiden \n\n- \"Agile 2: The Next Iteration of Agile\" by Cliff Berg, Kurt Cagle, Adrian Lander, Philippa Fewell, Raj Nagappan, PhD, Lisa Cooney, and Murray Robinson.\n\n- The Agile Product Manifesto by David Pereira\n\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n"
+   }
+  ],
+  "max_tokens": 16000,
+  "provider": {
+   "allow_fallbacks": false
+  },
+  "usage": {
+   "include": true
+  }
+ },
+ "usage": {
+  "input_tokens": 2876,
+  "output_tokens": 349,
+  "reasoning_tokens": 0,
+  "cost_usd": 0.02287395,
+  "served_model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS"
+ },
+ "verdict": {
+  "more_ai": "A",
+  "confidence": 4,
+  "tells_A": [
+   "Signposting: \"Here's the story\", \"Here is what that ghost-town feature taught me\"",
+   "Bold-label numbered list where prose was asked for",
+   "Negative parallelism: \"Validate behavior, not opinions\", \"Fall in love with the problem, never the solution\", \"polite interest does not equal intent\"",
+   "Triads: \"clickable prototype, a painted-door test, or a manual concierge MVP\"",
+   "Em dashes as default joint",
+   "Uniform punchy fragments (\"It was elegant. It was technically complex.\")",
+   "Generic anecdote with no real names/dates",
+   "Engagement-bait closing question with emoji",
+   "Every beat lands neatly, tidy uplifting resolution"
+  ],
+  "tells_B": [
+   "Signposting: \"Let's start with\"",
+   "Rhetorical question then answer (\"What holds on, and what's missing?\")",
+   "\"leverage\" appears",
+   "Bullet list",
+   "Closing prompt for comments"
+  ]
+ },
+ "response_raw": {
+  "id": "gen-1788769568-SESWQZVM3O1RkYfoEK1M",
+  "object": "chat.completion",
+  "created": 1788769568,
+  "model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"more_ai\": \"A\", \"confidence\": 4, \"tells_A\": [\"Signposting: \\\"Here's the story\\\", \\\"Here is what that ghost-town feature taught me\\\"\", \"Bold-label numbered list where prose was asked for\", \"Negative parallelism: \\\"Validate behavior, not opinions\\\", \\\"Fall in love with the problem, never the solution\\\", \\\"polite interest does not equal intent\\\"\", \"Triads: \\\"clickable prototype, a painted-door test, or a manual concierge MVP\\\"\", \"Em dashes as default joint\", \"Uniform punchy fragments (\\\"It was elegant. It was technically complex.\\\")\", \"Generic anecdote with no real names/dates\", \"Engagement-bait closing question with emoji\", \"Every beat lands neatly, tidy uplifting resolution\"], \"tells_B\": [\"Signposting: \\\"Let's start with\\\"\", \"Rhetorical question then answer (\\\"What holds on, and what's missing?\\\")\", \"\\\"leverage\\\" appears\", \"Bullet list\", \"Closing prompt for comments\"]}",
+     "refusal": null,
+     "reasoning": null
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2876,
+   "completion_tokens": 349,
+   "total_tokens": 3225,
+   "cost": 0.02287395,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.023105,
+    "upstream_inference_prompt_cost": 0.01438,
+    "upstream_inference_completions_cost": 0.008725
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

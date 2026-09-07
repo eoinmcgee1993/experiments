@@ -1,0 +1,94 @@
+{
+ "variant": "bare",
+ "arm": "qwen",
+ "label": "Qwen 3.8 Flash",
+ "vendor": "Alibaba",
+ "transport": "openrouter",
+ "model_requested": "qwen/qwen3.8-flash",
+ "serving_path": "OpenRouter -> Alibaba",
+ "prompt_id": "p3-linkedin",
+ "sample": 1,
+ "prompt_text": "Write a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.",
+ "run_utc": "2026-09-06T22:17:36Z",
+ "wall_s": 8.1,
+ "request_body": {
+  "model": "qwen/qwen3.8-flash",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Write a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used."
+   }
+  ],
+  "max_tokens": 8000,
+  "provider": {
+   "allow_fallbacks": false
+  },
+  "usage": {
+   "include": true
+  }
+ },
+ "usage": {
+  "input_tokens": 85,
+  "output_tokens": 579,
+  "reasoning_tokens": 143,
+  "cost_usd": 0.0002820312,
+  "served_model": "qwen/qwen3.8-flash",
+  "provider": "Alibaba"
+ },
+ "essay_sha256": "170a0972ae5c5a60fc8fa5495be921a147da5f67bdea995d66ffba33636de39b",
+ "essay_words": 326,
+ "response_raw": {
+  "id": "gen-1788733047-2lzeLLRP3y1PvCSxQenl",
+  "object": "chat.completion",
+  "created": 1788733047,
+  "model": "qwen/qwen3.8-flash",
+  "provider": "Alibaba",
+  "system_fingerprint": null,
+  "service_tier": null,
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "We shipped a feature that nobody used.\n\nIt wasn’t a small feature. It had a landing page, onboarding tooltips, and a polished dashboard. Internally, we celebrated it. Externally… silence.\n\nAfter weeks of “almost no adoption,” we started asking hard questions:\n\n- Why did we think users wanted this?\n- Who actually had the problem?\n- Were we solving a painful problem, or a pretty one?\n\nThat last question stung.\n\nWe had built the feature because it looked impressive in planning, not because we had enough evidence of demand. We confused building something carefully with building something valuable.\n\nThe lesson was simple but uncomfortable: shipping a feature is not the same as creating value.\n\nWe had optimized for output—code, design, release notes—while users needed outcomes. They didn’t care about our “advanced analytics.” They cared about saving time, avoiding mistakes, and making decisions faster.\n\nSo we went back to basics.\n\nWe talked to 12 users in one week. We watched how they completed tasks, where they got stuck, and what workarounds they created. Then we realized they didn’t need a new feature. They needed a clearer summary, one prominent “next step,” and fewer choices.\n\nWe removed the dashboard, simplified the flow, and made the product easier to use—not more impressive.\n\nAdoption didn’t explode because of a clever new feature. It improved because we stopped guessing.\n\nThe biggest takeaway for me as a product builder is this:\n\nIf nobody uses it, the lesson isn’t that users don’t understand it. The lesson is that we didn’t understand them.\n\nSuccess metrics matter. But empathy matters more.\n\nNow I ask before building:\n\n- Is this solving a frequent, painful, or costly problem?\n- Are we adding value, or just adding surface area?\n- If users had one hour to complete their task, would this save it?\n\nAnd sometimes the bravest thing you can ship is a deletion.\n\nHave you ever built something you loved that users ignored? What did it teach you?",
+     "refusal": null,
+     "reasoning": "We need to write a LinkedIn post up to 500 words about a lesson learned from shipping a feature nobody used. Need final only likely. Need maybe no need more. We need craft post. Should be engaging, concise. Include lesson, story, takeaway. Up to 500 words. LinkedIn style. Could be first person. Need maybe hashtags. Ensure less than 500 words. Let's draft around 250-350 words. Need avoid too generic? \"We built a beautiful dashboard...\" Lesson: usage not success; feedback loops; solve problem not just deliver feature. Include vulnerability. End with question. Ensure under 500 words. Final only.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "We need to write a LinkedIn post up to 500 words about a lesson learned from shipping a feature nobody used. Need final only likely. Need maybe no need more. We need craft post. Should be engaging, concise. Include lesson, story, takeaway. Up to 500 words. LinkedIn style. Could be first person. Need maybe hashtags. Ensure less than 500 words. Let's draft around 250-350 words. Need avoid too generic? \"We built a beautiful dashboard...\" Lesson: usage not success; feedback loops; solve problem not just deliver feature. Include vulnerability. End with question. Ensure under 500 words. Final only.",
+       "format": "unknown",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 85,
+   "completion_tokens": 579,
+   "total_tokens": 664,
+   "cost": 0.0002820312,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00028488,
+    "upstream_inference_prompt_cost": 1.275e-05,
+    "upstream_inference_completions_cost": 0.00027213
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 143,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

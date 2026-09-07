@@ -1,0 +1,85 @@
+{
+ "judge": "grok",
+ "model": "grok-4.6",
+ "key": "calib-human-11-2022-08-28-vs-luna-2-MH",
+ "wall_s": 49.1,
+ "run_utc": "2026-09-07T08:28:31Z",
+ "request_body": {
+  "model": "grok-4.6",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n(One of the texts is a real LinkedIn post by a person, written on its own topic; judge tells, not topic.)\n\n=== TEXT A ===\nWe once shipped a feature we were convinced customers needed.\n\nThe research looked promising. The roadmap discussion was enthusiastic. The team spent weeks designing, building, testing, and launching it.\n\nThen… almost nobody used it.\n\nAt first, we blamed discoverability.\n\nSo we added tooltips, announcements, onboarding prompts, and documentation.\n\nUsage barely moved.\n\nThat’s when we realized the problem wasn’t that customers couldn’t find the feature.\n\nThey didn’t have a strong enough reason to use it.\n\nThe feature solved a problem we thought was important—not a problem customers were actively trying to solve.\n\nThe lesson wasn’t “validate your ideas” in the abstract. We already knew that.\n\nThe real lesson was to validate *behavior*, not opinions.\n\nPeople will often say a feature sounds useful. They may even say they would use it. But that doesn’t mean the problem is painful enough to change their workflow, spend money, or overcome the friction of adopting something new.\n\nToday, before investing heavily in a feature, we try to answer a few more practical questions:\n\n- How are customers solving this problem today?\n- How frequently does it happen?\n- What does the current workaround cost them?\n- What would they stop doing if our solution existed?\n- Can we observe them taking action—not just expressing interest?\n\nSometimes the best validation is not a survey or a roadmap vote. It’s a manual process, a prototype, a waitlist, or a customer willing to try an imperfect solution immediately.\n\nShipping a feature nobody used was disappointing.\n\nBut it was also useful. It reminded us that building something well is not the same as building something valuable.\n\nA successful launch isn’t measured by how proud the team feels when the feature goes live.\n\nIt’s measured by whether the feature meaningfully changes what customers do.\n=== END OF TEXT A ===\n\n=== TEXT B ===\nDo you want to break into PM?\n\nHere are the top 5 red flags in job offers:\n \n🚩 1. Multitasking\n🚩 2. Resources\n🚩 3. Project / schedule\n🚩 4. Customer proxy\n🚩 5. SAFe\n \nNow in detail:\n \n 🚩 1. Multitasking\n \nMultitasking is a myth. \n\nAccording to the research presented by Gerald M. Weinberg, each additional project or task is a loss of ~20% of productivity. When we add a third project, context switching consumes almost 50% of the effort.\n \nGreat PMs focus on what's the most important and delegate or ignore everything else.\n \n🚩 2. Resources\n \nHow is it possible that in the 21st century, people are still so commonly referred to as “resources”?\n \nPeople will not work the same way, being moved from place to place or working overtime. They are not tools that you can use however you like. They also have dreams and ambitions.\n \nPeople are not resources. They are skilled professionals. \n \n🚩 3. Project / schedule\n \nA typical project mindset involves:\n- Assigning tasks to team members\n- Pushing instead of letting others pull the work\n- Emphasis on predefined outputs (features) and \"scope\"\n- Affection for detailed schedules\n- Constantly asking about the team's progress\n- Pursuing the myth of 100% utilization (thanks Gawain Lee-Son)\n \nGreat product managers collaborate, inspire, show their trust, and understand that working on a product is complex. They embrace the unknown and encourage experimentation.\n \n🚩 4. Customer proxy\n \nLet me tell you about the product death cycle trap. \n\nIt happens when the product manager forgets about the \"Why\" and becomes a waiter. There is no vision or strategy. To please everyone, PM collects and waterfalls all the requirements to the team. \n\nAlthough customers know where they are in pain, they cannot design a solution. Those features do not solve anyone's problems and do not drive the expected business results. \n\nThe most harmful solution is to ask customers again what features they need. The cycle repeats itself.\n \n🚩 5. SAFe\n \nEvery time I see SAFe's diagrams, something dies inside me. This heavy, fake \"agile\" framework enables bureaucratic, top-down control, disempowers teams, and promises false predictability.\n\nSAFe is one of the best ways to kill agility, and limit your growth as a PM.\n\n-\n\nIf you see any of those red flags, think twice. You may avoid serious harm to your growth and career.\n\n#productmanagement\n\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n"
+   }
+  ],
+  "max_tokens": 16000,
+  "stream": true,
+  "stream_options": {
+   "include_usage": true
+  }
+ },
+ "usage": {
+  "input_tokens": 2365,
+  "output_tokens": 121,
+  "reasoning_tokens": 2952,
+  "cost_usd": null,
+  "served_model": "grok-4.6",
+  "provider": null
+ },
+ "verdict": {
+  "more_ai": "A",
+  "confidence": 5,
+  "tells_A": [
+   "repeated not-X-it's-Y parallelism",
+   "generic anecdote with no specifics",
+   "crowd-performing with no names/dates/numbers",
+   "uplifting recap ending",
+   "every point lands, never uncertain",
+   "em dash as clause joint",
+   "bullet list in a prose post"
+  ],
+  "tells_B": [
+   "numbered listicle headers",
+   "signposting (here are / now in detail)",
+   "opening rhetorical question",
+   "one not-X-it's-Y line"
+  ]
+ },
+ "response_raw": {
+  "id": "b38e4b6e-1f9a-9d96-8e58-f91e6f827309",
+  "model": "grok-4.6",
+  "created": 1788769709,
+  "system_fingerprint": "fp_e41c6060b2628547",
+  "object": "chat.completion",
+  "streamed": true,
+  "usage": {
+   "prompt_tokens": 2365,
+   "completion_tokens": 121,
+   "total_tokens": 5438,
+   "prompt_tokens_details": {
+    "text_tokens": 2365,
+    "audio_tokens": 0,
+    "image_tokens": 0,
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 2952,
+    "audio_tokens": 0,
+    "accepted_prediction_tokens": 0,
+    "rejected_prediction_tokens": 0
+   },
+   "num_sources_used": 0,
+   "cost_in_usd_ticks": 224000000
+  },
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "{\"more_ai\": \"A\", \"confidence\": 5, \"tells_A\": [\"repeated not-X-it's-Y parallelism\", \"generic anecdote with no specifics\", \"crowd-performing with no names/dates/numbers\", \"uplifting recap ending\", \"every point lands, never uncertain\", \"em dash as clause joint\", \"bullet list in a prose post\"], \"tells_B\": [\"numbered listicle headers\", \"signposting (here are / now in detail)\", \"opening rhetorical question\", \"one not-X-it's-Y line\"]}"
+    }
+   }
+  ]
+ }
+}

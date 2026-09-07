@@ -1,0 +1,71 @@
+{
+ "arm": "grok",
+ "label": "Grok 4.6",
+ "vendor": "xAI",
+ "transport": "xai_chat",
+ "model_requested": "grok-4.6",
+ "serving_path": "xAI first-party, chat completions",
+ "prompt_id": "p2-launch",
+ "sample": 2,
+ "run_utc": "2026-09-06T13:24:56Z",
+ "wall_s": 13.9,
+ "request_body": {
+  "model": "grok-4.6",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Write a launch announcement of up to 500 words for a new feature of a B2B helpdesk product: a Slack integration that posts a daily summary of open support tickets to a channel of the customer's choice. The audience is existing customers."
+   }
+  ],
+  "max_tokens": 8000
+ },
+ "usage": {
+  "input_tokens": 685,
+  "output_tokens": 265,
+  "reasoning_tokens": 539,
+  "cost_usd": null,
+  "served_model": "grok-4.6",
+  "provider": null
+ },
+ "essay_sha256": "414b5ac3bebcc5546b6f2b8c513a8c51247bd9d8ae7c62c2d470be2d46d4c4b7",
+ "essay_words": 218,
+ "response_raw": {
+  "id": "1a1201fd-5499-932f-b9ca-1fb6ae95dfca",
+  "object": "chat.completion",
+  "created": 1788701081,
+  "model": "grok-4.6",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "**Stay on top of open tickets—without leaving Slack**\n\nWe’re rolling out a new Slack integration that posts a daily summary of your open support tickets to a channel you choose.\n\nIf your team already lives in Slack, you shouldn’t have to jump back into the helpdesk just to see what’s still waiting. Each morning, a concise digest lands in the channel you pick: open tickets, key details, and enough context to prioritize the day—without extra logins or status meetings.\n\n**What you get**\n- A scheduled daily summary of open tickets in a Slack channel of your choice  \n- A shared view for support, success, and anyone else who needs visibility  \n- Less time hunting for “what’s still open” and fewer tickets that sit unnoticed  \n\nYou control the channel. Route it to a dedicated support room, a leadership huddle, or a team space—wherever the people who need the snapshot already are.\n\n**Getting started**\nConnect Slack from your helpdesk settings, choose the channel, and turn on the daily summary. You can change the destination later if your workflow changes.\n\nThis is built for teams that already use our helpdesk and want ticket status in the tools they use all day. Enable it when you’re ready, and let us know how we can make the digest more useful for your queue.",
+     "reasoning_content": "The user wants me to write a launch announcement of up to 500 words for a new feature of a B2B helpdesk product: a Slack integration that posts a daily summary of open support tickets to a channel of ...We're excited to announce a powerful new integration that brings your helpdesk directly into the Slack workspace your team already uses every day.",
+     "refusal": null
+    },
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 685,
+   "completion_tokens": 265,
+   "total_tokens": 1489,
+   "prompt_tokens_details": {
+    "text_tokens": 685,
+    "audio_tokens": 0,
+    "image_tokens": 0,
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 539,
+    "audio_tokens": 0,
+    "accepted_prediction_tokens": 0,
+    "rejected_prediction_tokens": 0
+   },
+   "num_sources_used": 0,
+   "cost_in_usd_ticks": 54260000
+  },
+  "system_fingerprint": "fp_e41c6060b2628547",
+  "service_tier": "default"
+ }
+}

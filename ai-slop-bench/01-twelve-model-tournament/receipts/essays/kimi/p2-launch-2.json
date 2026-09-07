@@ -1,0 +1,94 @@
+{
+ "variant": "bare",
+ "arm": "kimi",
+ "label": "Kimi K3",
+ "vendor": "Moonshot AI",
+ "transport": "openrouter",
+ "model_requested": "moonshotai/kimi-k3",
+ "serving_path": "OpenRouter -> Moonshot AI",
+ "prompt_id": "p2-launch",
+ "sample": 2,
+ "prompt_text": "Write a launch announcement of up to 500 words for a new feature of a B2B helpdesk product: a Slack integration that posts a daily summary of open support tickets to a channel of the customer's choice. The audience is existing customers.",
+ "run_utc": "2026-09-06T22:16:04Z",
+ "wall_s": 26.3,
+ "request_body": {
+  "model": "moonshotai/kimi-k3",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Write a launch announcement of up to 500 words for a new feature of a B2B helpdesk product: a Slack integration that posts a daily summary of open support tickets to a channel of the customer's choice. The audience is existing customers."
+   }
+  ],
+  "max_tokens": 8000,
+  "provider": {
+   "allow_fallbacks": false
+  },
+  "usage": {
+   "include": true
+  }
+ },
+ "usage": {
+  "input_tokens": 137,
+  "output_tokens": 1655,
+  "reasoning_tokens": 1309,
+  "cost_usd": 0.021236094,
+  "served_model": "moonshotai/kimi-k3",
+  "provider": "Makora"
+ },
+ "essay_sha256": "cdc6bda56018b0c254eed36b72db6c75137ab2d2e1cf7d5cc96ba4af1d285aaf",
+ "essay_words": 418,
+ "response_raw": {
+  "id": "gen-1788732937-oJizBNLAXJE1P89Tu8ro",
+  "object": "chat.completion",
+  "created": 1788732937,
+  "model": "moonshotai/kimi-k3",
+  "provider": "Makora",
+  "system_fingerprint": null,
+  "service_tier": null,
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "# New: Your Daily Ticket Digest, Delivered Straight to Slack\n\n**Start every day with a clear picture of your support queue — no dashboard required.**\n\nYou shouldn't have to log in to your helpdesk just to find out what's happening in it. So today, we're launching a new addition to our Slack integration: a **daily summary of open support tickets**, posted automatically to the Slack channel of your choice.\n\n## How it works\n\nEach morning, at the time you choose, we'll post a snapshot of your queue to any channel in your Slack workspace — #support, #team-leads, or wherever it's most useful. Every summary includes:\n\n- **Total open tickets**, broken down by priority and status\n- **New tickets** from the last 24 hours\n- **At-risk tickets** approaching their SLA deadlines\n- **Unassigned tickets** that still need an owner\n- A direct link to jump into the full queue\n\n## Why you'll love it\n\n**Fewer surprises.** Overdue and SLA-risk tickets surface before they turn into escalations, so you can act while there's still time.\n\n**Better standups.** Walk into your morning meeting already knowing the shape of the queue. No more opening five tabs to prep.\n\n**Less context switching.** Team leads, managers, and execs get visibility into support workload without needing another login — or interrupting your agents to ask.\n\n## Make it yours\n\nThis isn't a one-size-fits-all blast. You control:\n\n- **Which channel** receives the summary\n- **What time** it posts, in your timezone\n- **What's included** — turn sections on or off\n- **Which tickets count** — filter by team, inbox, or priority, so your escalation channel only sees escalation tickets\n\nSet up multiple summaries if you like: a high-level digest for leadership, a detailed one for your frontline team.\n\n## Get set up in two minutes\n\n1. Go to **Settings → Integrations → Slack**\n2. Connect your Slack workspace (or reconnect if you've used our Slack app before)\n3. Pick your channel, set your schedule, and choose your filters\n\nThat's it. Your first summary arrives tomorrow morning.\n\n## Available today\n\nThe daily Slack summary is rolling out now to all customers. If you don't see it in your account yet, it will be there by the end of the week.\n\nAs always, we'd love to hear what you think. What else would you want in your daily digest? Share your feedback through the in-app messenger or reach out to our support team — this is just the beginning of what we're building with Slack.\n\nHappy resolving! 🎫",
+     "refusal": null,
+     "reasoning": "The user wants a launch announcement for a B2B helpdesk product feature: a Slack integration that posts a daily summary of open support tickets to a Slack channel of the customer's choice. Audience: existing customers. Up to 500 words.\n\nKey elements of a good launch announcement:\n- Engaging headline\n- The problem/pain point it solves (context switching, lack of visibility, tickets falling through cracks)\n- What the feature does\n- Key benefits and details (customization, channel choice, timing, etc.)\n- How to set it up / get started\n- Call to action\n- Maybe a note about feedback/support\n\nSince the audience is existing customers, I can assume familiarity with the product. I should invent a plausible product name or keep it generic? The prompt says \"a B2B helpdesk product\" — no name given. I could use a placeholder or invent a name. Using a placeholder like [Product Name] might be safest, but a invented name makes it feel more polished. Actually, many such tasks benefit from either. I think I'll use a placeholder-ish approach or invent a neutral name. Hmm. Let me think: the announcement should read naturally. Inventing a name like \"HelpDesk\" — risky because there are real products. I could write it without naming the product, using \"we/our,\" which is natural since existing customers know the product. That works well: \"your helpdesk,\" \"your account,\" etc. Or I could use [Product Name] brackets. I think writing without a product name is cleanest and most realistic — companies often say \"our new Slack integration.\"\n\nFormat: A launch announcement — headline, maybe subheadline, body with short paragraphs, bullet list of features/benefits, setup steps, CTA. Markdown formatting is appropriate here (it's a marketing doc, likely rendered). Keep under 500 words.\n\nContent ideas:\n- Headline: \"New: Daily Ticket Summaries, Delivered to Slack\" or \"Start every morning with a clear picture of your support queue — right in Slack\"\n- Pain point: toggling between tools, morning standups lacking visibility, tickets slipping.\n- What it does: Every morning (at a time you choose), a summary posts to the Slack channel you choose: total open tickets, breakdown by priority/status/assignee, new tickets in last 24h, overdue/SLA-breaching tickets, unassigned tickets.\n- Benefits: visibility without logging in, catch at-risk tickets, align team in standup.\n- Customization: pick channel, pick time/timezone, choose what's included (maybe filters by team/inbox).\n- Setup: Settings > Integrations > Slack, connect workspace, pick channel, schedule. Takes ~2 minutes.\n- Availability: which plans? I could say \"available on all plans\" or leave unspecified. Saying \"available today on all plans\" is a nice touch but I'm inventing; that's fine for a sample.\n- CTA: Set it up now, link to docs, feedback.\n\nWord count: aim for ~350-450 words.\n\nLet me draft.\n\n---\n\n**Headline:** New: Your Daily Ticket Digest, Delivered Straight to Slack\n\n**Subhead:** Start every day with a clear view of your support queue — no dashboard required.\n\nBody:\n\nYou shouldn't have to log into your helpdesk to know what's going on in it. Today we're launching our Slack integration's newest feature: a daily summary of open support tickets, posted automatically to the Slack channel of your choice.\n\n**How it works**\n\nEvery morning at the time you choose, we'll post a snapshot of your queue to any channel in your Slack workspace — #support, #team-leads, wherever it helps most. Each summary includes:\n\n- Total open tickets, with breakdowns by priority and status\n- New tickets from the last 24 hours\n- Overdue and at-risk tickets approaching SLA deadlines\n- Unassigned tickets that need an owner\n- A link to jump straight into the full queue\n\n**Why you'll love it**\n\n- Fewer surprises: SLA risks and stale tickets surface before they become escalations.\n- Better standups: ...\n- Less context switching: team leads and execs get visibility without another login.\n\n**Make it yours**\n\nChoose the channel, the delivery time and timezone, and what goes into the summary. Filter by team or inbox so each group sees only what's relevant — e.g., your Tier 2 channel gets Tier 2 tickets only.\n\n**Get set up in two minutes**\n\n1. Go to Settings → Integrations → Slack.\n2. Connect your Slack workspace (or reconnect if you've used our Slack app before).\n3. Pick your channel, set your schedule, and choose your filters.\n\nThat's it — your first summary arrives tomorrow morning.\n\nAvailability: rolling out starting today to all customers on [plans]. If you don't see it yet, it'll be there by end of week.\n\nQuestions or feedback: reply/contact support/feedback link.\n\n---\n\nCount words to stay under 500. Should be fine. Let me also make the tone engaging and customer-focused. Avoid over-inventing specifics that constrain? It's a sample, so specifics are fine and expected.\n\nLength check: I'll aim around 400 words. Use headers and bullets — appropriate for a launch announcement. Not too many bullets though; the guidance says avoid over-formatting, but marketing announcements typically use some bullets. Moderate use is fine.\n\nLet me finalize wording.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "The user wants a launch announcement for a B2B helpdesk product feature: a Slack integration that posts a daily summary of open support tickets to a Slack channel of the customer's choice. Audience: existing customers. Up to 500 words.\n\nKey elements of a good launch announcement:\n- Engaging headline\n- The problem/pain point it solves (context switching, lack of visibility, tickets falling through cracks)\n- What the feature does\n- Key benefits and details (customization, channel choice, timing, etc.)\n- How to set it up / get started\n- Call to action\n- Maybe a note about feedback/support\n\nSince the audience is existing customers, I can assume familiarity with the product. I should invent a plausible product name or keep it generic? The prompt says \"a B2B helpdesk product\" — no name given. I could use a placeholder or invent a name. Using a placeholder like [Product Name] might be safest, but a invented name makes it feel more polished. Actually, many such tasks benefit from either. I think I'll use a placeholder-ish approach or invent a neutral name. Hmm. Let me think: the announcement should read naturally. Inventing a name like \"HelpDesk\" — risky because there are real products. I could write it without naming the product, using \"we/our,\" which is natural since existing customers know the product. That works well: \"your helpdesk,\" \"your account,\" etc. Or I could use [Product Name] brackets. I think writing without a product name is cleanest and most realistic — companies often say \"our new Slack integration.\"\n\nFormat: A launch announcement — headline, maybe subheadline, body with short paragraphs, bullet list of features/benefits, setup steps, CTA. Markdown formatting is appropriate here (it's a marketing doc, likely rendered). Keep under 500 words.\n\nContent ideas:\n- Headline: \"New: Daily Ticket Summaries, Delivered to Slack\" or \"Start every morning with a clear picture of your support queue — right in Slack\"\n- Pain point: toggling between tools, morning standups lacking visibility, tickets slipping.\n- What it does: Every morning (at a time you choose), a summary posts to the Slack channel you choose: total open tickets, breakdown by priority/status/assignee, new tickets in last 24h, overdue/SLA-breaching tickets, unassigned tickets.\n- Benefits: visibility without logging in, catch at-risk tickets, align team in standup.\n- Customization: pick channel, pick time/timezone, choose what's included (maybe filters by team/inbox).\n- Setup: Settings > Integrations > Slack, connect workspace, pick channel, schedule. Takes ~2 minutes.\n- Availability: which plans? I could say \"available on all plans\" or leave unspecified. Saying \"available today on all plans\" is a nice touch but I'm inventing; that's fine for a sample.\n- CTA: Set it up now, link to docs, feedback.\n\nWord count: aim for ~350-450 words.\n\nLet me draft.\n\n---\n\n**Headline:** New: Your Daily Ticket Digest, Delivered Straight to Slack\n\n**Subhead:** Start every day with a clear view of your support queue — no dashboard required.\n\nBody:\n\nYou shouldn't have to log into your helpdesk to know what's going on in it. Today we're launching our Slack integration's newest feature: a daily summary of open support tickets, posted automatically to the Slack channel of your choice.\n\n**How it works**\n\nEvery morning at the time you choose, we'll post a snapshot of your queue to any channel in your Slack workspace — #support, #team-leads, wherever it helps most. Each summary includes:\n\n- Total open tickets, with breakdowns by priority and status\n- New tickets from the last 24 hours\n- Overdue and at-risk tickets approaching SLA deadlines\n- Unassigned tickets that need an owner\n- A link to jump straight into the full queue\n\n**Why you'll love it**\n\n- Fewer surprises: SLA risks and stale tickets surface before they become escalations.\n- Better standups: ...\n- Less context switching: team leads and execs get visibility without another login.\n\n**Make it yours**\n\nChoose the channel, the delivery time and timezone, and what goes into the summary. Filter by team or inbox so each group sees only what's relevant — e.g., your Tier 2 channel gets Tier 2 tickets only.\n\n**Get set up in two minutes**\n\n1. Go to Settings → Integrations → Slack.\n2. Connect your Slack workspace (or reconnect if you've used our Slack app before).\n3. Pick your channel, set your schedule, and choose your filters.\n\nThat's it — your first summary arrives tomorrow morning.\n\nAvailability: rolling out starting today to all customers on [plans]. If you don't see it yet, it'll be there by end of week.\n\nQuestions or feedback: reply/contact support/feedback link.\n\n---\n\nCount words to stay under 500. Should be fine. Let me also make the tone engaging and customer-focused. Avoid over-inventing specifics that constrain? It's a sample, so specifics are fine and expected.\n\nLength check: I'll aim around 400 words. Use headers and bullets — appropriate for a launch announcement. Not too many bullets though; the guidance says avoid over-formatting, but marketing announcements typically use some bullets. Moderate use is fine.\n\nLet me finalize wording.",
+       "format": "unknown",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 137,
+   "completion_tokens": 1655,
+   "total_tokens": 1792,
+   "cost": 0.021236094,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0214506,
+    "upstream_inference_prompt_cost": 0.00034935,
+    "upstream_inference_completions_cost": 0.02110125
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1309,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

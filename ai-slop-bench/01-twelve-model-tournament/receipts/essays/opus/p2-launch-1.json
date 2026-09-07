@@ -1,0 +1,93 @@
+{
+ "arm": "opus",
+ "label": "Opus 5",
+ "vendor": "Anthropic",
+ "transport": "openrouter",
+ "model_requested": "anthropic/claude-opus-5",
+ "serving_path": "OpenRouter -> Anthropic (first-party key unavailable at run time)",
+ "prompt_id": "p2-launch",
+ "sample": 1,
+ "run_utc": "2026-09-06T13:24:34Z",
+ "wall_s": 20.3,
+ "request_body": {
+  "model": "anthropic/claude-opus-5",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Write a launch announcement of up to 500 words for a new feature of a B2B helpdesk product: a Slack integration that posts a daily summary of open support tickets to a channel of the customer's choice. The audience is existing customers."
+   }
+  ],
+  "max_tokens": 8000,
+  "provider": {
+   "allow_fallbacks": false
+  },
+  "usage": {
+   "include": true
+  }
+ },
+ "usage": {
+  "input_tokens": 79,
+  "output_tokens": 1261,
+  "reasoning_tokens": 291,
+  "cost_usd": 0.0316008,
+  "served_model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS"
+ },
+ "essay_sha256": "43659b0d8bd26de8722fe62ff77a003b776e91e13d2eaa3e655a6a62e1d2c4be",
+ "essay_words": 500,
+ "response_raw": {
+  "id": "gen-1788701052-IqnyCtn8RuCIjoyA9UQA",
+  "object": "chat.completion",
+  "created": 1788701052,
+  "model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "# Your ticket queue, now in Slack: introducing Daily Ticket Digest\n\nStarting today, you can connect [Product] to Slack and have a summary of your open support tickets posted automatically to any channel you choose.\n\n## The problem we heard from you\n\nSupport data has a habit of staying inside the support tool. Your agents live in the queue all day, but everyone else — engineering leads, account managers, your COO — only finds out about a backlog or an aging escalation when someone thinks to mention it.\n\nMany of you told us you'd built workarounds: a manual morning post in #support, a scheduled report nobody opens, a weekly meeting that's mostly reading numbers aloud. Daily Ticket Digest replaces all of that with a single automated message.\n\n## What the digest includes\n\nEach digest gives your team a snapshot of the queue at a glance:\n\n- **Total open tickets**, with the change since yesterday\n- **Tickets breaching or approaching SLA**, listed individually with links\n- **Oldest unresolved tickets**, so nothing quietly ages out of view\n- **Breakdown by priority and by assignee**\n- **New tickets created and tickets resolved** in the last 24 hours\n\nEvery ticket reference links straight back to [Product], so following up is one click, not a search.\n\n## Configurable to your workflow\n\nYou control what the digest looks like and who sees it:\n\n- **Choose the channel.** Public, private, or a DM to yourself — post wherever the conversation already happens.\n- **Set the schedule.** Pick the delivery time and time zone. Weekdays only is an option if you'd rather not ping the channel on Saturday.\n- **Filter the scope.** Send a digest for a specific team, product area, priority level, or customer segment. Many teams run two: a full queue digest to #support and a high-priority-only digest to #leadership.\n- **Run multiple digests.** No limit on how many you configure.\n\n## Setting it up\n\n1. Go to **Settings → Integrations → Slack**\n2. Click **Connect to Slack** and authorize the app in your workspace\n3. Click **New digest**, choose your channel, schedule, and filters\n4. Use **Send test digest** to preview it immediately\n\nSetup takes about two minutes. You'll need admin permissions in [Product] and the ability to add apps to your Slack workspace — if your Slack is locked down, your workspace admin may need to approve the app first.\n\n## Availability and pricing\n\nDaily Ticket Digest is included at no additional cost on all current plans, and it's live in your account now. It's read-only by design: the integration posts to Slack and never modifies your ticket data.\n\n## We'd like your feedback\n\nThis is the first step in a broader Slack integration. Ticket creation from Slack, threaded replies, and real-time SLA alerts are on the roadmap, and what we build next depends on what you tell us.\n\nTry the digest, then let us know what you think at [feedback link] or through your usual support channel.\n\n**[Set up your first digest →]**",
+     "refusal": null,
+     "reasoning": "I need to draft a launch announcement under 500 words for a Slack integration that posts daily ticket summaries, covering headline, intro, functionality, benefits, setup, and pricing for existing customers. I'll keep the product naming fairly natural rather than relying on obvious placeholders.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I need to draft a launch announcement under 500 words for a Slack integration that posts daily ticket summaries, covering headline, intro, functionality, benefits, setup, and pricing for existing customers. I'll keep the product naming fairly natural rather than relying on obvious placeholders.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAIS7QgKrgEIERgCKkDkqxycl1oAwda2Y3Zf3J6OtIKz0mDqHYXrkbGufAfj94MiKoWDjhUfHmLMIKqdbKdA4t24m83PDUtREy/R7HiFMg1jbGF1ZGUtb3B1cy01OAFCCHRoaW5raW5nWiQ0YzBmMDQ2Zi0yNWZkLTQ1ZmItYmZiMy1hMDhhOGUyNDljYTd6HnVwcm9mXzAxMUNlbkZSYjRqeFBLcXdMUXFXN3dtNqgBg9P11AYSDB0iMnh1oswWDYsoNxoMkABlJIq3kZvA82kpIjAZCZYeVmKet4wiJyMqinGTesYRdBUCw6ESoVXm2VEgZHFPP3h/ms5XSkMOJ1pVDZ8q6wYVrDbGdMfS5rLKZkiFWZ19aXDljKpUSutGpPWrBfKtHm2FkYiBFeUeQv75VFfMwrdwrGP8kRquHesI1GZY9LhO8bGfEhKXYNurtp4w0hRi/cTpcXEkXMP6mmSqviLf2RoV7dZnkBeM9I3TyhPuzKvwxzp5QvHXw25w8H9L/H6q5aDi6BABoSRhAsmw+bqTuUnF24XGYqoTUn6vEmJl7WKVFduNMJgjoHRZ3+g4j2PV1xvy7xuWVkxVZ9s+YkPCRO5otd2caHTDL3cCgimW3WPMnj5Q00fh1zk/lt7ASjE5qz8+hhzTmlpPergifMteug3hC/hZyBDDeucbGwOgsylLotj1gOUCDESxG4mt27M8bS9vZBld0wXM7tHqSqvxsWLDNOjfs/HxV1zSaPE1w2fcW2m/s42gXfM6uc+rm1ERaykUrS6LpvZwHE50EZLlVQDqHqPv5JyNiOfz/DlfeQrvYQR51js6TkIB+w97oDI+ca5KeRbpZizmEK6atbQNeNifWXDVuAIXAjDM62NjSGkAlCrgs8tKm02XRM1pH2nz0X4u2F8gMD2qJko+xDg0VnKPCGQ/ysKcGRcA7wB2RNc0Dg5/UsvcwNPUKBEfgCBVFSDrHXsEdr8SareJPMbqEY43oCH2S+Ez9nW+JYQQEtIdyZ9SNLGVg7BXPluFI3CaOU6u6PMnri1kWy+5APu34RX3jo7s9IJiKFHMWna6sDbiIZLtl/hDbho1Sz4bcbqMtH7OUtPpYYzc9ZZov6ftdhE47rzFaO8qEoOcGGOOvR+2ym/J/eYbosw7nFbpXnTa3h+94cVRBivAQuP2woi5hzWcAG9ithWUEsUNl4hOvGifnlc8Xl5nRJHkJwBc3uLRsKiP9uudvNphbALklatOy03zTmn04NozorfsT4UVZdwQGXmL4Vuvc9c2Goy0eU2ssgmOO2jsHq7t7m0bUOavD5JNtOC/FrR3y4A+Ve70YMuHIEucFYm/Cjmz0NHs2IZtDdTjNfh4C2Cf+Rgel6PcVwKYRbnqo2uuBy7NHLGNhbBGiXOROX8AYW+Q/FVMb/XroeJP/SIhYqXls6oYI5mX/AQcX9Wn0tPdTC1p/8DM5VLx6ZkNm8ycavOLxcXw3sixAxu+l4eqOPEP05sr6F0rBGruzvB4iR0XPRr6YBgB"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 79,
+   "completion_tokens": 1261,
+   "total_tokens": 1340,
+   "cost": 0.0316008,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.03192,
+    "upstream_inference_prompt_cost": 0.000395,
+    "upstream_inference_completions_cost": 0.031525
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 291,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

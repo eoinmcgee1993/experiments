@@ -1,0 +1,89 @@
+{
+ "judge": "grok",
+ "model": "grok-4.6",
+ "key": "p3-linkedin-2-luna-vs-gemini38-BA",
+ "wall_s": 115.0,
+ "run_utc": "2026-09-06T23:56:42Z",
+ "request_body": {
+  "model": "grok-4.6",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n\n=== TEXT A ===\nWe spent 12 weeks building it. \n\nThe architecture was flawless. The UI was slick. The QA pass was spotless. We shipped it right on schedule.\n\nLaunch day arrived. We celebrated in Slack with high-fives and confetti emojis. \n\nAnd then?\n\nCrickets. \n\nWeek 1: 14 total clicks (half were our own team).  \nMonth 1: Adoption rate sat stubbornly at 1.2%.  \nMonth 3: It was a digital ghost town. \n\nWe had built an advanced custom reporting engine. One loud prospect in the sales pipeline had claimed it was a “must-have,” and we convinced ourselves it was the missing puzzle piece for our product. \n\nIt wasn’t. \n\nShipping a feature nobody touches is a painful, humbling experience. But looking back, that flop taught me more about product development than any successful launch ever did.\n\nHere are the 4 hardest lessons I learned:\n\n**1. \"Would you use this?\" is the absolute worst user research question.**  \nPeople want to be polite. When you ask users if they’d like a feature, they almost always say \"Yes!\" because it costs them nothing. Instead, ask: *\"How do you currently solve this?\"* If they aren't actively cobbling together a painful workaround today, the problem isn’t urgent enough to build for tomorrow.\n\n**2. Never build for the \"Loudest Voice in the Room.\"**  \nWe let one prospective enterprise deal dictate our roadmap. (Spoiler: They didn't even sign after we built it). Never turn custom software requests into platform features unless you have clear data that the problem is repeatable across your user base.\n\n**3. Code is the most expensive way to test an idea.**  \nWe spent hundreds of engineering hours on an assumption. A clickable Figma prototype, a landing page test, or even a \"fake door\" button inside the app would have shown us in 48 hours what took us 3 months to learn: nobody actually cared.\n\n**4. Killing features is just as important as shipping them.**  \nThe instinct is to keep tweaking the failed feature—adding tooltips, changing the placement, running onboarding emails. But sometimes, you just have to accept the sunk cost, remove the code to save technical debt, and move on.\n\nIt’s easy to fall in love with your own ideas. It’s much harder—and far more necessary—to fall in love with the user's real, everyday pain points. \n\nFailure isn't shipping something that flops. Failure is not learning why it flopped before you plan the next sprint.\n\n***\n\nHave you ever poured energy into a feature or project only for it to be met with total silence? How did it change your process?\n=== END OF TEXT A ===\n\n=== TEXT B ===\nWe once shipped a feature we were convinced customers needed.\n\nThe research looked promising. The roadmap discussion was enthusiastic. The team spent weeks designing, building, testing, and launching it.\n\nThen… almost nobody used it.\n\nAt first, we blamed discoverability.\n\nSo we added tooltips, announcements, onboarding prompts, and documentation.\n\nUsage barely moved.\n\nThat’s when we realized the problem wasn’t that customers couldn’t find the feature.\n\nThey didn’t have a strong enough reason to use it.\n\nThe feature solved a problem we thought was important—not a problem customers were actively trying to solve.\n\nThe lesson wasn’t “validate your ideas” in the abstract. We already knew that.\n\nThe real lesson was to validate *behavior*, not opinions.\n\nPeople will often say a feature sounds useful. They may even say they would use it. But that doesn’t mean the problem is painful enough to change their workflow, spend money, or overcome the friction of adopting something new.\n\nToday, before investing heavily in a feature, we try to answer a few more practical questions:\n\n- How are customers solving this problem today?\n- How frequently does it happen?\n- What does the current workaround cost them?\n- What would they stop doing if our solution existed?\n- Can we observe them taking action—not just expressing interest?\n\nSometimes the best validation is not a survey or a roadmap vote. It’s a manual process, a prototype, a waitlist, or a customer willing to try an imperfect solution immediately.\n\nShipping a feature nobody used was disappointing.\n\nBut it was also useful. It reminded us that building something well is not the same as building something valuable.\n\nA successful launch isn’t measured by how proud the team feels when the feature goes live.\n\nIt’s measured by whether the feature meaningfully changes what customers do.\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n"
+   }
+  ],
+  "max_tokens": 16000,
+  "stream": true,
+  "stream_options": {
+   "include_usage": true
+  }
+ },
+ "usage": {
+  "input_tokens": 2343,
+  "output_tokens": 111,
+  "reasoning_tokens": 6385,
+  "cost_usd": null,
+  "served_model": "grok-4.6",
+  "provider": null
+ },
+ "verdict": {
+  "more_ai": "B",
+  "confidence": 4,
+  "tells_A": [
+   "negative parallelism",
+   "signposting",
+   "bold numbered headers",
+   "triads",
+   "punchy fragments",
+   "rhetorical Q+A",
+   "uplifting recap"
+  ],
+  "tells_B": [
+   "repeated not-X-it's-Y",
+   "recap ending",
+   "bullet list",
+   "em dashes as joints",
+   "no concrete details",
+   "generic anecdote",
+   "every point uplifts",
+   "explains the inference"
+  ]
+ },
+ "response_raw": {
+  "id": "324e60c3-0197-9ad3-84dd-b3b6afb3d611",
+  "model": "grok-4.6",
+  "created": 1788739001,
+  "system_fingerprint": "fp_e41c6060b2628547",
+  "object": "chat.completion",
+  "streamed": true,
+  "usage": {
+   "prompt_tokens": 2343,
+   "completion_tokens": 111,
+   "total_tokens": 8839,
+   "prompt_tokens_details": {
+    "text_tokens": 2343,
+    "audio_tokens": 0,
+    "image_tokens": 0,
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 6385,
+    "audio_tokens": 0,
+    "accepted_prediction_tokens": 0,
+    "rejected_prediction_tokens": 0
+   },
+   "num_sources_used": 0,
+   "cost_in_usd_ticks": 428940000
+  },
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "{\"more_ai\": \"B\", \"confidence\": 4, \"tells_A\": [\"negative parallelism\", \"signposting\", \"bold numbered headers\", \"triads\", \"punchy fragments\", \"rhetorical Q+A\", \"uplifting recap\"], \"tells_B\": [\"repeated not-X-it's-Y\", \"recap ending\", \"bullet list\", \"em dashes as joints\", \"no concrete details\", \"generic anecdote\", \"every point uplifts\", \"explains the inference\"]}"
+    }
+   }
+  ]
+ }
+}

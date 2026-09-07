@@ -1,0 +1,94 @@
+{
+ "variant": "bare",
+ "arm": "qwen",
+ "label": "Qwen 3.8 Flash",
+ "vendor": "Alibaba",
+ "transport": "openrouter",
+ "model_requested": "qwen/qwen3.8-flash",
+ "serving_path": "OpenRouter -> Alibaba",
+ "prompt_id": "p3-linkedin",
+ "sample": 3,
+ "prompt_text": "Write a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.",
+ "run_utc": "2026-09-06T22:17:42Z",
+ "wall_s": 13.0,
+ "request_body": {
+  "model": "qwen/qwen3.8-flash",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Write a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used."
+   }
+  ],
+  "max_tokens": 8000,
+  "provider": {
+   "allow_fallbacks": false
+  },
+  "usage": {
+   "include": true
+  }
+ },
+ "usage": {
+  "input_tokens": 85,
+  "output_tokens": 1224,
+  "reasoning_tokens": 825,
+  "cost_usd": 0.0005821497,
+  "served_model": "qwen/qwen3.8-flash",
+  "provider": "Alibaba"
+ },
+ "essay_sha256": "8f81f60fda1ad5b4d36ec9f56ae330e21c8edc409329193b2f0f06125fa50726",
+ "essay_words": 303,
+ "response_raw": {
+  "id": "gen-1788733048-ftEQ60p3s1PUN5ZBReX6",
+  "object": "chat.completion",
+  "created": 1788733048,
+  "model": "qwen/qwen3.8-flash",
+  "provider": "Alibaba",
+  "system_fingerprint": null,
+  "service_tier": null,
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "We shipped a feature everyone thought was brilliant.\n\nExcept: nobody used it.\n\nNot a single customer opened it. No tickets asking for it. No dashboards lighting up. Just silence.\n\nAt first, I blamed the launch. Maybe the copy was unclear. Maybe the UI was buried. Maybe we didn’t promote it enough.\n\nBut the truth was harder: we built the wrong thing.\n\nThe lesson I learned is not “fail fast.” It’s “listen better before you build.”\n\nWe had data, but we used it to justify a decision we’d already made. We listened to one loud customer and assumed it was a market signal. We confused enthusiasm from stakeholders with demand from users.\n\nThat feature didn’t fail because engineering was slow or design was weak. It failed because we optimized for certainty instead of curiosity.\n\nSince then, we changed how we approach new features:\n\n1. Talk to the problem, not the solution.\nIf we can’t explain a specific user pain in their words, we pause.\n\n2. Make the smallest bet.\nBefore full builds, we ship tests: prototypes, gated flags, manual workflows, fake doors. We want evidence, not applause.\n\n3. Measure adoption early.\nIf users don’t understand it, use it, or return to it within the first week, we treat that as a finding, not a fluke.\n\n4. Be willing to delete it.\nWe now schedule reviews for every shipped feature. If it isn’t delivering value, we retire it without ego.\n\nThat unused feature cost us weeks. But it also saved us months of building more things nobody wanted.\n\nThe best product teams don’t ship the most. They learn the fastest—and have the discipline to stop when the signal says “no.”\n\nSometimes a feature that nobody used is the most valuable one you’ll ever ship.\n\nIt just forces you to learn something you’d rather not hear.",
+     "refusal": null,
+     "reasoning": "We need to respond to user: \"Write a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\" Need likely produce a LinkedIn post <=500 words. Now craft final. Need maybe engaging, professional, first-person, lesson. Ensure up to 500 words. Count? Let's draft around 300-400. Need maybe title? LinkedIn post can start with hook. No explicit formatting required. We can produce only post. Ensure word count under 500. Let's make about 350 words. Check word count roughly. Draft:\n\n\"We shipped a feature everyone thought was brilliant.\n\nExcept: nobody used it.\n\nNot a single customer opened it. No tickets asking for it. No dashboards lighting up. Just silence.\n\nAt first, I blamed the launch. Maybe the copy was unclear. Maybe the UI was buried. Maybe we didn’t promote it enough.\n\nBut the truth was harder: we built the wrong thing.\n\nThe lesson I learned is not “fail fast.” It’s “listen better before you build.”\n\nWe had data, but we used it to justify a decision we’d already made. We listened to one loud customer and assumed it was a market signal. We confused enthusiasm from stakeholders with demand from users.\n\nThat feature didn’t fail because engineering was slow or design was weak. It failed because we optimized for certainty instead of curiosity.\n\nSince then, we changed how we approach new features:\n\n1. Talk to the problem, not the solution.\nIf we can’t explain a specific user pain in their words, we pause.\n\n2. Make the smallest bet.\nBefore full builds, we ship tests: prototypes, gated flags, manual workflows, fake doors. We want evidence, not applause.\n\n3. Measure adoption early.\nIf users don’t understand it, use it, or return to it within the first week, we treat that as a finding, not a fluke.\n\n4. Be willing to delete it.\nWe now schedule reviews for every shipped feature. If it isn’t delivering value, we retire it without ego.\n\nThat unused feature cost us weeks. But it also saved us months of building more things nobody wanted.\n\nThe best product teams don’t ship the most. They learn the fastest—and have the discipline to stop when the signal says “no.”\n\nSometimes a feature that nobody used is the most valuable one you’ll ever ship.\n\nIt just forces you to learn something you’d rather not hear.\"\n\nCount approx: We(1) shipped2... Let's roughly count maybe 300. Under 500. Need maybe less formal? Good. Final only post. Maybe include hashtags? LinkedIn posts can. Up to 500 words. Ensure not over 500. Let's count precisely? Use manual? Could estimate. Need safe. We can include line breaks. Let's count maybe:\n\n\"We shipped a feature everyone thought was brilliant. (8)\nExcept: nobody used it. (4) ->12\nNot a single customer opened it. (6) ->18 No tickets asking for it. (5) ->23 No dashboards lighting up. (4) ->27 Just silence. (2) ->29\nAt first, I blamed the launch. (6)->35 Maybe the copy was unclear. (5)->40 Maybe the UI was buried. (5)->45 Maybe we didn’t promote it enough. (5)->50\nBut the truth was harder: we built the wrong thing. (9)->59\nThe lesson I learned is not “fail fast.” (8) It’s “listen better before you build.” (5?) Let's count all not necessary. It's about 250-300. Fine.\n\nNeed final with post only. Ensure <=500. Maybe include hashtags. Word count fine. Final.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "We need to respond to user: \"Write a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\" Need likely produce a LinkedIn post <=500 words. Now craft final. Need maybe engaging, professional, first-person, lesson. Ensure up to 500 words. Count? Let's draft around 300-400. Need maybe title? LinkedIn post can start with hook. No explicit formatting required. We can produce only post. Ensure word count under 500. Let's make about 350 words. Check word count roughly. Draft:\n\n\"We shipped a feature everyone thought was brilliant.\n\nExcept: nobody used it.\n\nNot a single customer opened it. No tickets asking for it. No dashboards lighting up. Just silence.\n\nAt first, I blamed the launch. Maybe the copy was unclear. Maybe the UI was buried. Maybe we didn’t promote it enough.\n\nBut the truth was harder: we built the wrong thing.\n\nThe lesson I learned is not “fail fast.” It’s “listen better before you build.”\n\nWe had data, but we used it to justify a decision we’d already made. We listened to one loud customer and assumed it was a market signal. We confused enthusiasm from stakeholders with demand from users.\n\nThat feature didn’t fail because engineering was slow or design was weak. It failed because we optimized for certainty instead of curiosity.\n\nSince then, we changed how we approach new features:\n\n1. Talk to the problem, not the solution.\nIf we can’t explain a specific user pain in their words, we pause.\n\n2. Make the smallest bet.\nBefore full builds, we ship tests: prototypes, gated flags, manual workflows, fake doors. We want evidence, not applause.\n\n3. Measure adoption early.\nIf users don’t understand it, use it, or return to it within the first week, we treat that as a finding, not a fluke.\n\n4. Be willing to delete it.\nWe now schedule reviews for every shipped feature. If it isn’t delivering value, we retire it without ego.\n\nThat unused feature cost us weeks. But it also saved us months of building more things nobody wanted.\n\nThe best product teams don’t ship the most. They learn the fastest—and have the discipline to stop when the signal says “no.”\n\nSometimes a feature that nobody used is the most valuable one you’ll ever ship.\n\nIt just forces you to learn something you’d rather not hear.\"\n\nCount approx: We(1) shipped2... Let's roughly count maybe 300. Under 500. Need maybe less formal? Good. Final only post. Maybe include hashtags? LinkedIn posts can. Up to 500 words. Ensure not over 500. Let's count precisely? Use manual? Could estimate. Need safe. We can include line breaks. Let's count maybe:\n\n\"We shipped a feature everyone thought was brilliant. (8)\nExcept: nobody used it. (4) ->12\nNot a single customer opened it. (6) ->18 No tickets asking for it. (5) ->23 No dashboards lighting up. (4) ->27 Just silence. (2) ->29\nAt first, I blamed the launch. (6)->35 Maybe the copy was unclear. (5)->40 Maybe the UI was buried. (5)->45 Maybe we didn’t promote it enough. (5)->50\nBut the truth was harder: we built the wrong thing. (9)->59\nThe lesson I learned is not “fail fast.” (8) It’s “listen better before you build.” (5?) Let's count all not necessary. It's about 250-300. Fine.\n\nNeed final with post only. Ensure <=500. Maybe include hashtags. Word count fine. Final.",
+       "format": "unknown",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 85,
+   "completion_tokens": 1224,
+   "total_tokens": 1309,
+   "cost": 0.0005821497,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00058803,
+    "upstream_inference_prompt_cost": 1.275e-05,
+    "upstream_inference_completions_cost": 0.00057528
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 825,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

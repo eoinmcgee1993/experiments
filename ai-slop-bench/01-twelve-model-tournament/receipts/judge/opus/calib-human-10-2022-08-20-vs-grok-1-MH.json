@@ -1,0 +1,105 @@
+{
+ "judge": "opus",
+ "model": "anthropic/claude-opus-5",
+ "key": "calib-human-10-2022-08-20-vs-grok-1-MH",
+ "wall_s": 10.8,
+ "run_utc": "2026-09-07T08:25:13Z",
+ "request_body": {
+  "model": "anthropic/claude-opus-5",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n(One of the texts is a real LinkedIn post by a person, written on its own topic; judge tells, not topic.)\n\n=== TEXT A ===\nWe spent three months building a feature nobody asked for.\n\nIt was elegant. It was well-engineered. It shipped on time. And in the first 90 days, almost no one used it.\n\nI still remember the launch thread. Screenshots. Confetti emoji. A demo that made the product look smarter than it actually was. We told ourselves we were being proactive — solving a problem users would have eventually. We had internal data. We had a slide that said “high intent.” We had conviction.\n\nWhat we did not have was a single person who had said, “I need this.”\n\nThe usage graph was a flat line with a few polite clicks from people on our team. Support tickets did not mention it. Sales did not sell it. Power users found workarounds around it, which is a polite way of saying they ignored it.\n\nThe hard part was not the wasted engineering time. It was the story we had to tell ourselves afterward. We had not failed because we shipped slowly. We had failed because we shipped a solution in search of a problem.\n\nHere is what I learned, and what I still repeat in kickoffs:\n\n1. Usage is the only honest launch metric. Applause is not a metric. “Looks great in the demo” is not a metric. If the feature does not change a weekly habit, it did not ship. It just deployed.\n\n2. “Nobody asked for it” is not automatically a virtue. Sometimes users cannot articulate the next step. Often they can. We skipped the unglamorous work: five conversations, a prototype, a fake door, a waitlist. We protected our idea from contact with reality.\n\n3. Beautiful unused features have a cost beyond the sprint. They add surface area, docs, edge cases, and cognitive load. Every unused control is a tax on the people who actually use the product.\n\n4. Kill criteria should be written before the build, not after the embarrassment. We should have said: if fewer than X people complete this flow in 30 days, we remove it. Sunsetting something you were proud of is cheaper than carrying it forever.\n\n5. The team did not fail. The process did. Smart people will fill a vacuum of evidence with taste and optimism. That is not a character flaw. It is a design problem for how you decide what to build.\n\nI used to think shipping was the brave part. Now I think the brave part is admitting a feature is a hypothesis, not a gift. Talk to users before you write the ticket. Instrument the thing you think they will do. Be willing to delete your favorite screen.\n\nIf you have a feature sitting at 2% adoption and a roadmap full of “phase 2,” that is not momentum. That is inventory.\n\nWhat is a feature you shipped that the data quietly retired? I would rather hear that story than another launch post.\n=== END OF TEXT A ===\n\n=== TEXT B ===\nMany PMs fail a job interview due to a product vision.\n\nYet, it is easy to understand.\n\nLeading a product without a clear vision is like walking through a foreign city without a map. You might be moving, but you are going nowhere.\n\nA product vision describes the overarching long-term mission of your product. Vision statements are aspirational and communicate concisely where the product hopes to go and what it hopes to achieve in the long term.\n\nEffective vision needs to be:\n\n✅ Inspiring — people who help to implement the vision should feel inspired.\n\n✅ Achievable — it must have a decent chance to work. Don't dream of traveling to Alpha Centauri until you send humans to Mars.\n\n✅ Documented — do not let the vision stay in your head. You actually need to write it to make it work.\n\n✅ Communicated — it seems obvious, yet many forget about this. Vision will only work if you tell others about it.\n\n✅ Emotional — vision becomes much more memorable when others can imagine themselves doing something practical and when it speaks to their hearts.\n\nMy favorite example of the vision is president John F. Kennedy's vision of space exploration (below).\n\nBe patient, as creating the product vision is not a one-time task. You have to communicate with others, get feedback and adapt. Your product vision will emerge and evolve over time.\n\nHow does it connect to a product strategy? \n\nI'll describe it Tomorrow.\n\n#productmanagement #agile\n\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n"
+   }
+  ],
+  "max_tokens": 16000,
+  "provider": {
+   "allow_fallbacks": false
+  },
+  "usage": {
+   "include": true
+  }
+ },
+ "usage": {
+  "input_tokens": 2601,
+  "output_tokens": 427,
+  "reasoning_tokens": 160,
+  "cost_usd": 0.0234432,
+  "served_model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS"
+ },
+ "verdict": {
+  "more_ai": "A",
+  "confidence": 4,
+  "tells_A": [
+   "repeated negative parallelism: 'Applause is not a metric', 'not a metric', 'The team did not fail. The process did.'",
+   "signposting: 'Here is what I learned'",
+   "numbered list with bold-style labels in a prose post",
+   "aphoristic closers: 'That is not momentum. That is inventory.'",
+   "generic anecdote with no real names, dates, or product specifics",
+   "uniform punchy rhythm and triads ('surface area, docs, edge cases')",
+   "engagement-bait closing question",
+   "em dash as default joint"
+  ],
+  "tells_B": [
+   "emoji-checkmark bullet list",
+   "one 'it is not X, it is Y'-style contrast ('moving, but going nowhere')",
+   "slight generic advice framing"
+  ]
+ },
+ "response_raw": {
+  "id": "gen-1788769501-sqtuC5NJrnQ7MWrHoaAx",
+  "object": "chat.completion",
+  "created": 1788769501,
+  "model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"more_ai\": \"A\", \"confidence\": 4, \"tells_A\": [\"repeated negative parallelism: 'Applause is not a metric', 'not a metric', 'The team did not fail. The process did.'\", \"signposting: 'Here is what I learned'\", \"numbered list with bold-style labels in a prose post\", \"aphoristic closers: 'That is not momentum. That is inventory.'\", \"generic anecdote with no real names, dates, or product specifics\", \"uniform punchy rhythm and triads ('surface area, docs, edge cases')\", \"engagement-bait closing question\", \"em dash as default joint\"], \"tells_B\": [\"emoji-checkmark bullet list\", \"one 'it is not X, it is Y'-style contrast ('moving, but going nowhere')\", \"slight generic advice framing\"]}",
+     "refusal": null,
+     "reasoning": "Text B looks like the genuine LinkedIn post with its checkmark bullets, hashtags, and casual sign-off, while Text A shows classic AI tells: repeated negative parallelism, \"here's what I learned\" signposting, numbered lists, and forced rhetorical closure. Though B has some parallel structure too (\"you might be moving, but you are going nowhere\"), that reads as natural human LinkedIn style rather than an AI pattern.\n\nMy answer is A.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "Text B looks like the genuine LinkedIn post with its checkmark bullets, hashtags, and casual sign-off, while Text A shows classic AI tells: repeated negative parallelism, \"here's what I learned\" signposting, numbered lists, and forced rhetorical closure. Though B has some parallel structure too (\"you might be moving, but you are going nowhere\"), that reads as natural human LinkedIn style rather than an AI pattern.\n\nMy answer is A.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAISqwUKrgEIERgCKkAF3x+Mlejti/3OXXOMKO7UXwsETcq3WPiwweKJkNKgIXQKfu8u3pZv1nKrVqALBi70EZjbBWbIoKBln/MOFvABMg1jbGF1ZGUtb3B1cy01OAFCCHRoaW5raW5nWiQ0YzBmMDQ2Zi0yNWZkLTQ1ZmItYmZiMy1hMDhhOGUyNDljYTd6HnVwcm9mXzAxMUNlbkZSYjRqeFBLcXdMUXFXN3dtNqgB5+n51AYSDAPWdtYB8W94XX2hlBoMvpAOdMErYO2EvkAWIjAdE/cl+I57qOiNHSyLXtLQGB4DiK9vfPIg8DlnoFAZnz6Zp3S8SR/E4ehFvqHceUoqqQOucjahdVn8CojkuN4x2K1gUVsrWUJVcE7OWwsxPuCpBM645EvG2I9YQy6/P/rMTXHCGE0x0ORrKlvzXMKHVtU3fl5BfjQmzTzz1MIpLLKLscH2Kn3VSSPK0f43WUt1UxF8c2a0us36o4/dzLCfdAuff9CEfEETNTFX/QS7CXzyWrlnsVE9xVT1Nu5PE7K1f2zLF2bKriSIu2rqQJWfg5x+e4o+VNYUv8K/hMn/xiTnCq7Yb/AhZVXmjTH/waFuD8rYU/RrU5+BSAqIijlnG3WK3o8a7kA4pg16hZqMs5Qj7YyzfUZ3cfZjMUeUd+5Yplz5ieMayp04MbEETot8ZDttqvLTjQL+ruMAxIbggAUi8leG6VLL4zjOrQLj1zO1HARa2PWluw56idx+s5gC4/ymrXAL1EJNB6fwAmTm6bnbfkilnbRk7uHnSVqgrMs8nO3QIaV0sXOzN7HHl3UMiWDDx/d3rh0fVWtwvhHxoQGE3gi4d68dotY93evkCuwFaKQgczIlvJVFVJHG/lEna26fUbZ9WKgfuQJFk94zJjPKBkrwLfk3sOHQ4xgB"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2601,
+   "completion_tokens": 427,
+   "total_tokens": 3028,
+   "cost": 0.0234432,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.02368,
+    "upstream_inference_prompt_cost": 0.013005,
+    "upstream_inference_completions_cost": 0.010675
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 160,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

@@ -1,0 +1,93 @@
+{
+ "arm": "opus",
+ "label": "Opus 5",
+ "vendor": "Anthropic",
+ "transport": "openrouter",
+ "model_requested": "anthropic/claude-opus-5",
+ "serving_path": "OpenRouter -> Anthropic (first-party key unavailable at run time)",
+ "prompt_id": "p3-linkedin",
+ "sample": 3,
+ "run_utc": "2026-09-06T13:24:54Z",
+ "wall_s": 20.9,
+ "request_body": {
+  "model": "anthropic/claude-opus-5",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Write a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used."
+   }
+  ],
+  "max_tokens": 8000,
+  "provider": {
+   "allow_fallbacks": false
+  },
+  "usage": {
+   "include": true
+  }
+ },
+ "usage": {
+  "input_tokens": 43,
+  "output_tokens": 1172,
+  "reasoning_tokens": 293,
+  "cost_usd": 0.02921985,
+  "served_model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS"
+ },
+ "essay_sha256": "e9371327e39b3712eadb83519c2c80f319a3762ecc5aa4a7f8a81b74a60d034e",
+ "essay_words": 485,
+ "response_raw": {
+  "id": "gen-1788701071-KFXlZFh4sUuBxW4NE6Y9",
+  "object": "chat.completion",
+  "created": 1788701071,
+  "model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "We spent four months building a feature that 11 people used.\n\nNot 11%. Eleven people. Out of roughly 40,000 monthly active accounts.\n\nIt was a custom dashboard builder. Drag-and-drop widgets, saved views, shareable links. The whole thing. And we had *evidence* it was wanted: 60+ support tickets asking for better reporting, three enterprise deals where it came up on the call, and a customer advisory board that lit up when we showed the mockups.\n\nEveryone said they'd use it. Almost nobody did.\n\nHere's what I got wrong, and it took me an embarrassingly long time to see it.\n\n**I confirmed the problem, then invented the solution.**\n\nThe tickets were real. People genuinely couldn't get the numbers they needed. But \"I can't see my data\" doesn't mean \"give me a canvas and let me build my own dashboard.\" When we finally went back and watched what those 60 requesters actually did, most of them wanted one specific number, once a week, in an email. They didn't want a tool. They wanted an answer.\n\nWe built a workshop for people who wanted a finished piece of furniture.\n\n**I mistook enthusiasm for intent.**\n\n\"That looks great\" is the cheapest sentence in software. It costs a customer nothing to be encouraging on a call, and it costs them a lot to change how their team works on a Monday morning. I never asked the uncomfortable follow-up: *What are you doing today instead? What would you stop doing to make room for this?* If someone can't tell you what this replaces, they probably won't adopt it.\n\n**I let the loudest accounts stand in for the market.**\n\nThe advisory board loved it because the advisory board is full of power users — the 2% who want knobs and levers. They're a terrible proxy for the median customer, who logs in twice a week and wants to leave.\n\nWhat changed after that:\n\nWe now write down the adoption number we expect *before* we build. Not a vague \"this will be popular\" — an actual figure, with the reasoning behind it. When we're wrong, we can see exactly which assumption broke. Half the time, writing the number down kills the idea on the spot.\n\nWe also ship the ugly version first. For the reporting problem, the fix that finally worked was a weekly email with five metrics and no configuration at all. It took nine days. Adoption is north of 30%.\n\nThe dashboard builder is still in the product. It has a small, loyal following, and I'm genuinely glad those users have it. But it cost four months to learn something a two-week experiment would have taught us.\n\nThe most expensive thing you can build is a solution to a problem you never fully understood.\n\nIf you've shipped something into silence, I'd love to hear what it taught you. I suspect that's where most of the real learning in this job actually lives.",
+     "refusal": null,
+     "reasoning": "I'm thinking through a LinkedIn post idea, aiming for authenticity over influencer-style polish, with a concrete story about a feature that flopped. I'll invent a plausible scenario—a custom dashboard builder that only saw 0.4% adoption—to ground the lesson in specifics rather than abstraction.\n\nThe core insight: they'd validated demand for the problem but not the actual solution, mistaking enthusiastic feedback from loud customers and sales for real usage intent. I want to include concrete numbers and describe what they changed afterward, keeping the whole thing under 500 words with minimal or no emoji, landing around 400 words.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm thinking through a LinkedIn post idea, aiming for authenticity over influencer-style polish, with a concrete story about a feature that flopped. I'll invent a plausible scenario—a custom dashboard builder that only saw 0.4% adoption—to ground the lesson in specifics rather than abstraction.\n\nThe core insight: they'd validated demand for the problem but not the actual solution, mistaking enthusiastic feedback from loud customers and sales for real usage intent. I want to include concrete numbers and describe what they changed afterward, keeping the whole thing under 500 words with minimal or no emoji, landing around 400 words.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAIStQgKrgEIERgCKkCO8b4xFH0UVXJqjf8lV4G8SAkKcuSzOK9dXtgvoDrV8ioDVZlHqNENeh+QDzKuB/0olMRWD1gjmDCOsegs7VXJMg1jbGF1ZGUtb3B1cy01OAFCCHRoaW5raW5nWiQ0YzBmMDQ2Zi0yNWZkLTQ1ZmItYmZiMy1hMDhhOGUyNDljYTd6HnVwcm9mXzAxMUNlbkZSYjRqeFBLcXdMUXFXN3dtNqgBl9P11AYSDDIEWlAyZgKeg4bIMhoMmAyF9JJaj92vxJXCIjDzGU7/U1Exw8QAskxCQfxZjHXuOch23SHMry9QpoFYYmQdP0qDdv5tX3LTqZoWxGUqswYjBFqtLvKJptQe5reoVWUXz2ntiIL0OYzNDgYhzJcZ47kVLSIUbXWp0WrFpNMyVthVFMGKoF61sFbVBn+qObkv2xo/Uw8OASP3D1wzvNlZMSEgMT7WAWN9N99Xa9ZWTPFwIepaCEWvBZjTeICROxEC2gLlU47Z/g0x1OszrevxLgA8PqFsL6iBijyyFiCPbMsJWQKXjeKXBvZFM78jGj/edunNMCK603gR9KwUxV5YBRi5o3gwcGS+ZIfqWvhu3LcdkHk2A9kU6GS8FOvaNSyerTmVrevephpHuVf04nNIp5y+pUlqzRqQO2dinctPpTiyPU6j83YNUTCF7E5ZBe7IZpN7MImI3ntO/VWSfXKCtcbKH0XSPcCpjanakIm20CRwsnhVBk/nFdaXL9Z24GWJCASm1txb/3XSImC5wq3kfa9AABzcCLNyW7e87ICrUNBf2iz1uYzBc/h8knbSRJxKXKD+YzzVnhfehRuYZGdlgF1rdsMbuP+hZS/d71zrqB5/EQQh/zjJd+1ucpHZSS4SOMcvxbNBZvy9l3xC8Sm/LQhJ1PLFlNUq/S3Ur2r0L0jQZcB1o1ID8SeCmEvhtZdeyx1uPiFc4aHj2xKjA5Jyi6WID7ReKAEoLIeYFa67PNzmWvFav9nVXA7/LiAj7PxEUqhPsRmRLVVXwt/AJRXmzHF3CfL/wMgJuYAKIhEEdLUILQlZtwL5CAZ5bIxN4KRCJyFl7g6ZeVmCwB2EWig09zZ4NaNDAwUEnlAe7HV5PWZHv5pa8f6OW6heCyIyCj/rLpzfjjDes9HGPs90P6XaY9Giy7/UNm1z6wslN4yIzMU3TUaQKiSWcuLU8AXMxEwqVxsECcLQSQu+GN2EZzY2rlDDzpRrhbNpMGagdbMx37OAHP2u85ECrbFQeCth0sVDMAdCUbN0GmxftNmB6BuCTF/H78TpQEl3lC522zqAQHpuDX/72Ucbec0CCA7i6obhtsKK8odhLin4aRTNGug+8SLXHaAj6scvdN1ONEHAHqFwCOcNnbFsanpfVBbOL0PR/3IxgCYvHx99wyZoN+mUX2+mDaweBPQvLW0ASqCwbdsKTBYYAQ=="
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 43,
+   "completion_tokens": 1172,
+   "total_tokens": 1215,
+   "cost": 0.02921985,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.029515,
+    "upstream_inference_prompt_cost": 0.000215,
+    "upstream_inference_completions_cost": 0.0293
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 293,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

@@ -1,0 +1,15 @@
+Starting today, you can connect your helpdesk to Slack and get a daily summary of your open tickets posted right in the channel of your choosing.
+
+We built this because of a pattern we kept hearing in support calls. Teams love having a single place where tickets live, but most of the day happens somewhere else, usually Slack. So people were either keeping a browser tab pinned all day or, more often, wandering into the queue mid afternoon and discovering something had been sitting untouched since Monday. A daily nudge in the place you already work seemed like the smallest possible fix for a genuinely annoying problem.
+
+Here is what the summary includes. You get a count of tickets currently open, broken out by status, plus the number that came in since the last summary and the number that were resolved. Under that, you get the tickets that need attention most: anything past its first response target, anything with no owner, and your oldest open items. Each one links straight back to the ticket, so someone can claim it without hunting for it. If your queue is quiet, the message says so and stays short.
+
+Setup takes about two minutes. Go to Settings, then Integrations, and choose Slack. You will be asked to authorize the connection, then pick a channel. We would suggest a channel your support team already reads rather than creating a new one, since new channels tend to get muted within a week. From there you can set the delivery time, choose the time zone it should follow, and decide which days it posts. Plenty of teams turn off weekends. You can also filter the summary by team, queue, or priority, which is useful if you have separate groups handling billing and technical issues and do not want one flooding the other's channel.
+
+A few notes worth knowing. You can connect more than one channel, each with its own filters and schedule, so a team lead can get a wide view while individual squads see only their own work. The integration reads from your existing permissions, so it will not surface anything a person could not already see in the app. And if you want to check the queue outside the daily post, you can type a slash command in Slack and get the current numbers on demand.
+
+This is a first version and we know there are obvious next steps. Real time alerts for high priority tickets, threaded replies so discussion stays attached to a ticket, and the ability to reply to a customer from Slack are all things we have heard requested and are looking at. Weekly and monthly rollups are on the list too. If one of those matters more than the others for your team, tell us, because that is largely how we will decide the order.
+
+The integration is available now on all plans at no extra cost. There is a short setup guide in the help center with screenshots if you would rather follow along, and our support team is happy to walk through it with you if you would like a hand choosing filters.
+
+As always, we would rather hear what is not working than not hear it. Send us a note.

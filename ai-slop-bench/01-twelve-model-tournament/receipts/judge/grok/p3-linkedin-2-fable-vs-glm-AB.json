@@ -1,0 +1,88 @@
+{
+ "judge": "grok",
+ "model": "grok-4.6",
+ "key": "p3-linkedin-2-fable-vs-glm-AB",
+ "wall_s": 129.2,
+ "run_utc": "2026-09-07T00:29:38Z",
+ "request_body": {
+  "model": "grok-4.6",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n\n=== TEXT A ===\nSix months ago, we shipped a feature I was certain would change how our customers worked.\n\nIt was a customizable dashboard. Users could drag widgets around, pick their own metrics, save multiple layouts. We'd heard \"I wish I could see X next to Y\" in enough support tickets that it felt like an obvious win. Three engineers, two months, a design sprint, a launch email with a little animated GIF.\n\nAdoption after 90 days: 2.1%.\n\nNot \"2.1% used it daily.\" 2.1% opened it once.\n\nI spent a week feeling defensive about it. Then I actually went and talked to the people who'd asked for it. Here's what I learned.\n\n**People weren't asking for customization. They were asking for a specific answer.**\n\nWhen someone said \"I wish I could see X next to Y,\" they didn't want a drag-and-drop canvas. They wanted X next to Y. Every single one of them wanted the *same* X and the *same* Y. We heard a request for flexibility and built infrastructure for infinite flexibility, when a single hardcoded view would have solved 80% of the problem in three days.\n\n**Requests describe symptoms, not solutions.**\n\nWe took the literal words in the tickets and shipped them back. We never asked the one question that mattered: \"What are you trying to decide when you look at this?\" If we had, we'd have discovered they were all trying to figure out whether to escalate an account before a renewal call. That's not a dashboard problem. That's an alert.\n\n**\"Configurable\" often means \"we didn't want to make the call.\"**\n\nI've come to see customization features as a yellow flag in my own thinking. Sometimes they're the right answer. But often they're a way of handing the hard product decision to the user, dressed up as empowerment. Our customers didn't want to design their own tool. They wanted us to have already figured it out.\n\n**Low adoption isn't a marketing problem.**\n\nOur first instinct was to promote it harder. In-app tooltip, another email, a webinar. That would have been spending more to defend a decision instead of learning from it. If something genuinely solves a pain point, people find it. Adoption campaigns are for things people don't know they need, not for things they don't need.\n\nWhat we did next: we killed the customizable dashboard. Replaced it with one fixed view showing the two metrics everyone actually wanted, plus a notification when an account crossed a risk threshold. Took a week and a half.\n\nUsage of that view is now higher than any other page in the product.\n\nI don't regret shipping the thing nobody used. It's the most expensive product lesson I've had, and I'd rather have paid for it once than keep making the same mistake in smaller ways forever.\n\nThe lesson, if I had to compress it: when a customer tells you what to build, thank them, then ask what they're trying to do. Build that instead.\n\nCurious whether others have a \"feature nobody used\" story. What did yours teach you?\n=== END OF TEXT A ===\n\n=== TEXT B ===\nThe feature I was proudest of shipped to the sound of silence.\n\nTwo years ago, my team spent four months building an advanced reporting dashboard. Custom filters. Drag-and-drop charts. Scheduled exports. We rebuilt our entire data layer to support it. Our internal demo got actual applause.\n\nLaunch day: nothing. Week one: 47 opens across 20,000 users. Ninety days later, fewer than 2% of accounts had ever touched it — and most of them opened it once and never came back.\n\nI remember pulling up the usage report with my PM and just sitting there. Four months. Countless design reviews. A data migration that nearly broke us. And the market's response was a shrug.\n\nHere's the part that stings: we never talked to a single customer before building it.\n\nWe had assumptions, sure. \"Enterprise buyers want analytics.\" \"Competitors have dashboards, so we need one.\" \"This is obviously valuable.\" But we never asked the question that mattered: is this a problem anyone actually has?\n\nMeanwhile, the #1 request in our support queue — the one we kept deprioritizing because it felt too \"small\" — was bulk editing. We shipped it later in a single sprint. Today it's one of the most-used parts of the product.\n\nThat flop taught me more than any successful launch ever has:\n\n→ Talk to users before you write code. Not to pitch your idea — to understand their problem. If you can't name five people who have the problem, you don't have a feature. You have a hypothesis.\n\n→ Define success before launch. We never decided what \"good\" adoption looked like, so we couldn't tell we were failing until we'd already failed.\n\n→ Ship small, learn fast. A two-week prototype would have told us everything four months of building didn't.\n\n→ Your support queue is a roadmap written by your users. They were telling us exactly what to build. We just thought their requests were too boring.\n\n→ Building isn't the hard part. Adoption is. \"If you build it, they will come\" is a movie quote, not a go-to-market strategy.\n\nThe dashboard didn't die entirely. We stripped it down, paired it with real customer conversations, and a niche segment genuinely loves it now. But it found its audience after we started listening — not before.\n\nThese days, I get suspicious when a team is excited about a feature but can't recall the last time they watched a user struggle with the problem it solves.\n\nExcitement is easy to generate internally. Evidence only comes from customers.\n\nWhat's a feature you shipped into the void — and what did it teach you?\n\n---\n\n~420 words. Happy to swap in your actual feature, numbers, and industry details, or adjust the tone (more vulnerable, more data-driven, shorter) if you'd like.\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n"
+   }
+  ],
+  "max_tokens": 16000,
+  "stream": true,
+  "stream_options": {
+   "include_usage": true
+  }
+ },
+ "usage": {
+  "input_tokens": 2626,
+  "output_tokens": 140,
+  "reasoning_tokens": 7359,
+  "cost_usd": null,
+  "served_model": "grok-4.6",
+  "provider": null
+ },
+ "verdict": {
+  "more_ai": "B",
+  "confidence": 4,
+  "tells_A": [
+   "repeated not-X-it's-Y parallelism",
+   "signposting (Here's what I learned)",
+   "bold-label paragraph openers",
+   "recap ending (The lesson, if I had to compress it)",
+   "triads",
+   "every point lands / tidy uplift"
+  ],
+  "tells_B": [
+   "signposting (Here's the part that stings)",
+   "arrow bullets where prose was asked",
+   "relentless short punchy fragments",
+   "em dashes as default joints",
+   "negative parallelism",
+   "filler Meanwhile",
+   "every point lands",
+   "helper coda (happy to swap)"
+  ]
+ },
+ "response_raw": {
+  "id": "99769b2b-0bbd-97a5-b49e-1437ec174477",
+  "model": "grok-4.6",
+  "created": 1788740978,
+  "system_fingerprint": "fp_e41c6060b2628547",
+  "object": "chat.completion",
+  "streamed": true,
+  "usage": {
+   "prompt_tokens": 2626,
+   "completion_tokens": 140,
+   "total_tokens": 10125,
+   "prompt_tokens_details": {
+    "text_tokens": 2626,
+    "audio_tokens": 0,
+    "image_tokens": 0,
+    "cached_tokens": 1280
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7359,
+    "audio_tokens": 0,
+    "accepted_prediction_tokens": 0,
+    "rejected_prediction_tokens": 0
+   },
+   "num_sources_used": 0,
+   "cost_in_usd_ticks": 483260000
+  },
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "{\"more_ai\": \"B\", \"confidence\": 4, \"tells_A\": [\"repeated not-X-it's-Y parallelism\", \"signposting (Here's what I learned)\", \"bold-label paragraph openers\", \"recap ending (The lesson, if I had to compress it)\", \"triads\", \"every point lands / tidy uplift\"], \"tells_B\": [\"signposting (Here's the part that stings)\", \"arrow bullets where prose was asked\", \"relentless short punchy fragments\", \"em dashes as default joints\", \"negative parallelism\", \"filler Meanwhile\", \"every point lands\", \"helper coda (happy to swap)\"]}"
+    }
+   }
+  ]
+ }
+}

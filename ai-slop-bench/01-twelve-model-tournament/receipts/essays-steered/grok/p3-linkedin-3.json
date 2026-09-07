@@ -1,0 +1,73 @@
+{
+ "variant": "steered",
+ "arm": "grok",
+ "label": "Grok 4.6",
+ "vendor": "xAI",
+ "transport": "xai_chat",
+ "model_requested": "grok-4.6",
+ "serving_path": "xAI first-party, chat completions",
+ "prompt_id": "p3-linkedin",
+ "sample": 3,
+ "prompt_text": "Write a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n\nPlain prose only: no headers, no bullet points, no bold text, no em dashes. Write like a person.",
+ "run_utc": "2026-09-06T14:07:25Z",
+ "wall_s": 29.2,
+ "request_body": {
+  "model": "grok-4.6",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Write a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n\nPlain prose only: no headers, no bullet points, no bold text, no em dashes. Write like a person."
+   }
+  ],
+  "max_tokens": 8000
+ },
+ "usage": {
+  "input_tokens": 683,
+  "output_tokens": 330,
+  "reasoning_tokens": 938,
+  "cost_usd": null,
+  "served_model": "grok-4.6",
+  "provider": null
+ },
+ "essay_sha256": "446c66ec9e4f6104b67aa9e970ccf12bb7782c5a5a382a67a070bc756bea9bee",
+ "essay_words": 290,
+ "response_raw": {
+  "id": "c45d2586-0f2d-9f3a-b280-963f1abebe68",
+  "object": "chat.completion",
+  "created": 1788703614,
+  "model": "grok-4.6",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "Last year we shipped a feature I was sure people would love. It was a custom dashboard builder. Drag and drop widgets, saved views, the whole thing. We spent a quarter on it. Design was proud. Engineering was proud. I was proud. We launched it on a Tuesday and I refreshed the usage dashboard like it owed me money.\n\nAlmost nobody opened it. The few who did closed it after thirty seconds. Support did not get questions about how to use it. They got questions about where the old simple report went.\n\nI sat with that for a while. We had not built a feature people needed. We had built a feature we wanted to exist. We talked to the loudest customers, the ones who already think in dashboards. We never watched the people who just need one number before a meeting and then they are done. We treated a handful of enthusiastic calls as a market. We treated shipping as proof.\n\nThe lesson I keep coming back to is not fancy. Talk to the quiet users. Watch them do the actual job, not the job you wish they had. Ship the smallest thing that can fail in public instead of the thing that looks impressive on a roadmap. And when something goes live and the room stays silent, that silence is the feedback. Do not defend the work. Ask what problem you actually solved.\n\nWe tore most of it out. Put the simple report back where people expected it. Usage of that old path went up. Nobody sent a thank you. That was the whole point.\n\nIf you have ever shipped something you loved that the product politely ignored, I would like to hear how you handled the quiet.",
+     "reasoning_content": "The user wants a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\nI recently shipped a feature that nobody used, and it taught me one of the most valuable lessons in my career. We had built a smart recommendation engine for our users that suggested products based on their browsing history and preferences. It was elegant, data-driven, and exactly what we thought our customers wanted. But after launch, 99 percent of users ignored it completely.\n\nWe had assumed that because it was technically sound and aligned with our product vision, it would naturally gain traction. We didn't spend enough time talking to real users before building it. Instead, we relied on internal excitement and a few vocal early adopters who loved the idea in theory. The result was a feature that sat unused, consuming resources we could have redirected elsewhere.\n\nThe lesson I learned is that shipping isn't the same as succeeding. We must validate ideas with users before investing heavily in development. Talk to the silent majority, not just the loud ones.",
+     "refusal": null
+    },
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 683,
+   "completion_tokens": 330,
+   "total_tokens": 1951,
+   "prompt_tokens_details": {
+    "text_tokens": 683,
+    "audio_tokens": 0,
+    "image_tokens": 0,
+    "cached_tokens": 640
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 938,
+    "audio_tokens": 0,
+    "accepted_prediction_tokens": 0,
+    "rejected_prediction_tokens": 0
+   },
+   "num_sources_used": 0,
+   "cost_in_usd_ticks": 80140000
+  },
+  "system_fingerprint": "fp_e41c6060b2628547",
+  "service_tier": "default"
+ }
+}

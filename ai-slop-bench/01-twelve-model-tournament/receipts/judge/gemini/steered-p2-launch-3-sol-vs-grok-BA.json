@@ -1,0 +1,77 @@
+{
+ "judge": "gemini",
+ "model": "gemini-3.8-flash",
+ "key": "steered-p2-launch-3-sol-vs-grok-BA",
+ "wall_s": 5.0,
+ "run_utc": "2026-09-06T14:10:21Z",
+ "request_body": {
+  "contents": [
+   {
+    "parts": [
+     {
+      "text": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a launch announcement of up to 500 words for a new feature of a B2B helpdesk product: a Slack integration that posts a daily summary of open support tickets to a channel of the customer's choice. The audience is existing customers.\n\nPlain prose only: no headers, no bullet points, no bold text, no em dashes. Write like a person.\n\n=== TEXT A ===\nHey everyone, we just shipped a Slack integration we think a lot of you will actually use. It posts a daily summary of your open support tickets to a Slack channel you choose, so the queue shows up where your team already spends the morning instead of living only inside the helpdesk.\n\nWe kept hearing the same thing: tickets get missed when people are hopping between tools, and the first fifteen minutes of the day disappear into a status recap. This is meant to cut that down. Once a day, a short recap lands in Slack with what is still open. Your team can scan it, assign work, and jump back into the tickets without a separate login just to see the list.\n\nYou pick the channel, so it can sit in your support room, a leadership channel, or wherever that visibility actually helps. Setup is in your account settings. Connect Slack, choose the channel, and you are done. You can change the channel or turn it off whenever you want.\n\nIf something looks off while you connect it, reply here or reach us the usual way. We would like to know how it lands with your team.\n\nThanks for sticking with us. Hope this saves you a few minutes every morning.\n=== END OF TEXT A ===\n\n=== TEXT B ===\nWe’re excited to launch our new Slack integration, designed to help your team stay on top of open support tickets without leaving Slack.\n\nOnce connected, the integration posts a daily summary of open tickets to the Slack channel of your choice. Your team gets a clear view of what still needs attention, making it easier to prioritize requests, spot potential delays, and keep everyone aligned.\n\nYou can choose the channel where summaries appear and make sure the right people have visibility into the support queue each day. Whether you use a dedicated support channel or share updates with a wider customer team, the daily summary keeps important work visible without adding another manual task.\n\nThe Slack integration is available now. Visit your helpdesk settings to connect your workspace, select a channel, and start receiving daily ticket summaries.\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n"
+     }
+    ]
+   }
+  ],
+  "generationConfig": {
+   "maxOutputTokens": 16000,
+   "thinkingConfig": {
+    "thinkingLevel": "high"
+   },
+   "responseMimeType": "application/json"
+  }
+ },
+ "usage": {
+  "input_tokens": 1292,
+  "output_tokens": 136,
+  "reasoning_tokens": 1339,
+  "served_model": "gemini-3.8-flash"
+ },
+ "verdict": {
+  "more_ai": "B",
+  "confidence": 5,
+  "tells_A": [
+   "triad: 'scan it, assign work, and jump back into the tickets'",
+   "triad: 'Connect Slack, choose the channel, and you are done'"
+  ],
+  "tells_B": [
+   "artificial enthusiasm: 'We’re excited to launch'",
+   "participial tail: ', making it easier to prioritize requests, spot potential delays, and keep everyone aligned.'",
+   "triad: 'prioritize requests, spot potential delays, and keep everyone aligned'",
+   "triad: 'connect your workspace, select a channel, and start receiving daily ticket summaries'"
+  ]
+ },
+ "response_raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"more_ai\": \"B\", \"confidence\": 5, \"tells_A\": [\"triad: 'scan it, assign work, and jump back into the tickets'\", \"triad: 'Connect Slack, choose the channel, and you are done'\"], \"tells_B\": [\"artificial enthusiasm: 'We’re excited to launch'\", \"participial tail: ', making it easier to prioritize requests, spot potential delays, and keep everyone aligned.'\", \"triad: 'prioritize requests, spot potential delays, and keep everyone aligned'\", \"triad: 'connect your workspace, select a channel, and start receiving daily ticket summaries'\"]}",
+       "thoughtSignature": "EpgqCpUqARFNMg8fKYIrJ+M6xC2zlqPHs7V+cEWQF/q1RPy+y2V0dUR3Zty8X1XTZbLMVEpI1tHIpvD3wD5Dl/1Z0mcbkG3TKRZ9zkJTNsCoiOGEB7S/ByboUEUw8TjNAhE9ZhqyBvfpNlgGuiI8u2KParbHlesHanEAsqLbFrTaf4GR5TqStSA4i42B2sRTpPjqLLsRA7n38X6aV5g19CvV+15pFSzSpMbpw/yauEWxvFYiOtz9g+665qkBU9wxICfGxa/r7+dozSo7mi+V/u+ea5RLCM2gDDTq+R+lLHAqNAXs0YXveDPTh2kPpgDy4rpo/L3Au0R84yovgOTo44AfhiVQPVMG9Nl5PEyrk5Cy4w7MOvTdHcoz4P/AEiaa5oo3l4GqNEqgHOCMzXlZ718yL4M7b1otBqSPxBeGTUHmuaSF4jrif+1ZNfAwCPsrsip4Jd8/bHe2gldMkfchTO9ystjZY9FhmfZYaXWHrqmK9lD8KCOrV3DYbk7sBT2609edQLmpEzMkNlvRDcROMcBLnfz+0ZOZpqqZFmgxuMbErUHqjz8RUsaIklPGg4LvUe/yhCTy6wFswKiWsEEJ0HJ8ShYMoC8oO6d0x1r6tg92fOB6cSgqZxHwaWgSYuzzNC1xgG2s4KvOXeXuQlf/cc3sjU+d1sls5lUTtTgVsMaebw1AziaD1gahrOg79LAfjYM9Xa7ut7fd4gs2uVtdWcmbsR2vtJGKI+J/dK72AxVsb1FbebGlGbMLgDexs+1rcOr9Yg0/kk7C86MdyqEgusXwvz0HmxMxvg7r7trw4N4vJihkfxTS6MVJGduxdTem1ugFnTxSIyr4QVg5AyB2Y0Rnpngi3tlQYwXp5O4bJDMe6mQgTlkAE3r9nGFU7f/JccsYRnHTwtHMd4QuOJDBp4YjHkGpR7NhqpBEOX0K9fgKvYbjxlpSnkMrONe8v0pVNFvvVdSF5RWttMbd2A5IO7OpFWDv3EIoaGKPZDSuRJeufotZ1QBWEmm9OPvtXHoyytnkFAjvZDEZTPqQYN7L5e4oQSqVprZ2ofixAAQjoPPWrh1jNRm5DhXkezryp+09ZuxFWCu+D4BdG35trpaCSWcsJcuwODjOJBioXfMZNtm/hOSHUhso78FUUoAzvB2p5TUROA32gK+sA8YuJtVGrV1/UY2JGu2OpsaakdHMlJsXW4xBZTyzUIwGivmmliNJf5QxWmgGz2VRYyJqLikPHf57m+CSQ1hwYDzQy9uvliHNkLBTCGTqUu+OqSKZqiQkP6d2EEuYXmu591QKPeAoOrNV+C/yBw4qsUeN6fS0B9BVP2QyIfOOAdhaiaLW3MQatgR9X2N0k1hjeFOTyxl45OIaUNccDft024e06HDYa4o4vk68Rqtv9WnmCp/RUo5zVWVtX315iK6JTqvySyoXwav410UtNyVWhPQ635pha0v1MKY99pk+cx5pDg8VPsj9NWcIW3Vt0t6lk6ATahhd/s8xDDSewLpIHgo7+WvTeb7cQUexH1n7CYrDEARUORNwblz6Nh6y94TkbUvweB/SdbEX/cGkEiLLxpBdFuP7Wb7s07Lh7RKp1o9jkNXhYMHN385NL3WdCmhzspY6dkDyLrRlpwBS1vutp7W8rFAzofTrhBL01wULDQgRY3VeYNnTrbanDl1eCc/pYsmpe687dy4TLprwUdXnW39+JCr5zobJQjUcIJ8d/0H1jfrtRCtnCJVmWQ3XTY0GpEJjhlVuu9g8+0Cbb1dnAiCxNEgwqciYh1EJl49CL558O+g3mWzK/LrpUTvMBj/TOMQNA+s1GVs/4rlrnBe1j+i3w1cR2ajzFRAC7eAkFzK8EpdD3jifQXvBfOwbx2XDHY15whoteiNYgmnYYdn2IBIFVbiT8NHET6DeXCJt+8M1HPuiLb+p1MZvr6w2U+cRxXgTVNXY+Vm8g0oK+ReeiKq8fyL9QjudM8QfimMIt+s5HS2YIdZyPP8nPsGDosmX3IWDtYlAkm4p2uPeiLa6EEvB+RpPsSm/TsIFEv4siGeqxYnAR1mmQFmRINOyKtZZlnBDNS6sFmFXVGMZDcRHm7O72F3vIryCOnmaBosu6LdPfHiE1rOLlvPzuSAVZwoRbYG8V4qJFllL8D9+A2u8CvwwNlRzOxDbmB3tiJp+1AN2P/muqJOEpYBMOEm78hVIVf6XgHSiAwY/8Jcmx5obeU2Y5/IMJ68/8sprE8fengRoz/xUJtlYCvcjnIcLX/UQrV0/UCCj2is9QJKcLQ0IqHm8jggeDfYrWipGfu4i4plTGjwRLMSwjZzYQLBz7r61T7LPPaZLCHzUh6Z117/Z+IdJskvmeNkpUO61IuWUjhFvyCkBYSJRA42ioH7AG9DZslWxEtkCcENndw5s15kBpayI5xycubRmpdaQHRFXMtVPL2psDPtsJ4OmmttoUpyvUxtnaasLfHH6dCBl5hmsiXDkKGOjMdAXBU/Il+7X3u2YAu39cSeo5Q4DTyPOOX9wcZyiSgX/DIdTbzAmJnv63qJh8uM/0Ox1gJfG2HXm/3hYpGRiRHyWzAIDrfomj1/9FVabmRwIJBJJCt5eiNu1fvhGIVm1f1YW/EY4FvWeJH26Y0lncxenNCDQ+yoUfs7NzBYHgnZoEyuevucnQdSS0CQ9WsiSYepl3OG5ByGxI05dz99F7Jx/PtkZ5vrCr/s+yQ0rQNrWhxJIh+NbN+T9sEuE5dK8G+jlm5sShWN904hO1ubttvzm45dy/6rwNv1ya7Horj3VUwPntfDd3tJZAlrs34qkeN074tdlP8VldGPDuuJXN5VooXLkO9yiAw0/BTvuI049k/1BQvBMc9yQoJMj8mTuUgjHKNlJ6YlQMperwsmV4/HCbocU6Ri9E87Fe+f+x/I3eMmpNIbqJOF16uCfZk7lmA4kftGVCp9u5CiO/ieqIN4t7MFKik8pCzdGjSqiUKS5jra9SCV7eF/0NbT9y8uqHJT2W0OHwdYnfaY8iG0dYz0g1Kt9/x4LUqkOagm05w3ZulQj0ZBtqLxA62PXrGZ9jMIgnknrd+ut6YGLNHQdDS2gdmqkppAlyVD2x1zCOREJcmY4GKJZ9sKEqkeVg8q5mj9f4luEvBy9cWjDjjQMw3OYomIeX0w46uV1m8qV6cMl09DD51L55MxMsmD9G1YrUB/pM+Q1/3D+uLFCEwFSskF7Y0Arngv7oGix9+Vf75TuFT+91aFWME7nG2+qGXzFhv9ocScB6dK7Jqz8HBtTf7qlrh13TDxPR213GYFdfsS2ZI8HuufFZrwcxJ8Huy9leZxIu95CSATDTZYf3WrJGhjEGPotxqEN4/UpkjMgArGM0bmOPn7+ZmE3l7Gcli3aUyFnUOMSztnNmmvo0lwmqjOP6B0fSnL+sI0o95k3vAHEV5sAT6BvHnvfhlRKNpO9cu3nNKIMIjULbPyjhNokyd3vb1oA25DBRRv9JrUxGMuhMJFRRxrD8xLzQKVQRjlsRK2mW5Pfg0wxXuvkxiPyFblBMrBkskhNj3FWbzNxfJO+dLBpw1fCGM4sr3jeZFDph16Sj6OsVi5oiqRpgcCmb+vvwRXVGg22iuyeBQQ0KxJ747jrnq7qagNgBkRyOMIKM5vDQh9lKaobDWfia/pnWVgHy02muVrhTM5lpHrxBDRm2KDvLf7IbLsz9fUoVyN4MWzGtfnHGXmoYSmN+JwH9I0NY8quTVQgcoupuXikf31JgYOTk257xBBYuS6zjvx51SQzoOjrmwoYCQ4O88fjFKIHZLQSE6PnBP4l2i1J79xMjcsfRz+ckDhY6fMB1wWyIhcAFQcxIZTWwszIP7VkRogYMJJMNehxyc0oyn/68udPrqVlnhCucpu0VMpwLuz1yb6vYJULY/RhANspIz2VEzhbsxLQYlB3twPmABrPJ5ZDj5ioRtONgYHLqUTbbYTo7OGFHmZJbjZo3WnYgTTLkdaK2UxjU7abIgudDs3Kk6L0WXESsCVbUajjtpOJEyjFgF2F05guXMWs7vzqE3//F9K5NyFLsUg5dviz2HDJasrv0mDAJXNHX7yJY3GrmT4HcIe1nG9PGJhgBcycGa0vkf3QUyXHKiYALaDZtPzqFFWpC/EQl6RTjwvBU6RlIiFiyc9ClSIAGLyr7ITJSmNnM05GMrfAuLM6x/Op83KsE85MEgWMTGrg/BK/ZHwGgLrcJ8eNNF48yu6TcEpD7YQ7oAjVDaIqCLTsOaPzDkBw54Y0Ps0+s68fUNeCsqXcNGy/lDvAVGKhWuq3zN018t0V5V4/1mvxuzHqg7X0NWoLElEKYqRZPU9R+U7iVikWtD9zAPmWdLnmNjX/Bi8eNxIhuYY/jYo9kf6Dn0qP96Wcms67LKqj/bTiY5wOmhlCMw8G+GhMJPjOKAwMXrplh9zqusaftswAfqgYlOQKzBlpf1oqfGXj31BslBCXJULhF0W1p1Fks9Fi/oQtOJspKehRcrDi23b9gLYE30hcnjRjhd6QYtD3RcxDEEh2sBtQHpHiVmXeGI+aXMjozzYQBfSekksLAcOBQumHxxzNF1dlx9rM3HWR1CYu33Ll8xa4lLq+ht5pzSeLPbsPtBDpMsB+T6EbxBRmXRb7bV3ZKF+49lMrmeLoHy1M0SNsJ8q03Ie6MLBVR62vC60IKCNfiwBO/BjzpEdgiwx3d0ALD4T+BTksN3N55ZuOZcd4uKuWzNWBrliBN8Lw+EkpUvLdAGobjInOciY9gDsgw1u1dkXorA0SzC/rHI7q1rkUM1EIwmHXLhSXSFIY6zOnjYBYE7fadWfcgDPunjDuFmk2OQJKoGuJllTBdan7jiP21aDU7T0hAzcKlsAUJFt2E+7sEYIQ4J7fcBuywMYkzp7FxvGH31/t3xitHpQMrPREF67QGN7P0iPkW4pHpVdkPNcIb+eAjv7nWXutqUDaVganCjnmAxzXINaMmtG+wzfVzqMug3vDZqrEdvEOGo9kNJ9hruDTXOBvsydIoaqCFT3P07MhPiECLCI7Mdtej5GtNMAZnsYgTICFaiszF9Zb9+rswrHES5ZDaGHkG1LSbtbf4XvTQJC24tEltgqlf4BfpqMWDglLL6Wncj1ldvgO8BzVfcmm3KU7IIaXhO3UQbm1F0aCkhCMViROSxXQpqvJr/TlNN0GAmNo7eGmXP9DwUgBrpXmPw6e9CPDRwdz4hl1ZXtpaTtg7YIh9xW8JrUtg+TV2I6b8GWE907eG5b3BX+kNVjgsT26NB1BvISVZnJLJXjB1NnJ3PXO1vwoqTnBMPo2u2v9G8qUHgr1F0LuhFbdSi6lX53qMeGyF7EJcP5tw9AZaHRJkzFQYREqxEsgAiBKLTGl2DDgBuP18qOoX1V+N84m5UU0X12q0GXyiHnrWXS5J4jhNrwTopSJbMPTxDFV02jOBja687T02RJsKeIGbVvtHuo/cn0MgHw767oOYUVoi9jsjd6xEpR1tFcbxNhjcKlAvjEqjGIduhW0HcJaCMQ5yil2/OEgFgRIVbnKZ44KMaZXPhpmY/DAIyLpvtiHJ5XwFQk394astZYO2aqcNfBIyIFn4m1Tv5G+zPKCeRmcg6MAkrXW+Y5lJZU76LI1uugNf688ZiaKgR2Y0EzSpM7Jpy4uuCzUH/m8lthD87U+EOmIOMjZKW/WnVuKM7+OPHcFVH101qOsres26ft+Xg6eYdI41ZLTNPwVReK2p00m2Oxl/tesvU6+2QlJbRyZPg9WFatiesigE0PNoaI3S8aYcQEuQQnVnS3pmaEKdMMjjh8zHiiO1R3CFtixEgcfhN3uAqnv50Ia+5ipL2gB5VzXohsLsqd18UNfxXhfEWQ3XZq22llEfsjm8ftWea0ZccpREPyFGBSb/n2MZqHviXoDCHZxzwIOv0sOsrNF2QNFgrNXfOClNMOxZ2slMUsUpDrd4Z2VsGnULFLGQsHZ3pPd8WqLXLR28iQmy0Ady0mev4eBKpCYFEEu3sf6CUg+bghdlPtZmmHuZ3U+RLLdltzR46P3ZBTroH/h5d7SVEPRo2gWgmGHXK8Mj9Ct6yxU5oKu01TgMqTPVWbrPVHGuXTdOSpROWhr7dcKwyMhXoA3WEvsrLSjsz/XyY/H50Xx8w/B6wzlJxzU9M4Ga4Yy8WU+gg04xg0bF0RzvzpFEp5ODPqqqvRKaCCkJqqmuZwy3GURA0TIPJYNDf7PMQRCFFyBhhc2TPQhpfgMO1dMnRhPT3xBIG68mUeUWvkpoH8JMlk4YeJAXf9vMKjURas1BGozfG0NgssNS7a+dAVntFIj8ZRqfQQKEvvxvasqkZZtIj/FshkmxbRFpPTWE7ALRAEVL4l3sWHdDvNaiKE1YlwNhbeizyxTA2tcYruAPv3Spij3vp+9Te8bZ2G6A8DPjdfLjl9CwiTnQikyDlIIdLCR2fOtqrEYQYlUEUyLleUbcthFaMzOdZhENTXlAJB4//vHEMntfOjMkthZWdgehr1iY6UV1OF52QbCAfVxgUl6WJ75v2I5F6/6ZVzB0mx0/xLYxT8Qm215O7uqyzICvCeZnfeeQnhs0el6Xwf9/KXnkGSbYD9zifh2xu2gKIizDWMCtzC2vDdOyzJAiKKEx7/0vXYaEIvhZNJdZ7SvdsWenTJutONMtCm0+0PCChaoIu2v/fjzYwYCFr1qm0GxpDrjfURSGCxiVMWkmyY0kW8OfjiOSpMiwJwrSrP0qSwrmOlsU7dHOBBD8mAX8z1XCvs4xe5F0ri3J195FFRl7o0QCaNW3cquyTZ+jD8kee1C2/o+LQzTbpc/yQhr35uHitERNRc+87hooRqitLQ591XsUzgeQtybkE2iVrJMJ7bcJOtCbVuZKaSNrjSkXfwTZL2fsbdKkq7duCafNbxyy7MR+qgugPRvjIYraA+TABKGwkn549MM7dhCIKlO+khXdc9uFurkG4ZRuPiALJVCXkQaEOfpZSyoSzIBl040chBrQsU0E9u5hpcg2B8VOCT+2p7Jmq8NhxiRyZdwggJtC6x/Ke1WJB5oaB19MEWKSHBPQgr4JA/lDDmIjeUIzk2hpc/bCJ1M8cYubLXWWTV7OYCSzL4EMgGiY84RQjDeHgbJ0CZMUX1IbJ7JNMUYeUimy4FrQg+jLNBhmmL7IBS5e5l42yGa5fYseq50zQjxOUJ+t2cqZ1NJBVRU9pAOBYMVAMeN6TPRkwgyy8aCSXjPXe3T"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1292,
+   "candidatesTokenCount": 136,
+   "totalTokenCount": 2767,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 1292
+    }
+   ],
+   "thoughtsTokenCount": 1339,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "R3SdateZFP--kdUPmeyE4Qo"
+ }
+}

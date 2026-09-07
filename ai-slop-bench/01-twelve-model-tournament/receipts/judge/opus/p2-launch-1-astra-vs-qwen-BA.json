@@ -1,0 +1,107 @@
+{
+ "judge": "opus",
+ "model": "anthropic/claude-opus-5",
+ "key": "p2-launch-1-astra-vs-qwen-BA",
+ "wall_s": 8.4,
+ "run_utc": "2026-09-06T22:34:47Z",
+ "request_body": {
+  "model": "anthropic/claude-opus-5",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a launch announcement of up to 500 words for a new feature of a B2B helpdesk product: a Slack integration that posts a daily summary of open support tickets to a channel of the customer's choice. The audience is existing customers.\n\n=== TEXT A ===\n**Subject: New Feature: Get a Daily Open Ticket Summary in Slack**\n\nHi [First Name],\n\nWe’re excited to share a new way to keep support visibility top of mind without leaving Slack: the **Daily Support Ticket Summary** integration.\n\nStarting today, [Product Name] can post a concise daily update to a Slack channel of your choice, summarizing your open support tickets. The goal is simple: help teams, account managers, and support leaders stay aligned on what’s open, what’s urgent, and what’s at risk—without digging through dashboards or switching contexts first thing in the morning.\n\n**What’s included in the daily summary?**\n\nThe message can include:\n\n- Total number of open tickets\n- Tickets with high priority or at-risk SLAs\n- Tickets awaiting customer response\n- Tickets assigned to each support team or group\n- A link back to your dashboard for deeper exploration\n\nYou decide which Slack channel receives the summary—whether it’s a private support channel, a shared account management channel, or a leadership update channel.\n\n**Why we built it**\n\nWe heard from many of you that the biggest challenge isn’t always tracking each individual ticket—it’s maintaining a shared understanding of support workload and customer risk across the organization. A daily Slack summary makes it easier for teams to notice trends, start conversations early, and follow up on high-priority items before they become escalations.\n\n**How to get started**\n\n1. Go to **Settings > Integrations** in [Product Name]\n2. Select **Slack**\n3. Choose the channel where you’d like daily summaries posted\n4. Customize the time and ticket filters, if needed\n5. Save your settings\n\nOnce enabled, you’ll receive your first daily summary on the next scheduled delivery.\n\nThis feature is available now for eligible plans. If you’d like help configuring it or have feedback on what should be included in future summaries, reply to this email or contact your account team.\n\nWe hope this integration helps you stay connected, proactive, and ahead of support priorities—right where your team already collaborates.\n\nBest regards,  \nThe [Product Name] Team\n=== END OF TEXT A ===\n\n=== TEXT B ===\n## Your open support tickets, delivered daily in Slack\n\nKeeping your team informed about outstanding support requests just got easier. Our new Slack integration posts a daily summary of your open support tickets to the channel you choose.\n\nWhether your team coordinates in a dedicated support channel or a shared customer operations space, you can bring ticket visibility into the conversation—without manually compiling and sharing a daily update.\n\n**With the new integration, you can:**\n\n- **Stay informed:** Get a daily snapshot of open support tickets.\n- **Keep the right people in the loop:** Send summaries to the Slack channel that works best for your team.\n- **Reduce manual updates:** Spend less time sharing ticket status and more time helping customers.\n\nYour helpdesk remains the place to manage tickets. Slack gives your team a convenient way to stay aware of what’s still open.\n\n**Ready to get started?** Set up the Slack integration, choose your channel, and make your daily support summary part of your team’s routine.\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n"
+   }
+  ],
+  "max_tokens": 16000,
+  "provider": {
+   "allow_fallbacks": false
+  },
+  "usage": {
+   "include": true
+  }
+ },
+ "usage": {
+  "input_tokens": 2291,
+  "output_tokens": 572,
+  "reasoning_tokens": 276,
+  "cost_usd": 0.02549745,
+  "served_model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS"
+ },
+ "verdict": {
+  "more_ai": "A",
+  "confidence": 3,
+  "tells_A": [
+   "\"We're excited to share\" artificial enthusiasm",
+   "triads: \"what's open, what's urgent, and what's at risk\"; \"connected, proactive, and ahead\"",
+   "negative parallelism: \"isn't always tracking each individual ticket—it's maintaining...\"",
+   "em dash as default clause joint",
+   "bold-label section headers plus bullets and numbered list",
+   "rhetorical question header answered immediately (\"What's included...?\")",
+   "uplifting closing recap paragraph",
+   "generic \"We heard from many of you\" with no specifics"
+  ],
+  "tells_B": [
+   "bold-label bullet openers (\"**Stay informed:**\")",
+   "rhetorical question signpost \"Ready to get started?\"",
+   "triad of benefit bullets",
+   "em dash joint",
+   "no concrete details/numbers"
+  ]
+ },
+ "response_raw": {
+  "id": "gen-1788734078-CaCakPQamOfkznkPmjBE",
+  "object": "chat.completion",
+  "created": 1788734078,
+  "model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"more_ai\": \"A\", \"confidence\": 3, \"tells_A\": [\"\\\"We're excited to share\\\" artificial enthusiasm\", \"triads: \\\"what's open, what's urgent, and what's at risk\\\"; \\\"connected, proactive, and ahead\\\"\", \"negative parallelism: \\\"isn't always tracking each individual ticket—it's maintaining...\\\"\", \"em dash as default clause joint\", \"bold-label section headers plus bullets and numbered list\", \"rhetorical question header answered immediately (\\\"What's included...?\\\")\", \"uplifting closing recap paragraph\", \"generic \\\"We heard from many of you\\\" with no specifics\"], \"tells_B\": [\"bold-label bullet openers (\\\"**Stay informed:**\\\")\", \"rhetorical question signpost \\\"Ready to get started?\\\"\", \"triad of benefit bullets\", \"em dash joint\", \"no concrete details/numbers\"]}",
+     "refusal": null,
+     "reasoning": "Text A shows heavy AI tells: excitement openers, triads, negative parallelism, em dashes, bold headers, rhetorical question headers, and closing uplift triads. Text B has fewer tells but still uses bold-label bullets, a rhetorical \"ready to get started\" question, an em dash, and similar negative parallelism.\n\nWeighing the density of markers, A clearly outpaces B, so I'll go with A, confidence 3.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "Text A shows heavy AI tells: excitement openers, triads, negative parallelism, em dashes, bold headers, rhetorical question headers, and closing uplift triads. Text B has fewer tells but still uses bold-label bullets, a rhetorical \"ready to get started\" question, an em dash, and similar negative parallelism.\n\nWeighing the density of markers, A clearly outpaces B, so I'll go with A, confidence 3.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAIS8QcKrgEIERgCKkAnmnQ4/AMgyWHQkwcQ+ISOgL9i1KOKBK4bXZLqtYW55I5QcTfBaFHxel6FkU5Ku6Ad/1quFYPGzelNMANDelhVMg1jbGF1ZGUtb3B1cy01OAFCCHRoaW5raW5nWiQ0YzBmMDQ2Zi0yNWZkLTQ1ZmItYmZiMy1hMDhhOGUyNDljYTd6HnVwcm9mXzAxMUNlbkZSYjRqeFBLcXdMUXFXN3dtNqgBhdX31AYSDKqDQf/Nj8vHufPdyhoM0O06MKGHjPRPhA/hIjCK/to7+MC7wO1SV7SyRGu1lf32JqbD7qb8t6u1ZNpA97sEpO5CnWDJ9k6JsPgeLFkq7wU203vLm3kFWa9x+07HKy+u2vZy7XvKmRfCeK1nqcw4vvtILj+m1V9/wvQa6vhxj9cGp5WAGwyqzjeHZiFUcwbb6V+tCA8pRKy9/joNor6QDaAQH6H9Amtgfz5WmLRnU0ESp6Aj3GnIJobQ7/WMm6Tp9s/S8zk/tozOsTKF/mL/yy81GtoLVDFfynW1lE/PRPwR72todsI9iO+uSiAk/tNjkMoSEa19oVMe9wCoIuicDLSrJNe+Ix1e70tm7q1/9ZsGQaCMTCL+llnMb8ESAaSYBSuqjss/l/2T4Jn5pRhWn49JQnyTzwTZXWzkHv+PpNncexL9JgHKtwbjKW8BWKjdx4Pm/PkHuGlR8IzuxA/N+vEJU5+wjGTLO5Nh+qnFp4vLRdj3Kmai18Ks/Ng2jA6/KtWkXGzOveHkL6bnuYuDSxIrnyNw9zLhRHGleWEWIxegiAUR96D732YvgDdWnmToB9HblfXOAPc1PTK6eP9K9hMWrGzqDzXDh2fifmIvej3nwHRGqTojVJvW40s4hZJ5zm0EzRWofH+38mhDGUSZEKCvHEnZHePwqsLdC0AL9b1slI+4BgjWv/i6HFJGUMf/XeOivKuDhx4VtOzTrE5K1Y13i1MzRjh/NGvY7WQdZOZwhTeIUUCM7Ko4E67fphLWStitF8vtNg1EcJtCLlr6fUpbkviLPqre2fK/FgJfQPH8bezPpsX6RRnPeEZ57XKGOvj4XEH576pfh5YJfsi6z6PqjXHmzKUWeGe6jjX5q7druPeqjQZG3klRw23URYs+40bntDrPUB0WjM3VTMsDqEy0/+DcbcZ04Yj7CGaR0QqOKNN7BHJv6zIG1bmAgYHEboGccMVQwL7XIfzJBNci6sSN2c6RuHR2T8oVTtw8L9crRLooiU3rAJJvgd4WxcXpKG6398jf85/WJBoofZBhG4hFvcEZ9gvVmEXZvBJvUr9lT8/O8StBjck1f9UN9ZRgVN7s4X/elJk+RwszCaPsGAE="
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2291,
+   "completion_tokens": 572,
+   "total_tokens": 2863,
+   "cost": 0.02549745,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.025755,
+    "upstream_inference_prompt_cost": 0.011455,
+    "upstream_inference_completions_cost": 0.0143
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 276,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

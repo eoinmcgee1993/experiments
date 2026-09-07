@@ -10,6 +10,7 @@ One line each — the full story (method, every wave, caveats) is in each set's 
 
 | Set | One-line result | Date | Source post |
 |---|---|---|---|
+| [ai-slop-bench/](ai-slop-bench/) | **Which model writes the most AI slop?** 12 models, 3 bare-prompt writing tasks, 108 texts, every pair judged blind in both orders by 4 judge models with vendor recusal: **Fable 5.1 picked as the AI text 14% of the time, Gemini 3.8 Flash 77%**; 1,647 judgments, 30% discarded as order flips; the judges never picked a human post over a model's (0 of 355). Every text and every raw judge response is in the folder. | Sep 7, 2026 | [X](https://x.com/PawelHuryn/status/2096885584153186390) |
 | [stealth-ox-alpha-fingerprint/](stealth-ox-alpha-fingerprint/) | OpenRouter's free `stealth/ox-alpha` slug unmasked from the wire, no benchmark — tokenizer, six special-token deltas, model card and recovered system prompt all match Z.ai's GLM. **It is GLM-5.3-Flash.** | Aug 24, 2026 | — |
 | [qwen-3.8-max-day-one/](qwen-3.8-max-day-one/) | Alibaba's Qwen3.8-Max on launch day, on the 105-bug rig: **19/105** at high — mid-field, but it fixed one plant no other model has. Plus a five-attempt access gauntlet. | Aug 3, 2026 | [X](https://x.com/i/status/2084345741812580853) |
 | [small-question-latency-cost/](small-question-latency-cost/) | What a small, tool-free question costs on Opus 5 vs GPT-5.6 Luna, cold call vs warm session: **~90x cost gap cold, ~43x in session**, driven by the prompt-cache write. | Aug 2, 2026 | — |

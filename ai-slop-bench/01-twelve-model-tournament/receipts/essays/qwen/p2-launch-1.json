@@ -1,0 +1,94 @@
+{
+ "variant": "bare",
+ "arm": "qwen",
+ "label": "Qwen 3.8 Flash",
+ "vendor": "Alibaba",
+ "transport": "openrouter",
+ "model_requested": "qwen/qwen3.8-flash",
+ "serving_path": "OpenRouter -> Alibaba",
+ "prompt_id": "p2-launch",
+ "sample": 1,
+ "prompt_text": "Write a launch announcement of up to 500 words for a new feature of a B2B helpdesk product: a Slack integration that posts a daily summary of open support tickets to a channel of the customer's choice. The audience is existing customers.",
+ "run_utc": "2026-09-06T22:17:28Z",
+ "wall_s": 12.1,
+ "request_body": {
+  "model": "qwen/qwen3.8-flash",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Write a launch announcement of up to 500 words for a new feature of a B2B helpdesk product: a Slack integration that posts a daily summary of open support tickets to a channel of the customer's choice. The audience is existing customers."
+   }
+  ],
+  "max_tokens": 8000,
+  "provider": {
+   "allow_fallbacks": false
+  },
+  "usage": {
+   "include": true
+  }
+ },
+ "usage": {
+  "input_tokens": 113,
+  "output_tokens": 642,
+  "reasoning_tokens": 197,
+  "cost_usd": 0.0003155031,
+  "served_model": "qwen/qwen3.8-flash",
+  "provider": "Alibaba"
+ },
+ "essay_sha256": "decfde2e134b2264426824b432ced366594a42ed6b5a1d079844bf86a14c2ed8",
+ "essay_words": 332,
+ "response_raw": {
+  "id": "gen-1788733035-r9QounKuGgrZWUX9wL6U",
+  "object": "chat.completion",
+  "created": 1788733035,
+  "model": "qwen/qwen3.8-flash",
+  "provider": "Alibaba",
+  "system_fingerprint": null,
+  "service_tier": null,
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "**Subject: New Feature: Get a Daily Open Ticket Summary in Slack**\n\nHi [First Name],\n\nWe’re excited to share a new way to keep support visibility top of mind without leaving Slack: the **Daily Support Ticket Summary** integration.\n\nStarting today, [Product Name] can post a concise daily update to a Slack channel of your choice, summarizing your open support tickets. The goal is simple: help teams, account managers, and support leaders stay aligned on what’s open, what’s urgent, and what’s at risk—without digging through dashboards or switching contexts first thing in the morning.\n\n**What’s included in the daily summary?**\n\nThe message can include:\n\n- Total number of open tickets\n- Tickets with high priority or at-risk SLAs\n- Tickets awaiting customer response\n- Tickets assigned to each support team or group\n- A link back to your dashboard for deeper exploration\n\nYou decide which Slack channel receives the summary—whether it’s a private support channel, a shared account management channel, or a leadership update channel.\n\n**Why we built it**\n\nWe heard from many of you that the biggest challenge isn’t always tracking each individual ticket—it’s maintaining a shared understanding of support workload and customer risk across the organization. A daily Slack summary makes it easier for teams to notice trends, start conversations early, and follow up on high-priority items before they become escalations.\n\n**How to get started**\n\n1. Go to **Settings > Integrations** in [Product Name]\n2. Select **Slack**\n3. Choose the channel where you’d like daily summaries posted\n4. Customize the time and ticket filters, if needed\n5. Save your settings\n\nOnce enabled, you’ll receive your first daily summary on the next scheduled delivery.\n\nThis feature is available now for eligible plans. If you’d like help configuring it or have feedback on what should be included in future summaries, reply to this email or contact your account team.\n\nWe hope this integration helps you stay connected, proactive, and ahead of support priorities—right where your team already collaborates.\n\nBest regards,  \nThe [Product Name] Team",
+     "refusal": null,
+     "reasoning": "We need answer user's request: Write launch announcement up to 500 words for new feature B2B helpdesk product: Slack integration posts daily summary of open support tickets to chosen channel. Audience existing customers. Need produce polished announcement likely with subject, body, maybe CTA. Need ensure under 500 words. Done. Need final only. Think about tone: informative, benefit-driven. Could include what, why, how to get started. Avoid too long. Word count maybe 350. Let's draft.\n\nSubject: New feature: Daily support ticket summaries in Slack\n\nHi [Customer Name],\n\nToday, we’re introducing a new Slack integration... etc. Ensure B2B existing customers. Maybe mention open tickets summary: total, urgent, awaiting, SLA. Channel choice. Setup in Settings > Integrations. Include privacy/security? Maybe \"only summary metadata\". Good.\n\nNeed up to 500 words. Final concise.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "We need answer user's request: Write launch announcement up to 500 words for new feature B2B helpdesk product: Slack integration posts daily summary of open support tickets to chosen channel. Audience existing customers. Need produce polished announcement likely with subject, body, maybe CTA. Need ensure under 500 words. Done. Need final only. Think about tone: informative, benefit-driven. Could include what, why, how to get started. Avoid too long. Word count maybe 350. Let's draft.\n\nSubject: New feature: Daily support ticket summaries in Slack\n\nHi [Customer Name],\n\nToday, we’re introducing a new Slack integration... etc. Ensure B2B existing customers. Maybe mention open tickets summary: total, urgent, awaiting, SLA. Channel choice. Setup in Settings > Integrations. Include privacy/security? Maybe \"only summary metadata\". Good.\n\nNeed up to 500 words. Final concise.",
+       "format": "unknown",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 113,
+   "completion_tokens": 642,
+   "total_tokens": 755,
+   "cost": 0.0003155031,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00031869,
+    "upstream_inference_prompt_cost": 1.695e-05,
+    "upstream_inference_completions_cost": 0.00030174
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 197,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

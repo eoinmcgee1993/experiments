@@ -1,0 +1,71 @@
+{
+ "arm": "grok",
+ "label": "Grok 4.6",
+ "vendor": "xAI",
+ "transport": "xai_chat",
+ "model_requested": "grok-4.6",
+ "serving_path": "xAI first-party, chat completions",
+ "prompt_id": "p3-linkedin",
+ "sample": 2,
+ "run_utc": "2026-09-06T13:25:07Z",
+ "wall_s": 14.6,
+ "request_body": {
+  "model": "grok-4.6",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Write a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used."
+   }
+  ],
+  "max_tokens": 8000
+ },
+ "usage": {
+  "input_tokens": 659,
+  "output_tokens": 469,
+  "reasoning_tokens": 206,
+  "cost_usd": null,
+  "served_model": "grok-4.6",
+  "provider": null
+ },
+ "essay_sha256": "8108bba38e4e82daa3ccaa45aee4408b3048388a1fc375db46a585a1e1b6eab3",
+ "essay_words": 385,
+ "response_raw": {
+  "id": "802c8021-e1f0-9bfe-ba06-e067a67bec48",
+  "object": "chat.completion",
+  "created": 1788701092,
+  "model": "grok-4.6",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "We spent three months building a feature nobody asked for.\n\nIt started the way these things always start. A few power users mentioned something adjacent in a support ticket. Someone sketched a mock in a meeting. Suddenly we had a Jira epic, a design sprint, and a Slack channel with 40 people in it.\n\nThe feature was beautiful. Edge cases handled. Analytics instrumented. Launch post drafted. We even named it.\n\nWeek one after ship: 12 users tried it.\nWeek two: 4.\nWeek four: 1, and I think it was me checking that it still worked.\n\nNobody complained. Nobody filed bugs. They just… didn’t care. The problem we solved was real for us. It was almost imaginary for them.\n\nHere’s what I got wrong, and what I’d do differently.\n\nI confused internal conviction with user demand. We were solving our own frustration with the product, then projecting it onto customers. “If we need this, they must need it too” is not research. It’s autobiography.\n\nI treated discovery as a phase we had already finished. We talked to users—just not about this. We assumed adjacent pain meant this solution. We never put a prototype in front of five people and asked them to complete a real task. We never asked what they would stop doing if this existed. We never asked what they already used instead.\n\nI optimized for completeness over learning. We built the full version because shipping “half” felt unprofessional. In reality, the unprofessional thing was spending a quarter on an untested bet. A weekend prototype and a dozen conversations would have killed it—or reshaped it—before we wrote production code.\n\nThe feature is gone now. We turned it off. The code is still in the repo like a monument to a meeting that went too well.\n\nThe lesson I keep: shipping is not validation. Usage is. Before the epic, write the smallest thing that could prove someone would miss it if it disappeared. If you can’t get that signal, you don’t have a feature. You have a story you told yourselves.\n\nTalk to users about the job, not your idea. Watch what they already do. Build less, sooner. And if the room is excited and the customers are quiet—believe the quiet.\n\nWhat’s a feature you shipped that taught you the same thing the hard way?",
+     "reasoning_content": "The user wants a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used. This is a creative writing request - completely benign. I should write a professional...",
+     "refusal": null
+    },
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 659,
+   "completion_tokens": 469,
+   "total_tokens": 1334,
+   "prompt_tokens_details": {
+    "text_tokens": 659,
+    "audio_tokens": 0,
+    "image_tokens": 0,
+    "cached_tokens": 640
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 206,
+    "audio_tokens": 0,
+    "accepted_prediction_tokens": 0,
+    "rejected_prediction_tokens": 0
+   },
+   "num_sources_used": 0,
+   "cost_in_usd_ticks": 44080000
+  },
+  "system_fingerprint": "fp_e41c6060b2628547",
+  "service_tier": "default"
+ }
+}

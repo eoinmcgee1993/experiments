@@ -1,0 +1,146 @@
+{
+ "judge": "sol",
+ "model": "gpt-5.6-sol",
+ "key": "calib-human-05-2022-07-02-vs-kimi-2-HM",
+ "wall_s": 7.3,
+ "run_utc": "2026-09-07T08:25:50Z",
+ "request_body": {
+  "model": "gpt-5.6-sol",
+  "input": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n(One of the texts is a real LinkedIn post by a person, written on its own topic; judge tells, not topic.)\n\n=== TEXT A ===\nUnfortunately, almost nobody is doing Scrum as defined in the Scrum Guide, which, by definition, is the only possible Scrum. \n\nLet it sink in.\n\nScrum has died.\n\nI don't believe it's only because \"bad organizations\" do not want to empower people.\n\nScrum's dogmatism and unwillingness to receive feedback from the community essentially contributed to this. Ideas on how to improve Scrum bounce off the wall. Decisions are made in secret.\n\nWhere are the transparency and openness? What about co-creation? This is not what Agile leadership is about.\n\nIn my opinion, Scrum lacks continuous product discovery, which makes it the solution space framework. \"Inspired,\" \"Continuous Discovery Habits,\" or \"Sprint\" are classics every PM should read.\n\nAnother aspect is releasing value. I'd argue that usable Increment is not enough. In order to provide value, the Increment must be released to the customers. \n\nDon't get me wrong. Most Scrum ideas are great. I'm a great advocate of what's in the framework.\n\nAt the same time, ignoring the problem space and the importance of releasing value (and the associated feedback loops!) makes me wonder:\n\n\"Is it intelligently incomplete?\"\n\nIf so, why for so many teams does it become a feature factory framework?\n\nAnd even more importantly:\n\n\"Han can we improve it?\"\n\n=== END OF TEXT A ===\n\n=== TEXT B ===\nWe spent 4 months building a feature nobody wanted.\n\nTotal users after launch: 3. Two of them were on my team.\n\nThe feature was genuinely good. Clean code, elegant UI, solid documentation. We debated edge cases in design reviews for weeks. On launch day, we posted the announcement, watched the dashboards, and waited.\n\nNothing.\n\nNot angry feedback. Not bug reports. Just silence. And silence is worse — at least complaints mean someone cared enough to try.\n\nHere's the uncomfortable truth I had to sit with:\n\nWe never asked a single customer if they wanted it.\n\nThe idea came from an internal brainstorm. It sounded smart in the room. Everyone nodded. We confused \"we would use this\" with \"our users need this.\" Classic build trap.\n\nWhen I finally called customers to ask why they hadn't touched it, the answers were almost embarrassing:\n\n→ \"I didn't know it existed.\"\n→ \"We already solve that another way.\"\n→ \"Honestly, that's not a problem for us.\"\n\nMonths of engineering time. The lesson cost us a quarter — but it's saved us many since.\n\nNow, before anything makes it onto the roadmap, we do three things:\n\n1. Talk to 5–10 users about the *problem*, not the solution. If they don't bring up the problem unprompted, it probably isn't painful enough to build for.\n\n2. Test demand before writing code. A fake-door button, a landing page, a manual version run by a human. Interest first, code second.\n\n3. Define what \"used\" means before launch. If we can't name the adoption metric that would justify keeping the feature, we're not ready to build it.\n\nThe feature itself? We sunset it six months later. Deleting it stung more than building it.\n\nBut here's the reframe I carry with me:\n\nShipping something nobody uses isn't failure. Shipping it *without learning anything* is.\n\nYour users will tell you exactly what to build — if you ask before you build, not after.\n\nWhat's the most expensive lesson your team ever learned?\n\n#productmanagement #productdevelopment #startuplife\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n",
+  "max_output_tokens": 16000,
+  "store": false,
+  "reasoning": {
+   "effort": "medium"
+  }
+ },
+ "usage": {
+  "input_tokens": 1506,
+  "output_tokens": 314,
+  "reasoning_tokens": 162,
+  "effort_echoed": "medium",
+  "served_model": "gpt-5.6-sol"
+ },
+ "verdict": {
+  "more_ai": "B",
+  "confidence": 5,
+  "tells_A": [
+   "Self-applause phrase: \"Let it sink in\"",
+   "Short punchy fragments",
+   "Several rhetorical questions",
+   "Negative contrast: \"not enough\" / \"must be released\""
+  ],
+  "tells_B": [
+   "Signposting: \"Here's the uncomfortable truth\"",
+   "Repeated negative parallelism and reframes",
+   "Numbered three-part lesson list",
+   "Rhetorical questions answered immediately",
+   "Frequent em-dash clause joining",
+   "Participial tail: \"if you ask before you build, not after\"",
+   "Manufactured anecdote arc with neatly quantified details",
+   "Recap-style uplifting lesson ending",
+   "Relentless punchy LinkedIn rhythm",
+   "Generic audience-engagement question and hashtags"
+  ]
+ },
+ "response_raw": {
+  "id": "resp_077518e7142a72d0016a9e7505d0c487d2b6cbb67c42d14084",
+  "object": "response",
+  "created_at": 1788769541,
+  "status": "completed",
+  "background": false,
+  "billing": {
+   "payer": "developer"
+  },
+  "completed_at": 1788769548,
+  "error": null,
+  "frequency_penalty": 0.0,
+  "incomplete_details": null,
+  "instructions": null,
+  "max_output_tokens": 16000,
+  "max_tool_calls": null,
+  "model": "gpt-5.6-sol",
+  "moderation": null,
+  "output": [
+   {
+    "id": "rs_077518e7142a72d0016a9e7506bb0887d2b93b9323cd314f9d",
+    "type": "reasoning",
+    "content": [],
+    "encrypted_content": "gAAAAABqnnUMyLdtXC2Kurv9yZkMBeByInAPVO6de1RnS7ghOVkuJ6CVYiPSh2dFWAxyogcomFRs9vwLCpvHZBEObU0tfcpNMEPWGuCUtuPknk8dnPE9Vn72BpkEB_pcwC4lcsAIc-iESznJnNVf0jWBW7abTOhlelaTgsr98rnxk5bM_4dh1cQfrUETCTpKnkkuQlr_WIsdBVkSjZ73ArnWWbQJllX816hR9auCWxChWj9_s4vFN-k4WwLCLYKUEck1EGqqtyyBfyKiy61kKSBbMi1JiUKlBkHNlghBtN57Z-JPGnV00spSPG46IRcNghXa9obF-o5gVFgk5xlH-NEEgfYTaTEsxR-BOrq4BXTmhcKjHuW2zDfk0TSah98MJ8lpRxdRKiOb8CGp5hrF_Npfzpro25YS4_8RoRJJzBChHOpdm6Ns5QHYdvwESad_gDZ-md1NCd1CpgBNZ330APqHW80B1qW2KMAqXrAL-kUD-WOXKBm7ra4Y6IEu6ZSwRUpGnkI--jMnNuEnZVVZOBTqdEWrs1xA9wHH3ubOm64NUL6NKACd8D65JAUewos5JeZc79xGxAZyNtJ_E-74_4GDxiKpstMqXqN-UVbfTtOddeGTzK_l6_a1nPx6DuAAF2xa9WeNBJD58Svp4QWCCc0BPgQlE5eglOm11XV98ejrpd_QtKzsUOuNbTmv7pn3BV7GICBDPq_2EHOJrj5CmpXscC0AyeH6SXr-kiPYEw34QNCieLRrDabDYINRSRuKxZ7OwKbz3bNn7BLJQetqOVdF8Ao270ICAHasjI8nUPm3-0hmgFIptU3Mt3HC73bnArVk8BoM58iB29DRqtWt_72WTkJNcXEgHSJZdGuXxORQSNGvgLmpI_saqrqDmOQh2_5RQTxXPolhXdHdKplqkPMUlhAlJLbtR88a3vTuAhNChu5UOuH8a4uFpyg7Boflczas4l_WZpJD6zDX_4gwQw_RIB5_qQBL-hMBc7aP9R2eKAOpnv6cY23yNthBLS1LenYlIPoYMXPONS0__AXgozotfHfndgd9miOUn8UEZSnRALoMD6kGqOVoWghEhiTFRQ_uXx0OEdqHtSzLfgHDWQLiT6wmq5uOyY_9d-2GVrcuh2Shplf7TG2Anc1jg2YnVDaZ26N3QjDxqL_-rWiNNIN0Mk8h8IFzG8JlV0omYdaWxmWC_OIhiNdNAEVEqUlev3QvOktHNhcVxOrFKHJKmjcsER_zSaKuWqMuSVKj9yirH_hSkdGv-Z4-OJu7QmQiWOPB5uKTBzEEzhFAQyv0lsAJ6vDR_wSMEhsCCASW8ldLeAAg0iCuUF1PVsDABO6vlcMw29gJIhqgQvBM6z-Fb_KiXySks3ukn60bV2eoziOLYzOjXrTNrSgT_I5ww9voZvqiZKtwI_S4hXt7MDcfd5xGhyXVteSTdff_eVdPD5SoA7Lzwq-b8bGHQqt4xDr4UdoJTq8rhgLNn4IzB2u9Ih9k9bra-tSoOt4w_3QGfGaNhMJ3I1-66IdY--APFaR3IEe9KMlZGvGAlQOsUA_UcNxdZVJ2iVtiv8yiGpTRsvxefU5Q2TykFTvgCEiTUQ3vlznqlH_A4kz0ylrud7VFabSQixmMPJtjujM-TSoVYoRqC3pDOALSsB4AL4SHHrayjrD2zGz1-BYEI-gSx08FiXYNEdOWZdOCaJ9B85BGbo0Y1sIbyNTOWUvV_yjJnuzcdRqHZw_L8wTMrbihEtpdzfpzyvNlXRmo-P4YHBkWHoqnXhEVxa2w60DJlihIQEGpHIZAgZhohxJBzqbCrgehFPLJdPVXN928aVVa5K7rqmZy5iR_wXzosSwHIB1UkYzaxVXH_t4E9YusFyal1VgGyn0L1IdIxlmYGD1TWx29BO350Vdsu5-rAcXJfRyris-B-x5YRi2ilSmu4HqG4-pvP2oxoNFR2hR3l4q1wxmsC56pvzdKE8l34sR0bkUzoiHgrrdP-aHphh34K4p09Y-VTwZfRmv6zvQVN6roCs7ZZusF8GBzl88git82emttLITFamaNHbbILAg6cPlsKJ5X3IizZ0HHGG1cBdyBwmezExrwN77a24PXUP86LhKaw5g0VNfqVgN4Q1EqEpdIp6Db50n2DXLFWIxGgjzpiB6BFdETXwWq__vvsaEhO6nPnVKRZVHCIY8oB9RNeg31XXHgit43R82dlf5cg8RXb282Z5n1UXFfCJLcp_4=",
+    "summary": []
+   },
+   {
+    "id": "msg_077518e7142a72d0016a9e7509ea6087d2a6e37c8115e4eebe",
+    "type": "message",
+    "status": "completed",
+    "content": [
+     {
+      "type": "output_text",
+      "annotations": [],
+      "logprobs": [],
+      "text": "{\"more_ai\":\"B\",\"confidence\":5,\"tells_A\":[\"Self-applause phrase: \\\"Let it sink in\\\"\",\"Short punchy fragments\",\"Several rhetorical questions\",\"Negative contrast: \\\"not enough\\\" / \\\"must be released\\\"\"],\"tells_B\":[\"Signposting: \\\"Here's the uncomfortable truth\\\"\",\"Repeated negative parallelism and reframes\",\"Numbered three-part lesson list\",\"Rhetorical questions answered immediately\",\"Frequent em-dash clause joining\",\"Participial tail: \\\"if you ask before you build, not after\\\"\",\"Manufactured anecdote arc with neatly quantified details\",\"Recap-style uplifting lesson ending\",\"Relentless punchy LinkedIn rhythm\",\"Generic audience-engagement question and hashtags\"]}"
+     }
+    ],
+    "phase": "final_answer",
+    "role": "assistant"
+   }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0.0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+   "context": "all_turns",
+   "effort": "medium",
+   "mode": "standard",
+   "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": false,
+  "temperature": 1.0,
+  "text": {
+   "format": {
+    "type": "text"
+   },
+   "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+   "image_gen": {
+    "input_tokens": 0,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "output_tokens": 0,
+    "output_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "total_tokens": 0
+   },
+   "web_search": {
+    "num_requests": 0
+   }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+   "input_tokens": 1506,
+   "input_tokens_details": {
+    "cache_write_tokens": 1503,
+    "cached_tokens": 0
+   },
+   "output_tokens": 314,
+   "output_tokens_details": {
+    "reasoning_tokens": 162
+   },
+   "total_tokens": 1820
+  },
+  "user": null,
+  "metadata": {}
+ }
+}

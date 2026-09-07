@@ -1,0 +1,144 @@
+{
+ "judge": "sol",
+ "model": "gpt-5.6-sol",
+ "key": "calib-human-14-2022-10-12-vs-kimi-2-MH",
+ "wall_s": 14.4,
+ "run_utc": "2026-09-07T08:25:48Z",
+ "request_body": {
+  "model": "gpt-5.6-sol",
+  "input": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n(One of the texts is a real LinkedIn post by a person, written on its own topic; judge tells, not topic.)\n\n=== TEXT A ===\nWe spent 4 months building a feature nobody wanted.\n\nTotal users after launch: 3. Two of them were on my team.\n\nThe feature was genuinely good. Clean code, elegant UI, solid documentation. We debated edge cases in design reviews for weeks. On launch day, we posted the announcement, watched the dashboards, and waited.\n\nNothing.\n\nNot angry feedback. Not bug reports. Just silence. And silence is worse — at least complaints mean someone cared enough to try.\n\nHere's the uncomfortable truth I had to sit with:\n\nWe never asked a single customer if they wanted it.\n\nThe idea came from an internal brainstorm. It sounded smart in the room. Everyone nodded. We confused \"we would use this\" with \"our users need this.\" Classic build trap.\n\nWhen I finally called customers to ask why they hadn't touched it, the answers were almost embarrassing:\n\n→ \"I didn't know it existed.\"\n→ \"We already solve that another way.\"\n→ \"Honestly, that's not a problem for us.\"\n\nMonths of engineering time. The lesson cost us a quarter — but it's saved us many since.\n\nNow, before anything makes it onto the roadmap, we do three things:\n\n1. Talk to 5–10 users about the *problem*, not the solution. If they don't bring up the problem unprompted, it probably isn't painful enough to build for.\n\n2. Test demand before writing code. A fake-door button, a landing page, a manual version run by a human. Interest first, code second.\n\n3. Define what \"used\" means before launch. If we can't name the adoption metric that would justify keeping the feature, we're not ready to build it.\n\nThe feature itself? We sunset it six months later. Deleting it stung more than building it.\n\nBut here's the reframe I carry with me:\n\nShipping something nobody uses isn't failure. Shipping it *without learning anything* is.\n\nYour users will tell you exactly what to build — if you ask before you build, not after.\n\nWhat's the most expensive lesson your team ever learned?\n\n#productmanagement #productdevelopment #startuplife\n=== END OF TEXT A ===\n\n=== TEXT B ===\nProduct management is, at its heart, risk management.\n\nPM should be obsessed with those questions:\n\n- Value. Will our customers desire it?\n- Usability. Will they be able to use it?\n- Viability. Can our business support it?\n- Feasibility. Is it possible?\n- Ethic. Should we do it?\n\nTo precise it further, desirability is not enough. Your solution must solve problems significantly better than others to persuade customers to switch. So I like to replace the first question with:\n\n- Value. Will our customers love it?\n\nBe aware that Agile frameworks, like Scrum, largely ignore PM. PM is a black box that generates ideas and places them in the product backlog. Therefore, mastering Agile and Scrum is not enough to succeed.\n\nHere is what can help:\n\n- Understanding customers, market, and business in depth. You need to become an expert in each of those areas.\n\n- Determining your target customers, their underserved needs, and the value proposition. Testing your product idea with the help of the MVP experiment.\n\n- Continuously discovering what to build: analyzing qualitative and quantitative data (e.g., customer interviews, Pendo); collaborating with designers and engineers to ideate possible solutions; identifying the riskiest assumptions and testing them with the help of prototypes.\n\n- Measuring key product metrics, understanding trends, and optimizing your product using analytics.\n\nHope that helps.\n\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n",
+  "max_output_tokens": 16000,
+  "store": false,
+  "reasoning": {
+   "effort": "medium"
+  }
+ },
+ "usage": {
+  "input_tokens": 1524,
+  "output_tokens": 411,
+  "reasoning_tokens": 249,
+  "effort_echoed": "medium",
+  "served_model": "gpt-5.6-sol"
+ },
+ "verdict": {
+  "more_ai": "A",
+  "confidence": 5,
+  "tells_A": [
+   "Repeated signposting: “Here's the uncomfortable truth” and “here's the reframe”",
+   "Negative parallelism: “Not angry feedback. Not bug reports. Just silence.”",
+   "Multiple polished triads and an exactly three-item lesson list",
+   "Rhetorical questions answered immediately",
+   "Frequent punchy fragments and highly uniform LinkedIn rhythm",
+   "Em dashes used to join clauses",
+   "Uplifting recap ending with a neat failure-versus-learning reframe",
+   "Ends by performing for audience engagement with a generic question"
+  ],
+  "tells_B": [
+   "Uses bullets and labeled list items instead of prose",
+   "Signposting: “Here is what can help”",
+   "Several three-item lists",
+   "Generic instructional language directed at a broad audience"
+  ]
+ },
+ "response_raw": {
+  "id": "resp_0b9166fee783d1c6016a9e74fce8a487d288e9e7b1414b0dfd",
+  "object": "response",
+  "created_at": 1788769532,
+  "status": "completed",
+  "background": false,
+  "billing": {
+   "payer": "developer"
+  },
+  "completed_at": 1788769546,
+  "error": null,
+  "frequency_penalty": 0.0,
+  "incomplete_details": null,
+  "instructions": null,
+  "max_output_tokens": 16000,
+  "max_tool_calls": null,
+  "model": "gpt-5.6-sol",
+  "moderation": null,
+  "output": [
+   {
+    "id": "rs_0b9166fee783d1c6016a9e74fd5fd487d2a772fbf55a8f485f",
+    "type": "reasoning",
+    "content": [],
+    "encrypted_content": "gAAAAABqnnULgxBB24WFrK6xk3sfFZKjixOBC-RhitoLKxkPDo9H789zkGrwuq7kupbDXQFgFACup42i5LinM4lECBxItO5vdiS3oc7YsM1QpBRTQOLdQwCBnqaAdv-Pzl7xoBMi5W0RAg-veE1Xk9i7Jhg8SehBMS-drCxGwKvwj9A7s6LuG6nJkwDJ-weEhKVKu-IJ4LMdhXY2EMEtQ8cNXgb4nJ8RWMFdcYmhYaYLT4naTmiLXvffAQ9TWXR_eMDSmBCrPjF_UUH5C3nor3tno3epMeZELBqjMUTxj6eYV6vH8hGylvKRvK5lDdCIxLAAZNF2FWy5PA5x3LBpEI8BAWmhalRstF5d3BgMx1T0ol2xRNxLpPd8tEFI2Q67kro80L7aj0uboUGmgSwKnhPIVPlY6ZzKl49H9xzyLbRwbnylXMHFwqC5OijUwkrI8L8G9HTL0O6VqUW6UY_T4t-C2nACITNEmcaAvjgb74L7q-rGdeXmXhQW8i3XigOFBRiazJO0CVsM_JIejmuEO3u1WmGHsgm_7_YIIbOjMLPGL4N83SPhz4J0Ev_Mod7X9xLgimyrH-RrmoU5CkUDO_Q6N5uBe6QH37HZNoQzs6FmkGVOKMfZYcgMzpEeMgdUctrSuL_sDYQg-uRzYhVn7lDVMHuo1fgsTuD--w1srh70VT05j11kPpRnd5Sj0NQ4kh6ZqvroN3ryrx_X5Wz0RcaHYLsiPo4UgVrRlfWuOuuekljmeidcpibQIquRkJjVIa4frbMdvwnDE8gIOHPXJ9IKM5Lu92-J19qlk_5gMfu5qFKec6e4NorG30Rulx4QNY48LququAsuqewos5a1esLmLxp68QQR7CsWViOfbPNWebxVgZkjeJVHmzn1x4XjH-dG7t9Bg4q90I-1uo5IC0EJP4MeZF3iohtcJtQBTe3bjJibz3opwvpOxC3NE3AYbv7pY92rNF_FvFTKsqXJuOXa86LfvPORnItSVjQkLyJWVDbNa-_9cRbV-W5k9UYPG3h2HUDlqPXLQZbH9t9oA8PsOTOst6O2VsjkY-aNT_1ciytuO1Kghzy_2coMpnckyuL-1ome6flnD2EUMjU2R_8WDDpg2ZeBiIWfybiTB2x-tEnsROPBVS5-Zk2dZd5RUAbcrDbbbpic6m7b8k3ZYiDXjXhQ5H94HdOUFU27ocJOipbXimt3b5xNPptuoL8T_VfjxqfBOvN_GWosxOPV0a9j15F-ih7Mj8iRGMCnS18oKPnrwgqFxLKq7AHETRbXUK-I_3xotrulnGKE3S1vsPZwmfkbQy8EQEJSPEIppj5ERq-FDvV1_IuNX-fP68uh7AsrqUt5HSByhmVN-tknFkKl_gz6YKvXCtvmJZe50y3UT0kVCd9Co2-VXTyRgE2w-XxHYXg4EzZ1fht-YgMUf-RuhA_WWRelE7sPsFnJm_8aJJQMXpBkE3Z-C8RjCbkTB_SYMyiRWqYMG1oE4AZWoGDpu5UZgy7lMbcoZBBWe65lpQGTPIIT3iFPdv6w4nMnACLYuuweqlEanhXxEfWOeN5BHcSzsqcO8Ge9Qkm0U9TQa35tprQLKPFcVfRhm6fbNQBSLLxdXB_VGCU29rFSKj_S5_2SNIa1ol9dBqugAW_G8CwSUj2jbiM-eWztasCz_KrmTPv0KQOT2rJNAdLugruiTvqR4RTNKK8EjDdYL1PAPSYr7Wbv11pzPuH-GHzx8T_q0Rb8kHvAGcLl3jbiaNP4VoJhhuYJmhMiZPCTONhzF2b1-vlpfSUAPgvdYzRcUn0LHaORNbuTO6MERi88ch3SbrP3vUirOHMBndsg2fBDP9uK6TMrf_cuFyVEmXDhHZbLu6zaC9td85UZj4Lbd_rpArgqlbVOdiPcg9RhCkUmUHIseXdYQf2FIDQyXHdDL3f--1CIvBeS0D9fEeHAVq6pZjZLBiDUa2_LWw153SfDukwPZWCq4plsg1IqfWoX07O7snh3MWNRoz9qo8h0--IDPSZdUCoqR00DCq0Q_tMl5jbOT8fiU1oUu4_c9Ueqi5Z7DGZVrJvRuDyRvwjsnhZLnbxciTqH0qZCQI8gpASpr1A_pvuTes_r2QM02mtm_5RaH_j67_cENEUUc98MmFVCMnjrlUPO37539gkU_AXsi_inwTjp6VjH_RAML1C4O2YVAUrbZS2XFx8Ma-Ls_TQdqylW9ShmxfdFiq-7jK6sBd7rC4rV0zUje-bX1SAVuvyLhIZ4vmKI5HU0hH0bz4nYUHI7Hfg3v-sPX8XF97SSEZy50-W_uAiefv_Ab3EReTLeKdmjcPaiClUkWcQeRI9lAKagqFPbxl_Rag0pNH-zX-8KexeRddag3WOT60SyPQB4ds7XoooA6ENTkhDMBw2s2E7Jx63qpjv7ddyMehrKDSJuAzsAp4TSOBt-JHd5ZVnVPlauapm-SfKY544gUEzxI6VXyMf8DDoRa3O6jKaBZ5La6I98dKMzNhrmtym-kcqT8gtyp6C0gE2q1_0wwMmXGi9iuFrufLA-iJm38PQflWb4QN-VgTd4ObA8Y9aFHNminxyWyRECQnQTH1-OXYhs_J7OfUPW0iZomIPU16yqJta1hHRWqNJr2WHwIIGoBRJo-mb--W8faxlWTjIlKB4S49gVm_-Gh7Eua_h5d8PuTukDzHJS9TQ=",
+    "summary": []
+   },
+   {
+    "id": "msg_0b9166fee783d1c6016a9e75060ce887d2a4d071a2e51b47cb",
+    "type": "message",
+    "status": "completed",
+    "content": [
+     {
+      "type": "output_text",
+      "annotations": [],
+      "logprobs": [],
+      "text": "{\"more_ai\":\"A\",\"confidence\":5,\"tells_A\":[\"Repeated signposting: “Here's the uncomfortable truth” and “here's the reframe”\",\"Negative parallelism: “Not angry feedback. Not bug reports. Just silence.”\",\"Multiple polished triads and an exactly three-item lesson list\",\"Rhetorical questions answered immediately\",\"Frequent punchy fragments and highly uniform LinkedIn rhythm\",\"Em dashes used to join clauses\",\"Uplifting recap ending with a neat failure-versus-learning reframe\",\"Ends by performing for audience engagement with a generic question\"],\"tells_B\":[\"Uses bullets and labeled list items instead of prose\",\"Signposting: “Here is what can help”\",\"Several three-item lists\",\"Generic instructional language directed at a broad audience\"]}"
+     }
+    ],
+    "phase": "final_answer",
+    "role": "assistant"
+   }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0.0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+   "context": "all_turns",
+   "effort": "medium",
+   "mode": "standard",
+   "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": false,
+  "temperature": 1.0,
+  "text": {
+   "format": {
+    "type": "text"
+   },
+   "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+   "image_gen": {
+    "input_tokens": 0,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "output_tokens": 0,
+    "output_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "total_tokens": 0
+   },
+   "web_search": {
+    "num_requests": 0
+   }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+   "input_tokens": 1524,
+   "input_tokens_details": {
+    "cache_write_tokens": 1521,
+    "cached_tokens": 0
+   },
+   "output_tokens": 411,
+   "output_tokens_details": {
+    "reasoning_tokens": 249
+   },
+   "total_tokens": 1935
+  },
+  "user": null,
+  "metadata": {}
+ }
+}

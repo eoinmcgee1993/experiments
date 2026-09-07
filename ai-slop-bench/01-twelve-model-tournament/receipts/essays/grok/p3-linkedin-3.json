@@ -1,0 +1,71 @@
+{
+ "arm": "grok",
+ "label": "Grok 4.6",
+ "vendor": "xAI",
+ "transport": "xai_chat",
+ "model_requested": "grok-4.6",
+ "serving_path": "xAI first-party, chat completions",
+ "prompt_id": "p3-linkedin",
+ "sample": 3,
+ "run_utc": "2026-09-06T13:25:14Z",
+ "wall_s": 20.6,
+ "request_body": {
+  "model": "grok-4.6",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Write a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used."
+   }
+  ],
+  "max_tokens": 8000
+ },
+ "usage": {
+  "input_tokens": 659,
+  "output_tokens": 354,
+  "reasoning_tokens": 743,
+  "cost_usd": null,
+  "served_model": "grok-4.6",
+  "provider": null
+ },
+ "essay_sha256": "6bfe685d58a968b5c3cbac082ce3e9525db20bfbb8d342d569ce69e0d6dacca1",
+ "essay_words": 283,
+ "response_raw": {
+  "id": "84008a3b-7d38-9fbf-8360-8659090dd5b1",
+  "object": "chat.completion",
+  "created": 1788701093,
+  "model": "grok-4.6",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "We shipped a feature last quarter that almost nobody used.\n\nNot “low adoption.” Unused. After six weeks the activation rate was 1.4%. Support tickets: zero. Not because it was broken. Because almost no one cared enough to find it.\n\nWe had been so sure.\n\nA few power users mentioned it in interviews. It showed up on a competitor slide. The mocks looked clean. Engineering said three sprints. We greenlit it, built it, launched it, and watched the dashboard stay flat.\n\nThe unused code wasn’t the expensive part. The expensive part was how easily we talked ourselves into it. We treated a handful of polite “that would be nice” comments as demand. We treated a finished Figma file as validation. We celebrated shipping instead of learning.\n\nWhat I took from it:\n\nInterviews are not proof people will change their behavior. Users are kind. They will endorse a feature they will never open.\n\n“Nobody told us not to build it” is not a green light.\n\nIf you cannot name the job-to-be-done in one sentence, and who feels that pain every week, you are probably building a nice-to-have.\n\nA small, ugly experiment would have told us the same thing in days. We chose the satisfying path of a “real” launch instead.\n\nWe sunsetted it quietly. The team was embarrassed for about a week. Then we started treating every new idea as a hypothesis with a kill date, not a backlog item with a due date.\n\nThe feature wasn’t an engineering failure. It was a curiosity failure. We stopped asking “will they actually use this?” the moment the tickets hit Jira.\n\nIf you’ve shipped something into the void, you know the feeling. What did it teach you?",
+     "reasoning_content": "The user wants a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used. This is a straightforward, professional writing request. No policy issues here.\nWe shipped a feature last quarter that almost nobody used.\n\nNot “low adoption.” I mean genuinely unused. After six weeks, the activation rate sat at 1.4%. Support tickets about it: zero. Because nobody found it, or nobody cared.\n\nWe’d poured months into it—polished UI, clever AI suggestions, the works. A few power users had asked for it in interviews. It showed up on competitor comparison slides. The mockups looked clean. Engineering estimated three sprints. Product said yes. We built it.\n\nThen we watched the dashboards stay flat.\n\nThe hard part wasn’t the unused code.",
+     "refusal": null
+    },
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 659,
+   "completion_tokens": 354,
+   "total_tokens": 1756,
+   "prompt_tokens_details": {
+    "text_tokens": 659,
+    "audio_tokens": 0,
+    "image_tokens": 0,
+    "cached_tokens": 640
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 743,
+    "audio_tokens": 0,
+    "accepted_prediction_tokens": 0,
+    "rejected_prediction_tokens": 0
+   },
+   "num_sources_used": 0,
+   "cost_in_usd_ticks": 69400000
+  },
+  "system_fingerprint": "fp_e41c6060b2628547",
+  "service_tier": "default"
+ }
+}

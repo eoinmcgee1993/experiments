@@ -1,0 +1,95 @@
+{
+ "variant": "steered",
+ "arm": "opus",
+ "label": "Opus 5",
+ "vendor": "Anthropic",
+ "transport": "openrouter",
+ "model_requested": "anthropic/claude-opus-5",
+ "serving_path": "OpenRouter -> Anthropic (first-party key unavailable at run time)",
+ "prompt_id": "p1-essay",
+ "sample": 2,
+ "prompt_text": "Write an essay of up to 500 words on why most product roadmaps fail.\n\nPlain prose only: no headers, no bullet points, no bold text, no em dashes. Write like a person.",
+ "run_utc": "2026-09-06T14:06:33Z",
+ "wall_s": 19.5,
+ "request_body": {
+  "model": "anthropic/claude-opus-5",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Write an essay of up to 500 words on why most product roadmaps fail.\n\nPlain prose only: no headers, no bullet points, no bold text, no em dashes. Write like a person."
+   }
+  ],
+  "max_tokens": 8000,
+  "provider": {
+   "allow_fallbacks": false
+  },
+  "usage": {
+   "include": true
+  }
+ },
+ "usage": {
+  "input_tokens": 65,
+  "output_tokens": 1070,
+  "reasoning_tokens": 109,
+  "cost_usd": 0.02680425,
+  "served_model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS"
+ },
+ "essay_sha256": "3510e9e64b164b94b09c97a74a716ac76a7f7554c419c46ca01e71dcbe8abf57",
+ "essay_words": 528,
+ "response_raw": {
+  "id": "gen-1788703572-0jmesF1cG66vU8N4S83r",
+  "object": "chat.completion",
+  "created": 1788703572,
+  "model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "Most product roadmaps fail before anyone writes a line of code, and they fail for a reason that has nothing to do with execution. They fail because they are treated as promises when they are actually guesses.\n\nConsider how a roadmap usually comes together. Someone in leadership wants visibility into the next four quarters. Sales wants to know what they can tell customers. Marketing needs to plan launches. Finance wants to tie headcount to output. So a product manager collects requests, sorts them into buckets labeled Q1 through Q4, and circulates a document. The moment that document exists, it stops being a hypothesis about what might create value and becomes a contract about what will ship. Every later attempt to change it looks like failure rather than learning.\n\nThe second problem is that roadmaps are almost always lists of features rather than lists of problems. A feature is a specific answer, and specific answers assume you already understand the question. Most teams do not. They have a hunch that customers are churning because onboarding is confusing, so they put \"new onboarding flow\" on the roadmap for the second quarter. Six months later the flow ships, churn does not move, and nobody revisits the assumption because the item was marked done. If the roadmap had said \"reduce first week churn\" instead, the team would have kept working the problem until something moved. The framing determines whether you are accountable for outcomes or merely for activity.\n\nThird, roadmaps ignore the cost of what is already built. Every feature shipped becomes something to maintain, support, document, and eventually migrate. Teams plan as if capacity were constant, then discover that a third of their engineering time goes to keeping the existing product alive. The roadmap made no room for this, so either the dates slip or quality quietly degrades. Both outcomes damage trust, which makes the next roadmap even more political.\n\nFourth, and this is the uncomfortable one, roadmaps often exist to manage internal anxiety rather than to direct work. A leader who cannot tolerate uncertainty asks for a plan. The plan reduces the anxiety without reducing the uncertainty. Everyone knows the fourth quarter items are fiction, but the fiction is comforting, so nobody says so. This is why so many roadmap conversations feel performative. The document is not really about the product.\n\nWhat works better is less satisfying to look at. Commit firmly to the next six or eight weeks, because you actually know something about that horizon. Describe the following quarter in terms of problems you intend to attack and the evidence that made you choose them. Beyond that, state themes and be honest that they are directional. Publish what you learned alongside what you shipped, so that changing course reads as intelligence rather than incompetence.\n\nNone of this removes the need for planning. Organizations genuinely need to coordinate, and coordination requires some shared picture of the future. The trick is building a picture that can absorb new information without shattering. A roadmap that cannot be wrong cannot be useful, because the only way to be certain about a year of software is to stop paying attention to your customers.",
+     "refusal": null,
+     "reasoning": "I'm planning a straightforward essay under 500 words on why product roadmaps fail, aiming for natural prose without headers, bullets, or em dashes, and keeping the tone conversational and specific.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm planning a straightforward essay under 500 words on why product roadmaps fail, aiming for natural prose without headers, bullets, or em dashes, and keeping the tone conversational and specific.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAISuQQKrgEIERgCKkCuMDvPninPI4urocxJGpoh0M4eCImtEFOTjswF6d8CTIJpi8zJGwFAwy5yRWKw+FLoiAAyXKiE+nxgFG5lplViMg1jbGF1ZGUtb3B1cy01OAFCCHRoaW5raW5nWiQ0YzBmMDQ2Zi0yNWZkLTQ1ZmItYmZiMy1hMDhhOGUyNDljYTd6HnVwcm9mXzAxMUNlbkZSYjRqeFBLcXdMUXFXN3dtNqgB2Ob11AYSDOwnNl5Za98laFccPBoM+TL9LCpxGf4o9XkEIjBuP7E68/KYcYWZxjkQARzAjxhKxXzeLD8Tbd7uqHqFskc+DTsjPfvTD2fxan31X0UqtwIehkWA3ccxu2EJL+3ZzBP6EVPucsyEfGJZmfJCJYUJCQddamiK63pssBxeoNRsAVVSQMgP/nNjRtBmyaFyJnYJJGti+1JDTx0WS+ORMHaI7F+uKz49VDtdBlgmkKjf4LWaiXI+zN3WDSMiYp8CLxYvVGMrlAFerv6GJllCd5SdvBHdH195cg3TXxt45kkZt6bqbw7pj1wAu/3gkKXqzrexWYY3jnFpB6ewQSVE78Iu5Yx9KeJn4bJ06OARTJgaMAAuvEyWPIyYFqUhwkTWKul1nRJygEMHMrHVZhzHv62aTPKldiFSpO4ziAd6gIK5Tb/vK3d9C94DyRF0kGzUpv8kHNfvMsaFUiTROCWVCKvG7TGwN5X6W+CkcbNYAjmCokiSbjZQqM1pKOjDX9gDeZV4vUiR8Cf0QBgB"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 65,
+   "completion_tokens": 1070,
+   "total_tokens": 1135,
+   "cost": 0.02680425,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.027075,
+    "upstream_inference_prompt_cost": 0.000325,
+    "upstream_inference_completions_cost": 0.02675
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 109,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

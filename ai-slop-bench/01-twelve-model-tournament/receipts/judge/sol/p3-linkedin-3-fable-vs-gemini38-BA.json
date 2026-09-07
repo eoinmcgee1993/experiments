@@ -1,0 +1,144 @@
+{
+ "judge": "sol",
+ "model": "gpt-5.6-sol",
+ "key": "p3-linkedin-3-fable-vs-gemini38-BA",
+ "wall_s": 9.5,
+ "run_utc": "2026-09-07T08:00:50Z",
+ "request_body": {
+  "model": "gpt-5.6-sol",
+  "input": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n\n=== TEXT A ===\nWe spent 3 months building a feature. \n\nIt was elegant. It was technically complex. The code was pristine. \n\nAnd on launch day, exactly zero people used it. \n\nHere’s the story of my most humbling product failure—and the single best lesson of my career.\n\nA while back, our team became obsessed with an idea. In a couple of discovery calls, a few customers had mentioned offhand that it would be “cool” to have an advanced, multi-tier filtering dashboard. \n\nWe took that feedback and ran a marathon with it. \n\nWe mapped out sprints, designed pixel-perfect mockups, and spent hundreds of engineering hours handling edge cases. We felt like rockstars.\n\nLaunch day arrived. We pushed to production, sent a blast email, and pulled up the real-time analytics dashboard, waiting for the surge.\n\n…Crickets. \n\nDay 1: 12 clicks.\nWeek 1: 1 active user.\nMonth 1: The only person using it was me, checking to see if the tracking script was broken. (It wasn't.)\n\nWe had burned nearly a quarter of our roadmap on a feature nobody actually needed. \n\nIt was a painful gut punch, but it fundamentally changed how I build products. Here is what that ghost-town feature taught me:\n\n**1. \"Nice to have\" is the graveyard of software.**\nCustomers will happily tell you an idea is \"cool\" or \"useful\" during an interview. But polite interest does not equal intent. If a feature doesn't solve a burning, hair-on-fire problem that users would actively pay or change workflows for, they will ignore it. \n\n**2. Validate behavior, not opinions.**\nWe asked people what they *thought*, rather than testing what they *did*. A simple clickable prototype, a painted-door test, or a manual concierge MVP could have proven there was zero demand in 48 hours. Instead, we used our most expensive resource—production code—to run an experiment.\n\n**3. Fall in love with the problem, never the solution.**\nWe fell in love with our own cleverness. We were so excited to build the thing that we stopped asking if the thing should exist in the first place. \n\nWe ended up quietly deprecating the feature four months later. Deleting thousands of lines of code hurt, but shipping nothing is worse than admitting a mistake. \n\nToday, before our team writes a single line of code, we ask: *\"What is the fastest, cheapest way to prove that nobody cares about this?\"*\n\nEvery experienced builder has a graveyard of unused features. \n\nWhat’s the most valuable lesson you’ve learned from a project that flopped? Let’s normalize talking about the misses. 👇\n=== END OF TEXT A ===\n\n=== TEXT B ===\n**We spent eleven weeks building a feature that got used 47 times. Total. Across 12,000 accounts.**\n\nHere's what happened, and what I actually learned.\n\nLast year my team shipped an \"advanced export builder.\" Custom fields, saved templates, scheduled delivery, the works. We were proud of it. The demo got applause in the all-hands. Sales said customers had been asking for it for years.\n\nNinety days later I pulled the usage numbers expecting to write a victory lap. Instead I found that almost nobody had touched it, and the handful who did mostly opened it once and never came back.\n\nMy first instinct was to blame discoverability. We'd buried it two menus deep, surely that was it. So we added a banner. Then an onboarding tooltip. Then an email campaign. Usage barely moved.\n\nSo I did the thing I should have done in week one: I called ten customers who had explicitly requested \"better exports\" and asked them to show me their workflow.\n\nEvery single one had the same problem, and it wasn't the one we solved. They didn't want a *powerful* export. They wanted to stop exporting at all. They were pulling data out of our product to paste it into a slide for their boss every Monday. The export was a symptom. The disease was that our reporting page didn't answer the one question their boss kept asking.\n\nWe had taken \"customers want better exports\" at face value and built a Ferrari for people who wanted to stop driving.\n\n**The lesson I keep coming back to:** A feature request is a customer's *guess* at a solution. It is not the problem. When someone says \"I need X,\" the most valuable question is not \"how do we build X?\" but \"what will you do the moment X exists?\" If they can't answer that vividly, you haven't found the real need yet.\n\nA few things I do differently now:\n\n- **Every roadmap item needs a \"day after\" story.** Not \"users can schedule exports,\" but \"Priya opens her laptop Monday morning and the number is already in front of her.\" If we can't write that sentence, we're not ready to build.\n- **Talk to requesters *before* scoping, not after shipping.** Ten 20-minute calls would have cost us two days. Skipping them cost us eleven weeks.\n- **Watch, don't just ask.** People describe what they think they do. Screen-shares show what they actually do. The gap is where the real product lives.\n- **Define \"success\" before the kickoff.** We never agreed on what adoption would look like. So we couldn't recognize failure until it was obvious to everyone.\n\nThe export builder is still in the product. It works fine. Nobody uses it, and that's okay. It taught me more than most of the features that \"succeeded.\"\n\nIf you're a PM, engineer, or designer with a similar story, I'd genuinely love to hear it. The features that flopped quietly are the ones nobody writes case studies about, and I think that's a shame.\n\n#ProductManagement #LessonsLearned #BuildingProducts\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n",
+  "max_output_tokens": 16000,
+  "store": false,
+  "reasoning": {
+   "effort": "medium"
+  }
+ },
+ "usage": {
+  "input_tokens": 1979,
+  "output_tokens": 463,
+  "reasoning_tokens": 336,
+  "effort_echoed": "medium",
+  "served_model": "gpt-5.6-sol"
+ },
+ "verdict": {
+  "more_ai": "A",
+  "confidence": 4,
+  "tells_A": [
+   "Repeated signposting: “Here’s the story” and “Here is what... taught me”",
+   "Bold numbered lesson headers",
+   "Relentless short, punchy opening rhythm",
+   "Repeated negative-parallel constructions",
+   "Several exact triads",
+   "Em dash used to join dramatic clauses",
+   "Crowd-facing, uplifting LinkedIn-style ending"
+  ],
+  "tells_B": [
+   "Signposting: “Here's what happened”",
+   "Bold labels and a bulleted list",
+   "Repeated negative parallelism",
+   "One prominent triad of feature capabilities",
+   "Generic audience invitation and uplifting close"
+  ]
+ },
+ "response_raw": {
+  "id": "resp_0bdd3478d972b2e4016a9e6f2836c087d28b70d2e3e640b9b6",
+  "object": "response",
+  "created_at": 1788768040,
+  "status": "completed",
+  "background": false,
+  "billing": {
+   "payer": "developer"
+  },
+  "completed_at": 1788768049,
+  "error": null,
+  "frequency_penalty": 0.0,
+  "incomplete_details": null,
+  "instructions": null,
+  "max_output_tokens": 16000,
+  "max_tool_calls": null,
+  "model": "gpt-5.6-sol",
+  "moderation": null,
+  "output": [
+   {
+    "id": "rs_0bdd3478d972b2e4016a9e6f28c8a087d28d29e3d80c652908",
+    "type": "reasoning",
+    "content": [],
+    "encrypted_content": "gAAAAABqnm8xGLnNIdpzUDgwO_5SqrC8khEsgLgnKXz2BuTzt_QUEjbMfWxpheKNh3IzAgNpTRd-C2qlYBLrKEtvxVhep-ksWnoYDuIS6haHnxEmgcBPiF4svD7iARuOXlvU6cdpeTXzoncXeCRPehdCx75RSp3KxcFq_tWfOar3heEnCcGEEhl_r88veoIalSx22Uy2KguQ6TTTmhPA6JHgXEj0aHAVdtdy5BYxHBV62ozkbipFv3jpFkx5I8AZXMbrUvzllA9xb03ENSXsot5HRFUioA49tgErBZNS3AT1n2-W6ugxOFasp3BE4KUrpVdcVYgJ7v7p0YpphqlMZq-6WqPbrtph9ohoNpqA2SLMavaXZxHUftWB63QtDHlj2NGVQMGUtjtJsoE_uPtKyp0ZGyemrHtj-zNMC8YgL_WBm4QZ6m2qejFll_VukL8UW24cf8LKxR_kIRnnuM7jo621fdeU2pz43d8DBWZf4yEQvZMPPYNtart1C4CWxWoMuxLqMWz6pJe23u1AoVBGiDgQgxbi3wcWAaJF2XaArjWGYNBMiQqkxKZGt2mvuCebb0u2V_yi10P-or9YkzWuhGx1Oo6jjUVaG2tAoB8Pq4V7-wItnOhu146oZIEg1S-cij9H6rRs0WfEWTfnYKVyUeqpqCy4DtMGU8hyz-6YDUlmgoPLbbk27GroBKowL1Heg_MWSVhGgJLumu1zwScfu_JjpWUKaODb6WAbKN9BWw2IZ1tWrxBgOPiZtRr2ZS9TRjJyBsbdToSYg0-8gSk2appgwL4OV2QCOr9oze2sOUkt_mZ-Lpdmxf_gk6DIef9L7RttI4JErC5_opmXdLgTHAKSzHGRWLxpGs1DeZewnAV9F4-pnlB3Akim01W22AWeunzg0GYwnFp2CxNnxl429lCTpickVlW8X7aPrpKsSDr1qsuMssZ8ifZ9fuY4pBb6bm2bP21nIRfIy2VAYrf-sjNQbe1Oozofc9LL4ZxpgqoP_jwknYe64UEeRm5KeeO1O0QWNEatbFvTAXZs2tTaC982jyGScK_vOlI6MUbTjWHB0kBkKqZe1rLUKQ65iAQemDh8K7uW_fYuZ6m9_QyFBktLNzjLtwonScjOE7-pkHdYstiR1BasXnvD_XTcThYsRKD0sdMwdeezbTEWDQjCxKHSNG8jN9FBALM0WwXWkKUg83SAI3n4et4u-H1LWkP8_2AMrhZxFj4T8gfzMfwh77tqGXnI5rJmgGf3JDV1ARHYpsnhDhhMPAjtKm5jDGyYzs9CijOEDTDBWICxtMAKgNuPVW3-2GTA4dvPSkQrpZmGgXBEUVsxvSzB-l8lzc8l5-jx_bcmkrSQhG3kOZU3x1ImsfPR1AdeXUoxySatPV8sgn49guy-zwuW9hmrmJrBFA3XZPgg5Ql3Xwiu9tAtn-q63TspkSip0UjsYlsue9_LX4cvdmP8ZRwE4UyWrVnDbxgs2JzU03m8vwIs5QQOYnbw4ZVDBdi_gjCoY1NQrGnVsqhIx_Djy6bfyWgnYKfoT5i8YFn1niFZ41bpQFYMHU5RHNG--JUmfRbVBpNl1fLXfYofG6sFYrlEBZ0V4wJwA038LIxjeEztSkXbEidj5qUFP_Cx_9pA4JbOcnEghsKjj6DhOCF-HXq0mBHWrggNOJMKrwmkRf5zBQgXqc2mg_7Cv45j0zt7Xo6zPphVo2i65qArq8aGlwpCQxCMzaPIgEWfrK-0rL-oqE6Kz_kLChmybxH7hc_2oPScWwRW9ht9n57kMv_oPKSqt9VK-0nQBKotmo2wWyHs3e65vRgc_njGeWDodliYLaV9KX3Mwx8ZhLsnIw_2L8OrV7RayJgDUNQM6HUb-w8Qotw7KQeH3OTD10eDpZd92pRoMuV0x5SLQPaUXYhE9v2oHLjUQU5NYvVoO4RmfhAws14j1bia-KsXSIoVgUYTghp5RcaLDYnvnfsqeKrhvfu17XDYeSg79tERLw2A4RS8stW66cwi5PyzaeaGy1PIOStNMdKK2g5bxt3H1PCVG07qUHcCt3QKUNhYQAF2YGuaPmW9pZBWSQw1ePBR38JvVoZmsVoOwZiEKd9ZRBtjipcipL4aCrXLQO7iEeG-srjPRrvvgm7zBqP3Q1mjh_n8vMIusT4-XJv8kzNIdqTbTOLvmFdwhkzTzubBa6iWgn77Q9mCHOY0UpJ1fh52Cdggot1uaDYqsq0UrZH6fOc_FKElHgloAFnOlTNLEyo-i-e1xNeLNdE5O2ehVHlhC3ozjhyOg4N0f8TAIpeLcJ41xCcnQ5E-8e7Enb6JuXDReQ4-GZorJlxRO9wBrSWtkbXkBtln4Dj9pC4dWrxAY2vnhPBJmr3l9dgJjTDs8e26cBr6ggfgwJXXF3u29xrM4sFycd8AbFEAuku4LzvYAA7nd0HDjxnnRkaY5-bU3v-c6ZFtO8wP4XDSEomcbKFjjZxeMD0qc09QtN1jVb1a1OLdlhWYVPH0T6ma5qz38pjjQraP9qEzORmCkuXoafHZ2tyo7ETptOU9oYhI4-s65LikV9DcmFbPLCP1Fqh3a5gOKZImYpM4cQhuIV37XUuilhsmjJgefo2vXCsAcObfL4HIDaB79fOIX69dvzA_-hFEBZBlUI_7W-x9tuat-iRrJVIXYeitSYxRLoGhBcWrZMHOnyxDG1IgRRVidu75YZTSSZEy0xs0aHWYn3eU2gFn_kY07pVvG6ZB-_c3Y7jaRf_qbKoB-Lj8OQ4g0jxIQ7VKtTRiLAyZPsyAT01O9W33cUFbOCzdtDj1M2fg8GGqc2B6uoicAl8dTsaZ2wuTaVkcKBpbO3DQ4dxPsRKSI4RvzEYT-zKexUwmjDGWdIaWf_Eeazigu-1JWwCxxE5xlWp8aiIAtFCRrP1DZvFAKU2xr7-cdcJcCZT-tqz01v6V0TAscVG_h7NPZI3_7xssoD-TG8jgzCk_GxSN7LGmYdNp8uThdayN6FVfjVZIvg-xLOitFClvwYuBmhTn27uFXfmJAReE8oNJzN2T6-6LbzyxWXEXBtzbXNgzruEwodOH5xSi17G7g-ue9QsHnMNWjmdwq9DEWpMb00Kt2NpE87U1eEvECNxQ2QxAyqzL1VDO7okfZYyu2caW8qP90u9vtZ3RKkie4gvrbgxPGgKY-0_oKfjz06Zu91DjMgO9JXmCn6R8yiv-xG0GZnjzppElYOuvL88n5IC2KJGTJQdfN36JlXmDAc8GDepFEU08TltdZVR1Ynazui0B3HCFcsni7CM1EPr4jXkvYl4pB6GNARtoT8dqfQ==",
+    "summary": []
+   },
+   {
+    "id": "msg_0bdd3478d972b2e4016a9e6f2f2a9887d28db2fe414ad88f77",
+    "type": "message",
+    "status": "completed",
+    "content": [
+     {
+      "type": "output_text",
+      "annotations": [],
+      "logprobs": [],
+      "text": "{\"more_ai\":\"A\",\"confidence\":4,\"tells_A\":[\"Repeated signposting: “Here’s the story” and “Here is what... taught me”\",\"Bold numbered lesson headers\",\"Relentless short, punchy opening rhythm\",\"Repeated negative-parallel constructions\",\"Several exact triads\",\"Em dash used to join dramatic clauses\",\"Crowd-facing, uplifting LinkedIn-style ending\"],\"tells_B\":[\"Signposting: “Here's what happened”\",\"Bold labels and a bulleted list\",\"Repeated negative parallelism\",\"One prominent triad of feature capabilities\",\"Generic audience invitation and uplifting close\"]}"
+     }
+    ],
+    "phase": "final_answer",
+    "role": "assistant"
+   }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0.0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+   "context": "all_turns",
+   "effort": "medium",
+   "mode": "standard",
+   "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": false,
+  "temperature": 1.0,
+  "text": {
+   "format": {
+    "type": "text"
+   },
+   "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+   "image_gen": {
+    "input_tokens": 0,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "output_tokens": 0,
+    "output_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "total_tokens": 0
+   },
+   "web_search": {
+    "num_requests": 0
+   }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+   "input_tokens": 1979,
+   "input_tokens_details": {
+    "cache_write_tokens": 1976,
+    "cached_tokens": 0
+   },
+   "output_tokens": 463,
+   "output_tokens_details": {
+    "reasoning_tokens": 336
+   },
+   "total_tokens": 2442
+  },
+  "user": null,
+  "metadata": {}
+ }
+}

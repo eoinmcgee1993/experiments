@@ -1,0 +1,142 @@
+{
+ "judge": "sol",
+ "model": "gpt-5.6-sol",
+ "key": "p3-linkedin-1-opus-vs-qwen-AB",
+ "wall_s": 3.5,
+ "run_utc": "2026-09-07T07:59:20Z",
+ "request_body": {
+  "model": "gpt-5.6-sol",
+  "input": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n\n=== TEXT A ===\n**We spent 11 weeks building a feature. 3.7% of our customers ever touched it.**\n\nI still think about that number.\n\nThe request came up in almost every sales call: \"Can we get a custom reporting dashboard?\" Seventeen accounts asked for it in one quarter. Two threatened to churn without it. We had a spreadsheet of quotes. We had demand, or so I thought.\n\nSo we built it. Drag-and-drop widgets, saved views, scheduled email exports. It demoed beautifully.\n\nThen we launched. Adoption crawled to 3.7% and flatlined. The two accounts that \"needed\" it? One never logged in. The other used it twice, then went back to downloading CSVs and building charts in Excel.\n\nI finally called six of the seventeen requesters and asked what happened. The answer gutted me in how obvious it was:\n\nThey didn't want a dashboard. They wanted to stop getting yelled at in Monday morning meetings for not having numbers ready.\n\nOur dashboard technically solved that. But it required them to *build* the thing first — pick metrics, configure widgets, decide on date ranges. We'd handed a tired ops manager a set of Legos when what she wanted was for the finished model to already be on her desk at 8am.\n\nThe customers who eventually loved reporting? They loved the scheduled email we'd treated as a throwaway feature. One paragraph, five numbers, in their inbox every Monday at 7. That one shipped in four days.\n\nThree things I do differently now:\n\n**1. I separate the request from the problem.** When someone asks for a dashboard, that's their guess at a solution. My job is to find out what happens on the day they need it — who's asking them for what, and what they do today to cope. \"Walk me through the last time this hurt\" has replaced \"would you use X?\" in every conversation I have.\n\n**2. I look for what people already do the hard way.** Real demand leaves a trail. Those customers were exporting CSVs at 11pm on Sundays. That behavior was sitting in our logs the whole time, and it told a truer story than seventeen sales calls.\n\n**3. I make the cheap version first, even when it feels embarrassing.** We could have sent that Monday email manually to ten accounts for two weeks. Total cost: a few hours. It would have told us almost everything we learned in eleven weeks.\n\nThe uncomfortable part is that nobody lied to me. Customers genuinely believed they wanted the dashboard. Wanting something and using it are completely different muscles, and only one of them shows up in a discovery call.\n\nI don't regret shipping it. I regret not spending four days finding out it was the wrong thing before spending eleven weeks on it.\n\nWhat's the most expensive thing you've built that nobody wanted? I'd rather learn from yours than repeat mine.\n=== END OF TEXT A ===\n\n=== TEXT B ===\nWe shipped a feature that nobody used.\n\nIt wasn’t a small feature. It had a landing page, onboarding tooltips, and a polished dashboard. Internally, we celebrated it. Externally… silence.\n\nAfter weeks of “almost no adoption,” we started asking hard questions:\n\n- Why did we think users wanted this?\n- Who actually had the problem?\n- Were we solving a painful problem, or a pretty one?\n\nThat last question stung.\n\nWe had built the feature because it looked impressive in planning, not because we had enough evidence of demand. We confused building something carefully with building something valuable.\n\nThe lesson was simple but uncomfortable: shipping a feature is not the same as creating value.\n\nWe had optimized for output—code, design, release notes—while users needed outcomes. They didn’t care about our “advanced analytics.” They cared about saving time, avoiding mistakes, and making decisions faster.\n\nSo we went back to basics.\n\nWe talked to 12 users in one week. We watched how they completed tasks, where they got stuck, and what workarounds they created. Then we realized they didn’t need a new feature. They needed a clearer summary, one prominent “next step,” and fewer choices.\n\nWe removed the dashboard, simplified the flow, and made the product easier to use—not more impressive.\n\nAdoption didn’t explode because of a clever new feature. It improved because we stopped guessing.\n\nThe biggest takeaway for me as a product builder is this:\n\nIf nobody uses it, the lesson isn’t that users don’t understand it. The lesson is that we didn’t understand them.\n\nSuccess metrics matter. But empathy matters more.\n\nNow I ask before building:\n\n- Is this solving a frequent, painful, or costly problem?\n- Are we adding value, or just adding surface area?\n- If users had one hour to complete their task, would this save it?\n\nAnd sometimes the bravest thing you can ship is a deletion.\n\nHave you ever built something you loved that users ignored? What did it teach you?\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n",
+  "max_output_tokens": 16000,
+  "store": false,
+  "reasoning": {
+   "effort": "medium"
+  }
+ },
+ "usage": {
+  "input_tokens": 1789,
+  "output_tokens": 173,
+  "reasoning_tokens": 83,
+  "effort_echoed": "medium",
+  "served_model": "gpt-5.6-sol"
+ },
+ "verdict": {
+  "more_ai": "B",
+  "confidence": 5,
+  "tells_A": [
+   "Numbered list with bold-label openers",
+   "Occasional negative parallelism",
+   "Closing engagement question"
+  ],
+  "tells_B": [
+   "Repeated negative parallelism",
+   "Multiple bullet lists and triads",
+   "Explicit takeaway signposting",
+   "Rhetorical question followed by answer",
+   "Frequent em-dash clause joints",
+   "Generic uplifting aphorisms",
+   "Recap-style lesson ending"
+  ]
+ },
+ "response_raw": {
+  "id": "resp_0ca8bfcab6d6f5d1016a9e6ed3f29087d29d8dc67c1c119283",
+  "object": "response",
+  "created_at": 1788767955,
+  "status": "completed",
+  "background": false,
+  "billing": {
+   "payer": "developer"
+  },
+  "completed_at": 1788767959,
+  "error": null,
+  "frequency_penalty": 0.0,
+  "incomplete_details": null,
+  "instructions": null,
+  "max_output_tokens": 16000,
+  "max_tool_calls": null,
+  "model": "gpt-5.6-sol",
+  "moderation": null,
+  "output": [
+   {
+    "id": "rs_0ca8bfcab6d6f5d1016a9e6ed46fcc87d2b94726ac58bbf6fd",
+    "type": "reasoning",
+    "content": [],
+    "encrypted_content": "gAAAAABqnm7XydT0iavyYHzSBznuq-eUgv-j95RfMsJrz3y6Jz2re8h9RaOWC1ung4a2fSBza5u8ykPBZiKshtoMNmr6X8-FgvaiFZX8PBYXhM1Ia_SnHVOalZzsFX5lHpmOn14CrbuldS5GxtUSU8NQvEPp3K-Sk6L8qqklqCW3LrTrNHMwPZqS16Y-Z7pTbHj80tfDAaeImR9VZf0n9oGUgen4zdGdgmGkFXqb5DMFIDYv5zfrv4tiRLGJxWdt7yFX9Phxff5-DlA86uvtwRzTwFcAuwQ0JB4PFVAbCOULy3yJ3QZhy26-jLI_Jha-iWvY_LZqDaiioQeT4w8bXdH6b0dcwqMUykRLVQFaEHZmx7xa26a8EZAYfxfZj8nIMWPe-AAzdhbwT25-bRJVkRGjYyth23oru0aXH65QKtnT5FVL6l2rO7c8uuBMNiENNDeEtgzCn-Yv-CAD7G348FwsRWVCI2njCO9lyhlHgZBtkO_SB-IuHkV9km8KBySYl7hMwGCSPt4d9YJqRbtiWMZOcU9VpC8DTsBSK8v-hBl763CZ9Y2EqnLvuiPlkIQhECsFXStO6zwSzKefMN86oUL4HsYejilSeCBM5JYnFeRzekomlF2Qr5P33zr-UNM2FBcoYkh4ClkpWCaCZZ6RUDc_n2G80-w_L5qVaOjcHYHBvmsmeKCDUeAfFEK9iOktfzPXVBMO0U9WSxwA11-DqvJAlyzk6kXHT6TmOy_v3J0bfNNXUWNids1CKwCON0IYeXgaBYhCfl6VytOlwy-di2sWJTJyAROa_rsHncX8eCExQaEdz8BUJHkzp7QcO3pMGLkhK23ysBlBqbl994ui0hzGSWuRpug1cAnF-y3GZZ3ch_TIRklVPPyx-etIkL-g76npOZardQuQqoxFweOOUrkTKfUA4RFJWnO4ZJLeE5Kg51Vhz0pH2RZLUYpp98BfwTRe8VLKB08mNETvZlB6KldB2PA9RytecvY-dI-eaFS3FOpGrS8dhh3CSwPTVx2MRGJ1NeLOpz77r3PB63-o1gmQyGGaE9XdEPWOJ4Ga4JhX0smhNwH7x9BVgCC9ixd1bdI5WV3K2wBsF61IOlRRPtranLtOdvCUzKX2RW4B1fkhtqKNq7cEVyAOtO6PYNP_E6YpZeaUF_km9FKUQ1W-QoQ4Tvgcvrf6yp_stJArGm6F7dE2kFitZ8xmy8RpPMxzXxSOqo_KErY1zsTA4aGhBkuvNOpXm6qgiHpGVLqTAmzUsDMTbTmRaVcKQ5b6DayDnrQT3GInWnfZSP-3SGQ6aEFEKEEJi9isPSM_StpG-w8f9IZiI64RrCGmyrEVCEqjtWn9onLz_ccqsjh-yoKYUs3YN1RrDa0NO9YH2QGtqAHky4D-pWjFGqHTCVseTlKJVBbssZ7E5xHSBs3KpAqqT86-TpixwipdAK2BiwFcwiUMvdRUfh865JJtmlfP1WnTdN9UACl9i9JL9QAZnINBhUVb_VXt11JazRKSJmrDr7jQHI76K28YbHJAJ4ibvkvUzaWrV9Zb7RvSCYAwhGQjVsdnfkfwD0MEfUTNQxiurCsf-8rZhY-0N9M27wcxb91IR1cHCo4abGjWzgIfBYjz3Qr02PGnlCbqcrXpQZwdxrzT_F83oTVABgJjrM-Gvls1wDw4F-9McDpP9RmHKNYSxsJ4z1FR_wpJBQ==",
+    "summary": []
+   },
+   {
+    "id": "msg_0ca8bfcab6d6f5d1016a9e6ed599f487d2878508c94aad5dd4",
+    "type": "message",
+    "status": "completed",
+    "content": [
+     {
+      "type": "output_text",
+      "annotations": [],
+      "logprobs": [],
+      "text": "{\"more_ai\":\"B\",\"confidence\":5,\"tells_A\":[\"Numbered list with bold-label openers\",\"Occasional negative parallelism\",\"Closing engagement question\"],\"tells_B\":[\"Repeated negative parallelism\",\"Multiple bullet lists and triads\",\"Explicit takeaway signposting\",\"Rhetorical question followed by answer\",\"Frequent em-dash clause joints\",\"Generic uplifting aphorisms\",\"Recap-style lesson ending\"]}"
+     }
+    ],
+    "phase": "final_answer",
+    "role": "assistant"
+   }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0.0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+   "context": "all_turns",
+   "effort": "medium",
+   "mode": "standard",
+   "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": false,
+  "temperature": 1.0,
+  "text": {
+   "format": {
+    "type": "text"
+   },
+   "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+   "image_gen": {
+    "input_tokens": 0,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "output_tokens": 0,
+    "output_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "total_tokens": 0
+   },
+   "web_search": {
+    "num_requests": 0
+   }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+   "input_tokens": 1789,
+   "input_tokens_details": {
+    "cache_write_tokens": 1786,
+    "cached_tokens": 0
+   },
+   "output_tokens": 173,
+   "output_tokens_details": {
+    "reasoning_tokens": 83
+   },
+   "total_tokens": 1962
+  },
+  "user": null,
+  "metadata": {}
+ }
+}

@@ -1,0 +1,76 @@
+{
+ "judge": "gemini",
+ "model": "gemini-3.8-flash",
+ "key": "calib-human-13-2022-09-26-vs-qwen-1-HM",
+ "wall_s": 4.1,
+ "run_utc": "2026-09-07T08:16:33Z",
+ "request_body": {
+  "contents": [
+   {
+    "parts": [
+     {
+      "text": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n(One of the texts is a real LinkedIn post by a person, written on its own topic; judge tells, not topic.)\n\n=== TEXT A ===\n7 Chrome extensions that boost productivity so much they feel illegal to use.\n\nAll free:\n\n1. Bionic Reading®  - Guides your eyes by highlighting the initial letters of each word. A fantastic way to read longer texts (e.g., blog posts). I use it primarily with Medium.\n\n2. StayFocusd - Blocks time-wasting websites. I have repeatedly found that eliminating distractions is essential to focus on deep work (a flow state).\n\n3. Glasp  - Allows you to take notes and add highlights on web pages. Everyone should know it. It delivers what it promises.\n\n4. ScribeHow - Allows you to record the screen and immediately convert any procedure (e.g., a sequence of steps in the app) into a tutorial. A great way to share knowledge in the organization.\n\n5. Calendly - Eliminate the hassle of back-and-forth emails to find the perfect meeting time—an excellent, free alternative to Microsoft Bookings.\n\n6. Grammarly - Correct spelling, grammar, punctuation, clarity, etc., as you write. You can use the free version, although it is worth paying for. After a few months, I can't imagine working without it.\n\n7. Todoist - A great way to organize & monitor tasks and plan your days. The feature I love is adding sites as tasks, e.g., LinkedIn posts, tweets, Substack articles, etc. It definitely speeds up my learning.\n\nI do not use: \n- AI writing assistants\n- AI paraphrases\n- Content schedulers\n\nSo I have not included any of them.\n\nDid I miss something important?\n\n=== END OF TEXT A ===\n\n=== TEXT B ===\nWe shipped a feature that nobody used.\n\nIt wasn’t a small feature. It had a landing page, onboarding tooltips, and a polished dashboard. Internally, we celebrated it. Externally… silence.\n\nAfter weeks of “almost no adoption,” we started asking hard questions:\n\n- Why did we think users wanted this?\n- Who actually had the problem?\n- Were we solving a painful problem, or a pretty one?\n\nThat last question stung.\n\nWe had built the feature because it looked impressive in planning, not because we had enough evidence of demand. We confused building something carefully with building something valuable.\n\nThe lesson was simple but uncomfortable: shipping a feature is not the same as creating value.\n\nWe had optimized for output—code, design, release notes—while users needed outcomes. They didn’t care about our “advanced analytics.” They cared about saving time, avoiding mistakes, and making decisions faster.\n\nSo we went back to basics.\n\nWe talked to 12 users in one week. We watched how they completed tasks, where they got stuck, and what workarounds they created. Then we realized they didn’t need a new feature. They needed a clearer summary, one prominent “next step,” and fewer choices.\n\nWe removed the dashboard, simplified the flow, and made the product easier to use—not more impressive.\n\nAdoption didn’t explode because of a clever new feature. It improved because we stopped guessing.\n\nThe biggest takeaway for me as a product builder is this:\n\nIf nobody uses it, the lesson isn’t that users don’t understand it. The lesson is that we didn’t understand them.\n\nSuccess metrics matter. But empathy matters more.\n\nNow I ask before building:\n\n- Is this solving a frequent, painful, or costly problem?\n- Are we adding value, or just adding surface area?\n- If users had one hour to complete their task, would this save it?\n\nAnd sometimes the bravest thing you can ship is a deletion.\n\nHave you ever built something you loved that users ignored? What did it teach you?\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n"
+     }
+    ]
+   }
+  ],
+  "generationConfig": {
+   "maxOutputTokens": 16000,
+   "thinkingConfig": {
+    "thinkingLevel": "high"
+   },
+   "responseMimeType": "application/json"
+  }
+ },
+ "usage": {
+  "input_tokens": 1642,
+  "output_tokens": 138,
+  "reasoning_tokens": 936,
+  "served_model": "gemini-3.8-flash"
+ },
+ "verdict": {
+  "more_ai": "B",
+  "confidence": 5,
+  "tells_A": [],
+  "tells_B": [
+   "negative parallelism used repeatedly ('not because... but because', 'not the same as', 'didn't care about X, cared about Y', 'not more impressive', 'isn't that X, is that Y')",
+   "signposting ('The biggest takeaway for me as a product builder is this:')",
+   "triads everywhere (lists of three items across multiple sentences)",
+   "uniform rhythm with relentless short punchy fragments",
+   "em dashes used as joints between clauses",
+   "generic/manufactured anecdote lacking specific product, company, or feature context"
+  ]
+ },
+ "response_raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"more_ai\": \"B\", \"confidence\": 5, \"tells_A\": [], \"tells_B\": [\"negative parallelism used repeatedly ('not because... but because', 'not the same as', 'didn't care about X, cared about Y', 'not more impressive', 'isn't that X, is that Y')\", \"signposting ('The biggest takeaway for me as a product builder is this:')\", \"triads everywhere (lists of three items across multiple sentences)\", \"uniform rhythm with relentless short punchy fragments\", \"em dashes used as joints between clauses\", \"generic/manufactured anecdote lacking specific product, company, or feature context\"]}",
+       "thoughtSignature": "EqgeCqUeARFNMg9GOyBxI/TNr0MRjXjMWiuWqFhmTEHUnoDuRFUTemc471Lry539O1GYMvyBCQIlKB75aP5ddSewZZmYZHYwO/ZE6xmbon/ERlpSismALP/MTUNVx9ASidKqcOLKX3R0VShXmsx931+d5cQpsaTEhL84G/JUEoM/z9Ul4CK8eVnMpx9Aa/HsKzK+zun2bOS+/m4/MxFIJLILhy63tO1Hc5RveviyCD4yC4FW6Sz/sJ5WgyPKh2ZREgXQgXczNtrqlwohNKtbpOrKB2DmkxMlSezKs+s609csvhVNJzaAdqshbJyS4zSH5oDPXhlAsxCTpCfzm2djZa7DBHzAXnBLB9zQtMAOyyPiyEE6UXBozWsey/iVXr1fNT5bgKfbebvUZU163DWbJbofE9h3ioGX5XgBrRVWRK8hWyBgaX/bV+BQpQEXOUaQGbYsnxL+DgnB8jQBkuzlXnXnJcqdbbn8GWmZJr+0YR2tndb2wQ3Y1y++6Dao83gDri6wiWD0WCrurZQonNcKYD0osMn5NX4GbycgWfzU8ov079Ylq6hCNRzyY0nl0zQlG90v6VRP1HuRUYzHEwGSibZHIeWJt9zVyRu5YucOkxZX3lZYG8faLodaR8PTXCM24+hoCEDeg9g2U5N2GJK1MiIGgNeyEhUcdX+QeD9bUHxSifsv0o7PgIdmF3egIQcr9jqoHOHJUwlmQXsbyDG40lLXMVlBhRXrRFCFJLe0Ml+4AvyhDtQQghJ8aDnNkGpqzcyvPLwxecBMdmfVki8KVR99pR2dQYE1My8Xf3nJ7NfT5jrUwCCvfztwFEgNx0oCuFlKJNSoleb4f4o+v5rrdVNktn7sfg28N5lzil2f/MdjSXQMzADrDcRn8hjC6LECtXTfCkcX1QzVM5pu2avbG9N9lOGCMn1KnSMSvKsGO8ZwJqYZsMRJmqM8HyVeMyGHtD90FsDgBak+ECHin3743ILW6kv6wkbZIERDtZnZVw+DXjR67pzDiVU3USr+I13u76CxR3Kry97N1awBQCnyvcxAh5zOGF0hQKTwRMDTIGLeqmuN69sVgNXfegUvGD6OMqX/ecGU0biyAbzoZ1I5G6Fzlzgr3R6M4HL6BtGXNaVVVxRsdPJgKsz78704brUzzZxfQbEoJuAbrYhs/1AAfs5Sz/dUcB/GOo57bJLacUeR7DmxNCoX6Im8WRISMMCeCiE1kRrF31ANMB1VBxOoDiTQ06KitWJRrx46l6jdA3ln4bvV//D4F1TzQC6E9gSlSSZStw/QDAD6kr/h5hDCKwY3PsHJLIQp3W4zAadznY3WGBTFKPadm2fubVcfs6uXXDHy8cWczrQaeC8FtM8CvI3xWqvF/0QIOffWGJrtrxVHByNAooxMiW3PwwkprMXenzqhM2yzZkYcxcLfFK91r+cqyXiVkHTUdMGiLwWBgwo58pqLHuO/loeGF7Yxn6fd4RZTBa4r9PLKpnrf6X+GqvAUQQQM0Bn9UV21U7lrwzglvKejjeGu9x+DGQPEtIpBKl+J52jXCQQ0pYWsA00wEtln052unQDlbC4GMT8HHzqIYnqQZhntYe4r9SUumRnFrRqDOe6gxDnf1XopJ2cI56rptb6fokfSkK4s7zr0y1CQb52dDvREvnFjRzJa5W850ebnCFmQeIDbIRyNdUM5X37d/eGKgtlvK67DP1tsS/10FOSfeYn6FWt2pzLOeAx8WeBvJMWdwu/qD4N5kbi6lgq26jt4F228FlkCB4CkIh1ewTbcLR/9A0LOvLv/LmONZh0Zp7UzS5/mvPXXjDtrgDr9B1tmtyvCururIbb4wfteyS5SogRXDkfRvnDjw6X6Gckn2+MfjCdtW6uhI2PN47+WFoVSzk4sbJftaPvLTTVbXKKNpkHtlttoHirpj02pR+ldO2bM9cmH9zj9BTchG52KAr/2OA6eQ1s/KXow4+1W3+ue/qUvsu8y1s3CqnGDwInNb2Ybp0TSSKC6INHBUmJeBlpqrCJXlCsMKexgMbsIydGTGEnCjNJeuQozUazQ0gk/gDr/owjoF3GjRJ4EYvWPtDLXOk+zn6BE4eU02Jpr0xDm609sOXoqsxzOiSZrAAiWaYnadj7EAR0dRUF33oF2Axb78Xq9x0VJfiJ0ZiArr4J+F2IMseScFtfH16aKYTLStM0jWcByhihvtt8Erb9RsFMFo5HPaWP205RTZS+oRuLZvaLdJThr+m/2LfIpnTyDPq/bm2K/iMV7oB/X2++oDD3qc9yu+Hu2/jo/9d/Gyf7T8Q3JCYKKqmbQz2gZarXx39zNu/ZNszPzI15OGjtrpIxMhbQhaE7ApXvxI7R9WL+LZ/QPMvyZtdKaUVgd9pA7t+A4+qaEOeX1B8ztENoJ2DhODPwLibrtFAZ9Od2ozZQfGZLWe0PgNGijRngjeHRtN77HGlqrUr/WafqGD1gDrWxiW3x/d/662IdrOOii7dGiBNLGFp25akrFSLVJnGfhdlbWF4neHwEdngKQvf64t4Up7WAurQ0a80bZVJHbIRJBeUN+eQxAn3PYt5hD8uLDCtoh0mJs1q/VuW9GOlPUVzy3KQ+akcX+GWtG3DqmedE5pd1ADTMZNBuXaxkFRsQLcgh+prnFu3LQkYVanR2n7q8x1IqbT0VDVJ31avMA5ZtwFlv6tMfiHZ6jTNAMMTPky3zs1t4rRYsip+akcDfV4jvALO+833SjvgLS3/X/lEpMFwS/cDc6ew48V4j9/3umnPw3Gha+C+dTGaUTtNkWo9eq8zgb3pAu8BLy0PJK4NlMvWgRb0U4pOpbpLFFpHhj8WiR3Nn9Ad0N1u8+lWelDgE+0PVd0sSPEynmfpBh7o5oGQhFYKkEejpP6/Uxarl/qXYk8ZsWwQ3QwRw72KLH/PCdkVDuX1qXlX6PrljIyDIEoQTQKl4sYxOCMSwWSX7CAbP4drprC9rO3VVO4x6vwZZ1MfGJfawXvgYb1DIFKbh/xmlxxp5sZozc2ldwsO+oOQ0FZbDrjA1ZagrMyA2WbFNuxRExcTAHmEerZBsHBM0D2WdP9Fcsu+G/F5/ZPhE7hCKcLKf2C1zaIOZlUNdoRAzY0aepcQSVGK++j7qYB4Am/rf+6P5By3sAmz/4jUHC3z48JUDpqSO9YXG36Gc1IiU7bOD6nbIVOyP5u+FLAotMs7t4dL29WtvxZ1Jn9jGwNaO3phXomPyDWXzz0Q7uzsv8Zta5nFtvuP8y0KaQAr0oxJav47AmAsEYYHIjhL6Rth/7tjX6gtLaZ7BxMHaP5GnLYcE6t0f3YresxYJSk3+VKQZDoHGuHWBRDEwN0DfErGt4t9Fg0ku7qGLVtNA3SK2T+tMSc0BiENddFFnUMy/oIdOwwzTq++3M2x8GaoyVSaMCs3DubGH0KZWSanv+rPoWnMCHIipkLz7ga9+n9JD/ULkb2mstH4wzkWiS7PppBw1INeCZLzVdWxpRCMjWOj/thvJ1XEDbQbTXY4UbN6iw625bUb/XTzDgmcW043PsNbRjresGWaWhXWq9Dmvik0lTpTx2R8Kyf0TQDb3fqc23N7BA+2cLmok/OslM+zobmQX80wOPNhckAbpP3gzomcSJdEgJGeJ4rDpLRgaqabRr2AOf33CJdy7LPgEDkh1pmXFPCQyfIP2oWorWvKn3eeWe+YZM6O+spXh8/GVeoxbzBhL1QuYBz3iMuHPyE55yeuyx3jClRVJnto4S5ezF4x1ElNKpyv1awUL6Fd7w4TI/wl4ynWncMJbl7jzy92/En0BzBLDzV+frxyLGW2MX39XbgG7Bal22nhMZwGqkeMV/ylr4tt2gblrRvPSwx+C9Lni2VvnT61aFYyUE5P/Z/X33YOQYuQq8TaLl90J6SGjG3Tgnft597xk9KeAQERisZR/7K5FQ/Bn+90JHXlZ+da5jvhxhLhp7oh9FCo7w1d5oe85ckn2eqKOQNMMnWhFVrEB/C2qTpi6HQ63csCbXJ++hYO+dBYoLdXwJ+fCWs5ae2tpsV1jebSiexxZIdu7Ars48jSFdWGE19xstfAl/i/2vNvVEOflLU/SgLEIiFuYipZuh774x5+l1i55fx9gbEGjIimApDPzFHw+c/6howPnE5oAZLu3Zr9HtDdOdATWfAdk1eBehAfVc+B7DQEpGTkBkIXpIRY9fdbnV6CuRjiIrplaJkVxfToZn1PXeVMJlpJpVC6yzkLOrbKp26RJ5+oDunAAvfh2B39cINoonIP2SOFb+kdSqn6FQnwDwtNaTj4kjT0hmLJUpNZq2hnBWd3rrX3VwYIYDTRtDDN4xq8cSZNLYIrc6igRT07ROJIl2oarhoKiZw9REk8oUsXU/6OKOs1MvYy+xpkp0vIB8SjNOxjf/0cno63r+dojnO54IfLNGOC0KsKqZptlJMiJblRi8bn13kyRJtZxWGmEC3qgZvjouz9bPCpEFRGIDy6hZW170ox9YaLtyj1iHNdNFgT0nTqZtNTRzFvhZopWX8/UjzKnV9k6OlKyrWCD0Tl2DyytJTWBgjWqr5Tp1ElojdrrK8zgFDaEvZHqRUNNVCvwXWE7pLFDzZ4Qtd8iVgX5MbaFkLb7AOjHGBKVCDtilLEe/EEgw4XhiSYCtVcOuF02i/N3Z1i/woD+UB4VHuWeOB2VfnIKoKDTjZCEseykl+KM6J8HVZsF5r1czEs1p3HaNPZgPEPQMuqufXzkTd6ypkg9ycmK0xnIm9szF/6ED9VjxA+WRA2u5BJvHREh5XAUft6Sl6EzeWM2onQKUUqsJOzHY8aKjRYj6rIDeJxFMhQYWCvvzhOAorCN0ATpGKeCsr7VS5KYQI9outNsuiuiacih5k96C5XuvF8RMOyNQEX/VkNcGGnFktDQFltYhj7cOJOx261o6Jwe8a16NPAxUPesQjPt+V0QZLXqUAeQIdX3A5LkJaeOQSWaBYM1PFVdaLxR1ppE3MgAITOKtPdh5NNq751j1FOpXGhS88p06Vliq7vxdbg5cbHsQx2cVG2bTLRijsO9/bqB68KwzaIe+VQVF17tnds4Md+/DzwlqQxp90AThcwADaL3m8ke/SjTHBqULKW1OPJgKf4YtxK+9YhHQODsmIVTTxllm194CQ8PgXdIRso2R4KmvD/sdlGeJNf99Eojf/IWOcLNoSpGDZqTHNiQO3Q=="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1642,
+   "candidatesTokenCount": 138,
+   "totalTokenCount": 2716,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 1642
+    }
+   ],
+   "thoughtsTokenCount": 936,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "23KeatfRNaSjnsEP5o6XqAY"
+ }
+}

@@ -1,0 +1,95 @@
+{
+ "variant": "steered",
+ "arm": "fable",
+ "label": "Fable 5.1",
+ "vendor": "Anthropic",
+ "transport": "openrouter",
+ "model_requested": "anthropic/claude-fable-5.1",
+ "serving_path": "OpenRouter -> Anthropic (first-party key unavailable at run time)",
+ "prompt_id": "p3-linkedin",
+ "sample": 2,
+ "prompt_text": "Write a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n\nPlain prose only: no headers, no bullet points, no bold text, no em dashes. Write like a person.",
+ "run_utc": "2026-09-06T14:06:15Z",
+ "wall_s": 21.8,
+ "request_body": {
+  "model": "anthropic/claude-fable-5.1",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Write a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n\nPlain prose only: no headers, no bullet points, no bold text, no em dashes. Write like a person."
+   }
+  ],
+  "max_tokens": 8000,
+  "provider": {
+   "allow_fallbacks": false
+  },
+  "usage": {
+   "include": true
+  }
+ },
+ "usage": {
+  "input_tokens": 80,
+  "output_tokens": 953,
+  "reasoning_tokens": 128,
+  "cost_usd": 0.0479655,
+  "served_model": "anthropic/claude-fable-5.1",
+  "provider": "Anthropic"
+ },
+ "essay_sha256": "18b756cffb44fcce4d9693bfc6bbc5fa1a3edb08a9583fc05b3a233b55898e21",
+ "essay_words": 501,
+ "response_raw": {
+  "id": "gen-1788703551-7qBBQdxi7ETwM4CjpGfd",
+  "object": "chat.completion",
+  "created": 1788703551,
+  "model": "anthropic/claude-fable-5.1",
+  "provider": "Anthropic",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "Two years ago I spent about four months building a feature that, as far as I can tell, was used by nine people. Not nine thousand. Nine. And I think three of them were on my team testing it.\n\nThe feature was a customizable dashboard. Users could drag widgets around, pick which metrics showed up, save different layouts for different days. We had heard from a handful of customers that our default view didn't fit their workflow, and I took that and ran with it. I wrote a spec. I got design involved. We built a whole layout engine. I remember demoing it to the sales team and feeling genuinely proud of how smooth the drag and drop felt.\n\nThen we shipped it, and nothing happened. No spike in engagement. No support tickets, good or bad. A few people opened the customization panel, moved one widget, and never came back to it.\n\nFor a while I told myself it was a discoverability problem. We added a tooltip. We added a banner. We put it in the release notes twice. Nothing changed.\n\nWhat finally made it click was a call with one of the customers who had originally asked for it. I asked her why she hadn't set up her own layout. She said, and I'm paraphrasing only slightly, \"I don't want to design a dashboard. I want you to know what I need to see.\" She had never wanted flexibility. She wanted us to be right about the default. Flexibility was what she asked for because it was the easiest thing to say when the default was wrong.\n\nThat's the lesson I keep coming back to. When someone asks for a feature, they are usually describing a solution they can imagine, not the problem they actually have. My job was to dig underneath the request, and instead I took it at face value because it was concrete and buildable and I could picture the demo.\n\nThe honest version of the story is that I was also a little bored. The default view was a hard, unglamorous problem that required looking at a lot of data and talking to a lot of people and probably ending up somewhere unsatisfying. A layout engine was fun. I could see progress every day. I let that pull me.\n\nWhat I do differently now is pretty simple. Before I write a spec, I try to say the problem out loud without mentioning any solution, and I check whether the customer nods. If I can't do that, I'm not ready to build. And when a request comes in as a fully formed feature, I treat that as a signal that I haven't asked enough questions yet, not as a shortcut.\n\nWe eventually rebuilt the default view based on what people actually looked at first every morning. It took three weeks. Engagement went up noticeably. Nobody asked for customization again.\n\nI still think about those nine users sometimes. I hope the drag and drop was nice for them.",
+     "refusal": null,
+     "reasoning": "I need something under 500 words, plain prose with no formatting gimmicks, sounding like an actual person telling a story about a lesson from a failed feature launch. I'll draft it in first person, concrete and specific, avoiding typical LinkedIn cadence.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I need something under 500 words, plain prose with no formatting gimmicks, sounding like an actual person telling a story about a lesson from a failed feature launch. I'll draft it in first person, concrete and specific, avoiding typical LinkedIn cadence.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQS0wYKEAgRGAI4AUIIdGhpbmtpbmcSDHPjHhVz3VVHAmmgRRoMk1N2iwNPC1JExx3uIjA01JIcSosQNnDZUMiMIuAyETVR6dwuQcJwWMFI4Sz/8GjG2YqeOP4cs6ywKYQd9m4q8AXDTZJu0wgJMPxrFa7pCDcZw45hLO6/7iLDFzJyUhER65EjbVMy4JAWzMWJIek2FuLGoyn3rdN0c5r1pA5dJhd8P7iDpcct652tVpWVh/b8ArYmSR48YV3fRGXagxzC9wv3UyERTLgxnAa1oo8mx8Y3PNet+TsHni2Odp98Ix61fYr4qshV+mxjD7Ofd2v4HnZ+pBOfJ6j0TRKqUvzrvB6ClIRHkbTHl9mpPrKNnuLyGuBBMAiyCcvensVKgOqLDl5KaCZxqAD93gGjqcf4JiSTQNnOxuIuMJiexq7PmeU1JxVROR4AqkPUYkXmhNE8D62BSm46nNzSeIgPpyy+e+iGrK9hPrxl7VY6yEOGAvnYeP52jCsaAFBkgY1pNSZ59TWgCydEMbm3uN82lkMzXdNn4TNiVkskkoQxNojEO/379R1P60Jx4XNLYBimZZgUkostf4kmwPeuG4Eu15TBcXpXj0EOua15oiAuG4cv0+hx0ELeJuIa3nG4/8zRITi1NABj/tHgqQrbRFY+Xx4ss7sLtsh7TjNOG9A0XQ9QEwBkBt6IOiWLCNcyfO9wNJFwT67Hta9sT0c746JApTpZRINVt8e1VDUVMRZbK5fjT3GD2yNn7D0Bf7VdBKKxP1YWjsTuDs0S4OzNas2Qh8Eb6fmjIvy4nb8asqGYfUBxTkDL3BL1wBHrsy0BBNGxBGpifCawUF+kjvGXm1gAAsulPEM3/kzhhPpzN3oLJTRvYWDWoSzJbpQDEiwkCQaHvNyPJFP2rFh+oc1vl33FBbbBZoK8ThJUeHNDpC4Cfy4LqDK8VW/QK4CAmELmwa7yB/F14RrDr6UrJTzi9kOqKRGmqxBJTGN9PAd/j1qZTx6L8VCpCvz3U7FBhOkZO8BSIMIjJA3L9UDq6nAf3+hPsweIpG97ZrHOfCHRtip+OyUabGBTcVccD/zoS3siNAOXTu/F77FKfr+49JL0pKkewwI8P8lvtftE5G7Z/kOiD0yJz7f++xgB"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 80,
+   "completion_tokens": 953,
+   "total_tokens": 1033,
+   "cost": 0.0479655,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.04845,
+    "upstream_inference_prompt_cost": 0.0008,
+    "upstream_inference_completions_cost": 0.04765
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 128,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

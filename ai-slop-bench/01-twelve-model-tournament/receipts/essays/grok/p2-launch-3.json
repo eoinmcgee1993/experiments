@@ -1,0 +1,71 @@
+{
+ "arm": "grok",
+ "label": "Grok 4.6",
+ "vendor": "xAI",
+ "transport": "xai_chat",
+ "model_requested": "grok-4.6",
+ "serving_path": "xAI first-party, chat completions",
+ "prompt_id": "p2-launch",
+ "sample": 3,
+ "run_utc": "2026-09-06T13:24:55Z",
+ "wall_s": 11.3,
+ "request_body": {
+  "model": "grok-4.6",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Write a launch announcement of up to 500 words for a new feature of a B2B helpdesk product: a Slack integration that posts a daily summary of open support tickets to a channel of the customer's choice. The audience is existing customers."
+   }
+  ],
+  "max_tokens": 8000
+ },
+ "usage": {
+  "input_tokens": 685,
+  "output_tokens": 321,
+  "reasoning_tokens": 261,
+  "cost_usd": null,
+  "served_model": "grok-4.6",
+  "provider": null
+ },
+ "essay_sha256": "8840529ce12d775a40724609bf6487b6df74c9ae5e7a749f47a7e104c246fb7f",
+ "essay_words": 254,
+ "response_raw": {
+  "id": "5f269d39-1576-95f4-b664-77b130d01157",
+  "object": "chat.completion",
+  "created": 1788701082,
+  "model": "grok-4.6",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "**Your open tickets, now in Slack—every morning.**\n\nWe’re launching a new Slack integration that posts a daily summary of your open support tickets to a channel you choose.\n\nEach morning, your team can see what’s still open, what’s aging, and what needs attention—without leaving Slack or logging into the helpdesk first.\n\n**What’s in the summary**\n- Count of open tickets, grouped by status and priority  \n- Tickets approaching or past SLA  \n- Recently assigned or unassigned items  \n- A short list of the most urgent conversations, with links back into the helpdesk  \n\nYou pick the channel (a dedicated support room, a leadership digest, or an existing ops channel) and the time that matches your team’s day.\n\n**Why we built this**\nMany of you already live in Slack. Checking the queue shouldn’t mean another tab, another login, or a missed SLA because someone didn’t open the dashboard. A single, reliable daily post keeps support, CS, and managers aligned on what’s still open—especially across time zones and hybrid teams.\n\nThis is available now for existing customers on plans that include integrations. Admins can connect Slack, choose the channel, and turn on the daily summary in a few minutes from **Settings → Integrations → Slack**.\n\nIf you’d rather not have it in Slack, nothing changes: the helpdesk, reports, and notifications work as they do today. This is an opt-in addition, not a replacement.\n\nQuestions or a channel that needs a custom cadence? Reply to this note or ping your CSM—we’re happy to help you turn it on.",
+     "reasoning_content": "The user wants a launch announcement of up to 500 words for a new feature of a B2B helpdesk product: a Slack integration that posts a daily summary of open support tickets to a channel of the customer...",
+     "refusal": null
+    },
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 685,
+   "completion_tokens": 321,
+   "total_tokens": 1267,
+   "prompt_tokens_details": {
+    "text_tokens": 685,
+    "audio_tokens": 0,
+    "image_tokens": 0,
+    "cached_tokens": 640
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 261,
+    "audio_tokens": 0,
+    "accepted_prediction_tokens": 0,
+    "rejected_prediction_tokens": 0
+   },
+   "num_sources_used": 0,
+   "cost_in_usd_ticks": 39020000
+  },
+  "system_fingerprint": "fp_e41c6060b2628547",
+  "service_tier": "default"
+ }
+}

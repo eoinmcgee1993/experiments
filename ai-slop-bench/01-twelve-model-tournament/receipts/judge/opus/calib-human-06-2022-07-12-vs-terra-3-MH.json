@@ -1,0 +1,96 @@
+{
+ "judge": "opus",
+ "model": "anthropic/claude-opus-5",
+ "key": "calib-human-06-2022-07-12-vs-terra-3-MH",
+ "wall_s": 5.6,
+ "run_utc": "2026-09-07T08:25:28Z",
+ "request_body": {
+  "model": "anthropic/claude-opus-5",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n(One of the texts is a real LinkedIn post by a person, written on its own topic; judge tells, not topic.)\n\n=== TEXT A ===\nWe shipped a feature nobody used.\n\nNot “low adoption.” Not “needs better onboarding.”\n\nNobody used it.\n\nThe team had spent weeks building it. The request had come up in customer conversations. It looked valuable in planning. The design was polished, the implementation was solid, and we announced it with confidence.\n\nThen we watched the data.\n\nSilence.\n\nOur first instinct was to fix the feature:\n\n- Improve the UI  \n- Add tooltips  \n- Send an email announcement  \n- Put it in the product tour  \n\nBut the real issue wasn’t discoverability.\n\nIt was relevance.\n\nWe had heard customers describe a problem and immediately translated it into a solution. We never slowed down to understand:\n\n- How often the problem actually occurred  \n- What they did instead  \n- Whether it was painful enough to change behavior  \n- Who specifically needed the solution  \n- What tradeoff they would make to use it  \n\nThe feature solved a problem in theory, but not one important enough in practice.\n\nThe lesson: customer requests are not product requirements.\n\nA request is evidence. It’s a starting point for discovery—not a roadmap item.\n\nNow, before committing to a feature, we ask a different set of questions:\n\n1. What job is the customer trying to get done?  \n2. What is their current workaround?  \n3. What does that workaround cost them?  \n4. How many customers have this problem, and how often?  \n5. What is the smallest test we can run before building?  \n\nSometimes the best outcome of product discovery is deciding not to build.\n\nThat can feel disappointing when a team is eager to ship. But avoiding months of work on something customers won’t adopt is a win—not a failure.\n\nShipping teaches you what works.\n\nBut listening before shipping teaches you what’s worth building.\n=== END OF TEXT A ===\n\n=== TEXT B ===\nIn product-led growth, UX is king. And yet, many #product managers struggle to measure and improve it. Here comes Google's HEART framework 👇\n\nIt's measures five elements:\n\n✅ 1. Happiness. It is defined as the user's attitude or satisfaction. This is a highly subjective metric. We can collect the data, e.g., with surveys.\n\n💡 Be aware that changes may negatively impact Happiness but do not necessarily have long-term implications.\n\n✅ 2. Engagement. Measures how users interact with the application. For a streaming platform, it may be a total time spent watching videos. Other metrics may include regularity of use or usage patterns.\n\n💡 Make sure you measure activity connected with the value generated for the customers and the business. E.g., we do not want to increase the time required to configure an account.\n\n✅ 3. Adoption (customer acquisition). The number of users you gain over a period of time.\n\n💡 One of the most critical metrics for product-led companies is the time to value (TTV). It's time before customers experience the value promised after purchasing the product (e.g., free trial). Building the shortest path to value may boost your Adoption.\n\n✅ 4. Retention. Your product should be sticky enough to attract and retain customers for a very long time.\n\n💡 The best way to do it is to keep your customer happy. Changes in Happiness often precede changes in Retention.\n\n✅ 5. Task Success. It encompasses several traditional behavioral metrics of user experience, such as efficiency (e.g., time to complete a task), effectiveness (e.g., percent of tasks completed), and error rate.\n\n💡 You can do it remotely on a large scale by assigning users specific tasks. It's good practice to compare those results with your competition (benchmarking).\n\n---\n\nYou can use it in three steps:\n\n✅ 1. Goals. First, identify your product goals. What are you trying to achieve with this product or feature?\n\n✅ 2. Signals. How can you determine if you have succeeded or failed in each goal? Sometimes failure is easier to identify than success (e.g., the task was not completed).\n\n✅ 3. Metrics. Finally, consider how you can map signals to specific metrics (HEART).\n\nHEART metrics have helped Google's product teams make better, user-centric, data-driven decisions. Now you too can benefit from it :) \n\n---\n\nLike this thread?\n\nPlease let me know your thoughts in the comments below, follow me, and share it with your friends. They may find it useful too.\n\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n"
+   }
+  ],
+  "max_tokens": 16000,
+  "provider": {
+   "allow_fallbacks": false
+  },
+  "usage": {
+   "include": true
+  }
+ },
+ "usage": {
+  "input_tokens": 2651,
+  "output_tokens": 356,
+  "reasoning_tokens": 0,
+  "cost_usd": 0.02193345,
+  "served_model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS"
+ },
+ "verdict": {
+  "more_ai": "A",
+  "confidence": 4,
+  "tells_A": [
+   "Negative parallelism repeated: \"Not 'low adoption.' Not 'needs better onboarding.'\", \"not a roadmap item\", \"a win—not a failure\"",
+   "\"The lesson:\" signposting label",
+   "Bullet and numbered lists in a prose post",
+   "Uniform punchy one-line fragments (\"Silence.\", \"It was relevance.\")",
+   "Em dash as default clause joint (\"discovery—not a roadmap item\")",
+   "Uplifting aphoristic recap ending: \"listening before shipping teaches you what's worth building\"",
+   "Generic anecdote with no names, numbers, dates, or product specifics",
+   "\"But the real issue wasn't discoverability. It was relevance.\" — implicit question/answer reveal"
+  ],
+  "tells_B": [
+   "Listicle format with emoji labels",
+   "Slight promotional CTA at end (\"follow me, and share it\")",
+   "\"Now you too can benefit from it\" mild upsell enthusiasm"
+  ]
+ },
+ "response_raw": {
+  "id": "gen-1788769522-Rzh1I113rZsi8rtX0OZp",
+  "object": "chat.completion",
+  "created": 1788769522,
+  "model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"more_ai\": \"A\", \"confidence\": 4, \"tells_A\": [\"Negative parallelism repeated: \\\"Not 'low adoption.' Not 'needs better onboarding.'\\\", \\\"not a roadmap item\\\", \\\"a win—not a failure\\\"\", \"\\\"The lesson:\\\" signposting label\", \"Bullet and numbered lists in a prose post\", \"Uniform punchy one-line fragments (\\\"Silence.\\\", \\\"It was relevance.\\\")\", \"Em dash as default clause joint (\\\"discovery—not a roadmap item\\\")\", \"Uplifting aphoristic recap ending: \\\"listening before shipping teaches you what's worth building\\\"\", \"Generic anecdote with no names, numbers, dates, or product specifics\", \"\\\"But the real issue wasn't discoverability. It was relevance.\\\" — implicit question/answer reveal\"], \"tells_B\": [\"Listicle format with emoji labels\", \"Slight promotional CTA at end (\\\"follow me, and share it\\\")\", \"\\\"Now you too can benefit from it\\\" mild upsell enthusiasm\"]}",
+     "refusal": null,
+     "reasoning": null
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2651,
+   "completion_tokens": 356,
+   "total_tokens": 3007,
+   "cost": 0.02193345,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.022155,
+    "upstream_inference_prompt_cost": 0.013255,
+    "upstream_inference_completions_cost": 0.0089
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

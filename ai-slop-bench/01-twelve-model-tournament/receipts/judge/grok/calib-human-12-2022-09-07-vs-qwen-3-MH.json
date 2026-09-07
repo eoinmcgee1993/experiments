@@ -1,0 +1,85 @@
+{
+ "judge": "grok",
+ "model": "grok-4.6",
+ "key": "calib-human-12-2022-09-07-vs-qwen-3-MH",
+ "wall_s": 55.9,
+ "run_utc": "2026-09-07T08:40:03Z",
+ "request_body": {
+  "model": "grok-4.6",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n(One of the texts is a real LinkedIn post by a person, written on its own topic; judge tells, not topic.)\n\n=== TEXT A ===\nWe shipped a feature everyone thought was brilliant.\n\nExcept: nobody used it.\n\nNot a single customer opened it. No tickets asking for it. No dashboards lighting up. Just silence.\n\nAt first, I blamed the launch. Maybe the copy was unclear. Maybe the UI was buried. Maybe we didn’t promote it enough.\n\nBut the truth was harder: we built the wrong thing.\n\nThe lesson I learned is not “fail fast.” It’s “listen better before you build.”\n\nWe had data, but we used it to justify a decision we’d already made. We listened to one loud customer and assumed it was a market signal. We confused enthusiasm from stakeholders with demand from users.\n\nThat feature didn’t fail because engineering was slow or design was weak. It failed because we optimized for certainty instead of curiosity.\n\nSince then, we changed how we approach new features:\n\n1. Talk to the problem, not the solution.\nIf we can’t explain a specific user pain in their words, we pause.\n\n2. Make the smallest bet.\nBefore full builds, we ship tests: prototypes, gated flags, manual workflows, fake doors. We want evidence, not applause.\n\n3. Measure adoption early.\nIf users don’t understand it, use it, or return to it within the first week, we treat that as a finding, not a fluke.\n\n4. Be willing to delete it.\nWe now schedule reviews for every shipped feature. If it isn’t delivering value, we retire it without ego.\n\nThat unused feature cost us weeks. But it also saved us months of building more things nobody wanted.\n\nThe best product teams don’t ship the most. They learn the fastest—and have the discipline to stop when the signal says “no.”\n\nSometimes a feature that nobody used is the most valuable one you’ll ever ship.\n\nIt just forces you to learn something you’d rather not hear.\n=== END OF TEXT A ===\n\n=== TEXT B ===\nDropbox grew from 100K to 4m users in 15 months.\n\nWith no sales reps! How is that even possible?\n\nDropbox used the viral engine of growth. Like a virus, the viral engine places the growth emphasis on increasing person-to-person transmission. This type of growth is, by design, exponential.\n\nThere are three common strategies you may consider:\n\n1. Inherent - When the product itself requires sharing (e.g., DropBox, Miro)\n\n2. Artificial - Sharing is connected with the reward system (e.g., Revolut, many banks)\n\n3. Word-of-mouth - When customers recommend the product, they tried to others (e.g., Uber, Canva)\n\nOne key metric PMs need to track is the viral coefficient, which is the number of new customers that an existing customer generates. If the viral coefficient > 1, your business can grow like crazy.\n\nTLTR \n\nLet's say every customer sends 20 friend invitations with a conversion rate of 15% (3 colleagues accept invitations). Then your viral coefficient is 3.0.\n\nIn the example above, after only 13 cycles, you'll have 3¹² = 531,441 customers. But if the viral coefficient is 2.5, the result would be only 2.5¹²=59,605 customers.\n\nAs we can see, even tiny changes in the viral coefficiency will cause dramatic changes in the results. Companies using the viral engine must focus on the viral coefficient more than anything else.\n\n- \n\nThe viral engine of growth helped Dropbox to grow impressively. However, in my opinion, nothing can be done without a product that creates real value. \n\nTalk to your customers. Try to emphasize them. What are their problems, needs, and desires? What do they care about? What are they afraid of? What do they not know about themselves? \n\nFinally, what is the cheapest way to test your assumptions? (Dropbox used the Video MVP)\n\n#productmanagement #startups\n\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n"
+   }
+  ],
+  "max_tokens": 16000,
+  "stream": true,
+  "stream_options": {
+   "include_usage": true
+  }
+ },
+ "usage": {
+  "input_tokens": 2244,
+  "output_tokens": 129,
+  "reasoning_tokens": 3383,
+  "cost_usd": null,
+  "served_model": "grok-4.6",
+  "provider": null
+ },
+ "verdict": {
+  "more_ai": "A",
+  "confidence": 5,
+  "tells_A": [
+   "not X / it's Y negative parallelism (repeated)",
+   "relentless short punchy fragments",
+   "triads (maybes; we-clauses; understand/use/return)",
+   "numbered lesson list",
+   "generic anecdote with no names/dates/numbers",
+   "every point lands; uplifting closer",
+   "em dash as clause joint"
+  ],
+  "tells_B": [
+   "rhetorical question then answer",
+   "signposting (three strategies; as we can see; finally)",
+   "numbered triad list",
+   "However filler transition"
+  ]
+ },
+ "response_raw": {
+  "id": "eb8c0fff-e3a8-94e4-b563-44634e9c0248",
+  "model": "grok-4.6",
+  "created": 1788770402,
+  "system_fingerprint": "fp_e41c6060b2628547",
+  "object": "chat.completion",
+  "streamed": true,
+  "usage": {
+   "prompt_tokens": 2244,
+   "completion_tokens": 129,
+   "total_tokens": 5756,
+   "prompt_tokens_details": {
+    "text_tokens": 2244,
+    "audio_tokens": 0,
+    "image_tokens": 0,
+    "cached_tokens": 1280
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 3383,
+    "audio_tokens": 0,
+    "accepted_prediction_tokens": 0,
+    "rejected_prediction_tokens": 0
+   },
+   "num_sources_used": 0,
+   "cost_in_usd_ticks": 236400000
+  },
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "{\"more_ai\": \"A\", \"confidence\": 5, \"tells_A\": [\"not X / it's Y negative parallelism (repeated)\", \"relentless short punchy fragments\", \"triads (maybes; we-clauses; understand/use/return)\", \"numbered lesson list\", \"generic anecdote with no names/dates/numbers\", \"every point lands; uplifting closer\", \"em dash as clause joint\"], \"tells_B\": [\"rhetorical question then answer\", \"signposting (three strategies; as we can see; finally)\", \"numbered triad list\", \"However filler transition\"]}"
+    }
+   }
+  ]
+ }
+}

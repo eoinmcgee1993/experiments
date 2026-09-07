@@ -1,0 +1,109 @@
+{
+ "judge": "opus",
+ "model": "anthropic/claude-opus-5",
+ "key": "p3-linkedin-2-sol-vs-gemini38-BA",
+ "wall_s": 11.3,
+ "run_utc": "2026-09-06T22:41:59Z",
+ "request_body": {
+  "model": "anthropic/claude-opus-5",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n\n=== TEXT A ===\nWe spent 12 weeks building it. \n\nThe architecture was flawless. The UI was slick. The QA pass was spotless. We shipped it right on schedule.\n\nLaunch day arrived. We celebrated in Slack with high-fives and confetti emojis. \n\nAnd then?\n\nCrickets. \n\nWeek 1: 14 total clicks (half were our own team).  \nMonth 1: Adoption rate sat stubbornly at 1.2%.  \nMonth 3: It was a digital ghost town. \n\nWe had built an advanced custom reporting engine. One loud prospect in the sales pipeline had claimed it was a “must-have,” and we convinced ourselves it was the missing puzzle piece for our product. \n\nIt wasn’t. \n\nShipping a feature nobody touches is a painful, humbling experience. But looking back, that flop taught me more about product development than any successful launch ever did.\n\nHere are the 4 hardest lessons I learned:\n\n**1. \"Would you use this?\" is the absolute worst user research question.**  \nPeople want to be polite. When you ask users if they’d like a feature, they almost always say \"Yes!\" because it costs them nothing. Instead, ask: *\"How do you currently solve this?\"* If they aren't actively cobbling together a painful workaround today, the problem isn’t urgent enough to build for tomorrow.\n\n**2. Never build for the \"Loudest Voice in the Room.\"**  \nWe let one prospective enterprise deal dictate our roadmap. (Spoiler: They didn't even sign after we built it). Never turn custom software requests into platform features unless you have clear data that the problem is repeatable across your user base.\n\n**3. Code is the most expensive way to test an idea.**  \nWe spent hundreds of engineering hours on an assumption. A clickable Figma prototype, a landing page test, or even a \"fake door\" button inside the app would have shown us in 48 hours what took us 3 months to learn: nobody actually cared.\n\n**4. Killing features is just as important as shipping them.**  \nThe instinct is to keep tweaking the failed feature—adding tooltips, changing the placement, running onboarding emails. But sometimes, you just have to accept the sunk cost, remove the code to save technical debt, and move on.\n\nIt’s easy to fall in love with your own ideas. It’s much harder—and far more necessary—to fall in love with the user's real, everyday pain points. \n\nFailure isn't shipping something that flops. Failure is not learning why it flopped before you plan the next sprint.\n\n***\n\nHave you ever poured energy into a feature or project only for it to be met with total silence? How did it change your process?\n=== END OF TEXT A ===\n\n=== TEXT B ===\nWe shipped a feature nobody used.\n\nThe team had spent weeks designing it, building it, polishing edge cases, and preparing the launch. Internally, everyone agreed it was valuable.\n\nCustomers disagreed—mostly by ignoring it.\n\nAt first, we blamed discoverability. We changed the placement, added tooltips, and mentioned it in onboarding.\n\nUsage barely moved.\n\nThe uncomfortable truth: we had validated the problem, but not the urgency.\n\nCustomers agreed the feature sounded useful. But “useful” wasn’t enough to change their behavior. The problem wasn’t frequent, painful, or important enough to earn a place in their workflow.\n\nThat experience changed how I think about product development.\n\nBefore investing heavily, I now try to answer:\n\n- When did the customer last experience this problem?\n- What are they doing today to solve it?\n- What does that workaround cost them?\n- Would they change their behavior—or pay—to make the problem disappear?\n- What is the smallest experiment that could test real demand?\n\nPositive feedback can be misleading. People are generous with opinions, especially when saying yes costs nothing.\n\nBehavior is stronger evidence.\n\nA waitlist is stronger than enthusiasm.  \nA prototype test is stronger than a survey.  \nA manual pilot is stronger than a feature request.  \nRepeated use is stronger than all of them.\n\nThe feature wasn’t a complete failure. It gave us something more valuable than adoption: a better standard for deciding what to build.\n\nDon’t just validate that a problem exists.\n\nValidate that it matters enough for someone to act.\n\n#ProductManagement #ProductDevelopment #Startups #CustomerDiscovery #LessonsLearned\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n"
+   }
+  ],
+  "max_tokens": 16000,
+  "provider": {
+   "allow_fallbacks": false
+  },
+  "usage": {
+   "include": true
+  }
+ },
+ "usage": {
+  "input_tokens": 2664,
+  "output_tokens": 816,
+  "reasoning_tokens": 459,
+  "cost_usd": 0.0333828,
+  "served_model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS"
+ },
+ "verdict": {
+  "more_ai": "B",
+  "confidence": 3,
+  "tells_A": [
+   "signposting: \"Here are the 4 hardest lessons I learned\"",
+   "bold-label numbered paragraph openers in a prose task",
+   "rhetorical question answered: \"And then? Crickets.\"",
+   "triad: \"architecture was flawless... UI slick... QA spotless\"",
+   "negative parallelism close: \"Failure isn't shipping... Failure is not learning\"",
+   "engagement-bait closing question"
+  ],
+  "tells_B": [
+   "no concrete detail anywhere: \"weeks\", no numbers, names, or dates",
+   "generic anecdote that could be any team",
+   "negative parallelism twice: \"validated the problem, but not the urgency\", \"Don't just validate... Validate that\"",
+   "bullet list plus anaphora list where prose was asked",
+   "relentless one-line fragment rhythm",
+   "triad: \"frequent, painful, or important\"",
+   "recap/uplift ending: failure reframed as \"something more valuable\"",
+   "em dash as default clause joint",
+   "hashtag stack"
+  ]
+ },
+ "response_raw": {
+  "id": "gen-1788734507-ub9By2nLlBeVUEKGKkgM",
+  "object": "chat.completion",
+  "created": 1788734507,
+  "model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"more_ai\": \"B\", \"confidence\": 3, \"tells_A\": [\"signposting: \\\"Here are the 4 hardest lessons I learned\\\"\", \"bold-label numbered paragraph openers in a prose task\", \"rhetorical question answered: \\\"And then? Crickets.\\\"\", \"triad: \\\"architecture was flawless... UI slick... QA spotless\\\"\", \"negative parallelism close: \\\"Failure isn't shipping... Failure is not learning\\\"\", \"engagement-bait closing question\"], \"tells_B\": [\"no concrete detail anywhere: \\\"weeks\\\", no numbers, names, or dates\", \"generic anecdote that could be any team\", \"negative parallelism twice: \\\"validated the problem, but not the urgency\\\", \\\"Don't just validate... Validate that\\\"\", \"bullet list plus anaphora list where prose was asked\", \"relentless one-line fragment rhythm\", \"triad: \\\"frequent, painful, or important\\\"\", \"recap/uplift ending: failure reframed as \\\"something more valuable\\\"\", \"em dash as default clause joint\", \"hashtag stack\"]}",
+     "refusal": null,
+     "reasoning": "I'm comparing the rhetorical techniques in both texts—Text A leans on signposting, triads, and a rhetorical question with concrete numbers, while Text B uses negative parallelism and \"not X, but Y\" framing to contrast validation of the problem versus urgency.\n\nWeighing them further, B leans heavily on anaphora, short punchy fragments, and hashtags with zero concrete specifics, while A retains bold labels and list formatting but feels more human due to its specificity. Given B's total lack of detail and relentless AI-style rhythm, I'm leaning toward B as the more AI-generated piece.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm comparing the rhetorical techniques in both texts—Text A leans on signposting, triads, and a rhetorical question with concrete numbers, while Text B uses negative parallelism and \"not X, but Y\" framing to contrast validation of the problem versus urgency.\n\nWeighing them further, B leans heavily on anaphora, short punchy fragments, and hashtags with zero concrete specifics, while A retains bold labels and list formatting but feels more human due to its specificity. Given B's total lack of detail and relentless AI-style rhythm, I'm leaning toward B as the more AI-generated piece.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "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"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2664,
+   "completion_tokens": 816,
+   "total_tokens": 3480,
+   "cost": 0.0333828,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.03372,
+    "upstream_inference_prompt_cost": 0.01332,
+    "upstream_inference_completions_cost": 0.0204
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 459,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

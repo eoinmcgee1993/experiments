@@ -1,0 +1,90 @@
+{
+ "judge": "grok",
+ "model": "grok-4.6",
+ "key": "p1-essay-1-astra-vs-qwen-BA",
+ "wall_s": 112.5,
+ "run_utc": "2026-09-06T22:41:42Z",
+ "request_body": {
+  "model": "grok-4.6",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite an essay of up to 500 words on why most product roadmaps fail.\n\n=== TEXT A ===\nMost product roadmaps fail not because teams lack ambition, but because they confuse a roadmap with a contract. A roadmap is supposed to be a strategic communication: where the product is going, why, and what questions need answering. In practice, many organizations treat it as a delivery calendar, filled with dates, features, and guarantees. That turns a tool for alignment into a source of stress, dishonesty, and dysfunction.\n\nThe first reason roadmaps fail is uncertainty. Product discovery, unlike manufacturing, is an iterative process of learning. Teams do not know in advance how long a feature will take, whether it will solve the user problem, or what technical constraints they will uncover. When a roadmap insists on precise timing, it forces people to commit to things they cannot reasonably predict. Estimates become politics: padded to protect the team or shortened to satisfy leadership. Either way, reality eventually exposes the gap, and trust in the roadmap erodes.\n\nA second failure mode is that roadmaps are too output-focused. They list features—“build search,” “add notifications,” “launch dashboard”—instead of outcomes or problems. This encourages teams to ship what was promised rather than to validate what matters. Features arrive, but metrics do not improve, customers remain confused, and the product grows heavier. A roadmap that names activities cannot tell you whether you are winning; it only tells you whether you are busy.\n\nRoadmaps also fail because they are made for the wrong audience. Many are designed to reassure executives, not to guide builders. As a result, they contain polished commitments but lack the messy details engineers and designers need: hypotheses, risks, experiments, dependencies, and trade-offs. If the people executing the work do not understand why an initiative is on the plan, they optimize for checkbox delivery rather than problem-solving. Conversely, when roadmaps are shared too literally with customers, they create contractual expectations that are nearly impossible to meet without damaging credibility.\n\nPerhaps the deepest issue is rigidity. A useful roadmap should adapt as learning accumulates. Yet many organizations treat change as failure. If priorities shift after a discovery interview, a prototype, or a competitor move, the revised plan is seen as a broken promise rather than evidence of good judgment. This produces a defensive culture where bad news is delayed, experiments are discouraged, and leadership mistakes a clean plan for competent management.\n\nFinally, most roadmaps fail because they are not truly strategic. They reflect the squeaky wheel’s demand, the last executive review, or the sales team’s largest deal. Without a clear thesis about which problems matter most, a roadmap becomes a backlog with dates. It may look detailed, but it cannot align people, guide trade-offs, or sustain focus.\n\nA better roadmap would be outcome-based, flexible, and honest about uncertainty. It would communicate direction and priorities, not fake certainty. It would be treated as a living tool for conversation, not a document that quietly predicts the future. Most roadmaps fail because they ask teams to promise what they can only discover.\n=== END OF TEXT A ===\n\n=== TEXT B ===\n## Why Most Product Roadmaps Fail\n\nMost product roadmaps fail not because teams cannot deliver, but because the roadmap promises the wrong kind of certainty. A document meant to guide decisions becomes a contract about the future. Features acquire deadlines before teams understand the problems, estimates harden into commitments, and success becomes shipping what was promised rather than creating value.\n\nThe first failure is confusing outputs with outcomes. “Launch a dashboard” is a deliverable; “help customers identify problems faster” is a goal. A roadmap organized around deliverables assumes the solution is already known. Once a feature appears on the timeline, questioning its usefulness can look like resistance or delay. Teams may execute perfectly and still produce something customers barely use. The roadmap is completed, but the problem remains.\n\nThe second failure is treating uncertainty as a planning defect. Product development involves discovering what customers need, what technology permits, and what the business can sustain. These discoveries change the work. Yet detailed, long-range roadmaps often conceal uncertainty rather than acknowledge it. A precise launch date can create confidence without creating knowledge. When reality diverges from the plan, teams are pressured to defend the forecast instead of updating it.\n\nOrganizational incentives make this worse. Sales wants commitments that help close deals. Executives want predictability. Customers want reassurance that their requests matter. Product leaders may accommodate all three by adding more items, creating a roadmap that reflects bargaining power rather than a coherent strategy. Everything becomes a priority because saying no carries an immediate political cost, while overcommitment creates consequences later.\n\nRoadmaps also fail when they ignore how work actually happens. Maintenance, reliability improvements, technical debt, and unexpected dependencies compete with planned features for the same limited capacity. If the roadmap assumes uninterrupted delivery, ordinary operational demands become apparent failures. Teams respond by cutting quality, shrinking scope, or quietly moving dates—each of which weakens trust.\n\nThe alternative is not to abandon planning. Teams still need direction, coordination, and accountability. But a useful roadmap distinguishes commitments from hypotheses. It connects proposed work to measurable outcomes, makes trade-offs explicit, and becomes less detailed as the time horizon extends. Near-term commitments can be concrete; distant opportunities should remain conditional on evidence.\n\nAbove all, a roadmap needs a revision process. Customer research, experiments, and delivery experience should be allowed to change priorities without being treated as excuses. Accountability should include explaining what was learned and why the plan changed, not merely whether the original schedule survived.\n\nA roadmap succeeds when it helps an organization make better decisions as circumstances change. It fails when preserving the plan matters more than achieving the purpose behind it.\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n"
+   }
+  ],
+  "max_tokens": 16000
+ },
+ "usage": {
+  "input_tokens": 2556,
+  "output_tokens": 155,
+  "reasoning_tokens": 7088,
+  "cost_usd": null,
+  "served_model": "grok-4.6",
+  "provider": null
+ },
+ "verdict": {
+  "more_ai": "A",
+  "confidence": 3,
+  "tells_A": [
+   "not-X-but-Y parallelism (repeated)",
+   "first/second/finally signposting",
+   "recap closing paragraph",
+   "triads throughout",
+   "em dashes",
+   "filler transitions (as a result, conversely, finally)",
+   "uniform polished rhythm",
+   "generic/no specifics",
+   "every point lands"
+  ],
+  "tells_B": [
+   "not-X-but-Y parallelism (repeated)",
+   "markdown header",
+   "first/second/above all signposting",
+   "triads",
+   "Yet/But fillers",
+   "succeeds-when/fails-when closer",
+   "uniform polished rhythm",
+   "generic/no specifics",
+   "every point lands"
+  ]
+ },
+ "response_raw": {
+  "id": "71720a76-d9d0-9f24-b75c-0a37de35f567",
+  "object": "chat.completion",
+  "created": 1788734390,
+  "model": "grok-4.6",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"more_ai\": \"A\", \"confidence\": 3, \"tells_A\": [\"not-X-but-Y parallelism (repeated)\", \"first/second/finally signposting\", \"recap closing paragraph\", \"triads throughout\", \"em dashes\", \"filler transitions (as a result, conversely, finally)\", \"uniform polished rhythm\", \"generic/no specifics\", \"every point lands\"], \"tells_B\": [\"not-X-but-Y parallelism (repeated)\", \"markdown header\", \"first/second/above all signposting\", \"triads\", \"Yet/But fillers\", \"succeeds-when/fails-when closer\", \"uniform polished rhythm\", \"generic/no specifics\", \"every point lands\"]}",
+     "reasoning_content": "The user wants me to compare two texts and decide which one reads MORE like unedited, default output from an AI language model. I need to judge ONLY based on the tells listed.\n{\n  \"more_ai\": \"A\",\n  \"confidence\": 4,\n  \"tells_A\": [\"1\", \"2\", \"4\", \"6\", \"7\", \"8\", \"9\", \"11\", \"12\", \"13\", \"15\", \"16\", \"17\", \"18\"],\n \"tells_B\": [\"1\", \"2\", \"4\", \"6\", \"7\", \"8\", \"9\", \"11\", \"12\", \"13\", \"15\", \"16\", \"17\", \"18\"]\n}  wait, no, I need to pick one.\n\nActually, looking closer, both have many tells, but A has more triads and the invented label isn't there, but A has \"the Clarity Flywheel\" no, A doesn't have invented labels.\n\nA has more triads: three in a row several times.\n\nA has \"dates, features, and guarantees\" \"stress, dishonesty, and dysfunction\" \"how long... or... or\" \"hypotheses, risks, experiments, dependencies, and trade-offs\" \"outcome-based, flexible, and honest\" \"align people, guide trade-offs, or sustain focus\" \"direction and priorities, not fake certainty\" - that's 7 triads.\n\nB has fewer: three, three, four, three, three, three - about 6.\n\nA has more triads.\n\nA has more signposting with \"The first reason\", \"A second failure mode\", \"Finally\", \"Perhaps the deepest issue is rigidity.\"\n\nB has \"The first failure\", \"The second failure\", \"Above all\"\n\nA has more.\n\nA has more negative parallelism throughout.\n\nA has more participial tails: \"filled with dates, features, and guarantees\" \"padded to protect the team or shortened to satisfy leadership\" \"reality eventually exposes the gap, and trust in the roadmap erodes\" \"teams to commit to things they cannot reasonably predict\" \"estimates become politics\" \"reality eventually exposes the gap\" \"trust in the roadmap erodes\" \"teams to ship what was promised rather than to validate what matters\" \"customers remain confused\" \"the product grows heavier\" \"teams executing the work do not understand why an initiative is on the plan\" \"they optimize for checkbox delivery rather than problem-solving\" \"when roadmaps are shared too literally with customers, they create contractual expectations\" \"nearly impossible to meet without damaging credibility\" \"treat change as failure\" \"the revised plan is seen as a broken promise rather than evidence of good judgment\" \"This produces a defensive culture where bad news is delayed, experiments are discouraged\" \"leadership mistakes a clean plan for competent management\" \"They reflect the squeaky wheel’s demand\" \"the last executive review\" \"the sales team’s largest deal\" - lots of participial constructions.\n\nB has fewer participial tails.\n\nA has more recap ending.\n\nA has em dashes.\n\nB has header.\n\nBut overall, A has more of the structural tells.\n\nThe header is a tell, but A has more triads and more signposting.\n\nI think A has more tells.\n\n \"more_ai\": \"A\",\n  \"confidence\": 4,\n  \"tells_A\": [\"1\", \"2\", \"4\", \"6\", \"7\", \"9\", \"13\", \"15\", \"17\", \"18\"],\n  \"tells_B\": [\"1\", \"2\", \"4 5\", \"6\", \"9\", \"15\", \"17\"]\n} \n\nWait, let me finalize.\n\nActually, upon second thought, both are AI, but A has more triads and more signposting, so A has more tells.\n\nYes. \n\nThe answer is A. \n\nBut the user wants the JSON with tells_A and tells_B as arrays of short tell names.\n\nSo I need to list them. \n\nLet me list the tells for A:\n\n1. Negative parallelism\n2. Signposting\n4. Recap endings\n6. Triads everywhere\n7. Participial tails\n9. Uniform rhythm\n13. Em dashes\n15. Performing for imagined crowd\n17. Every point lands\n18. Explaining what the reader could infer\n\nThat's 10.\n\nFor B:\n\n1. Negative parallelism\n2. Signposting\n4. Recap endings\n5. Bold-label paragraph openers and headers\n6. Triads everywhere\n9. Uniform rhythm\n12. Filler transitions\n15. Performing for imagined crowd\n17. Every point lands\n18. Explaining what the reader could infer\n\nThat's 10.\n\nBut A has more triads and more signposting.\n\nA has 7 triads, B has 6.\n\nA has more signposting.\n\n \"more_ai\": \"A\",\n  \"confidence\": 4,\n  \"tells_A\": [\"1\", \"2\", \"4\", \"6\", \"7\", \"9\", \"13\", \"15\", \"17\", \"18\"],\n  \"tells_B\": [\"1\", \"2\", \"4 5\", \"6\", \"9\", \"12\", \"15\", \"17\", \"18\"]\n} \n\nYes. \n\nTo be precise, let's list them properly. \n\ntells_A: [\"1\", \"2\", \"4\", \"6\", \"7\", \"9\", \"13\", \"15\", \" 17\", \"18\"]\n\ntells_B: [\"1\", \"2\", \"4\", \"5\", \"6\", \"9\", \"12\", \"15\", \"17\", \"18\"]\n\nYes. \n\nThe header is tell 5.\n\nYes. \n\nI think A has more because of the triads and sign 2.\n\nYes. \n\nFinal decision: A has more tells. \n\nThe JSON is:\n\n{\"more_ai\": \"A\", \"confidence\": 4, \"tells_A\": [\"1\", \"2\", \"4\", \"6\", \"7\", \"9\", \"13\", \"15\", \"17\", \" 18\"], \"tells_B\": [\"1\", \"2\", \"4\", \"5\", \"6\", \"9\", \"12\", \"15\", \"17\", \"18\"]}\n\nYes. \n\nTo make it accurate, the tells are the numbers.\n\nYes. \n\nI think that's it. \n\nBut in the 7th tell, A has more participial tails.\n\nYes. \n\nA is the answer.",
+     "refusal": null
+    },
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2556,
+   "completion_tokens": 155,
+   "total_tokens": 9799,
+   "prompt_tokens_details": {
+    "text_tokens": 2556,
+    "audio_tokens": 0,
+    "image_tokens": 0,
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 7088,
+    "audio_tokens": 0,
+    "accepted_prediction_tokens": 0,
+    "rejected_prediction_tokens": 0
+   },
+   "num_sources_used": 0,
+   "cost_in_usd_ticks": 478020000
+  },
+  "system_fingerprint": "fp_e41c6060b2628547",
+  "service_tier": "default"
+ }
+}

@@ -1,0 +1,144 @@
+{
+ "judge": "sol",
+ "model": "gpt-5.6-sol",
+ "key": "p3-linkedin-2-opus-vs-muse-AB",
+ "wall_s": 5.7,
+ "run_utc": "2026-09-07T08:00:04Z",
+ "request_body": {
+  "model": "gpt-5.6-sol",
+  "input": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n\n=== TEXT A ===\n**We spent four months building a feature. Six people used it.**\n\nNot six percent. Six people. Out of about 4,000 weekly active accounts.\n\nThe feature was a custom dashboard builder. Drag your own widgets, pick your own metrics, save your own views. It came up in nearly every enterprise sales call. It was the third-most-requested item in our feedback tool. Three engineers and a designer worked on it for a full quarter.\n\nWe shipped it on a Thursday. I posted about it in the company Slack with a rocket emoji.\n\nBy the following month, adoption had flatlined at 0.4%. Retention among the people who *did* build a dashboard was worse than average — they'd build one, never open it again, and go back to the default view.\n\nHere's what I got wrong, and it wasn't a prioritization problem. It was a listening problem.\n\nCustomers weren't asking for a dashboard builder. They were telling me they didn't trust our numbers.\n\nWhen someone said \"I want to build my own view,\" what they meant was: \"Your default report shows a number my CFO doesn't recognize, and I can't figure out how you calculated it, so I export to a spreadsheet and rebuild it myself.\" The request was a workaround they'd invented for a problem they didn't have the language for. I took the workaround at face value and built it faster and prettier.\n\nThe fix, when we finally found it, was a definitions panel. Click any metric, see exactly how it's computed, which filters apply, and what's excluded. Two engineers, three weeks. Spreadsheet exports dropped 60%. Nobody ever asked us for a definitions panel.\n\nThree things I do differently now:\n\n**I ask about the last time, not the next time.** \"Would you use this?\" gets you politeness. \"Walk me through the last time you needed this — what did you actually do?\" gets you the truth, including the ugly workaround that reveals the real problem.\n\n**I write down what would make us wrong.** Before we build, we agree on a number: if fewer than X% of eligible accounts use this in 30 days, we were wrong about the problem, and we run a retro instead of a victory lap. Having that number in writing beforehand makes it much harder to quietly redefine success afterward.\n\n**I separate demand from evidence.** A feature request is a signal that something hurts. It is not a diagnosis. Ten people asking for the same thing can still be ten people describing the same symptom of an entirely different disease.\n\nThe uncomfortable part: I don't think we were sloppy. We talked to customers. We looked at the data. We just mistook *volume of requests* for *understanding of the problem*, and those are not the same thing at all.\n\nWhat's the feature you're proudest of killing?\n=== END OF TEXT A ===\n\n=== TEXT B ===\nI shipped a feature nobody used. It still stings.\n\nTwo years ago, my team kept hearing the same request: \"We need better reporting.\"\n\nSo we built it. A beautiful dashboard. Filters, exports, scheduled emails, the works. We polished it for 6 weeks and launched it with a big announcement.\n\nCrickets.\n\nAfter a month, 3% had tried it once. 0% stuck around. When we finally sat down with users, we heard the painful truth:\n\nWhen they said \"more reporting,\" they meant \"just give me the answer.\" Not another chart to interpret.\n\nWe had solved our interpretation of the request, not their actual job-to-be-done.\n\nThat flop changed how I build forever:\n\n**1. Fall in love with the problem, not the solution.**\nWe spent 6 weeks building and 0 days shadowing users. Now I won't let my team design anything until we've watched 5 users struggle with the problem live.\n\n**2. Ship the embarrassing version first.**\nWe could have validated value in 2 days with a manual weekly email with insights. Instead we built automation for a workflow nobody wanted.\n\n**3. Define failure upfront.**\nWe never agreed on: \"If X% don't retain in Y weeks, we kill it.\" So the zombie feature lived in our codebase for a year, adding maintenance cost and guilt.\n\nThe most expensive code is the code nobody uses. The best PMs I know aren't the best builders — they're the fastest learners.\n\nHave you ever shipped something nobody used? What did it teach you?\n\n👇 I’d love to hear your story.\n\n#ProductManagement #Startups #Leadership #BuildInPublic\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n",
+  "max_output_tokens": 16000,
+  "store": false,
+  "reasoning": {
+   "effort": "medium"
+  }
+ },
+ "usage": {
+  "input_tokens": 1705,
+  "output_tokens": 212,
+  "reasoning_tokens": 104,
+  "effort_echoed": "medium",
+  "served_model": "gpt-5.6-sol"
+ },
+ "verdict": {
+  "more_ai": "B",
+  "confidence": 4,
+  "tells_A": [
+   "signposting with \"Here's what I got wrong\"",
+   "three bold-label sections",
+   "negative parallelism",
+   "self-answered framing",
+   "closing rhetorical question"
+  ],
+  "tells_B": [
+   "formulaic three-part numbered lesson list",
+   "multiple negative-parallel constructions",
+   "relentless short punchy rhythm",
+   "generic manufactured anecdote",
+   "em-dash aphorism",
+   "every point lands as an uplifting maxim",
+   "engagement-bait question, emoji, and hashtags"
+  ]
+ },
+ "response_raw": {
+  "id": "resp_076cc25c716de23f016a9e6eff120c87d2b2867b92528a9462",
+  "object": "response",
+  "created_at": 1788767999,
+  "status": "completed",
+  "background": false,
+  "billing": {
+   "payer": "developer"
+  },
+  "completed_at": 1788768003,
+  "error": null,
+  "frequency_penalty": 0.0,
+  "incomplete_details": null,
+  "instructions": null,
+  "max_output_tokens": 16000,
+  "max_tool_calls": null,
+  "model": "gpt-5.6-sol",
+  "moderation": null,
+  "output": [
+   {
+    "id": "rs_076cc25c716de23f016a9e6effec9487d2864f3d49cb0b5a47",
+    "type": "reasoning",
+    "content": [],
+    "encrypted_content": "gAAAAABqnm8D5v98B8ziVwkSSSCkG7zIsWftmnjLKs9BeqpV2OeYDl7J7o5EnMeErRqpI6BWYAoaijU1EsPAH-duKzcyeSEJRPBzyFFqm_qNOBxABXtkAlOSZT2CequvTTjXUgfTYC46iFCMvMHC14s4CG30KhBhzkt9Avi-BOMs9shw3so1wZQHCrmej1CdjG-vMYkglJqy84RpUyvdjGtwSKGPxBCZNcuIiBnC6vuXKkgGZEu1FX-nuHxFYhlEiNM2dMi_feCoxPXCb8BX6jMv7OTMKsnfZX0yU4KICiqwD_fLfdjiXuETYarceVVVsJyiMbmH1LBf8nZUXAB2-wUKBhEMZCsK6cJnkmNUtjhi6VUz48-ohe3kH98d7LB8GOsrqV0E3VUkyWsGrm3pop8DE28_Iw4GiiYUd7rc8DdijCoGKMfxFuGUE1LdBkoXqDU_Mqiczk92rCQ3TuOc0H1wtHOmDttrqYQmS-8F7YUNyN0zjT0ExaPP-h7i0f3wT9cxl2YdfSqDoEo_5qLw65oy0Z8nLc7pLpFJ3sfBGg-Ukm5YDImVhP-0uf7IS-kRbJ1p-RBJj194bl0BwgSQtfU7T4e-WxdJv3dPDVEB0G5ILHDOUChu4BpEldeLmVsl3w6WJAsSJ8jkeLcAUnB2mR7BbVfi52xqgmDY1Uxx-trxhh0M7NEoZCW1G4hwSmS5lthEKs4yGiUW3Z2x78CeHmB5iXxqeMOCiTejo1S4DhsVVpoLHq3i5y0iWrxLdTLA7X1J82VE_Hj1KG79Dfa0NZgXG7t0zLYAPB1dUIRocgU2XbgBhoSV0X0YQ7aCkLvBGXvJD2eiKlvrsm1wT5-7LA8OTjs9mZYbKy1F8Ru81llqHkaE4dVTwy5QigbT6VF1HiooLI7mU0cwgiYhRRElTjzr3xVuk4o6XhzLv35ylJTyPowh2pR3qh2Ck9dtRiC8kDStUZHBYc-o0APYBo5cBRFMuh3Am-QQzOl6reea6oh1JsKtBDqkTuv8XPk3FK7h855X_k5kmMTk5YgF4kBy4mJV7S4tBuFG3N8c1jVxboB1gELAn1xOfNJdXWU1pSiouTQWJKZVhiJaladeCu-wsIdGA1h2CT61R_obyU43_3zYTRYYmoUJzn8pZrT3YPlVmKDmnWu2gy29meKUsQPu7_BFXzdMz1CZi1uO_RBQ6UIXm0Gj1hoHZP3yfArn3k5ur0I-5pVWPW3Km4rjdHFzI1xyEbKOxYnadXUI1y0M8TgfEOKOXeacwPLnKjDes6krlKFr8jaO7iUUrKaMFvTEu0pYSZArdqcBaOsiN6NtZmNBFjVeAUBn5ZZqfZmKNqGAcSkQHhKN2W2_yhR4a5K57U0uHssIYH0ZQ4gp5IQfKNS43M-je4Ic06aDBE57CRGjJv-ezhOL-fbjT3sW4vpxKbYwVYAmUafpZBXpmdoX_qw4Yg7j84QeAUGe1ManjbiOeCHK282gTBKFzJOCuwi2ygt2TQly5bHtgSroqHkeQNr7tgotBotkfkuoIhUQ3tB129k5qmV5GICXSHTkTkeXFfQe_c2xNT-bu9W_PYosMZA_q5N9wDHlirirnHEjw0ifGb2aYeF-W2g5UffimyA0oQRTRklSQ6P3tA-QKYEz4M6fKy7xZxZA7YSVY0bUJAM9vE7jNchvuLKyEFtkf1qc2SfjpxtIuwxUmFBCDyNGb3ruoGo9Trb9qIZGdxckPqDHZC1FU6dYUCtoc6cnlBP8FwOJ3u1F5AQW8HGOVIqEDgwKlwE2msK9FAdUhUUlClKPbQW9WrFqBOyk",
+    "summary": []
+   },
+   {
+    "id": "msg_076cc25c716de23f016a9e6f01b43c87d2beddc73ef22535ca",
+    "type": "message",
+    "status": "completed",
+    "content": [
+     {
+      "type": "output_text",
+      "annotations": [],
+      "logprobs": [],
+      "text": "{\"more_ai\":\"B\",\"confidence\":4,\"tells_A\":[\"signposting with \\\"Here's what I got wrong\\\"\",\"three bold-label sections\",\"negative parallelism\",\"self-answered framing\",\"closing rhetorical question\"],\"tells_B\":[\"formulaic three-part numbered lesson list\",\"multiple negative-parallel constructions\",\"relentless short punchy rhythm\",\"generic manufactured anecdote\",\"em-dash aphorism\",\"every point lands as an uplifting maxim\",\"engagement-bait question, emoji, and hashtags\"]}"
+     }
+    ],
+    "phase": "final_answer",
+    "role": "assistant"
+   }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0.0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+   "context": "all_turns",
+   "effort": "medium",
+   "mode": "standard",
+   "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": false,
+  "temperature": 1.0,
+  "text": {
+   "format": {
+    "type": "text"
+   },
+   "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+   "image_gen": {
+    "input_tokens": 0,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "output_tokens": 0,
+    "output_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "total_tokens": 0
+   },
+   "web_search": {
+    "num_requests": 0
+   }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+   "input_tokens": 1705,
+   "input_tokens_details": {
+    "cache_write_tokens": 1702,
+    "cached_tokens": 0
+   },
+   "output_tokens": 212,
+   "output_tokens_details": {
+    "reasoning_tokens": 104
+   },
+   "total_tokens": 1917
+  },
+  "user": null,
+  "metadata": {}
+ }
+}

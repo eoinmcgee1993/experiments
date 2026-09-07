@@ -1,0 +1,142 @@
+{
+ "judge": "sol",
+ "model": "gpt-5.6-sol",
+ "key": "calib-human-02-2022-01-05-vs-qwen-2-HM",
+ "wall_s": 7.4,
+ "run_utc": "2026-09-07T08:26:34Z",
+ "request_body": {
+  "model": "gpt-5.6-sol",
+  "input": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n(One of the texts is a real LinkedIn post by a person, written on its own topic; judge tells, not topic.)\n\n=== TEXT A ===\nRunning a startup is challenging. Over 90% startups fail. However, some failures can be mitigated if the owners don’t delude themselves for too long. Here are top 7 statements that you may notice in your internal conversations that should be a warning sign for you.\n\n7. “Lots of people want to talk to us.”\n\nBe careful. Pleasant meetings with “important people,” long conversations and words of support mean nothing. Growing sales, even small together with growing customer happiness are the ultimate, bias-free indicators of the progress you are making.\n\n6. “We have almost no costs, just our time.”\n\nAs a person involved in a startup, learn to value your time. After all, the same hours could be invested by working full-time, working on another initiative, pursuing your passions or spending time with your family.\n\n5. “In theory, we’ve earned a lot.”\n\nTake care of your cash flow from the very beginning. Otherwise, you can have the best product on the market and still go bankrupt. You need cash to survive, not its promise.\n\n4. “We have no competition in the market.”\n\nIf you think you have a brilliant product and you have no competition, you are 99% wrong. \n\n3. “We need one more feature.”\n\nMany startups cut themselves off from the world and spend months refining the product without showing it to customers. Meanwhile, customer feedback is gold. Find the courage to reach out to customers as soon as possible and get their opinion.\n\n2. “We need more money to increase sales.”\n\nIn my opinion, startups can use paid advertising to increase sales, but they can’t only rely on it, especially at the beginning. If your customers are satisfied, they will naturally recommend your solution to others. Does the data show this?\n\n1. “We have invested too much to quit.”\n\nSunk costs fallacy is the worst trap you can fall into. Forget about the past. This money, energy and time are gone. Use your brain instead of your heart and move on!\n\n---\n\nMore in the comments 👇\n\n#startup #entrepreneur #entrepreneurship\n\n=== END OF TEXT A ===\n\n=== TEXT B ===\nWe spent weeks shipping a feature we were proud of.\n\nThe launch was clean. The metrics were brutal: nobody used it.\n\nAt first, I blamed discovery. Then I blamed timing. Eventually, I admitted the truth: we fell in love with an idea, not a customer problem.\n\nThe feature solved something that felt important in a meeting, but didn’t create enough friction in everyday use. We asked users if they wanted it, and they said yes — because being nice to a product team is free. We treated interest as demand and prototypes as proof.\n\nThat taught me the hardest lesson in product work: shipping is not validation. Behavior is validation.\n\nNow I try to run a small pre-flight before building anything:\n\n- Who has this problem repeatedly?\n- What are they doing today?\n- What would make them pay, switch, or change their workflow?\n- What’s the smallest version that creates real risk of rejection?\n\nIf we can’t answer those quickly, we don’t build the feature. We investigate.\n\nThe best product decision I’ve made wasn’t a feature that changed the world. It was the discipline to stop confusing effort with evidence.\n\nA feature nobody used didn’t waste time if it taught the team to listen better.\n\n#ProductManagement #LessonLearned #CustomerDiscovery\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n",
+  "max_output_tokens": 16000,
+  "store": false,
+  "reasoning": {
+   "effort": "medium"
+  }
+ },
+ "usage": {
+  "input_tokens": 1506,
+  "output_tokens": 241,
+  "reasoning_tokens": 136,
+  "effort_echoed": "medium",
+  "served_model": "gpt-5.6-sol"
+ },
+ "verdict": {
+  "more_ai": "B",
+  "confidence": 4,
+  "tells_A": [
+   "signposting with “Here are top 7”",
+   "numbered-list structure",
+   "filler transitions such as “However” and “Meanwhile”",
+   "generic audience-facing advice"
+  ],
+  "tells_B": [
+   "repeated negative parallelism",
+   "clean rhetorical contrast: “shipping is not validation. Behavior is validation”",
+   "bullet-list framework",
+   "relentless punchy rhythm",
+   "uplifting recap ending",
+   "em dash used as a clause joint"
+  ]
+ },
+ "response_raw": {
+  "id": "resp_055cad99e6a2e17d016a9e7532676887d281579fa1e17db988",
+  "object": "response",
+  "created_at": 1788769586,
+  "status": "completed",
+  "background": false,
+  "billing": {
+   "payer": "developer"
+  },
+  "completed_at": 1788769593,
+  "error": null,
+  "frequency_penalty": 0.0,
+  "incomplete_details": null,
+  "instructions": null,
+  "max_output_tokens": 16000,
+  "max_tool_calls": null,
+  "model": "gpt-5.6-sol",
+  "moderation": null,
+  "output": [
+   {
+    "id": "rs_055cad99e6a2e17d016a9e7534786487d2868d91b5da143336",
+    "type": "reasoning",
+    "content": [],
+    "encrypted_content": "gAAAAABqnnU5M8vUARr8op036qfqjbodmn5wJaXms92yAem8QLbiMnME15EUYoNy76nQHJiGDlpQxO5IBUC2rPqzlN4Irg5XRK7bozTk8JrXjREraCky4l17ahg26-BIXOvNdw9flvBgLlnCn_E1Nkkrdk31pNDe2AefxFXr3CTD5X0J9CJSEoJClZBw-PF8yKk9tUREE5DZOLqlfzi2gJeEq_GsvohgwEs0_OEf12_oUTHy5xUyW9ObPCvb-SfvbECozjE2CjJFUDaNBEz-r1jDMgLX55QMMN_o6u_JW1g1nv1RmKKPCyH7A-VRkUqsO9kSs_qguUzjG7vValMm5s_hahWEp7OS5VN8iiT3ihwGgiUaQrvFsvQ5aeBMq_Xusl0tY0CNWQ1YpHF571Y7-EiZfmx8p-xhlAVV-Bry1OwCl1onT2paMuJ8Ozfx3zcgUXBlffBTlgnIad1IsBpZCtIKihvpwqCIbNmOcGEcR_NQekjYa6kLC3ezKHxN61Jv2bjwu3INyv7JmrNw_hBDpxjOO2SHBbC82Q1_k9gBIThtkq6eEKJptlAycXgGKmldc5CzmNscVdAB73DVJrN3Qu-4q7Bs4fRBjJL1zqIi7jxJUrQUTw6nH5nfkFTUNRQjGsm5q_crjQP8z7GMkNtNPagulbVn76-_jWyQfTtx74LR4S5xCNCdz_FtssglHinXwb19NdLw-saso1XUmAPKlfzbWulhvDc6iIm6hgKkKWqU60M5PkquYsa8jS9inB1Jka6khwWfAVUcG7dGOYhcYcqvYGypboAenDudfrOQQNRK07stqyq04uPvZXut1zRgXo-uSygOXdlIFV2ZWy5whGijbC9-yi2i7HFpv04tjju05qm2qagzKSL1u3K5GTumiLaqm3SSIHXMDHDdZyh7rd1X7KT57kOjlrvFVqn6soIZpOu7iANARBA48UUc_-FgNE3evNFvtkN0fv1nHkMGOa02xX1RNgg1TYJfuEFPVmvYuZKbY-hJyl_OgMCjwLEEfgQ65UsmlHpDKQyAaqHEneRpNOAy6ZvoYfin5d5lwpJkPXHqki780c9AELInJrSUQQSuqDsLen1RG9FwHg9FJMyWZ7WqrQpfmTlzyBxQs19bvHhb8OOzjf1m9e6zMLncWsJ3nFyGJodaMmq97gsv9y4JuZy4EW_HGA2gIWxRUp1RmOHOh540ORcZo5L8T8VVznVEIDtlSY_6VCf8TkEg0qSTnY3RLJxkIuVokjWl47B-leI3TxkYgB3wo9jh0b1JuZhYAD0K6TEtguvxnO11DJYh5T01YJI_6LX39B0TYrZpNK9NJTa4F7o_8qax4Ftix1w_8kYTuSKXapL9xsz7B59B1qgt5IStt6eS-UtKZnRzQC2jWkrgIASMo54au5dljANOx9pXwvIdykHg-mMgn5KNPl8Wr4y0QPzHyzvYQE6AETCRhUmAyQv90dR7AKR0lukz4Od8YuHk7yDKEGPCQzs85Cro7B1uTx1Khb0aKXTBgZzi92U0soKKNOddDpzT7bqPelM5FuySpPyIY87TMvQ-5KYeYFmmtxK9xR6-qlHEOARF2aNNwjk0_DsxiyQd85GSHH5Xf6g7pTUHL2wyRR3WTFEnXAWhRjY89VIwVr7n7W9dqScGWTJBlU7TToRmqurzho40xsDc0e9Vi0Bcblyr-akoM2Bq0OGQb9Vehd07Uk9nwcHMLt_NYwFvBRCbdZ7NuP9s_UbmZ2NfonpaTlurU7EBCPv6qBjUPn56Ajm7s1bUh2AZIUG4IlEsgkkfyxc0iRQ05fso-HzB_aGSIv6f3rqNDGYwNqbJv8XyMiuML7nxT2BcSANHJsFPUbedxvGkokvk0UaSbfxCusCy3aRNW70UTciqh6coh8U4EEPoRX4E5fkXk-_iA4JzRAgeHkgb_QZvk-e1iLl_ZIsGG8s_sbBWgh8xAxLeUO7LR1YznyGU7sTjq4eMCWqQ0cNqXD_vN37DUZ16rNyGcYdS3Otk-IMCrHdBRw==",
+    "summary": []
+   },
+   {
+    "id": "msg_055cad99e6a2e17d016a9e75375d8887d291426d6474ecc3c8",
+    "type": "message",
+    "status": "completed",
+    "content": [
+     {
+      "type": "output_text",
+      "annotations": [],
+      "logprobs": [],
+      "text": "{\"more_ai\":\"B\",\"confidence\":4,\"tells_A\":[\"signposting with “Here are top 7”\",\"numbered-list structure\",\"filler transitions such as “However” and “Meanwhile”\",\"generic audience-facing advice\"],\"tells_B\":[\"repeated negative parallelism\",\"clean rhetorical contrast: “shipping is not validation. Behavior is validation”\",\"bullet-list framework\",\"relentless punchy rhythm\",\"uplifting recap ending\",\"em dash used as a clause joint\"]}"
+     }
+    ],
+    "phase": "final_answer",
+    "role": "assistant"
+   }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0.0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+   "context": "all_turns",
+   "effort": "medium",
+   "mode": "standard",
+   "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": false,
+  "temperature": 1.0,
+  "text": {
+   "format": {
+    "type": "text"
+   },
+   "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+   "image_gen": {
+    "input_tokens": 0,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "output_tokens": 0,
+    "output_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "total_tokens": 0
+   },
+   "web_search": {
+    "num_requests": 0
+   }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+   "input_tokens": 1506,
+   "input_tokens_details": {
+    "cache_write_tokens": 1503,
+    "cached_tokens": 0
+   },
+   "output_tokens": 241,
+   "output_tokens_details": {
+    "reasoning_tokens": 136
+   },
+   "total_tokens": 1747
+  },
+  "user": null,
+  "metadata": {}
+ }
+}

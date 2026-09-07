@@ -1,0 +1,93 @@
+{
+ "arm": "fable",
+ "label": "Fable 5.1",
+ "vendor": "Anthropic",
+ "transport": "openrouter",
+ "model_requested": "anthropic/claude-fable-5.1",
+ "serving_path": "OpenRouter -> Anthropic (first-party key unavailable at run time)",
+ "prompt_id": "p2-launch",
+ "sample": 3,
+ "run_utc": "2026-09-06T13:24:19Z",
+ "wall_s": 25.9,
+ "request_body": {
+  "model": "anthropic/claude-fable-5.1",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Write a launch announcement of up to 500 words for a new feature of a B2B helpdesk product: a Slack integration that posts a daily summary of open support tickets to a channel of the customer's choice. The audience is existing customers."
+   }
+  ],
+  "max_tokens": 8000,
+  "provider": {
+   "allow_fallbacks": false
+  },
+  "usage": {
+   "include": true
+  }
+ },
+ "usage": {
+  "input_tokens": 81,
+  "output_tokens": 1229,
+  "reasoning_tokens": 324,
+  "cost_usd": 0.0616374,
+  "served_model": "anthropic/claude-fable-5.1",
+  "provider": "Anthropic"
+ },
+ "essay_sha256": "4bf15e1548e66d026df042bc07f21afb0cf515789b820bf69b97c58c5e8d0275",
+ "essay_words": 492,
+ "response_raw": {
+  "id": "gen-1788701031-i0IRVoIHJL6QoSI1WYlq",
+  "object": "chat.completion",
+  "created": 1788701031,
+  "model": "anthropic/claude-fable-5.1",
+  "provider": "Anthropic",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "**Your open tickets, delivered to Slack every morning**\n\nStarting today, you can have a daily summary of your open support tickets posted directly to a Slack channel of your choice. No dashboards to open, no reports to run—just a clear picture of where your queue stands, waiting for you when you start your day.\n\n**Why we built this**\n\nMany of you told us the same thing: your team lives in Slack, and the hardest part of managing support isn't handling tickets, it's remembering to check on them. Escalations slip. Aging tickets go unnoticed until a customer follows up. A manager has to ask \"what's still open?\" more often than anyone would like.\n\nThe daily summary puts that information where your team already is, so the whole group starts the day with the same view.\n\n**What's in the summary**\n\nEach post includes:\n\n- Total open tickets, with the change since yesterday\n- A breakdown by priority and status\n- Tickets that have breached or are approaching SLA\n- The oldest unresolved tickets, with direct links\n- Tickets assigned to no one\n\nEvery ticket referenced in the summary links back to the full conversation in your helpdesk, so you can jump straight from Slack to action.\n\n**Make it yours**\n\nYou choose the channel, the time it posts, and the time zone. Want separate summaries for different teams? Set up multiple summaries, each filtered by team, queue, tag, or assignee. A regional support lead can get a summary for their region; an engineering liaison can get only tickets tagged \"bug.\"\n\nYou can also toggle individual sections on or off. If SLA tracking isn't relevant to a particular channel, leave it out.\n\n**How to set it up**\n\n1. Go to **Settings → Integrations → Slack**\n2. Connect your Slack workspace (if you haven't already)\n3. Click **Add daily summary**, pick a channel, and set your schedule\n4. Choose your filters and sections, then save\n\nThe first summary will post at the next scheduled time. You can send a test post immediately to check the formatting.\n\nAdmin permissions are required to connect a workspace; any user with reporting access can create or edit summaries once the connection is in place.\n\n**Availability**\n\nThe Slack daily summary is included on all plans at no additional cost, and it's live in your account now. If you already use our Slack integration for real-time ticket notifications, the daily summary works alongside it—you don't need to reconnect anything.\n\n**What's next**\n\nThis is the first of several improvements we're making to how your helpdesk shows up in the tools you use every day. Weekly summaries, Microsoft Teams support, and per-agent digests are on our roadmap for the coming months.\n\nAs always, we'd like to hear how this works for you. Reply to this email or reach out through the in-app messenger with feedback, requests, or examples of how your team is using it.\n\nThank you for building with us.\n\n— The Product Team",
+     "refusal": null,
+     "reasoning": "I'm drafting a launch announcement for existing customers about a new Slack integration, keeping it under 500 words and deciding whether to use a generic phrasing like \"our helpdesk\" instead of inventing a specific product name.\n\nI'll structure it with a headline, an explanation of the feature and why it matters, setup instructions, customization options, availability details, and a feedback call-to-action.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm drafting a launch announcement for existing customers about a new Slack integration, keeping it under 500 words and deciding whether to use a generic phrasing like \"our helpdesk\" instead of inventing a specific product name.\n\nI'll structure it with a headline, an explanation of the feature and why it matters, setup instructions, customization options, availability details, and a feedback call-to-action.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQSpwsKEAgRGAI4AUIIdGhpbmtpbmcSDOLv2zC8rRId87oM3hoMdAdYKEnqo61x16gAIjDqIaJGVMlu1rr1i6hg4i9pwR1ANIUS7sh/T3KdPF0ySIg/H7xrNI89QShurHrCe4QqxAoPsj7SWJIpsxRf2X4/ts2g3zFaf0hAb4ET8i/xxCUglYfsa9A7uAn1qOqrA+xlXXHHPMNt2LkneL+ENCVKMsn8HQLVxuM/zwd2juXY/QOn7YsnB5EXfNoPGhkyqXAoapxxE9LP9zGcobSr8yeeTnwTbTi4V91r+Q8SSVqlkxwBFk5xXFO7zExt/HrVqbqP3nTvK454+mTR8cz6vNi+gYqlUPnbEvQCs/mBlE8w7N3aUAVRezJbsN6P5mY6ExXrAoAlkc0gzpIocMRcS/L7Dqv1IYasFR4DFBrxMjNJmZm+cIedEQZf37lYENmVUKnGucuVXmc5bM9dQ79N3MWZPvA/ctnktOUKK1lbdOcd+pLIfHC5EHWe3zvecCGgEiuHEYtde+LEVsoj1p0xQt26wnzAxNXD3vJILTD6eMqweJj2UY8bLaskXf7zT7bDUpRAotg8aKGTkW9fU/RW6HlHlpQpxZpMVd3Cty4pclAKyObga9kWLlgTAm9Gt2KRwVfQXQBN6DLN51wC0G4H0Y2z347U+HkNzJP1jfwION5RQpLVv7+9h8JO3TTUO5hmzU9UNFWCsTuvDZDO9JEiRyZVJFnVmQamFhsdkTke4c3gDtitA44j7Iuc0efO5jBQNBOMV4PVMLmgx+q3XL6bjx09n0ydMFeVut5yGfhCsWua1iWOaJnNyYhNAIS1L/sj2hHZ3ztftzz9PG14qix7TN6NBoJx4d76gDkfWIjtGuEBdYFInFFXPWpf+TSCMqYpW6p8mzQcy/G4tEe8SHv4n+WL9vFCFxZXVHUYLIyv253cYcCTXE4kzlG3s05p5cTwDDRRHSgwl/13k3SC+SM0H0Yt0qS0l+3Bq/AEDJ/G0zqme8VTpimTou9dQU4AQMBXhWX6KB11SeNCkJEcF0Gk6rA7mxrQ53gWb6kXVsZaorSWQW+MbeAPcPKIALmTmScyzM+/qDD2uZZo8/NZ5iSAkFDJ/QL7DVRKUqx6gPDjQ0JYr0iXN0bheUxpR/zwT0Aoo5vXuKae3auduOqB/ihH2HujyFRjivRO0DuIspdNjhFoY/uGCPmMBoVPdeMMVJfKAKCzD8SoZBHCdX+ZQ4unKqYugNggij+pQBzyOPSGklLlKn5En0oiIJWbVb/LRjLmvhBS+5jdtvvr3GtEyGCQMtMqx26GVLJQpAneZ4RYWjgk9ZYA6Ah5JjtgJ7baPwID4lH7oo2Bxp7R5LpzYJ/M1NiIlb9HKo+kOdzK9HQ98Gz9cjeEDW6nLKZemhlXtMvwEYsBpdtYEuOx3NXj6NU575MM0UpEJ+1Y0fh259fMsCQrRyxL0h2NJoSxsXuG4S1zA5roHox9H57rKeXuYONOQZoqDAwaLLKiGzpaFH6Kh9MAblKgAmgE5LMYg10bhj9XKKWxRLg4Nt3ujPScJOrMuvyDFkv09HPeHbyK4iHmoN1QTapW1AaCgmBwtxCgR7+q/g6ZQsdQi3yM7VkBy3KD0bW4i7ORWI/8q35KwkTMxfLD4HHM91TOCOx8xyfZDk5LVD+qjPFxKSwWs0Ca8aSxYpdT0Pir+84qb8IhlASNkj5XAJ25tlf5uw3JjSYYXigXMF4/2k4l5sFWnl6s64xrictXq6+/VlCrMfy5bhIzzeNuQILlyu7YUw3pyGu4V3OVFc79hDnUAO7/43RrZI21bObI1stlwBErfcUw9Plzi0ZVe0bglwv/zZhg9MXY3yTnl7RaBkh4zp8AQJR9xP+zQthTQfEmkfNJZ3YGftPAkhlzkV/mXJzad6GeptGrWzrQ7i39MW4SeOaIGAE="
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 81,
+   "completion_tokens": 1229,
+   "total_tokens": 1310,
+   "cost": 0.0616374,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.06226,
+    "upstream_inference_prompt_cost": 0.00081,
+    "upstream_inference_completions_cost": 0.06145
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 324,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

@@ -1,0 +1,142 @@
+{
+ "judge": "sol",
+ "model": "gpt-5.6-sol",
+ "key": "p3-linkedin-1-grok-vs-kimi-BA",
+ "wall_s": 7.3,
+ "run_utc": "2026-09-07T07:59:27Z",
+ "request_body": {
+  "model": "gpt-5.6-sol",
+  "input": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n\n=== TEXT A ===\nWe spent 4 months building a feature that 11 people used.\n\nNot 11%. Eleven humans.\n\nThe feature was a custom report builder for our analytics product. Customers had asked for it — in surveys, in support tickets, on sales calls. \"We need more flexible reporting.\" So we listened. Or we thought we did.\n\nWe scoped it. Designed it. Built it. Polished it. Shipped it with a launch email and an in-app tour.\n\nCrickets.\n\nFor weeks I checked the usage dashboard every morning, half-hoping the data was wrong. It wasn't.\n\nHere's what actually went wrong — and it took me an embarrassingly long time to see it:\n\nWe heard the words \"we want flexible reporting\" and built *our interpretation* of that sentence. We never asked what people were trying to do when they said it.\n\nTurns out, customers didn't want to build reports. They wanted an answer to one specific question: \"Which campaigns drove revenue last month?\" Ideally in one click. Better yet, pushed to them every Monday morning.\n\nWe built a workshop. They wanted a vending machine.\n\nThe lesson that stuck with me:\n\n👉 Customers describe solutions. Your job is to excavate the problem underneath.\n\nWhen someone requests a feature, the most valuable follow-up isn't \"what should it do?\" It's \"walk me through the last time you needed this.\"\n\nThat single question has saved my team months of wasted work since. Sometimes it leads to building something smaller. Sometimes it means building nothing at all — because the real pain lives somewhere else entirely.\n\nThe epilogue: we eventually shipped a simple \"Top campaigns by revenue\" card on the main dashboard. It took three days to build. It's now one of the most-viewed elements in the product.\n\nThree days of work, aimed at the actual problem, beat four months of work aimed at the stated request.\n\nI still think about those 11 users sometimes. (Thank you for trying it. You deserved better.)\n\nIf you're about to kick off a big build, try this before writing a single line of code: ask five customers to describe the last time they felt the pain you're solving. Watch what they *do*, not just what they say.\n\nYou'll either build it better — or realize you should build something else entirely.\n\nWhat's a feature you shipped that flopped? And what did the flop teach you?\n\n#ProductManagement #SoftwareDevelopment #BuildInPublic #LessonsLearned\n=== END OF TEXT A ===\n\n=== TEXT B ===\nWe spent three months building a feature nobody asked for.\n\nIt was elegant. It was well-engineered. It shipped on time. And in the first 90 days, almost no one used it.\n\nI still remember the launch thread. Screenshots. Confetti emoji. A demo that made the product look smarter than it actually was. We told ourselves we were being proactive — solving a problem users would have eventually. We had internal data. We had a slide that said “high intent.” We had conviction.\n\nWhat we did not have was a single person who had said, “I need this.”\n\nThe usage graph was a flat line with a few polite clicks from people on our team. Support tickets did not mention it. Sales did not sell it. Power users found workarounds around it, which is a polite way of saying they ignored it.\n\nThe hard part was not the wasted engineering time. It was the story we had to tell ourselves afterward. We had not failed because we shipped slowly. We had failed because we shipped a solution in search of a problem.\n\nHere is what I learned, and what I still repeat in kickoffs:\n\n1. Usage is the only honest launch metric. Applause is not a metric. “Looks great in the demo” is not a metric. If the feature does not change a weekly habit, it did not ship. It just deployed.\n\n2. “Nobody asked for it” is not automatically a virtue. Sometimes users cannot articulate the next step. Often they can. We skipped the unglamorous work: five conversations, a prototype, a fake door, a waitlist. We protected our idea from contact with reality.\n\n3. Beautiful unused features have a cost beyond the sprint. They add surface area, docs, edge cases, and cognitive load. Every unused control is a tax on the people who actually use the product.\n\n4. Kill criteria should be written before the build, not after the embarrassment. We should have said: if fewer than X people complete this flow in 30 days, we remove it. Sunsetting something you were proud of is cheaper than carrying it forever.\n\n5. The team did not fail. The process did. Smart people will fill a vacuum of evidence with taste and optimism. That is not a character flaw. It is a design problem for how you decide what to build.\n\nI used to think shipping was the brave part. Now I think the brave part is admitting a feature is a hypothesis, not a gift. Talk to users before you write the ticket. Instrument the thing you think they will do. Be willing to delete your favorite screen.\n\nIf you have a feature sitting at 2% adoption and a roadmap full of “phase 2,” that is not momentum. That is inventory.\n\nWhat is a feature you shipped that the data quietly retired? I would rather hear that story than another launch post.\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n",
+  "max_output_tokens": 16000,
+  "store": false,
+  "reasoning": {
+   "effort": "medium"
+  }
+ },
+ "usage": {
+  "input_tokens": 1869,
+  "output_tokens": 323,
+  "reasoning_tokens": 217,
+  "effort_echoed": "medium",
+  "served_model": "gpt-5.6-sol"
+ },
+ "verdict": {
+  "more_ai": "B",
+  "confidence": 4,
+  "tells_A": [
+   "signposting with “Here’s what actually went wrong”",
+   "punchy fragments and polished aphorisms",
+   "negative parallelism",
+   "manufactured-feeling anecdotal specificity"
+  ],
+  "tells_B": [
+   "numbered-list structure despite prose task",
+   "repeated negative parallelism",
+   "signposting with “Here is what I learned”",
+   "multiple triads and rhythmic aphorisms",
+   "recap-style uplifting lesson",
+   "repeated punchy fragments"
+  ]
+ },
+ "response_raw": {
+  "id": "resp_08f32eac9f9c0d40016a9e6ed7ab5087d2a9b6ea373bd2913c",
+  "object": "response",
+  "created_at": 1788767959,
+  "status": "completed",
+  "background": false,
+  "billing": {
+   "payer": "developer"
+  },
+  "completed_at": 1788767966,
+  "error": null,
+  "frequency_penalty": 0.0,
+  "incomplete_details": null,
+  "instructions": null,
+  "max_output_tokens": 16000,
+  "max_tool_calls": null,
+  "model": "gpt-5.6-sol",
+  "moderation": null,
+  "output": [
+   {
+    "id": "rs_08f32eac9f9c0d40016a9e6ed89fd887d286c18e1a4acba469",
+    "type": "reasoning",
+    "content": [],
+    "encrypted_content": "gAAAAABqnm7edKsSrkQfD3AVm3-xsIEun8JQ1HPe-K1CjFE2LxpJ1dPA1cYhnyojxujmWKfoKT8cl904Xwesyssu8u1a-dBMel5GMjStFisnG0EO_73AkUC7HOI3GoWDeRpvGvv42iOtmd2Lon3jOETiYYTc-LJclPpPXpDFA6Te9x-Bs8pnmN8Z0w9HU0oKSPcE1cTK4N3L6aE7WrGqj3ICs8pG3Il7e1MsRuN1Sf1NweK_11grwgSbNXVusVXpsIgoT3jUGa_C6bcrheWHyVT4rNu-9-3zck_CtJC0OdXaAglQntL1DtOCmBwaPzRQPWWp5JwXsFbOzbuy2RNVwK1qZESH0KKS1p_xFjSfPGC-jc-XU2loKVMbb0nP8hwCsFuF0JQoyaJxoSsTb64Az0bGzegRsoVhFNe03mCgfPWMMF3aqjBiNOpPxk3f1tDT3xySBD62dZCE1gYhco_REgaxH0rHxsdZQ5DxRWFEynqE1up7KXHpyoGyxF7-uTooL2nwVscAAtJ9n69bJPSUSTAWok2TgX5Nk_juvuBhGeetHSPrI6PIe6Ylg6lsL2HgV6XKnVm0DPijnzN7uQoeEuZAbI5yzWep39uJ9Mui5XOdIYngTgkY-RdnxkIDVkhcR0G2R7vZw-aSmwlU3pTMElhlu8Yp0UReiZCVoHq9igIBelcf7TaiJ_Nb3i9Mxdp5UoUYr4xOaqwCz2Bt7LecOCV7jJf2MH7bSuCH3_Wl27OFjMMzK5lyXfbMA1gRl7LmaoaAcK5VrRGtSA4vXFy-0WfgUI7Pz1Etsbz2rZtNB-SAQl3UvAd-IMJ95ioUR2KoPbALC4kAgosVR6yICU7BStYb-2xstHYipoR7rjKaEZFMJlpQGdizbC0G0390ZiaC8rHBgIjs4YY_TzlYBfq2w1AKCMMXUBcdcRPSDJbNQmemBEshtjujxS9DaujBMfPKYNzFLOLAD8a5HX4BJuJuO6cy8CurYbZGd6YqyXhJ2KRF8dCnStODeS1lvMOtOjNrtz9bwNlVk7bXXwgge6_DwVU2sYYCTRpLs1xoB7awWuuc72v1bdFcXlxXbAmVTob1fJv58xvv3fcRSeWozmQD123Xvf42U4ogCZI7obcxY0xCjnbtVNd3VGwcljiDTmxiJIGC2meGG9sT1nVHJ9t8Tkzs8twIACxgA6dVgQtou2noU_1wrqn7bIdCKsy-ASeGXQcYbKOm5xMcbRqQFGxlHsQ2JScandlQGXEpnnY6sb106-2Wzgl98Iws92_mSh7PZhtm24djXUHGKfrfZBE5-kKgjiLD9OOlHa55h1K3D8w2tu9Xl0YbGzRPvL4vOiDpMNxd4D3gb8C9BeMhait3qg9fgLjMFjvSqTobA3d30zOmltSXCXunI2BoVHGqbIPZh087-vysLL0iNQbPw1eDCjNhEqtS6KiYz48uqSmNQtojTEfMWULk9N5FVGRgg6ddFn-1ZdHrBfyrio94KZk3aQCWojYG12MOw8s67JCvbnjgbcTBGaU0wwKdE3tu9X3TzOxYG_zWRi-6QDk4yYoTBiE9w6OTaxF6ts9UoEsE1iVg4hQPmrhO-AC0iKA4AfXGXEpGmxzbclaq4hUyZJamPffbUtfvkyGevPVydmrNtLTiOGCJQ8YcKnl05ikZ8t_tLVYCAgBwl1X6BMX28qm3c591rmFFfbuepyS-0VZgOQ91ptk8Ja4swIABU9x9bXaW1Om_FUq0RdQq9_ny8XQ5bXOdsgB45nyzfEnBAftdcRI11ldrQQBvAWHQZTLRxjcac49ql45BEYMANOpizW6Ucmx9atssUJXoBJ3wQrpUgdzrT1OasuKg7KhZfZ1_ZW5P2w08GSbxceXL9S6NcL13JhjrmYDQPoOh3LXY1Dl4kTNbgXDERD5G7NWAa3WEGMvbvJiKtT-tKjYyTOCd075tgO0ld9YDqslTQmUeEALRC5oz78ORuazT7WfghE8yMf890vM7HvHwL332rAhytGEkFfd7fisrPwgxWfYz-Y2djU64B7PLfbu0pdXHfY-Ai3BAi-OPC4j7nFY0zJfOaq58qUNEqIu4Dc-S_C8tosuk6OFiRV4a6HrYihPy4o6spQ9SJbuNDtHBji-w1UPZhQUSccZzBygYb6fw4cQEgINt3FqZF7KBgH3SVt0umJAnYcRpAYbvZ5zBKmpSSYJjaOc7wcKIRd8L8H1tUoB1-SLIL9TBAi_lDwU1be2Z53_Fi9bVupf1oui9cYoiljGUD2xmtq5c5_J3Zw8fKHwzFw6N0Ui5HFSDJDrtKcdoy4fF05zylW-YePq3Tm2DC2XEIMEROYh3KwbDcZf1p88xfS1_429HVe2GIMlgjUGUCL9cYJwgr8-Ay-VUPb-Q9tvmnbv6MiXMCWYq7DMFD-o15-X5bxSmv5EwKQtIZD9_KShfxPOdIr-rmim6lhiV5Conw-DMO_V7A8TR0xBQwxRInLG3Rf_vt5u13CgM4jlYfSdHM0YIOJA2u8vK2t6OYtY-pVAlaaN4PPpDNwoeJXNw9l1o8a5e0lZikkbZH1XyGFYmtihofEML0W-zKZzM",
+    "summary": []
+   },
+   {
+    "id": "msg_08f32eac9f9c0d40016a9e6edcd82087d284e877345c6a7127",
+    "type": "message",
+    "status": "completed",
+    "content": [
+     {
+      "type": "output_text",
+      "annotations": [],
+      "logprobs": [],
+      "text": "{\"more_ai\":\"B\",\"confidence\":4,\"tells_A\":[\"signposting with “Here’s what actually went wrong”\",\"punchy fragments and polished aphorisms\",\"negative parallelism\",\"manufactured-feeling anecdotal specificity\"],\"tells_B\":[\"numbered-list structure despite prose task\",\"repeated negative parallelism\",\"signposting with “Here is what I learned”\",\"multiple triads and rhythmic aphorisms\",\"recap-style uplifting lesson\",\"repeated punchy fragments\"]}"
+     }
+    ],
+    "phase": "final_answer",
+    "role": "assistant"
+   }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0.0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+   "context": "all_turns",
+   "effort": "medium",
+   "mode": "standard",
+   "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": false,
+  "temperature": 1.0,
+  "text": {
+   "format": {
+    "type": "text"
+   },
+   "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+   "image_gen": {
+    "input_tokens": 0,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "output_tokens": 0,
+    "output_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "total_tokens": 0
+   },
+   "web_search": {
+    "num_requests": 0
+   }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+   "input_tokens": 1869,
+   "input_tokens_details": {
+    "cache_write_tokens": 1866,
+    "cached_tokens": 0
+   },
+   "output_tokens": 323,
+   "output_tokens_details": {
+    "reasoning_tokens": 217
+   },
+   "total_tokens": 2192
+  },
+  "user": null,
+  "metadata": {}
+ }
+}

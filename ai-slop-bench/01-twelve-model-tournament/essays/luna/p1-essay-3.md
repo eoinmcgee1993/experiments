@@ -1,0 +1,15 @@
+## Why Most Product Roadmaps Fail
+
+Most product roadmaps fail not because teams lack ambition or intelligence, but because roadmaps are often asked to do too many contradictory jobs. They are expected to inspire a vision, promise delivery dates, satisfy executives, coordinate departments, reassure customers, and predict an uncertain future. A single document cannot reliably perform all of these functions.
+
+The most common failure is confusing a roadmap with a project plan. A roadmap lists features and deadlines, implying that product development is a sequence of predictable construction tasks. In reality, product work is largely an exercise in learning. Teams may discover that a customer problem is less important than expected, that a proposed solution does not work, or that a competitor and market condition have changed. When a roadmap treats early assumptions as commitments, evidence becomes a threat to the plan rather than a reason to improve it.
+
+Many roadmaps also focus on outputs instead of outcomes. They celebrate launching a feature, integrating a system, or redesigning a workflow without defining what should improve as a result. A team can deliver every item on schedule and still fail to increase retention, revenue, customer satisfaction, or operational efficiency. Without measurable outcomes, prioritization becomes a debate over opinions, influence, and whoever asks most loudly.
+
+Another problem is that roadmaps are frequently designed for stakeholders rather than for decision-making. Organizations add requests from sales, executives, customers, and internal departments until the roadmap becomes a catalog of obligations. The result is an overloaded list with little indication of what matters most. When everything is important, teams lose focus, switch priorities constantly, and complete less meaningful work.
+
+Static roadmaps create a further illusion of certainty. A quarterly or annual plan may look authoritative, but it can become obsolete within weeks. Market conditions shift, technical discoveries alter costs, and customer behavior reveals new needs. Yet teams often feel pressure to preserve the original plan because changing it appears to signal incompetence. In this way, the roadmap becomes a political artifact rather than a useful reflection of current knowledge.
+
+Finally, roadmaps fail when they are disconnected from strategy and capacity. A company may claim to prioritize growth while funding work that merely maintains existing systems. Or it may promise more initiatives than its teams can responsibly explore and deliver. Dependencies, technical debt, compliance requirements, and operational work are often omitted, making the plan unrealistic from the beginning.
+
+A better roadmap is not a detailed promise of everything the team will build. It is a clear expression of strategic priorities, desired outcomes, confidence levels, and the problems worth solving next. It should communicate direction while leaving room to learn. Roadmaps succeed when they guide choices, expose assumptions, and are regularly revised as evidence changes. They fail when they pretend uncertainty does not exist.

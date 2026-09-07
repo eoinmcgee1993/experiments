@@ -1,0 +1,13 @@
+**Why Most Product Roadmaps Fail**
+
+A product roadmap is meant to align teams around a future state, but most roadmaps fail for a simple reason: they are treated as promises rather than plans under uncertainty.
+
+When a roadmap is built backwards from deadlines, it reflects what leadership hopes to announce more than what the product team can credibly achieve. Teams estimate work using incomplete information, then commit to dates without room for discovery, dependencies, or quality. The first sign of trouble triggers a choice between lowering quality, changing scope, or missing the date. Most choose the path that causes the least visible pain: they miss the date and damage trust.
+
+Another failure mode is that roadmaps are often outputs-based instead of outcomes-based. Listing features—“login, dashboard, notifications”—may look like strategy, but features are hypotheses, not results. If a roadmap does not define the problem it is solving or the metric that signals success, teams can ship everything on schedule and still deliver no impact. Product management becomes order-taking, and engineering becomes execution for its own sake.
+
+Political roadmapping is also common. Many roadmaps are assembled to win budget, impress executives, or coordinate across functions, not to guide real product work. That makes them brittle. When new information arrives—customer feedback, market shifts, a competitor move, or a technical constraint—the roadmap cannot change gracefully because its dates have already been used for forecasts, contracts, or promotions. Rather than updating the plan, teams defend it, and the organization learns to distrust roadmaps as marketing artifacts.
+
+Finally, most roadmaps fail because they are static. In a healthy product organization, the roadmap is an evolving set of problems, bets, and sequencing decisions. It should include uncertainty, assumptions, and experiments. Too many teams publish a polished slide deck and then stop revisiting it. As a result, the roadmap is either ignored or treated as obsolete the moment reality intrudes.
+
+A better roadmap is shorter, clearer, and more honest. It prioritizes problems and outcomes, shows ranges rather than fixed dates when appropriate, and leaves space for learning. It is not a commitment to a feature list; it is a shared theory of how the product will create value. When organizations treat roadmaps as adaptive instruments rather than declarations of certainty, they become far less likely to fail.

@@ -1,0 +1,15 @@
+**Why Most Product Roadmaps Fail**
+
+Most product roadmaps fail not because teams are lazy or unskilled, but because the document itself is asked to do something it cannot do: predict the future. A roadmap that lists features with delivery dates twelve months out is a forecast dressed up as a plan, and forecasts about what customers will want, what competitors will do, and how long software takes to build are wrong far more often than they are right.
+
+The first failure is one of false certainty. Roadmaps are typically created during an annual planning cycle, when a team knows the least it will ever know about the coming year. Yet the artifact that emerges looks authoritative—neat rows, quarterly columns, confident labels. Executives read it as a promise. Sales teams sell against it. By the time the team learns that the assumptions were wrong, the roadmap has hardened into a set of obligations no one wants to renegotiate.
+
+The second failure is the conflation of output with outcome. Most roadmaps are lists of things to ship rather than problems to solve. "Build a mobile app" is a feature; "reduce time-to-first-value for new users" is an outcome. When the roadmap specifies the solution in advance, it strips the team of the ability to discover a better one. Worse, it lets everyone declare victory when the feature launches, regardless of whether it changed anything.
+
+The third failure is political. Roadmaps are often negotiated documents, shaped by whoever argued loudest in the planning meeting. Every stakeholder gets a line item, and prioritization dissolves into accommodation. A roadmap that tries to please everyone ends up representing no strategy at all—it becomes a to-do list with a budget attached. Real prioritization means saying no, and the roadmap is frequently where organizations avoid doing so.
+
+The fourth failure is inertia. Good teams learn constantly: a customer interview reveals a misunderstanding, a competitor launches something unexpected, an experiment disproves a cherished belief. But the roadmap rarely absorbs this learning. Changing it feels like admitting failure, so teams keep executing against a plan they privately know is stale. The document meant to guide decisions ends up preventing them.
+
+Finally, roadmaps fail because they are disconnected from the strategy they should express. A roadmap is supposed to answer "how do we get from here to there?" But if "there" was never clearly articulated—if there is no crisp statement of which customers matter, which problems are worth solving, and what winning looks like—then the roadmap is simply a sequence of activities with no coherent reason behind it.
+
+The alternative is not to abandon roadmaps but to change what they claim. A useful roadmap communicates intent, not commitments; problems, not solutions; sequences, not dates; and it is revised whenever the team learns something that matters. It should read less like a contract and more like a set of well-reasoned bets—bets the organization is willing to lose, and honest enough to revise.

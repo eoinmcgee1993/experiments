@@ -1,0 +1,94 @@
+{
+ "variant": "bare",
+ "arm": "kimi",
+ "label": "Kimi K3",
+ "vendor": "Moonshot AI",
+ "transport": "openrouter",
+ "model_requested": "moonshotai/kimi-k3",
+ "serving_path": "OpenRouter -> Moonshot AI",
+ "prompt_id": "p3-linkedin",
+ "sample": 1,
+ "prompt_text": "Write a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.",
+ "run_utc": "2026-09-06T22:16:15Z",
+ "wall_s": 30.5,
+ "request_body": {
+  "model": "moonshotai/kimi-k3",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Write a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used."
+   }
+  ],
+  "max_tokens": 8000,
+  "provider": {
+   "allow_fallbacks": false
+  },
+  "usage": {
+   "include": true
+  }
+ },
+ "usage": {
+  "input_tokens": 111,
+  "output_tokens": 2006,
+  "reasoning_tokens": 1774,
+  "cost_usd": 0.0256009545,
+  "served_model": "moonshotai/kimi-k3",
+  "provider": "Makora"
+ },
+ "essay_sha256": "dd9011009beaaa00656744803a5af3e8e1490c75d7955bb53e90c36bbed32f1e",
+ "essay_words": 394,
+ "response_raw": {
+  "id": "gen-1788732944-KECfflyegZ4DQbMYzXF5",
+  "object": "chat.completion",
+  "created": 1788732944,
+  "model": "moonshotai/kimi-k3",
+  "provider": "Makora",
+  "system_fingerprint": null,
+  "service_tier": null,
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "We spent 4 months building a feature that 11 people used.\n\nNot 11%. Eleven humans.\n\nThe feature was a custom report builder for our analytics product. Customers had asked for it — in surveys, in support tickets, on sales calls. \"We need more flexible reporting.\" So we listened. Or we thought we did.\n\nWe scoped it. Designed it. Built it. Polished it. Shipped it with a launch email and an in-app tour.\n\nCrickets.\n\nFor weeks I checked the usage dashboard every morning, half-hoping the data was wrong. It wasn't.\n\nHere's what actually went wrong — and it took me an embarrassingly long time to see it:\n\nWe heard the words \"we want flexible reporting\" and built *our interpretation* of that sentence. We never asked what people were trying to do when they said it.\n\nTurns out, customers didn't want to build reports. They wanted an answer to one specific question: \"Which campaigns drove revenue last month?\" Ideally in one click. Better yet, pushed to them every Monday morning.\n\nWe built a workshop. They wanted a vending machine.\n\nThe lesson that stuck with me:\n\n👉 Customers describe solutions. Your job is to excavate the problem underneath.\n\nWhen someone requests a feature, the most valuable follow-up isn't \"what should it do?\" It's \"walk me through the last time you needed this.\"\n\nThat single question has saved my team months of wasted work since. Sometimes it leads to building something smaller. Sometimes it means building nothing at all — because the real pain lives somewhere else entirely.\n\nThe epilogue: we eventually shipped a simple \"Top campaigns by revenue\" card on the main dashboard. It took three days to build. It's now one of the most-viewed elements in the product.\n\nThree days of work, aimed at the actual problem, beat four months of work aimed at the stated request.\n\nI still think about those 11 users sometimes. (Thank you for trying it. You deserved better.)\n\nIf you're about to kick off a big build, try this before writing a single line of code: ask five customers to describe the last time they felt the pain you're solving. Watch what they *do*, not just what they say.\n\nYou'll either build it better — or realize you should build something else entirely.\n\nWhat's a feature you shipped that flopped? And what did the flop teach you?\n\n#ProductManagement #SoftwareDevelopment #BuildInPublic #LessonsLearned",
+     "refusal": null,
+     "reasoning": "The user wants a LinkedIn post, up to 500 words, about a lesson learned from shipping a feature that nobody used. This is a creative writing task with a professional/social media context.\n\nLet me think about what makes a good LinkedIn post:\n1. Hook at the beginning — LinkedIn posts need a strong first line since the feed truncates after ~3 lines\n2. Personal narrative — storytelling is the dominant genre on LinkedIn\n3. Short paragraphs, often single-sentence lines for readability\n4. A clear lesson/takeaway\n5. Often ends with a question or call to action to drive engagement\n6. Sometimes hashtags, though I shouldn't overdo them\n\nThe topic: shipping a feature nobody used. This is a classic product/engineering failure story. The best versions of this story have specificity — a concrete feature, concrete timeline, concrete reasons it failed, and a genuinely earned lesson rather than a platitude.\n\nCommon lessons from this kind of failure:\n- We built what we assumed users wanted instead of asking them\n- We confused \"users said they'd use it\" with \"users will actually use it\"\n- We fell in love with the solution, not the problem\n- No distribution plan — build it and they won't come\n- Sunk cost made us keep polishing instead of testing early\n- The feature solved a real problem but for too small a segment\n- Usage metrics vs. value metrics confusion\n\nI should pick one strong, specific narrative rather than generic mush. Let me invent a plausible scenario: maybe an engineering team spent months building something like an advanced filtering/dashboard/export feature, or an AI-powered something, or a Slack integration. Specificity sells it.\n\nLet me draft:\n\nHook options:\n- \"We spent 4 months building a feature that 11 people used.\"\n- \"0.3% adoption. That's what six months of engineering got us.\"\n- \"Last year I killed my favorite feature. Nobody noticed — because nobody was using it.\"\n\nThe format considerations: LinkedIn posts use lots of white space, short lines. Emojis are common but I can use them sparingly or not at all. Hashtags at the end (3-5 is typical). Word count: up to 500 words — I should aim for something like 250-400 words, which is a natural LinkedIn length. Long enough to tell the story, short enough to read in a feed.\n\nLet me write it with a specific story: say, a \"smart dashboard\" or \"custom report builder\" feature. Let me make it feel real — numbers, timeline, the moment of realization.\n\nDraft:\n\n---\n\nWe spent 4 months building a feature that 11 people used.\n\nNot 11%. Eleven humans.\n\nThe feature was a custom report builder for our analytics product. Customers had asked for it — in surveys, in support tickets, in sales calls. \"We need more flexible reporting.\" So we listened. Or we thought we did.\n\nWe scoped it. Designed it. Built it. Polished it. Shipped it with a launch email and in-app tour.\n\nCrickets.\n\nFor weeks I checked the dashboard every morning, hoping the numbers were wrong. They weren't.\n\nHere's what went wrong — and it took me an embarrassingly long time to see it:\n\nWe heard the words \"we want flexible reporting\" and built our interpretation of that sentence. We never asked what decision people were trying to make when they said it.\n\nTurns out, customers didn't want to *build* reports. They wanted an answer to one specific question: \"Which campaigns drove revenue last month?\" They wanted that answered in one click, or better yet, pushed to them every Monday.\n\nWe built a workshop. They wanted a vending machine.\n\nThe lesson that stuck with me:\n\n👉 Customers describe solutions. Your job is to find the problem underneath.\n\nWhen someone asks for a feature, the most valuable follow-up isn't \"what should it do?\" It's \"what were you trying to do the last time you wanted this?\"\n\nThat question has saved my team months of wasted work since. Sometimes the answer means building something smaller. Sometimes it means building nothing at all — because the real problem lives somewhere else entirely.\n\nWe eventually shipped a \"Top campaigns by revenue\" card on the dashboard. Took three days to build. It's now one of the most-viewed elements in the product.\n\nThree days of work, informed by the actual problem, beat four months of work informed by the stated request.\n\nI still think about those 11 users sometimes. (Thank you for trying it, by the way. You deserved better.)\n\nIf you're about to kick off a big build, try this: before you write a single line of code, ask five customers to walk you through the last time they felt the pain you're solving.\n\nYou'll either build it better — or build something else entirely.\n\nWhat's a feature you shipped that flopped? What did it teach you?\n\n#ProductManagement #SoftwareEngineering #LessonsLearned\n\n---\n\nLet me count words roughly. That's probably around 380-400 words. Good, under 500.\n\nLet me refine. The hook is strong. The story has specificity: report builder, the \"workshop vs vending machine\" line is a nice metaphor. The lesson is concrete and actionable — ask \"what were you trying to do the last time you wanted this?\" The ending has the classic engagement question and hashtags.\n\nShould I use emojis? The 👉 pointer is common on LinkedIn. I could use a couple more or none. I'll keep it minimal — one or two max, since over-emoji-ing can feel off. Actually, the finger pointer before the key lesson is a nice touch. Maybe I'll keep just that one.\n\nFormat check: LinkedIn posts benefit from line breaks and short paragraphs. My draft does that. The headers/format guidance for general writing says match the genre — LinkedIn post genre is short punchy lines, which I've done.\n\nOne more consideration: should this be written as the user's own voice (first person, presumably a PM or engineer)? Yes — LinkedIn posts are first person. The user asked me to \"write a LinkedIn post about a lesson learned\" — implying they'll post it as themselves, so a first-person narrative works. I'm inventing plausible details, which is fine for a ghostwritten post; the user can adjust specifics. I won't add a disclaimer — that would be unnecessary friction; it's clearly a template/draft they'll personalize.\n\nLet me tighten the prose a bit. \"For weeks I checked the dashboard every morning\" — good, humanizing. Maybe add the moment of realization. \n\nI think the draft is solid. Let me finalize with minor polish. Word count check — I'll keep it comfortably under 500.\n\nFinal structure:\n1. Hook (failure stat)\n2. The feature and the buildup\n3. The flop\n4. The realization (root cause)\n5. The lesson (reframe: solutions vs problems)\n6. The redemption arc (3-day feature that worked)\n7. Actionable advice\n8. Engagement question\n9. Hashtags\n\nGood. Output just the post, no preamble needed — or maybe a very brief intro line isn't necessary. I'll just give the post. Actually, a tiny note could be helpful but the request is straightforward; delivering the post directly is best. I'll present the post cleanly.",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "The user wants a LinkedIn post, up to 500 words, about a lesson learned from shipping a feature that nobody used. This is a creative writing task with a professional/social media context.\n\nLet me think about what makes a good LinkedIn post:\n1. Hook at the beginning — LinkedIn posts need a strong first line since the feed truncates after ~3 lines\n2. Personal narrative — storytelling is the dominant genre on LinkedIn\n3. Short paragraphs, often single-sentence lines for readability\n4. A clear lesson/takeaway\n5. Often ends with a question or call to action to drive engagement\n6. Sometimes hashtags, though I shouldn't overdo them\n\nThe topic: shipping a feature nobody used. This is a classic product/engineering failure story. The best versions of this story have specificity — a concrete feature, concrete timeline, concrete reasons it failed, and a genuinely earned lesson rather than a platitude.\n\nCommon lessons from this kind of failure:\n- We built what we assumed users wanted instead of asking them\n- We confused \"users said they'd use it\" with \"users will actually use it\"\n- We fell in love with the solution, not the problem\n- No distribution plan — build it and they won't come\n- Sunk cost made us keep polishing instead of testing early\n- The feature solved a real problem but for too small a segment\n- Usage metrics vs. value metrics confusion\n\nI should pick one strong, specific narrative rather than generic mush. Let me invent a plausible scenario: maybe an engineering team spent months building something like an advanced filtering/dashboard/export feature, or an AI-powered something, or a Slack integration. Specificity sells it.\n\nLet me draft:\n\nHook options:\n- \"We spent 4 months building a feature that 11 people used.\"\n- \"0.3% adoption. That's what six months of engineering got us.\"\n- \"Last year I killed my favorite feature. Nobody noticed — because nobody was using it.\"\n\nThe format considerations: LinkedIn posts use lots of white space, short lines. Emojis are common but I can use them sparingly or not at all. Hashtags at the end (3-5 is typical). Word count: up to 500 words — I should aim for something like 250-400 words, which is a natural LinkedIn length. Long enough to tell the story, short enough to read in a feed.\n\nLet me write it with a specific story: say, a \"smart dashboard\" or \"custom report builder\" feature. Let me make it feel real — numbers, timeline, the moment of realization.\n\nDraft:\n\n---\n\nWe spent 4 months building a feature that 11 people used.\n\nNot 11%. Eleven humans.\n\nThe feature was a custom report builder for our analytics product. Customers had asked for it — in surveys, in support tickets, in sales calls. \"We need more flexible reporting.\" So we listened. Or we thought we did.\n\nWe scoped it. Designed it. Built it. Polished it. Shipped it with a launch email and in-app tour.\n\nCrickets.\n\nFor weeks I checked the dashboard every morning, hoping the numbers were wrong. They weren't.\n\nHere's what went wrong — and it took me an embarrassingly long time to see it:\n\nWe heard the words \"we want flexible reporting\" and built our interpretation of that sentence. We never asked what decision people were trying to make when they said it.\n\nTurns out, customers didn't want to *build* reports. They wanted an answer to one specific question: \"Which campaigns drove revenue last month?\" They wanted that answered in one click, or better yet, pushed to them every Monday.\n\nWe built a workshop. They wanted a vending machine.\n\nThe lesson that stuck with me:\n\n👉 Customers describe solutions. Your job is to find the problem underneath.\n\nWhen someone asks for a feature, the most valuable follow-up isn't \"what should it do?\" It's \"what were you trying to do the last time you wanted this?\"\n\nThat question has saved my team months of wasted work since. Sometimes the answer means building something smaller. Sometimes it means building nothing at all — because the real problem lives somewhere else entirely.\n\nWe eventually shipped a \"Top campaigns by revenue\" card on the dashboard. Took three days to build. It's now one of the most-viewed elements in the product.\n\nThree days of work, informed by the actual problem, beat four months of work informed by the stated request.\n\nI still think about those 11 users sometimes. (Thank you for trying it, by the way. You deserved better.)\n\nIf you're about to kick off a big build, try this: before you write a single line of code, ask five customers to walk you through the last time they felt the pain you're solving.\n\nYou'll either build it better — or build something else entirely.\n\nWhat's a feature you shipped that flopped? What did it teach you?\n\n#ProductManagement #SoftwareEngineering #LessonsLearned\n\n---\n\nLet me count words roughly. That's probably around 380-400 words. Good, under 500.\n\nLet me refine. The hook is strong. The story has specificity: report builder, the \"workshop vs vending machine\" line is a nice metaphor. The lesson is concrete and actionable — ask \"what were you trying to do the last time you wanted this?\" The ending has the classic engagement question and hashtags.\n\nShould I use emojis? The 👉 pointer is common on LinkedIn. I could use a couple more or none. I'll keep it minimal — one or two max, since over-emoji-ing can feel off. Actually, the finger pointer before the key lesson is a nice touch. Maybe I'll keep just that one.\n\nFormat check: LinkedIn posts benefit from line breaks and short paragraphs. My draft does that. The headers/format guidance for general writing says match the genre — LinkedIn post genre is short punchy lines, which I've done.\n\nOne more consideration: should this be written as the user's own voice (first person, presumably a PM or engineer)? Yes — LinkedIn posts are first person. The user asked me to \"write a LinkedIn post about a lesson learned\" — implying they'll post it as themselves, so a first-person narrative works. I'm inventing plausible details, which is fine for a ghostwritten post; the user can adjust specifics. I won't add a disclaimer — that would be unnecessary friction; it's clearly a template/draft they'll personalize.\n\nLet me tighten the prose a bit. \"For weeks I checked the dashboard every morning\" — good, humanizing. Maybe add the moment of realization. \n\nI think the draft is solid. Let me finalize with minor polish. Word count check — I'll keep it comfortably under 500.\n\nFinal structure:\n1. Hook (failure stat)\n2. The feature and the buildup\n3. The flop\n4. The realization (root cause)\n5. The lesson (reframe: solutions vs problems)\n6. The redemption arc (3-day feature that worked)\n7. Actionable advice\n8. Engagement question\n9. Hashtags\n\nGood. Output just the post, no preamble needed — or maybe a very brief intro line isn't necessary. I'll just give the post. Actually, a tiny note could be helpful but the request is straightforward; delivering the post directly is best. I'll present the post cleanly.",
+       "format": "unknown",
+       "index": 0
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 111,
+   "completion_tokens": 2006,
+   "total_tokens": 2117,
+   "cost": 0.0256009545,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.02585955,
+    "upstream_inference_prompt_cost": 0.00028305,
+    "upstream_inference_completions_cost": 0.0255765
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1774,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

@@ -1,0 +1,108 @@
+{
+ "judge": "opus",
+ "model": "anthropic/claude-opus-5",
+ "key": "p3-linkedin-1-astra-vs-gemini38-BA",
+ "wall_s": 15.5,
+ "run_utc": "2026-09-06T22:39:39Z",
+ "request_body": {
+  "model": "anthropic/claude-opus-5",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n\n=== TEXT A ===\nWe spent three months building a feature. \n\nTotal active users after launch? \n\nFour. (And three of them were on our QA team.)\n\nAt the time, it was crushing. We had spent weeks in wireframing sessions, debated edge cases in sprint planning, and written thousands of lines of clean, well-tested code. We launched it with an internal celebration, fully expecting the metrics dashboard to spike.\n\nInstead: absolute silence.\n\nIt was one of the most humbling moments of my career, but looking back, it was also the most valuable. Here is what shipping a ghost town taught me:\n\n**1. \"Sounds cool\" is not a customer problem**\nThe idea didn’t come from customer pain points; it came from an internal brainstorming session. We fell in love with our own cleverness. Just because an idea is intellectually interesting doesn't mean it solves an urgent problem someone will change their workflow for.\n\n**2. Validation must happen before the first line of code**\nWe treated building the feature as the discovery phase. That’s the most expensive way to learn. Today, I wouldn't build that feature without running a fake-door test, putting clickable prototypes in front of 10 users, or pre-selling the outcome. If you can’t get someone excited about a rough mock-up, code won’t save you.\n\n**3. Sunk cost fallacy kills product momentum**\nWhen the metrics stayed flat, our initial instinct was to \"add more tooltips\" or \"tweak the onboarding.\" We wanted to justify the 12 weeks of work. The hardest—and best—decision we made was to deprecate it, clean up the codebase, and move on. \n\n**4. Fall in love with the problem, not the solution**\nUsers don’t care how elegant your architecture is. They care about getting their jobs done faster, cheaper, or with less friction. If you aren't talking to them weekly, you’re just guessing with company capital.\n\nShipping that flop hurt, but it changed how I approach product development forever. \n\nNow, before we write a single line of code, we ask: *What is the smallest, cheapest way we can prove nobody wants this?*\n\n***\n\nHave you ever shipped something that completely flopped? What was your biggest takeaway? 👇\n=== END OF TEXT A ===\n\n=== TEXT B ===\nThe feature shipped on time. Nobody used it.\n\nWe’d done the work: polished the interface, handled edge cases, written documentation, and celebrated the release.\n\nThen we watched the dashboard.\n\nAlmost nothing.\n\nOur first instinct was to blame discoverability. Maybe it needed a better announcement. A tooltip. A more prominent button.\n\nBut after talking to customers, we found a harder truth:\n\nWe had validated that the idea sounded useful—not that the problem mattered enough for someone to change their behavior.\n\n“Would you use this?” had produced encouraging answers.\n\n“What do you do today when this happens?” revealed workarounds people were perfectly happy with.\n\nAnd “When was the last time this caused a real problem?” often led to a long pause.\n\nThe lesson wasn’t “never build something new.” It was this:\n\n**Interest is not intent. Shipping is not adoption.**\n\nSince then, I’ve tried to make three things clear before committing to a feature:\n\n• **The behavior we expect to change.** Not “users will have more flexibility,” but “users will stop exporting this report to a spreadsheet every Friday.”\n\n• **The evidence that the problem matters.** Recent examples, repeated workarounds, and time or money lost—not just positive reactions to a mockup.\n\n• **The smallest test that could prove us wrong.** A manual service, a rough prototype, or a limited pilot before a full build.\n\nWe also define what meaningful adoption would look like—and when we’ll review it. Otherwise, an unused feature can linger indefinitely because nobody wants to call it.\n\nI’m still proud of how that team delivered. But we delivered a good answer to a question our customers weren’t really asking.\n\nNow, I’d rather learn that in a week of discovery than a quarter of development.\n\nWhat’s a feature you shipped that changed how you decide what to build next?\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n"
+   }
+  ],
+  "max_tokens": 16000,
+  "provider": {
+   "allow_fallbacks": false
+  },
+  "usage": {
+   "include": true
+  }
+ },
+ "usage": {
+  "input_tokens": 2552,
+  "output_tokens": 1124,
+  "reasoning_tokens": 730,
+  "cost_usd": 0.0404514,
+  "served_model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS"
+ },
+ "verdict": {
+  "more_ai": "B",
+  "confidence": 3,
+  "tells_A": [
+   "signposting: \"Here is what shipping a ghost town taught me\"",
+   "bold-label numbered lesson headers",
+   "rhetorical question answered: \"Total active users after launch? Four.\"",
+   "negative parallelism: \"Fall in love with the problem, not the solution\"",
+   "triad: \"faster, cheaper, or with less friction\"",
+   "engagement-bait closing question with emoji"
+  ],
+  "tells_B": [
+   "repeated negative parallelism: \"Interest is not intent. Shipping is not adoption.\", \"The lesson wasn't X. It was this\", \"Not 'more flexibility,' but...\", \"not just positive reactions\"",
+   "bold-label bullet openers where prose was asked for",
+   "coined aphorism as the takeaway line",
+   "relentless uniform short fragments (\"Almost nothing.\", \"A tooltip.\")",
+   "em dashes as default clause joint",
+   "triads: \"three things\", \"a manual service, a rough prototype, or a limited pilot\"",
+   "few concrete specifics (no numbers, dates, names)",
+   "tidy uplifting close plus engagement question"
+  ]
+ },
+ "response_raw": {
+  "id": "gen-1788734364-Fq12may9ZJcGBjUbPQwN",
+  "object": "chat.completion",
+  "created": 1788734364,
+  "model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"more_ai\": \"B\", \"confidence\": 3, \"tells_A\": [\"signposting: \\\"Here is what shipping a ghost town taught me\\\"\", \"bold-label numbered lesson headers\", \"rhetorical question answered: \\\"Total active users after launch? Four.\\\"\", \"negative parallelism: \\\"Fall in love with the problem, not the solution\\\"\", \"triad: \\\"faster, cheaper, or with less friction\\\"\", \"engagement-bait closing question with emoji\"], \"tells_B\": [\"repeated negative parallelism: \\\"Interest is not intent. Shipping is not adoption.\\\", \\\"The lesson wasn't X. It was this\\\", \\\"Not 'more flexibility,' but...\\\", \\\"not just positive reactions\\\"\", \"bold-label bullet openers where prose was asked for\", \"coined aphorism as the takeaway line\", \"relentless uniform short fragments (\\\"Almost nothing.\\\", \\\"A tooltip.\\\")\", \"em dashes as default clause joint\", \"triads: \\\"three things\\\", \\\"a manual service, a rough prototype, or a limited pilot\\\"\", \"few concrete specifics (no numbers, dates, names)\", \"tidy uplifting close plus engagement question\"]}",
+     "refusal": null,
+     "reasoning": "I'm noticing both texts share similar AI-tell patterns: negative parallelism structures, bold-numbered lists, rhetorical questions with punchy answers, and bulleted triads. Text A leans on signposting phrases and a closing engagement question, while Text B repeats the \"not X, but Y\" construction multiple times and uses \"The lesson wasn't X. It was this:\" framing.\n\nWeighing specificity, Text A has more concrete numbers (three months, four users, 12 weeks) while Text B stays vaguer except for phrases like \"a week\" or \"a quarter\" -- though B's example questions about spreadsheet exports feel oddly specific and human. Tallying up the tells, A has slightly more markers overall, but it's close given B's heavy repetition of the negative parallelism device.\n\nI'll settle on B as my answer, with confidence 3.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm noticing both texts share similar AI-tell patterns: negative parallelism structures, bold-numbered lists, rhetorical questions with punchy answers, and bulleted triads. Text A leans on signposting phrases and a closing engagement question, while Text B repeats the \"not X, but Y\" construction multiple times and uses \"The lesson wasn't X. It was this:\" framing.\n\nWeighing specificity, Text A has more concrete numbers (three months, four users, 12 weeks) while Text B stays vaguer except for phrases like \"a week\" or \"a quarter\" -- though B's example questions about spreadsheet exports feel oddly specific and human. Tallying up the tells, A has slightly more markers overall, but it's close given B's heavy repetition of the negative parallelism device.\n\nI'll settle on B as my answer, with confidence 3.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "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"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2552,
+   "completion_tokens": 1124,
+   "total_tokens": 3676,
+   "cost": 0.0404514,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.04086,
+    "upstream_inference_prompt_cost": 0.01276,
+    "upstream_inference_completions_cost": 0.0281
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 730,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

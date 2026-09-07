@@ -1,0 +1,91 @@
+{
+ "judge": "grok",
+ "model": "grok-4.6",
+ "key": "p1-essay-3-luna-vs-qwen-BA",
+ "wall_s": 79.9,
+ "run_utc": "2026-09-07T00:06:02Z",
+ "request_body": {
+  "model": "grok-4.6",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite an essay of up to 500 words on why most product roadmaps fail.\n\n=== TEXT A ===\n**Why Most Product Roadmaps Fail**\n\nA product roadmap is meant to align teams around a future state, but most roadmaps fail for a simple reason: they are treated as promises rather than plans under uncertainty.\n\nWhen a roadmap is built backwards from deadlines, it reflects what leadership hopes to announce more than what the product team can credibly achieve. Teams estimate work using incomplete information, then commit to dates without room for discovery, dependencies, or quality. The first sign of trouble triggers a choice between lowering quality, changing scope, or missing the date. Most choose the path that causes the least visible pain: they miss the date and damage trust.\n\nAnother failure mode is that roadmaps are often outputs-based instead of outcomes-based. Listing features—“login, dashboard, notifications”—may look like strategy, but features are hypotheses, not results. If a roadmap does not define the problem it is solving or the metric that signals success, teams can ship everything on schedule and still deliver no impact. Product management becomes order-taking, and engineering becomes execution for its own sake.\n\nPolitical roadmapping is also common. Many roadmaps are assembled to win budget, impress executives, or coordinate across functions, not to guide real product work. That makes them brittle. When new information arrives—customer feedback, market shifts, a competitor move, or a technical constraint—the roadmap cannot change gracefully because its dates have already been used for forecasts, contracts, or promotions. Rather than updating the plan, teams defend it, and the organization learns to distrust roadmaps as marketing artifacts.\n\nFinally, most roadmaps fail because they are static. In a healthy product organization, the roadmap is an evolving set of problems, bets, and sequencing decisions. It should include uncertainty, assumptions, and experiments. Too many teams publish a polished slide deck and then stop revisiting it. As a result, the roadmap is either ignored or treated as obsolete the moment reality intrudes.\n\nA better roadmap is shorter, clearer, and more honest. It prioritizes problems and outcomes, shows ranges rather than fixed dates when appropriate, and leaves space for learning. It is not a commitment to a feature list; it is a shared theory of how the product will create value. When organizations treat roadmaps as adaptive instruments rather than declarations of certainty, they become far less likely to fail.\n=== END OF TEXT A ===\n\n=== TEXT B ===\n## Why Most Product Roadmaps Fail\n\nMost product roadmaps fail not because teams lack ambition or intelligence, but because roadmaps are often asked to do too many contradictory jobs. They are expected to inspire a vision, promise delivery dates, satisfy executives, coordinate departments, reassure customers, and predict an uncertain future. A single document cannot reliably perform all of these functions.\n\nThe most common failure is confusing a roadmap with a project plan. A roadmap lists features and deadlines, implying that product development is a sequence of predictable construction tasks. In reality, product work is largely an exercise in learning. Teams may discover that a customer problem is less important than expected, that a proposed solution does not work, or that a competitor and market condition have changed. When a roadmap treats early assumptions as commitments, evidence becomes a threat to the plan rather than a reason to improve it.\n\nMany roadmaps also focus on outputs instead of outcomes. They celebrate launching a feature, integrating a system, or redesigning a workflow without defining what should improve as a result. A team can deliver every item on schedule and still fail to increase retention, revenue, customer satisfaction, or operational efficiency. Without measurable outcomes, prioritization becomes a debate over opinions, influence, and whoever asks most loudly.\n\nAnother problem is that roadmaps are frequently designed for stakeholders rather than for decision-making. Organizations add requests from sales, executives, customers, and internal departments until the roadmap becomes a catalog of obligations. The result is an overloaded list with little indication of what matters most. When everything is important, teams lose focus, switch priorities constantly, and complete less meaningful work.\n\nStatic roadmaps create a further illusion of certainty. A quarterly or annual plan may look authoritative, but it can become obsolete within weeks. Market conditions shift, technical discoveries alter costs, and customer behavior reveals new needs. Yet teams often feel pressure to preserve the original plan because changing it appears to signal incompetence. In this way, the roadmap becomes a political artifact rather than a useful reflection of current knowledge.\n\nFinally, roadmaps fail when they are disconnected from strategy and capacity. A company may claim to prioritize growth while funding work that merely maintains existing systems. Or it may promise more initiatives than its teams can responsibly explore and deliver. Dependencies, technical debt, compliance requirements, and operational work are often omitted, making the plan unrealistic from the beginning.\n\nA better roadmap is not a detailed promise of everything the team will build. It is a clear expression of strategic priorities, desired outcomes, confidence levels, and the problems worth solving next. It should communicate direction while leaving room to learn. Roadmaps succeed when they guide choices, expose assumptions, and are regularly revised as evidence changes. They fail when they pretend uncertainty does not exist.\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n"
+   }
+  ],
+  "max_tokens": 16000,
+  "stream": true,
+  "stream_options": {
+   "include_usage": true
+  }
+ },
+ "usage": {
+  "input_tokens": 2447,
+  "output_tokens": 137,
+  "reasoning_tokens": 5541,
+  "cost_usd": null,
+  "served_model": "grok-4.6",
+  "provider": null
+ },
+ "verdict": {
+  "more_ai": "B",
+  "confidence": 4,
+  "tells_A": [
+   "not X; it is Y closer",
+   "repeated triads",
+   "bold title header",
+   "em dashes",
+   "uplift recap ending",
+   "generic crowd-facing prose",
+   "every point lands"
+  ],
+  "tells_B": [
+   "not because X but because Y",
+   "not X. It is Y. closer (twice)",
+   "markdown header",
+   "participial tail",
+   "triads",
+   "filler transitions (Yet, Finally, In this way)",
+   "The result is...",
+   "uplift recap ending",
+   "generic crowd-facing prose",
+   "every point lands"
+  ]
+ },
+ "response_raw": {
+  "id": "36ef09df-1018-9e10-acdb-7e8f457f36e9",
+  "model": "grok-4.6",
+  "created": 1788739562,
+  "system_fingerprint": "fp_e41c6060b2628547",
+  "object": "chat.completion",
+  "streamed": true,
+  "usage": {
+   "prompt_tokens": 2447,
+   "completion_tokens": 137,
+   "total_tokens": 8125,
+   "prompt_tokens_details": {
+    "text_tokens": 2447,
+    "audio_tokens": 0,
+    "image_tokens": 0,
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 5541,
+    "audio_tokens": 0,
+    "accepted_prediction_tokens": 0,
+    "rejected_prediction_tokens": 0
+   },
+   "num_sources_used": 0,
+   "cost_in_usd_ticks": 381940000
+  },
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "{\"more_ai\": \"B\", \"confidence\": 4, \"tells_A\": [\"not X; it is Y closer\", \"repeated triads\", \"bold title header\", \"em dashes\", \"uplift recap ending\", \"generic crowd-facing prose\", \"every point lands\"], \"tells_B\": [\"not because X but because Y\", \"not X. It is Y. closer (twice)\", \"markdown header\", \"participial tail\", \"triads\", \"filler transitions (Yet, Finally, In this way)\", \"The result is...\", \"uplift recap ending\", \"generic crowd-facing prose\", \"every point lands\"]}"
+    }
+   }
+  ]
+ }
+}

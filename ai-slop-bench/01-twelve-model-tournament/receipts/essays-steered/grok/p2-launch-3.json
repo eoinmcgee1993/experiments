@@ -1,0 +1,73 @@
+{
+ "variant": "steered",
+ "arm": "grok",
+ "label": "Grok 4.6",
+ "vendor": "xAI",
+ "transport": "xai_chat",
+ "model_requested": "grok-4.6",
+ "serving_path": "xAI first-party, chat completions",
+ "prompt_id": "p2-launch",
+ "sample": 3,
+ "prompt_text": "Write a launch announcement of up to 500 words for a new feature of a B2B helpdesk product: a Slack integration that posts a daily summary of open support tickets to a channel of the customer's choice. The audience is existing customers.\n\nPlain prose only: no headers, no bullet points, no bold text, no em dashes. Write like a person.",
+ "run_utc": "2026-09-06T14:07:00Z",
+ "wall_s": 19.4,
+ "request_body": {
+  "model": "grok-4.6",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Write a launch announcement of up to 500 words for a new feature of a B2B helpdesk product: a Slack integration that posts a daily summary of open support tickets to a channel of the customer's choice. The audience is existing customers.\n\nPlain prose only: no headers, no bullet points, no bold text, no em dashes. Write like a person."
+   }
+  ],
+  "max_tokens": 8000
+ },
+ "usage": {
+  "input_tokens": 709,
+  "output_tokens": 242,
+  "reasoning_tokens": 769,
+  "cost_usd": null,
+  "served_model": "grok-4.6",
+  "provider": null
+ },
+ "essay_sha256": "02ca47d96ce01608f4abdb88e4e7c8ec554dfe2d6e835570e7c26cb4d3a44ec6",
+ "essay_words": 212,
+ "response_raw": {
+  "id": "fc8c885d-02d0-9b59-82cf-4636a3edd098",
+  "object": "chat.completion",
+  "created": 1788703599,
+  "model": "grok-4.6",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "Hey everyone, we just shipped a Slack integration we think a lot of you will actually use. It posts a daily summary of your open support tickets to a Slack channel you choose, so the queue shows up where your team already spends the morning instead of living only inside the helpdesk.\n\nWe kept hearing the same thing: tickets get missed when people are hopping between tools, and the first fifteen minutes of the day disappear into a status recap. This is meant to cut that down. Once a day, a short recap lands in Slack with what is still open. Your team can scan it, assign work, and jump back into the tickets without a separate login just to see the list.\n\nYou pick the channel, so it can sit in your support room, a leadership channel, or wherever that visibility actually helps. Setup is in your account settings. Connect Slack, choose the channel, and you are done. You can change the channel or turn it off whenever you want.\n\nIf something looks off while you connect it, reply here or reach us the usual way. We would like to know how it lands with your team.\n\nThanks for sticking with us. Hope this saves you a few minutes every morning.",
+     "reasoning_content": "The user wants a launch announcement for a new feature of a B2B helpdesk product: a Slack integration that posts a daily summary of open support tickets to a channel of the customer's choice. Audience...We are excited to announce a new Slack integration for our B2B helpdesk product that will make managing your support tickets even more seamless. Starting today, you can set up a channel in your Slack workspace to receive a daily summary of all open tickets. This means your team will get a quick overview each morning without having to log into the helpdesk or start a meeting just to catch up on what is still waiting for attention.\n\nWe built this feature because we know how quickly tickets can stack up when everyone is juggling multiple tools.",
+     "refusal": null
+    },
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 709,
+   "completion_tokens": 242,
+   "total_tokens": 1720,
+   "prompt_tokens_details": {
+    "text_tokens": 709,
+    "audio_tokens": 0,
+    "image_tokens": 0,
+    "cached_tokens": 640
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 769,
+    "audio_tokens": 0,
+    "accepted_prediction_tokens": 0,
+    "rejected_prediction_tokens": 0
+   },
+   "num_sources_used": 0,
+   "cost_in_usd_ticks": 65240000
+  },
+  "system_fingerprint": "fp_e41c6060b2628547",
+  "service_tier": "default"
+ }
+}

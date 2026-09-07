@@ -1,0 +1,144 @@
+{
+ "judge": "sol",
+ "model": "gpt-5.6-sol",
+ "key": "calib-human-10-2022-08-20-vs-gemini38-1-HM",
+ "wall_s": 4.3,
+ "run_utc": "2026-09-07T08:01:31Z",
+ "request_body": {
+  "model": "gpt-5.6-sol",
+  "input": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n(One of the texts is a real LinkedIn post by a person, written on its own topic; judge tells, not topic.)\n\n=== TEXT A ===\nMany PMs fail a job interview due to a product vision.\n\nYet, it is easy to understand.\n\nLeading a product without a clear vision is like walking through a foreign city without a map. You might be moving, but you are going nowhere.\n\nA product vision describes the overarching long-term mission of your product. Vision statements are aspirational and communicate concisely where the product hopes to go and what it hopes to achieve in the long term.\n\nEffective vision needs to be:\n\n✅ Inspiring — people who help to implement the vision should feel inspired.\n\n✅ Achievable — it must have a decent chance to work. Don't dream of traveling to Alpha Centauri until you send humans to Mars.\n\n✅ Documented — do not let the vision stay in your head. You actually need to write it to make it work.\n\n✅ Communicated — it seems obvious, yet many forget about this. Vision will only work if you tell others about it.\n\n✅ Emotional — vision becomes much more memorable when others can imagine themselves doing something practical and when it speaks to their hearts.\n\nMy favorite example of the vision is president John F. Kennedy's vision of space exploration (below).\n\nBe patient, as creating the product vision is not a one-time task. You have to communicate with others, get feedback and adapt. Your product vision will emerge and evolve over time.\n\nHow does it connect to a product strategy? \n\nI'll describe it Tomorrow.\n\n#productmanagement #agile\n\n=== END OF TEXT A ===\n\n=== TEXT B ===\nWe spent three months building a feature. \n\nTotal active users after launch? \n\nFour. (And three of them were on our QA team.)\n\nAt the time, it was crushing. We had spent weeks in wireframing sessions, debated edge cases in sprint planning, and written thousands of lines of clean, well-tested code. We launched it with an internal celebration, fully expecting the metrics dashboard to spike.\n\nInstead: absolute silence.\n\nIt was one of the most humbling moments of my career, but looking back, it was also the most valuable. Here is what shipping a ghost town taught me:\n\n**1. \"Sounds cool\" is not a customer problem**\nThe idea didn’t come from customer pain points; it came from an internal brainstorming session. We fell in love with our own cleverness. Just because an idea is intellectually interesting doesn't mean it solves an urgent problem someone will change their workflow for.\n\n**2. Validation must happen before the first line of code**\nWe treated building the feature as the discovery phase. That’s the most expensive way to learn. Today, I wouldn't build that feature without running a fake-door test, putting clickable prototypes in front of 10 users, or pre-selling the outcome. If you can’t get someone excited about a rough mock-up, code won’t save you.\n\n**3. Sunk cost fallacy kills product momentum**\nWhen the metrics stayed flat, our initial instinct was to \"add more tooltips\" or \"tweak the onboarding.\" We wanted to justify the 12 weeks of work. The hardest—and best—decision we made was to deprecate it, clean up the codebase, and move on. \n\n**4. Fall in love with the problem, not the solution**\nUsers don’t care how elegant your architecture is. They care about getting their jobs done faster, cheaper, or with less friction. If you aren't talking to them weekly, you’re just guessing with company capital.\n\nShipping that flop hurt, but it changed how I approach product development forever. \n\nNow, before we write a single line of code, we ask: *What is the smallest, cheapest way we can prove nobody wants this?*\n\n***\n\nHave you ever shipped something that completely flopped? What was your biggest takeaway? 👇\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n",
+  "max_output_tokens": 16000,
+  "store": false,
+  "reasoning": {
+   "effort": "medium"
+  }
+ },
+ "usage": {
+  "input_tokens": 1585,
+  "output_tokens": 181,
+  "reasoning_tokens": 72,
+  "effort_echoed": "medium",
+  "served_model": "gpt-5.6-sol"
+ },
+ "verdict": {
+  "more_ai": "B",
+  "confidence": 5,
+  "tells_A": [
+   "Checklist structure with repeated bold-style labels",
+   "Generic motivational analogy",
+   "Filler transition: \"Yet\"",
+   "Teaser ending with a rhetorical question"
+  ],
+  "tells_B": [
+   "Rhetorical question answered immediately",
+   "Numbered bold-label sections",
+   "Repeated negative parallelism",
+   "Several exact triads",
+   "Em dashes as clause joints",
+   "Generic manufactured anecdote",
+   "Recap ending that turns failure into an uplifting lesson",
+   "Crowd-engagement question at the end"
+  ]
+ },
+ "response_raw": {
+  "id": "resp_00d25ff801bb5684016a9e6f56160887d2857f3ab33bf4df17",
+  "object": "response",
+  "created_at": 1788768086,
+  "status": "completed",
+  "background": false,
+  "billing": {
+   "payer": "developer"
+  },
+  "completed_at": 1788768090,
+  "error": null,
+  "frequency_penalty": 0.0,
+  "incomplete_details": null,
+  "instructions": null,
+  "max_output_tokens": 16000,
+  "max_tool_calls": null,
+  "model": "gpt-5.6-sol",
+  "moderation": null,
+  "output": [
+   {
+    "id": "rs_00d25ff801bb5684016a9e6f56b3b087d2a593d3a97fd963e6",
+    "type": "reasoning",
+    "content": [],
+    "encrypted_content": "gAAAAABqnm9atJ7kpkd3P1JwqyCiHWG-0w8zh9CeAMphrihvlO-rMR-1wed_TGok-QKOXwLEPcaKsGVvCigwIrFG4V-6Id1CFJVPsTQS_QH56Q8SnvZ9WNIUbi1fMA9ymD4zhW0l9hvLl3ahTtbrSXN9jpY95cNF-6gGGpUnYZi6vF0qYXytLkmXm-Ian9IeqRW_zMHcXAUixkBYPkbFqclXiWqcFx8_mbXV3rbrJG9_s4CqLLZxz5K7PQzZcTyDbRuXGSDf9RqsU7BVu1pzH2MmmpsQid-19UXfTjncq6G_nfbQA4oMxgThx0YXJZc4t_hpduOqgLQNySQ_TBAlbSzl1pclfaPGHy9-iEzieTPh5l7TEZHXFjEN_J5AEQ2JdvDbe9u_oOJ24Uzuqk_nYljvhZTwoM_EwPLR3mpy3k9tsnDZCb0Sg5i8F0bhRFEwbIzNkZq20OxN28CMAZB0rLik5gCpLhGisWOEHn2BLyXpVzP1Cb7-FxFvHpdoqo-bKfzSJ_ce1pBtwRUb13weqB3fLU4uty9_WWtiwwhDHm5tpFC1rfhjrXOroZsKNWOnXTCIE7Ind6qjByP72Jd_5NKv2kM6gTD3x09vEcahibc-fUnAu5eTTab4GxRU4_IXAOKlRgDbnUgm5-P33xd-BADI2R2ASAiOvfXy1Z44uQrR3jXnqYKzHmo-f2NbQjhls9pOqJ3V4f-U3emEU-P03CA5-B6KDyHmmu2FU7uYrp6PiUjrIDz1XcWlTLYFvvWGfFZU82VLY_odeWgCtrpCTWWfZk5VAEDpt7yFkXcUki4cWWWgWSZVxG3dQ_h43VFZ5BawLHOaB-vizSjlWR0B5UWejw0XxzJm_RH-myDqR7S-AbyUhokvQTO295ehoFw9hoWG5-nFZQTw7NlFv50wNQeig4fjkh4a6Fhyb6etzdtQdMBde9G2wa2vF_Xuigq94K9CD21PQhTEBDZ5Mn2vW_BJXYWACQkSFRmBgEs3b5vRePsiUWlIKWn66qmoSGPRFUO5ZXIDv1O8IlVZEQnk1mFS4qcNdbnLopwHzMOn3mRJXWzTTu6IW0PiRhBD6q2k5bZORpzNV31tlEioBVWaAge0MX56ishQOwimrp50VfKbK8IHsrPFSX5u8osuYOAhMDF1P8YtwtNUPvV3Pd8Kvjm6hZyMntT-sB3TYkXmERSgg5yRIbo2gliT8CDfBwfng5yxV2bQRrEyVgss2tHwf-8LwBMegu5iq5hdgELZVm69TtxnE5qvOo1xO4AyScaf8Yif7PG1udInN9ymZKJ37N9rgDkik9iwpu8N_kjlKXL9WJn1LAQGLZs8Hbdj9Km8CqAOnJ80goOXGkBKAzpumMc0s3Hlqqc7txTCIBHNduqBpfOWzyhyv8_xnqTM9vysWiNBZO9vzPgdeMITO00HYEMfZTolDlOnjBm6XDhaNgPxd1YMHkN2UkHEnKsIYt-x-2Wc37uaQqi0vXVgCnGUrA3mYDUqhppjPwGNh1MJM8Bjg7w1QltemhG9CsszZKrPmMoGaHd9Pmk9j15j4ecbTMe6LrAc8lSXG7ZkiIk4_XY-1vgEOxpJzqUeG9URxZZlR_OzVARMK7dp",
+    "summary": []
+   },
+   {
+    "id": "msg_00d25ff801bb5684016a9e6f58184c87d2851ccd0161d9dfde",
+    "type": "message",
+    "status": "completed",
+    "content": [
+     {
+      "type": "output_text",
+      "annotations": [],
+      "logprobs": [],
+      "text": "{\"more_ai\":\"B\",\"confidence\":5,\"tells_A\":[\"Checklist structure with repeated bold-style labels\",\"Generic motivational analogy\",\"Filler transition: \\\"Yet\\\"\",\"Teaser ending with a rhetorical question\"],\"tells_B\":[\"Rhetorical question answered immediately\",\"Numbered bold-label sections\",\"Repeated negative parallelism\",\"Several exact triads\",\"Em dashes as clause joints\",\"Generic manufactured anecdote\",\"Recap ending that turns failure into an uplifting lesson\",\"Crowd-engagement question at the end\"]}"
+     }
+    ],
+    "phase": "final_answer",
+    "role": "assistant"
+   }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0.0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+   "context": "all_turns",
+   "effort": "medium",
+   "mode": "standard",
+   "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": false,
+  "temperature": 1.0,
+  "text": {
+   "format": {
+    "type": "text"
+   },
+   "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+   "image_gen": {
+    "input_tokens": 0,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "output_tokens": 0,
+    "output_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "total_tokens": 0
+   },
+   "web_search": {
+    "num_requests": 0
+   }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+   "input_tokens": 1585,
+   "input_tokens_details": {
+    "cache_write_tokens": 1582,
+    "cached_tokens": 0
+   },
+   "output_tokens": 181,
+   "output_tokens_details": {
+    "reasoning_tokens": 72
+   },
+   "total_tokens": 1766
+  },
+  "user": null,
+  "metadata": {}
+ }
+}

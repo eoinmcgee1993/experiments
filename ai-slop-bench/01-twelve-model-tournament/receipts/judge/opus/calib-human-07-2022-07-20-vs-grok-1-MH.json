@@ -1,0 +1,105 @@
+{
+ "judge": "opus",
+ "model": "anthropic/claude-opus-5",
+ "key": "calib-human-07-2022-07-20-vs-grok-1-MH",
+ "wall_s": 10.4,
+ "run_utc": "2026-09-07T08:25:07Z",
+ "request_body": {
+  "model": "anthropic/claude-opus-5",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n(One of the texts is a real LinkedIn post by a person, written on its own topic; judge tells, not topic.)\n\n=== TEXT A ===\nWe spent three months building a feature nobody asked for.\n\nIt was elegant. It was well-engineered. It shipped on time. And in the first 90 days, almost no one used it.\n\nI still remember the launch thread. Screenshots. Confetti emoji. A demo that made the product look smarter than it actually was. We told ourselves we were being proactive — solving a problem users would have eventually. We had internal data. We had a slide that said “high intent.” We had conviction.\n\nWhat we did not have was a single person who had said, “I need this.”\n\nThe usage graph was a flat line with a few polite clicks from people on our team. Support tickets did not mention it. Sales did not sell it. Power users found workarounds around it, which is a polite way of saying they ignored it.\n\nThe hard part was not the wasted engineering time. It was the story we had to tell ourselves afterward. We had not failed because we shipped slowly. We had failed because we shipped a solution in search of a problem.\n\nHere is what I learned, and what I still repeat in kickoffs:\n\n1. Usage is the only honest launch metric. Applause is not a metric. “Looks great in the demo” is not a metric. If the feature does not change a weekly habit, it did not ship. It just deployed.\n\n2. “Nobody asked for it” is not automatically a virtue. Sometimes users cannot articulate the next step. Often they can. We skipped the unglamorous work: five conversations, a prototype, a fake door, a waitlist. We protected our idea from contact with reality.\n\n3. Beautiful unused features have a cost beyond the sprint. They add surface area, docs, edge cases, and cognitive load. Every unused control is a tax on the people who actually use the product.\n\n4. Kill criteria should be written before the build, not after the embarrassment. We should have said: if fewer than X people complete this flow in 30 days, we remove it. Sunsetting something you were proud of is cheaper than carrying it forever.\n\n5. The team did not fail. The process did. Smart people will fill a vacuum of evidence with taste and optimism. That is not a character flaw. It is a design problem for how you decide what to build.\n\nI used to think shipping was the brave part. Now I think the brave part is admitting a feature is a hypothesis, not a gift. Talk to users before you write the ticket. Instrument the thing you think they will do. Be willing to delete your favorite screen.\n\nIf you have a feature sitting at 2% adoption and a roadmap full of “phase 2,” that is not momentum. That is inventory.\n\nWhat is a feature you shipped that the data quietly retired? I would rather hear that story than another launch post.\n=== END OF TEXT A ===\n\n=== TEXT B ===\nLeading others is a PM superpower. \n\n8 ways to 10x your leadership skills:\n\n✅ 1. Stay humble\n\nLearn to feel good about not being the smartest person in the room. Listen \"actively\" with awareness, processing what's being said rather than who's saying it.\n\n\"Greatness is to stay humble when the whole world calls you great!\" — Mehmet M. Ildan\n\n✅ 2. Show your vulnerabilities\n\nDo not pretend to be someone you are not. Being authentic is an essential part of developing meaningful relationships. People can genuinely connect with and feel close to others when they expose their vulnerabilities.\n\n\"In order for connection to happen, we have to allow ourselves to be seen, really seen.\" — Brené Brown\n\n✅ 3. Respect everyone\n\nRespect everyone. Judge people by their results and decide based on what's right, not whom you like.\n\nBe thoughtful of others' feelings, address mistakes with kindness (everyone makes them!), and treat people equally (including the cleaner).\n\n\"Respect comes in two unchangeable steps: giving it and receiving it.\"— Edmond Mbiaka\n\n✅ 4. Lead without authority\n\nInstead of giving precise instructions, co-create goals and let your teams find the right path. Great leaders are excellent communicators, able to clearly and concisely explain their goals and persuade others.\n\n\"The authority is largely irrelevant — if you are a leader, you will lead when you are needed.\" — Clay Scroggins\n\n✅ 5. Stay open-minded\n\nGet out of your comfort zone. Be widely open to testing new ideas. Welcome arguments and information that does not match what you already know.\n\n\"Progress is impossible without change, and those who cannot change their minds cannot change anything.\" — George B. Shaw\n\n✅ 6. Keep calm\n\nThough emotions call for immediate actions, you can only act rationally and make better decisions by not letting them take control.\n\nGreat leaders stay peaceful, no matter the circumstances. In crises, they use data and operate on facts. It's as if they can \"stop time,\" see the bigger picture and then make the next move.\n\n\"You don't have to control your thoughts. You just have to stop letting them control you\" — Dan Millman\n\n✅ 7. Act like a gardener \n\nInvest in growing and developing people. Realize that the best investment you can make is in others.\n\n\"Gardeners don’t try to command plants to grow with a detailed Work Breakdown Structure in a Gantt chart and milestones. With care, they tend to the garden, planting seeds, watering them, and when done, producing a varied and flourishing garden.\"—Jonathan Smart\n\n✅ 8. Decide and take full responsibility\n\nAlthough some decisions require more time, great leaders never delay them longer than necessary.\n\nDon't hesitate to make the final decisions and take full responsibility for your actions.\n\n“Chronic indecision is not only inefficient and counterproductive, but it is deeply corrosive to morale.“— Robert Iger\n\n---\n\nWhat else should we add to this list? Let me know in the comments.\n\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n"
+   }
+  ],
+  "max_tokens": 16000,
+  "provider": {
+   "allow_fallbacks": false
+  },
+  "usage": {
+   "include": true
+  }
+ },
+ "usage": {
+  "input_tokens": 3132,
+  "output_tokens": 511,
+  "reasoning_tokens": 235,
+  "cost_usd": 0.02815065,
+  "served_model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS"
+ },
+ "verdict": {
+  "more_ai": "A",
+  "confidence": 4,
+  "tells_A": [
+   "repeated negative parallelism: 'not X, it's Y' ('It just deployed', 'The team did not fail. The process did.', 'that is not momentum. That is inventory.')",
+   "signposting: 'Here is what I learned'",
+   "numbered list with label-style openers",
+   "rhetorical question at close inviting engagement",
+   "em dash as clause joint",
+   "triads ('surface area, docs, edge cases')",
+   "uniform punchy fragment rhythm",
+   "generic anecdote with no real specifics (no product, names, dates; 'a slide that said high intent')"
+  ],
+  "tells_B": [
+   "listicle with emoji bullets and quote-per-item template",
+   "engagement bait closer 'Let me know in the comments'",
+   "'10x your leadership skills' hype phrasing"
+  ]
+ },
+ "response_raw": {
+  "id": "gen-1788769495-8WPKeh76WyUr9SUZbZLt",
+  "object": "chat.completion",
+  "created": 1788769495,
+  "model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"more_ai\": \"A\", \"confidence\": 4, \"tells_A\": [\"repeated negative parallelism: 'not X, it's Y' ('It just deployed', 'The team did not fail. The process did.', 'that is not momentum. That is inventory.')\", \"signposting: 'Here is what I learned'\", \"numbered list with label-style openers\", \"rhetorical question at close inviting engagement\", \"em dash as clause joint\", \"triads ('surface area, docs, edge cases')\", \"uniform punchy fragment rhythm\", \"generic anecdote with no real specifics (no product, names, dates; 'a slide that said high intent')\"], \"tells_B\": [\"listicle with emoji bullets and quote-per-item template\", \"engagement bait closer 'Let me know in the comments'\", \"'10x your leadership skills' hype phrasing\"]}",
+     "refusal": null,
+     "reasoning": "Text B reads as an authentic LinkedIn listicle with checkmarks and quotes, while Text A shows AI tells like \"here is what I learned,\" numbered lists, repeated negative parallelism, and a rhetorical closing question. Text B's emoji-driven listicle format and bold numbered points feel more like genuine human LinkedIn conventions, though I want to weigh that against the task at hand.\n\nMy answer is A, since it carries more of the telltale AI patterns while B reads as a real post someone wrote about their own experience.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "Text B reads as an authentic LinkedIn listicle with checkmarks and quotes, while Text A shows AI tells like \"here is what I learned,\" numbered lists, repeated negative parallelism, and a rhetorical closing question. Text B's emoji-driven listicle format and bold numbered points feel more like genuine human LinkedIn conventions, though I want to weigh that against the task at hand.\n\nMy answer is A, since it carries more of the telltale AI patterns while B reads as a real post someone wrote about their own experience.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAIS/QYKrgEIERgCKkA8Ys163AZRS/qWxHcnJu2UT8fKJpwXtJUyCNHbbEPbuVBbIcX/Qqcd861e19GGnPm9+/GfaidDtcNJObWyKwogMg1jbGF1ZGUtb3B1cy01OAFCCHRoaW5raW5nWiQ0YzBmMDQ2Zi0yNWZkLTQ1ZmItYmZiMy1hMDhhOGUyNDljYTd6HnVwcm9mXzAxMUNlbkZSYjRqeFBLcXdMUXFXN3dtNqgB4en51AYSDFaRS+LI42a9b3FkGxoM7VPxZ3doEn5XFmMPIjAfFZLlFPL36MnOag0/JRUd24SLFDIdLobEUBWPKJPPVbp/+uwkMVISUz6KVGPpna4q+wRimGaU58vIGB5RcYpay+pjRqgPmGrBwpuuvRIXD9QiBuPBUmwZ6XaGGfY9xMyuY2Flt7UZ7bzFnbXeJ8w21ru44qk/R4HMtwGDThbkbla6sS+Vz+SqiLBCATad7IEf1JMHgxVivhXTj6zM/N/53cmxzd7QcAsc9wg/v+jFbVWb214XR/eqRvBPde+6bU0QXlDC6zRs64Z+jFiAXmeMt8rdvl/56ThbguhYCLoakpI6W5KyK0KhCdTGblzydMYos+nM1FZOh8iVx8TN2i7mf5gXGzq8IdBOIGjzFqoOZRuv5JkWYoQAbtXwc4KDScP8iuVy4RyO0ElGKxsRqrA44Ct823PrJ6WvjGt7E3J9Apt1KCvyjuN1tZ3bbv0fUQX4hzVx1fVG0hnzKXnsvimj//IBPl+0YkpwJ4FFewEVl+7y7mPuo+PsjDVbzLb0OPzNfSIEJowZrk7HQB/Lkq40fyHH97llu59jXO+lIoqVa8+7uxGyeznL8SOdYsj1+gCKgOXYQQ2msbx4RFmn7V+qUVN3fG3UTAu7ZrbIke3xls6Sh1XZDeKERkeg4YHXktAsKwrkuSplY0D6PEmOMwjSeug4lBp0VdjdH9R1EScoElv0BSC4UyBhP9LzLx0DF8o2Rb+CenxUQEWdHi8PUn2dfUhEYhp577gZ5U3bc0f4p31n+31QeUGjyZnzKsUnosvNFWAeWhw0H/LpIQhlUnXla9aY1PC7BAW8AsGQEATXHjvwXrISlGB6p1+m+a6uR8RKgncvMWWjBastmlIZQE35YwvKZT0yetl0g7YbWbJb5MB7oanRikb+jPUu9m1n7giT8kc+JSwL7v9z9OvrjhgB"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 3132,
+   "completion_tokens": 511,
+   "total_tokens": 3643,
+   "cost": 0.02815065,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.028435,
+    "upstream_inference_prompt_cost": 0.01566,
+    "upstream_inference_completions_cost": 0.012775
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 235,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

@@ -1,0 +1,71 @@
+{
+ "arm": "grok",
+ "label": "Grok 4.6",
+ "vendor": "xAI",
+ "transport": "xai_chat",
+ "model_requested": "grok-4.6",
+ "serving_path": "xAI first-party, chat completions",
+ "prompt_id": "p1-essay",
+ "sample": 1,
+ "run_utc": "2026-09-06T13:24:54Z",
+ "wall_s": 20.2,
+ "request_body": {
+  "model": "grok-4.6",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Write an essay of up to 500 words on why most product roadmaps fail."
+   }
+  ],
+  "max_tokens": 8000
+ },
+ "usage": {
+  "input_tokens": 653,
+  "output_tokens": 473,
+  "reasoning_tokens": 425,
+  "cost_usd": null,
+  "served_model": "grok-4.6",
+  "provider": null
+ },
+ "essay_sha256": "067eb2bfb8d744dbafc2fafe2f4f47fdd4f62cae38cdce7d3f7a5c9900da3694",
+ "essay_words": 369,
+ "response_raw": {
+  "id": "0a3730a0-83e8-9224-93cb-ada67bbb853a",
+  "object": "chat.completion",
+  "created": 1788701073,
+  "model": "grok-4.6",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "**Most product roadmaps fail because they confuse planning with prediction, outputs with outcomes, and internal politics with customer value.**\n\nA product roadmap is meant to communicate direction: what problems the team will solve, roughly when, and why it matters. In practice, many become Gantt charts of features with dates, treated as contracts. Stakeholders treat dates as promises; teams treat them as commitments. Reality—new customer evidence, competitive moves, technical surprises, or capacity limits—then turns the document into a source of missed expectations and eroded trust. The failure is not that plans change; it is that the organization never treated the roadmap as a hypothesis that would be revised.\n\nA second common failure is output-obsession. Roadmaps list features (“redesign checkout,” “add AI search”) rather than outcomes (“reduce cart abandonment by X,” “increase successful searches among new users”). Without a clear problem and success metric, teams ship work that looks busy but does not move the business. Discovery is often thin or after-the-fact: personas, interviews, and experiments happen too late or not at all, so the roadmap encodes assumptions instead of evidence. Prioritization then defaults to the loudest voice, the biggest customer, or the next quarter’s demo rather than impact versus effort.\n\nAlignment is equally fragile. Engineering, design, sales, support, and leadership often do not share the same understanding of strategy or constraints. A roadmap that is not co-created or regularly socialized becomes a private artifact of the product team. Dependencies, technical debt, and capacity are ignored or underestimated, producing an overcommitted plan. When the plan inevitably slips, blame replaces learning.\n\nFinally, many roadmaps are static. Markets, users, and technology do not wait for the next annual planning cycle. Teams that cannot re-prioritize without drama, or that lack a lightweight “now / next / later” structure, either freeze in place or thrash. The document stops being a decision tool and becomes theater.\n\nRoadmaps that work are shorter on dates and longer on problems, evidence, and intended outcomes. They are living, visible, and revised as learning arrives. They connect strategy to sequenced bets rather than to a feature factory. Most fail not because planning is useless, but because organizations use the artifact to avoid the harder work of discovery, trade-offs, and honest communication.",
+     "reasoning_content": "The user wants an essay of up to 500 words on why most product roadmaps fail. This is a straightforward, legitimate request. No issues with the policies - it's not about anything disallowed.\nProduct roadmaps are essential tools for guiding development and aligning teams, yet most fail to deliver their intended value. They often become rigid documents that stifle innovation rather than serve as living guides for success.\n\nOne primary reason for their failure is that they are treated as commitments rather than flexible hypotheses.",
+     "refusal": null
+    },
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 653,
+   "completion_tokens": 473,
+   "total_tokens": 1551,
+   "prompt_tokens_details": {
+    "text_tokens": 653,
+    "audio_tokens": 0,
+    "image_tokens": 0,
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 425,
+    "audio_tokens": 0,
+    "accepted_prediction_tokens": 0,
+    "rejected_prediction_tokens": 0
+   },
+   "num_sources_used": 0,
+   "cost_in_usd_ticks": 59260000
+  },
+  "system_fingerprint": "fp_e41c6060b2628547",
+  "service_tier": "default"
+ }
+}

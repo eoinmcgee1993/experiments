@@ -1,0 +1,144 @@
+{
+ "judge": "sol",
+ "model": "gpt-5.6-sol",
+ "key": "calib-human-08-2022-07-30-vs-gemini38-2-MH",
+ "wall_s": 7.3,
+ "run_utc": "2026-09-07T08:25:56Z",
+ "request_body": {
+  "model": "gpt-5.6-sol",
+  "input": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n(One of the texts is a real LinkedIn post by a person, written on its own topic; judge tells, not topic.)\n\n=== TEXT A ===\nWe spent 12 weeks building it. \n\nThe architecture was flawless. The UI was slick. The QA pass was spotless. We shipped it right on schedule.\n\nLaunch day arrived. We celebrated in Slack with high-fives and confetti emojis. \n\nAnd then?\n\nCrickets. \n\nWeek 1: 14 total clicks (half were our own team).  \nMonth 1: Adoption rate sat stubbornly at 1.2%.  \nMonth 3: It was a digital ghost town. \n\nWe had built an advanced custom reporting engine. One loud prospect in the sales pipeline had claimed it was a “must-have,” and we convinced ourselves it was the missing puzzle piece for our product. \n\nIt wasn’t. \n\nShipping a feature nobody touches is a painful, humbling experience. But looking back, that flop taught me more about product development than any successful launch ever did.\n\nHere are the 4 hardest lessons I learned:\n\n**1. \"Would you use this?\" is the absolute worst user research question.**  \nPeople want to be polite. When you ask users if they’d like a feature, they almost always say \"Yes!\" because it costs them nothing. Instead, ask: *\"How do you currently solve this?\"* If they aren't actively cobbling together a painful workaround today, the problem isn’t urgent enough to build for tomorrow.\n\n**2. Never build for the \"Loudest Voice in the Room.\"**  \nWe let one prospective enterprise deal dictate our roadmap. (Spoiler: They didn't even sign after we built it). Never turn custom software requests into platform features unless you have clear data that the problem is repeatable across your user base.\n\n**3. Code is the most expensive way to test an idea.**  \nWe spent hundreds of engineering hours on an assumption. A clickable Figma prototype, a landing page test, or even a \"fake door\" button inside the app would have shown us in 48 hours what took us 3 months to learn: nobody actually cared.\n\n**4. Killing features is just as important as shipping them.**  \nThe instinct is to keep tweaking the failed feature—adding tooltips, changing the placement, running onboarding emails. But sometimes, you just have to accept the sunk cost, remove the code to save technical debt, and move on.\n\nIt’s easy to fall in love with your own ideas. It’s much harder—and far more necessary—to fall in love with the user's real, everyday pain points. \n\nFailure isn't shipping something that flops. Failure is not learning why it flopped before you plan the next sprint.\n\n***\n\nHave you ever poured energy into a feature or project only for it to be met with total silence? How did it change your process?\n=== END OF TEXT A ===\n\n=== TEXT B ===\nToo much #Lean can undermine your product efforts.\n \nStop applying it without reflection.\n \nLean puts much emphasis on reducing waste and costs. If product managers focus on it too much, things go terribly wrong.\n \nLet's look at two areas of waste in lean manufacturing:\n \n1. Unused talent (\"underutilization of people\")\n \nKnowledge work is different from work on the production line. 100% utilization is never a good solution. The inevitable multitasking and constant context switching can drastically lower people's productivity.\n \nWe don't get paid for being fully utilized (feature factory). We get paid for delivering valuable outcomes. To do that, we need time to pause and think.\n \nYou should be \"utilized\" at about 50 to 60 percent to provide maximum value for your organization. More than that is a waste of talent.\n \n2. Extra-processing\n \nLean defines extra-processing as quality higher than required by the customer. It makes sense for screws or chairs. The product fulfills its function, which may be the only thing customers expect.\n \nIn #productmanagement, we need a different approach. Think about iPhone. Do people buy it only to make calls or take photos? Emotional and social outcomes can be more important than the core functionalities of the product.\n \nCustomers don't just want their needs to be met. They want to be delighted.\n \n-\n \nDon't get me wrong. Lean and #Agile can coexist. But it's important to remember that Lean comes from manufacturing. We should use it carefully.\n \n#Scrum doesn't implement Lean in its entirety. In my opinion, you shouldn't either.\n \nWhat are your thoughts? Let me know in the comments.\n\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n",
+  "max_output_tokens": 16000,
+  "store": false,
+  "reasoning": {
+   "effort": "medium"
+  }
+ },
+ "usage": {
+  "input_tokens": 1729,
+  "output_tokens": 406,
+  "reasoning_tokens": 244,
+  "effort_echoed": "medium",
+  "served_model": "gpt-5.6-sol"
+ },
+ "verdict": {
+  "more_ai": "A",
+  "confidence": 5,
+  "tells_A": [
+   "Rhetorical question with punchline answer: “And then? Crickets.”",
+   "Explicit signposting: “Here are the 4 hardest lessons I learned”",
+   "Bold numbered list with label-style headings",
+   "Repeated negative parallelism, especially “Failure isn't... Failure is...”",
+   "Frequent em-dash clause joins",
+   "Highly polished lesson arc in which every point lands and the ending uplifts",
+   "Closing engagement question aimed at an imagined LinkedIn crowd"
+  ],
+  "tells_B": [
+   "Signposting: “Let's look at two areas...”",
+   "Numbered list structure",
+   "Negative parallelism: “Customers don't just... They want...”",
+   "Rhetorical question followed by an answer about emotional and social outcomes",
+   "Closing engagement prompt"
+  ]
+ },
+ "response_raw": {
+  "id": "resp_028da98fe7f48c03016a9e750c4c7487d2b510f13f2698062c",
+  "object": "response",
+  "created_at": 1788769548,
+  "status": "completed",
+  "background": false,
+  "billing": {
+   "payer": "developer"
+  },
+  "completed_at": 1788769555,
+  "error": null,
+  "frequency_penalty": 0.0,
+  "incomplete_details": null,
+  "instructions": null,
+  "max_output_tokens": 16000,
+  "max_tool_calls": null,
+  "model": "gpt-5.6-sol",
+  "moderation": null,
+  "output": [
+   {
+    "id": "rs_028da98fe7f48c03016a9e750dcfdc87d2ac0511d8ad07dca4",
+    "type": "reasoning",
+    "content": [],
+    "encrypted_content": "gAAAAABqnnUT5iYJHP1bv8jvdk_fvC9XnJbjMgdTiF-TbaCaoNrl9iNvufGXgGUr_ts84eqRqbZBUtpDfwA50XkLP5lc7oBDdSPplTRZL3c-5-P_RhKjFnMEbk41aXiHzqKHuhAipacfubbSh6rX8ejeI0naRS0xZe_5kOAUzolonLyi2kO9iypXGqHnoRZIzn85rNEPKd8oHcXJvZKRYzXsouttzenQgaMMo7Bu71m3SdX9kswU2_jJ4_ZEjwSb8-s-6EwZPMvIQ6NbqmpKUE6qRFILfsBbeA17jALqbSI5uKOujyaDHqKWmfbxTBglZrO1YYxfip7bma2QnpfsrS8SiWv-zQ6YC9AQAJt1AleyCTUFPL25NjKWa78DcEtJxOE12kOlUS3_9aec5t2_Tiohn14yY1XmYO-KIIDLGhSsshXAxOMkdsfwbiqxbfByBvHSk8HRY5FTR616SDoZdbK70G0vDMnB-gjgF4eaVtAw_MOMPL9fUOJge5yAnWlRZev8em3GsMgSuSHA4_ZDinKnUzBmRvpxqqWmHXxaBGqJVEkg4TeCB3J4uSPEB1kH0oBVA8cJfP0TTK_QxFfA9nkoR4VSB8a2vv1dxhwJGVsvrFuk1LtZzWc57cW56YXanTmGMTOaWawqxg7xM-V1VTxYMRrjbkqRQWuNFjWAvw_f8VEPHtjvNzcL0WV024B8ege5yf80hfvK_oZwZbnWisiRBzJiOPei_rNKQYrMW6dWzgntXEI-Qc-d-YNdfH05SnUgfppW5Esv3hwevtZB_o8wU4NshHiUSJ51pctScHuZv0MVT7QBMA6PsnvdgJsWzdhuWKwNjbl6HPWOneYKS4g0Ws6jREOd-9hJ2tSK0E9Xeo0R2axl3hRzIlcbd0MFGGz0kqwSeGCl3wjoVOfW-LEje4efXUHOxvNbBVtmbnU4FqckraqplR3ptes2yRwuA7ID-y1zbKIKHjRXyuuE3ibQ_mMVWvbMwgDnGqXMDGg8PneyTL-SFkDY3h6d845pK1ZZpwB8R3qm6dEU7B3rd6B8tumC4ToSWwflOOQqICaK3zIxMZyHSfr5lHnA0FML1FcOSRCJbQh4-Ucfuf9O2uHhZ2VaSsifneNaO5kvoj4ahQif-9FETnZv0V5K4NP30VhEILOT08koiAFasYHrSIvMs70ZJMhgA3UvNckpMpiepxR_AAe5LreailvE3D8kYbwwkdEtRoMiwK1fqCvpVg8Sr6-WPFN5QBJ1RShRruGtB713YiMPA6x7qjpXE5LvGSEHABrK2RNB3f7tcx7FX9uMJD4vWntaEiPV4dLFDlCS6UHAuLb_boRGG2k2FRzLwcAsCcsy-IagmAFMqRXZF3DyEa_-MLZ4MzfXNoMWGwy2XRRs_hBdswsc4SdBMD2ut-c8in6Y75wE5QzoSbHOIDpMngYjJ0BTijb0_T7JHfJ5dDkJz0DR0Qz13mUHcbZS5dbSncYCJc6HWeX_zUF5oHHB1cj5QZiQV6FSN2G71cAzTmgO2E8qLEr00blvg4xdtU1M65gxpLatyD4BRhjASfOnx4Jgg0VDb5ucKb8YAp590_iT4brnoBDZz72b5qlRO3L5tIj98ZxUlF2ygqkp5jKzYJs-BP7MnC2HBEQ0XHi4cAFOp5gysfDGK8QuKJGh3cso3U04nhlyK-UUe2Q4E8rKRTUOG_xhwAVutgNW5S3gh48Y5ptzNYtQRQT5tA0bu_J1_F7JV09JnJ0BD5c5_fjnNUg8gfTeCXF9xp0xCiFqX5uH2344RFHkFS_darb_LNFbrXZge3ZIliHpostX-9iJKchIGucIpcKmJhvMivSDomcGoMwEe5gkdcL6rbOEClw6uIpGQ0lV9m6YL0ZZNLGXBBqTJHJmwFfqlrRqPH48UvFaKfZq5V0or3JYrt2ydV16Gjtl-_t0euzBWsfJ9frkRVqZwCMkpfn5Zo5ICSz9iM-1J03yJGZbLqv9_tdYl5v33b-5UPG-sbNP4zcLZ3ZRCOBgZhoFmCuwGer0mevn-ZRgndgwpkp707yg2dlIIkeQsQpbSsjQeMfZxRrLvwHx4CI0SOUBGusreBdO5xRUv2Jzp-dNfNPRtFegY6_vIzuc7EhFumyXXeIVKAYBW4eOCrJ8GBkVWxcZYMVzSpl86CLZeuZSPlD1T4oZf9oMXWGwtsNkVLbVqDq-Xjk4Mm60-MUHbtkVLOT90NwXeHxWjy2YUjLHRRwbBHE6KHEWRR4tAXJJA_DHSTooOlgQiepSeC0MF9Q1W2niMcctUelClcYreg56ScKfIXcEE9WYHjKged1ZiteyUro5BO1mES3h2tPkNK71JGcD7830BKCmyHSjy2__zVCSnAZUyeXFwh4m5FbZmPXBSttnEO2dQ79FBWhu-LwBzwt9y6h_FGze5sgfub61uKmP5b5-Ltx6YMNUtxc6Lq_9u5c4zJ_UPZg_O34OsO1Qv7Ph89y2aRSYxNBso2eZlEaDMdBY_Cl5TgyEezuMQvG97pjDXvlwtXTDUcvf8vaZUK9D74RxoN2xikwiwXGBm5vgIP2EAl6eweW6nilydLwLxjtHos8MPwuEgBsSGoXEdOHbB8eo_fC-_mLBI4W0Fls_Q0FheZKC82cYM35_3ddCD5F6ZWnKhH6YB-ftlQtf6MCr5hVRPP7IFj820TbpMe0=",
+    "summary": []
+   },
+   {
+    "id": "msg_028da98fe7f48c03016a9e7511772887d2850a9e01b81fbb00",
+    "type": "message",
+    "status": "completed",
+    "content": [
+     {
+      "type": "output_text",
+      "annotations": [],
+      "logprobs": [],
+      "text": "{\"more_ai\":\"A\",\"confidence\":5,\"tells_A\":[\"Rhetorical question with punchline answer: “And then? Crickets.”\",\"Explicit signposting: “Here are the 4 hardest lessons I learned”\",\"Bold numbered list with label-style headings\",\"Repeated negative parallelism, especially “Failure isn't... Failure is...”\",\"Frequent em-dash clause joins\",\"Highly polished lesson arc in which every point lands and the ending uplifts\",\"Closing engagement question aimed at an imagined LinkedIn crowd\"],\"tells_B\":[\"Signposting: “Let's look at two areas...”\",\"Numbered list structure\",\"Negative parallelism: “Customers don't just... They want...”\",\"Rhetorical question followed by an answer about emotional and social outcomes\",\"Closing engagement prompt\"]}"
+     }
+    ],
+    "phase": "final_answer",
+    "role": "assistant"
+   }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0.0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+   "context": "all_turns",
+   "effort": "medium",
+   "mode": "standard",
+   "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": false,
+  "temperature": 1.0,
+  "text": {
+   "format": {
+    "type": "text"
+   },
+   "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+   "image_gen": {
+    "input_tokens": 0,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "output_tokens": 0,
+    "output_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "total_tokens": 0
+   },
+   "web_search": {
+    "num_requests": 0
+   }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+   "input_tokens": 1729,
+   "input_tokens_details": {
+    "cache_write_tokens": 1726,
+    "cached_tokens": 0
+   },
+   "output_tokens": 406,
+   "output_tokens_details": {
+    "reasoning_tokens": 244
+   },
+   "total_tokens": 2135
+  },
+  "user": null,
+  "metadata": {}
+ }
+}

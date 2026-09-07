@@ -1,0 +1,17 @@
+# Why Most Product Roadmaps Fail
+
+The product roadmap occupies a strange place in modern business: the most requested document in any software company, and the least believed. Executives demand it, sales sells against it, engineers distrust it, and product managers suffer under it. Most roadmaps fail not occasionally but structurally—and for reasons that have less to do with poor planning than with what roadmaps are asked to do in the first place.
+
+The first and deepest problem is that most roadmaps answer the wrong question. They specify what will be built and when; the questions that matter are why, and for whom. A typical roadmap promises "Feature X, Q3" rather than "reduce onboarding friction for small-business users." By committing to solutions before problems are validated, teams lock in their riskiest assumptions. The roadmap becomes a schedule of guesses, and discovery—the work of testing those guesses—gets subordinated to delivery.
+
+Second, roadmaps become contracts, and contracts create fragility. Once a date is printed, it becomes a promise. Sales sells it, executives anchor to it, and organizational trust gets wired to estimates that software development has never reliably produced. When the inevitable slip occurs, credibility leaks away. After a few cycles, everyone quietly discounts the roadmap, and it stops functioning as an instrument of alignment.
+
+Third, most roadmaps measure output rather than outcome. They list features to ship, not problems to solve or metrics to move. This turns organizations into feature factories: success means delivering the list, so teams optimize for delivering the list. A feature can ship on time, on budget, and to specification—and still create no value for anyone. The roadmap records the failure as a success.
+
+Fourth, many roadmaps are assembled rather than derived. Without a clear strategy—defined audiences, prioritized problems, explicit trade-offs—a roadmap becomes an aggregation of stakeholder requests, competitor checklists, and executive pet projects. Prioritization degrades into politics. Everything is important, so nothing is. The document that should force hard choices becomes a tool for avoiding them.
+
+Finally, roadmaps are static artifacts in a dynamic environment. Markets shift, experiments invalidate assumptions, competitors move. A roadmap drafted quarterly and never revisited is a snapshot masquerading as a strategy, and teams face a losing choice: ignore it and lose alignment, or follow it and ignore reality.
+
+None of this argues against planning; it argues against a particular kind of theater. Roadmaps work when they abandon false precision—replacing dates with "now, next, later"—and communicate direction, intent, and desired outcomes rather than feature commitments. They work when they are living documents, revised as learning arrives, anchored in a strategy strong enough to say no.
+
+The uncomfortable truth is that most roadmaps fail because organizations want them to provide certainty, and product development offers none. A roadmap built as a contract will eventually break. A roadmap built as a hypothesis—where we are going, what we believe, what we expect to learn—can bend without breaking. The choice is not whether to plan, but whether to plan honestly.

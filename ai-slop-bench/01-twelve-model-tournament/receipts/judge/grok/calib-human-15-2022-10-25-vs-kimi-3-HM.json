@@ -1,0 +1,83 @@
+{
+ "judge": "grok",
+ "model": "grok-4.6",
+ "key": "calib-human-15-2022-10-25-vs-kimi-3-HM",
+ "wall_s": 60.8,
+ "run_utc": "2026-09-07T08:33:08Z",
+ "request_body": {
+  "model": "grok-4.6",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n(One of the texts is a real LinkedIn post by a person, written on its own topic; judge tells, not topic.)\n\n=== TEXT A ===\nIn Product, at least half of your ideas will not work. \n\nProduct Discovery can reduce waste and rework by 50%.\n\n7 books that will teach you everything you need to know:\n\n\n1. Inspired by Marty Cagan\n\nLessons:\n• At least half of your ideas are not going to work. \n• Product Discovery results in a validated product backlog.\n• PM, Designer, and Engineer must work together.\n\nTip: This is simply the number one book for all Product Managers.\n\n\n2. Continuous Discovery Habits by Teresa Torres\n\nLessons:\n• Structured and sustainable approach to continuous discovery and opportunity mapping.\n• It's essential to interview your customers regularly (at least weekly).\n\n\n3. The Mom Test by Rob Fitzpatrick\n\nLessons:\n• You shouldn't ask your mom whether your business is a good idea because she loves you and will lie to you. \n• The ultimate guide for interviewing your customers.\n\n\n4. Jobs to be Done by Tony Ulwick\n\nLessons:\n• People don't buy products. They \"hire\" them to do jobs.\n• How to define and prioritize customer needs.\n\nTip: Free audiobook is available on Tony Ulwick's website. Link in the comments.\n\n\n5. Sprint by Jake Knapp\n\nLessons:\n• Describes a specific Product Discovery technique invented in Google.\n• How to solve complex problems and test ideas in just 5 days.\n\nTip: I recommend comparing it with Teresa Torres's approach. In particular, you may want to interview your customers before ideating. In that case, you can interview customers before the Sprint.\n\n\n6. The Lean Product Playbook by Dan Olsen\n\nLessons:\n• The complete Lean Product Process - discovering and creating products while minimizing waste and rework.\n• Customer Discovery, Business Model, Value Proposition, MVP, Product-Market Fit, Prototypes, UX, Key Metrics, and more.\n\nTip: I could recommend The Lean Startup, but this book is, in my opinion, much more comprehensive.\n\n\n7. Testing Business Ideas by Alexander Osterwalder and David Bland\n\nLessons:\n• Start from an idea, then use the design loop to improve it.\n• Use discovery experiments to examine your assumptions.\n\nTip: Dozens of tools and techniques anyone can easily apply.\n\n\nBONUS:\n\n\n8. Radical Focus by Christina Wodtke\n\nLessons:\n• Select only one OKR. Their goal is to create focus on what's not urgent yet critical for the long-term growth of the business (strategy).\n• Do not incentivize OKRs.\n\nTip: OKRs work perfectly with the Opportunity Solution Tree as defined by Teresa Torres. Your business outcome can be expressed as OKR.\n\n\n9. Escaping the Build Trap by Melissa Perri\n\nLessons:\n• Why organizations cultivate a feature-factory mindset and how to change it.\n• Focus on outcomes, not outputs, and on understanding the problem in depth to avoid the Product Death Cycle trap.\n\n\nHope that helps.\n\nWhat would you add to that list?\n\n#productmanagement\n\n=== END OF TEXT A ===\n\n=== TEXT B ===\nWe spent 4 months building a feature that 11 people used.\n\nNot 11 percent. Eleven people. Total.\n\nThe feature was customizable reporting dashboards. Sales kept hearing \"we need better reporting\" on calls. It showed up in every churn survey. The roadmap committee greenlit it fast — this was clearly what customers wanted.\n\nWe did everything \"right.\" Specced it carefully. Built it well. Launched with in-app announcements, email campaigns, even a webinar.\n\nWeek one: a few hundred clicks. Mostly curiosity.\nMonth three: 11 weekly active users. Out of 40,000 accounts.\n\nThe post-mortem was uncomfortable. Because here's the truth: customers weren't lying when they said they wanted better reporting. They did want it — in the abstract. But wanting a feature and using a feature are separated by a canyon of friction: setup time, learning curve, breaking an existing habit.\n\nWhat they actually wanted wasn't \"customizable dashboards.\" It was the answer to one specific question their boss asks every Monday. We handed them a toolkit. They wanted an answer.\n\nThe lesson I carry with me now:\n\n**\"Customers asked for it\" is not validation. It's a hypothesis.**\n\nSaying yes to a feature costs a customer nothing. Using it costs them time, attention, and behavior change. The gap between stated preference and revealed preference is where roadmaps go to die.\n\nWhat I do differently today:\n\n1. **Before building, I ask: what do users do *today* to solve this?** If the answer is \"nothing\" or \"they just live with it,\" that's a warning sign, not an opportunity.\n\n2. **I test with the cheapest possible version.** A manual workaround. A spreadsheet. A fake door. If people won't use the clunky version, they won't use the polished one either.\n\n3. **When someone requests a feature, I dig for the problem underneath.** \"I need better reporting\" becomes \"Tell me about the last time reporting failed you.\" The story is always more useful than the request.\n\nAnd those 11 users? They love the feature. Deeply. It's core to their workflow. We just built a power tool for a niche while believing we were building a staple for everyone.\n\nThat distinction — who it's actually for, and how many of them exist — is worth more than any roadmap meeting I've ever sat in.\n\nThe most expensive code isn't the code that breaks. It's the code that runs perfectly, serving no one.\n\nHave you ever shipped something nobody used? What did it teach you?\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n"
+   }
+  ],
+  "max_tokens": 16000,
+  "stream": true,
+  "stream_options": {
+   "include_usage": true
+  }
+ },
+ "usage": {
+  "input_tokens": 2604,
+  "output_tokens": 143,
+  "reasoning_tokens": 3247,
+  "cost_usd": null,
+  "served_model": "grok-4.6",
+  "provider": null
+ },
+ "verdict": {
+  "more_ai": "B",
+  "confidence": 5,
+  "tells_A": [
+   "numbered/bullet list instead of prose"
+  ],
+  "tells_B": [
+   "negative parallelism (not X, it's Y) used repeatedly",
+   "signposting (here's the truth / the lesson I carry / what I do differently)",
+   "bold-label numbered list in a prose post",
+   "triads (announcements/campaigns/webinar; time/attention/behavior; workaround/spreadsheet/fake door)",
+   "relentless short punchy fragments",
+   "em dashes as default clause joints",
+   "every point lands; aphoristic uplifting closer",
+   "performing LinkedIn-crowd theater"
+  ]
+ },
+ "response_raw": {
+  "id": "321378aa-0fc1-9adc-8d65-467969cd850e",
+  "model": "grok-4.6",
+  "created": 1788769986,
+  "system_fingerprint": "fp_e41c6060b2628547",
+  "object": "chat.completion",
+  "streamed": true,
+  "usage": {
+   "prompt_tokens": 2604,
+   "completion_tokens": 143,
+   "total_tokens": 5994,
+   "prompt_tokens_details": {
+    "text_tokens": 2604,
+    "audio_tokens": 0,
+    "image_tokens": 0,
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 3247,
+    "audio_tokens": 0,
+    "accepted_prediction_tokens": 0,
+    "rejected_prediction_tokens": 0
+   },
+   "num_sources_used": 0,
+   "cost_in_usd_ticks": 247800000
+  },
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "{\"more_ai\": \"B\", \"confidence\": 5, \"tells_A\": [\"numbered/bullet list instead of prose\"], \"tells_B\": [\"negative parallelism (not X, it's Y) used repeatedly\", \"signposting (here's the truth / the lesson I carry / what I do differently)\", \"bold-label numbered list in a prose post\", \"triads (announcements/campaigns/webinar; time/attention/behavior; workaround/spreadsheet/fake door)\", \"relentless short punchy fragments\", \"em dashes as default clause joints\", \"every point lands; aphoristic uplifting closer\", \"performing LinkedIn-crowd theater\"]}"
+    }
+   }
+  ]
+ }
+}

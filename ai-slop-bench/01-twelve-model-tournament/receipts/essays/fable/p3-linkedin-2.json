@@ -1,0 +1,93 @@
+{
+ "arm": "fable",
+ "label": "Fable 5.1",
+ "vendor": "Anthropic",
+ "transport": "openrouter",
+ "model_requested": "anthropic/claude-fable-5.1",
+ "serving_path": "OpenRouter -> Anthropic (first-party key unavailable at run time)",
+ "prompt_id": "p3-linkedin",
+ "sample": 2,
+ "run_utc": "2026-09-06T13:24:20Z",
+ "wall_s": 25.3,
+ "request_body": {
+  "model": "anthropic/claude-fable-5.1",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Write a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used."
+   }
+  ],
+  "max_tokens": 8000,
+  "provider": {
+   "allow_fallbacks": false
+  },
+  "usage": {
+   "include": true
+  }
+ },
+ "usage": {
+  "input_tokens": 45,
+  "output_tokens": 1041,
+  "reasoning_tokens": 118,
+  "cost_usd": 0.051975,
+  "served_model": "anthropic/claude-fable-5.1",
+  "provider": "Anthropic"
+ },
+ "essay_sha256": "5c68a00f71fd7998ca46cb4c59fb982fa2760208792508b2446fb6d8e624631c",
+ "essay_words": 505,
+ "response_raw": {
+  "id": "gen-1788701034-0FIworH0DY8tVzYtx1IQ",
+  "object": "chat.completion",
+  "created": 1788701034,
+  "model": "anthropic/claude-fable-5.1",
+  "provider": "Anthropic",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "Six months ago, we shipped a feature I was certain would change how our customers worked.\n\nIt was a customizable dashboard. Users could drag widgets around, pick their own metrics, save multiple layouts. We'd heard \"I wish I could see X next to Y\" in enough support tickets that it felt like an obvious win. Three engineers, two months, a design sprint, a launch email with a little animated GIF.\n\nAdoption after 90 days: 2.1%.\n\nNot \"2.1% used it daily.\" 2.1% opened it once.\n\nI spent a week feeling defensive about it. Then I actually went and talked to the people who'd asked for it. Here's what I learned.\n\n**People weren't asking for customization. They were asking for a specific answer.**\n\nWhen someone said \"I wish I could see X next to Y,\" they didn't want a drag-and-drop canvas. They wanted X next to Y. Every single one of them wanted the *same* X and the *same* Y. We heard a request for flexibility and built infrastructure for infinite flexibility, when a single hardcoded view would have solved 80% of the problem in three days.\n\n**Requests describe symptoms, not solutions.**\n\nWe took the literal words in the tickets and shipped them back. We never asked the one question that mattered: \"What are you trying to decide when you look at this?\" If we had, we'd have discovered they were all trying to figure out whether to escalate an account before a renewal call. That's not a dashboard problem. That's an alert.\n\n**\"Configurable\" often means \"we didn't want to make the call.\"**\n\nI've come to see customization features as a yellow flag in my own thinking. Sometimes they're the right answer. But often they're a way of handing the hard product decision to the user, dressed up as empowerment. Our customers didn't want to design their own tool. They wanted us to have already figured it out.\n\n**Low adoption isn't a marketing problem.**\n\nOur first instinct was to promote it harder. In-app tooltip, another email, a webinar. That would have been spending more to defend a decision instead of learning from it. If something genuinely solves a pain point, people find it. Adoption campaigns are for things people don't know they need, not for things they don't need.\n\nWhat we did next: we killed the customizable dashboard. Replaced it with one fixed view showing the two metrics everyone actually wanted, plus a notification when an account crossed a risk threshold. Took a week and a half.\n\nUsage of that view is now higher than any other page in the product.\n\nI don't regret shipping the thing nobody used. It's the most expensive product lesson I've had, and I'd rather have paid for it once than keep making the same mistake in smaller ways forever.\n\nThe lesson, if I had to compress it: when a customer tells you what to build, thank them, then ask what they're trying to do. Build that instead.\n\nCurious whether others have a \"feature nobody used\" story. What did yours teach you?",
+     "refusal": null,
+     "reasoning": "I want this LinkedIn post to feel genuine rather than formulaic, staying under 500 words while sharing something concrete and specific about a lesson from an unused feature launch.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I want this LinkedIn post to feel genuine rather than formulaic, staying under 500 words while sharing something concrete and specific about a lesson from an unused feature launch.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQSyAYKEAgRGAI4AUIIdGhpbmtpbmcSDDDbPVQw9ynN5FE+kRoMA/E+ewh1YVGyTLzSIjBrgxp5ZsAe/CiWB7Yj2q0ziSIrdP04NCfIYoY4dGpWIyWsdKrWcMfeI7qvFMq7npYq5QWSAX+kS3ogQ9UGputzz1rdEbgYVK2WgNG4U1iJ5wDJz4oo89hgOLDn94ihZbvfoeL6VKu/zdUmPpDtEiO3TKGcHb/RiA8gH0HNrQsBUGOsMvq1MTAy17mMIgR91p5uBa8B4tA5urShHFE+uDl4tLyot7waQmjiRjuBpknnxZ+I5AQBrY7HcyXxrl//AYgLnDfTPSEExZwoWI1RatOQHaMYY8hktsP/0JrthtiB80Rhnk2Aw8D8n6Y5PDm18sT3AQURnpfYRwrL4PyMtcFWAtTYSoJkjXHEz4I5a5Euvv12OVaYxyFNNng2y0ZeGj4V59HWvJ/1ZvRvvTO2mHHHzoXovmfODQdyAek7+YrxDePlPPToKPfQfQD63SKc8damEhwAdXD8zaneIYu4tiuZt6+awmSrW89u0Sv7ajgZYCMBwXrrkh1TuO72UDvJBe7LB9iQLWQPO4NmiKe3DYRWbi9LR4zT5MIfSxk87Bes/4mwO8CAP4EaGwYPiY8/sWDhvVSjn7pZoMpPVxnr4w1UDLbJ02ElKDt+5QP02qARbbvUjfhlaWwq5iXnJuhzGMoPq3Isr5nx26L58p0UAAWAJTXtRRxYzVaYh8NHRIgXiL1o7IxjgShCpTLcPAVSftT5xPsQeL6jEhKa2nDGy4/20O/ytFbU6nmAwsJZ0LAqVDbDmaESagnHUsxRGhMmQfD/TyA0sldlnYGu0EUNsPXrEqj7DfvxTngkg9bimNMWDu/nC43cGIfQKiSWy79XPcJOeFPyQPu//qb9d4L8tn7EwMC8Pi84IQMeAlvJlHUHdTpN5kLB+ZAAcKsIElLGp0qM66k8sAU4SD7zxrBcKU0RGfocMUTM10CcS/xA0Y40qADcGcmFCG1/odgYAne4C/vY0pap1nsk7A+vH/DnB1ds0LUkxihv1mpfqZkbxNtj+fmcOPPfIBbkz8xw4xfAvBnXaReDgHPRxAO2lwCSbJShdVvtV1rMJuEYAQ=="
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 45,
+   "completion_tokens": 1041,
+   "total_tokens": 1086,
+   "cost": 0.051975,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0525,
+    "upstream_inference_prompt_cost": 0.00045,
+    "upstream_inference_completions_cost": 0.05205
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 118,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

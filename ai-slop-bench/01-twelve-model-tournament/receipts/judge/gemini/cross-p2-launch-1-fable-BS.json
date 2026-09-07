@@ -1,0 +1,76 @@
+{
+ "judge": "gemini",
+ "model": "gemini-3.8-flash",
+ "key": "cross-p2-launch-1-fable-BS",
+ "wall_s": 4.2,
+ "run_utc": "2026-09-06T14:13:56Z",
+ "request_body": {
+  "contents": [
+   {
+    "parts": [
+     {
+      "text": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a launch announcement of up to 500 words for a new feature of a B2B helpdesk product: a Slack integration that posts a daily summary of open support tickets to a channel of the customer's choice. The audience is existing customers.\n\n=== TEXT A ===\n**Your daily ticket summary, now in Slack**\n\nStarting today, you can have a summary of your open support tickets delivered to Slack every morning — no dashboards to open, no reports to run.\n\n**What it does**\n\nConnect your workspace, pick a channel, choose a time, and each day you'll get a single post that shows where your support queue stands. The summary includes:\n\n- Total open tickets, with the change since yesterday\n- Breakdown by priority and status\n- Tickets that have been waiting longest for a reply\n- Anything approaching or past its SLA target\n- Tickets assigned to each agent, so the team can see the spread at a glance\n\nEvery ticket in the summary links directly back to the conversation, so anyone in the channel can click through and pick it up.\n\n**Why we built it**\n\nMost of you told us the same thing: the queue is fine when someone is watching it, and the trouble starts when nobody is. Tickets slip when the person who usually checks is out, when a busy week pushes support to the background, or when the people who *could* help — engineering, account management, leadership — simply never see what's piling up.\n\nPutting the summary where your team already spends the day changes that. It's a nudge, not a notification storm. One post, once a day, in the channel you choose.\n\n**How to set it up**\n\n1. Go to **Settings → Integrations → Slack** and click **Connect**.\n2. Authorize the connection with your Slack workspace.\n3. Choose the channel where the summary should post.\n4. Set the delivery time and time zone.\n5. Save. Your first summary arrives the next morning.\n\nYou can filter the summary by team, queue, or tag, and you can set up more than one — for example, a full-queue summary in `#support` and a high-priority-only summary in `#leadership`. Anyone with admin access can configure it.\n\nNote that this is a read-only integration. It posts summaries but does not create, edit, or close tickets from Slack, and it won't send anything other than the scheduled summary.\n\n**Availability**\n\nThe Slack summary is included on all plans at no additional cost and is live in your account now. We're working on Microsoft Teams support next, and we'd like to hear what else would be useful — reply to this email or reach out to your account manager.\n\nIf you run into anything while connecting, our own support team is here, and yes, we'll see your ticket in our summary tomorrow morning.\n\n— The Product Team\n=== END OF TEXT A ===\n\n=== TEXT B ===\nStarting today, you can have a daily summary of your open support tickets posted straight into Slack. Pick a channel, pick a time, and every morning your team gets a short rundown of what's waiting on them without anyone having to log in and go looking.\n\nWe built this because of a pattern we kept hearing about. Support leads told us they were opening the dashboard first thing each day, skimming the queue, then pasting a rough summary into Slack so the rest of the team would actually see it. Some of you had written scripts to do it. Some of you were just doing it by hand, every single day. That felt like something we should handle for you.\n\nHere's what the summary includes. You get the total number of open tickets, how many are new since yesterday, how many have breached or are close to breaching their SLA, and a breakdown by priority. Below that, it lists the ten oldest unresolved tickets with the requester, the assigned agent, and a link that opens the ticket directly. If a ticket has been sitting unassigned for more than a day, it gets flagged so nobody can miss it.\n\nYou can send the summary to more than one channel if that's useful. A lot of teams want the full picture in their support channel and a shorter version, just the counts and the SLA warnings, in a channel that engineering or leadership watches. You can set that up as two separate summaries with different levels of detail. You can also filter by team, product, or tag, so the billing group only sees billing tickets and the enterprise team only sees enterprise accounts.\n\nThe time is yours to choose, and it respects the timezone you set for your workspace. Most people are going with somewhere between 7 and 9 in the morning, but if your team does a handoff at 5pm and wants a snapshot then, that works too. Weekends can be turned off.\n\nTo set it up, go to Settings, then Integrations, and connect your Slack workspace if you haven't already. From there you'll see a new option called Daily Summary. It takes about two minutes. Anyone with an admin role can do it, and once it's running, agents can mute it for themselves in Slack without affecting anyone else.\n\nThis is included in every plan. There's no add-on and no extra charge.\n\nWe already have a few ideas for what comes next, like letting you reply to a ticket from the thread or getting a summary of tickets that closed rather than ones still open. But we'd rather hear what you actually need than guess. If you try this and something is missing, or the format isn't quite right for how your team works, reply to this email and tell us. Those messages go to the people who built it, and they read every one.\n\nHope this saves you a few minutes each morning.\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n"
+     }
+    ]
+   }
+  ],
+  "generationConfig": {
+   "maxOutputTokens": 16000,
+   "thinkingConfig": {
+    "thinkingLevel": "high"
+   },
+   "responseMimeType": "application/json"
+  }
+ },
+ "usage": {
+  "input_tokens": 2002,
+  "output_tokens": 138,
+  "reasoning_tokens": 776,
+  "served_model": "gemini-3.8-flash"
+ },
+ "verdict": {
+  "more_ai": "A",
+  "confidence": 5,
+  "tells_A": [
+   "Tell 1 (Negative parallelism: 'It's a nudge, not a notification storm')",
+   "Tell 5 (Structural rigidity: heavy use of bold subheadings, bullet lists, and numbered steps)",
+   "Tell 6 (Frequent triads: 'Connect your workspace, pick a channel, choose a time', 'engineering, account management, leadership', 'team, queue, or tag')",
+   "Tell 13 (Em dashes used frequently as clause joints)"
+  ],
+  "tells_B": [
+   "Tell 2 (Signposting: 'Here's what the summary includes')"
+  ]
+ },
+ "response_raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"more_ai\": \"A\", \"confidence\": 5, \"tells_A\": [\"Tell 1 (Negative parallelism: 'It's a nudge, not a notification storm')\", \"Tell 5 (Structural rigidity: heavy use of bold subheadings, bullet lists, and numbered steps)\", \"Tell 6 (Frequent triads: 'Connect your workspace, pick a channel, choose a time', 'engineering, account management, leadership', 'team, queue, or tag')\", \"Tell 13 (Em dashes used frequently as clause joints)\"], \"tells_B\": [\"Tell 2 (Signposting: 'Here's what the summary includes')\"]}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 2002,
+   "candidatesTokenCount": 138,
+   "totalTokenCount": 2916,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 2002
+    }
+   ],
+   "thoughtsTokenCount": 776,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "HnWdaoToE4iVkdUPg8GNyAU"
+ }
+}

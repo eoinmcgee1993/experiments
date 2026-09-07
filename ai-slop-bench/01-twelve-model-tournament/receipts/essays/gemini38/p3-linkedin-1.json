@@ -1,0 +1,68 @@
+{
+ "variant": "bare",
+ "arm": "gemini38",
+ "label": "Gemini 3.8 Flash",
+ "vendor": "Google",
+ "transport": "google",
+ "model_requested": "gemini-3.8-flash",
+ "serving_path": "Google first-party, generateContent (thinking level not set)",
+ "prompt_id": "p3-linkedin",
+ "sample": 1,
+ "prompt_text": "Write a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.",
+ "run_utc": "2026-09-06T22:16:20Z",
+ "wall_s": 4.7,
+ "request_body": {
+  "contents": [
+   {
+    "parts": [
+     {
+      "text": "Write a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used."
+     }
+    ]
+   }
+  ],
+  "generationConfig": {
+   "maxOutputTokens": 8000
+  }
+ },
+ "usage": {
+  "input_tokens": 24,
+  "output_tokens": 488,
+  "reasoning_tokens": 479,
+  "served_model": "gemini-3.8-flash"
+ },
+ "essay_sha256": "8fc0c1ddc40c9b9c4901aa35700d3ef00c1f5ac740392a28f908675e15c495f6",
+ "essay_words": 354,
+ "response_raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "We spent three months building a feature. \n\nTotal active users after launch? \n\nFour. (And three of them were on our QA team.)\n\nAt the time, it was crushing. We had spent weeks in wireframing sessions, debated edge cases in sprint planning, and written thousands of lines of clean, well-tested code. We launched it with an internal celebration, fully expecting the metrics dashboard to spike.\n\nInstead: absolute silence.\n\nIt was one of the most humbling moments of my career, but looking back, it was also the most valuable. Here is what shipping a ghost town taught me:\n\n**1. \"Sounds cool\" is not a customer problem**\nThe idea didn’t come from customer pain points; it came from an internal brainstorming session. We fell in love with our own cleverness. Just because an idea is intellectually interesting doesn't mean it solves an urgent problem someone will change their workflow for.\n\n**2. Validation must happen before the first line of code**\nWe treated building the feature as the discovery phase. That’s the most expensive way to learn. Today, I wouldn't build that feature without running a fake-door test, putting clickable prototypes in front of 10 users, or pre-selling the outcome. If you can’t get someone excited about a rough mock-up, code won’t save you.\n\n**3. Sunk cost fallacy kills product momentum**\nWhen the metrics stayed flat, our initial instinct was to \"add more tooltips\" or \"tweak the onboarding.\" We wanted to justify the 12 weeks of work. The hardest—and best—decision we made was to deprecate it, clean up the codebase, and move on. \n\n**4. Fall in love with the problem, not the solution**\nUsers don’t care how elegant your architecture is. They care about getting their jobs done faster, cheaper, or with less friction. If you aren't talking to them weekly, you’re just guessing with company capital.\n\nShipping that flop hurt, but it changed how I approach product development forever. \n\nNow, before we write a single line of code, we ask: *What is the smallest, cheapest way we can prove nobody wants this?*\n\n***\n\nHave you ever shipped something that completely flopped? What was your biggest takeaway? 👇",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 24,
+   "candidatesTokenCount": 488,
+   "totalTokenCount": 991,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 24
+    }
+   ],
+   "thoughtsTokenCount": 479,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "L-adatvDHejAnsEPr__r4Qo"
+ }
+}

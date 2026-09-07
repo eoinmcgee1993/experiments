@@ -1,0 +1,147 @@
+{
+ "judge": "sol",
+ "model": "gpt-5.6-sol",
+ "key": "p3-linkedin-2-gemini38-vs-glm-BA",
+ "wall_s": 6.4,
+ "run_utc": "2026-09-07T08:00:35Z",
+ "request_body": {
+  "model": "gpt-5.6-sol",
+  "input": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n\n=== TEXT A ===\nThe feature I was proudest of shipped to the sound of silence.\n\nTwo years ago, my team spent four months building an advanced reporting dashboard. Custom filters. Drag-and-drop charts. Scheduled exports. We rebuilt our entire data layer to support it. Our internal demo got actual applause.\n\nLaunch day: nothing. Week one: 47 opens across 20,000 users. Ninety days later, fewer than 2% of accounts had ever touched it — and most of them opened it once and never came back.\n\nI remember pulling up the usage report with my PM and just sitting there. Four months. Countless design reviews. A data migration that nearly broke us. And the market's response was a shrug.\n\nHere's the part that stings: we never talked to a single customer before building it.\n\nWe had assumptions, sure. \"Enterprise buyers want analytics.\" \"Competitors have dashboards, so we need one.\" \"This is obviously valuable.\" But we never asked the question that mattered: is this a problem anyone actually has?\n\nMeanwhile, the #1 request in our support queue — the one we kept deprioritizing because it felt too \"small\" — was bulk editing. We shipped it later in a single sprint. Today it's one of the most-used parts of the product.\n\nThat flop taught me more than any successful launch ever has:\n\n→ Talk to users before you write code. Not to pitch your idea — to understand their problem. If you can't name five people who have the problem, you don't have a feature. You have a hypothesis.\n\n→ Define success before launch. We never decided what \"good\" adoption looked like, so we couldn't tell we were failing until we'd already failed.\n\n→ Ship small, learn fast. A two-week prototype would have told us everything four months of building didn't.\n\n→ Your support queue is a roadmap written by your users. They were telling us exactly what to build. We just thought their requests were too boring.\n\n→ Building isn't the hard part. Adoption is. \"If you build it, they will come\" is a movie quote, not a go-to-market strategy.\n\nThe dashboard didn't die entirely. We stripped it down, paired it with real customer conversations, and a niche segment genuinely loves it now. But it found its audience after we started listening — not before.\n\nThese days, I get suspicious when a team is excited about a feature but can't recall the last time they watched a user struggle with the problem it solves.\n\nExcitement is easy to generate internally. Evidence only comes from customers.\n\nWhat's a feature you shipped into the void — and what did it teach you?\n\n---\n\n~420 words. Happy to swap in your actual feature, numbers, and industry details, or adjust the tone (more vulnerable, more data-driven, shorter) if you'd like.\n=== END OF TEXT A ===\n\n=== TEXT B ===\nWe spent 12 weeks building it. \n\nThe architecture was flawless. The UI was slick. The QA pass was spotless. We shipped it right on schedule.\n\nLaunch day arrived. We celebrated in Slack with high-fives and confetti emojis. \n\nAnd then?\n\nCrickets. \n\nWeek 1: 14 total clicks (half were our own team).  \nMonth 1: Adoption rate sat stubbornly at 1.2%.  \nMonth 3: It was a digital ghost town. \n\nWe had built an advanced custom reporting engine. One loud prospect in the sales pipeline had claimed it was a “must-have,” and we convinced ourselves it was the missing puzzle piece for our product. \n\nIt wasn’t. \n\nShipping a feature nobody touches is a painful, humbling experience. But looking back, that flop taught me more about product development than any successful launch ever did.\n\nHere are the 4 hardest lessons I learned:\n\n**1. \"Would you use this?\" is the absolute worst user research question.**  \nPeople want to be polite. When you ask users if they’d like a feature, they almost always say \"Yes!\" because it costs them nothing. Instead, ask: *\"How do you currently solve this?\"* If they aren't actively cobbling together a painful workaround today, the problem isn’t urgent enough to build for tomorrow.\n\n**2. Never build for the \"Loudest Voice in the Room.\"**  \nWe let one prospective enterprise deal dictate our roadmap. (Spoiler: They didn't even sign after we built it). Never turn custom software requests into platform features unless you have clear data that the problem is repeatable across your user base.\n\n**3. Code is the most expensive way to test an idea.**  \nWe spent hundreds of engineering hours on an assumption. A clickable Figma prototype, a landing page test, or even a \"fake door\" button inside the app would have shown us in 48 hours what took us 3 months to learn: nobody actually cared.\n\n**4. Killing features is just as important as shipping them.**  \nThe instinct is to keep tweaking the failed feature—adding tooltips, changing the placement, running onboarding emails. But sometimes, you just have to accept the sunk cost, remove the code to save technical debt, and move on.\n\nIt’s easy to fall in love with your own ideas. It’s much harder—and far more necessary—to fall in love with the user's real, everyday pain points. \n\nFailure isn't shipping something that flops. Failure is not learning why it flopped before you plan the next sprint.\n\n***\n\nHave you ever poured energy into a feature or project only for it to be met with total silence? How did it change your process?\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n",
+  "max_output_tokens": 16000,
+  "store": false,
+  "reasoning": {
+   "effort": "medium"
+  }
+ },
+ "usage": {
+  "input_tokens": 1913,
+  "output_tokens": 312,
+  "reasoning_tokens": 116,
+  "effort_echoed": "medium",
+  "served_model": "gpt-5.6-sol"
+ },
+ "verdict": {
+  "more_ai": "B",
+  "confidence": 5,
+  "tells_A": [
+   "Signposting: “Here's the part that stings”",
+   "Arrow-bullet lesson list with repeated imperative structure",
+   "Negative parallelism: “Not to pitch your idea — to understand their problem”",
+   "Punchy contrast: “Building isn't the hard part. Adoption is.”",
+   "Participial tail: “paired it with real customer conversations”",
+   "Closing rhetorical question"
+  ],
+  "tells_B": [
+   "Rhetorical question answered immediately: “And then? Crickets.”",
+   "Explicit signposting: “Here are the 4 hardest lessons”",
+   "Bold numbered label openers",
+   "Repeated negative parallelism and contrast formulas",
+   "Several exact triads, including architecture/UI/QA and prototype/landing page/fake door",
+   "Em dashes used repeatedly as clause joints",
+   "Relentless short, punchy rhythm",
+   "Generic LinkedIn uplift: failure reframed as learning",
+   "Closing rhetorical questions to an imagined crowd"
+  ]
+ },
+ "response_raw": {
+  "id": "resp_09daf084614c0579016a9e6f1beeec87d28fb3697562b6d9fe",
+  "object": "response",
+  "created_at": 1788768027,
+  "status": "completed",
+  "background": false,
+  "billing": {
+   "payer": "developer"
+  },
+  "completed_at": 1788768033,
+  "error": null,
+  "frequency_penalty": 0.0,
+  "incomplete_details": null,
+  "instructions": null,
+  "max_output_tokens": 16000,
+  "max_tool_calls": null,
+  "model": "gpt-5.6-sol",
+  "moderation": null,
+  "output": [
+   {
+    "id": "rs_09daf084614c0579016a9e6f1c5fa487d2afef40bbe765fc20",
+    "type": "reasoning",
+    "content": [],
+    "encrypted_content": "gAAAAABqnm8hOlIKj7-vSD7drKNARCSkPUoMaqWuDuM6zKg_zWyi47zeq2sqcMp6m37Xq2i-VFRaqiGdEBpya3CmNva5kDZm0aMNrjyzNN4R-Wi87lf02GrrA3qvwmPsiO9sAl3iuvS9PDAwAU6WPGWRkSYr-KZV1zYJPl_JVnrpkeNSTAPlWAKn_YVKPFNxYuyjKz7QF0P6a_OVdcsYIMWkgN-w9zKzMJPyQ-Y9HF5kcgSDXyM_seaGehOmolBUKrFPj1OqjmdB7687B6GrRVIRi53SDs6jROqthdX1JsnFdx4sm1fe-yK8Gn74dv-uNcikIsthJ9XNeEl4umT-4l6mK-ZdsrlTumu-B4WohYS3MqB67HTt_H40QnS3vJ9NaGkXlA2v8DTOtWsErY3wqdsJdDYdH0jirGATJmtXcekCvFD5LSsKQR4I4Vf5rZPj336t9Y42cilkLrb6RVU25uK95MHXt7-sJ9TyAA0JL6iyTlZU66Cnn0scWG-uQsCYGqV6dEiy6TU-mWX3kC7Y4GUB-Vn5GGKkETHvFx6XuOIT5eIu-5MiY3cmff2OvCB7ccw18puPBc5mMa-uLAaJyTbu117h5TZvszL72dpqy4QeP2Et1YSJXa3_b0KQlnF-7qeAwvI87N11864JdknzdBBuaCiHOCeC_FUZPic9EEfXpsUbvhoqd_JxHWY9okge_t9fbxHsKlvsdi5w2Njl2DciMCldM6w0gsIpVF8qp47FFTu5HFSAQZEz_avM7Q0HlJSzavwtlkWvMQvfmNIaIIiLmofN3icu8TwjmSYwWbwO455ry6WUzSF19jBApnys--QU8abL-gYoDqPPwwx9SNZ8YJGgTfOzw0HP3B69fphgb9CqHQfRY_T7L4csGQVQNIzdI1Q7FTaKQmjCxEiSXiMjhqbOwq8InA9FHRXtXn0RBdGPpFsT9ouFhjym5BUQywUl26Pz3ilrAG9dYWjx916dzBURUxqKFoFcTCBiC6u_LW835Xbt34XYgL6UWDtPYkpkZt1KCdX3gg2KrBZT6xAGIoUCYIopGgKb6ZL445byCbP7_97zDhDoduO4tXB1pcH0jr4beveYrCiWUSQnRQHL0HZoXdEVmRPfC6yKIQcVGxkN2KkY_K_zElbea0LujDdkgNV8lsim4Ghe_qlX6VVnex-7XwybkQ27qqEZPV7wXwZaiBbEFYgiJbqZfpaskmfYV9_vt--uVRTFvdjuFMGPRKMFYwW6Q1O2jILwGDzBlv8OOu5is7JACQcZ4-gxG2N-OlW5ppeLSM4VxnTtoY4RqXOgQ6o6jsMGqQfvWL8e__0fk-eJ_hGGTOd3xyRFKBsEIuNRHs_I2iYMJ24wf083HQxwb51vcAm-Db-g8TuHpivGDb5da11WGgD6rQ6Px4TD-NrGpg96M5R-sPBD_PsL_PWBiq3hj3NObb5Cnn0rzOTt1mnwxW_pBJmIbC7XORm8V77PQCZ5mjqAO5xr-DghW4SLG3EV9ttWCXS6YIQ7MiL0N-8dyN4YZzrAVzXRvCOVE7LswKayB_YL4m4EwyLpxdrOeCMzVceVVHHrTtZqAIF4aNfAewVPXqvyyx8czJIXtLuZ9-kOo96lL81cvfS4fNwQz1q0lkjTjWYMuCiLro4_lU-5Kj-UaOM6M34NAwevOc5xCQv2S7hZEBWxaI0fNuFWNSNarZkqGHL8x-7WwYbHVJw9HJI7YDo_AGCEJtaJFvqp-EFITxGN-Jgmo3yCdqx3jXvvwbjOhRMWDQkf76ugs0k5z8chO_sLluUNSY2Fn5QIUU7MUivbxuLOIStYRhstbyqbUNqKJNa8eRRkYmIkZdnNt07ijoIYWQV4DK9fGmbOUUYMUVvjzOWDl8mcb-oojUKG-g==",
+    "summary": []
+   },
+   {
+    "id": "msg_09daf084614c0579016a9e6f1e8c2c87d2b7082a276a53f324",
+    "type": "message",
+    "status": "completed",
+    "content": [
+     {
+      "type": "output_text",
+      "annotations": [],
+      "logprobs": [],
+      "text": "{\"more_ai\":\"B\",\"confidence\":5,\"tells_A\":[\"Signposting: “Here's the part that stings”\",\"Arrow-bullet lesson list with repeated imperative structure\",\"Negative parallelism: “Not to pitch your idea — to understand their problem”\",\"Punchy contrast: “Building isn't the hard part. Adoption is.”\",\"Participial tail: “paired it with real customer conversations”\",\"Closing rhetorical question\"],\"tells_B\":[\"Rhetorical question answered immediately: “And then? Crickets.”\",\"Explicit signposting: “Here are the 4 hardest lessons”\",\"Bold numbered label openers\",\"Repeated negative parallelism and contrast formulas\",\"Several exact triads, including architecture/UI/QA and prototype/landing page/fake door\",\"Em dashes used repeatedly as clause joints\",\"Relentless short, punchy rhythm\",\"Generic LinkedIn uplift: failure reframed as learning\",\"Closing rhetorical questions to an imagined crowd\"]}"
+     }
+    ],
+    "phase": "final_answer",
+    "role": "assistant"
+   }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0.0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+   "context": "all_turns",
+   "effort": "medium",
+   "mode": "standard",
+   "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": false,
+  "temperature": 1.0,
+  "text": {
+   "format": {
+    "type": "text"
+   },
+   "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+   "image_gen": {
+    "input_tokens": 0,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "output_tokens": 0,
+    "output_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "total_tokens": 0
+   },
+   "web_search": {
+    "num_requests": 0
+   }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+   "input_tokens": 1913,
+   "input_tokens_details": {
+    "cache_write_tokens": 1910,
+    "cached_tokens": 0
+   },
+   "output_tokens": 312,
+   "output_tokens_details": {
+    "reasoning_tokens": 116
+   },
+   "total_tokens": 2225
+  },
+  "user": null,
+  "metadata": {}
+ }
+}

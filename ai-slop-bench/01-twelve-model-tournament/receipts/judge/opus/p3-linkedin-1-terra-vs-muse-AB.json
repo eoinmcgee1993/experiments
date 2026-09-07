@@ -1,0 +1,107 @@
+{
+ "judge": "opus",
+ "model": "anthropic/claude-opus-5",
+ "key": "p3-linkedin-1-terra-vs-muse-AB",
+ "wall_s": 12.4,
+ "run_utc": "2026-09-06T22:40:23Z",
+ "request_body": {
+  "model": "anthropic/claude-opus-5",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n\n=== TEXT A ===\nWe shipped a feature nobody used.\n\nNot “low adoption.”  \nNot “needs more time.”  \nNobody used it.\n\nWe had spent weeks building it: designs, edge cases, QA, release notes, internal excitement. It solved a problem we believed customers had.\n\nThe problem? We believed more than we listened.\n\nWe had seen a few support requests and assumed they represented a broad need. We jumped quickly from signal to solution.\n\nWhat we didn’t do was ask the harder questions:\n\n- How often does this problem occur?\n- Who experiences it most?\n- What are they doing instead today?\n- Is the current workaround actually painful enough to change behavior?\n- Would they use this solution if it existed?\n\nAfter launch, the data was clear. Customers weren’t ignoring the feature because it was hard to find. They were ignoring it because it wasn’t important.\n\nThat was an expensive lesson—but a valuable one.\n\nSince then, I’ve tried to treat every feature idea as a hypothesis, not a commitment.\n\nBefore building, we now aim to validate three things:\n\n1. **The problem is real** — not just anecdotal.  \n2. **The problem is painful** — not merely inconvenient.  \n3. **Our solution changes behavior** — not just sounds good in a roadmap meeting.  \n\nSometimes that means interviews. Sometimes it means a prototype. Sometimes it means a landing page, a manual workflow, or simply asking customers to choose between competing problems.\n\nThe goal isn’t to eliminate every failed feature.\n\nThe goal is to fail earlier, cheaper, and with more learning.\n\nShipping something nobody uses feels disappointing. But it’s also a reminder:\n\nOutput is not impact.  \nA released feature is not a successful feature.  \nAnd building faster is only useful when we’re building the right thing.\n=== END OF TEXT A ===\n\n=== TEXT B ===\nI spent 6 weeks shipping a feature our users begged for.\n\nCustom dashboards. Drag-and-drop widgets. Export to PDF. Beautiful, fast, on time.\n\nLaunch day: 🎉\n\nWeek 1: 3% adoption.\nWeek 4: basically zero.\n\nI was crushed. Then I got curious and called 15 of the users who'd requested it.\n\nHere's what I learned:\n\n**1. They didn't want dashboards. They wanted answers.**\nWhat they really meant by \"custom dashboards\" was \"tell me if we're on track on Monday morning without digging.\" We built a power tool. They needed a 30-second email digest.\n\n**2. \"Everyone wants it\" meant 3 loud voices.**\nWe'd confused feedback volume with feedback breadth. We never validated with data, prototypes, or the silence from the other 97%.\n\n**3. We shipped output, not outcome.**\nSuccess was \"launch on time,\" not \"solve the problem weekly.\" We celebrated merging PRs instead of changing behavior.\n\nNow I live by this: Fall in love with the problem, not your solution.\n\nBefore I build anything, I ask:\n→ What's the job to be done in the user's words?\n→ How will we know it's working 30 days after launch?\n→ What's the smallest version that could deliver value?\n\nThat failed feature? We replaced it with a simple Monday Slack summary. 68% weekly open rate. Took 4 days to build.\n\nSometimes the best product work is unbuilding your assumptions.\n\nWhat's a feature YOU shipped that nobody used — and what did it teach you? 👇\n\n#ProductManagement #Startups #UX #Leadership #LessonsLearned\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n"
+   }
+  ],
+  "max_tokens": 16000,
+  "provider": {
+   "allow_fallbacks": false
+  },
+  "usage": {
+   "include": true
+  }
+ },
+ "usage": {
+  "input_tokens": 2381,
+  "output_tokens": 904,
+  "reasoning_tokens": 517,
+  "cost_usd": 0.03415995,
+  "served_model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS"
+ },
+ "verdict": {
+  "more_ai": "A",
+  "confidence": 3,
+  "tells_A": [
+   "repeated negative parallelism: \"Not 'low adoption.' Not 'needs more time.'\", \"Output is not impact\", \"not just anecdotal\", \"not merely inconvenient\"",
+   "rhetorical question answered: \"The problem? We believed more than we listened.\"",
+   "bold-label numbered list of exactly three validation points",
+   "triads: \"fail earlier, cheaper, and with more learning\"",
+   "recap-style uplifting closer restating the body in three parallel lines",
+   "uniform punchy one-line fragments throughout",
+   "generic detail-free framing (no names, dates, metrics)",
+   "em dash as default joint (\"expensive lesson—but a valuable one\")"
+  ],
+  "tells_B": [
+   "bold numbered label openers (\"**1. They didn't want dashboards...**\")",
+   "invented mantra: \"Fall in love with the problem, not your solution\"",
+   "signposting: \"Here's what I learned:\"",
+   "engagement-bait closing question plus hashtag block and emojis",
+   "one instance of negative parallelism (\"We shipped output, not outcome\")"
+  ]
+ },
+ "response_raw": {
+  "id": "gen-1788734410-HWzzUFwNUaycPxxkNgZD",
+  "object": "chat.completion",
+  "created": 1788734410,
+  "model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"more_ai\": \"A\", \"confidence\": 3, \"tells_A\": [\"repeated negative parallelism: \\\"Not 'low adoption.' Not 'needs more time.'\\\", \\\"Output is not impact\\\", \\\"not just anecdotal\\\", \\\"not merely inconvenient\\\"\", \"rhetorical question answered: \\\"The problem? We believed more than we listened.\\\"\", \"bold-label numbered list of exactly three validation points\", \"triads: \\\"fail earlier, cheaper, and with more learning\\\"\", \"recap-style uplifting closer restating the body in three parallel lines\", \"uniform punchy one-line fragments throughout\", \"generic detail-free framing (no names, dates, metrics)\", \"em dash as default joint (\\\"expensive lesson—but a valuable one\\\")\"], \"tells_B\": [\"bold numbered label openers (\\\"**1. They didn't want dashboards...**\\\")\", \"invented mantra: \\\"Fall in love with the problem, not your solution\\\"\", \"signposting: \\\"Here's what I learned:\\\"\", \"engagement-bait closing question plus hashtag block and emojis\", \"one instance of negative parallelism (\\\"We shipped output, not outcome\\\")\"]}",
+     "refusal": null,
+     "reasoning": "Both texts show telltale AI patterns—Text A leans on negative parallelism and rhetorical questions with built-in answers, while Text B uses bold-label lists and engagement bait, though its specific numbers (6 weeks, 15 users, 68%) feel more like typical LinkedIn human writing.\n\nWeighing the tell counts, Text A hits more of the criteria: repeated negative parallelism, the rhetorical question-answer, bold labels, triads, and a punchy recap ending. Text B has concrete detail working against tell 15, even though its format (arrows, hashtags, mantra) is still AI-flavored. I'm going with A as the more clearly AI-generated one.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "Both texts show telltale AI patterns—Text A leans on negative parallelism and rhetorical questions with built-in answers, while Text B uses bold-label lists and engagement bait, though its specific numbers (6 weeks, 15 users, 68%) feel more like typical LinkedIn human writing.\n\nWeighing the tell counts, Text A hits more of the criteria: repeated negative parallelism, the rhetorical question-answer, bold labels, triads, and a punchy recap ending. Text B has concrete detail working against tell 15, even though its format (arrows, hashtags, mantra) is still AI-flavored. I'm going with A as the more clearly AI-generated one.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "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"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2381,
+   "completion_tokens": 904,
+   "total_tokens": 3285,
+   "cost": 0.03415995,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.034505,
+    "upstream_inference_prompt_cost": 0.011905,
+    "upstream_inference_completions_cost": 0.0226
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 517,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

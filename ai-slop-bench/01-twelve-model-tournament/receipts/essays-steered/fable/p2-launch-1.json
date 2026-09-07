@@ -1,0 +1,95 @@
+{
+ "variant": "steered",
+ "arm": "fable",
+ "label": "Fable 5.1",
+ "vendor": "Anthropic",
+ "transport": "openrouter",
+ "model_requested": "anthropic/claude-fable-5.1",
+ "serving_path": "OpenRouter -> Anthropic (first-party key unavailable at run time)",
+ "prompt_id": "p2-launch",
+ "sample": 1,
+ "prompt_text": "Write a launch announcement of up to 500 words for a new feature of a B2B helpdesk product: a Slack integration that posts a daily summary of open support tickets to a channel of the customer's choice. The audience is existing customers.\n\nPlain prose only: no headers, no bullet points, no bold text, no em dashes. Write like a person.",
+ "run_utc": "2026-09-06T14:06:13Z",
+ "wall_s": 23.0,
+ "request_body": {
+  "model": "anthropic/claude-fable-5.1",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Write a launch announcement of up to 500 words for a new feature of a B2B helpdesk product: a Slack integration that posts a daily summary of open support tickets to a channel of the customer's choice. The audience is existing customers.\n\nPlain prose only: no headers, no bullet points, no bold text, no em dashes. Write like a person."
+   }
+  ],
+  "max_tokens": 8000,
+  "provider": {
+   "allow_fallbacks": false
+  },
+  "usage": {
+   "include": true
+  }
+ },
+ "usage": {
+  "input_tokens": 116,
+  "output_tokens": 1018,
+  "reasoning_tokens": 203,
+  "cost_usd": 0.0515394,
+  "served_model": "anthropic/claude-fable-5.1",
+  "provider": "Anthropic"
+ },
+ "essay_sha256": "19c2287974d48112ee6af026aeefe924d60bcf553200e904c6ab52cb283ff9cf",
+ "essay_words": 494,
+ "response_raw": {
+  "id": "gen-1788703549-Bh9YT6YoME2klu99FjY6",
+  "object": "chat.completion",
+  "created": 1788703549,
+  "model": "anthropic/claude-fable-5.1",
+  "provider": "Anthropic",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "Starting today, you can have a daily summary of your open support tickets posted straight into Slack. Pick a channel, pick a time, and every morning your team gets a short rundown of what's waiting on them without anyone having to log in and go looking.\n\nWe built this because of a pattern we kept hearing about. Support leads told us they were opening the dashboard first thing each day, skimming the queue, then pasting a rough summary into Slack so the rest of the team would actually see it. Some of you had written scripts to do it. Some of you were just doing it by hand, every single day. That felt like something we should handle for you.\n\nHere's what the summary includes. You get the total number of open tickets, how many are new since yesterday, how many have breached or are close to breaching their SLA, and a breakdown by priority. Below that, it lists the ten oldest unresolved tickets with the requester, the assigned agent, and a link that opens the ticket directly. If a ticket has been sitting unassigned for more than a day, it gets flagged so nobody can miss it.\n\nYou can send the summary to more than one channel if that's useful. A lot of teams want the full picture in their support channel and a shorter version, just the counts and the SLA warnings, in a channel that engineering or leadership watches. You can set that up as two separate summaries with different levels of detail. You can also filter by team, product, or tag, so the billing group only sees billing tickets and the enterprise team only sees enterprise accounts.\n\nThe time is yours to choose, and it respects the timezone you set for your workspace. Most people are going with somewhere between 7 and 9 in the morning, but if your team does a handoff at 5pm and wants a snapshot then, that works too. Weekends can be turned off.\n\nTo set it up, go to Settings, then Integrations, and connect your Slack workspace if you haven't already. From there you'll see a new option called Daily Summary. It takes about two minutes. Anyone with an admin role can do it, and once it's running, agents can mute it for themselves in Slack without affecting anyone else.\n\nThis is included in every plan. There's no add-on and no extra charge.\n\nWe already have a few ideas for what comes next, like letting you reply to a ticket from the thread or getting a summary of tickets that closed rather than ones still open. But we'd rather hear what you actually need than guess. If you try this and something is missing, or the format isn't quite right for how your team works, reply to this email and tell us. Those messages go to the people who built it, and they read every one.\n\nHope this saves you a few minutes each morning.",
+     "refusal": null,
+     "reasoning": "I'm planning a plain-prose launch announcement for existing customers about the new Slack integration that posts a daily summary of open tickets, keeping it conversational and deciding whether to use a product name or just \"we.\"\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm planning a plain-prose launch announcement for existing customers about the new Slack integration that posts a daily summary of open tickets, keeping it conversational and deciding whether to use a product name or just \"we.\"\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQSvggKEAgRGAI4AUIIdGhpbmtpbmcSDOIPk4X5FxQm8neHzBoMCYyzNPmDi21RbxVtIjDRuzMqFstfbyV+P7wwAr317P89Brc3oqTyWTaPH3IbU1kN3M6RYRIfX9zbgbNEGdkq2weL6Ug9wcbrVlcl0oryw8gNzgwy1NLAOsjM4xsumMytIxgG+gtzxOwiczcrr1GAaxX/u2yKieNNwErdUftwxTbudQ2h7u0PM1vlvGV9lJ+Elf5zciX0HxQBnxfnE3VLKvfh8lxK1yfCeY/V33TyE1/TQDQJ5LGqgmNfztBFYaE5aIrLlZX0PsgIFfGbsHY3CUgqX/XAZG8QjUNOXmpxjabakdt6oObNjsl4t16i+PSOHzYho0+uUorxKAjspz/HC0BXOSheeUmKly5RDAqkBFuChFjR7nftJxYpQdz0BLwrnt6q2beuO5a/J++Kc/UM5g6npC7QG/DcWJyD7snBob7glK9IVczuOH3xJB4HLVp2JH0Q+0XjKHklFl8rkg5OVc41w5d5YRkW9lxhdNeD8YUQEJhImn88Bw85IUkVpAk4IDwvgOiX6KIr/5qj3jXZIkbWQn73g4k1gKYoqyiRDum06A16vCiP+i6NNQoUSG7HIdRzI7RWHyC55TjpTPgHp06gRq7xJ5XvMalwXXpnHuzvtR8BN02ntsDKHwG9hrI+nxVY3E79uIz17KJt5DuwFycg3nbbOmINBdi/MYP6Z7qGc9REgBN39TlLPKLsJGvDCxbSw0NrlRqIQKU8KFQdqp1v8MDpjDZVkIBRcap1ChjIte920ZuS1KIotsECIEqhEoQuG5sLylZW3cO2AzbAAKb63y8AKM7Qi3g8slkiZLP2qT2ojNS9bRYl2M/E+jhUS9/euVrFrRLVWI0eaXkykvG1LPu7MwjkIzOJDXU2hKaKeWhqkl/rO1l95NGCKlT82hXMWEktlklcmdrl1z6A7WokMXDFXp0hmBoVuf3o6vCwd5FhLrerDVM5BVru4IrM37fB7wrnmBytscm79UhH0pJIFwGWfFxcPNxx5BoDb8At9xUnXwnvjkhvK1izettio/Au7iHhtgGRhbCFbW5cj+BntrEDtudau2PcKvCG3HA5B5Jt+7HhSvYPoB8w3/IAst8Mi7NF2EvumQPAyTTt08ERNqk3tzFxgCWifMGNMRUEJxjuL+HgIEcLbNYX+/ItU0uxQ1P0OddQJk3RRZPAXERzEPIgkay+29okEux49nqrXQEZxnupd64kyQzBAMLMSmOwlmpxufBVrf2tmqQ9AbZz+3F4pEROHmFp1SNsWjwvwOg7fkWCyLraGLrrIJqFw/W7+QSp9h4sYXs31CmJ7fxVLvdafgnaNdYQeRsEpS7rAGBigMdPzzHAwiL9dKGySbWsfQuegyHLK/kR/BRS+vYdLrnu2i2ohKsM/93sNKWLQsv52LAmGSczNCYYAQ=="
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 116,
+   "completion_tokens": 1018,
+   "total_tokens": 1134,
+   "cost": 0.0515394,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.05206,
+    "upstream_inference_prompt_cost": 0.00116,
+    "upstream_inference_completions_cost": 0.0509
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 203,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

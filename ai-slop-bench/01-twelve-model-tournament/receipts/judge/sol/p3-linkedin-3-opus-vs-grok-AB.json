@@ -1,0 +1,142 @@
+{
+ "judge": "sol",
+ "model": "gpt-5.6-sol",
+ "key": "p3-linkedin-3-opus-vs-grok-AB",
+ "wall_s": 8.9,
+ "run_utc": "2026-09-07T08:00:54Z",
+ "request_body": {
+  "model": "gpt-5.6-sol",
+  "input": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n\n=== TEXT A ===\nWe spent four months building a feature that 11 people used.\n\nNot 11%. Eleven people. Out of roughly 40,000 monthly active accounts.\n\nIt was a custom dashboard builder. Drag-and-drop widgets, saved views, shareable links. The whole thing. And we had *evidence* it was wanted: 60+ support tickets asking for better reporting, three enterprise deals where it came up on the call, and a customer advisory board that lit up when we showed the mockups.\n\nEveryone said they'd use it. Almost nobody did.\n\nHere's what I got wrong, and it took me an embarrassingly long time to see it.\n\n**I confirmed the problem, then invented the solution.**\n\nThe tickets were real. People genuinely couldn't get the numbers they needed. But \"I can't see my data\" doesn't mean \"give me a canvas and let me build my own dashboard.\" When we finally went back and watched what those 60 requesters actually did, most of them wanted one specific number, once a week, in an email. They didn't want a tool. They wanted an answer.\n\nWe built a workshop for people who wanted a finished piece of furniture.\n\n**I mistook enthusiasm for intent.**\n\n\"That looks great\" is the cheapest sentence in software. It costs a customer nothing to be encouraging on a call, and it costs them a lot to change how their team works on a Monday morning. I never asked the uncomfortable follow-up: *What are you doing today instead? What would you stop doing to make room for this?* If someone can't tell you what this replaces, they probably won't adopt it.\n\n**I let the loudest accounts stand in for the market.**\n\nThe advisory board loved it because the advisory board is full of power users — the 2% who want knobs and levers. They're a terrible proxy for the median customer, who logs in twice a week and wants to leave.\n\nWhat changed after that:\n\nWe now write down the adoption number we expect *before* we build. Not a vague \"this will be popular\" — an actual figure, with the reasoning behind it. When we're wrong, we can see exactly which assumption broke. Half the time, writing the number down kills the idea on the spot.\n\nWe also ship the ugly version first. For the reporting problem, the fix that finally worked was a weekly email with five metrics and no configuration at all. It took nine days. Adoption is north of 30%.\n\nThe dashboard builder is still in the product. It has a small, loyal following, and I'm genuinely glad those users have it. But it cost four months to learn something a two-week experiment would have taught us.\n\nThe most expensive thing you can build is a solution to a problem you never fully understood.\n\nIf you've shipped something into silence, I'd love to hear what it taught you. I suspect that's where most of the real learning in this job actually lives.\n=== END OF TEXT A ===\n\n=== TEXT B ===\nWe shipped a feature last quarter that almost nobody used.\n\nNot “low adoption.” Unused. After six weeks the activation rate was 1.4%. Support tickets: zero. Not because it was broken. Because almost no one cared enough to find it.\n\nWe had been so sure.\n\nA few power users mentioned it in interviews. It showed up on a competitor slide. The mocks looked clean. Engineering said three sprints. We greenlit it, built it, launched it, and watched the dashboard stay flat.\n\nThe unused code wasn’t the expensive part. The expensive part was how easily we talked ourselves into it. We treated a handful of polite “that would be nice” comments as demand. We treated a finished Figma file as validation. We celebrated shipping instead of learning.\n\nWhat I took from it:\n\nInterviews are not proof people will change their behavior. Users are kind. They will endorse a feature they will never open.\n\n“Nobody told us not to build it” is not a green light.\n\nIf you cannot name the job-to-be-done in one sentence, and who feels that pain every week, you are probably building a nice-to-have.\n\nA small, ugly experiment would have told us the same thing in days. We chose the satisfying path of a “real” launch instead.\n\nWe sunsetted it quietly. The team was embarrassed for about a week. Then we started treating every new idea as a hypothesis with a kill date, not a backlog item with a due date.\n\nThe feature wasn’t an engineering failure. It was a curiosity failure. We stopped asking “will they actually use this?” the moment the tickets hit Jira.\n\nIf you’ve shipped something into the void, you know the feeling. What did it teach you?\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n",
+  "max_output_tokens": 16000,
+  "store": false,
+  "reasoning": {
+   "effort": "medium"
+  }
+ },
+ "usage": {
+  "input_tokens": 1738,
+  "output_tokens": 576,
+  "reasoning_tokens": 469,
+  "effort_echoed": "medium",
+  "served_model": "gpt-5.6-sol"
+ },
+ "verdict": {
+  "more_ai": "B",
+  "confidence": 4,
+  "tells_A": [
+   "Signposting such as “Here’s what I got wrong”",
+   "Bold-label lesson openers",
+   "Repeated negative parallelism",
+   "Closing aphorism and engagement prompt"
+  ],
+  "tells_B": [
+   "Relentless negative parallelism",
+   "Uniform short, punchy LinkedIn rhythm",
+   "Repeated triads",
+   "Rhetorical question answered immediately",
+   "Generic anecdotal framing",
+   "Manufactured contrast labels such as “engineering failure” versus “curiosity failure”"
+  ]
+ },
+ "response_raw": {
+  "id": "resp_0b70d2097901ccf4016a9e6f2cab2c87d29dc7bf2b92289fd5",
+  "object": "response",
+  "created_at": 1788768044,
+  "status": "completed",
+  "background": false,
+  "billing": {
+   "payer": "developer"
+  },
+  "completed_at": 1788768053,
+  "error": null,
+  "frequency_penalty": 0.0,
+  "incomplete_details": null,
+  "instructions": null,
+  "max_output_tokens": 16000,
+  "max_tool_calls": null,
+  "model": "gpt-5.6-sol",
+  "moderation": null,
+  "output": [
+   {
+    "id": "rs_0b70d2097901ccf4016a9e6f2d2a4487d2bf085c35c4201d32",
+    "type": "reasoning",
+    "content": [],
+    "encrypted_content": "gAAAAABqnm81OJhwPCNnOVqNR62dN49PlRMJTW2scYjihr2w1B3B36Hkai2pm549kUbmB-KTcrmAf2A5n2d0VShSdHp_GNuclrL-j5w6ehDv37nwGsOAVBWBjwM14Y0r4vDC_I37Ex1VW7dwNy2JEhiA8hY2OE2zoK8v-SkTH7vgRylV844NMXr0U8IDpxgdYXXZ0nRySzq37aZcMp7SpAljrZpl9NTSOnHwVxR5C6fXC29qxISZVQNrR1o7cSTMskggaMem_z97NP0X2mOuVBI2xjGa7JVvXZMxh5QYK6HE1P5BMhSBveS8dKSORvKXKwSghmq9oFXhRlbUSnbTIL6S0w9KSNBmLdWdzJ3pU5U6DrLfJYHj9wnUrMCge7AuDFeg2HzQXzFLHO-iTj2Ghu33jOd4PPUj7OxL9YHKdm-Uq1W1fAtD2rYmh762xpMKwHUntakyMXQo4cFTF-rnRYh3plIV8BFfkGDQkuFOusfIT5SSYCXnoIiOxkRZrnUKfagL98nlaD-LCyp5tosKZqKkF-buE3GPMJyF2eL6Mx1Bsy4lDvcxUILc6qusAXI5r23zPb5saBgwDSyAf_aUXCJNgHhZp6U0KtFPRd3zsr58pUfP6Oe2J0mCWuUcWgEI-lybsUP_5cEPsDPTYXDT3v0scKIoacwOYiqHayNA9RvPtKAQ03AQNOG84S0ns_JoFNwuiyX098Q3sD60O27HUj7MYX949WdT1yngObT9PH9V1jIsEWnsoytXbbOnkmzkasUXHCggMgfK94om-_5Gg-6geh9_zLkI453iwEpw4iduz-T-VjcXZ8h5T6Ldj9f4XGSQfM2zbfsDqV3wYGHWW9fn70AQ0fRwnPEeHngS86b_3pzOAYlkyMna72b2RJ9cYHDpFCmMmtD8OBR0VsDJLe8IuDvVVjk5mE2mnVJvCKR_KP34zThlnU2KchSvXJgOXqCzZ-2HOwJodtAkV_2AcGNCs8PsYmRovjrtj3l-sEZGy3au5__RQ302nS2GNT9isgF5DF4Q8WU1A-BV_h2MwNnYLyfzOhT8fdldbfPlJfGDA6wBe7w4zm9wBBGabU_iZ_lr-W646Z8drT0qvvs4kiKfjzudorMbFTg2M2LfXS2NP0QEPpJE2YLseMpw0qb6p1SnrpJyN0b4HQhsSMESd5Vi-Pg73VGP4LMWSkDx9OtM53LmcEohRDyQpM1bWox3kDQmpt1qGUIsjqCQYBJWKvc_PY5vIwFWsVnsAQGt2_HA4ruKHIMQPdRt5FpZm7tiRnabQiMVfc0NN6b4QAKGIw9JmmRX8IUdWOJH7x3HNSuu8M5nx2nQv24QrA2b0CkVNe-K8uJY7r9halxStqmJ8Opo-VB98tF2Ct3QmPYO4Mh0h90PZFLLl6KEsbutSSCWdD4VZ8AxYv_-L9zMC_wlNVAUXM3hurHjPN9MOy5ALsXoNmxwThpLnuYGl20xPgO5X0B5FIBTcL1bzKV2qO-mUw3oJMrEbgRLDpBcH3NhOBQCwESxhlf1Nn4S-k9ZjWvpR7HKrThsypvEu30tMkZsXs_Xcdo9aDeSkwR77gX9Is4ynoR2kL-bmzrX3AblOXi-KnmjsCPQ-SOV46M8ZzqLZZOWnvX7HxaGimQmXG5rR4zIZ5UoJHaqGUte6F3pe2clg9kuGpCjQwDs0XWBLXvWrwPsw6Tr6qdiwCVI8ZVG5dGNJkWEIpFG9swz6PL_N-VOzW6QlcjsEZpXTy4x2Z0_KA-cvl2I8C89toYVoej3WXFfQpojrbSH_s59Dna8HKyrnLpFtZ2QharAv9qEEPu-Rdi3tczHSlcNjruTecOJpkWpn-VMM-Mt7zXT_wiVCbC89izeUW1WxaFUOYjnAGKkkFON7tNQqvUdDhjxBaofR-DILzinunJV8T4ouS2lllrJ4H-Jni3wT4hyoDwyTBvnwZPUZwNFlDGCDNpqWYQ6bWF3JloR7LDWfg6usiGzEC41BVMDn4d5Db9CHRgCYPCLK3Y5H6gQW8bs4bDC05Ba3uRA5a3g--kzKdrrv8ew1KKLHYv8RuijHoF5po_2ou1f-Xtu1hrcEn72pdsAnAY4u6Gy4K_k3MbdXhzMa06AOHIhJQMywZA73Os0PNBUlkKiXvu6Cl70jZoMsb_ZNyqnhr0F1b4jDzyrRkrW1i4dyPcBtsdNoqbcMXXGzUYZPszwZPNXeeeBSz0b7_r337IbWV8ETYRNOItlIU8VS7qLc2GyHCe5ExevLlRAzRQeMX1GFIAEiMAKyM_gzFTlOITHUyExYV7ybxf3qQ9u1JaWF2o5KOE5DCyq_Jxo9WFP5I5YQYrjrNZ8bdT1FK1ALIiS50xwofslAJ_cTG4jsxMVmR7Mghlssya8iwNev3Pm-11Ah4SmLxOaMcy6xFjCqXDtJBm1zgZLCYpVQUj3mQmO9L-c3RCLscnp6l6LUGojje_EUXJIsI_dv0YDI6r-1pmPPAiKdJDQjLZKaKNJKcYR21p9Ov2iZEsgID4JQOQS0Cy3cFCsOkiX7EaxwZ3_i3LEQzbKgWTs085L9C8-7Q4yeoqyDrSuWB1BeSGuISpYAunqmuOISJ7soCbnyWuMGtB_b_oBfSrZzFg2QWYcKiWBqqwxelDqmbbaZj1UyML8b_BqndQ4SKw1ncxV7Fz_Kok5hj_6wBkuENY2BgcEw9qaKhDIqRAtEQqK3iBWHskx5jtMsgBBEA7Az9CAknPtR0kPX7ZUD-PEX7qiXF8S2fObkefsymtxJpKO-hkwS5yCoVcdHPwFUaSdooBRdPL312AXpk6KMeV_y6lIccCwoKKlf8tRoRn9hrzsGMZ2GCmfqCOle6kjhWxR7XJii9wUYSihrCocx_p2AOLQFYa8zGINfMciJz72gvE8ywAZquLVyckRSceAxR5zDTuo3LgDSQCALAQEeECc23UQ-Bs6_aYIyhKZJ1G00Qs0pa569rU5SnWM8Z_YDAUWQSJ3AB4yxVATihL6dG0bAoQmNQmg1OQBf3dlp5Ag1ZMD4SWHj2hl8hWBQ080hSiRJ3LniPJrPHKfYVAW8EXHBZVhsf1nPJZ1j3WLHmMB7Co3oLw19SxwX6lH8nu07u3ZwTHv9UWdiFjjO_jvMSApZ425BxWHNvOnVkLN8oTJAmaPI1JtfKtqgJPgI9TSu5QioAHoFHZnQEezvzUjJaYfjKGH3AVueTr6zkgl42EXzqco2cIQNIOKLTH1x2X0rZ5kCVjom94aznoySPBqkKFbFRwUF93HE17rVGkInIRkmW2oxb8qZ4qPBt89SdStWiUwwkIZIYmywvXz4vgnxsTBKfnz4w5ly-xg6Glho5J-WcbVnVHPknrWM9FOrqjfbcbJXxTs2NVLr7vqQLcNWqzAeRuYr5TnCUiXv9IMX8Xc8BMqah8-0st3ijjm5S78Q4XPhy7m4uSdDJxpr1yl1oKJ535oy_xfqbliz_2cxP0bhMCgEfLGvSttn3MiyvN34xH70OGPejaQ6NFMTglYPVS4WXRXijGNOyIJxdol720LDAU3T313GPCN2D6IWU5Xl3PmBolVxhgpwO3AMndiAZO1sgjFkSwZYm9f1kUAd3A4S-ITrVNMWdll1hNuF9Ppcld5zQaF0OlovvGDPr7VuPf-snon_q5Ymt3wRP8xyyaHuDeP2m9xpTzQZXxkY8aP02DDPuDD2lHk65QIlr4U-bEAus56MwNy6bObRnwds8-enU616KgqHFO8_HeRFVjtX4q8uRLPCOMC9axbI2wOLY9MEJDK-y21sGrZs_GqWIoMsmzHsTEEDZPsUMbmQs8g_A1796zCky23b7z0lERu3sJ4-7o21CjuqJRfqPYXiw6XjOhFVFaK0poZm62Os2ugKyfvyBXdkOBB_wjo3KbMQXrECCDb1wyUGqkqSkDVccfc0HKCe58NaF94qzmDrFAaoCL0bnYzokHJLYyopftmXSyIdL9OTjS9lbRZHtJQNgBaySXEZ6v85kwdEw18-Eit9mPOZ4KdWILeSma9Hr6Ze0IzcrX5eDVtqnsaxv8A3rEPUcl_5vwGw4GCL8H06zUsEaqRqbE7mJfWu7nmJzhz5mPklIoln5XPT7lT-9E11EUfdujxGNBwGDyILI3XA3R2OOinH-er4UJpl5PkEA1IqX_HClqcp_HOTCePEHjc37TbOSv7Dqp_",
+    "summary": []
+   },
+   {
+    "id": "msg_0b70d2097901ccf4016a9e6f338ef487d2a91dc67c448da461",
+    "type": "message",
+    "status": "completed",
+    "content": [
+     {
+      "type": "output_text",
+      "annotations": [],
+      "logprobs": [],
+      "text": "{\"more_ai\":\"B\",\"confidence\":4,\"tells_A\":[\"Signposting such as “Here’s what I got wrong”\",\"Bold-label lesson openers\",\"Repeated negative parallelism\",\"Closing aphorism and engagement prompt\"],\"tells_B\":[\"Relentless negative parallelism\",\"Uniform short, punchy LinkedIn rhythm\",\"Repeated triads\",\"Rhetorical question answered immediately\",\"Generic anecdotal framing\",\"Manufactured contrast labels such as “engineering failure” versus “curiosity failure”\"]}"
+     }
+    ],
+    "phase": "final_answer",
+    "role": "assistant"
+   }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0.0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+   "context": "all_turns",
+   "effort": "medium",
+   "mode": "standard",
+   "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": false,
+  "temperature": 1.0,
+  "text": {
+   "format": {
+    "type": "text"
+   },
+   "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+   "image_gen": {
+    "input_tokens": 0,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "output_tokens": 0,
+    "output_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "total_tokens": 0
+   },
+   "web_search": {
+    "num_requests": 0
+   }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+   "input_tokens": 1738,
+   "input_tokens_details": {
+    "cache_write_tokens": 1735,
+    "cached_tokens": 0
+   },
+   "output_tokens": 576,
+   "output_tokens_details": {
+    "reasoning_tokens": 469
+   },
+   "total_tokens": 2314
+  },
+  "user": null,
+  "metadata": {}
+ }
+}

@@ -1,0 +1,13 @@
+Most product roadmaps fail because they pretend the future is more predictable than it is. They often present a neat sequence of features, dates, and milestones, creating the impression that product development is a matter of executing a known plan. In reality, products are built in uncertain environments. Customer needs change, competitors move, technical constraints emerge, and ideas that sound convincing in a meeting may fail when tested.
+
+The first problem is that many roadmaps focus on outputs rather than outcomes. They promise features instead of describing the customer or business problem those features are meant to solve. This encourages teams to measure progress by how much they ship, not by whether the product becomes more useful. A feature can be delivered on time and still have no meaningful impact.
+
+Roadmaps also become political documents. Sales teams want commitments they can share with prospects. Executives want evidence that strategic goals are being addressed. Customers want reassurance that their requests are coming. Product leaders often respond by adding more items and assigning dates before enough is known. The roadmap becomes a collection of promises to different stakeholders rather than a coherent expression of product strategy.
+
+Another reason roadmaps fail is that they separate planning from learning. Teams may spend months building an item because it appears on the roadmap, even after research suggests that the underlying assumption is wrong. Changing direction can look like poor execution, so people continue with the plan to avoid difficult conversations. The roadmap, which should support decision-making, instead prevents it.
+
+Overloaded roadmaps create a further problem. When everything is a priority, nothing is. Teams divide their attention across too many initiatives, dependencies multiply, and delivery slows. Dates begin to slip, confidence falls, and managers respond by demanding more detailed estimates. This adds administrative effort without reducing uncertainty.
+
+A useful roadmap should not claim to know exactly what will be built far into the future. It should explain which problems matter, why they matter, what outcomes the organization seeks, and what assumptions need to be tested. Near-term work can be specific because the team has more evidence. Longer-term plans should remain flexible.
+
+Most roadmaps do not fail because teams lack discipline. They fail because certainty is rewarded more than honesty. A roadmap succeeds when it helps people make better choices as new information arrives, not when it preserves an outdated plan.

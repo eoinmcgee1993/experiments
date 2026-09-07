@@ -1,0 +1,93 @@
+{
+ "arm": "opus",
+ "label": "Opus 5",
+ "vendor": "Anthropic",
+ "transport": "openrouter",
+ "model_requested": "anthropic/claude-opus-5",
+ "serving_path": "OpenRouter -> Anthropic (first-party key unavailable at run time)",
+ "prompt_id": "p1-essay",
+ "sample": 3,
+ "run_utc": "2026-09-06T13:24:38Z",
+ "wall_s": 26.3,
+ "request_body": {
+  "model": "anthropic/claude-opus-5",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Write an essay of up to 500 words on why most product roadmaps fail."
+   }
+  ],
+  "max_tokens": 8000,
+  "provider": {
+   "allow_fallbacks": false
+  },
+  "usage": {
+   "include": true
+  }
+ },
+ "usage": {
+  "input_tokens": 30,
+  "output_tokens": 1559,
+  "reasoning_tokens": 529,
+  "cost_usd": 0.03873375,
+  "served_model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS"
+ },
+ "essay_sha256": "15f251d14c13ad31b3bcef07c6e0ab43bb9d446e62dbb72b4ef6ea3192bf3b65",
+ "essay_words": 527,
+ "response_raw": {
+  "id": "gen-1788701050-paVhGAVvNKgdcAWtBAhU",
+  "object": "chat.completion",
+  "created": 1788701050,
+  "model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "# Why Most Product Roadmaps Fail\n\nMost product roadmaps fail not because teams lack discipline, but because the document is asked to do something impossible: promise the future in an environment defined by uncertainty. The failure is structural, and it recurs in predictable ways.\n\n**They confuse output with outcome.** The typical roadmap is a list of features arranged against dates. Shipping that list is treated as success, even when the features change nothing about customer behavior or business performance. A roadmap that says \"Q3: notifications redesign\" makes no claim that can be proven wrong. One that says \"reduce first-week churn by 15%\" does. The first invites busywork; the second invites judgment about whether the work is worth continuing.\n\n**They are political settlements, not strategies.** In many organizations, the roadmap is the negotiated peace between sales, marketing, support, and executive pet projects. Each stakeholder receives a slot in exchange for cooperation. The result is a document with no spine: everything is a priority, nothing is a bet, and there is no stated rationale that would justify saying no to the next urgent request. A roadmap without a strategy behind it is just a wishlist with quarters attached.\n\n**They mistake estimates for commitments.** A date twelve months out is a guess with enormous error bars, but once it appears in a slide deck it hardens into a promise. Sales sells it. Executives plan around it. When reality intervenes, teams face a choice between missing the commitment and shipping something hollow to satisfy it. They usually choose the latter, which quietly trains everyone that roadmap items get delivered in name only.\n\n**They ignore the true cost of running a product.** Plans are drawn as if capacity were fully available for new work, when in practice a substantial share goes to maintenance, incidents, security, compliance, onboarding, and technical debt. The roadmap is therefore overcommitted from the moment it is approved, and the overflow is absorbed by delay or by cutting quality.\n\n**They resist learning.** The purpose of building is partly to discover whether your assumptions were right. Yet once an item is on the roadmap, momentum and sunk cost keep it there. Evidence that a bet is failing arrives, and the plan does not move. Meanwhile, plans that are never revisited drift from reality until people stop consulting them altogether — the roadmap becomes theater, maintained for review meetings and ignored in daily decisions.\n\n**They serve too many audiences at once.** Engineers need sequencing and dependencies. Executives need to see how work ladders up to company goals. Customers need reassurance without specific dates. Forcing one artifact to satisfy all three guarantees it satisfies none.\n\nThe remedy is not to abandon planning but to change what the roadmap asserts. Organize it around problems and measurable outcomes rather than features. Express confidence honestly — near-term work specified, later work deliberately vague. Publish the reasoning, so the plan can be argued with. Revisit it on a fixed cadence, and treat removing items as evidence of learning rather than failure. A roadmap should be a statement of intent that survives contact with new information — not a contract that punishes anyone for discovering the truth.",
+     "refusal": null,
+     "reasoning": "I'm outlining the core reasons roadmaps fail: treating them as binding commitments rather than hypotheses, conflating shipped features with actual outcomes, and building plans on false certainty about the future. I want to develop these into a tight, well-structured essay of around 450-500 words.\n\nOther threads I'm considering: roadmaps as political settlements where everything gets labeled top priority, the absence of real strategy behind them, and how they become static documents nobody trusts once reality drifts. I'll also touch on ignored capacity constraints, sunk-cost momentum keeping bad items alive, and the mismatch of one artifact trying to serve execs, engineers, and customers at once. My conclusion is that roadmaps fail because they answer \"what will we build and when\" instead of \"what do we believe and how will we test it\" — and the fix is outcome-based, confidence-tiered planning that's revisited often. I'll write this cleanly with a title, staying under 500 words.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm outlining the core reasons roadmaps fail: treating them as binding commitments rather than hypotheses, conflating shipped features with actual outcomes, and building plans on false certainty about the future. I want to develop these into a tight, well-structured essay of around 450-500 words.\n\nOther threads I'm considering: roadmaps as political settlements where everything gets labeled top priority, the absence of real strategy behind them, and how they become static documents nobody trusts once reality drifts. I'll also touch on ignored capacity constraints, sunk-cost momentum keeping bad items alive, and the mismatch of one artifact trying to serve execs, engineers, and customers at once. My conclusion is that roadmaps fail because they answer \"what will we build and when\" instead of \"what do we believe and how will we test it\" — and the fix is outcome-based, confidence-tiered planning that's revisited often. I'll write this cleanly with a title, staying under 500 words.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "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"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 30,
+   "completion_tokens": 1559,
+   "total_tokens": 1589,
+   "cost": 0.03873375,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.039125,
+    "upstream_inference_prompt_cost": 0.00015,
+    "upstream_inference_completions_cost": 0.038975
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 529,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

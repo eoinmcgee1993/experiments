@@ -1,0 +1,105 @@
+{
+ "judge": "opus",
+ "model": "anthropic/claude-opus-5",
+ "key": "p3-linkedin-1-astra-vs-terra-AB",
+ "wall_s": 7.2,
+ "run_utc": "2026-09-06T22:39:20Z",
+ "request_body": {
+  "model": "anthropic/claude-opus-5",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n\n=== TEXT A ===\nThe feature shipped on time. Nobody used it.\n\nWe’d done the work: polished the interface, handled edge cases, written documentation, and celebrated the release.\n\nThen we watched the dashboard.\n\nAlmost nothing.\n\nOur first instinct was to blame discoverability. Maybe it needed a better announcement. A tooltip. A more prominent button.\n\nBut after talking to customers, we found a harder truth:\n\nWe had validated that the idea sounded useful—not that the problem mattered enough for someone to change their behavior.\n\n“Would you use this?” had produced encouraging answers.\n\n“What do you do today when this happens?” revealed workarounds people were perfectly happy with.\n\nAnd “When was the last time this caused a real problem?” often led to a long pause.\n\nThe lesson wasn’t “never build something new.” It was this:\n\n**Interest is not intent. Shipping is not adoption.**\n\nSince then, I’ve tried to make three things clear before committing to a feature:\n\n• **The behavior we expect to change.** Not “users will have more flexibility,” but “users will stop exporting this report to a spreadsheet every Friday.”\n\n• **The evidence that the problem matters.** Recent examples, repeated workarounds, and time or money lost—not just positive reactions to a mockup.\n\n• **The smallest test that could prove us wrong.** A manual service, a rough prototype, or a limited pilot before a full build.\n\nWe also define what meaningful adoption would look like—and when we’ll review it. Otherwise, an unused feature can linger indefinitely because nobody wants to call it.\n\nI’m still proud of how that team delivered. But we delivered a good answer to a question our customers weren’t really asking.\n\nNow, I’d rather learn that in a week of discovery than a quarter of development.\n\nWhat’s a feature you shipped that changed how you decide what to build next?\n=== END OF TEXT A ===\n\n=== TEXT B ===\nWe shipped a feature nobody used.\n\nNot “low adoption.”  \nNot “needs more time.”  \nNobody used it.\n\nWe had spent weeks building it: designs, edge cases, QA, release notes, internal excitement. It solved a problem we believed customers had.\n\nThe problem? We believed more than we listened.\n\nWe had seen a few support requests and assumed they represented a broad need. We jumped quickly from signal to solution.\n\nWhat we didn’t do was ask the harder questions:\n\n- How often does this problem occur?\n- Who experiences it most?\n- What are they doing instead today?\n- Is the current workaround actually painful enough to change behavior?\n- Would they use this solution if it existed?\n\nAfter launch, the data was clear. Customers weren’t ignoring the feature because it was hard to find. They were ignoring it because it wasn’t important.\n\nThat was an expensive lesson—but a valuable one.\n\nSince then, I’ve tried to treat every feature idea as a hypothesis, not a commitment.\n\nBefore building, we now aim to validate three things:\n\n1. **The problem is real** — not just anecdotal.  \n2. **The problem is painful** — not merely inconvenient.  \n3. **Our solution changes behavior** — not just sounds good in a roadmap meeting.  \n\nSometimes that means interviews. Sometimes it means a prototype. Sometimes it means a landing page, a manual workflow, or simply asking customers to choose between competing problems.\n\nThe goal isn’t to eliminate every failed feature.\n\nThe goal is to fail earlier, cheaper, and with more learning.\n\nShipping something nobody uses feels disappointing. But it’s also a reminder:\n\nOutput is not impact.  \nA released feature is not a successful feature.  \nAnd building faster is only useful when we’re building the right thing.\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n"
+   }
+  ],
+  "max_tokens": 16000,
+  "provider": {
+   "allow_fallbacks": false
+  },
+  "usage": {
+   "include": true
+  }
+ },
+ "usage": {
+  "input_tokens": 2432,
+  "output_tokens": 511,
+  "reasoning_tokens": 222,
+  "cost_usd": 0.02468565,
+  "served_model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS"
+ },
+ "verdict": {
+  "more_ai": "B",
+  "confidence": 4,
+  "tells_A": [
+   "negative parallelism: \"Interest is not intent. Shipping is not adoption.\"",
+   "bold-label bullet list in a prose task",
+   "triad: three things to make clear",
+   "em dash joints"
+  ],
+  "tells_B": [
+   "repeated negative parallelism: \"Not 'low adoption.' Not 'needs more time.'\", \"not just anecdotal\", \"not merely inconvenient\", \"Output is not impact\"",
+   "rhetorical question answered: \"The problem? We believed more than we listened.\"",
+   "numbered list with bold labels where prose was asked",
+   "triad: \"fail earlier, cheaper, and with more learning\"",
+   "recap/uplift ending stacking aphorisms",
+   "anaphora with uniform punchy fragments",
+   "no concrete numbers, names, or dates"
+  ]
+ },
+ "response_raw": {
+  "id": "gen-1788734352-hvlbfhxe325ISVT02HnS",
+  "object": "chat.completion",
+  "created": 1788734352,
+  "model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"more_ai\": \"B\", \"confidence\": 4, \"tells_A\": [\"negative parallelism: \\\"Interest is not intent. Shipping is not adoption.\\\"\", \"bold-label bullet list in a prose task\", \"triad: three things to make clear\", \"em dash joints\"], \"tells_B\": [\"repeated negative parallelism: \\\"Not 'low adoption.' Not 'needs more time.'\\\", \\\"not just anecdotal\\\", \\\"not merely inconvenient\\\", \\\"Output is not impact\\\"\", \"rhetorical question answered: \\\"The problem? We believed more than we listened.\\\"\", \"numbered list with bold labels where prose was asked\", \"triad: \\\"fail earlier, cheaper, and with more learning\\\"\", \"recap/uplift ending stacking aphorisms\", \"anaphora with uniform punchy fragments\", \"no concrete numbers, names, or dates\"]}",
+     "refusal": null,
+     "reasoning": "Text B leans heavily on negative parallelism, rhetorical questions, numbered bold lists, and triads, ending with a recap. Text A also uses bold bullets and negative parallelism with a triad, but less intensely, and closes with a direct question to the reader instead.\n\nOverall, B reads as more AI-generated in style.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "Text B leans heavily on negative parallelism, rhetorical questions, numbered bold lists, and triads, ending with a recap. Text A also uses bold bullets and negative parallelism with a triad, but less intensely, and closes with a direct question to the reader instead.\n\nOverall, B reads as more AI-generated in style.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAISkgcKrgEIERgCKkBEWMA99BED6RXlRUPB5+F8c5E91sW47Qeuiw6qDa1qO8ax6aBOl4iDKJ9tOhsNJU1NZteS1mmVvujkKxdTXTM4Mg1jbGF1ZGUtb3B1cy01OAFCCHRoaW5raW5nWiQ0YzBmMDQ2Zi0yNWZkLTQ1ZmItYmZiMy1hMDhhOGUyNDljYTd6HnVwcm9mXzAxMUNlbkZSYjRqeFBLcXdMUXFXN3dtNqgBl9f31AYSDLaUno9HVqLp/iBoWBoM9prk3ep4JRrRbcjXIjBsFcSxl104JbwaqSjb8AjIy5L3xUUyOPt9K4FCbqJJMql8YKp29wZvaVAUYBeVC2gqkAWm3sWzu/85m04MwZ73IwKb0J2IiHQv+ob1w/Idu/dGMWAuhq34ShlhbGA6zR3xBVN7WWLHKIOkYDiXQMMFYx4cc6cd26NpB+6tJlxxBzuTRTEkfAkoqAxtcaFjasxlMd0M9+ucscwicII8uSJRy3hwYe2rjFilN2NFdqU55LLy/sdQuMAA37Hwix4mer0AtRxWQdhAMX+XKw5YS9gdmONSmBDYrQ3uzc9U/BLJyB9I/o2pbiSGjYcuouzZ5AMWo/I7yil4ib1UNvIct+CWkHCPZ90ZuY6rqLHibL4uno4Z1do5pGFcbQ+c49/11gg4C0UKn+jxRiBZX9FlnSZzH2JMdHKhbMvQC3fVo+DYnB4OIV3t/Q9uU413IzC9/HBSTwqqEc3yzk19tfVuLzvV0TrRoharDmDWNurBH+rWzzLyMkD5Utbq9/rE8tdwNhvsBkAC4bJoUfpQ7Hi4Ie2+DS8+DX6lurAIdWi3LeMk21dhq4X66qtnzwmX3eJPjIwr16MaQoF+2b2XXp/3BBy3EvT0V5NYSJxTC/PjT4LEz48/r0NzCU4fEyu7IED8Qot8s6WbVxJ8I8EtQlVHzb4lwfiqvEAvTuLQTcnuVuLA+wh3qlvR2jfTPDr96dQ1HNdHU0ze7zVWVihB53TVxvlNJKi+unASonDUp+n8MnAyIqirhNL4vwk+2wjwNQmMf5aLcrft95TqWjzdl2Ao0QxCjnrm7AZyA4BoXPPa8Bw/mJcmUCvad74LnY/ynjrAOgQMFKw7EEtvrnpPugQJ2Rk2+wsOQTYEASNv+FMDtfGu1sUJwo+G6SLZzfLgiaJgpB5oSdxgtDUsnm7COXrPnLU8ReCWsG7YxwehY/KbTScURVsr2RgB"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2432,
+   "completion_tokens": 511,
+   "total_tokens": 2943,
+   "cost": 0.02468565,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.024935,
+    "upstream_inference_prompt_cost": 0.01216,
+    "upstream_inference_completions_cost": 0.012775
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 222,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

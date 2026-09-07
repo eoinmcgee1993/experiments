@@ -1,0 +1,73 @@
+{
+ "variant": "steered",
+ "arm": "grok",
+ "label": "Grok 4.6",
+ "vendor": "xAI",
+ "transport": "xai_chat",
+ "model_requested": "grok-4.6",
+ "serving_path": "xAI first-party, chat completions",
+ "prompt_id": "p1-essay",
+ "sample": 2,
+ "prompt_text": "Write an essay of up to 500 words on why most product roadmaps fail.\n\nPlain prose only: no headers, no bullet points, no bold text, no em dashes. Write like a person.",
+ "run_utc": "2026-09-06T14:07:15Z",
+ "wall_s": 40.6,
+ "request_body": {
+  "model": "grok-4.6",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Write an essay of up to 500 words on why most product roadmaps fail.\n\nPlain prose only: no headers, no bullet points, no bold text, no em dashes. Write like a person."
+   }
+  ],
+  "max_tokens": 8000
+ },
+ "usage": {
+  "input_tokens": 677,
+  "output_tokens": 391,
+  "reasoning_tokens": 1604,
+  "cost_usd": null,
+  "served_model": "grok-4.6",
+  "provider": null
+ },
+ "essay_sha256": "5d53a0e52c84ab59beb798e330463c181e6f29dfd6283c5decea57275cdb9591",
+ "essay_words": 342,
+ "response_raw": {
+  "id": "3fb4572c-124e-9bf9-bca6-9a7122cbc332",
+  "object": "chat.completion",
+  "created": 1788703593,
+  "model": "grok-4.6",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "I've watched more product roadmaps collapse than I can count, and it usually isn't because the ideas were bad. The real problem is that most teams treat the roadmap like a contract instead of a hypothesis. They lock in features and dates months ahead based on incomplete information, then act surprised when customers don't care, technology changes, or a competitor ships something better. Updating it feels like admitting failure, so the document slowly becomes fiction while the actual product evolves in a completely different direction.\n\nA lot of this comes from confusing outputs with outcomes. The typical roadmap is a list of things to build, not a set of problems to solve or results to achieve. Stakeholders demand their features appear on it, product managers add them to keep the peace, and suddenly the team is building a Frankenstein of requests instead of a coherent product. There's almost never enough time spent talking to users before those items get committed. Assumptions stay assumptions until it's too late and expensive to reverse.\n\nCapacity is another silent killer. Roadmaps rarely account for the messy reality of software: bugs, technical debt, onboarding, support, the unexpected production incident. Everything is estimated as if the team will operate at peak efficiency forever. When dates inevitably slip, leadership loses faith, engineering feels set up to fail, and the next planning cycle starts with even more cynicism.\n\nPolitics make it worse. The person with the most power or the loudest voice often dictates what goes on the page, regardless of data. Strategy gets diluted into a collection of unrelated bets. People also mix up a roadmap with a detailed project plan and expect precision that discovery work simply cannot provide.\n\nThe roadmaps that survive are usually shorter, more flexible, focused on themes or customer problems rather than specific features, and treated as conversation starters rather than sacred texts. Most organizations want the appearance of certainty more than they want actual learning. That's why the majority fail. They become artifacts of wishful thinking instead of tools for making better decisions.",
+     "reasoning_content": "The user wants an essay of up to 500 words on why most product roadmaps fail. Constraints:\nMost product roadmaps fail because teams treat them like binding contracts instead of living documents that can evolve with new insights. They get created in a vacuum, often based on assumptions about what customers want rather than real conversations with them. When stakeholders see a roadmap, they start demanding changes as if it were a fixed list of deliverables 18 months out. Suddenly the document becomes a battleground where the loudest voice wins, and the actual priorities get buried under feature requests that sounded good on paper but don't solve real problems.\n\nThe focus stays on outputs instead of outcomes. You end up with a calendar full of features and releases, but no clear sense of whether those features will move the needle on customer success or business goals. Engineering teams get timelines that assume perfect execution, ignoring technical debt or capacity constraints. When dates slip, trust erodes fast, and the roadmap loses all credibility. People confuse it with a project plan, expecting Gantt chart precision for something that is inherently 70 percent guesswork.\n\nPolitics and ego play a bigger role than anyone admits. The executive who wants their pet project on the list or the customer who complains the loudest gets their item added, crowding out the work that actually matters. Strategy gets diluted into a collection of unrelated bets. Honest conversations about what the team can realistically deliver rarely happen, so the roadmap becomes a wish list rather than a guide.\n\nThe ones that work stay high level, talk about problems to solve instead of solutions, and get updated without drama. They remain flexible and focused on learning. Most companies want the appearance of control more than they want actual progress. That's why 80 percent of roadmaps fail. They become artifacts of wishful thinking instead of tools for making better decisions.",
+     "refusal": null
+    },
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 677,
+   "completion_tokens": 391,
+   "total_tokens": 2672,
+   "prompt_tokens_details": {
+    "text_tokens": 677,
+    "audio_tokens": 0,
+    "image_tokens": 0,
+    "cached_tokens": 640
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1604,
+    "audio_tokens": 0,
+    "accepted_prediction_tokens": 0,
+    "rejected_prediction_tokens": 0
+   },
+   "num_sources_used": 0,
+   "cost_in_usd_ticks": 123640000
+  },
+  "system_fingerprint": "fp_e41c6060b2628547",
+  "service_tier": "default"
+ }
+}

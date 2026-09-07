@@ -1,0 +1,142 @@
+{
+ "judge": "sol",
+ "model": "gpt-5.6-sol",
+ "key": "calib-human-09-2022-08-07-vs-grok-3-HM",
+ "wall_s": 7.8,
+ "run_utc": "2026-09-07T08:25:12Z",
+ "request_body": {
+  "model": "gpt-5.6-sol",
+  "input": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n(One of the texts is a real LinkedIn post by a person, written on its own topic; judge tells, not topic.)\n\n=== TEXT A ===\nThe #Agile Manifesto was a success.\n\nBut it is outdated.\n\nIt did its job; it helped us move away from the waterfall. I support many of its values and principles.\n\nAt the same time, I think it wasn't well prepared. And most importantly, it has not been updated since 2001.\n\nWhat holds on, and what's missing?\n\nLet's start with the \"Working software is the primary measure of progress\" principle. Working software is just an output. How do we know it delivers any value? It's a perfect recipe for a feature factory. Today we understand we need to focus on the outcomes.\n\nThe Agile Manifesto also doesn't mention product discovery. Building a feature to find out nobody needs it, that it doesn't scale due to technical limitations, or that it doesn't produce value for the business is a waste, no matter how much you \"Welcome that change.\" We can mitigate those risks by validating our ideas with the help of prototypes.\n\nThe Agile Manifesto also lacks many necessary ingredients for a successful product organization:\n\n- Data and information are not present. Those are strategic assets every PM should understand and leverage.\n\n- Leadership is not even mentioned. In this context, \"Build projects around motivated individuals\" is just wishful thinking. \n\n- DevOps couldn't be included, as the term was born in 2008 - 7 years later.\n\n\nThe Agile Manifesto may be outdated, but the Agile principles and values existed long before it was created. And they have evolved significantly since 2001.\n\nI do not doubt that agility will thrive. Nothing, not even fake Agile frameworks like #SAFe, can change it.\n\nDo you agree? What are your thoughts?\n\nLet me know in the comments.\n\n- - - - -\n\nA few sources I highly recommend:\n\n- Product Discovery is perfectly described in \"Inspired\" by Marty Cagan\n\n- \"Outcomes Over Output: Why Customer Behavior is the Key Metric for Business Success\" by Joshua Seiden \n\n- \"Agile 2: The Next Iteration of Agile\" by Cliff Berg, Kurt Cagle, Adrian Lander, Philippa Fewell, Raj Nagappan, PhD, Lisa Cooney, and Murray Robinson.\n\n- The Agile Product Manifesto by David Pereira\n\n=== END OF TEXT A ===\n\n=== TEXT B ===\nWe shipped a feature last quarter that almost nobody used.\n\nNot “low adoption.” Unused. After six weeks the activation rate was 1.4%. Support tickets: zero. Not because it was broken. Because almost no one cared enough to find it.\n\nWe had been so sure.\n\nA few power users mentioned it in interviews. It showed up on a competitor slide. The mocks looked clean. Engineering said three sprints. We greenlit it, built it, launched it, and watched the dashboard stay flat.\n\nThe unused code wasn’t the expensive part. The expensive part was how easily we talked ourselves into it. We treated a handful of polite “that would be nice” comments as demand. We treated a finished Figma file as validation. We celebrated shipping instead of learning.\n\nWhat I took from it:\n\nInterviews are not proof people will change their behavior. Users are kind. They will endorse a feature they will never open.\n\n“Nobody told us not to build it” is not a green light.\n\nIf you cannot name the job-to-be-done in one sentence, and who feels that pain every week, you are probably building a nice-to-have.\n\nA small, ugly experiment would have told us the same thing in days. We chose the satisfying path of a “real” launch instead.\n\nWe sunsetted it quietly. The team was embarrassed for about a week. Then we started treating every new idea as a hypothesis with a kill date, not a backlog item with a due date.\n\nThe feature wasn’t an engineering failure. It was a curiosity failure. We stopped asking “will they actually use this?” the moment the tickets hit Jira.\n\nIf you’ve shipped something into the void, you know the feeling. What did it teach you?\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n",
+  "max_output_tokens": 16000,
+  "store": false,
+  "reasoning": {
+   "effort": "medium"
+  }
+ },
+ "usage": {
+  "input_tokens": 1624,
+  "output_tokens": 359,
+  "reasoning_tokens": 230,
+  "effort_echoed": "medium",
+  "served_model": "gpt-5.6-sol"
+ },
+ "verdict": {
+  "more_ai": "B",
+  "confidence": 4,
+  "tells_A": [
+   "Signposting: “Let’s start”",
+   "Bulleted list in prose task",
+   "Overused term: “leverage”",
+   "Audience-engagement questions and comment CTA"
+  ],
+  "tells_B": [
+   "Repeated negative parallelism: “Not low adoption. Unused” and “not a green light”",
+   "Repeated “not X, but Y” contrasts",
+   "Relentless short, punchy LinkedIn rhythm",
+   "Triadic phrasing and lists",
+   "Signposting: “What I took from it”",
+   "Polished anecdote with every point neatly landing"
+  ]
+ },
+ "response_raw": {
+  "id": "resp_08cb3507c0223ae7016a9e74e0963087d2b2f4e00b9333bb75",
+  "object": "response",
+  "created_at": 1788769504,
+  "status": "completed",
+  "background": false,
+  "billing": {
+   "payer": "developer"
+  },
+  "completed_at": 1788769510,
+  "error": null,
+  "frequency_penalty": 0.0,
+  "incomplete_details": null,
+  "instructions": null,
+  "max_output_tokens": 16000,
+  "max_tool_calls": null,
+  "model": "gpt-5.6-sol",
+  "moderation": null,
+  "output": [
+   {
+    "id": "rs_08cb3507c0223ae7016a9e74e1611087d2a2e575fc22c37ddf",
+    "type": "reasoning",
+    "content": [],
+    "encrypted_content": "gAAAAABqnnTmre7F9K0Oe7WbWVBol0ecJj0G2h3IEirkRxnVJ-RVs8bGFMvsOSfoUPqB8qFZTT-v4n5ETcEA53PT6vPuLRPPu9udtmYU_1cYQ2CPqlttEwR_TpXYxw2qkEoJX7NltZTpuU85y9SVF3BpPhjcvJa2MNl1pkmONGdb8c9bafPGMUl1SVGuvXo9Z9D1iVBV8gBK1mj9B-U6SfkaLez6t9fpNS5wCjttzSfVfrJxCb9gcL99rQC75BfbJ8BEvaYPf3M7eKzgeFAYoYNDxnqTboxACm18XIUqkdju5xa7Iq-3QhCzyhh7lfk2Oh_uCfPS8aopObyh29qAnAOE9Rhi77X5KT5MAqJZR6g_c3xHVtz9n2ZT7mY7Ftgjw2JM8OPL5kU6GOsRbMuteuUgR-bAeivTUGbtl_ZjnXgBbjaZ3dCQ28C0BAj66LBO41O5BTzbygJbv-6Zmos_4dcPNhsVZqWUMOJHE5puaLwxmiEPYq6fv8oVLkS8UhTtbesw0Ptdqxt7i385oZDeTflKqzcPrr7aj2GnznuBbG4LNOKv86ba8_zafyztz8YQH8JQXiwEHMd4RwC_cXokRnNmaEzi3m3jymdNmj1fik7yrGDO2S_aGJ7N8y0rsxRbRbGK14aiuRaP2fckpOmPfQ-JlJNc8nq6wsX2zGHjT47Q6w8oE8nN2c6HIo7yN8y_LSFF42WU01wouc-uV7sdJM_22B5aVwEtAxt_3rnEUZJi2gxmPXCR-GyP17FN3j8STWZeK7oRqpnBNqcvkCUlvZpDKokcz6pvW9m1hJ2j9kcLAPQJ0HDhVmEUXeY3VqoOC8XTpaivWUSAju3L1301DiFdJq1R_V7JLtD48h5wY9JLQu1EKb7Lc23Xmd0KdNkIHeszQc68GFR_faOILzMoMNgf999-sDfROdJyyLZBjelb40JYW2y3KvoIWtQlNH3zsc-pMOS0TGGe6q7xCi21mTlXJXD9G--XSaxkecG1ejHIicGi_VAANmSs-5fvsl7LBH7kjx2FCr4DSAgdqFOWhH2Ti7Yho79pIOkWG9RMP6bVV0_jPmN4Pbl5MNT_TPAekpo97PZghDb2RuWPSZJS14Qi2b1BNLZEsimvLNx2EDBtRprtzzqBGg9p3n4h02V0bD1HwVJU1nyxUb6n-i_uFf_63GYOH5wEniz1Ru3T5KSJnevkdntdIbXZvzWqc2ZZAdQoLoUbmlVKfjSKeydQZv9aG_FCNvdXvieXh2-0XxSikbJj0Tw9mPsZAtpCsILKbNecKk2OcGrBFNCoGRCHGzNEyF7R5d3WrLJkFoIYCvNImdtJns8w93xvMnFiIUXQNEkKjS_M55dnuBkgabAmqrXyYS1Qs5U3bf1ktlJHqfBvO2IR7MHvghlrr4BW1uuhLAU1XsolGlhP-iLFtv3ZIqChDCimmijLFX99Gm3I1TRjL2D1LdixDgFJ2kTwr-7yKb2vseYSuXnJKKeH5Aza7x4a7T8Muc-ZRKbq7gGlDy0OZ6S1RLVO1Juf_JssZr3fb0zQ_28uYncW-DUGpNKfQuyWVMBn_Zp00KXeMJV52S5Sza1kXnh9MnvQliyIxRo-tHROVNvrgb6DV6G6xIA2oulqE_yjrLQF4qlZk0E6-9ArenH3MPnHPeEVLGkrTdAG_WUaBVN0ZkEhVT-sDD_Wn7W-SA5aNN9qF4wjECoNOP8S-610hR0L2UazLXjFgIxGg76Wb9IuVivq8_rUjwcor0REqz0JwVOldfVvUHx6Zy0LoT9NZUYzhJvYA3i9qEtHpHiAP6u1lRRkmwDHrDNHRkDqhEofqHBfHDg7O5EGscwMojvJuRn84ipEBa1CklH0QLqvD9P9LeB4TZUg1PHaUaPILMCz-XjckMxaw_4FNEujtA9sRshECxHzxZ07ExTC9MkwhutKY81VZnjbTpOTC79iEm0Ce-w1NXvkhkuGByvUeaAwtTKJ4IaMH3GqdEdiGb9KPPGozzQenmsDTcjDScq53wCsaBR3Xcd2P8j8fKVAA6b8HJhrc5KGmiKCPG61c97i07ok44WBBOjxSELOcKDfO3buWktMq-cmaJ9dRz60DRlk3nPU-4l07NrLdYN2U29gq2Uci_rpUqvDXKO-bHIup7hr_z3wNjoRYhWEry2gJBMoIN7pG-5wwZWCVoRSWnwGp8TOdqwOJnYn8y7F3TB3wqgxvAEiV89zcEK3z9k_wkQtRDfgjq7FcklgSiysA8vENo6B7pTHzLbiFXqqXD9_BpYGmUFPKpx26UoyA9gkK_sWI2QRzkBH_qng6NDmPFB1x3NpECPae0Va47XuQ-BFdUFYsv20kYzMsJkVVD9iDM9T2YN653RlAiHweIPomL3twITzja9OZT5TO_ACJGHUc9UIBsii-Fmjogs2VgfbgqgP6ddKvHehqE33s70y-CYITssI_Wf4vs4lmLXccbxHtkCAiDwV4gAlk22etgAJww-ExYi4RlesFB1RIT3l0ygXRHrSjj6lexlIppAfaYmQZtQKlZm5t2eomaG2PgyImGR1T0pMRNeTZtw50485sJu_MObFP64v8OzLzGuq00VQy_o3x0xYBA==",
+    "summary": []
+   },
+   {
+    "id": "msg_08cb3507c0223ae7016a9e74e532d487d2b3d806d3083669a3",
+    "type": "message",
+    "status": "completed",
+    "content": [
+     {
+      "type": "output_text",
+      "annotations": [],
+      "logprobs": [],
+      "text": "{\"more_ai\":\"B\",\"confidence\":4,\"tells_A\":[\"Signposting: “Let’s start”\",\"Bulleted list in prose task\",\"Overused term: “leverage”\",\"Audience-engagement questions and comment CTA\"],\"tells_B\":[\"Repeated negative parallelism: “Not low adoption. Unused” and “not a green light”\",\"Repeated “not X, but Y” contrasts\",\"Relentless short, punchy LinkedIn rhythm\",\"Triadic phrasing and lists\",\"Signposting: “What I took from it”\",\"Polished anecdote with every point neatly landing\"]}"
+     }
+    ],
+    "phase": "final_answer",
+    "role": "assistant"
+   }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0.0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+   "context": "all_turns",
+   "effort": "medium",
+   "mode": "standard",
+   "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": false,
+  "temperature": 1.0,
+  "text": {
+   "format": {
+    "type": "text"
+   },
+   "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+   "image_gen": {
+    "input_tokens": 0,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "output_tokens": 0,
+    "output_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "total_tokens": 0
+   },
+   "web_search": {
+    "num_requests": 0
+   }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+   "input_tokens": 1624,
+   "input_tokens_details": {
+    "cache_write_tokens": 1621,
+    "cached_tokens": 0
+   },
+   "output_tokens": 359,
+   "output_tokens_details": {
+    "reasoning_tokens": 230
+   },
+   "total_tokens": 1983
+  },
+  "user": null,
+  "metadata": {}
+ }
+}

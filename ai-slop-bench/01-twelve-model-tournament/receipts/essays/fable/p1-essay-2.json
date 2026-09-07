@@ -1,0 +1,93 @@
+{
+ "arm": "fable",
+ "label": "Fable 5.1",
+ "vendor": "Anthropic",
+ "transport": "openrouter",
+ "model_requested": "anthropic/claude-fable-5.1",
+ "serving_path": "OpenRouter -> Anthropic (first-party key unavailable at run time)",
+ "prompt_id": "p1-essay",
+ "sample": 2,
+ "run_utc": "2026-09-06T13:24:09Z",
+ "wall_s": 19.6,
+ "request_body": {
+  "model": "anthropic/claude-fable-5.1",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Write an essay of up to 500 words on why most product roadmaps fail."
+   }
+  ],
+  "max_tokens": 8000,
+  "provider": {
+   "allow_fallbacks": false
+  },
+  "usage": {
+   "include": true
+  }
+ },
+ "usage": {
+  "input_tokens": 32,
+  "output_tokens": 1026,
+  "reasoning_tokens": 49,
+  "cost_usd": 0.0511038,
+  "served_model": "anthropic/claude-fable-5.1",
+  "provider": "Anthropic"
+ },
+ "essay_sha256": "f1ac8194b3aa920149522012ccf5f036e9368b060f9cd80d4c0a53f0aa4d069e",
+ "essay_words": 493,
+ "response_raw": {
+  "id": "gen-1788701028-LVokaXAlVe5zZ3djR4lb",
+  "object": "chat.completion",
+  "created": 1788701028,
+  "model": "anthropic/claude-fable-5.1",
+  "provider": "Anthropic",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "**Why Most Product Roadmaps Fail**\n\nEvery product team has a roadmap, and nearly every product team has watched one collapse. The ritual is familiar: a quarter of planning, a polished slide deck, executive nods of approval—followed by six months of slippage, reprioritization, and quiet embarrassment. The failure is so common that it deserves an explanation beyond \"we were bad at estimating.\" Roadmaps fail because of what they pretend to be.\n\nThe first problem is that most roadmaps are forecasts disguised as commitments. A roadmap should be a hypothesis about how a product will evolve given what the team currently believes. Instead, it becomes a contract. Sales promises features to close deals. Marketing schedules launches. Leadership reports timelines to the board. Once a hypothesis is treated as a promise, learning becomes a liability. Discovering that a feature is unnecessary—arguably the most valuable outcome of product work—now registers as failure rather than success. Teams stop learning and start defending.\n\nThe second problem is that roadmaps are built from outputs rather than outcomes. A typical roadmap is a list of features with dates attached. But features are merely bets about how to move a metric or solve a customer problem, and bets frequently lose. When the roadmap names the feature instead of the problem, the team loses the freedom to find a cheaper, faster, or better solution once they understand the situation more deeply. They ship the thing they said they would ship, on time, and it doesn't matter.\n\nThird, roadmaps assume a stability the world never provides. A competitor launches. A key engineer leaves. A customer segment behaves unexpectedly. A regulation changes. Any twelve-month plan built in January is describing a company and market that will not exist by June. The problem is not that change happens—everyone knows it will—but that most roadmaps have no mechanism for absorbing it. They are static documents in a dynamic environment, revised only in crisis and therefore always in crisis.\n\nUnderneath these lies a deeper cause: roadmaps often serve organizational comfort rather than product truth. They exist to make executives feel in control, to give stakeholders something to point to, to resolve arguments by fiat. A roadmap that honestly reflected uncertainty—\"we think this matters, we're not sure how to solve it, we'll know more in eight weeks\"—would be more accurate and less reassuring. Organizations tend to choose reassurance.\n\nNone of this means roadmaps are useless. Direction matters. Teams need a shared understanding of where they are going and why, and stakeholders need enough visibility to plan their own work. The roadmaps that survive share a few traits: they are organized around problems and goals rather than features, they grow deliberately vaguer the further out they look, they are revisited on a fixed cadence rather than in emergencies, and they are communicated as strategy rather than schedule.\n\nA roadmap fails when it promises certainty. It succeeds when it provides clarity about intent while remaining honest about what nobody yet knows.",
+     "refusal": null,
+     "reasoning": "I need to write a focused essay under 500 words explaining why product roadmaps typically fail, keeping it insightful and well-organized.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I need to write a focused essay under 500 words explaining why product roadmaps typically fail, keeping it insightful and well-organized.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQSjQUKEAgRGAI4AUIIdGhpbmtpbmcSDKwUtD++74lz20SsZxoM58m1QV7d/QNWWXHqIjA4aXfJsz3srOM3aWxPoH+AHLcFpktKj15aDCccwAUaOnspqo+c+fscDVD4gZ/2ilMqqgSgGukVu/Cii+NYTSpc58rnvQnkm15kRY3d/FFbTaLP+kxJ4Rq6l1F63yUA9F33OGDpWugxzvQL5uk7+SaCF7l9uewRoKvUBj1uZpZNtzOCY3y0VMVA1sXQirKoOOuikUqL1L2v+SvE2SskzEK25qJfv5G7go28um1D8RP/eXyavFKG5dVjf7TBKnPE2Kr39ot/OAbvlhafI3IQy9gwBSZjZN5K50xQB541G92lpN4DZWMT9PkC94Am21zchxtBv69R928ltoykRWaKO7vzxJpqVCG2RFaMQaLDR3GroKCnKgTPpbNgMFCfXKqDNy11uJGCOVCGYiJqxjocIXYKFuujj0Gi5gUB43ucJ/Qcpt2qo5vHj6EcR8oMjbAQlmke6u1I3PBsA6+Fp0a03zzFUuWupx8dFTrnOO+NhlBD4G106EX3BVhTU2gYMp5kr5I8v4PxDyrepfWOKAAIoRSHCzToR7eKL7VQ897cVrH0UlEgyXQURDDm/dGEw6UyqoJmuKuclVSR2wtm+2TONS9AuT2DGR79zChVgVxAFmQkqjQfh4Nv5/oO1S9/14FB/4TGXTlmh5RGhP8wdO4cvAXzsHPOmBWELZU2YVxts4gaZ7N9ijWR37joE2IGZ2Mmp/Rq8MMFZ7kS/QGxUDx7DTK5xOnWFR0mAePwFsGSN3O8H5Il96YAlhbsGkA+XwWWVZxXynjbvXlIfogQrv1nJn2lx0F8xjjPU79b8UL/SBgB"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 32,
+   "completion_tokens": 1026,
+   "total_tokens": 1058,
+   "cost": 0.0511038,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.05162,
+    "upstream_inference_prompt_cost": 0.00032,
+    "upstream_inference_completions_cost": 0.0513
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 49,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

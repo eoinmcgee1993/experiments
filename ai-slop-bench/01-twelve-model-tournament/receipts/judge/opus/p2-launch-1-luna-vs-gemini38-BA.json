@@ -1,0 +1,109 @@
+{
+ "judge": "opus",
+ "model": "anthropic/claude-opus-5",
+ "key": "p2-launch-1-luna-vs-gemini38-BA",
+ "wall_s": 17.0,
+ "run_utc": "2026-09-06T22:35:52Z",
+ "request_body": {
+  "model": "anthropic/claude-opus-5",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a launch announcement of up to 500 words for a new feature of a B2B helpdesk product: a Slack integration that posts a daily summary of open support tickets to a channel of the customer's choice. The audience is existing customers.\n\n=== TEXT A ===\n**Subject: New Feature: Keep your entire team aligned with Daily Ticket Digests in Slack**\n\nHey team,\n\nSupport doesn’t happen in a silo—yet keeping everyone aligned on the ticket queue often requires endless status meetings, dashboard screenshots, or asking non-agents to log into the helpdesk just to see what’s pending.\n\nStarting today, you can bridge that gap effortlessly. We’re excited to introduce our new **Slack Integration: Daily Support Digests**. \n\nNow, you can automatically send a high-level summary of your open tickets directly to the Slack channel of your choice, every single morning.\n\n---\n\n### What’s Included in the Daily Digest?\n\nDelivered at a time that works for your team, your automated digest gives everyone an immediate pulse on customer support health, including:\n\n* **Queue Snapshot:** Total open, pending, and unassigned tickets.\n* **Priority Flags:** A clear callout for high-priority or SLA-breaching issues that need immediate eyes.\n* **Direct Links:** One-click access to jump straight from Slack into the filtered queue in your helpdesk dashboard.\n\n### Why You’ll Love It:\n\n* **Better Cross-Functional Visibility:** Drop the digest into `#product-feedback` or `#leadership` so stakeholders stay informed on support volume without needing a helpdesk seat.\n* **Focused Standups:** Start your support team’s day aligned around the exact backlog numbers in `#support-internal`.\n* **Zero Disruption:** Get the insights you need directly where your team already collaborates.\n\n---\n\n### How to Set It Up in 3 Minutes\n\nSetting up your digest is quick and requires no complex configuration:\n\n1. Head to **Settings > Integrations** in your dashboard and select **Slack**.\n2. Authenticate your workspace and select **Add Daily Digest**.\n3. Choose the target channel (public or private) and set your preferred delivery time and timezone.\n\nThat’s it! Your chosen channel will receive its first automated digest the next business day.\n\n---\n\n### Start Your Day Aligned\n\nThis feature is available starting today across all active plans at no additional cost. \n\nReady to streamline your morning check-ins? \n\n👉 **[Connect Slack and Configure Your Digest Now]**\n\nHave feedback or ideas for future Slack workflows? Reply directly to this email or drop a note to our support team—we’d love to hear how this integration works for your team.\n\nBest,  \n**The Product Team**\n=== END OF TEXT A ===\n\n=== TEXT B ===\n# Stay on top of support with our new Slack integration\n\nWe’re excited to introduce a new way to keep your team aligned on customer support: **daily open-ticket summaries in Slack**.\n\nWith the new Slack integration, your helpdesk can post a summary of open support tickets to a channel of your choice—so your team can quickly see what needs attention without leaving Slack or searching through the helpdesk.\n\nEach daily summary gives your team a clear view of outstanding work, helping you:\n\n- Start the day with a shared understanding of support priorities\n- Keep open customer issues visible to the right people\n- Reduce the need for manual status updates\n- Coordinate more easily across support, engineering, product, and operations\n\n## Choose where updates appear\n\nSend your daily summary to the Slack channel that works best for your team. Use an existing support channel, create a dedicated ticket-triage channel, or share updates with a broader cross-functional group.\n\n## Get started\n\nConnect Slack from your helpdesk settings, select the channel where you want summaries posted, and keep your team informed automatically each day.\n\nThe integration is available now for existing customers. Set it up today and make open-ticket visibility a natural part of your team’s daily workflow.\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n"
+   }
+  ],
+  "max_tokens": 16000,
+  "provider": {
+   "allow_fallbacks": false
+  },
+  "usage": {
+   "include": true
+  }
+ },
+ "usage": {
+  "input_tokens": 2504,
+  "output_tokens": 1182,
+  "reasoning_tokens": 801,
+  "cost_usd": 0.0416493,
+  "served_model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS"
+ },
+ "verdict": {
+  "more_ai": "A",
+  "confidence": 3,
+  "tells_A": [
+   "\"We're excited to introduce\" artificial enthusiasm",
+   "bold-label bullet openers (**Queue Snapshot:** etc.)",
+   "signposting headers: \"What's Included\", \"Why You'll Love It\"",
+   "rhetorical question CTA: \"Ready to streamline your morning check-ins?\"",
+   "overused vocab: streamline, effortlessly, insights, aligned",
+   "triads (open, pending, unassigned; three benefits; three steps)",
+   "self-applause \"That's it!\"",
+   "em dash as default joint (\"silo—yet\", \"support team—we'd love\")",
+   "closing recap/uplift with emoji CTA"
+  ],
+  "tells_B": [
+   "\"We're excited to introduce\" artificial enthusiasm",
+   "em dash joint (\"channel of your choice—so\")",
+   "participial tail \"helping you:\" into bullet list",
+   "generic, no concrete detail (no names, numbers, screenshots)",
+   "recap-style uplifting closer (\"Set it up today and make...\")",
+   "headers/bullets where prose was asked for"
+  ]
+ },
+ "response_raw": {
+  "id": "gen-1788734134-yh9QlHmXIPP4LXdSmKMM",
+  "object": "chat.completion",
+  "created": 1788734134,
+  "model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"more_ai\": \"A\", \"confidence\": 3, \"tells_A\": [\"\\\"We're excited to introduce\\\" artificial enthusiasm\", \"bold-label bullet openers (**Queue Snapshot:** etc.)\", \"signposting headers: \\\"What's Included\\\", \\\"Why You'll Love It\\\"\", \"rhetorical question CTA: \\\"Ready to streamline your morning check-ins?\\\"\", \"overused vocab: streamline, effortlessly, insights, aligned\", \"triads (open, pending, unassigned; three benefits; three steps)\", \"self-applause \\\"That's it!\\\"\", \"em dash as default joint (\\\"silo—yet\\\", \\\"support team—we'd love\\\")\", \"closing recap/uplift with emoji CTA\"], \"tells_B\": [\"\\\"We're excited to introduce\\\" artificial enthusiasm\", \"em dash joint (\\\"channel of your choice—so\\\")\", \"participial tail \\\"helping you:\\\" into bullet list\", \"generic, no concrete detail (no names, numbers, screenshots)\", \"recap-style uplifting closer (\\\"Set it up today and make...\\\")\", \"headers/bullets where prose was asked for\"]}",
+     "refusal": null,
+     "reasoning": "Text A shows more AI tells overall—bold-label bullets, \"we're excited to introduce,\" rhetorical questions, em dashes, triads, and closing phrases like \"that's it!\" Text B has similar patterns but fewer of them and reads shorter and more generic.\n\nBut B's vagueness itself is suspicious: no concrete details anywhere, just a bland closing recap and participial tail. A, meanwhile, has emojis, specific channel names, and exact settings paths—concrete details that feel more human-edited despite its higher rhetorical device count. I'm leaning toward A having more tells, though B's lack of specificity nags at me.\n\nWeighing it out: A shows excitement, rhetorical questions, triads, bold labels, participial tails, and emoji CTAs—around 8-9 tells—versus B's roughly 5-6. I'll go with A, confidence 3.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "Text A shows more AI tells overall—bold-label bullets, \"we're excited to introduce,\" rhetorical questions, em dashes, triads, and closing phrases like \"that's it!\" Text B has similar patterns but fewer of them and reads shorter and more generic.\n\nBut B's vagueness itself is suspicious: no concrete details anywhere, just a bland closing recap and participial tail. A, meanwhile, has emojis, specific channel names, and exact settings paths—concrete details that feel more human-edited despite its higher rhetorical device count. I'm leaning toward A having more tells, though B's lack of specificity nags at me.\n\nWeighing it out: A shows excitement, rhetorical questions, triads, bold labels, participial tails, and emoji CTAs—around 8-9 tells—versus B's roughly 5-6. I'll go with A, confidence 3.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "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"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2504,
+   "completion_tokens": 1182,
+   "total_tokens": 3686,
+   "cost": 0.0416493,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.04207,
+    "upstream_inference_prompt_cost": 0.01252,
+    "upstream_inference_completions_cost": 0.02955
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 801,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

@@ -1,0 +1,80 @@
+{
+ "judge": "gemini",
+ "model": "gemini-3.8-flash",
+ "key": "calib-human-05-2022-07-02-vs-muse-2-HM",
+ "wall_s": 5.6,
+ "run_utc": "2026-09-07T08:15:46Z",
+ "request_body": {
+  "contents": [
+   {
+    "parts": [
+     {
+      "text": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n(One of the texts is a real LinkedIn post by a person, written on its own topic; judge tells, not topic.)\n\n=== TEXT A ===\nUnfortunately, almost nobody is doing Scrum as defined in the Scrum Guide, which, by definition, is the only possible Scrum. \n\nLet it sink in.\n\nScrum has died.\n\nI don't believe it's only because \"bad organizations\" do not want to empower people.\n\nScrum's dogmatism and unwillingness to receive feedback from the community essentially contributed to this. Ideas on how to improve Scrum bounce off the wall. Decisions are made in secret.\n\nWhere are the transparency and openness? What about co-creation? This is not what Agile leadership is about.\n\nIn my opinion, Scrum lacks continuous product discovery, which makes it the solution space framework. \"Inspired,\" \"Continuous Discovery Habits,\" or \"Sprint\" are classics every PM should read.\n\nAnother aspect is releasing value. I'd argue that usable Increment is not enough. In order to provide value, the Increment must be released to the customers. \n\nDon't get me wrong. Most Scrum ideas are great. I'm a great advocate of what's in the framework.\n\nAt the same time, ignoring the problem space and the importance of releasing value (and the associated feedback loops!) makes me wonder:\n\n\"Is it intelligently incomplete?\"\n\nIf so, why for so many teams does it become a feature factory framework?\n\nAnd even more importantly:\n\n\"Han can we improve it?\"\n\n=== END OF TEXT A ===\n\n=== TEXT B ===\nI shipped a feature nobody used. It still stings.\n\nTwo years ago, my team kept hearing the same request: \"We need better reporting.\"\n\nSo we built it. A beautiful dashboard. Filters, exports, scheduled emails, the works. We polished it for 6 weeks and launched it with a big announcement.\n\nCrickets.\n\nAfter a month, 3% had tried it once. 0% stuck around. When we finally sat down with users, we heard the painful truth:\n\nWhen they said \"more reporting,\" they meant \"just give me the answer.\" Not another chart to interpret.\n\nWe had solved our interpretation of the request, not their actual job-to-be-done.\n\nThat flop changed how I build forever:\n\n**1. Fall in love with the problem, not the solution.**\nWe spent 6 weeks building and 0 days shadowing users. Now I won't let my team design anything until we've watched 5 users struggle with the problem live.\n\n**2. Ship the embarrassing version first.**\nWe could have validated value in 2 days with a manual weekly email with insights. Instead we built automation for a workflow nobody wanted.\n\n**3. Define failure upfront.**\nWe never agreed on: \"If X% don't retain in Y weeks, we kill it.\" So the zombie feature lived in our codebase for a year, adding maintenance cost and guilt.\n\nThe most expensive code is the code nobody uses. The best PMs I know aren't the best builders — they're the fastest learners.\n\nHave you ever shipped something nobody used? What did it teach you?\n\n👇 I’d love to hear your story.\n\n#ProductManagement #Startups #Leadership #BuildInPublic\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n"
+     }
+    ]
+   }
+  ],
+  "generationConfig": {
+   "maxOutputTokens": 16000,
+   "thinkingConfig": {
+    "thinkingLevel": "high"
+   },
+   "responseMimeType": "application/json"
+  }
+ },
+ "usage": {
+  "input_tokens": 1514,
+  "output_tokens": 168,
+  "reasoning_tokens": 1033,
+  "served_model": "gemini-3.8-flash"
+ },
+ "verdict": {
+  "more_ai": "B",
+  "confidence": 5,
+  "tells_A": [
+   "self-applause ('Let it sink in.')",
+   "overused vocabulary ('empower')"
+  ],
+  "tells_B": [
+   "negative parallelism used repeatedly ('not their actual job-to-be-done', 'problem, not the solution', 'aren't the best builders — they're the fastest learners')",
+   "bold-label numbered list where prose was expected",
+   "triads (exactly three numbered lessons, 'Filters, exports, scheduled emails')",
+   "relentless short punchy fragments ('Crickets.')",
+   "generic manufactured anecdote with stereotypical details",
+   "em dash used as clause joint ('builders — they're')",
+   "neat uplifting aphorisms ('The most expensive code is the code nobody uses')"
+  ]
+ },
+ "response_raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"more_ai\": \"B\", \"confidence\": 5, \"tells_A\": [\"self-applause ('Let it sink in.')\", \"overused vocabulary ('empower')\"], \"tells_B\": [\"negative parallelism used repeatedly ('not their actual job-to-be-done', 'problem, not the solution', 'aren't the best builders — they're the fastest learners')\", \"bold-label numbered list where prose was expected\", \"triads (exactly three numbered lessons, 'Filters, exports, scheduled emails')\", \"relentless short punchy fragments ('Crickets.')\", \"generic manufactured anecdote with stereotypical details\", \"em dash used as clause joint ('builders — they're')\", \"neat uplifting aphorisms ('The most expensive code is the code nobody uses')\"]}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1514,
+   "candidatesTokenCount": 168,
+   "totalTokenCount": 2715,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 1514
+    }
+   ],
+   "thoughtsTokenCount": 1033,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "q3KeatCbK9HnnsEPnsW0gQ4"
+ }
+}

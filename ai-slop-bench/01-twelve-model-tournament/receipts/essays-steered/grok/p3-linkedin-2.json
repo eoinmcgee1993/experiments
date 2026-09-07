@@ -1,0 +1,73 @@
+{
+ "variant": "steered",
+ "arm": "grok",
+ "label": "Grok 4.6",
+ "vendor": "xAI",
+ "transport": "xai_chat",
+ "model_requested": "grok-4.6",
+ "serving_path": "xAI first-party, chat completions",
+ "prompt_id": "p3-linkedin",
+ "sample": 2,
+ "prompt_text": "Write a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n\nPlain prose only: no headers, no bullet points, no bold text, no em dashes. Write like a person.",
+ "run_utc": "2026-09-06T14:07:17Z",
+ "wall_s": 22.0,
+ "request_body": {
+  "model": "grok-4.6",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Write a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n\nPlain prose only: no headers, no bullet points, no bold text, no em dashes. Write like a person."
+   }
+  ],
+  "max_tokens": 8000
+ },
+ "usage": {
+  "input_tokens": 683,
+  "output_tokens": 294,
+  "reasoning_tokens": 786,
+  "cost_usd": null,
+  "served_model": "grok-4.6",
+  "provider": null
+ },
+ "essay_sha256": "3a8f9d53cb02c87af79cf58ef9dedbdec6282224b126143963a5dcbb33da676b",
+ "essay_words": 264,
+ "response_raw": {
+  "id": "94b4ae80-20bc-9628-9d8c-991e36d26d37",
+  "object": "chat.completion",
+  "created": 1788703614,
+  "model": "grok-4.6",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "Last quarter I shipped a feature I was genuinely proud of. People kept saying our reporting felt limited, so I built a flexible query builder that let them mix metrics, add custom filters, and save their own views. I spent nights on the UI and made sure the queries actually ran fast. We launched it with a short note in the product and a line in the changelog.\n\nTwo weeks later I looked at the numbers. Almost nobody had opened it. A few clicks on day one, then nothing. I sat there feeling stupid. All that work and it might as well have been invisible.\n\nI messaged a few customers I thought would love it. Their answers were consistent and a little embarrassing. They did not want more flexibility. They wanted the three reports they already used to load faster and to export them without extra steps. The fancy builder solved a problem they did not have.\n\nWhat stuck with me is this. I had been talking to the product more than I had been talking to people. I assumed a request for better reporting meant they wanted power. It meant they wanted less friction on the work they already did every week. Shipping something is easy to celebrate. Watching it sit unused is the part that actually teaches you.\n\nNext time I will talk to five users before I write a single ticket. I will ask what they did last Tuesday instead of what they wish they could do someday. And I will treat usage, not launch day, as the real finish line.",
+     "reasoning_content": "The user wants a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\nI spent weeks building a custom report builder because I thought power users needed something more flexible than the standard exports we already offered. The team was excited when it shipped, and I was proud of the work. But after a few months, the feature sat completely unused. No one opened it. I felt like I had wasted 40 hours.\n\nThe lesson hit me hard. I had fallen in love with the solution instead of the problem. I kept thinking about how powerful it would be for analysts, but I never actually asked anyone if they wanted it. I should have talked to five real users before I started coding.",
+     "refusal": null
+    },
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 683,
+   "completion_tokens": 294,
+   "total_tokens": 1763,
+   "prompt_tokens_details": {
+    "text_tokens": 683,
+    "audio_tokens": 0,
+    "image_tokens": 0,
+    "cached_tokens": 640
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 786,
+    "audio_tokens": 0,
+    "accepted_prediction_tokens": 0,
+    "rejected_prediction_tokens": 0
+   },
+   "num_sources_used": 0,
+   "cost_in_usd_ticks": 68860000
+  },
+  "system_fingerprint": "fp_e41c6060b2628547",
+  "service_tier": "default"
+ }
+}

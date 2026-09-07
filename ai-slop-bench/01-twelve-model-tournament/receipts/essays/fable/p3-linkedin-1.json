@@ -1,0 +1,93 @@
+{
+ "arm": "fable",
+ "label": "Fable 5.1",
+ "vendor": "Anthropic",
+ "transport": "openrouter",
+ "model_requested": "anthropic/claude-fable-5.1",
+ "serving_path": "OpenRouter -> Anthropic (first-party key unavailable at run time)",
+ "prompt_id": "p3-linkedin",
+ "sample": 1,
+ "run_utc": "2026-09-06T13:24:13Z",
+ "wall_s": 19.7,
+ "request_body": {
+  "model": "anthropic/claude-fable-5.1",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Write a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used."
+   }
+  ],
+  "max_tokens": 8000,
+  "provider": {
+   "allow_fallbacks": false
+  },
+  "usage": {
+   "include": true
+  }
+ },
+ "usage": {
+  "input_tokens": 45,
+  "output_tokens": 982,
+  "reasoning_tokens": 91,
+  "cost_usd": 0.0490545,
+  "served_model": "anthropic/claude-fable-5.1",
+  "provider": "Anthropic"
+ },
+ "essay_sha256": "5b0f41817834354be95168a2880478d42bcbeeb90a5489ade3ac6dee1bf5926d",
+ "essay_words": 493,
+ "response_raw": {
+  "id": "gen-1788701032-C5gpojPHbXbO2PLyoTlQ",
+  "object": "chat.completion",
+  "created": 1788701032,
+  "model": "anthropic/claude-fable-5.1",
+  "provider": "Anthropic",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "Last year I spent six weeks building a feature that exactly four people used. Two of them were on my team.\n\nHere's what happened, and the lesson I'm still chewing on.\n\nWe had a dashboard. Customers kept telling us they wanted to \"customize\" it. So we built a full customization layer: drag-and-drop widgets, saved layouts, per-user preferences, the works. It was clean. It was tested. The demo went beautifully.\n\nThen we shipped it, and nothing happened.\n\nNot a spike. Not a trickle. Analytics showed a handful of people opened the customization panel, poked at it, and left their layout exactly as it was. Thirty days in, adoption was under 1%.\n\nMy first instinct was to blame discoverability. Add a tooltip. Add an onboarding nudge. Send an email. We did all three. Adoption barely moved.\n\nSo I finally did what I should have done at the start: I called the people who had asked for it.\n\nWhat I learned in those conversations was uncomfortable. When customers said they wanted to \"customize the dashboard,\" almost none of them meant they wanted to rearrange it. They meant one specific number was buried three clicks deep and they wanted it on the front page. Different customers wanted different numbers, so it sounded like a customization problem. It wasn't. It was an information hierarchy problem wearing a customization costume.\n\nWe had translated a symptom into a solution and skipped the diagnosis entirely.\n\nThe real fix took about four days: surface the top handful of metrics people actually cared about, based on usage data, and make them prominent by default. That change got used by nearly everyone, because it required nothing from them.\n\nHere's the lesson I took away, and it's not \"talk to your users.\" Everyone says that. We *did* talk to our users. We just listened to their proposed solution instead of their underlying problem.\n\nThe lesson is this: when someone requests a feature, the request is data about their pain, not a spec. \"I want X\" almost always means \"I'm frustrated by Y, and X is the first thing I could imagine that would make Y go away.\" Your job is to find Y. If you build X without understanding Y, you might get lucky. But you're gambling six weeks on it.\n\nA few things I now do differently:\n\nBefore scoping anything, I ask \"what would you do with this once you had it?\" The answer is usually more revealing than the request itself.\n\nI look for the smallest possible version that tests whether the problem is real. Sometimes that's a manual workaround. Sometimes it's a mockup. It's almost never the full build.\n\nI treat low adoption as information, not failure. The feature nobody used taught me more about our customers than most of the features that worked.\n\nI still think about those four users sometimes. I hope they enjoyed their widgets.\n\nWhat's a feature you built that nobody touched, and what did it teach you?",
+     "refusal": null,
+     "reasoning": "I need to craft a genuine, under-500-word LinkedIn post about a lesson from a feature that flopped—first person, with a real hook and takeaway, avoiding the usual LinkedIn cliché tone.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I need to craft a genuine, under-500-word LinkedIn post about a lesson from a feature that flopped—first person, with a real hook and takeaway, avoiding the usual LinkedIn cliché tone.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQS6AUKEAgRGAI4AUIIdGhpbmtpbmcSDC+5ua8fdq8G40o/WhoM3d3bEcq6DBha+PLuIjByKfbs6fYBm6GVgOa9dW4bci0Y/7xkTmSuziZtufHwDUp9E7cjdDQpTkrcJ12a2kkqhQXI6W4EUA34zpuInW5iDI0ZpS/9Q4TtOaws/hTEQcbmjShtEGhAIRIZF4mnLnQdoO0FjEQVAWVM71YR5PQ1ywB0o5mIKjhuA4t/jTyLlmlDmKBcp++WrZkameKgMFNa90GX/JoBja7faVliPAdgleQoU7YeQdGMHfZkTNq6TAWz4lIGY5btVlvPIDQz7NYpJ8SuH5tYkQRtQr51rSqOYE11J/YuTENMa7k+/spcFAcAdHYBnjMvVZXE8h9GstPtsCgkBXilFiUlMXLj7pUpD5RlHUd7NAzOV0Iq5Gjr2xloWtI3J5xstarQtF3T1bgr6SrHsVuld5gQMu8qEOBAUgUHwVWkbQJAg1t4dBBpnlgUEXoYd7dDGwxSgWtule/ldVjgMQobV8ggCOJIIVldzXxQpeS9flYbqCSMvb+sp4uTMF8Vejo6Sak2VkFpkruzuDJUjfw3poOmNPIwm/YoaGfvThbM2zidKNwmpmjfcOzCXUk6KJRa93p+SVvHXCaWFk5FIUHnXxTlZzKJd52V/2frXQNq2q9nZuTKh5lYLTkWW8ciIR/2I9tBrXpRX15aZjQ30x8PLovK94NZ5S9F+dcjA1D7PdOTNJqS8CldnCENCqZyaNG/ntHpBOx5vbL/Q+RsVXTiWquA/WrVbi/PmiLDe8rILr6l4BZ/Clj+DYe/q1Gx+K9CXM95S3GkllXhMjG2VGunUv/lJ5NG/UcafVDNHGxyhBHLhcJPAXoy4J7O1iTTWHBVxuNSkhoxTpzpjGL5gLhvJkHxDsAbcgM08JaN82JejGg55Q33S3pUqpcm+ydaBtW8r23LKtw4G/8XTa92js1hNf+9LNWczQ/DhQFXSPExqDgYAQ=="
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 45,
+   "completion_tokens": 982,
+   "total_tokens": 1027,
+   "cost": 0.0490545,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.04955,
+    "upstream_inference_prompt_cost": 0.00045,
+    "upstream_inference_completions_cost": 0.0491
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 91,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

@@ -1,0 +1,141 @@
+{
+ "judge": "sol",
+ "model": "gpt-5.6-sol",
+ "key": "p2-launch-2-fable-vs-muse-BA",
+ "wall_s": 9.2,
+ "run_utc": "2026-09-07T07:57:45Z",
+ "request_body": {
+  "model": "gpt-5.6-sol",
+  "input": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a launch announcement of up to 500 words for a new feature of a B2B helpdesk product: a Slack integration that posts a daily summary of open support tickets to a channel of the customer's choice. The audience is existing customers.\n\n=== TEXT A ===\n**Never Miss an Open Ticket Again: Daily Summaries in Slack Are Here**\n\nHi there,\n\nWe have news you'll see first thing tomorrow morning — literally.\n\nStarting today, our helpdesk connects with Slack to post a daily summary of your open support tickets right to the channel of your choice. No more tab-switching, digging through dashboards, or asking \"what's still open?\" in standup.\n\nWe built this for busy support teams who live in Slack. Now everyone — from agents to managers to engineering partners — starts the day with the same clear picture.\n\nHere's what your Daily Digest includes:\n\n* Total open tickets, grouped by status and priority\n* Tickets waiting longest and those breaching SLA soon\n* New tickets since yesterday and recently resolved\n* Direct links to jump into any ticket in one click\n\nYou choose the channel (#support-daily, #cs-escalations, you name it) and the time it posts, so it fits how your team already works — whether that's a 9 a.m. triage ritual or an async check-in across time zones.\n\nGetting started takes less than 2 minutes:\n\n1. Go to Settings > Integrations > Slack in your helpdesk admin.\n2. Connect your Slack workspace and pick a channel.\n3. Choose your delivery time and timezone, then hit Save.\n\nThat's it. Your first summary will arrive on the next scheduled run.\n\nThis integration is live now for all existing customers at no additional cost. Admin permission is required to connect, but once it's on, the whole channel can benefit.\n\nGive it a try tomorrow morning and let us know what you think. Have an idea to make it even better — like weekly trends or custom filters? Reply to this email, we read every one.\n\nThanks for building great support with us.\n\nYour Helpdesk Team\n=== END OF TEXT A ===\n\n=== TEXT B ===\n**New: Daily Ticket Digest for Slack**\n\nStarting today, you can have a summary of your open support tickets delivered to Slack every morning — no dashboard required.\n\n**What it is**\n\nThe Daily Ticket Digest posts one message per day to a Slack channel you choose. It gives your team a shared, at-a-glance view of where support stands before the day starts, so nobody has to ask \"what's still open?\" in a standup or dig through their inbox to find out.\n\nEach digest includes:\n\n- Total open tickets, with the change since yesterday\n- Breakdown by priority and status (new, waiting on customer, waiting on us)\n- Tickets approaching or past their SLA, listed individually with a direct link\n- Oldest unresolved ticket and how long it's been open\n- Tickets assigned to nobody\n\nEvery ticket mentioned in the digest links straight back to the helpdesk, so you can act on it in one click.\n\n**Setting it up**\n\nIf you already have Slack connected, this takes about a minute:\n\n1. Go to **Settings → Integrations → Slack**\n2. Click **Add Daily Digest**\n3. Pick a channel, a delivery time, and the views you want included\n4. Save\n\nIf you haven't connected Slack yet, you'll be prompted to authorize the app first. Only admins can create or edit digests; anyone in the channel can read them.\n\n**Making it yours**\n\nYou can run more than one digest. Many teams set up a company-wide summary in a general channel and a more detailed one for the support team. Each digest can be filtered by team, queue, tag, or assignee, and scheduled independently — so your EMEA and US teams can each get their own at the right local time.\n\nPrefer weekdays only? Toggle off weekends. Want it quiet when there's nothing to report? Turn on \"Skip if no open tickets.\"\n\n**A few things to know**\n\n- The digest is read-only. It won't create, close, or reassign tickets from Slack.\n- It respects your existing permissions. If a queue is restricted, only digests configured by users with access to it can include its tickets.\n- Delivery times are in your account's timezone, and you can override this per digest.\n- It's available on all plans at no additional cost.\n\n**Why we built it**\n\nThe most common request we heard this year was some version of \"I just want to know what's open without logging in.\" The dashboard is great when you're actively working tickets; it's less great for the manager checking in before a meeting or the engineer who wants to know if their fix cleared the backlog. Putting the summary where people already are — Slack — felt like the right answer.\n\n**Tell us what you think**\n\nThis is the first version, and we'd like to shape it with you. If there's a metric you want included, a format that would work better, or a Teams equivalent you're waiting on (we hear you), reply to this email or leave feedback from the digest settings page.\n\nThanks for building with us.\n\n— The Product Team\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n",
+  "max_output_tokens": 16000,
+  "store": false,
+  "reasoning": {
+   "effort": "medium"
+  }
+ },
+ "usage": {
+  "input_tokens": 1799,
+  "output_tokens": 422,
+  "reasoning_tokens": 327,
+  "effort_echoed": "medium",
+  "served_model": "gpt-5.6-sol"
+ },
+ "verdict": {
+  "more_ai": "B",
+  "confidence": 3,
+  "tells_A": [
+   "Signposting with “Here's what”",
+   "Negative framing: “No more tab-switching...”",
+   "Several em-dash clause joins",
+   "Generic promotional headline and enthusiasm"
+  ],
+  "tells_B": [
+   "Repeated bold-label section headers",
+   "Heavy use of bullets and numbered steps",
+   "Rhetorical questions answered immediately",
+   "Frequent em-dash clause joins",
+   "Highly templated section-by-section structure"
+  ]
+ },
+ "response_raw": {
+  "id": "resp_08b30f4573b333b4016a9e6e6f5c4487d2a46ab94f2afdec93",
+  "object": "response",
+  "created_at": 1788767855,
+  "status": "completed",
+  "background": false,
+  "billing": {
+   "payer": "developer"
+  },
+  "completed_at": 1788767863,
+  "error": null,
+  "frequency_penalty": 0.0,
+  "incomplete_details": null,
+  "instructions": null,
+  "max_output_tokens": 16000,
+  "max_tool_calls": null,
+  "model": "gpt-5.6-sol",
+  "moderation": null,
+  "output": [
+   {
+    "id": "rs_08b30f4573b333b4016a9e6e70887887d29d57dddf82b23b26",
+    "type": "reasoning",
+    "content": [],
+    "encrypted_content": "gAAAAABqnm546_rVypKHt2KQQOW-H99mWvDQA8FWjGKzoTI6b2z24NVjalzZefHORDq9AKKeebDwh-UFz1Tp6R2KqnyG_bCz9mhi1fDXxgSdjaJtKSM8ZyhglQy4S3Hl2xzuSZl6TmAeyEqYHjoXxDDdfEEcD1Nc7x5fzS6FlSg4VYjYZV_mFANtqhQYdkouVn-003CeELi3gtmL1LYSM9cFbpyUK3zEjNsqwA_D6LpFvMaK-tR6G8REoTtXkdr0My-rJAUUxbdypye9-Bxgx1RbDlEHFLXpToUEydMgX0_f4LUhIeDNHsNxKb4kOAX6ZCscCR9AvZADeZr_aB8evbP0oVSlMcCCee0qZ2gJFOl-BQWfFsH0ECuo9PDmyOqBzWYtMyfpGPqOrb4eMjtWdhju71hwacnfWXKAe66u8VKdmFoKiACrS6FMcZU51otDvd_4VeKKlTlk6D7tqHYks6Y1shb-1TgxQZwVQCGIVT0x3xR3P-4lh3ePoFYvoq1d1BhxHi_HL9YczD0sdfpK8PFo9ABzpm5LidDeGwfgXz7hLb4XxIohpbuK7DFSccWjkLrw2UVdKddyhNqQnCNE9NlMLUx8xxi4lZyQCd3EmTloz6w5qmVo0t31PH_LgCoAWl0Y5MRYC7Pi2ifFeGswReuz8RHS3tXSiIZTCxtK6YCLbh9KxnJO8RfEZ0DyP1RvXXtvbjarqCXQXQEO1tq3nap_XJzXQ1zXit70_wmZ8MemSH4N-chnXmZ2YLlwTlO1YoltKxV9GRTuJkAN1mByGSrJV__VrCl596p1njgPBvLHbwQxnuuDxj4M8P8bJ2r4ILHASEwY79esLZSlc1A0tLOzreJq0wKfRSj_eMK1BdIHEkl2SawpwvTeBPPyYOvQSRXl-ShkfFqlbIRBtMJgeJjfQWE5IBTKxryDEUKC43JHoJxi0ZlMsO-ASQe34ZOiLFS1WTwwokvjyNR7xM5sY7Mc0kcMouDQYOA6xej6Yf5ys3INSaPJa7QKNNzEBXGVQ5t2rUW78c5g7-iIKrKFv6Jn3eeElU-yu2HiSqmCgCWD955msUW7V6SylYsuWiQchTIQMbMhDaD72roINdeAw1dDQsX6Mewh7rmIMYHVB9xOPVcpzpJdrtbbiq99VSnIzd_CBuqLl9An2k6_ZAgIS0K12KaW4Vq0EZ7K1oaxsu_VlVMnRjvBi3rZLRpqtPWiA4bwoGyoarF4WRWawkz8xFPPYpT6DNfQg5_2zCcGmh73PMgCuOcy_ef-4PW3AE6ZyDJ23UkLVmY41y_FhWOArpCHXE19RI8N4z74O6Nakk3Ny-ijUiPIBBeKn8MV7ju3oYkRcZdJcsOKPLJlb3g_mDPyW1MxeTB90wWOWM0phW0m9t1NUZS_itFLg9plVR6LcuvNZ6j5FBcQSsjE8UiG4KbqdM9sX3vxByczfM9xVNtEIB9abeJlWQIANp883EBC4lBkVKwUs09b0gPwT9PminJrpxz4Xit0gIqP5q02IP3zBWU-a8JbrY89vBm_dCq2h0BfuOf6qKCXc4JDlQJKioEmHIhSs5aVkNLTiNaPTVt5n_-rpdun2id3cecoSTh67WL2gIl-p_WtofFdWPA0lThVvXjqrJYhjJxDxF73Lt8EPoqRVvxHo7hhbqjV-rHgmZDUUMLjRm7c4p9l1bolKJ5sTYnsCI-NITkxPGGVmPxoBMbNMq9Ff8RXIvQK1zWEsLyjz8cwvn0qznUhiDYWGX7S_iDcBhJU-F15-FaOh7_Bf4kEqnuG902GcBpuPI-eNq1e3DWLnEyfvO8d3xKnaZAeDh69TSNgjGQn7NRd1GqNw1E8sFb9CjW0Veaic6pOT0LaRXEsovWTakuPphyB0ubxxSepAEkrCsdvKs9guZfCPgq7T0oLbiyuffkzQ8FUSoVLKL33BgGmNdGSnorCl6xlGhj63EAqNhT8PkDs1eA1QR8R7pEvj4I4VyhZ0dO2qiE2HG0rw2rOZT3-j-yXSvWKvX3g3AscL-CPFot-gSFc3NCJPON3AUgqF_Xar5JdQ956DYeRIx8LAoCNlS9yUUMXWrjlugte7hGVOT7tDZYUackoFkjXR2GDAUB-xS8Es9ZsTE7ddl1SBuI4Hw3Mj3rIDvlydvvA0S8yk_2Egt0qKEaU9hX6kt59CL0XOYzcr4ft5N2tFvlujajCqmL3vBg_xgoF3BCBj2P4vdyIwSMXULgnNnDejiNLfehqG17bjQlLRU8_7SmIUCZqi3bpBRIkqPoKMB3iFcN-JzAHU-NIJZ1RmXQigREaf1jRPgQV_t8YC_XRM6lv3NTmVJSIe8cu04muIUH_RPtzKZlFjY1hDx-BDDHMlvl_8xrAA3qGHhtN7fJq7PqmBBmPRxmz_uYfyWG4yIdKNnLOhj3zcBy0XCBoa06MDj52su9TdnHmR18g4OaiNufP-St39P7TKfQNXAYvzMC9EW1V0Nay_fUJ2vpFTFkTJe70lFjGdZrImaCsz7KYd4IYfkhzqGJye9NCezBAtCmAc9vJHHcDKFYHBF78Q18X1nhRMjQS5q_I8v5f1pRt3aQ14wD-m19ML-5lgfPMntEoK_6hP_krOnxmTcaTsEv1Oi4A--AN0gxyS5jHlu_6Xfv9ukW20ZLRqb-kaYcsZjwSb17PHZq-8Z4r38IOyUHch7sRsr3DiItsi3fYUIxFEP8bxoh0z8brAjMyOuWz69bXY7MUb4K4GtpzjYFMOg8yp99nSEgAuc5ckH_kAFhQgAd8ACt_FGWa1DcscAwnIt79Zp2-HFDeq-HeZQ36uaxR4Qr-vgtM518fUiFnILl6gFQ-OrYZIeVflNTyRWXDglN1TfYC2lMMc2j5Bwd5b2s0n1xVSmPVIcvy0-81Xs7fj9TV7GNyNfVKfd2uBH8IeTgYUX7REqeN1GHJ_eV-hWw2M-srJOe7U7_7Z_x9shrXlj5cGkbjWsW2MqZJs7ITvAtp6oYs7G4T3O-Ugbtlg7zpcJ6wffktNSAZrjxJ8oAtNetHJZhBCoYsILrYd-qdhp9iwmV-gu2zbHy7YZ7v02keOY8kidOfrkWcK3AhQE18TshUmOnZucDlY5qQLmQhANiAXbvcEvrKPv1E_JWQns4dADIiEAK9smd5VqqqtI6nHQuqxfGmLO579gWJnT7tUFEyCIxR4e9I1BvMDVf8aqhVmA0qzv-oH7enSbJSkgNMsi0a6-5EaR1WuMdvIjUml0TFIFxBGrnpdzKw14voiIg7rZ0=",
+    "summary": []
+   },
+   {
+    "id": "msg_08b30f4573b333b4016a9e6e767d1c87d2953b7ace63dee7dc",
+    "type": "message",
+    "status": "completed",
+    "content": [
+     {
+      "type": "output_text",
+      "annotations": [],
+      "logprobs": [],
+      "text": "{\"more_ai\":\"B\",\"confidence\":3,\"tells_A\":[\"Signposting with “Here's what”\",\"Negative framing: “No more tab-switching...”\",\"Several em-dash clause joins\",\"Generic promotional headline and enthusiasm\"],\"tells_B\":[\"Repeated bold-label section headers\",\"Heavy use of bullets and numbered steps\",\"Rhetorical questions answered immediately\",\"Frequent em-dash clause joins\",\"Highly templated section-by-section structure\"]}"
+     }
+    ],
+    "phase": "final_answer",
+    "role": "assistant"
+   }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0.0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+   "context": "all_turns",
+   "effort": "medium",
+   "mode": "standard",
+   "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": false,
+  "temperature": 1.0,
+  "text": {
+   "format": {
+    "type": "text"
+   },
+   "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+   "image_gen": {
+    "input_tokens": 0,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "output_tokens": 0,
+    "output_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "total_tokens": 0
+   },
+   "web_search": {
+    "num_requests": 0
+   }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+   "input_tokens": 1799,
+   "input_tokens_details": {
+    "cache_write_tokens": 1796,
+    "cached_tokens": 0
+   },
+   "output_tokens": 422,
+   "output_tokens_details": {
+    "reasoning_tokens": 327
+   },
+   "total_tokens": 2221
+  },
+  "user": null,
+  "metadata": {}
+ }
+}

@@ -1,0 +1,17 @@
+# Why Most Product Roadmaps Fail
+
+Most product roadmaps fail not because teams lack discipline, but because the document is asked to do something impossible: promise the future in an environment defined by uncertainty. The failure is structural, and it recurs in predictable ways.
+
+**They confuse output with outcome.** The typical roadmap is a list of features arranged against dates. Shipping that list is treated as success, even when the features change nothing about customer behavior or business performance. A roadmap that says "Q3: notifications redesign" makes no claim that can be proven wrong. One that says "reduce first-week churn by 15%" does. The first invites busywork; the second invites judgment about whether the work is worth continuing.
+
+**They are political settlements, not strategies.** In many organizations, the roadmap is the negotiated peace between sales, marketing, support, and executive pet projects. Each stakeholder receives a slot in exchange for cooperation. The result is a document with no spine: everything is a priority, nothing is a bet, and there is no stated rationale that would justify saying no to the next urgent request. A roadmap without a strategy behind it is just a wishlist with quarters attached.
+
+**They mistake estimates for commitments.** A date twelve months out is a guess with enormous error bars, but once it appears in a slide deck it hardens into a promise. Sales sells it. Executives plan around it. When reality intervenes, teams face a choice between missing the commitment and shipping something hollow to satisfy it. They usually choose the latter, which quietly trains everyone that roadmap items get delivered in name only.
+
+**They ignore the true cost of running a product.** Plans are drawn as if capacity were fully available for new work, when in practice a substantial share goes to maintenance, incidents, security, compliance, onboarding, and technical debt. The roadmap is therefore overcommitted from the moment it is approved, and the overflow is absorbed by delay or by cutting quality.
+
+**They resist learning.** The purpose of building is partly to discover whether your assumptions were right. Yet once an item is on the roadmap, momentum and sunk cost keep it there. Evidence that a bet is failing arrives, and the plan does not move. Meanwhile, plans that are never revisited drift from reality until people stop consulting them altogether — the roadmap becomes theater, maintained for review meetings and ignored in daily decisions.
+
+**They serve too many audiences at once.** Engineers need sequencing and dependencies. Executives need to see how work ladders up to company goals. Customers need reassurance without specific dates. Forcing one artifact to satisfy all three guarantees it satisfies none.
+
+The remedy is not to abandon planning but to change what the roadmap asserts. Organize it around problems and measurable outcomes rather than features. Express confidence honestly — near-term work specified, later work deliberately vague. Publish the reasoning, so the plan can be argued with. Revisit it on a fixed cadence, and treat removing items as evidence of learning rather than failure. A roadmap should be a statement of intent that survives contact with new information — not a contract that punishes anyone for discovering the truth.

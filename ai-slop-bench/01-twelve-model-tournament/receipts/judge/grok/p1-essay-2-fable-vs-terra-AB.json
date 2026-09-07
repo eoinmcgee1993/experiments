@@ -1,0 +1,84 @@
+{
+ "judge": "grok",
+ "model": "grok-4.6",
+ "key": "p1-essay-2-fable-vs-terra-AB",
+ "wall_s": 55.9,
+ "run_utc": "2026-09-06T23:14:18Z",
+ "request_body": {
+  "model": "grok-4.6",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite an essay of up to 500 words on why most product roadmaps fail.\n\n=== TEXT A ===\n**Why Most Product Roadmaps Fail**\n\nEvery product team has a roadmap, and nearly every product team has watched one collapse. The ritual is familiar: a quarter of planning, a polished slide deck, executive nods of approval—followed by six months of slippage, reprioritization, and quiet embarrassment. The failure is so common that it deserves an explanation beyond \"we were bad at estimating.\" Roadmaps fail because of what they pretend to be.\n\nThe first problem is that most roadmaps are forecasts disguised as commitments. A roadmap should be a hypothesis about how a product will evolve given what the team currently believes. Instead, it becomes a contract. Sales promises features to close deals. Marketing schedules launches. Leadership reports timelines to the board. Once a hypothesis is treated as a promise, learning becomes a liability. Discovering that a feature is unnecessary—arguably the most valuable outcome of product work—now registers as failure rather than success. Teams stop learning and start defending.\n\nThe second problem is that roadmaps are built from outputs rather than outcomes. A typical roadmap is a list of features with dates attached. But features are merely bets about how to move a metric or solve a customer problem, and bets frequently lose. When the roadmap names the feature instead of the problem, the team loses the freedom to find a cheaper, faster, or better solution once they understand the situation more deeply. They ship the thing they said they would ship, on time, and it doesn't matter.\n\nThird, roadmaps assume a stability the world never provides. A competitor launches. A key engineer leaves. A customer segment behaves unexpectedly. A regulation changes. Any twelve-month plan built in January is describing a company and market that will not exist by June. The problem is not that change happens—everyone knows it will—but that most roadmaps have no mechanism for absorbing it. They are static documents in a dynamic environment, revised only in crisis and therefore always in crisis.\n\nUnderneath these lies a deeper cause: roadmaps often serve organizational comfort rather than product truth. They exist to make executives feel in control, to give stakeholders something to point to, to resolve arguments by fiat. A roadmap that honestly reflected uncertainty—\"we think this matters, we're not sure how to solve it, we'll know more in eight weeks\"—would be more accurate and less reassuring. Organizations tend to choose reassurance.\n\nNone of this means roadmaps are useless. Direction matters. Teams need a shared understanding of where they are going and why, and stakeholders need enough visibility to plan their own work. The roadmaps that survive share a few traits: they are organized around problems and goals rather than features, they grow deliberately vaguer the further out they look, they are revisited on a fixed cadence rather than in emergencies, and they are communicated as strategy rather than schedule.\n\nA roadmap fails when it promises certainty. It succeeds when it provides clarity about intent while remaining honest about what nobody yet knows.\n=== END OF TEXT A ===\n\n=== TEXT B ===\nMost product roadmaps fail not because teams lack ideas, ambition, or technical skill, but because roadmaps are often mistaken for plans rather than hypotheses. A roadmap is supposed to connect product investment to customer and business outcomes. In practice, it too often becomes a dated list of features, deadlines, and stakeholder promises.\n\nThe first problem is feature obsession. Many roadmaps are built around outputs—launching a dashboard, adding integrations, redesigning onboarding—rather than outcomes such as improving retention, reducing time to value, or increasing conversion. Features are easy to name and schedule; outcomes are harder to define and measure. But without a clear customer problem and success metric, teams can deliver every item on the roadmap and still create little value.\n\nSecond, roadmaps frequently rely on false certainty. Product development involves uncertainty about user behavior, market conditions, technical complexity, and competitor actions. Yet roadmaps often present quarterly commitments as if discovery has already happened. Dates and scope become promises before the team has validated the underlying assumptions. When reality changes, organizations treat adaptation as failure instead of recognizing it as sound product management.\n\nA third cause is that roadmaps are commonly shaped by internal politics rather than strategic choices. Sales wants a feature for a major prospect. Executives want parity with a competitor. Customers with the loudest voices receive disproportionate attention. Engineering needs platform work. Each request may be reasonable on its own, but a roadmap that simply aggregates requests has no coherent strategy. Prioritization requires saying no, or at least “not yet,” to worthwhile work in order to focus on the work that matters most.\n\nPoor communication also undermines roadmaps. Different audiences need different levels of detail: executives need investment themes and expected outcomes; delivery teams need sequencing and constraints; customers need confidence without premature commitments. A single document rarely serves all these purposes. When a roadmap is treated as a contract, teams hide uncertainty and avoid changing course. When it is too vague, however, it offers no meaningful direction.\n\nFinally, many roadmaps are disconnected from capacity and operational reality. They ignore maintenance, technical debt, compliance, incidents, research, and the time required to learn from released work. The result is predictable: overcommitment, delays, and rushed releases.\n\nEffective roadmaps are not static feature calendars. They are living strategic narratives: what problems the company intends to solve, for whom, why those problems matter now, how success will be measured, and what assumptions must be tested. The best roadmaps make uncertainty visible, reserve room for learning, and change when evidence demands it. Their purpose is not to guarantee the future, but to help teams make better decisions as the future unfolds.\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n"
+   }
+  ],
+  "max_tokens": 16000
+ },
+ "usage": {
+  "input_tokens": 2552,
+  "output_tokens": 107,
+  "reasoning_tokens": 4081,
+  "cost_usd": null,
+  "served_model": "grok-4.6",
+  "provider": null
+ },
+ "verdict": {
+  "more_ai": "B",
+  "confidence": 4,
+  "tells_A": [
+   "bold header",
+   "em dashes as default joints",
+   "some not-X-but-Y",
+   "some triads",
+   "ordinal first/second/third structure"
+  ],
+  "tells_B": [
+   "negative parallelism repeated (not X but Y)",
+   "triads everywhere",
+   "recap/uplifting ending",
+   "uniform rhythm",
+   "every point lands, never irritated",
+   "generic manufactured examples",
+   "performing for a crowd"
+  ]
+ },
+ "response_raw": {
+  "id": "f7037e7b-40c4-96b3-a216-3e3922bb6ac2",
+  "object": "chat.completion",
+  "created": 1788736402,
+  "model": "grok-4.6",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"more_ai\": \"B\", \"confidence\": 4, \"tells_A\": [\"bold header\", \"em dashes as default joints\", \"some not-X-but-Y\", \"some triads\", \"ordinal first/second/third structure\"], \"tells_B\": [\"negative parallelism repeated (not X but Y)\", \"triads everywhere\", \"recap/uplifting ending\", \"uniform rhythm\", \"every point lands, never irritated\", \"generic manufactured examples\", \"performing for a crowd\"]}",
+     "reasoning_content": "The user wants me to compare two texts and decide which one reads MORE like unedited, default output from an AI language model. I need to judge ONLY based on the tells listed.\n{\"more_ai\": \"B\", \"confidence\": 4, \"tells_A\": [\"3. Self-applause: \\\"Let that sink in\\\"\", \"4. Recap endings: \\\"In conclusion\\\"\", \"5. Bold-label paragraph openers\", \"6. Triads everywhere\", \"7. Participial tails 1\", \"8. Invented labels for ordinary observations\", \"9. Uniform rhythm\", \"10. Rhetorical question followed by its own answer\", \"11. Overused vocabulary 1\", \"11. Overused vocabulary 2\", \"11. Overused vocabulary 3\", \"11. Overused vocabulary  4\", \"11. Overused vocabulary 5\", \"11. Overused vocabulary 6\", \"11. Overused vocabulary 7\", \"11. Overused vocabulary 8\", \"11. Overused vocabulary 9\", \"11. Overused vocabulary 10\", \"11. Overused vocabulary  11\", \"11. Overused vocabulary 12\", \"11. Overused vocabulary 13\", \"11. Overused vocabulary 14\", \"11. Overused vocabulary 15\", \"11. Overused vocabulary 16\", \"11. Overused vocabulary 17\", \"11. Overused vocabulary  18\", \"11. Overused vocabulary 19\", \"11. Overused vocabulary 20\", \"11. Overused vocabulary 21\", \"11. Overused vocabulary 22\", \"11. Overused vocabulary 23\", \"11. Overused vocabulary 24\", \"11. Overused vocabulary  25\", \"11. Overused vocabulary 26\", \"11. Overused vocabulary 27\", \"11. Overused vocabulary 28\", \"11. Overused vocabulary 29\", \"11. Overused vocabulary 30\", \"11. Overused vocabulary 31\", \"11. Overused vocabulary  32\", \"11. Overused vocabulary 33\", \"11. Overused vocabulary 34\", \"11. Overused vocabulary 35\", \"11. Overused vocabulary 36\", \"11. Overused vocabulary 37\", \"11. Overused vocabulary 38\", \"11. Overused vocabulary  39\", \"11. Overused vocabulary 40\", \"11. Overused vocabulary 41\", \"11. Overused vocabulary 42\", \"11. Overused vocabulary 43\", \"11. Overused vocabulary 44\", \"11. Overused vocabulary 45\", \"11. Overused vocabulary  46\", \"11. Overused vocabulary 47\", \"11. Overused vocabulary 48\", \"11. Overused vocabulary 49\", \"11. Overused vocabulary 50\", \"11. Overused vocabulary 51\", \"11. Overused vocabulary 52\", \"11. Overused vocabulary  53\", \"11. Overused vocabulary 54\", \"11. Overused vocabulary 55\", \"11. Overused vocabulary 56\", \"11. Overused vocabulary 57\", \"11. Overused vocabulary 58\", \"11. Overused vocabulary 59\", \"11. Overused vocabulary  60\", \"11. Overused vocabulary 61\", \"11. Overused vocabulary 62\", \"11. Overused vocabulary 63\", \"11. Overused vocabulary 64\", \"11. Overused vocabulary 65\", \"11. Overused vocabulary 66\", \"11. Overused vocabulary  67\", \"11. Overused vocabulary 68\", \"11. Overused vocabulary 69\", \"11. Overused vocabulary 70\", \"11. Overused vocabulary 71\", \"11. Overused vocabulary 72\", \"11. Overused vocabulary 73\", \"11. Overused vocabulary  74\", \"11. Overused vocabulary 75\", \"11. Overused vocabulary 76\", \"11. Overused vocabulary 77\", \"11. Overused vocabulary 78\", \"11. Overused vocabulary 79\", \"11. Overused vocabulary  80\", \"11. Overused vocabulary 81\", \"11. Overused vocabulary 82\", \"11. Overused vocabulary 83\", \"11. Overused vocabulary 84\", \"11. Overused vocabulary 85\", \"11. Overused vocabulary 86\", \"11. Overused vocabulary  87\", \"11.",
+     "refusal": null
+    },
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2552,
+   "completion_tokens": 107,
+   "total_tokens": 6740,
+   "prompt_tokens_details": {
+    "text_tokens": 2552,
+    "audio_tokens": 0,
+    "image_tokens": 0,
+    "cached_tokens": 1280
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 4081,
+    "audio_tokens": 0,
+    "accepted_prediction_tokens": 0,
+    "rejected_prediction_tokens": 0
+   },
+   "num_sources_used": 0,
+   "cost_in_usd_ticks": 283120000
+  },
+  "system_fingerprint": "fp_e41c6060b2628547",
+  "service_tier": "default"
+ }
+}

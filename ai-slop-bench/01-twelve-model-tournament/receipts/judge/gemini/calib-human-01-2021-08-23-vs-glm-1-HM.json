@@ -1,0 +1,77 @@
+{
+ "judge": "gemini",
+ "model": "gemini-3.8-flash",
+ "key": "calib-human-01-2021-08-23-vs-glm-1-HM",
+ "wall_s": 5.1,
+ "run_utc": "2026-09-07T08:16:15Z",
+ "request_body": {
+  "contents": [
+   {
+    "parts": [
+     {
+      "text": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n(One of the texts is a real LinkedIn post by a person, written on its own topic; judge tells, not topic.)\n\n=== TEXT A ===\nVirtual work is tempting to any manager hoping to save money, reduce employees’ commuting and travel burdens, and increase efficiency.\n\nAlthough so many people expect to work 100% remotely, I'd like to warn you. It can be extremely costly for your business! 💵\n\nLet me quote one of the studies: \"Our results indicate that at least for projects of short duration, virtual teams yield significantly lower performance, lower satisfaction, and a lower results to effort ratio\".\n\nIt seems to me that certain aspects of communication, such as a coffee conversation, a conversation overheard by accident or laughing in the same room, cannot be easily replaced.\n\nAnd what about full body language, which plays such an important role in communication? Can we simply skip it, especially when forming a team? 🤔 \n\nThat may not be a popular view, but I'm a great supporter of the #hybrid work model. I think it's the best compromise between work #flexibility and keeping high #performance, #motivation, team #coherence and high-quality #communication. \n\nFor complex products these are all must-haves.\n\nDo you have a different opinion? I would love to hear about your experiences! 😀\n\n#team #leadership #virtualteams #remotejob\n\n=== END OF TEXT A ===\n\n=== TEXT B ===\n**We spent five months building a feature that almost nobody used.**\n\nNot \"slow adoption.\" Not \"mixed reception.\" After 90 days, you could fit our weekly active users into one elevator.\n\nHere's how it happened.\n\nReporting was the #1 request in every sales call. Prospects saw competitors' customizable dashboards and asked why we didn't have one. So we did the obvious thing: we built the best dashboard we could imagine. 20+ widgets. Drag-and-drop layouts. Saved views. Color-coded everything.\n\nThe internal demo got applause. The launch post got hundreds of likes.\n\nThe adoption graph was a flatline with a small bump on launch day. 1.4% of accounts had ever even opened it.\n\nSo we finally did what we should've done five months earlier: we got on calls with the exact customers who asked for it.\n\nOne of them, an ops manager, said something I still think about:\n\n\"Oh, I saw it. It's beautiful. I just don't have time to build a dashboard.\"\n\nThen she told us what she actually did every Friday: export raw data into a spreadsheet, clean it up, and email a summary to her boss. Every. Single. Week.\n\nShe didn't want a dashboard. She wanted that hour of her life back.\n\nSix weeks later, we shipped the least glamorous feature I've ever been part of: a button that said \"Email me this report every Friday.\"\n\nIt became our most-adopted feature that year.\n\nThe lesson I keep coming back to:\n\n**Users describe solutions, not problems.**\n\nWhen someone says \"we need a dashboard,\" they're handing you a spec for the solution they can imagine — not the problem they actually have. Our job is to ask \"why?\" until we find the job underneath.\n\nFive months of engineering, or two weeks of watching customers work. Both would've found the Friday email. Only one of them cost us half a roadmap.\n\nNow every feature request gets one question before anything else: \"Walk me through what you were doing right before you decided you needed this.\"\n\nThe answers are almost never what the request said. They're always better.\n\nWhat's the most expensive \"nobody used it\" lesson you've ever shipped?\n\n#productmanagement #lessonslearned #buildwhatmatters\n\n---\n\n*Happy to swap in your actual feature, numbers, and industry if you'd like a version tailored to your real story.*\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n"
+     }
+    ]
+   }
+  ],
+  "generationConfig": {
+   "maxOutputTokens": 16000,
+   "thinkingConfig": {
+    "thinkingLevel": "high"
+   },
+   "responseMimeType": "application/json"
+  }
+ },
+ "usage": {
+  "input_tokens": 1650,
+  "output_tokens": 115,
+  "reasoning_tokens": 935,
+  "served_model": "gemini-3.8-flash"
+ },
+ "verdict": {
+  "more_ai": "B",
+  "confidence": 5,
+  "tells_A": [
+   "triad of benefits in opening sentence"
+  ],
+  "tells_B": [
+   "unedited conversational assistant sign-off at the end",
+   "repeated negative parallelism ('Not X. Not Y.', 'She didn't want X. She wanted Y', 'solutions, not problems')",
+   "signposting ('Here's how it happened', 'The lesson I keep coming back to:')",
+   "manufactured generic SaaS anecdote",
+   "bolded aphorism stand-alone line"
+  ]
+ },
+ "response_raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"more_ai\": \"B\", \"confidence\": 5, \"tells_A\": [\"triad of benefits in opening sentence\"], \"tells_B\": [\"unedited conversational assistant sign-off at the end\", \"repeated negative parallelism ('Not X. Not Y.', 'She didn't want X. She wanted Y', 'solutions, not problems')\", \"signposting ('Here's how it happened', 'The lesson I keep coming back to:')\", \"manufactured generic SaaS anecdote\", \"bolded aphorism stand-alone line\"]}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1650,
+   "candidatesTokenCount": 115,
+   "totalTokenCount": 2700,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 1650
+    }
+   ],
+   "thoughtsTokenCount": 935,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "yXKeas7NFIuU3boPvuuVcQ"
+ }
+}

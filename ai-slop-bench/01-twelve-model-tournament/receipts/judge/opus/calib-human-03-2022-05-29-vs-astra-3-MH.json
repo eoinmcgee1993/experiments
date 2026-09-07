@@ -1,0 +1,105 @@
+{
+ "judge": "opus",
+ "model": "anthropic/claude-opus-5",
+ "key": "calib-human-03-2022-05-29-vs-astra-3-MH",
+ "wall_s": 10.6,
+ "run_utc": "2026-09-07T08:24:43Z",
+ "request_body": {
+  "model": "anthropic/claude-opus-5",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n(One of the texts is a real LinkedIn post by a person, written on its own topic; judge tells, not topic.)\n\n=== TEXT A ===\nThe feature shipped on time. The launch post got plenty of 🎉 reactions.\n\nAlmost nobody used it.\n\nWe’d spent weeks building a customizable dashboard because customers kept asking for “better visibility.” We interpreted that as more filters, more charts, and more control.\n\nWhat they actually needed was much simpler:\n\n“Tell me what changed since yesterday and whether I need to do anything.”\n\nWe built a place to explore. They wanted a signal to act.\n\nThe uncomfortable part? We had done customer research. We had tickets, quotes, and a beautifully organized requirements document.\n\nBut we’d asked people what they wanted to see—not what they were trying to get done.\n\nAfter launch, one customer shared their screen with us. They opened the dashboard, scanned it, then exported the data into the same spreadsheet they’d always used.\n\nThat five-minute interaction taught us more than weeks of internal debate.\n\nWe stopped adding options and tested a short daily summary instead: what changed, what needed attention, and a link to take action.\n\nIt was less impressive in a demo. It fit much better into someone’s day.\n\nThe lesson wasn’t “don’t build dashboards.”\n\nIt was this: **A customer request is the beginning of discovery, not the end of it.**\n\nNow, before committing to a feature, I want to understand:\n- What triggers the need?\n- What does the person do today?\n- What would they stop doing if our solution worked?\n\nShipping something nobody used was frustrating. But it changed how I define progress.\n\nA shipped feature is an output. A changed behavior is evidence that it helped.\n=== END OF TEXT A ===\n\n=== TEXT B ===\nAs a novice Project Owner, I was obsessed with product features. I was constantly rushing to add as many of them as possible to attract new customers.\n\nIt took me several months to realize that I did not have the proper focus.\n\nCustomers don't buy our products because of the fancy features, but because of the outcomes those features trigger.\n\nLet's look at LinkedIn. Is our goal here to create posts or edit our professional profiles? We can create posts in Word, and editing profiles just for editing is not a popular hobby.\n\nFor me, LinkedIn is about learning, sharing knowledge, discovering new career opportunities, and growing my professional network.\n\nAll in all, there are three types of outcomes every product may trigger:\n\n- Functional: The core tasks the customer wants to get done. For a car, it's traveling from point A to B. At this level, it doesn't even matter whether it's a car or Uber.\n\n- Emotional: How do customers want to feel or avoid feeling as a result of using your product? Is it safety, freedom, joy, taking care of the environment, adrenaline? \n\n- Social: How do customers want to be perceived by others by using your product? What does Tesla tell others about your status or values?\n\nThe unique value proposition and your efforts as a Product Manager should be about these outcomes, not features. We need to do everything we can to understand them and measure them frequently.*\n\nIt is also commonly the case that less is more:\n- Twitter doesn't have an edit button\n- LinkedIn doesn't have a \"view post history.\"\n- OneDrive doesn't support FTP protocol\n\nCan you justify it? 😉\n\nHowever, one product still puzzles me - Microsoft Teams. For over a year now, I've been wondering where the \"touch up my appearance\" feature loved by Zoom users is 🤔\n\nDo people use Teams only to communicate with others? What about the emotional and social outcomes? I may be wrong, I'm looking for some evidence/explanation.\n\nWhat's your opinion?\n\n* When possible, I also like to set pricing based on value created for the customer, e.g., revenue for a payment processing platform like PayPal, instead of the number of transactions or available features. I'll cover it in another post.\n\n#productowner #productmanager #agile #productmanagement #scrum\n\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n"
+   }
+  ],
+  "max_tokens": 16000,
+  "provider": {
+   "allow_fallbacks": false
+  },
+  "usage": {
+   "include": true
+  }
+ },
+ "usage": {
+  "input_tokens": 2507,
+  "output_tokens": 509,
+  "reasoning_tokens": 228,
+  "cost_usd": 0.0250074,
+  "served_model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS"
+ },
+ "verdict": {
+  "more_ai": "A",
+  "confidence": 5,
+  "tells_A": [
+   "repeated negative parallelism: 'We built a place to explore. They wanted a signal to act.', 'wasn't X. It was this'",
+   "rhetorical question answered by itself: 'The uncomfortable part?'",
+   "bold-label lesson line and bulleted question list",
+   "triads ('more filters, more charts, and more control'; 'what changed, what needed attention, and a link')",
+   "generic anecdote with no names, dates, or product specifics",
+   "uniform punchy two-sentence rhythm throughout",
+   "uplifting recap ending that restates the lesson"
+  ],
+  "tells_B": [
+   "'Let's look at LinkedIn' signposting",
+   "'However' and 'All in all' filler transitions",
+   "bulleted lists in a prose task",
+   "triad framing (functional/emotional/social)"
+  ]
+ },
+ "response_raw": {
+  "id": "gen-1788769472-vAqy2MAeE63eYjvRLnt0",
+  "object": "chat.completion",
+  "created": 1788769472,
+  "model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"more_ai\": \"A\", \"confidence\": 5, \"tells_A\": [\"repeated negative parallelism: 'We built a place to explore. They wanted a signal to act.', 'wasn't X. It was this'\", \"rhetorical question answered by itself: 'The uncomfortable part?'\", \"bold-label lesson line and bulleted question list\", \"triads ('more filters, more charts, and more control'; 'what changed, what needed attention, and a link')\", \"generic anecdote with no names, dates, or product specifics\", \"uniform punchy two-sentence rhythm throughout\", \"uplifting recap ending that restates the lesson\"], \"tells_B\": [\"'Let's look at LinkedIn' signposting\", \"'However' and 'All in all' filler transitions\", \"bulleted lists in a prose task\", \"triad framing (functional/emotional/social)\"]}",
+     "refusal": null,
+     "reasoning": "Text A leans heavily on negative parallelism, rhetorical questions with immediate answers, bolded lessons, and triads, giving it a uniform rhythm but a somewhat generic anecdote. Text B uses more conventional signposting like \"Let's look at\" and \"However,\" with its own justified triad structure, though it seems to have some issue I'm still assessing.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "Text A leans heavily on negative parallelism, rhetorical questions with immediate answers, bolded lessons, and triads, giving it a uniform rhythm but a somewhat generic anecdote. Text B uses more conventional signposting like \"Let's look at\" and \"However,\" with its own justified triad structure, though it seems to have some issue I'm still assessing.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAIS7AYKrgEIERgCKkCQGR7C3rFrhE7Ddx42DzRVe99foowugRJgs/Te4xdZONQl6u4hCTbjp06fKJDxdMbzIfvmV7gD5mylfZiOFIICMg1jbGF1ZGUtb3B1cy01OAFCCHRoaW5raW5nWiQ0YzBmMDQ2Zi0yNWZkLTQ1ZmItYmZiMy1hMDhhOGUyNDljYTd6HnVwcm9mXzAxMUNlbkZSYjRqeFBLcXdMUXFXN3dtNqgByun51AYSDN+RiYoFedbDx0r0QRoMozu+nwgpjzevCLInIjC/V/+q7eXUAlgPGbc4rnsrmdR2TkYZZ56O2CrOep2nABJoYGcGUeR2utEdsF8618wq6gQCVqDtbKDCnweLJC8LuLtbhTMumZp8z6vzqo5sB5zMhccLtPCj0+vZ3VXv3krg14/AMTTCLgh3mNn277H0E+2OnxRBAyfMJSoZ0GZMbiImuJPBp9tyDfW2LLvR5ngUb/FzHEpMbuF9qlbWRvqJPucARm37uwTZ81RBgwRmjbcN2psgJ/OhXnYsrAZ7aX5RKYQyer9/4pIfplCgo41JAkvVjq/gwtJUCMHZmohNK6+fAZMnOi+zYF0rZH9++npD0l+z10nI2P/KS/l7XyyU6/2x0yl29CCfuZ+ZQeadOMpQJJjatk88fr9NazyM93P6iQwF920B15OLuRmPmu6PbNfj35hCz34ww5EfFHXJGgH/reLaRkhB4luY49/U4TRDz3ne/S+m3Jd9TsQmpRbL4+o5+qm+S3m/X++V+05WJyoMQVIqUcKcCbx0JfIV7TAtBCc3LGNx74PMftSUASVb/1wQXzjxOSQM2hkaXoW5RO9nm1VvVaWwgjdDz7AnsZH03QFPAZD9w5KtemakuJ/ejDpEUp46eX10J6hvZaZnMrFGrJMZzshplnnjMoLZevLqBOnx4b8H5AAjMzObeWBXiRx4r2iaazppOwsl5aP1rt+yRB0tZIMw7J1plbrZpe8cMXTQ1vPF4DJWQMvqqKWA2AqFMp8NyAeXW2/Fk656ihGMU7lRSojasAhv0weQvXHo+5NJ1euOXz7vpLCEQOsUavSaYYVkU7xtWASuSGs2vGTc7meANqqn4gVPSRISe4ko0/OlAgObTMMw76Vyn4OW7bfEjD9uDK8o3o/FgGnBfgklh/osViYXnRXEv2sYAQ=="
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2507,
+   "completion_tokens": 509,
+   "total_tokens": 3016,
+   "cost": 0.0250074,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.02526,
+    "upstream_inference_prompt_cost": 0.012535,
+    "upstream_inference_completions_cost": 0.012725
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 228,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

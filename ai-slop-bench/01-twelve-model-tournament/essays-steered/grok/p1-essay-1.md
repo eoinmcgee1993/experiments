@@ -1,0 +1,11 @@
+Most product roadmaps fail because they treat the future as something we can schedule. Teams spend weeks lining up features and dates as if they already know what customers will need six months from now and how long every piece of work will take. Then the world moves. A new competitor appears, a key assumption turns out to be wrong, or someone important leaves the company. The carefully drawn plan starts looking like fiction.
+
+People also turn the roadmap into a commitment instead of a working hypothesis. Sales uses the dates to close deals. Leadership uses the document to judge whether the team is delivering. When the inevitable changes happen, trust disappears. The thing that was supposed to keep everyone aligned becomes the thing everyone argues about.
+
+A lot of roadmaps describe solutions rather than the problems worth solving. They become a list of screens and capabilities decided last quarter. Fresh evidence shows up, but the team keeps executing the old list because changing the roadmap feels like admitting failure. The document stops helping people think and starts telling them what to build no matter what they learn.
+
+We consistently underestimate complexity. Work takes longer than the slides suggested. Dependencies surface late. Maintenance and technical debt that were never on the roadmap suddenly demand attention. Discovery that would reduce risk gets skipped because it does not look like progress against the published plan.
+
+Communication gaps finish the job. The group that created the roadmap rarely stays in close conversation with the people building the product or talking to customers every day. Hidden assumptions stay hidden until they blow up. Trade-offs that should have been explicit stay implicit until it is too late.
+
+The roadmaps that survive are the ones treated as living sketches rather than finished paintings. They stay detailed only for the near term and stay deliberately vague further out. They get revised often. They focus more on the outcomes the business needs than on the exact features that might produce those outcomes. Most companies do not operate that way. They produce a clean looking artifact, present it, and then wonder why it did not last. Planning gives the comforting feeling of control. That feeling is usually an illusion, and that is why most product roadmaps fail.

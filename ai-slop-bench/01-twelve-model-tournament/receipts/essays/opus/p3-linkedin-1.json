@@ -1,0 +1,93 @@
+{
+ "arm": "opus",
+ "label": "Opus 5",
+ "vendor": "Anthropic",
+ "transport": "openrouter",
+ "model_requested": "anthropic/claude-opus-5",
+ "serving_path": "OpenRouter -> Anthropic (first-party key unavailable at run time)",
+ "prompt_id": "p3-linkedin",
+ "sample": 1,
+ "run_utc": "2026-09-06T13:24:43Z",
+ "wall_s": 23.0,
+ "request_body": {
+  "model": "anthropic/claude-opus-5",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Write a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used."
+   }
+  ],
+  "max_tokens": 8000,
+  "provider": {
+   "allow_fallbacks": false
+  },
+  "usage": {
+   "include": true
+  }
+ },
+ "usage": {
+  "input_tokens": 43,
+  "output_tokens": 1221,
+  "reasoning_tokens": 322,
+  "cost_usd": 0.0304326,
+  "served_model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS"
+ },
+ "essay_sha256": "f52016e18e245ae7e278699b0b3f95e483f0703ca0bc21f0685d9ad9fb7fe6c7",
+ "essay_words": 476,
+ "response_raw": {
+  "id": "gen-1788701059-M9tnBZE8PQkJ0RGmm7ot",
+  "object": "chat.completion",
+  "created": 1788701059,
+  "model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "**We spent 11 weeks building a feature. 3.7% of our customers ever touched it.**\n\nI still think about that number.\n\nThe request came up in almost every sales call: \"Can we get a custom reporting dashboard?\" Seventeen accounts asked for it in one quarter. Two threatened to churn without it. We had a spreadsheet of quotes. We had demand, or so I thought.\n\nSo we built it. Drag-and-drop widgets, saved views, scheduled email exports. It demoed beautifully.\n\nThen we launched. Adoption crawled to 3.7% and flatlined. The two accounts that \"needed\" it? One never logged in. The other used it twice, then went back to downloading CSVs and building charts in Excel.\n\nI finally called six of the seventeen requesters and asked what happened. The answer gutted me in how obvious it was:\n\nThey didn't want a dashboard. They wanted to stop getting yelled at in Monday morning meetings for not having numbers ready.\n\nOur dashboard technically solved that. But it required them to *build* the thing first — pick metrics, configure widgets, decide on date ranges. We'd handed a tired ops manager a set of Legos when what she wanted was for the finished model to already be on her desk at 8am.\n\nThe customers who eventually loved reporting? They loved the scheduled email we'd treated as a throwaway feature. One paragraph, five numbers, in their inbox every Monday at 7. That one shipped in four days.\n\nThree things I do differently now:\n\n**1. I separate the request from the problem.** When someone asks for a dashboard, that's their guess at a solution. My job is to find out what happens on the day they need it — who's asking them for what, and what they do today to cope. \"Walk me through the last time this hurt\" has replaced \"would you use X?\" in every conversation I have.\n\n**2. I look for what people already do the hard way.** Real demand leaves a trail. Those customers were exporting CSVs at 11pm on Sundays. That behavior was sitting in our logs the whole time, and it told a truer story than seventeen sales calls.\n\n**3. I make the cheap version first, even when it feels embarrassing.** We could have sent that Monday email manually to ten accounts for two weeks. Total cost: a few hours. It would have told us almost everything we learned in eleven weeks.\n\nThe uncomfortable part is that nobody lied to me. Customers genuinely believed they wanted the dashboard. Wanting something and using it are completely different muscles, and only one of them shows up in a discovery call.\n\nI don't regret shipping it. I regret not spending four days finding out it was the wrong thing before spending eleven weeks on it.\n\nWhat's the most expensive thing you've built that nobody wanted? I'd rather learn from yours than repeat mine.",
+     "refusal": null,
+     "reasoning": "I want the post to feel genuine rather than polished LinkedIn-speak, so I'm planning a concrete story with real numbers behind it—something like a PM or engineer building a feature that flopped, and the actual lesson they took from it.\n\nI'll shape it around a bulk-export dashboard that took eleven weeks and got 4% adoption despite being requested in sales calls, landing on the insight that customer requests point to pain, not the actual solution. I want to end with a genuine question to spark discussion, keeping the whole thing under 500 words and human in tone.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I want the post to feel genuine rather than polished LinkedIn-speak, so I'm planning a concrete story with real numbers behind it—something like a PM or engineer building a feature that flopped, and the actual lesson they took from it.\n\nI'll shape it around a bulk-export dashboard that took eleven weeks and got 4% adoption despite being requested in sales calls, landing on the insight that customer requests point to pain, not the actual solution. I want to end with a genuine question to spark discussion, keeping the whole thing under 500 words and human in tone.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAISrQkKrgEIERgCKkBsuUOBkgWfYCvLaYuPhhbcHc6jb+D7zmXtDTzNsTPIPMCwxWBpgCWYBub6W4j5bZUVeRS8VnzhE/3JMGVf/7gyMg1jbGF1ZGUtb3B1cy01OAFCCHRoaW5raW5nWiQ0YzBmMDQ2Zi0yNWZkLTQ1ZmItYmZiMy1hMDhhOGUyNDljYTd6HnVwcm9mXzAxMUNlbkZSYjRqeFBLcXdMUXFXN3dtNqgBjNP11AYSDNW+rMsjfed3puYxqBoMiIgqosMi35XqnIB6IjBoQmugSp6tXL/knOb7AQRv2jpPmuHialxltfvI24TVPxkogRY6UgJhchIHosq8Vq0qqwc1sv9qDc4EI1GPAQJLxJZVCxHqdS2sUzo+uiAHLvu2W1dqUIyq/vsTn8PmUUqoK2lqSW/P2+BDqNbV5CWJwKVPRcIHVg0mzHA2nJwUsffaux+DjN0EdRDSHyLJX+UF3r53z+tkKwqemDEmWFywrR5hzMlUxE6NO6Zq1R05EaxiM178LefjhKlDbdAHPs+X3d4rdwe0QwQ/CB6tTZF3rv+nyfJg3s9PzBSjW3642pKsR03n/8nK/63HnJ8u/0AEPwBG/1sb4gqiUyFhPMBdrVwozczwXxnWP9NXkJ9cYBVhkYpTHna4GMLnT+YCd9WCaaA0qZKm8uAsNlcfI3Nk2Y4YX55pHQYdwLKfyjm1vns34KZBpNyxWVzTFp7UNA/xVF1/ARIZE43QeC4MmFnGeHsE7oeq8HJxzxB8NykVhLXDZgD8tjc2VaPGmxYo0Xg8XHLQmq+tWNvmdbiizqdEia1yDXMkkKQl8jXJkpooXlpgXG0ras4VtHV2c79KJO5DFeTH/t/Nj2kTP8vaMwmtr+vYarjtLqxr79dGmAP6OI4xdhzZqLMGjdtBfeaatMECeXjV3pf6rUB2YF4BDKfS6M4OyB9KKKzCpIbae0L/kkYU+HWtY3pO7w9Bwdpys06xgNT71SLgAal+8m3tVIZSlXXPovc6zbCqsJcWdOHWfhvzn+KYb2EWRtUAii1Qf3JvA/MrptQi/xrtqzfnHwhAvRNRrYK3t6YW60Jb+Zpqlgoy9JhtRer3B2bKWtzoSo8h7Y2Lc7dMXotgsRQmdjiEj6VT4cy4bQyyNi74+SDHVpjKHJeFbnnMdKtunGwCO9XUWR20pdjmircAMirJbQVyVplQjiI+yBpBLw+Yu/IvTNtNKl/cxz2mznEmtiriPRmyfgwU90o7VqZd6jUqM+iJe2fjmVylCfWN+zWMbz4Qp8mG6pJgdUmwMuSEEJj52Vv8fQv/kx6AhoB3Hi10YIkCkjZT/Lm40ytAmuF/QlCyBlaQ4FHaJCkjid0yyCXffkB+tndNxeimzy3z/Hfd1ohxizwlBWcXHyvQ/x0Z7phcY1li2FfTLrWGFGfs9yODa4Lr/HI0T2MHq2qhurzkcdHv8EmnMd3fiTp+k5ovI5x9C5voE61cxkhrURu3uJ7W+Ggga3XLc3j8rI6vdpWAIpvtmnUSueRW3HAuxRmYZDc3OdbZiE8cH2VFoB3FyW3nKBguzbKSLdvifyHV0hrTbfRV13WVdm8QOdyu+0YQ2p4YAQ=="
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 43,
+   "completion_tokens": 1221,
+   "total_tokens": 1264,
+   "cost": 0.0304326,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.03074,
+    "upstream_inference_prompt_cost": 0.000215,
+    "upstream_inference_completions_cost": 0.030525
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 322,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

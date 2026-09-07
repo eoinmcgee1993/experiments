@@ -1,0 +1,95 @@
+{
+ "variant": "steered",
+ "arm": "opus",
+ "label": "Opus 5",
+ "vendor": "Anthropic",
+ "transport": "openrouter",
+ "model_requested": "anthropic/claude-opus-5",
+ "serving_path": "OpenRouter -> Anthropic (first-party key unavailable at run time)",
+ "prompt_id": "p3-linkedin",
+ "sample": 1,
+ "prompt_text": "Write a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n\nPlain prose only: no headers, no bullet points, no bold text, no em dashes. Write like a person.",
+ "run_utc": "2026-09-06T14:06:40Z",
+ "wall_s": 22.5,
+ "request_body": {
+  "model": "anthropic/claude-opus-5",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Write a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n\nPlain prose only: no headers, no bullet points, no bold text, no em dashes. Write like a person."
+   }
+  ],
+  "max_tokens": 8000,
+  "provider": {
+   "allow_fallbacks": false
+  },
+  "usage": {
+   "include": true
+  }
+ },
+ "usage": {
+  "input_tokens": 78,
+  "output_tokens": 1242,
+  "reasoning_tokens": 346,
+  "cost_usd": 0.0311256,
+  "served_model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS"
+ },
+ "essay_sha256": "67a6ebf49a1ca1dc2c8be803fc0c6e4e6c3ce3cf442573a74509f0ae8d802188",
+ "essay_words": 533,
+ "response_raw": {
+  "id": "gen-1788703576-GmypKYHNL9GdA4hnFWk5",
+  "object": "chat.completion",
+  "created": 1788703576,
+  "model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "Two years ago I shipped a feature that almost nobody used.\n\nIt was a custom dashboard builder. Drag your widgets, pick your metrics, save your layout, share it with your team. Eleven weeks of work across four people. We wrote a launch email, recorded a demo video, added an in app announcement. Three months later, 0.6 percent of active accounts had created a dashboard. Most of those were internal.\n\nWhat stung was that we had done the research. Or thought we had. Sales had a spreadsheet with 34 mentions of \"custom reporting\" from lost deals. Support had tickets. Two enterprise customers said it out loud on calls with our CEO. By every measure we used at the time, this was the most requested thing on our list.\n\nHere is what I missed. We counted how many people asked. We never asked why.\n\nWhen I finally went back and interviewed twelve of the customers who had requested it, the answers had almost nothing to do with dashboards. One person needed a weekly number to paste into a slide for her board meeting. Another wanted an alert when churn crossed a threshold, so he could stop checking manually every Monday. A third had a data team that just wanted a clean export. They had all said \"custom dashboard\" because that was the closest word they had for the thing they were imagining. We built the word instead of the need.\n\nThe uncomfortable part is that a scheduled email with four numbers in it would have solved maybe eight of those twelve problems. That is roughly a two week project. We could have shipped it, watched what people did with it, and learned more in a month than we learned in eleven weeks of building the sophisticated thing.\n\nSince then I have changed one habit, and it is small enough that it actually stuck. Before we scope anything, I try to write down the specific moment in someone's week that the feature is supposed to change. Not the outcome, not the value prop, the moment. Tuesday morning, she opens the app, she is trying to do X, and right now she does Y instead. If I cannot describe that moment in plain language, I do not have a problem yet. I have a request.\n\nThe other thing I do now is ask customers what they currently do instead. People are unreliable when they predict their future behavior and very reliable when they describe their past behavior. \"I export to CSV and rebuild the same pivot table every Friday\" tells you more than an hour of feature brainstorming.\n\nWe eventually killed the dashboard builder. It took another year to admit it, because sunk cost is a real feeling and not just a bullet point in an economics class. Nobody complained when it went away, which was its own kind of answer.\n\nI do not think this makes me smarter than anyone. Plenty of teams learn this earlier than I did. But if you are staring at a request that shows up in every sales call, it is worth spending a week finding out what people actually mean before spending a quarter finding out they meant something else.",
+     "refusal": null,
+     "reasoning": "I want to keep this human and specific, no em dashes or bullet formatting, written like a real person telling a story. I'm sketching out a concrete example: a team spending eleven weeks on a custom dashboard builder that barely anyone ended up using, and what that taught them.\n\nThe lesson is that they validated the request, not the underlying problem, so I want to include details like sales pushing for it and a few enterprise customers mentioning it in passing, without anyone asking what the customer would actually stop doing if they got it. I'll close with a takeaway and a question that invites people to comment, keeping the whole thing under about 400 words and free of bold text, headers, or bullets.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I want to keep this human and specific, no em dashes or bullet formatting, written like a real person telling a story. I'm sketching out a concrete example: a team spending eleven weeks on a custom dashboard builder that barely anyone ended up using, and what that taught them.\n\nThe lesson is that they validated the request, not the underlying problem, so I want to include details like sales pushing for it and a few enterprise customers mentioning it in passing, without anyone asking what the customer would actually stop doing if they got it. I'll close with a takeaway and a question that invites people to comment, keeping the whole thing under about 400 words and free of bold text, headers, or bullets.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAISqwkKrgEIERgCKkCTtihhaR4uYX5goHDYIZnPfdvqGJeUAi8jS6rkoHfc5HymWQ58SgSx+xAx/6j+8oFco9zoeBA51tFhQ3AaGGdPMg1jbGF1ZGUtb3B1cy01OAFCCHRoaW5raW5nWiQ0YzBmMDQ2Zi0yNWZkLTQ1ZmItYmZiMy1hMDhhOGUyNDljYTd6HnVwcm9mXzAxMUNlbkZSYjRqeFBLcXdMUXFXN3dtNqgB4eb11AYSDL6ocvN6g0lITU4blBoMAN0VeA8Squ4mAgk5IjBVtm5nfp5BbRxsljCOOeaCkSy8W5cvz20/TuJATnt60aHRqM8v/kEQiHDcg2nefo0qqQcDE+nxs24NcdmhufXsPW0IWTr66YlEqJea+s034Rdth7D1lpZAXOIDCBTEUrNRjygxYrRFv5lWHybAmk8YRVVLHrA0WiFXPR7ZJLNmKToSF++yOg9W4nW+U6eJXJvHqo5pDU6XqYWugYYtt8vE1Opkk+I8M+rsCeVi05PIA0R5BhPhJU7slJi8YwkZ12MWWciIbNOM3SOLS33uuHi4CmP+vl0npSZ2XnD5hFegE5/NT3MiphVO1BsC84jUHFv1RM/PmQlZI6ldAwejycVDqVNv0c8FAzt2on7GgsBrK82keM11KJAzQamru/jICrfAVabmWZ/Mnta1/x7ZjMyZ9mkfqNu7nCFkLNaKruB1x5izyZ1NgKMOPEfTe6A659qiSvRqCrH5em+E9qvnRx8XJBS/TxTetU6RPUskgdjp1aemL96e6Gx3pP/mPT408SMh3fy7ke2BEKO9YiEaPXQ9Tt6rBpR0vnVHh1hN7n4S8wJfNHE5XEkvb1iOIismo5hB5EfXr0lKhTThwScNBs0lW98j0YMTdvuc0eZBzV864eJIyP3kqyUHYIGDm5LcAzxEKCtulttZ+a0JW2W2gkwIXAl2+2+2zWaYhM07AWP+OhjB7A8rNqLoI3E4M9idYBDqv3OHSAlPGBIfRKxMX5jDTvYF9l/6OQLOnG6iSJ6KFodDKp9xIsURal8eK18WukJuE+/sMdxeS9AUdI9VHWuydcX40G1htFtK2F8He+IVrNK26cEICKhX3wSWLB3beFkbxjUxw9X9LkQ7FAgDkmxMXN7ezvhwVDoCaYUUg57tH8oGHV1QcoHyXZ7EvBakcFL9YALIoX2RMCdSQcx2Jm5lZktH3bXxVih2pHpsHpOHreT7AXCWW0acQ/VDlfGd184Mocicg2Usp6E59xdOAYEkf9s6osmvh+o53GzExff43X5gtrJgmpkt0/x5hBVHgnpefC/1UwU6nDNuIF82wTKEZupREmK/VjnQbG3R65LwAJFwGieJz8xLcER4so8u1+qAUUpwl4QeHufyEVgdEX0tPPYydtKGiqgkBEGawjU7E6XBvgKC1GdcrvxEdJmOuTez6RqbOQMxxZ2jWIL5qPJMFDDCqOqOhg1uDT+szPh/+LMQaNYPYCC1i02w93sQfdgaVcYqbusOrf/Atc388enoIyVwX9/Mt5bgCcAO6OmObUBB0l7Bi+11kMFcmUjz4vBYbGornGjZNYJQXugl5p5f3aoYMFsui+WVaWGmGAE="
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 78,
+   "completion_tokens": 1242,
+   "total_tokens": 1320,
+   "cost": 0.0311256,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.03144,
+    "upstream_inference_prompt_cost": 0.00039,
+    "upstream_inference_completions_cost": 0.03105
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 346,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

@@ -1,0 +1,98 @@
+{
+ "judge": "opus",
+ "model": "anthropic/claude-opus-5",
+ "key": "calib-human-15-2022-10-25-vs-sol-3-HM",
+ "wall_s": 5.2,
+ "run_utc": "2026-09-07T08:24:56Z",
+ "request_body": {
+  "model": "anthropic/claude-opus-5",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n(One of the texts is a real LinkedIn post by a person, written on its own topic; judge tells, not topic.)\n\n=== TEXT A ===\nIn Product, at least half of your ideas will not work. \n\nProduct Discovery can reduce waste and rework by 50%.\n\n7 books that will teach you everything you need to know:\n\n\n1. Inspired by Marty Cagan\n\nLessons:\n• At least half of your ideas are not going to work. \n• Product Discovery results in a validated product backlog.\n• PM, Designer, and Engineer must work together.\n\nTip: This is simply the number one book for all Product Managers.\n\n\n2. Continuous Discovery Habits by Teresa Torres\n\nLessons:\n• Structured and sustainable approach to continuous discovery and opportunity mapping.\n• It's essential to interview your customers regularly (at least weekly).\n\n\n3. The Mom Test by Rob Fitzpatrick\n\nLessons:\n• You shouldn't ask your mom whether your business is a good idea because she loves you and will lie to you. \n• The ultimate guide for interviewing your customers.\n\n\n4. Jobs to be Done by Tony Ulwick\n\nLessons:\n• People don't buy products. They \"hire\" them to do jobs.\n• How to define and prioritize customer needs.\n\nTip: Free audiobook is available on Tony Ulwick's website. Link in the comments.\n\n\n5. Sprint by Jake Knapp\n\nLessons:\n• Describes a specific Product Discovery technique invented in Google.\n• How to solve complex problems and test ideas in just 5 days.\n\nTip: I recommend comparing it with Teresa Torres's approach. In particular, you may want to interview your customers before ideating. In that case, you can interview customers before the Sprint.\n\n\n6. The Lean Product Playbook by Dan Olsen\n\nLessons:\n• The complete Lean Product Process - discovering and creating products while minimizing waste and rework.\n• Customer Discovery, Business Model, Value Proposition, MVP, Product-Market Fit, Prototypes, UX, Key Metrics, and more.\n\nTip: I could recommend The Lean Startup, but this book is, in my opinion, much more comprehensive.\n\n\n7. Testing Business Ideas by Alexander Osterwalder and David Bland\n\nLessons:\n• Start from an idea, then use the design loop to improve it.\n• Use discovery experiments to examine your assumptions.\n\nTip: Dozens of tools and techniques anyone can easily apply.\n\n\nBONUS:\n\n\n8. Radical Focus by Christina Wodtke\n\nLessons:\n• Select only one OKR. Their goal is to create focus on what's not urgent yet critical for the long-term growth of the business (strategy).\n• Do not incentivize OKRs.\n\nTip: OKRs work perfectly with the Opportunity Solution Tree as defined by Teresa Torres. Your business outcome can be expressed as OKR.\n\n\n9. Escaping the Build Trap by Melissa Perri\n\nLessons:\n• Why organizations cultivate a feature-factory mindset and how to change it.\n• Focus on outcomes, not outputs, and on understanding the problem in depth to avoid the Product Death Cycle trap.\n\n\nHope that helps.\n\nWhat would you add to that list?\n\n#productmanagement\n\n=== END OF TEXT A ===\n\n=== TEXT B ===\nWe shipped a feature nobody used.\n\nNot “low adoption.”  \nNot “slower than expected.”\n\nAlmost nobody touched it.\n\nThe team had spent weeks designing, building, testing, and polishing it. We believed the feature solved an obvious customer problem—and once we launched, we waited for the usage data to prove us right.\n\nIt didn’t.\n\nOur first instinct was to improve onboarding. Maybe users couldn’t find it. Maybe the messaging wasn’t clear. Maybe we needed another tooltip.\n\nBut after speaking with customers, the real issue became obvious:\n\nWe had validated the problem, but not the priority.\n\nYes, customers experienced the problem. They simply didn’t experience it often enough—or feel it was painful enough—to change their behavior.\n\nThat distinction taught me an important lesson:\n\n**A real problem is not automatically a problem worth building for.**\n\nBefore writing code, we should have asked:\n\n- How are customers solving this today?\n- How frequently does the problem occur?\n- What does it cost them?\n- What would they stop doing to use our solution?\n- Have they actively looked for an alternative?\n\nComplaints can be useful signals, but they aren’t commitments. Interest isn’t intent. And “I’d use that” is very different from changing an established workflow.\n\nThe feature wasn’t a total waste. It improved how we approach product discovery.\n\nNow, we look for evidence of urgency—not just agreement. We test behavior before building the full solution. And we define what adoption should look like before launch, not after.\n\nShipping the wrong feature taught us more than shipping an easy win would have.\n\nThe goal isn’t to build what customers say sounds useful.\n\nIt’s to understand what matters enough for them to act.\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n"
+   }
+  ],
+  "max_tokens": 16000,
+  "provider": {
+   "allow_fallbacks": false
+  },
+  "usage": {
+   "include": true
+  }
+ },
+ "usage": {
+  "input_tokens": 2886,
+  "output_tokens": 273,
+  "reasoning_tokens": 0,
+  "cost_usd": 0.02104245,
+  "served_model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS"
+ },
+ "verdict": {
+  "more_ai": "B",
+  "confidence": 5,
+  "tells_A": [
+   "listicle format with bullets",
+   "engagement-bait closing question",
+   "uniform bullet rhythm"
+  ],
+  "tells_B": [
+   "repeated negative parallelism: 'Not low adoption. Not slower than expected.'",
+   "'It's not X, it's Y' ending: 'The goal isn't to build what customers say sounds useful. It's to understand...'",
+   "bolded aphorism line as self-applause",
+   "bulleted question list inside prose",
+   "triads: 'designing, building, testing, and polishing'",
+   "punchy uniform fragments ('It didn't.')",
+   "recap/uplift ending where every point lands",
+   "no specific numbers, dates, names, or product details",
+   "em dash used as default clause joint",
+   "'Interest isn't intent' manufactured aphorism"
+  ]
+ },
+ "response_raw": {
+  "id": "gen-1788769489-QvxSXX0DNIZbLKRhaWyb",
+  "object": "chat.completion",
+  "created": 1788769489,
+  "model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"more_ai\": \"B\", \"confidence\": 5, \"tells_A\": [\"listicle format with bullets\", \"engagement-bait closing question\", \"uniform bullet rhythm\"], \"tells_B\": [\"repeated negative parallelism: 'Not low adoption. Not slower than expected.'\", \"'It's not X, it's Y' ending: 'The goal isn't to build what customers say sounds useful. It's to understand...'\", \"bolded aphorism line as self-applause\", \"bulleted question list inside prose\", \"triads: 'designing, building, testing, and polishing'\", \"punchy uniform fragments ('It didn't.')\", \"recap/uplift ending where every point lands\", \"no specific numbers, dates, names, or product details\", \"em dash used as default clause joint\", \"'Interest isn't intent' manufactured aphorism\"]}",
+     "refusal": null,
+     "reasoning": null
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2886,
+   "completion_tokens": 273,
+   "total_tokens": 3159,
+   "cost": 0.02104245,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.021255,
+    "upstream_inference_prompt_cost": 0.01443,
+    "upstream_inference_completions_cost": 0.006825
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

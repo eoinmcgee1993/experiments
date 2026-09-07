@@ -1,0 +1,97 @@
+{
+ "judge": "opus",
+ "model": "anthropic/claude-opus-5",
+ "key": "calib-human-11-2022-08-28-vs-qwen-2-HM",
+ "wall_s": 4.8,
+ "run_utc": "2026-09-07T08:26:38Z",
+ "request_body": {
+  "model": "anthropic/claude-opus-5",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n(One of the texts is a real LinkedIn post by a person, written on its own topic; judge tells, not topic.)\n\n=== TEXT A ===\nDo you want to break into PM?\n\nHere are the top 5 red flags in job offers:\n \n🚩 1. Multitasking\n🚩 2. Resources\n🚩 3. Project / schedule\n🚩 4. Customer proxy\n🚩 5. SAFe\n \nNow in detail:\n \n 🚩 1. Multitasking\n \nMultitasking is a myth. \n\nAccording to the research presented by Gerald M. Weinberg, each additional project or task is a loss of ~20% of productivity. When we add a third project, context switching consumes almost 50% of the effort.\n \nGreat PMs focus on what's the most important and delegate or ignore everything else.\n \n🚩 2. Resources\n \nHow is it possible that in the 21st century, people are still so commonly referred to as “resources”?\n \nPeople will not work the same way, being moved from place to place or working overtime. They are not tools that you can use however you like. They also have dreams and ambitions.\n \nPeople are not resources. They are skilled professionals. \n \n🚩 3. Project / schedule\n \nA typical project mindset involves:\n- Assigning tasks to team members\n- Pushing instead of letting others pull the work\n- Emphasis on predefined outputs (features) and \"scope\"\n- Affection for detailed schedules\n- Constantly asking about the team's progress\n- Pursuing the myth of 100% utilization (thanks Gawain Lee-Son)\n \nGreat product managers collaborate, inspire, show their trust, and understand that working on a product is complex. They embrace the unknown and encourage experimentation.\n \n🚩 4. Customer proxy\n \nLet me tell you about the product death cycle trap. \n\nIt happens when the product manager forgets about the \"Why\" and becomes a waiter. There is no vision or strategy. To please everyone, PM collects and waterfalls all the requirements to the team. \n\nAlthough customers know where they are in pain, they cannot design a solution. Those features do not solve anyone's problems and do not drive the expected business results. \n\nThe most harmful solution is to ask customers again what features they need. The cycle repeats itself.\n \n🚩 5. SAFe\n \nEvery time I see SAFe's diagrams, something dies inside me. This heavy, fake \"agile\" framework enables bureaucratic, top-down control, disempowers teams, and promises false predictability.\n\nSAFe is one of the best ways to kill agility, and limit your growth as a PM.\n\n-\n\nIf you see any of those red flags, think twice. You may avoid serious harm to your growth and career.\n\n#productmanagement\n\n=== END OF TEXT A ===\n\n=== TEXT B ===\nWe spent weeks shipping a feature we were proud of.\n\nThe launch was clean. The metrics were brutal: nobody used it.\n\nAt first, I blamed discovery. Then I blamed timing. Eventually, I admitted the truth: we fell in love with an idea, not a customer problem.\n\nThe feature solved something that felt important in a meeting, but didn’t create enough friction in everyday use. We asked users if they wanted it, and they said yes — because being nice to a product team is free. We treated interest as demand and prototypes as proof.\n\nThat taught me the hardest lesson in product work: shipping is not validation. Behavior is validation.\n\nNow I try to run a small pre-flight before building anything:\n\n- Who has this problem repeatedly?\n- What are they doing today?\n- What would make them pay, switch, or change their workflow?\n- What’s the smallest version that creates real risk of rejection?\n\nIf we can’t answer those quickly, we don’t build the feature. We investigate.\n\nThe best product decision I’ve made wasn’t a feature that changed the world. It was the discipline to stop confusing effort with evidence.\n\nA feature nobody used didn’t waste time if it taught the team to listen better.\n\n#ProductManagement #LessonLearned #CustomerDiscovery\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n"
+   }
+  ],
+  "max_tokens": 16000,
+  "provider": {
+   "allow_fallbacks": false
+  },
+  "usage": {
+   "include": true
+  }
+ },
+ "usage": {
+  "input_tokens": 2545,
+  "output_tokens": 270,
+  "reasoning_tokens": 0,
+  "cost_usd": 0.01928025,
+  "served_model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS"
+ },
+ "verdict": {
+  "more_ai": "B",
+  "confidence": 4,
+  "tells_A": [
+   "numbered list with emoji labels",
+   "signposting: 'Now in detail:'",
+   "signposting: 'Let me tell you about'",
+   "closing advice wrap-up"
+  ],
+  "tells_B": [
+   "negative parallelism: 'an idea, not a customer problem', 'shipping is not validation. Behavior is validation.', 'wasn't a feature... It was the discipline'",
+   "triads: 'pay, switch, or change'",
+   "uplifting resolved ending with aphorism",
+   "em dash as clause joint",
+   "bulleted question checklist inserted into prose",
+   "no concrete numbers, names, or dates",
+   "generic anecdote with no identifying detail",
+   "uniform punchy rhythm and parallel 'I blamed... I blamed... I admitted'"
+  ]
+ },
+ "response_raw": {
+  "id": "gen-1788769592-jWYzvdEBxgMq22GgOSIj",
+  "object": "chat.completion",
+  "created": 1788769592,
+  "model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"more_ai\": \"B\", \"confidence\": 4, \"tells_A\": [\"numbered list with emoji labels\", \"signposting: 'Now in detail:'\", \"signposting: 'Let me tell you about'\", \"closing advice wrap-up\"], \"tells_B\": [\"negative parallelism: 'an idea, not a customer problem', 'shipping is not validation. Behavior is validation.', 'wasn't a feature... It was the discipline'\", \"triads: 'pay, switch, or change'\", \"uplifting resolved ending with aphorism\", \"em dash as clause joint\", \"bulleted question checklist inserted into prose\", \"no concrete numbers, names, or dates\", \"generic anecdote with no identifying detail\", \"uniform punchy rhythm and parallel 'I blamed... I blamed... I admitted'\"]}",
+     "refusal": null,
+     "reasoning": null
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2545,
+   "completion_tokens": 270,
+   "total_tokens": 2815,
+   "cost": 0.01928025,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.019475,
+    "upstream_inference_prompt_cost": 0.012725,
+    "upstream_inference_completions_cost": 0.00675
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

@@ -1,0 +1,74 @@
+{
+ "judge": "gemini",
+ "model": "gemini-3.8-flash",
+ "key": "steered-p2-launch-2-sol-vs-grok-AB",
+ "wall_s": 4.9,
+ "run_utc": "2026-09-06T14:09:49Z",
+ "request_body": {
+  "contents": [
+   {
+    "parts": [
+     {
+      "text": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a launch announcement of up to 500 words for a new feature of a B2B helpdesk product: a Slack integration that posts a daily summary of open support tickets to a channel of the customer's choice. The audience is existing customers.\n\nPlain prose only: no headers, no bullet points, no bold text, no em dashes. Write like a person.\n\n=== TEXT A ===\nWe’re excited to introduce our new Slack integration, designed to help your team stay on top of open support tickets without leaving Slack.\n\nOnce connected, the integration posts a daily summary of open tickets to the Slack channel of your choice. Your team gets a clear, shared view of what still needs attention, making it easier to spot outstanding issues, coordinate next steps, and keep customer requests moving.\n\nThe summary brings ticket visibility into the place where your team already communicates. Whether you send it to a dedicated support channel or a broader customer operations channel, everyone can start the day with the same picture of the current queue.\n\nYou can set up the integration from your helpdesk settings by connecting your Slack workspace and selecting a destination channel.\n\nWe hope this makes managing your support workload a little simpler and helps your team respond with greater clarity and consistency. Connect Slack today and put your daily ticket summary where your team will see it.\n=== END OF TEXT A ===\n\n=== TEXT B ===\nWe just launched something a lot of you have been asking for. You can now hook your helpdesk up to Slack so a daily summary of open support tickets posts itself into a channel you choose.\n\nMost of the teams we talk to already live in Slack. Switching over just to see what is still waiting was becoming a small daily tax. This puts the recap right where people already are. The post covers how many tickets remain open, a short look at the ones that have been sitting longest, and who they are assigned to. You pick the channel and roughly when it should arrive. Changing the settings or turning it off later takes almost no time.\n\nIt lives in the usual spot. Open Settings, go to Integrations, connect Slack, pick your channel, and you are done. A couple of minutes at most. It is available right now for every existing customer on every plan, no extra charge.\n\nGive it a try when you have a spare minute and let us know how it feels after a week. We built it because you asked, and we want it to actually save you a few clicks each morning.\n\nThanks for being with us. We will keep listening.\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n"
+     }
+    ]
+   }
+  ],
+  "generationConfig": {
+   "maxOutputTokens": 16000,
+   "thinkingConfig": {
+    "thinkingLevel": "high"
+   },
+   "responseMimeType": "application/json"
+  }
+ },
+ "usage": {
+  "input_tokens": 1314,
+  "output_tokens": 82,
+  "reasoning_tokens": 654,
+  "served_model": "gemini-3.8-flash"
+ },
+ "verdict": {
+  "more_ai": "A",
+  "confidence": 5,
+  "tells_A": [
+   "Artificial enthusiasm opener: 'We’re excited to introduce'",
+   "Participial tail: ', making it easier to...'",
+   "Triad structure: 'spot outstanding issues, coordinate next steps, and keep customer requests moving'",
+   "Generic corporate framing lacking specific concrete details"
+  ],
+  "tells_B": []
+ },
+ "response_raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"more_ai\": \"A\", \"confidence\": 5, \"tells_A\": [\"Artificial enthusiasm opener: 'We’re excited to introduce'\", \"Participial tail: ', making it easier to...'\", \"Triad structure: 'spot outstanding issues, coordinate next steps, and keep customer requests moving'\", \"Generic corporate framing lacking specific concrete details\"], \"tells_B\": []}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1314,
+   "candidatesTokenCount": 82,
+   "totalTokenCount": 2050,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 1314
+    }
+   ],
+   "thoughtsTokenCount": 654,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "J3Sdapf9Fve6vdIP--O5qQY"
+ }
+}

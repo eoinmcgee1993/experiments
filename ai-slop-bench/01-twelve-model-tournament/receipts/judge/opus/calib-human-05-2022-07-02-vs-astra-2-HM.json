@@ -1,0 +1,106 @@
+{
+ "judge": "opus",
+ "model": "anthropic/claude-opus-5",
+ "key": "calib-human-05-2022-07-02-vs-astra-2-HM",
+ "wall_s": 8.5,
+ "run_utc": "2026-09-07T08:24:41Z",
+ "request_body": {
+  "model": "anthropic/claude-opus-5",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n(One of the texts is a real LinkedIn post by a person, written on its own topic; judge tells, not topic.)\n\n=== TEXT A ===\nUnfortunately, almost nobody is doing Scrum as defined in the Scrum Guide, which, by definition, is the only possible Scrum. \n\nLet it sink in.\n\nScrum has died.\n\nI don't believe it's only because \"bad organizations\" do not want to empower people.\n\nScrum's dogmatism and unwillingness to receive feedback from the community essentially contributed to this. Ideas on how to improve Scrum bounce off the wall. Decisions are made in secret.\n\nWhere are the transparency and openness? What about co-creation? This is not what Agile leadership is about.\n\nIn my opinion, Scrum lacks continuous product discovery, which makes it the solution space framework. \"Inspired,\" \"Continuous Discovery Habits,\" or \"Sprint\" are classics every PM should read.\n\nAnother aspect is releasing value. I'd argue that usable Increment is not enough. In order to provide value, the Increment must be released to the customers. \n\nDon't get me wrong. Most Scrum ideas are great. I'm a great advocate of what's in the framework.\n\nAt the same time, ignoring the problem space and the importance of releasing value (and the associated feedback loops!) makes me wonder:\n\n\"Is it intelligently incomplete?\"\n\nIf so, why for so many teams does it become a feature factory framework?\n\nAnd even more importantly:\n\n\"Han can we improve it?\"\n\n=== END OF TEXT A ===\n\n=== TEXT B ===\nWe shipped the feature customers asked for.\n\nThen almost nobody used it.\n\nIt was a customizable reporting dashboard. In discovery calls, people wanted more filters, more charts, and more ways to slice their data.\n\nSo we built them.\n\nThe launch went smoothly. The demo looked great. The team was proud.\n\nA month later, the dashboard was mostly empty.\n\nMy first instinct was to blame discoverability. Maybe we needed better onboarding, another announcement, a more prominent button.\n\nInstead, we sat down with customers and asked them to show us how they prepared their weekly updates.\n\nThat’s when we saw what we’d missed.\n\nThey didn’t want to explore their data. They wanted to answer three predictable questions before a Monday meeting—and paste the answers into an email.\n\nWe had built flexibility. They needed a shortcut.\n\nThe lesson wasn’t “don’t listen to customers.”\n\nIt was: **a feature request is the start of discovery, not the end of it.**\n\nNow, before committing to a solution, I want to understand:\n\n- What happened the last time someone faced this problem?\n- How did they solve it without us?\n- What would make changing that routine worthwhile?\n- What behavior would tell us we’d actually helped?\n\nAnd wherever possible, we test the smallest version inside the customer’s existing workflow.\n\nShipping that dashboard taught me more than a smooth launch ever could.\n\nWe hadn’t failed to build what people requested.\n\nWe’d failed to understand what they were trying to get done.\n\nWhat’s a feature you learned more from after launch than before it?\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n"
+   }
+  ],
+  "max_tokens": 16000,
+  "provider": {
+   "allow_fallbacks": false
+  },
+  "usage": {
+   "include": true
+  }
+ },
+ "usage": {
+  "input_tokens": 2231,
+  "output_tokens": 447,
+  "reasoning_tokens": 158,
+  "cost_usd": 0.0221067,
+  "served_model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS"
+ },
+ "verdict": {
+  "more_ai": "B",
+  "confidence": 5,
+  "tells_A": [
+   "\"Let it sink in\" self-applause line",
+   "rhetorical questions, though several unanswered",
+   "short one-line paragraphs"
+  ],
+  "tells_B": [
+   "repeated negative parallelism: \"The lesson wasn't... It was:\", \"We had built flexibility. They needed a shortcut.\", \"We hadn't failed... We'd failed...\"",
+   "bolded lesson statement as label/takeaway",
+   "bulleted list inside a prose post",
+   "triad: \"more filters, more charts, and more ways\"; \"three predictable questions\"",
+   "generic anecdote with no names, numbers, or dates",
+   "uniform staccato one-line rhythm throughout",
+   "engagement-bait closing question",
+   "every beat lands neatly, tidy uplifting resolution",
+   "em dash as clause joint"
+  ]
+ },
+ "response_raw": {
+  "id": "gen-1788769472-n1ibAr09Qpp5FOtMIS8v",
+  "object": "chat.completion",
+  "created": 1788769472,
+  "model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"more_ai\": \"B\", \"confidence\": 5, \"tells_A\": [\"\\\"Let it sink in\\\" self-applause line\", \"rhetorical questions, though several unanswered\", \"short one-line paragraphs\"], \"tells_B\": [\"repeated negative parallelism: \\\"The lesson wasn't... It was:\\\", \\\"We had built flexibility. They needed a shortcut.\\\", \\\"We hadn't failed... We'd failed...\\\"\", \"bolded lesson statement as label/takeaway\", \"bulleted list inside a prose post\", \"triad: \\\"more filters, more charts, and more ways\\\"; \\\"three predictable questions\\\"\", \"generic anecdote with no names, numbers, or dates\", \"uniform staccato one-line rhythm throughout\", \"engagement-bait closing question\", \"every beat lands neatly, tidy uplifting resolution\", \"em dash as clause joint\"]}",
+     "refusal": null,
+     "reasoning": "Text B leans heavily on AI-typical patterns: repeated negative parallelism, bolded labels, bullet lists, triads, and an engagement question, all with uniform rhythm. Text A has a self-congratulatory \"let it sink in\" moment but is otherwise messier and more idiosyncratic, including a typo, which points to it being the genuine human post.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "Text B leans heavily on AI-typical patterns: repeated negative parallelism, bolded labels, bullet lists, triads, and an engagement question, all with uniform rhythm. Text A has a self-congratulatory \"let it sink in\" moment but is otherwise messier and more idiosyncratic, including a typo, which points to it being the genuine human post.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAISrAUKrgEIERgCKkCp0fxIinUtgrfeJcKjqcdOc9MjIEzY6lGJ1KuHFbF92DcFS5mP0USoxyPgCbapevIH0zV0nYW4t6UJcVu/iagiMg1jbGF1ZGUtb3B1cy01OAFCCHRoaW5raW5nWiQ0YzBmMDQ2Zi0yNWZkLTQ1ZmItYmZiMy1hMDhhOGUyNDljYTd6HnVwcm9mXzAxMUNlbkZSYjRqeFBLcXdMUXFXN3dtNqgByOn51AYSDB+kawyzYntV+/nmOhoMFmRtUgMXX5HlSjjdIjA5mQ0argTUJnIMiLaSq21JGZtyLX1EqLJvJCnH5ThYJRhO5XPmHJ+ByGeXu/46rzYqqgMuKX4Qoc+1zeG3E2+kgcY+BYyNagYDiHTJf4oDVXASfCqMdm3zGfzoMH0x3A3jybL4UyMb2EVNNYJeJ9NDyeBC7puboWr2LuWOk1ZeJ5jcgapJKCff5gZKDHUss6qqF0LatAbkaalTh6zERvsB3GM/2ydL7oA+Xy12oZcKFpt7Fu6+WDKjU6eNW85Z+XQx3XzPvHXmYehYlTqjSLRIJJBLCRtAdJO4QJGqehVnpiMfPdc937nDxyQGn7wmkJuiDFwPecRZt41czx4PUul8NIPss4CQiKVfkWb+aWJIVL4yw8/9xYg11Cp3qSXzPfozVe2PMKyjiEPcyYdpk0uyQItncULjRqQ+owTz+hI1QELXtS5IuwGrkmCXK6MpHgR4uR3Fi7qGFmZvnRZOZGh5Jirjg1PhUy1RV93DxFa07IWL8S/TsWpezFYVMGtw8g/UKlQQAxtY6aieWXYGpV2Ngn6iDCgcEytBHgraaqjFOK2f/ZzCLH3L6gjl/WHHIWDP60F+shNCgeLLN//2ZbwW6y28XqqvCZ78ewfk3uz0Hc9uG+RKsGabfcQHqMsYAQ=="
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2231,
+   "completion_tokens": 447,
+   "total_tokens": 2678,
+   "cost": 0.0221067,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.02233,
+    "upstream_inference_prompt_cost": 0.011155,
+    "upstream_inference_completions_cost": 0.011175
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 158,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

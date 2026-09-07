@@ -1,0 +1,73 @@
+{
+ "variant": "steered",
+ "arm": "grok",
+ "label": "Grok 4.6",
+ "vendor": "xAI",
+ "transport": "xai_chat",
+ "model_requested": "grok-4.6",
+ "serving_path": "xAI first-party, chat completions",
+ "prompt_id": "p2-launch",
+ "sample": 1,
+ "prompt_text": "Write a launch announcement of up to 500 words for a new feature of a B2B helpdesk product: a Slack integration that posts a daily summary of open support tickets to a channel of the customer's choice. The audience is existing customers.\n\nPlain prose only: no headers, no bullet points, no bold text, no em dashes. Write like a person.",
+ "run_utc": "2026-09-06T14:06:55Z",
+ "wall_s": 20.2,
+ "request_body": {
+  "model": "grok-4.6",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Write a launch announcement of up to 500 words for a new feature of a B2B helpdesk product: a Slack integration that posts a daily summary of open support tickets to a channel of the customer's choice. The audience is existing customers.\n\nPlain prose only: no headers, no bullet points, no bold text, no em dashes. Write like a person."
+   }
+  ],
+  "max_tokens": 8000
+ },
+ "usage": {
+  "input_tokens": 709,
+  "output_tokens": 297,
+  "reasoning_tokens": 669,
+  "cost_usd": null,
+  "served_model": "grok-4.6",
+  "provider": null
+ },
+ "essay_sha256": "c739667e8a061e88b0d924f2a484450b1179ae0806b6150814c894c14553a2ad",
+ "essay_words": 260,
+ "response_raw": {
+  "id": "a81d13a4-20e8-987f-bac9-c4068b8ad5a8",
+  "object": "chat.completion",
+  "created": 1788703594,
+  "model": "grok-4.6",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "Hey team. We just shipped a Slack integration a bunch of you have asked for over the past few months. Once a day it posts a short summary of your open support tickets into whatever channel you choose. That’s it. No extra dashboards, no new place to check. Just a quiet recap so the people who live in Slack can see what’s still waiting without opening the helpdesk first thing.\n\nYou pick the channel. You pick the time that makes sense for your team. The post itself is simple: how many tickets are still open, a quick split by priority if you use it, a handful of the oldest ones so nothing sits too long, and a link back if someone wants to jump in. We kept it light on purpose. The goal is to meet you where you already are, not to turn Slack into another ticket queue.\n\nA lot of you told us tickets get lost in the shuffle when half the company never leaves chat. This doesn’t replace the helpdesk. It just gives the rest of the team a daily pulse so fewer things fall through. If your morning standup already happens in Slack, now the open-ticket picture is sitting right there.\n\nTo turn it on, go into settings, connect Slack, choose the channel, and you’re done. It takes a couple of minutes. We’re starting with the daily summary and we’ll listen to how you actually use it before we pile on more.\n\nThanks for sticking with us. Let us know how it feels once it’s running.",
+     "reasoning_content": "The user wants a launch announcement for a B2B helpdesk product's new Slack integration. It posts a daily summary of open support tickets to a customer's chosen Slack channel. Audience is existing cus...We're excited to share something we've been working on for our helpdesk product. We've added a Slack integration that posts a daily summary of open support tickets straight to a channel you choose. This means you can keep everything in Slack without ever leaving it to check your tickets. Instead of jumping between apps or relying on memory, you get a quick snapshot each morning that shows how many tickets are open, which ones are the oldest, and a direct link if anyone needs to jump in.\n\nWe built this because we kept hearing from customers that tickets sometimes disappear in the middle of a busy day.",
+     "refusal": null
+    },
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 709,
+   "completion_tokens": 297,
+   "total_tokens": 1675,
+   "prompt_tokens_details": {
+    "text_tokens": 709,
+    "audio_tokens": 0,
+    "image_tokens": 0,
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 669,
+    "audio_tokens": 0,
+    "accepted_prediction_tokens": 0,
+    "rejected_prediction_tokens": 0
+   },
+   "num_sources_used": 0,
+   "cost_in_usd_ticks": 64460000
+  },
+  "system_fingerprint": "fp_e41c6060b2628547",
+  "service_tier": "default"
+ }
+}

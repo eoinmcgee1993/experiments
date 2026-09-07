@@ -1,0 +1,143 @@
+{
+ "judge": "sol",
+ "model": "gpt-5.6-sol",
+ "key": "calib-human-05-2022-07-02-vs-muse-2-HM",
+ "wall_s": 8.5,
+ "run_utc": "2026-09-07T08:25:28Z",
+ "request_body": {
+  "model": "gpt-5.6-sol",
+  "input": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n(One of the texts is a real LinkedIn post by a person, written on its own topic; judge tells, not topic.)\n\n=== TEXT A ===\nUnfortunately, almost nobody is doing Scrum as defined in the Scrum Guide, which, by definition, is the only possible Scrum. \n\nLet it sink in.\n\nScrum has died.\n\nI don't believe it's only because \"bad organizations\" do not want to empower people.\n\nScrum's dogmatism and unwillingness to receive feedback from the community essentially contributed to this. Ideas on how to improve Scrum bounce off the wall. Decisions are made in secret.\n\nWhere are the transparency and openness? What about co-creation? This is not what Agile leadership is about.\n\nIn my opinion, Scrum lacks continuous product discovery, which makes it the solution space framework. \"Inspired,\" \"Continuous Discovery Habits,\" or \"Sprint\" are classics every PM should read.\n\nAnother aspect is releasing value. I'd argue that usable Increment is not enough. In order to provide value, the Increment must be released to the customers. \n\nDon't get me wrong. Most Scrum ideas are great. I'm a great advocate of what's in the framework.\n\nAt the same time, ignoring the problem space and the importance of releasing value (and the associated feedback loops!) makes me wonder:\n\n\"Is it intelligently incomplete?\"\n\nIf so, why for so many teams does it become a feature factory framework?\n\nAnd even more importantly:\n\n\"Han can we improve it?\"\n\n=== END OF TEXT A ===\n\n=== TEXT B ===\nI shipped a feature nobody used. It still stings.\n\nTwo years ago, my team kept hearing the same request: \"We need better reporting.\"\n\nSo we built it. A beautiful dashboard. Filters, exports, scheduled emails, the works. We polished it for 6 weeks and launched it with a big announcement.\n\nCrickets.\n\nAfter a month, 3% had tried it once. 0% stuck around. When we finally sat down with users, we heard the painful truth:\n\nWhen they said \"more reporting,\" they meant \"just give me the answer.\" Not another chart to interpret.\n\nWe had solved our interpretation of the request, not their actual job-to-be-done.\n\nThat flop changed how I build forever:\n\n**1. Fall in love with the problem, not the solution.**\nWe spent 6 weeks building and 0 days shadowing users. Now I won't let my team design anything until we've watched 5 users struggle with the problem live.\n\n**2. Ship the embarrassing version first.**\nWe could have validated value in 2 days with a manual weekly email with insights. Instead we built automation for a workflow nobody wanted.\n\n**3. Define failure upfront.**\nWe never agreed on: \"If X% don't retain in Y weeks, we kill it.\" So the zombie feature lived in our codebase for a year, adding maintenance cost and guilt.\n\nThe most expensive code is the code nobody uses. The best PMs I know aren't the best builders — they're the fastest learners.\n\nHave you ever shipped something nobody used? What did it teach you?\n\n👇 I’d love to hear your story.\n\n#ProductManagement #Startups #Leadership #BuildInPublic\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n",
+  "max_output_tokens": 16000,
+  "store": false,
+  "reasoning": {
+   "effort": "medium"
+  }
+ },
+ "usage": {
+  "input_tokens": 1423,
+  "output_tokens": 478,
+  "reasoning_tokens": 359,
+  "effort_echoed": "medium",
+  "served_model": "gpt-5.6-sol"
+ },
+ "verdict": {
+  "more_ai": "B",
+  "confidence": 5,
+  "tells_A": [
+   "Self-applause phrase: “Let it sink in”",
+   "Several punchy standalone fragments",
+   "Filler transition: “At the same time”"
+  ],
+  "tells_B": [
+   "Bold numbered list with label-style openers",
+   "Repeated negative parallelism",
+   "Exactly three neatly packaged lessons",
+   "Generic LinkedIn-style anecdote arc",
+   "Participial tail: “adding maintenance cost and guilt”",
+   "Maxim-like recap ending",
+   "Uniform punchy rhythm",
+   "Performs for an imagined crowd with a closing engagement prompt"
+  ]
+ },
+ "response_raw": {
+  "id": "resp_06cd5d4bdab25471016a9e74eeb5dc87d29184e5eba79cd701",
+  "object": "response",
+  "created_at": 1788769518,
+  "status": "completed",
+  "background": false,
+  "billing": {
+   "payer": "developer"
+  },
+  "completed_at": 1788769526,
+  "error": null,
+  "frequency_penalty": 0.0,
+  "incomplete_details": null,
+  "instructions": null,
+  "max_output_tokens": 16000,
+  "max_tool_calls": null,
+  "model": "gpt-5.6-sol",
+  "moderation": null,
+  "output": [
+   {
+    "id": "rs_06cd5d4bdab25471016a9e74ef31f487d2916ec9fd10f37f4c",
+    "type": "reasoning",
+    "content": [],
+    "encrypted_content": "gAAAAABqnnT2CO3ikN-6WRI3zOrTBHqqISEmO9bHTuyDQwAio0OnZkg27--gJEK_XFtkssyXOMnmBH5x0pTT3Ig83EIale0giRQRgIAxR-NYZA57F2zEoqBUFxOF7egLYCC0w5-wWg2akRNKS0qKMnKtieOc4V3-Luj15CrkrXT8vQcxz-nOxLqF2W38UKnMdhgEgE4M9jY2_yFV1CE0agOqeMvrc490djM7C-rtYOaPiEGmv0KtviMv7bUDN5LU9lKI-81tRlPi2UwPy72dyDJRtCe7bi3ziXxhxql307mwQIAlWaG4h3jD2bCu67ssVe2V40zmnntUHJmcc-1phMhJhmfzREJMCc6Mgmj4Nd8HYzaKY4M3bK94KTFVzDtGDaTCemq8WOPTuj0ZdbKVpv569keiSdmoBObN82-RCsYaMjo3EOqMPi43DCDwLYCNfUnqsuEal7J91S0B-WkJW7oEWcVRsyeNjZVDgB-iQP9H61ZfKy5kZBTCQqoh5ehbfvs9K7kcNaZjCNykUqzWehsDHTWX_e0M8EwxEkvfddujF_hqrYg3jy7NSXAs2HfPDPVQjZspvL5osP39cUHKGts-qL9pRaHJij26Bd6vSaEEQGhm-iBChXiQk_JG3Hmw4JOr-0wv89q9p2QyuUtsnDYMxCg5cBUqcgccst2QzTdbO92XGtIZcxIYo2I_NXXoT4Jyg6QU1d6ogKiNE5zlqKulGAZIZ3Vxj-NNnyPU2TcyXYGECOJ0eSG5moUWCfBTUkx1atO-twgQmChWsaDBIod6QbU4s_jla93I8algNyhUsCz0DkXkw0oFW6ue2AOnpHMhzLqLdrZMO0nBF0Db_h7CQNDs2db_CaK2F0fpBV9YeL--JQX7mJggOyDWNh-6UmrmoZpGMBaic7f18iwJe8W_4ArLBYvAjd5CQWM89s_ixunX4piKtFtokDHWySlWcptKrrDGSVkHEmh-xrHpeMpuWpbJzyOOeD4qXrldJRIfp-RTL5WSp6YlZyTvCm1b6PL1syW-uX9Hb_klOVR458jJWakU8dpp7j-_Y5Il8lPeO9GxYH4FGGULiyeB1fG-QPWs2E-HSoa8zPOZFzlzYYRyPbW42Q1bsnsBCqTnoLXc3khK8-3Lh2jS_lsu-sE51yolOZddxxDLjtZHeRdQQjzDKBBUd4PgwA4rwQACBxDZNm4WOi5yXVFWNuFlSYvzY85UMpBJmIAzzq6yzGsW_b2NKhQ3fBni-zNnxkgglFLIr_0Efbbt30EVpSC-7n-_xosE2dUPuxLqYjuiS5uP9VXLmu9qYcuNTLlGWfNM3eyF4C1ABuZ0_Kbaek49aKeAdQmaIGVeW7vw6ToBCMkrwyA4E4Ql4wMlWvXUhDpHcC0Can8DT1hVqtcYZPw0v4LYr-cQDNUI886e89ksRu62UcaB2D9d0LZhTbp5NOkynqb4CLminCbnBJPiZA9mqVrEyk9g4YdM9UTSQVJ9uiVlPv8cyK_syNoTPKgyE56R7EmAhmfd3C7MSEv0alSL4qX19Gue-kY6JQCOj_RrMz1V2aZIYcpNG8SjSyBn6jdKH0frwzF4MkhXoXTiuoP0YTTFHizg-nWaPNEY5C1xHgnDaVcF5Yl0Q4jICdxoPF0kBi3jWEkOaJb43_7Rgq2cLELORVI45Gm1BpbuHahJmEFcRAI9sl1Kf7J2dBqiQIFwtxCDOOEpvy9YOLEWqgnSVZXCtoumod3Wmynz3h6yttC4h0l0KbK3-YGfWFycgREpUjgz5-AaNJm02FZjjCkRBQABAJTfmFyQpmY8dJa2cTdvBH47X4yDexDDca0wANPhtFktWJrv-MFMZZGucPmGIPSEumZhqk4nRTVXURsUr4BYRjQtr9PMH4K3fmugNVPrlkg_CS-5JCdRid9flpi68eB1B1n9c1ENwcnptNeLaqZjKgupRAxj2NoYnnYGjpne7fFp8DvRK5TZEOZ4kpVSY3D1_WlC1fJYLCB0z9JXJxP1zj1s7-h8ZFZV5ylp96VTaNh59ZzZ4melD2s6TyrOP8paogMZ8ydmYqRgSbnn-0qVrOxmsMXx4GNg_yjX-K2t_fEERQpMD0_aSJn1mOqFncrcc_nfMHlfLib4UKJRCB28f1WOzomyvFM4If644homtnhNbMw6PoqBKdCNFjH5I_IWPHJq2CQgrQqwmMwno9-MT-QcXODtezegy1oDbCzyaZtIwqCiOP5Kat8Q2Lc_tVAY7ItE1f0fOLnRHkgiaPOMbML7tb-BAA4maP8vInXwpKFAbPegYl1VUE0KV9q_bxIqJPq8J8x3h77dPNv63FvgR2eETxk9Mlv1vX1rtGHE58TZTlX6rspMO9EQDRhYAcDNA-hNe9t1Hv6PbuEIEo0Pd0LZRKatLk7NX1kGwlPYtMxMyoGWQxqnN-nt8qKRLCEqEzbyPfKFuB3c8LvxI9s-HDaDAbFd5DyZwX9bpe1ZvfsiVMX8UHKPf-M-FhdzPVBnpNl7YSFj6VMZgiV93s7hqtIsi9u7L8ulB_O_gp9SLVKFQBWdZK4XtaAFRYobp90cyesNRa1VI_7u-d9umU6nO0mXWK7Ywz1CSzx5VRX7GjPfljStXP1iSjIx7FR10sIxgzIxkBSonCaRR9uCPeK_FeCwFKdr2GN5J2wifT-ZGgzi1zeCFCwZjGBlY8iHNHp6_FzJJMlGzHTagt2GRnuyZasGovW_XEawq0QX3ga84DLcn-flwhz8OFEEZAJgsk5C8NqHPf0ZjsOGzuZCwxyv0q49IYssNOw_4WK4wDEmL2GzQnLhtcpugCR2ecOpadgyn4K5LFAh-vsIik0XLRIWaU0YppZJ9pnOsRqEWfi2Zrm2ioIKLKGZEBxFBEad1nXjVN8qY0xY9VKJCdpp7DxbXk2SJed9p0VBI6piyqNoPr2W1eiheNwkOdWpJQBiGzRNHuuCNNZ_zTrqFuMKb9eMGErnsuHxIG6YJ9PCavqofjjtxM4rXytKjb-BfwD1yTlkMnxGH7UjSFR_R3Kdk3Kgqs734vqwBlQj3GYZ1lp9tGFvcRNDkQRVcC9RFNW-GrBucTH4xa4y50jHUMd8dPNUgoG65CezqgTYZmDDSAhsX_uY4_VjQ26YwJIVNs__zwrp-07vUf8VSMR1J1c0HSonCefuypWNgg19VtrNrTNYgG13PHbdCbx6jmvoiVhpfefeaChpaZoPUpvbhx0m72x2mce-Eyu2eruENOGzRoL2nvIOEBEVZSQ-9818k42MnyPwjfokjsX3tw_U3_Cm8ns-hVFiJtW_DEWLHpkZJ4nFzDeAvodSpEMBnZKacIK_J0WNHSDC5armULaacEuZ7FHnXNJv8UoT1bfeougPxK2vspWJE7IWJS9HokCsGk7rk9iyr8myTErh9O7DSI89_SaxaL4s4r8tegDeqGfQ8be2MnOXJCeCZKAU4miay8cjitu2-9m65CzeH60ox2halGHW0xlS8xovqZJZ2rbDWiRb6hbuNq_9sPQlwNQ=",
+    "summary": []
+   },
+   {
+    "id": "msg_06cd5d4bdab25471016a9e74f5512c87d2a281cfaf431ccbcb",
+    "type": "message",
+    "status": "completed",
+    "content": [
+     {
+      "type": "output_text",
+      "annotations": [],
+      "logprobs": [],
+      "text": "{\"more_ai\":\"B\",\"confidence\":5,\"tells_A\":[\"Self-applause phrase: “Let it sink in”\",\"Several punchy standalone fragments\",\"Filler transition: “At the same time”\"],\"tells_B\":[\"Bold numbered list with label-style openers\",\"Repeated negative parallelism\",\"Exactly three neatly packaged lessons\",\"Generic LinkedIn-style anecdote arc\",\"Participial tail: “adding maintenance cost and guilt”\",\"Maxim-like recap ending\",\"Uniform punchy rhythm\",\"Performs for an imagined crowd with a closing engagement prompt\"]}"
+     }
+    ],
+    "phase": "final_answer",
+    "role": "assistant"
+   }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0.0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+   "context": "all_turns",
+   "effort": "medium",
+   "mode": "standard",
+   "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": false,
+  "temperature": 1.0,
+  "text": {
+   "format": {
+    "type": "text"
+   },
+   "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+   "image_gen": {
+    "input_tokens": 0,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "output_tokens": 0,
+    "output_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "total_tokens": 0
+   },
+   "web_search": {
+    "num_requests": 0
+   }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+   "input_tokens": 1423,
+   "input_tokens_details": {
+    "cache_write_tokens": 1420,
+    "cached_tokens": 0
+   },
+   "output_tokens": 478,
+   "output_tokens_details": {
+    "reasoning_tokens": 359
+   },
+   "total_tokens": 1901
+  },
+  "user": null,
+  "metadata": {}
+ }
+}

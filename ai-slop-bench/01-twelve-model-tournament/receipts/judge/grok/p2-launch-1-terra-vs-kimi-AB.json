@@ -1,0 +1,90 @@
+{
+ "judge": "grok",
+ "model": "grok-4.6",
+ "key": "p2-launch-1-terra-vs-kimi-AB",
+ "wall_s": 98.0,
+ "run_utc": "2026-09-07T00:11:11Z",
+ "request_body": {
+  "model": "grok-4.6",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a launch announcement of up to 500 words for a new feature of a B2B helpdesk product: a Slack integration that posts a daily summary of open support tickets to a channel of the customer's choice. The audience is existing customers.\n\n=== TEXT A ===\n## New: Daily Open Ticket Summaries in Slack\n\nKeeping up with support shouldn’t require another dashboard check.\n\nWe’re excited to introduce our new **Slack integration**, which delivers a daily summary of your open support tickets directly to the Slack channel of your choice.\n\nEach day, your team can receive a clear snapshot of outstanding support work—making it easier to stay aligned on customer issues, spot priorities, and take action without leaving Slack.\n\n### What’s included\n\nYour daily Slack summary gives your team visibility into open tickets at a glance, including:\n\n- Total number of open tickets\n- Tickets grouped by status or priority\n- Key ticket details to help identify what needs attention\n- Direct links back to your helpdesk for quick follow-up\n\nWhether you share it in a dedicated support channel, an account-management channel, or a broader operations workspace, the summary helps the right people stay informed.\n\n### Why it matters\n\nSupport is a team effort. With daily ticket summaries in Slack, teams can:\n\n- Keep customer-facing teams aware of unresolved issues\n- Surface urgent or aging tickets before they slip through the cracks\n- Reduce manual status updates and dashboard checking\n- Create a shared daily rhythm around support priorities\n\n### Getting started\n\nAn administrator can connect your Slack workspace and choose the channel where daily summaries should be posted. Once configured, your team will begin receiving scheduled updates automatically.\n\nVisit **Settings → Integrations → Slack** to connect your workspace and set up your daily summary.\n\nWe’re excited to help your team keep support work visible, coordinated, and moving forward.\n=== END OF TEXT A ===\n\n=== TEXT B ===\n# New: Daily Ticket Summaries, Delivered to Slack\n\n*Start every day knowing exactly what's in your support queue — without opening a new tab.*\n\nYour team's support workload shouldn't live behind a login. Today, we're launching our new Slack integration: an automatic daily summary of your open tickets, posted to any Slack channel you choose.\n\n## Why we built it\n\nYou told us visibility was the gap. Support agents live in the queue, but managers, engineers, and the rest of the company live in Slack — and they had no easy way to see what customers were asking about. Checking in meant another login, another tab, another interruption.\n\nThe daily summary closes that gap. Every morning, a clear snapshot of your open tickets arrives where your team already works, so everyone starts the day on the same page.\n\n## What's in each summary\n\nPosted at the time you choose, each digest includes:\n\n- **Total open tickets**, broken down by priority\n- **Unassigned tickets** that still need an owner\n- **Tickets awaiting a response**, so nothing goes stale\n- **Your oldest open ticket**, because aging issues shouldn't hide\n- **A direct link** to jump straight into the full queue\n\nOne message. Ten seconds to read. A complete picture of the day ahead.\n\n## Set up in under two minutes\n\n1. Go to **Settings → Integrations → Slack**\n2. Click **Connect to Slack** and authorize your workspace\n3. Pick your channel and delivery time\n4. Save — your first summary arrives tomorrow morning\n\nNo admin approval workflows, no configuration files, no downtime.\n\n## A few ways teams are using it\n\n- **Support leads** post summaries to their team channel each morning to kick off triage\n- **Engineering teams** follow the support channel to spot bug reports trending upward\n- **Executives** get visibility into support health without asking for a report\n\n## Available today\n\nThe Slack integration is live now for all customers, on every plan, at no additional cost.\n\n**Ready to try it?**\n\n[Connect Slack now →] | [Read the setup guide →]\n\nAs always, we'd love your feedback — tell us what you'd like to see in future summaries at [support email].\n\nHere's to fewer surprises hiding in the queue.\n\n— The [Product Name] Team\n\n---\n\n*Word count: ~360. Placeholders in brackets — product name, links, and contact email — can be swapped in before publishing. Happy to adjust the tone (more formal, more playful), trim it for email format, or add a FAQ section if helpful.*\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n"
+   }
+  ],
+  "max_tokens": 16000,
+  "stream": true,
+  "stream_options": {
+   "include_usage": true
+  }
+ },
+ "usage": {
+  "input_tokens": 2297,
+  "output_tokens": 201,
+  "reasoning_tokens": 6339,
+  "cost_usd": null,
+  "served_model": "grok-4.6",
+  "provider": null
+ },
+ "verdict": {
+  "more_ai": "B",
+  "confidence": 4,
+  "tells_A": [
+   "artificial enthusiasm (excited to x2)",
+   "participial tail (making it easier to...)",
+   "triads (channels; aligned/spot/action; visible/coordinated/moving)",
+   "headers and bullet lists",
+   "generic/no concrete details",
+   "em dash as clause joint",
+   "uplifting recap ending"
+  ],
+  "tells_B": [
+   "em dashes as default joint",
+   "punchy fragment triad (One message. Ten seconds...)",
+   "triads stacked (login/tab/interruption; no X/Y/Z; three personas)",
+   "headers, numbered lists, bold-label openers",
+   "manufactured anecdotes (you told us; ways teams are using it)",
+   "rhetorical question (Ready to try it?)",
+   "negative parallelism (shouldn't; No X, no Y, no Z)",
+   "signposting headers",
+   "every ending uplifts"
+  ]
+ },
+ "response_raw": {
+  "id": "9e3ed1e6-1370-90ff-add3-9b5c8487a9b3",
+  "model": "grok-4.6",
+  "created": 1788739871,
+  "system_fingerprint": "fp_e41c6060b2628547",
+  "object": "chat.completion",
+  "streamed": true,
+  "usage": {
+   "prompt_tokens": 2297,
+   "completion_tokens": 201,
+   "total_tokens": 8837,
+   "prompt_tokens_details": {
+    "text_tokens": 2297,
+    "audio_tokens": 0,
+    "image_tokens": 0,
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 6339,
+    "audio_tokens": 0,
+    "accepted_prediction_tokens": 0,
+    "rejected_prediction_tokens": 0
+   },
+   "num_sources_used": 0,
+   "cost_in_usd_ticks": 430660000
+  },
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "{\"more_ai\": \"B\", \"confidence\": 4, \"tells_A\": [\"artificial enthusiasm (excited to x2)\", \"participial tail (making it easier to...)\", \"triads (channels; aligned/spot/action; visible/coordinated/moving)\", \"headers and bullet lists\", \"generic/no concrete details\", \"em dash as clause joint\", \"uplifting recap ending\"], \"tells_B\": [\"em dashes as default joint\", \"punchy fragment triad (One message. Ten seconds...)\", \"triads stacked (login/tab/interruption; no X/Y/Z; three personas)\", \"headers, numbered lists, bold-label openers\", \"manufactured anecdotes (you told us; ways teams are using it)\", \"rhetorical question (Ready to try it?)\", \"negative parallelism (shouldn't; No X, no Y, no Z)\", \"signposting headers\", \"every ending uplifts\"]}"
+    }
+   }
+  ]
+ }
+}

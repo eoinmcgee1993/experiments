@@ -1,0 +1,140 @@
+{
+ "judge": "sol",
+ "model": "gpt-5.6-sol",
+ "key": "calib-human-15-2022-10-25-vs-grok-3-MH",
+ "wall_s": 10.2,
+ "run_utc": "2026-09-07T08:25:26Z",
+ "request_body": {
+  "model": "gpt-5.6-sol",
+  "input": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n(One of the texts is a real LinkedIn post by a person, written on its own topic; judge tells, not topic.)\n\n=== TEXT A ===\nWe shipped a feature last quarter that almost nobody used.\n\nNot “low adoption.” Unused. After six weeks the activation rate was 1.4%. Support tickets: zero. Not because it was broken. Because almost no one cared enough to find it.\n\nWe had been so sure.\n\nA few power users mentioned it in interviews. It showed up on a competitor slide. The mocks looked clean. Engineering said three sprints. We greenlit it, built it, launched it, and watched the dashboard stay flat.\n\nThe unused code wasn’t the expensive part. The expensive part was how easily we talked ourselves into it. We treated a handful of polite “that would be nice” comments as demand. We treated a finished Figma file as validation. We celebrated shipping instead of learning.\n\nWhat I took from it:\n\nInterviews are not proof people will change their behavior. Users are kind. They will endorse a feature they will never open.\n\n“Nobody told us not to build it” is not a green light.\n\nIf you cannot name the job-to-be-done in one sentence, and who feels that pain every week, you are probably building a nice-to-have.\n\nA small, ugly experiment would have told us the same thing in days. We chose the satisfying path of a “real” launch instead.\n\nWe sunsetted it quietly. The team was embarrassed for about a week. Then we started treating every new idea as a hypothesis with a kill date, not a backlog item with a due date.\n\nThe feature wasn’t an engineering failure. It was a curiosity failure. We stopped asking “will they actually use this?” the moment the tickets hit Jira.\n\nIf you’ve shipped something into the void, you know the feeling. What did it teach you?\n=== END OF TEXT A ===\n\n=== TEXT B ===\nIn Product, at least half of your ideas will not work. \n\nProduct Discovery can reduce waste and rework by 50%.\n\n7 books that will teach you everything you need to know:\n\n\n1. Inspired by Marty Cagan\n\nLessons:\n• At least half of your ideas are not going to work. \n• Product Discovery results in a validated product backlog.\n• PM, Designer, and Engineer must work together.\n\nTip: This is simply the number one book for all Product Managers.\n\n\n2. Continuous Discovery Habits by Teresa Torres\n\nLessons:\n• Structured and sustainable approach to continuous discovery and opportunity mapping.\n• It's essential to interview your customers regularly (at least weekly).\n\n\n3. The Mom Test by Rob Fitzpatrick\n\nLessons:\n• You shouldn't ask your mom whether your business is a good idea because she loves you and will lie to you. \n• The ultimate guide for interviewing your customers.\n\n\n4. Jobs to be Done by Tony Ulwick\n\nLessons:\n• People don't buy products. They \"hire\" them to do jobs.\n• How to define and prioritize customer needs.\n\nTip: Free audiobook is available on Tony Ulwick's website. Link in the comments.\n\n\n5. Sprint by Jake Knapp\n\nLessons:\n• Describes a specific Product Discovery technique invented in Google.\n• How to solve complex problems and test ideas in just 5 days.\n\nTip: I recommend comparing it with Teresa Torres's approach. In particular, you may want to interview your customers before ideating. In that case, you can interview customers before the Sprint.\n\n\n6. The Lean Product Playbook by Dan Olsen\n\nLessons:\n• The complete Lean Product Process - discovering and creating products while minimizing waste and rework.\n• Customer Discovery, Business Model, Value Proposition, MVP, Product-Market Fit, Prototypes, UX, Key Metrics, and more.\n\nTip: I could recommend The Lean Startup, but this book is, in my opinion, much more comprehensive.\n\n\n7. Testing Business Ideas by Alexander Osterwalder and David Bland\n\nLessons:\n• Start from an idea, then use the design loop to improve it.\n• Use discovery experiments to examine your assumptions.\n\nTip: Dozens of tools and techniques anyone can easily apply.\n\n\nBONUS:\n\n\n8. Radical Focus by Christina Wodtke\n\nLessons:\n• Select only one OKR. Their goal is to create focus on what's not urgent yet critical for the long-term growth of the business (strategy).\n• Do not incentivize OKRs.\n\nTip: OKRs work perfectly with the Opportunity Solution Tree as defined by Teresa Torres. Your business outcome can be expressed as OKR.\n\n\n9. Escaping the Build Trap by Melissa Perri\n\nLessons:\n• Why organizations cultivate a feature-factory mindset and how to change it.\n• Focus on outcomes, not outputs, and on understanding the problem in depth to avoid the Product Death Cycle trap.\n\n\nHope that helps.\n\nWhat would you add to that list?\n\n#productmanagement\n\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n",
+  "max_output_tokens": 16000,
+  "store": false,
+  "reasoning": {
+   "effort": "medium"
+  }
+ },
+ "usage": {
+  "input_tokens": 1784,
+  "output_tokens": 299,
+  "reasoning_tokens": 216,
+  "effort_echoed": "medium",
+  "served_model": "gpt-5.6-sol"
+ },
+ "verdict": {
+  "more_ai": "A",
+  "confidence": 4,
+  "tells_A": [
+   "repeated negative parallelism",
+   "relentless short punchy fragments",
+   "manufactured anecdote with polished lesson",
+   "rhetorical contrasts that always land",
+   "uplifting recap-style ending"
+  ],
+  "tells_B": [
+   "heavy headers, numbering, and bullets",
+   "generic audience-facing close",
+   "repeated bold-label-style openers"
+  ]
+ },
+ "response_raw": {
+  "id": "resp_0770797b4c8d068b016a9e74eb183087d295ce501d9caa0756",
+  "object": "response",
+  "created_at": 1788769515,
+  "status": "completed",
+  "background": false,
+  "billing": {
+   "payer": "developer"
+  },
+  "completed_at": 1788769524,
+  "error": null,
+  "frequency_penalty": 0.0,
+  "incomplete_details": null,
+  "instructions": null,
+  "max_output_tokens": 16000,
+  "max_tool_calls": null,
+  "model": "gpt-5.6-sol",
+  "moderation": null,
+  "output": [
+   {
+    "id": "rs_0770797b4c8d068b016a9e74ed1a6c87d2b98717921d0bf52c",
+    "type": "reasoning",
+    "content": [],
+    "encrypted_content": "gAAAAABqnnT1br2fTb55wUXXZ4HqIBsJge1lVw4nIG4qbKBMj3yiIvN694XJ-ZlpQoEWjfgFP4c85F51xWEuaGjlBc6_atP4bp021hIhVWsbEe6k_-UiuAZdIwkbPIKf27PAry9oa_XW8WkdVRryB-OhVAEYVHzK-PDibRvCpSvDL19ET16YLjIfEI8XlllxpeuZbeuSWaxqsn0RoGlQCogbHnd3mlTtJJkdPhzTqyaYDVkhIku_xDng_swh5pynaad1fdkslPnaLr-9qXYTsVoZuVp7OYEHOcwd_ZDBj05bc_eekb5rABebwBcTvFTnSQ77zAw34MjJjl23X1MZC8JTJgFpi89cPoqhXqot2FPQ64t_bUXSCHXkpaMP5M0FSz7jamD4fwpjPF30cfzGOxePHI5lT8UgF9E88EQoTUX-7mJcEWBeieQepRVzaqWCPuntij8Oi7Hae7VXuLxWR86KfePzjaw4kdFFuyHCyBeO56NW7yYG9a-vbD2yvsMWD95I2I5PMqyJ23PJXg4Rs79l5g5pHpISfyL8Tz1lpZMT3A--FnAlnqIzzWLZcaKKrisKTH5z5Ih0lbmEwZpD5JRsHEkxO64OgPwz6MXXrl3-MxHbOuqFq5vAFFH6avM_7cBLum8EoayDt7xSMFRWRIEUS0MfOsxu1JoBdACivx8UlqiMasymryFLCJBB2lY-d-bDdYQJ5qyAvblM5ejWz1GiHpp-4mIn2jynGHoP1LeYRcdyY6LwizKgOI975Fs7w10-Q5jCUH-TwaiAI8XeJD8aWhBTtvKctvlTLrmdJOSYCq60KDC-5SveA3sCig3GwYPlcCUJfTOMcgUiLTZShssC2Y6YofdCejboa3ZdFIKLRvVUuW2aE7f_tHVxQk_72nQ11nCv681P_cxSLWwRsIM4aHtt3oADG_LSwPM0Hi1wIchOB8Ri8JDhYXqJ2oloe7TJAnf2WFNZTMbkuDAMikUhsAWMEt1PRU59tWt3J3rfp8IhyqvT71w0hx6SXyTMztxCpB7GRu4vvnCPz-5DVQX_est1maAkJftSqIS14W0Z6bNLj9wVjol01tQTvAToW53LzGft93dCq3MGPLs6I4wjZDRSiZVpc1F6SqmxH7mlPjUzwNUQyy8YS2BzeqWLE2_SIiW_AVw8Vr8utxfdvNAv-G7KAhzoYnhFFampc_XdF28Zn0yO9StjHyP9SnJj_Um_6DHK4sOA9I8FaqaLUYim79pQse910dFar2YhAw2bQWSrnQBWn7NH9GnrD-jEb3OHGOpwpZ02i7b3x9db-ejQIwoHdX3jUhZj9a7oxvVA4S9Ulf6pImY51DWv0R3zbrjQBXI5T_r_rXerJhO-Soa0HEb-AFD3jluhv7BrGhc7ly0U1JBlM1kkkeN5vbtbVBHgfoiIOIrydGRo5-EO5bI3-SUkmN6JQYU8VwPSJ76TQuM3z8612FPbNvWLgeqSgJfOuCbguJrLX9qo7E3SOEZpMdknVmRgGgy32WZAXM8MyJC7vXk1bHkOQv0Ok5kR2XNNWpWQ1pHTxSfVnelFpuLUyB1hj83ovMmwrc3WBAMtIsiqH61P_TK4jBY1zHDalWQyPl9WdJX33UONoENrYQE7xeLLNZVJUiIdpgDaGlb-0sWeTIXSwGjTZGlYsxq1iUtnfM7TLEFD7GtQgE_zZX_Mb57ugthPa5zGlGrfAerwM_NCvxCN7j-h6RXQev3XvGr2_2z3zp1dqWQR5TYMBbjZJILq9pzbJTf8c6vklE0ilcjroQuCjMZHVYch0Mzk_gYH_wTNetLYu3O1wkhhuWyU0a7waFyPKzucDJqQwT0z6DRWYA9TJx8QsFkV7xoW8I0EEp7oMpIvJk7rPRgJZAL5RiI2aMEm3soZB4jVEPF5F5GJvIjsMey5yokYMvXtBBlVBStmRHlc2YDlIcFl9JJNosRhdA170hN6pazj19rLbJ6S-ywNBNbM84TTLwSTOeeGwnAH2a5mA_CoGocKfHNc-3s6np2W8VwBZdC7UEkN2H6SFH0k4wjxgIM6mcNm0SY5_l3XuWkh7Hwz2i-YnN1U_pq-RAS2DlP45G2EMMple86ClCzO9zXmSo4rgTx3p06WwynuY4CJPbsbT2l6XgdodLyTI0hk46648z26f14t1ODNEKBrmiWZN7R97sd4xHOL0tTypwIqpq9aMX9Y8o9uRLkfh99qRstPjrTuOPM07oyvrin-cDrqHhPfwJ0CR300Y-5pHk62hgAzBKDgGQrqJ3ODPLlcdL96QXlCDKbiVt_E8F26E9M0nyTn7xeMM-bEFEAQCYLLibtGXCUuw13U_Zh-Xt0izsdqG4LgK0FhgJe7ggRpVXRAZc2btSe7esLfdG8Ln-OUEnnZyLIn86x639gsSDKlUQXTrBnCxGlAgkubvG4yR0Ju1zLCym1Mrao3pI9ugOXcTJG81fR_gb235hIW6aNB2ErpcQGEHhGiAeXc_CobLmUeflzF6j9CZcIyiwpb5yOaHXa7W6Vh4zrfHGqMx8DMdQ==",
+    "summary": []
+   },
+   {
+    "id": "msg_0770797b4c8d068b016a9e74f1f03487d293fe31a35f82da60",
+    "type": "message",
+    "status": "completed",
+    "content": [
+     {
+      "type": "output_text",
+      "annotations": [],
+      "logprobs": [],
+      "text": "{\"more_ai\":\"A\",\"confidence\":4,\"tells_A\":[\"repeated negative parallelism\",\"relentless short punchy fragments\",\"manufactured anecdote with polished lesson\",\"rhetorical contrasts that always land\",\"uplifting recap-style ending\"],\"tells_B\":[\"heavy headers, numbering, and bullets\",\"generic audience-facing close\",\"repeated bold-label-style openers\"]}"
+     }
+    ],
+    "phase": "final_answer",
+    "role": "assistant"
+   }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0.0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+   "context": "all_turns",
+   "effort": "medium",
+   "mode": "standard",
+   "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": false,
+  "temperature": 1.0,
+  "text": {
+   "format": {
+    "type": "text"
+   },
+   "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+   "image_gen": {
+    "input_tokens": 0,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "output_tokens": 0,
+    "output_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "total_tokens": 0
+   },
+   "web_search": {
+    "num_requests": 0
+   }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+   "input_tokens": 1784,
+   "input_tokens_details": {
+    "cache_write_tokens": 1781,
+    "cached_tokens": 0
+   },
+   "output_tokens": 299,
+   "output_tokens_details": {
+    "reasoning_tokens": 216
+   },
+   "total_tokens": 2083
+  },
+  "user": null,
+  "metadata": {}
+ }
+}

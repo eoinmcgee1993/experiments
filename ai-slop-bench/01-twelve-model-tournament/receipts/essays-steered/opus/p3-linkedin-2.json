@@ -1,0 +1,95 @@
+{
+ "variant": "steered",
+ "arm": "opus",
+ "label": "Opus 5",
+ "vendor": "Anthropic",
+ "transport": "openrouter",
+ "model_requested": "anthropic/claude-opus-5",
+ "serving_path": "OpenRouter -> Anthropic (first-party key unavailable at run time)",
+ "prompt_id": "p3-linkedin",
+ "sample": 2,
+ "prompt_text": "Write a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n\nPlain prose only: no headers, no bullet points, no bold text, no em dashes. Write like a person.",
+ "run_utc": "2026-09-06T14:06:53Z",
+ "wall_s": 20.1,
+ "request_body": {
+  "model": "anthropic/claude-opus-5",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Write a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n\nPlain prose only: no headers, no bullet points, no bold text, no em dashes. Write like a person."
+   }
+  ],
+  "max_tokens": 8000,
+  "provider": {
+   "allow_fallbacks": false
+  },
+  "usage": {
+   "include": true
+  }
+ },
+ "usage": {
+  "input_tokens": 78,
+  "output_tokens": 1126,
+  "reasoning_tokens": 303,
+  "cost_usd": 0.0282546,
+  "served_model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS"
+ },
+ "essay_sha256": "f67a8bb0a690a5eaf25f8333f8424dab068e048bb4e3f7ea8eff9684a22ce64e",
+ "essay_words": 470,
+ "response_raw": {
+  "id": "gen-1788703591-w149ZjvyCvi7nL3IVMxM",
+  "object": "chat.completion",
+  "created": 1788703591,
+  "model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "We spent four months building a custom dashboard builder. Six weeks after launch, 1.8% of accounts had created a dashboard. Half of those were internal test accounts.\n\nI still think about that number.\n\nThe feature wasn't badly built. The engineering was solid, the drag and drop worked, we shipped on time. It just turned out that almost nobody wanted to build a dashboard. They wanted to know one thing: whether the number they cared about was going up or down this week.\n\nHere's where I went wrong, and it wasn't a research failure in the way you might expect. We did talk to customers. Nineteen of them, over three weeks. A lot of them asked for better reporting. Some of them said the words \"custom dashboard\" out loud, unprompted. I took that as validation and moved on.\n\nWhat I didn't do was ask what they would stop doing once they had it. That question, which I now ask in every discovery conversation, would have saved us a quarter. Because the honest answer for most of those customers was nothing. They were already pulling a CSV into a spreadsheet once a month, it took twenty minutes, and it was fine. The pain was real but small, and small pain does not motivate anyone to learn a new tool.\n\nThe other thing I missed is that people are generous in interviews. When you ask someone what they want, they will help you. They will brainstorm with you. They will describe a feature because describing a feature feels more useful than saying \"honestly, this isn't a big deal for me.\" That generosity is easy to mistake for demand.\n\nNow I try to look for evidence that someone has already tried to solve the problem themselves. A spreadsheet held together with formulas nobody understands. A Zapier automation. A recurring calendar reminder. Somebody paying a contractor to do it manually. Those workarounds are expensive and awkward and they exist anyway, which tells you the pain is worth money. Nobody builds a workaround for a problem they don't have.\n\nWe eventually killed the dashboard builder and replaced it with a weekly email showing four metrics with an arrow next to each one. It took a sprint. Open rates sit around 60% and it comes up in sales calls constantly.\n\nThe lesson I keep relearning is that requests tell you where people are looking, not what they will do. The gap between those two things is where roadmaps go to die.\n\nIf you're about to commit a quarter to something, one question worth sitting with: what is the customer doing today instead, and how much does it actually cost them? If you can't answer that with specifics, you probably aren't ready to build yet.\n\nI wasn't. Four months taught me that better than any framework could have.",
+     "refusal": null,
+     "reasoning": "I'm aiming for around 400-450 words, written in plain, human prose with short paragraphs and concrete details, avoiding clichés and em dashes so it reads naturally rather than like typical LinkedIn fare.\n\nI'll ground the story in something specific, a custom dashboard builder that took a quarter to build but only landed 2% adoption, and shape the lesson around confusing loud, stated requests with what people actually do. The tone should stay humble, ending on a clear, concrete takeaway rather than a generic platitude.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm aiming for around 400-450 words, written in plain, human prose with short paragraphs and concrete details, avoiding clichés and em dashes so it reads naturally rather than like typical LinkedIn fare.\n\nI'll ground the story in something specific, a custom dashboard builder that took a quarter to build but only landed 2% adoption, and shape the lesson around confusing loud, stated requests with what people actually do. The tone should stay humble, ending on a clear, concrete takeaway rather than a generic platitude.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAISrAgKrgEIERgCKkA8bi1xwGSW1ZfuUGqmxJVIT1wUq7q5aCTO7kqfDHqxrQbepigFIalrITWvb/4zvpLdganl9cYqcON/nG/CBcsKMg1jbGF1ZGUtb3B1cy01OAFCCHRoaW5raW5nWiQ0YzBmMDQ2Zi0yNWZkLTQ1ZmItYmZiMy1hMDhhOGUyNDljYTd6HnVwcm9mXzAxMUNlbkZSYjRqeFBLcXdMUXFXN3dtNqgB7+b11AYSDKkSDuW1pEUGKp+TDRoMU985MB1K/DJna4WYIjDqP3vvuLB1/038k9BN5nbyw5dmfp7nKMXOm4jKQTrfySjFLQbPrhpSCarfs6uybC4qqgYUV+SPhvrx7etAgCCX81oRn5DJHSds5MYoyQdch2HFGGX93QCijDWi20EFG2E7TAcNC5SinhOch9WZLwaLReka3VtMx2kTbFg/hXmSgYGs6Te/Bwb+ok3t7dfVpLIIRaszPuwiwRFpD/MdnIo+MKoXicOzcmi+WPKeABc3ITnVseKc7mOCnjgLiqldluK0FI3XuoesfuHT4MVgcO+BGzBZVWP9kU6ihtyp5JELLiaQqp3xENz50VeEeTPj72aMF9j153lwQgp8uDLAOsptYqLB8jvM5h/FxAWJ7y8ypRxxLDQmFzQUnLZUWgxPcsCfsQKuMxwIDJYMLWumTL68bOL5IkTobxS4/qSYq+c46j5a35NWgr69m5igSfigP3hekstWvEnZsQ3FGFgNwjdW6SOfkT/S3a5LC5yR4VuCY6DiVebV+nlYJvA3fYWQAKH+aTeSNXgA7I12nO5kwxSV41TI8kJdCP7TYrQwq4JkbNqf2njiCt6A/PdVVVa8LAILqCj78xv7K7LNaCJbV3X8q6mjiUyNl2wG9Uc/MWOTOOTrOrhJx1nvAb7d9vt5g7huIZQsxIHhRD8NnJ2WY3dEROHsm7Ocdn1F6+cz8P14N3FLoxtpILRQ6Upbm0j9pIizVLTOvC9axG6PB07TgCwbWvKxT9+l6V7HMJok5EoVUXs4udlMlWEU1EcEakKygMwEzuq/+x5Ia0O/+UHjuFQLeNMxpMLBd31rN/Se+6RemkFA9eStkaaf3TNK7mfqLrlJ4Ga0MrNFF9yRpVPlzmuQdrxu8+3Nar2otUGbE2AIjCPd0HqG9mwuoXYj2fshUcUku2Hs6UNvlYwLUTVmlCJhu0nYl4RcvK2ryFa9wmCyzjl/ZfXx6Tqi3CBagSPfu8VvtMKYvtSeF2Hh+a1Z+ShnLFt5DSA+XJpizBx0ixs7KPCsiBjpbUTRH193j1XtXCESvo6HRkxNdtGTLq56AwUigXttCD78fE2A52gI4NHdrsLL8U1iGQi/Qi6JJH6ry/9TKEWJv6S/QQR6F4tgHrGRkqQoF5QYI49/fhfzzNDAK8iEGBRL+DIMMFyNlHwYAQ=="
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 78,
+   "completion_tokens": 1126,
+   "total_tokens": 1204,
+   "cost": 0.0282546,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.02854,
+    "upstream_inference_prompt_cost": 0.00039,
+    "upstream_inference_completions_cost": 0.02815
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 303,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

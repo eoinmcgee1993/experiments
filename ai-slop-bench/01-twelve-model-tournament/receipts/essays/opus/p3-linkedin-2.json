@@ -1,0 +1,93 @@
+{
+ "arm": "opus",
+ "label": "Opus 5",
+ "vendor": "Anthropic",
+ "transport": "openrouter",
+ "model_requested": "anthropic/claude-opus-5",
+ "serving_path": "OpenRouter -> Anthropic (first-party key unavailable at run time)",
+ "prompt_id": "p3-linkedin",
+ "sample": 2,
+ "run_utc": "2026-09-06T13:24:52Z",
+ "wall_s": 19.4,
+ "request_body": {
+  "model": "anthropic/claude-opus-5",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Write a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used."
+   }
+  ],
+  "max_tokens": 8000,
+  "provider": {
+   "allow_fallbacks": false
+  },
+  "usage": {
+   "include": true
+  }
+ },
+ "usage": {
+  "input_tokens": 43,
+  "output_tokens": 1190,
+  "reasoning_tokens": 334,
+  "cost_usd": 0.02966535,
+  "served_model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS"
+ },
+ "essay_sha256": "f184cec2f3839cfc73f73a3d516411ab214cde03febdb1c931a6598633d64d60",
+ "essay_words": 467,
+ "response_raw": {
+  "id": "gen-1788701071-yJBQHPIdATxWuOdZbluf",
+  "object": "chat.completion",
+  "created": 1788701071,
+  "model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "**We spent four months building a feature. Six people used it.**\n\nNot six percent. Six people. Out of about 4,000 weekly active accounts.\n\nThe feature was a custom dashboard builder. Drag your own widgets, pick your own metrics, save your own views. It came up in nearly every enterprise sales call. It was the third-most-requested item in our feedback tool. Three engineers and a designer worked on it for a full quarter.\n\nWe shipped it on a Thursday. I posted about it in the company Slack with a rocket emoji.\n\nBy the following month, adoption had flatlined at 0.4%. Retention among the people who *did* build a dashboard was worse than average — they'd build one, never open it again, and go back to the default view.\n\nHere's what I got wrong, and it wasn't a prioritization problem. It was a listening problem.\n\nCustomers weren't asking for a dashboard builder. They were telling me they didn't trust our numbers.\n\nWhen someone said \"I want to build my own view,\" what they meant was: \"Your default report shows a number my CFO doesn't recognize, and I can't figure out how you calculated it, so I export to a spreadsheet and rebuild it myself.\" The request was a workaround they'd invented for a problem they didn't have the language for. I took the workaround at face value and built it faster and prettier.\n\nThe fix, when we finally found it, was a definitions panel. Click any metric, see exactly how it's computed, which filters apply, and what's excluded. Two engineers, three weeks. Spreadsheet exports dropped 60%. Nobody ever asked us for a definitions panel.\n\nThree things I do differently now:\n\n**I ask about the last time, not the next time.** \"Would you use this?\" gets you politeness. \"Walk me through the last time you needed this — what did you actually do?\" gets you the truth, including the ugly workaround that reveals the real problem.\n\n**I write down what would make us wrong.** Before we build, we agree on a number: if fewer than X% of eligible accounts use this in 30 days, we were wrong about the problem, and we run a retro instead of a victory lap. Having that number in writing beforehand makes it much harder to quietly redefine success afterward.\n\n**I separate demand from evidence.** A feature request is a signal that something hurts. It is not a diagnosis. Ten people asking for the same thing can still be ten people describing the same symptom of an entirely different disease.\n\nThe uncomfortable part: I don't think we were sloppy. We talked to customers. We looked at the data. We just mistook *volume of requests* for *understanding of the problem*, and those are not the same thing at all.\n\nWhat's the feature you're proudest of killing?",
+     "refusal": null,
+     "reasoning": "I'm aiming for an authentic, non-cringey LinkedIn post around 400 words with concrete details and a genuine story about a feature that flopped, ending with a question to spark engagement.\n\nI'll build the story around a \"custom dashboard builder\" that took four months and three engineers but only got 0.4% adoption, with the real lesson being that they validated a request rather than the underlying problem — customers had asked for it, but the actual issue was distrust in default numbers. I want to land the line \"asking 'would you use this?' is not research\" and show how they changed their process: fake door tests, asking when customers last hit the problem, and setting kill criteria before building anything.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm aiming for an authentic, non-cringey LinkedIn post around 400 words with concrete details and a genuine story about a feature that flopped, ending with a question to spark engagement.\n\nI'll build the story around a \"custom dashboard builder\" that took four months and three engineers but only got 0.4% adoption, with the real lesson being that they validated a request rather than the underlying problem — customers had asked for it, but the actual issue was distrust in default numbers. I want to land the line \"asking 'would you use this?' is not research\" and show how they changed their process: fake door tests, asking when customers last hit the problem, and setting kill criteria before building anything.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAISwAkKrgEIERgCKkA66S7nHPJx6G1ldUXxdQK1oCOu5hBsBFNNCUMDqufUvRtD1g7r2ODmIxFyTk1R3QE+JwBJf1wgYxCieBh+DRxJMg1jbGF1ZGUtb3B1cy01OAFCCHRoaW5raW5nWiQ0YzBmMDQ2Zi0yNWZkLTQ1ZmItYmZiMy1hMDhhOGUyNDljYTd6HnVwcm9mXzAxMUNlbkZSYjRqeFBLcXdMUXFXN3dtNqgBmNP11AYSDBA8QGOtlCH70eg6phoMj2EEan5ejuWghkgnIjDyIErU6Qazc9MYaaw+ibm3wGMk4+SgtBL8HE/kvpjskCoLmCSR4i6jEoEJdwLQhQwqvgcT3UzHxwWg3FyJXDYe9ZeeyK8GCYN52PZoNFL+DczV0bBQhOraox819DdINOAwbw+2nwUCWu+AYhwcJawhe69hnY5X7D3oGdHxFmgZmQzzAxn8UlduUxBAArQlVAwPdqFr8wAJH8cX9XeHE73LM1qYdTOzxN6J+pQZzuzqxqdmj8gCKXLrNVGyng8Ap31Q6jDW+EGRsPmiu+Y5So5iYLm8G/HaHnG8uTVszqtTuOiRrLaK3WfT/KWTbgT4whCo+VbYnaD2ysN01owp0Borj9T4jm/7kwV/FVQlBTh4TYgE1T1CX3o+VGL8KGWMH+BiOfEUyviy71xn1Tp2lm+m/hHE2631YXUXJzKpAiqQLTig9srVTPdUSvIW+CDhMtprjpyd93MXwWErxhACLcD3IuqSHhNo2XdtbOZM3gUz6V8Ze0JzUO1BIcBf9fxEAn+Rj62wx7R7J/ycPd8RzyMwwqgkqqU8NKIjj4N2xsYxZS71m5WmpIIitkVcX28hgP6bAgK4olcDUhLddc2VFH5iSLZvEuLVCbDMTuALxn1egKhrvayRGyLNoLlcGUD1g9GxFfhRVYnVeyygd9p1C679RrJJ/e0mo+GkxtGOOXvUWQYJ2H0mziRaRu1iDpa/bqo8hiDoNq/e4D54o65ZTmKhD6uFw4q8eEcDM3qDC8ud2Q6NWClXI/NGtnPeHZ+lOpY9rg4L1JaZVBBYZrWtGl7B6vKcHRK3nDx6CcvOnBId3xmUhOgk/0PUTBZV/Rtfg2SAsQOX41vKsc/lYIZ5bqq8HCArR59qgz5RwQL6oFkTKHhNuqvibOOkhG2nrRfbHkLvi2pg/cn+0yh/Ktq2UhEBm4cc9cOk8lUX1BHJjaesumusPhyH6mWtZiklcyNLXSYa9t6Zllse2t3OfPc5ttaNqTOpg3AMwMsmvTz+TpLz4quP9d3s5RzvgezR1us0cFhei8Jwx2aMm6PcwvbOO7CtBW/D0Zt43laxhRICzVita2m7NV8E+AyvJDlQy5ph2JpiR9m1KZILzSz/fqLTnPsFuDL2aj5vYjv7Oe010j+HJgEE+nAFjedzJY/2iAkE1pbQXB8I4c7j2q3g66NyXW4BI3u4jfL3bb2EJkfwsEZzhrPVBLece1iI1pftoweqoJZE1vHiLLnB5mKy5l/z3PPbnih6JpvRAfDfOrEFrxDjfCel0w0Vpg3zcspKsilgU9qBygcMC3QHwTHHX/++zTGLQCfXch27zbNEFjnz6jfYNXoTRc5aFDB7Nbew1gPf3V+1GAE="
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 43,
+   "completion_tokens": 1190,
+   "total_tokens": 1233,
+   "cost": 0.02966535,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.029965,
+    "upstream_inference_prompt_cost": 0.000215,
+    "upstream_inference_completions_cost": 0.02975
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 334,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

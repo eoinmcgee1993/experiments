@@ -1,0 +1,109 @@
+{
+ "judge": "opus",
+ "model": "anthropic/claude-opus-5",
+ "key": "p1-essay-3-grok-vs-qwen-AB",
+ "wall_s": 18.4,
+ "run_utc": "2026-09-06T22:33:31Z",
+ "request_body": {
+  "model": "anthropic/claude-opus-5",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite an essay of up to 500 words on why most product roadmaps fail.\n\n=== TEXT A ===\n**Why Most Product Roadmaps Fail**\n\nProduct roadmaps are meant to align teams, communicate strategy, and sequence work toward meaningful outcomes. In practice most fail, producing missed dates, unused features, eroded trust, and wasted effort. The failures are rarely about the tool itself; they stem from how organizations treat planning under uncertainty.\n\nA common root cause is the missing link to strategy. Roadmaps often become feature wish lists assembled from sales requests, executive opinions, and competitor mimicry rather than from a clear product vision and measurable business goals. Without that filter, teams ship work that does not move customer value or revenue. Prioritization then defaults to politics or recency instead of evidence.\n\nEqually damaging is treating the roadmap as a contract rather than a communication artifact. Software development involves discovery, technical unknowns, and shifting markets. Publishing detailed dates and specifications quarters or years ahead creates false certainty. When reality intervenes, the plan is either ignored or defended at the cost of better opportunities. Stakeholders who were sold a schedule feel betrayed.\n\nMany roadmaps also confuse outputs with outcomes. A list of “add reporting dashboard” or “redesign onboarding” describes what will be built, not the user or business problem to be solved. Without continuous customer research and validation, teams optimize for delivery velocity instead of learning. Features ship, usage stays low, and the next cycle repeats the same pattern.\n\nStakeholder misalignment compounds these issues. Different functions optimize for different metrics: sales for closing deals, engineering for technical elegance, executives for visible progress. Absent a shared framework and regular, transparent trade-off conversations, everything is labeled high priority. Capacity is overcommitted, quality suffers, and morale declines.\n\nFinally, roadmaps stagnate. Once published they are rarely revisited with new data. Markets, competitors, and user behavior change; a static document does not. Cross-functional reviews that treat the roadmap as a living hypothesis—rather than a sacred plan—are the exception, not the rule.\n\nEffective roadmaps are therefore outcome-oriented, time-horizon-aware (now/next/later rather than dated Gantt charts), evidence-based, and frequently updated. They communicate intent and trade-offs, not promises. Organizations that treat them this way still encounter surprises, but they adapt instead of failing by design. Those that do not continue to produce elaborate documents that no one follows.\n=== END OF TEXT A ===\n\n=== TEXT B ===\n**Why Most Product Roadmaps Fail**\n\nA product roadmap is meant to align teams around a future state, but most roadmaps fail for a simple reason: they are treated as promises rather than plans under uncertainty.\n\nWhen a roadmap is built backwards from deadlines, it reflects what leadership hopes to announce more than what the product team can credibly achieve. Teams estimate work using incomplete information, then commit to dates without room for discovery, dependencies, or quality. The first sign of trouble triggers a choice between lowering quality, changing scope, or missing the date. Most choose the path that causes the least visible pain: they miss the date and damage trust.\n\nAnother failure mode is that roadmaps are often outputs-based instead of outcomes-based. Listing features—“login, dashboard, notifications”—may look like strategy, but features are hypotheses, not results. If a roadmap does not define the problem it is solving or the metric that signals success, teams can ship everything on schedule and still deliver no impact. Product management becomes order-taking, and engineering becomes execution for its own sake.\n\nPolitical roadmapping is also common. Many roadmaps are assembled to win budget, impress executives, or coordinate across functions, not to guide real product work. That makes them brittle. When new information arrives—customer feedback, market shifts, a competitor move, or a technical constraint—the roadmap cannot change gracefully because its dates have already been used for forecasts, contracts, or promotions. Rather than updating the plan, teams defend it, and the organization learns to distrust roadmaps as marketing artifacts.\n\nFinally, most roadmaps fail because they are static. In a healthy product organization, the roadmap is an evolving set of problems, bets, and sequencing decisions. It should include uncertainty, assumptions, and experiments. Too many teams publish a polished slide deck and then stop revisiting it. As a result, the roadmap is either ignored or treated as obsolete the moment reality intrudes.\n\nA better roadmap is shorter, clearer, and more honest. It prioritizes problems and outcomes, shows ranges rather than fixed dates when appropriate, and leaves space for learning. It is not a commitment to a feature list; it is a shared theory of how the product will create value. When organizations treat roadmaps as adaptive instruments rather than declarations of certainty, they become far less likely to fail.\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n"
+   }
+  ],
+  "max_tokens": 16000,
+  "provider": {
+   "allow_fallbacks": false
+  },
+  "usage": {
+   "include": true
+  }
+ },
+ "usage": {
+  "input_tokens": 2851,
+  "output_tokens": 1501,
+  "reasoning_tokens": 959,
+  "cost_usd": 0.0512622,
+  "served_model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS"
+ },
+ "verdict": {
+  "more_ai": "B",
+  "confidence": 3,
+  "tells_A": [
+   "triads stacked in sentence after sentence (\"align teams, communicate strategy, and sequence work\")",
+   "closing paragraph recaps the body prescriptively",
+   "em dash pair as clause joint (\"living hypothesis—rather than a sacred plan—\")",
+   "negative parallelism: \"the exception, not the rule\"; \"intent and trade-offs, not promises\"",
+   "generic, unspecific throughout: no numbers, names, or concrete cases",
+   "filler transitions: \"Equally damaging\", \"Finally\", \"therefore\"",
+   "bold title header where prose was asked for"
+  ],
+  "tells_B": [
+   "repeated negative parallelism: \"promises rather than plans\", \"outputs-based instead of outcomes-based\", \"hypotheses, not results\", \"not a commitment...; it is a shared theory\", \"adaptive instruments rather than declarations\"",
+   "signposting: \"most roadmaps fail for a simple reason:\"",
+   "em dashes as default clause joint twice",
+   "triads: \"lowering quality, changing scope, or missing the date\"; \"problems, bets, and sequencing\"; \"uncertainty, assumptions, and experiments\"; \"shorter, clearer, and more honest\"",
+   "uplifting recap ending (\"far less likely to fail\")",
+   "filler transitions: \"Another failure mode\", \"Finally\", \"As a result\"",
+   "no concrete specifics anywhere; performs for a general audience",
+   "explaining the inference (\"That makes them brittle\", \"As a result...\")"
+  ]
+ },
+ "response_raw": {
+  "id": "gen-1788733992-ZBUxxSs6nmvSfYGwbGmw",
+  "object": "chat.completion",
+  "created": 1788733992,
+  "model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"more_ai\": \"B\", \"confidence\": 3, \"tells_A\": [\"triads stacked in sentence after sentence (\\\"align teams, communicate strategy, and sequence work\\\")\", \"closing paragraph recaps the body prescriptively\", \"em dash pair as clause joint (\\\"living hypothesis—rather than a sacred plan—\\\")\", \"negative parallelism: \\\"the exception, not the rule\\\"; \\\"intent and trade-offs, not promises\\\"\", \"generic, unspecific throughout: no numbers, names, or concrete cases\", \"filler transitions: \\\"Equally damaging\\\", \\\"Finally\\\", \\\"therefore\\\"\", \"bold title header where prose was asked for\"], \"tells_B\": [\"repeated negative parallelism: \\\"promises rather than plans\\\", \\\"outputs-based instead of outcomes-based\\\", \\\"hypotheses, not results\\\", \\\"not a commitment...; it is a shared theory\\\", \\\"adaptive instruments rather than declarations\\\"\", \"signposting: \\\"most roadmaps fail for a simple reason:\\\"\", \"em dashes as default clause joint twice\", \"triads: \\\"lowering quality, changing scope, or missing the date\\\"; \\\"problems, bets, and sequencing\\\"; \\\"uncertainty, assumptions, and experiments\\\"; \\\"shorter, clearer, and more honest\\\"\", \"uplifting recap ending (\\\"far less likely to fail\\\")\", \"filler transitions: \\\"Another failure mode\\\", \\\"Finally\\\", \\\"As a result\\\"\", \"no concrete specifics anywhere; performs for a general audience\", \"explaining the inference (\\\"That makes them brittle\\\", \\\"As a result...\\\")\"]}",
+     "refusal": null,
+     "reasoning": "I'm counting stylistic tells in Text A, noticing its heavy use of triads and rhetorical lists throughout—things like grouped phrases about strategy, causes of failure, and evaluation criteria.\n\nNow I'm checking Text B for the same patterns: negative parallelism constructions (\"not X, but Y\"), transitional phrases like \"Finally\" and \"As a result,\" and its own set of triads and one four-item list. Both texts share a lot of the same rhetorical fingerprints, so I'm weighing which has more distinctive tells to differentiate them.\n\nBoth use similar filler transitions, but B's repeated negative parallelism, including its closing chiasmus, is the stronger tell. I'll go with B, confidence 3.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm counting stylistic tells in Text A, noticing its heavy use of triads and rhetorical lists throughout—things like grouped phrases about strategy, causes of failure, and evaluation criteria.\n\nNow I'm checking Text B for the same patterns: negative parallelism constructions (\"not X, but Y\"), transitional phrases like \"Finally\" and \"As a result,\" and its own set of triads and one four-item list. Both texts share a lot of the same rhetorical fingerprints, so I'm weighing which has more distinctive tells to differentiate them.\n\nBoth use similar filler transitions, but B's repeated negative parallelism, including its closing chiasmus, is the stronger tell. I'll go with B, confidence 3.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "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"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2851,
+   "completion_tokens": 1501,
+   "total_tokens": 4352,
+   "cost": 0.0512622,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.05178,
+    "upstream_inference_prompt_cost": 0.014255,
+    "upstream_inference_completions_cost": 0.037525
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 959,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

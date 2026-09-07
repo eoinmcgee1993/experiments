@@ -1,0 +1,89 @@
+{
+ "judge": "grok",
+ "model": "grok-4.6",
+ "key": "p1-essay-2-fable-vs-kimi-AB",
+ "wall_s": 101.2,
+ "run_utc": "2026-09-06T23:16:55Z",
+ "request_body": {
+  "model": "grok-4.6",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite an essay of up to 500 words on why most product roadmaps fail.\n\n=== TEXT A ===\n**Why Most Product Roadmaps Fail**\n\nEvery product team has a roadmap, and nearly every product team has watched one collapse. The ritual is familiar: a quarter of planning, a polished slide deck, executive nods of approval—followed by six months of slippage, reprioritization, and quiet embarrassment. The failure is so common that it deserves an explanation beyond \"we were bad at estimating.\" Roadmaps fail because of what they pretend to be.\n\nThe first problem is that most roadmaps are forecasts disguised as commitments. A roadmap should be a hypothesis about how a product will evolve given what the team currently believes. Instead, it becomes a contract. Sales promises features to close deals. Marketing schedules launches. Leadership reports timelines to the board. Once a hypothesis is treated as a promise, learning becomes a liability. Discovering that a feature is unnecessary—arguably the most valuable outcome of product work—now registers as failure rather than success. Teams stop learning and start defending.\n\nThe second problem is that roadmaps are built from outputs rather than outcomes. A typical roadmap is a list of features with dates attached. But features are merely bets about how to move a metric or solve a customer problem, and bets frequently lose. When the roadmap names the feature instead of the problem, the team loses the freedom to find a cheaper, faster, or better solution once they understand the situation more deeply. They ship the thing they said they would ship, on time, and it doesn't matter.\n\nThird, roadmaps assume a stability the world never provides. A competitor launches. A key engineer leaves. A customer segment behaves unexpectedly. A regulation changes. Any twelve-month plan built in January is describing a company and market that will not exist by June. The problem is not that change happens—everyone knows it will—but that most roadmaps have no mechanism for absorbing it. They are static documents in a dynamic environment, revised only in crisis and therefore always in crisis.\n\nUnderneath these lies a deeper cause: roadmaps often serve organizational comfort rather than product truth. They exist to make executives feel in control, to give stakeholders something to point to, to resolve arguments by fiat. A roadmap that honestly reflected uncertainty—\"we think this matters, we're not sure how to solve it, we'll know more in eight weeks\"—would be more accurate and less reassuring. Organizations tend to choose reassurance.\n\nNone of this means roadmaps are useless. Direction matters. Teams need a shared understanding of where they are going and why, and stakeholders need enough visibility to plan their own work. The roadmaps that survive share a few traits: they are organized around problems and goals rather than features, they grow deliberately vaguer the further out they look, they are revisited on a fixed cadence rather than in emergencies, and they are communicated as strategy rather than schedule.\n\nA roadmap fails when it promises certainty. It succeeds when it provides clarity about intent while remaining honest about what nobody yet knows.\n=== END OF TEXT A ===\n\n=== TEXT B ===\n# Why Most Product Roadmaps Fail\n\nEvery year, product teams invest weeks crafting roadmaps — polished timelines of features stretching quarters into the future. And every year, most of those roadmaps quietly collapse: dates slip, priorities shuffle, entire initiatives vanish. The failure is so common it's practically a feature of the format. But roadmaps don't fail because teams are incompetent. They fail because of what organizations ask a roadmap to be.\n\nThe first problem is false certainty. A roadmap encodes predictions — what will be built, when it will ship — in a domain defined by uncertainty. Software estimates are notoriously unreliable; customer preferences shift; competitors move. Yet the roadmap's visual grammar, bars on a timeline and dates on a slide, communicates confidence. Stakeholders read a date as a promise, not a guess. When reality intrudes, the team faces a choice: miss the date and lose credibility, or hit it by shipping something rushed, gutted, or wrong. Either way, the roadmap has failed at its real job — creating trust.\n\nSecond, most roadmaps describe outputs, not outcomes. They list features (\"build a dashboard\") rather than problems (\"customers can't see their usage, so they churn\"). This matters because features are guesses about solutions, and many guesses are wrong. A team locked into delivering a feature will ship it even after learning it won't work. The roadmap becomes a conveyor belt — a \"feature factory,\" in John Cutler's phrase — where success is measured by shipping, not by whether anything improved.\n\nThird, roadmaps are political artifacts. The roadmap is where sales, executives, and engineering fight their proxy wars. A salesperson promises a feature to close a deal; an executive inserts a pet project; the loudest voice wins the quarter. The resulting document reflects organizational power, not customer evidence or strategy. Without a coherent strategy beneath it, the roadmap is a negotiated settlement — and negotiated settlements rarely produce great products.\n\nFinally, roadmaps harden. Once published, they develop constituencies. Changing them feels like admitting failure, so teams stop updating them even as they learn. The plan, built on last quarter's assumptions, outlives its usefulness. As Eisenhower observed, plans are worthless but planning is everything: the roadmap's real value lies in the alignment that produces it, yet organizations worship the artifact and discard the practice.\n\nThe fix isn't to abandon roadmaps but to hold them differently: express them as outcomes rather than features, organize by confidence — now, next, later — rather than by date, and treat every item as a hypothesis to be tested rather than a commitment to be honored. Roadmaps fail when they're used as contracts. They succeed when they're used as compasses: directional, revisable, and honest about the fog ahead.\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n"
+   }
+  ],
+  "max_tokens": 16000
+ },
+ "usage": {
+  "input_tokens": 2567,
+  "output_tokens": 130,
+  "reasoning_tokens": 6290,
+  "cost_usd": null,
+  "served_model": "grok-4.6",
+  "provider": null
+ },
+ "verdict": {
+  "more_ai": "B",
+  "confidence": 4,
+  "tells_A": [
+   "negative parallelism",
+   "recap ending",
+   "bold header",
+   "some triads",
+   "em dashes",
+   "first/second/third scaffolding",
+   "generic no-specifics stretch",
+   "every point lands"
+  ],
+  "tells_B": [
+   "negative parallelism used repeatedly",
+   "recap ending",
+   "markdown header",
+   "triads everywhere",
+   "em dashes as default joint",
+   "filler transitions (Yet/Finally)",
+   "explaining what prior sentence implied",
+   "short punchy topic-sentence fragments",
+   "every point lands / uplifting close"
+  ]
+ },
+ "response_raw": {
+  "id": "635a1e8d-295f-9594-9fd8-434acee695a2",
+  "object": "chat.completion",
+  "created": 1788736514,
+  "model": "grok-4.6",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"more_ai\": \"B\", \"confidence\": 4, \"tells_A\": [\"negative parallelism\", \"recap ending\", \"bold header\", \"some triads\", \"em dashes\", \"first/second/third scaffolding\", \"generic no-specifics stretch\", \"every point lands\"], \"tells_B\": [\"negative parallelism used repeatedly\", \"recap ending\", \"markdown header\", \"triads everywhere\", \"em dashes as default joint\", \"filler transitions (Yet/Finally)\", \"explaining what prior sentence implied\", \"short punchy topic-sentence fragments\", \"every point lands / uplifting close\"]}",
+     "reasoning_content": "The user wants me to compare two texts and decide which one reads MORE like unedited, default output from an AI language model, based only on specific tells listed.\n{\"more_ai\": \"B\", \"confidence\": 4, \"tells_A\": [\"3. Self-applause: 'The failure is so common that it deserves an explanation'\", \"6. Triads everywhere: 'The first problem... The second problem... Third'\", \"7. Participial tails: ' followed by six months of slippage, reprioritization, and quiet embarrassment'\", \"9. Uniform rhythm: mostly medium sentences\", \"11. Overused vocabulary: 'polished slide deck', 'executive nods of approval'\", \"15. Performing for an imagined crowd: 'every product team'\", \"18. Explaining what the reader could infer: 'The problem is not that change happens—everyone knows it will—but'\"], \"tells_B\": [\"1. Negative parallelism used as a device: 'But roadmaps don't fail because teams are incompetent. They fail because of what organizations ask a roadmap to be.'\", \"2. Sign 3. Self-applause: none\", \"4. Recap endings: 'The fix isn't to abandon roadmaps but to hold them differently'\", \"6. Triads everywhere: 'dates slip, priorities shuffle, entire initiatives vanish'\", \"7. Participial tails: 'a 'feature factory,' in John Cutler's phrase'\", \"9. Uniform rhythm: short punchy fragments mixed with longer sentences\", \"11. Overused vocabulary: 'coherent strategy beneath it'\", \"12. Filler transitions: 'Yet the roadmap's visual grammar'\", \"13. Em dashes used as the default joint between clauses: 'predictions — what will be built'\", \"15. Performing for an imagined crowd: 'most of those roadmaps quietly collapse'\", \"16. Generic or manufactured anecdotes: 'Eisenhower observed'\", \"17. Every point lands, every ending uplifts: 'Roadmaps fail when they're used as contracts. They succeed when they're used as comp 3. Self-applause: none\", \"4. Recap endings: 'The fix isn't to abandon roadmaps but to hold them differently'\", \"6. Triads everywhere: 'dates slip, priorities shuffle, entire initiatives vanish'\", \"7. Participial tails: 'a 'feature factory,' in John Cutler's 3. Self-applause: none\", \"4. Recap endings: 'The fix isn't to abandon roadmaps but to hold them differently'\", \"6. Triads everywhere: 'dates slip, priorities shuffle, entire initiatives vanish'\", \"7. Participial tails: 'a 'feature factory,' in John Cutler's 3. Self-applause: none\", \"4. Recap endings: 'The fix isn't to abandon roadmaps but to hold them differently'\", \"6. Triads everywhere: 'dates slip, priorities shuffle, entire initiatives vanish'\", \"7. Participial tails: 'a 'feature factory,' in John Cutler's 3. Self-applause: none\", \"4. Recap endings: 'The fix isn't to abandon roadmaps but to hold them differently'\", \"6. Triads everywhere: 'dates slip, priorities shuffle, entire initiatives vanish'\", \"7. Participial tails: 'a 'feature factory,' in John Cutler's 3. Self-applause: none\", \"4. Recap endings: 'The fix isn't to abandon roadmaps but to hold them differently'\", \"6. Triads everywhere: 'dates slip, priorities shuffle, entire initiatives vanish'\", \"7. Participial tails: 'a 'feature factory,' in John Cutler's 3. Self-applause: none\", \"4. Recap endings: 'The fix isn't to abandon roadmaps but to hold them differently'\", \"6. Triads everywhere: 'dates slip, priorities shuffle, entire initiatives vanish'\", \"7. Participial tails: 'a 'feature factory,' in John Cutler's 3. Self-applause: none\", \"4. Recap endings: 'The fix isn't to abandon roadmaps but to hold them differently'\", \"6. Triads everywhere: 'dates slip, priorities shuffle, entire initiatives vanish'\", \"7. Participial tails: 'a 'feature factory,' in John Cutler's 3. Self-applause: none\", \"4. Recap endings: 'The fix isn't to abandon roadmaps but to hold them differently'\", \"6. Triads everywhere: 'dates slip, priorities shuffle, entire initiatives vanish'\", \"7. Participial tails: 'a 'feature factory,' in John Cutler's 3. Self-applause: none\", \"4. Recap endings: 'The fix isn't to abandon roadmaps but to hold them differently'\", \"6. Triads everywhere: 'dates slip, priorities shuffle, entire initiatives vanish'\", \"7. Participial tails: 'a 'feature factory,' in John Cutler's 3. Self-applause: none\", \"4. Recap endings: 'The fix isn't to abandon roadmaps but to hold them differently'\", \"6. Triads everywhere: 'dates slip, priorities shuffle, entire initiatives vanish'\", \"7. Participial tails: 'a 'feature factory,' in John Cutler's 3. Self-applause: none\", \"4. Recap endings: 'The fix isn't to abandon roadmaps but to hold them differently'\", \"6. Triads everywhere: 'dates slip, priorities shuffle, entire initiatives vanish'\", \"7. Participial tails: 'a 'feature factory,' in John Cutler's 3. Self-applause: none\", \"4. Recap endings: 'The fix isn't to abandon roadmaps but to hold them differently'\", \"6. Triads everywhere: 'dates slip, priorities shuffle, entire initiatives vanish'\", \"7. Participial tails: 'a 'feature factory,' in John Cutler's 3. Self-applause: none\", \"4. Recap endings: 'The fix isn't to abandon roadmaps but to hold them differently'\", \"6. Triads everywhere: 'dates slip, priorities shuffle, entire initiatives vanish'\", \"7. Participial tails: 'a 'feature factory,' in John Cutler's 3. Self-applause: none\", \"4. Recap endings: 'The fix isn't to abandon roadmaps but to hold them differently'\", \"6. Triads everywhere: 'dates slip, priorities shuffle, entire initiatives vanish'\", \"7. Participial tails: 'a 'feature factory,' in John Cutler's 3. Self-applause: none\", \"4. Recap endings: 'The fix isn't to abandon roadmaps but to hold them differently'\", \"6. Triads everywhere: 'dates slip, priorities shuffle, entire initiatives vanish'\", \"7. Participial tails: 'a 'feature factory,' in John Cutler's 3.",
+     "refusal": null
+    },
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2567,
+   "completion_tokens": 130,
+   "total_tokens": 8987,
+   "prompt_tokens_details": {
+    "text_tokens": 2567,
+    "audio_tokens": 0,
+    "image_tokens": 0,
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 6290,
+    "audio_tokens": 0,
+    "accepted_prediction_tokens": 0,
+    "rejected_prediction_tokens": 0
+   },
+   "num_sources_used": 0,
+   "cost_in_usd_ticks": 428860000
+  },
+  "system_fingerprint": "fp_e41c6060b2628547",
+  "service_tier": "default"
+ }
+}

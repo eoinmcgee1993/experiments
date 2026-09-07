@@ -1,0 +1,107 @@
+{
+ "judge": "opus",
+ "model": "anthropic/claude-opus-5",
+ "key": "p3-linkedin-2-terra-vs-qwen-BA",
+ "wall_s": 8.5,
+ "run_utc": "2026-09-06T22:42:30Z",
+ "request_body": {
+  "model": "anthropic/claude-opus-5",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n\n=== TEXT A ===\nWe spent weeks shipping a feature we were proud of.\n\nThe launch was clean. The metrics were brutal: nobody used it.\n\nAt first, I blamed discovery. Then I blamed timing. Eventually, I admitted the truth: we fell in love with an idea, not a customer problem.\n\nThe feature solved something that felt important in a meeting, but didn’t create enough friction in everyday use. We asked users if they wanted it, and they said yes — because being nice to a product team is free. We treated interest as demand and prototypes as proof.\n\nThat taught me the hardest lesson in product work: shipping is not validation. Behavior is validation.\n\nNow I try to run a small pre-flight before building anything:\n\n- Who has this problem repeatedly?\n- What are they doing today?\n- What would make them pay, switch, or change their workflow?\n- What’s the smallest version that creates real risk of rejection?\n\nIf we can’t answer those quickly, we don’t build the feature. We investigate.\n\nThe best product decision I’ve made wasn’t a feature that changed the world. It was the discipline to stop confusing effort with evidence.\n\nA feature nobody used didn’t waste time if it taught the team to listen better.\n\n#ProductManagement #LessonLearned #CustomerDiscovery\n=== END OF TEXT A ===\n\n=== TEXT B ===\nWe shipped a feature nobody used.\n\nNot “low adoption.”  \nNot “needs more awareness.”  \nNobody used it.\n\nAt first, we blamed the usual suspects:\n\n- The onboarding wasn’t clear enough  \n- Marketing didn’t promote it  \n- Users needed more time  \n- Maybe it was ahead of the market  \n\nBut the real answer was simpler: we solved a problem people didn’t care enough about.\n\nThe feature had come from a reasonable place. A few customer comments. Internal enthusiasm. A competitor had something similar. On paper, it made sense.\n\nWhat we skipped was the hard question:\n\n**“What are users doing today when this problem happens—and how painful is that workaround?”**\n\nWhen we finally asked, the answer was revealing. Most users had a simple workaround that took less than a minute. A few didn’t experience the problem at all. And the people who did care wanted a different solution than the one we built.\n\nWe had validated the idea. We hadn’t validated the behavior.\n\nThat experience changed how I think about shipping.\n\nNow, before building, I try to look for evidence of urgency:\n\n- Are people already spending time or money to solve this?\n- Do they describe the problem in their own words, without prompting?\n- Is the workaround frustrating enough that they would change behavior?\n- Can we test the value with a prototype, manual process, or lightweight experiment first?\n- What would success look like in actual usage—not just positive feedback?\n\nA feature launch is not proof of value. Usage is.\n\nThe good news: unused features are expensive lessons, but valuable ones. They teach humility. They expose assumptions. And, if you pay attention, they improve the next decision.\n\nThe goal isn’t to never ship something that misses.\n\nThe goal is to learn why it missed before you spend months building the next one.\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n"
+   }
+  ],
+  "max_tokens": 16000,
+  "provider": {
+   "allow_fallbacks": false
+  },
+  "usage": {
+   "include": true
+  }
+ },
+ "usage": {
+  "input_tokens": 2238,
+  "output_tokens": 606,
+  "reasoning_tokens": 229,
+  "cost_usd": 0.0260766,
+  "served_model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS"
+ },
+ "verdict": {
+  "more_ai": "B",
+  "confidence": 4,
+  "tells_B": [
+   "repeated negative parallelism: 'Not low adoption / Not needs more awareness', 'We had validated the idea. We hadn't validated the behavior.', 'A feature launch is not proof of value. Usage is.', 'The goal isn't to never ship... The goal is to learn'",
+   "two bulleted lists plus a bolded pull-quote line in a prose-request task",
+   "triad of short parallel sentences: 'They teach humility. They expose assumptions. And...'",
+   "closing recap/uplift couplet restating the lesson",
+   "'The good news:' signposting",
+   "em dashes as default clause joint",
+   "relentless short punchy fragments, uniform rhythm",
+   "generic anecdote with no names, dates, or numbers"
+  ],
+  "tells_A": [
+   "negative parallelism: 'shipping is not validation. Behavior is validation.' and 'wasn't a feature... It was the discipline'",
+   "bullet checklist in a prose post",
+   "em dash in 'said yes — because'",
+   "closing aphoristic uplift line",
+   "no concrete specifics (no product, date, or metric)"
+  ]
+ },
+ "response_raw": {
+  "id": "gen-1788734541-K0cRhED3JGAFZ8B0QBwG",
+  "object": "chat.completion",
+  "created": 1788734541,
+  "model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"more_ai\": \"B\", \"confidence\": 4, \"tells_B\": [\"repeated negative parallelism: 'Not low adoption / Not needs more awareness', 'We had validated the idea. We hadn't validated the behavior.', 'A feature launch is not proof of value. Usage is.', 'The goal isn't to never ship... The goal is to learn'\", \"two bulleted lists plus a bolded pull-quote line in a prose-request task\", \"triad of short parallel sentences: 'They teach humility. They expose assumptions. And...'\", \"closing recap/uplift couplet restating the lesson\", \"'The good news:' signposting\", \"em dashes as default clause joint\", \"relentless short punchy fragments, uniform rhythm\", \"generic anecdote with no names, dates, or numbers\"], \"tells_A\": [\"negative parallelism: 'shipping is not validation. Behavior is validation.' and 'wasn't a feature... It was the discipline'\", \"bullet checklist in a prose post\", \"em dash in 'said yes — because'\", \"closing aphoristic uplift line\", \"no concrete specifics (no product, date, or metric)\"]}",
+     "refusal": null,
+     "reasoning": "Comparing the two texts, both use negative parallelism and rhetorical contrast, but Text B leans harder into it with repeated \"not X, not Y\" framing, sharper aphorisms like \"usage is\" proof rather than launches, and triadic bullet structures that emphasize humility and exposed assumptions.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "Comparing the two texts, both use negative parallelism and rhetorical contrast, but Text B leans harder into it with repeated \"not X, not Y\" framing, sharper aphorisms like \"usage is\" proof rather than launches, and triadic bullet structures that emphasize humility and exposed assumptions.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAIS7QYKrgEIERgCKkBatSENL5Vix18CdoZF3HR8x9LL1G4SH4lpS27ibZA7WX4DhrU9pLwMNUmdUIfocU5lRbzsgHk2TQuM8BOYm6oPMg1jbGF1ZGUtb3B1cy01OAFCCHRoaW5raW5nWiQ0YzBmMDQ2Zi0yNWZkLTQ1ZmItYmZiMy1hMDhhOGUyNDljYTd6HnVwcm9mXzAxMUNlbkZSYjRqeFBLcXdMUXFXN3dtNqgB1Nj31AYSDKorUc9QRcaVdQyWfhoMsWTWgFhJV5TafAnSIjAj5BSzV11s1as/3CVNnLW4IVGsKh9WQkN+4jjE6smKj0DwJ+mGBhWXoxKupqy5Kxoq6wTXaZqRLvQEQIB+qd1bMVBD26SCS/2lvFyIoicHc6QkZWyt1uNEWnKhde+cTF+EddFEQhzN0CfrORkbqfkKUclRVMuOJDw6icKqPzcZ7o+nns6TVmsRBByfgBuvqO2meexhUOuvkFBUQxydR2ALskWGNcLw3/kYDGFCxkxKb9sj38PYSQOvo31HzrIvT/kSxYMfug2ST9a4+ULMffq91kns/iGVGartsrnZfdYR2Iuw/umTpGI+n25EBUopqsU2bMTRI+AIlI2e0m1Stc/Ssm7gNratD858+scWej4fmne3KioJEWFbffMTUz80SBXpMu62rSmPVnSjMyzuGLmx+k5BuojLLIdM+nyvs9UK5Bm45RATTFWdQSO6gEmoS9D6728cXtZ03xTJgSm+3X62qA8CPbBTGC0N5y/sUGJgVdF0R2/37MD1qHjDRp3OSILSg78sNGo7zzuabJ0E+9g5akM1dHX1tbTJduN+75aSU0ImK/CmdHmAoT8tVgOvIWsCMl3YxkBYfiQl+960IY5dfvRg2Rt8vAuC2zIlIKhUYmsUWbBWGblBvm5aQv/nsBmf+fQLtQ6m1sZzCmGFxklVZI/WdBk/shr42WDzE/kmxvfsAFBVwHBHBhc0RSxGUd3DKfc/8Ii8SaXvvuVo1QSfLjYthYB4GlkzA7LkBrmTv3lMp5SHz5OO9WfJwARc4AAYwrOa0Su3sTV2Io/cnavIPpmWBzVQdJrxtPBbawkcT93dRAcrFEDdNHCMbua93cArdHkRxLtSYXoboeQQd8/pwBcZ6ALv3wOuLUe8lakSYYHYcrlaTpLkh3SbWIN9GAE="
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2238,
+   "completion_tokens": 606,
+   "total_tokens": 2844,
+   "cost": 0.0260766,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.02634,
+    "upstream_inference_prompt_cost": 0.01119,
+    "upstream_inference_completions_cost": 0.01515
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 229,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

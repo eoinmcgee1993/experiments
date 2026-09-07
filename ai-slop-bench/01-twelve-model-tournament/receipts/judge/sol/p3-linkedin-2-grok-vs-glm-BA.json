@@ -1,0 +1,151 @@
+{
+ "judge": "sol",
+ "model": "gpt-5.6-sol",
+ "key": "p3-linkedin-2-grok-vs-glm-BA",
+ "wall_s": 22.4,
+ "run_utc": "2026-09-07T08:00:35Z",
+ "request_body": {
+  "model": "gpt-5.6-sol",
+  "input": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n\n=== TEXT A ===\nThe feature I was proudest of shipped to the sound of silence.\n\nTwo years ago, my team spent four months building an advanced reporting dashboard. Custom filters. Drag-and-drop charts. Scheduled exports. We rebuilt our entire data layer to support it. Our internal demo got actual applause.\n\nLaunch day: nothing. Week one: 47 opens across 20,000 users. Ninety days later, fewer than 2% of accounts had ever touched it — and most of them opened it once and never came back.\n\nI remember pulling up the usage report with my PM and just sitting there. Four months. Countless design reviews. A data migration that nearly broke us. And the market's response was a shrug.\n\nHere's the part that stings: we never talked to a single customer before building it.\n\nWe had assumptions, sure. \"Enterprise buyers want analytics.\" \"Competitors have dashboards, so we need one.\" \"This is obviously valuable.\" But we never asked the question that mattered: is this a problem anyone actually has?\n\nMeanwhile, the #1 request in our support queue — the one we kept deprioritizing because it felt too \"small\" — was bulk editing. We shipped it later in a single sprint. Today it's one of the most-used parts of the product.\n\nThat flop taught me more than any successful launch ever has:\n\n→ Talk to users before you write code. Not to pitch your idea — to understand their problem. If you can't name five people who have the problem, you don't have a feature. You have a hypothesis.\n\n→ Define success before launch. We never decided what \"good\" adoption looked like, so we couldn't tell we were failing until we'd already failed.\n\n→ Ship small, learn fast. A two-week prototype would have told us everything four months of building didn't.\n\n→ Your support queue is a roadmap written by your users. They were telling us exactly what to build. We just thought their requests were too boring.\n\n→ Building isn't the hard part. Adoption is. \"If you build it, they will come\" is a movie quote, not a go-to-market strategy.\n\nThe dashboard didn't die entirely. We stripped it down, paired it with real customer conversations, and a niche segment genuinely loves it now. But it found its audience after we started listening — not before.\n\nThese days, I get suspicious when a team is excited about a feature but can't recall the last time they watched a user struggle with the problem it solves.\n\nExcitement is easy to generate internally. Evidence only comes from customers.\n\nWhat's a feature you shipped into the void — and what did it teach you?\n\n---\n\n~420 words. Happy to swap in your actual feature, numbers, and industry details, or adjust the tone (more vulnerable, more data-driven, shorter) if you'd like.\n=== END OF TEXT A ===\n\n=== TEXT B ===\nWe spent three months building a feature nobody asked for.\n\nIt started the way these things always start. A few power users mentioned something adjacent in a support ticket. Someone sketched a mock in a meeting. Suddenly we had a Jira epic, a design sprint, and a Slack channel with 40 people in it.\n\nThe feature was beautiful. Edge cases handled. Analytics instrumented. Launch post drafted. We even named it.\n\nWeek one after ship: 12 users tried it.\nWeek two: 4.\nWeek four: 1, and I think it was me checking that it still worked.\n\nNobody complained. Nobody filed bugs. They just… didn’t care. The problem we solved was real for us. It was almost imaginary for them.\n\nHere’s what I got wrong, and what I’d do differently.\n\nI confused internal conviction with user demand. We were solving our own frustration with the product, then projecting it onto customers. “If we need this, they must need it too” is not research. It’s autobiography.\n\nI treated discovery as a phase we had already finished. We talked to users—just not about this. We assumed adjacent pain meant this solution. We never put a prototype in front of five people and asked them to complete a real task. We never asked what they would stop doing if this existed. We never asked what they already used instead.\n\nI optimized for completeness over learning. We built the full version because shipping “half” felt unprofessional. In reality, the unprofessional thing was spending a quarter on an untested bet. A weekend prototype and a dozen conversations would have killed it—or reshaped it—before we wrote production code.\n\nThe feature is gone now. We turned it off. The code is still in the repo like a monument to a meeting that went too well.\n\nThe lesson I keep: shipping is not validation. Usage is. Before the epic, write the smallest thing that could prove someone would miss it if it disappeared. If you can’t get that signal, you don’t have a feature. You have a story you told yourselves.\n\nTalk to users about the job, not your idea. Watch what they already do. Build less, sooner. And if the room is excited and the customers are quiet—believe the quiet.\n\nWhat’s a feature you shipped that taught you the same thing the hard way?\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n",
+  "max_output_tokens": 16000,
+  "store": false,
+  "reasoning": {
+   "effort": "medium"
+  }
+ },
+ "usage": {
+  "input_tokens": 1835,
+  "output_tokens": 1144,
+  "reasoning_tokens": 1034,
+  "effort_echoed": "medium",
+  "served_model": "gpt-5.6-sol"
+ },
+ "verdict": {
+  "more_ai": "A",
+  "confidence": 4,
+  "tells_A": [
+   "signposting with “Here’s the part”",
+   "arrow-bullet lesson structure",
+   "repeated negative parallelism",
+   "frequent em-dash clause joins",
+   "manufactured LinkedIn anecdote",
+   "formulaic crowd-engagement question",
+   "artificially helpful closing offer"
+  ],
+  "tells_B": [
+   "signposting with “Here’s what”",
+   "repeated negative parallelism",
+   "several exact triads",
+   "frequent punchy fragments",
+   "em-dash clause joins"
+  ]
+ },
+ "response_raw": {
+  "id": "resp_05f60a7c1d856f6b016a9e6f0b957c87d2a4d79d14b5f82190",
+  "object": "response",
+  "created_at": 1788768011,
+  "status": "completed",
+  "background": false,
+  "billing": {
+   "payer": "developer"
+  },
+  "completed_at": 1788768033,
+  "error": null,
+  "frequency_penalty": 0.0,
+  "incomplete_details": null,
+  "instructions": null,
+  "max_output_tokens": 16000,
+  "max_tool_calls": null,
+  "model": "gpt-5.6-sol",
+  "moderation": null,
+  "output": [
+   {
+    "id": "rs_05f60a7c1d856f6b016a9e6f0c3a8087d28e84c20412071327",
+    "type": "reasoning",
+    "content": [],
+    "encrypted_content": "gAAAAABqnm8hyrbuCjkfl0sHuXcaoEOowVcfq4pGE9amQY7sMnO2KQk07y-IIX8iMinpqTz-OtFqfzbVtrxM_X4l850O-QhE9An2Limgk0sjeMRPOgAWuiYC5v2lg_qxbU3ijVNY9fgPPVQQvVjOQbd55BfOYPbTwqXCqbKzpbobE1FzfIfnvvxowQ_XSTjsLFisdxKVsKwZfsyD0NPsvalcDi2wnyrG4n8nffA2_X0MohLuVMZmbXi6Dzgm6GVWn5SB-vLpEBw4GMtaMPBGd5DYk7tZbiyNV9xg6nIVNE6vrw4nWeakDibwZK_GE0VOvI9xWbZciLEl5q5x-XH3E8mqB44hc7yURQmgUCacL0X4o5NlgapoqNFXlDRJqpmRcbMSmpAozklkUSxuODTFlQfaoHvhp8MHdLn5mNyy7fReb00ytGRU5RpuDe5KUcwQPWoOK5ODPJukUAiWgOspP9dcpM02UAxcMAkOczfs0D7FhkGOx6ZoS8aTr1dN25QaTGH0o2qPe4wHq2c4Rii0OwrWfYsrz4QV0P6UM_7ChY0031Lf0k6tkEoppkp1yciGs-DbKPp2YcIwOmFYaLdbd5-BSZzhzWvP83Slsw2RF35qRFDZnXgxCkMuQUMQBDEXJlp-un3c356RFpCyD4Lwy0HcjUxAa3jCUng9q8TLTIj7HOh4uaNDHtencIGcLVYrTcHepvA0RYocs9_hKi8ubgfzWbQcnTyU36EpDMLAOuUlI-6Y0zO4ELT7Z7CmHK6cLO42p9VAxu-s_WSZs4talC0Jm3P9jL9VQj9n50dYGDvfojB9OEEpVWe021CEITURW2tKhzGatXn-wsPIPaUl4rfisgmk9CM8lcVNXN9W6wfxQpXcD0N5I7g-nwyUJoQaTB-uDWjNv0gZKBfyEqxG7E_HZQSxkqRZ7iZENBquX1cfQo1xmiL4BdyDXpK-CfYUc1bjeOyP3TckgI6vpba5AzyGdN-1Q0v05eGvkOnsKmol6FzHT0ALECScL7WUaeS5I2IkFByT_ZmKcNMXocvDztKOWNJOgNTRyrZrLoelipWR_hizCP5ADJCqvPxokx75R43Ud8uHu1G-nXhVc11VZHVvIpif0-FaH6Y_LBmxmvgHeMmfqgHgve5F5UcMYLPg1qwh0qUgjcyhl_ll7LB6JyNTiBImsuDDW2yoZfe0fIENQwmKwKfO0n_WASKrnSLakn5vCwDWKTRnTtaEDuZYJTA3LoUknJaQu3WvI5x1_0dQv_--tnO0WCgGyyjFlBsjX4lAoAziSXTpx1VK6cVx7Xtutti5s228LkKK5Sr7ZRzCJixPl7Ji1U3-srmTswvAIl5_u428LsqPjkKhzND8f8F0HjtClgY2YbvfTRlrFZEc8J3euAtTe-bqjes_1mq7e2nr0x4OoioOkW22tPj6L0quHO819-0Bpm-QryuYk9nOHHziz4KxlEebQq-arYAomprxOfV1JpgAgYYTglEuk5R8J0pChN69hoFqYgxsrfXBb4j8Ut1C3bD39xN8R2BQNNkBKCOE_A4_JglAVrZU6_NJMgjKGd3008iXQd07Y2rA9NMSuu3ppVB0gOSR220gN-sYjKXv05HglZnzyWcTO8_cENlAe0RXHpgk3PHyPNwUgq3HiZBK1k2SOWhFKQ5yL2vCwUeIZU4C6aGcRt293XzLjOTudyt1dqJ-xLsNboFAwvLiFPJCQgtpPlbj2yV5xSehOVaWYjM14aYLxEX_v3KyM3sXKcsTSrv7mOwCLGk3PvlXZ6n_LTylMUKcmp008F5_HauXXRHKSluR-ken70L43iN8Un3geXw0O0rK4YRwG9fJYPUpaEldlhw-Wo3B2eCDQQpPUFtFG8FGeEYtpxqkpGnxf8sQ1Zb3ZcMdHcISGvO64ENmwWkQxr05DWZZExHmIRaCl_ftZ0PpDrVAWfeQNPa5xbs1mHsKe6qGH-wrfWj9x1FFwPvqmPfShxlQZtHHhRd4Fo2KFQjQVaZwhmHuhsUoT3lucVf0l-eOCFHINOmWiWY2NogaolXbc2niRsv9RtjzoM7llc4wAwE5psQGNZ1gq3pJx0VLvST5ud9hdGFrSTJyAbMS4GbwbYkNci4niRuXY93sNeMlyEhme4NDQBK9H2b68KOa-ZMjKzjMeHO-Ae3CgIoqH8sSCGLMjriwWNJVSK5CVkJqICE2zOzQ3iek1QAx973m0jwKo7lzcde4tHsXf-4-wjuEtuWvX9laZzrhzeI537H5uiOTuPeVw4Jg2O6ENTQHH4AFWQXkYvt7eQVaCvet2LlKxX9g-NMAhxXgicXoJ90cItBBpv51LTRZsftzPI1rGzB0CdnKscBlIQ8qEgcl6kG1cGhjgBqZPnuZl19fMBTWW00sMMuPSvxN3lydbVqeKJ6eypw7jbXYPk4aNf5_T4yMHTBUh51TVmmgcdkoI9oo9AGsHy1zPxfXM19hdrDkSyuDsG1DPMHB4b5sGHFggtEEluy8Xmh0OpH2L75QZyMbJxtI5IVA1FUYwd43EloNKDBTkZpS7pnZN3_HLt7sGVFzv3yaJoyicwhcXR97iEwSCMxnxxtdrn5aVFnSRLL4PzxdoX9k5GYSf8GzyFfKhWtWWHCqPXZVEsL_93wIlPUgaBqT6I5ODVJ38Z4Dnw5YERP_vfAUTjfMTP_M5d47gv4_r4al0jEGIjnCZ5W0JuV6fgIhUSlOR_myqR3OyJHz7h7MdrK26f6ksmZigQ8RqyUCoKVFZdJltaqJhcdajv-7XYJj_EMmo-Ybq2irDaFCg2sC_yCpi0WqSLg303j3GqU5Z1qzNpp-qEvGalnrmne7qwdYT7AYq7oxPoOgoyfu6sHujEXb_q5vT73x2ecln3Oa3Foir09RFfO4UmH3-GoVrOonGCZv9iMg-PHWdtfXXtn5PsF0lyjaAgVf9wEEigVn8RwZdrD6bhX_7T2e3rQZXs3_qI9DDs0GXArUUnoaEdYwBLV6jeyjKgXCknfaweLxkCY2q4NkGvjZqCZCh7BvReEWOxuF02rqi6IS2ZYaEc61lTU2Mo8cGZwv-BJPb6OuZn2APOxtnIXNBEkXEfUUPWEocHW5bWapHX9bf-sBnSUBFbN2rLZBG_JBT4Cnl0zf2SBRHubHvau6KElR_XQdFOGpZ76fAQRnZsWkaSfwaj4wgpZ2Qe0TvLcIM-Awzs8IYlNG42y00NNa49L3VR-gbA2bQqymKLallkgQxcllUrTW4mMf7qpmfevokuRvwusIE-SKpA2LyWjeBkrzzlJYdjMAbeh1uZfL6D2Kbb4Q5162aSQeOyOGchXqw-3W4yXf62Z_6hmkY0hPs5oMmTQFTntnHzwOrCSknaYmI426VG5bjCx9XjcO_5XQL59qkyBQGL1s6DemPriXg9ponPz7kB73ce8o92xWdN4YE_bvYee6pF0Borrvhv5kG7RVxYp-y7ijuTk6Tf2c0l4LI7yuIlzCGaCej4TvferQIZmwDnAZ00dw_PsbSVawhWNss5WkgOMYrw3ddc51b_PnhyxH8F8kFYmhuZLR9hctyA0RqaikuYpWKEEAVKIygYP38ma-jxwmr1mMGKBKB5J-YQi3qnvACsnPN6dy1c_EvYczkHkVnOpC9TkoDKSKrJ_WRoXavFpep51c-KP6rgnEl8St372m8iW9Zw7SYMGHbXfykFwQ0lTMqopUGKXNLyRo-426rtjsJsNUdfubPfHfQNANyUE4LuMhsR2wbAI6f-eNCfzv1otZc8NiNb1I1hApe-gr5XMM71uczT4XWmzhmulQDe7EecoiDIna7q6BoCKmV0BMtJHB5kGbqwj1MZ5LjM3XKF7jtElGfCVEKPj9vmewwqaH6gmh2YbQTo9Y6kKbjxDts4wYsUiPza_Vl0-XL-ew5yuByHVitGrSjGSGiEDxThjslWkIjXZbkOnb5QDxMjQA9Vv2xtOmKhmsMlz-62niprcnniaEmFpQhq_Kp0Y-n4LABF8J1ViNziPGdy2mOmvqLmKk5ttJi4Sb8935MUlx8qR6lzihIgaEI517AvToH4X_0bJHVYrffRDOmUPct3NLlCh_DxEuZwAMznfEfYlNJhcMkI1mEloFPLaJS2cpG1arMkyTGMkTZ9GP-VvnsD1GWTffb2gZ-ZenkUlVLJrLKo0zDlluW05e8kLtxLylX08SYMxPSAAfYduc0xEDPagZuKBTaPDkrqCwd56gySHCoWzbK1nS-HgGrHUkUHZVgH1nEEodPT-SAyP-piClfehHbLRho7Qc6TDDzyYa6ny_y4bi1s3NjCEIVTvjAa2H4rxZwQUOZm7fqOGfOwVPd5z9-SynKGbmPoYj1ohUvXow-8iwjaebtY5k_ZW_h0ky2hdxsnVZpKOjkZt7AlnDwlDW_bC41KHyJQnHZGai1-2mz6lZjXwcabsrdSsb",
+    "summary": []
+   },
+   {
+    "id": "rs_05f60a7c1d856f6b016a9e6f16815087d2aa3eb5f39de8d5b9",
+    "type": "reasoning",
+    "content": [],
+    "encrypted_content": "gAAAAABqnm8hZTGUBC2oKxZuNDcYzBs33ITPK0FvJ-jtEOeabuDxERUBz5EwxV9AJTM3vspfFrrzh3Uy7jJeaA6Qq8c2q3pKzTWwY3KbsKGUxJTpCboD_1WS30isvnlh9ugSBHIAWsuphPhVyqo0zktFO8cd_jxZgZ27LB2ImmuTJC--TdlN8W_UihdhWR-DQXsWZ2uWR9h19OSAOPuhA4gKikrUBcPPE2IRnm3kKB6bQUPBwua4tQwNxw6ScfyISSekufYAV2VmUoIEW7vrMFdxTWgpLqbUtLy21nqz4kh-CR-MccJQYD4A63CzlmtmVTvwW73Ca1wlTvcpdmpP9Ysg7FgSRqA4gzoQpgo9_djarQmhHJ8LszU8VG5RIOjjZkchYloK3vQvZDeKnSlNanlR98Wt4GeZD3EOaj_INzGWWHzHoDxYBgz3LqnZdkGLt-W-jTCCe_3h5D9BMr4HZ4rOxRzmi6KEQ1k2c8DxakKf_yAdPhREy22aPyLJ9tIw4eqH79L1ufVFfU4I8kLqxuDeVUS2huM9qWWFmbnrrKnPyyxAShUn_qvy3OBruXkl564UXfYvDzCBJRzCA-6oG5gL3_tNAlVDsrly-zDsUGLxNYcUVJ6R8v1fwrtkQyKPyLhdnCIDwYDWm9SQTdBi1AXO0q88b4PABIA3azm6J50lxa5bV5hslIKBuaK7tXkgFxA3AwqQ0ksy3wacI3ZVu5IFhYwfx9UUsh3T3HHMMh3miSkPPa996f5F4ArdL8mtN4SJsppOjukA9pkkTjJSfKycZOMLBVYPB-3N7b-GkWmoHaH0l2TQL_tIULTXJ9BHngnf1T0GG9-L9tU1cUSUM57RORBwDl0_iXpzIFMF29r5iuPvQXqEM2bi8VVBMNLBNDlSwPuH7DqQxhucmw9QETowFDQHn8hZguDt0xgOuqS2e-5_AlNcqlNtdw92bGeLC2kxEDQwb1MSIg3y4E4RYCr9pT4mZiOWHDQ1LEpx-EW8a8lEJ2cxXPyDR13UNJJ48u1PxMVZsg2_8ijnqePuyWyJ-dnm7UwoXe6RKlfg-2RTAIMMUWC3sAQs9zEmXTa_SIMdUEeAZBXnqV325f_mrTkqZnG2EjbXkvrERvNgKy9zI69dJ1SM3qgysT-34NEAczPhazoCiwEWyLdAdGFbKdCyxS2BYtuHn3d5kteK_JwPs0PJkl5XmonjuJ1XKPEWbHiCcx9zKVSqaMR2Xx6iXdKWphoubMOIk4cDB6HEhSuLQ_2Ba04d1biEK3R30YVye3-wrBrvqigP4b6aFmGz1uS9T7kHmFgT7WogJWVPO7hCCyNcnZq5pZUJ0U3n1u_XYDg--iRNS1HwzuCU5o0qbHwnCwVWuhqD9CTVOiQuWvuu8F9WhRhRBXKs7rY5lerd1KwiTiMqIAVt9CVvFaekuuEvUz4T5vWb1ptG1kNR4ufVV1LlrlU9TL3jnw79aNcezkaGI-AFQ5YnN0LxjyxzvOLQTDNzIserz14L4tkQh1lzyJqhLXQaKgUVOwYVT0uef6gF45epcxYJBSk2g9MKTsQhxOcQjMUJjITSpRf5fYs-4RAPyi34NIMaqHjzd3tWLAns-G8e4tPcSLuIYAKqJhDf2Qu_svCs_pYrmDuO0PYpncIiuzXsYPE4cSGD6nX9oh1FBTruHl8nM1QWYBGhXRLciVa06FeLJ7Vv2I2k4MGG1t9qqeKWRJ6gQN0_pbExLM4Ge4By3QoJlAb02rNdbWFBqAk1f6-saJQbNBorjEqznhKxANtuX_YGoYCdwdaadHmvHavJfK_HsY9xddHRGSt79YFhN4GxwD6DoxiDTgGp-PUL6HvG1HAL4jSgHmQpob8AhWHMc6ynSHE8QnRKD8wcz8VItI41nPET9Yh1d3XcUsYYAv3w9fAUZMpJv-gG-KMCb_9bVpkkkRe1nb22nBD_H6yknDzUD5XOk7_auzG_o24CQkBVQkBu0VhseN5446Qnm8h-rfJC0A701I2SS_ytLjNrRnfAezMmt00e96R8q8WQEE0M2Pu4ydxOcW5xHpvgWBrHLtCF9icP-3-M43yj3XXIg9A-8bDR6gn3-2GX_xY2S55kzYOQh1-KvTICtxtU0Viir0IwzWVmnaNh8x9p0f-FVaFCurk0NIMYRA5hUMKEb7b1aXU4t-egV-k6bcSFIeV_NI_eNK8j3fvkBC9fcXTrSqsFToTxHzC3_O2F70cTPJOAnVLpqJl2gc2TMWIfsSi2DqKWf6Jcbv6qWRjWihTFy1YWEpQZ2qnSIAMK7n1sKGv9hmH8YW5G-M_5szQWka7KH6V04azQFciWLgNV3ryoAAmTFwplcYobQvkzgiaw1oFCk0N5wUDHDUMvM0jYO3eb7_Q5iAL8lYhCdlgzneZ4CgMqDJo2tlqqnvXJPwmo1CSGTPyHPhKswpXa71NKoZY7Zw4xKhEelO1YE0CnrYJptcLsajVlt6_rdJq_bTeBckj9dme_jdORc_DhMAmvhY4gymW8B3G8TvtuIhZdmuSNpvZZp8bDqhHNZC-M2UZFv4gzZman07TKNrMRh8amG7h-tvPmJb_krHZeem994Jj3AsNxYeCLgC1anY1Y7Y5GNJ_pEu5HPg4PLZIFJNAmDEFEWyPqUVQ9-cX79oh7jnt5TG250QPGRE69ghjhlKybEZL3IvSfoTsui3jes4zl9THGxThRJVp8DHHLDXBbRuDcct98eXiho67jCtvQssImYh_3zvRA8I1F_tGvqf6qO4iQhZow1Uubvbtw39UZF2AsyTLa66cNvbT428FBQwcUTJj4IVJ2lDfGhHKFOCWJ8da2igyErm0GVgxnTqLlUUJZhf0Mma5STn1ZSCIlfFj_VkLjTuvwQVrrzRvLtNyHltGpKz5KBd4bCqRwgZtUDJutKLXZ0Efq4i7UXU0zpXmyW5dwssyueI-xAEttLdBAyQcr2FgofE6vsH0ptAM34wma55B7k7BtQ6kXleAS94BsrdlF9QvOTiy_LJl_JcFa0YV_GBwfJW_evALZwkxQUgRmG5jtNAFQl27kLmxptwMs1YE1kg1H28igi6c0Be3A13obdCX4t7mScro0Zn3kOHpAwHFhKMUO5RivQXgGx6QM-qI9q9mstvM7j431TSAaQyeBlJZe37SkrmOU-j7S_uXHY_kFHvKlZ4Xh8d4sYhiAiM4FlxKOI-gmCAm_H9xnwmX90BO9iT1-S0yqDMDF8p7I6zzXF9ECuoToL793pRY4MnZkd4-P-Ug1AJz8HSPDLymMu--x5R3AXMz0njhsmYvY5zUTi2xGsG_1KWT3Cl74wXxM0pDOSS5j1BvtszZRSVBDWba1pHR1yYI8T_aR91R0yw-weS_XZvcRCTtWb1SeDoDRTztfssFjfDa3kd5ah42ZIwVW113hqxjG3Io-ls-KpZB9pdCOhwOgVhhriMJDyUmuT0ddhHM57nxErV7wjXGtZ-yMDIIaWa1tBtUHlU-8wqNVPC8sYxpx55fQ-SQNhlyZ6Uisb8M7lNhnj2lg94s52XaLoODUI0jI4v6lalHS6onZ_84D0RYk1KIxaperK5_xp-Ifs0CVyGF0cPDjTmcwFBtvaP7DXqyAgEWOV9GjnPxWpBaz-cR7NgtT9swnmBJ0we8YcJKCLSTEmz86ONh1NSfeagujvg84yj-Uq4msThUXtxUSMaY7t-0ltADyIz71nGhe0x1ZwVzkQDySWl42mzl9NnnbRKt_xQyPBTNayIfqN5Cw9wXfmDTuW8COctY1bCjF893aB4et4nO6Kpnd8ZrnEaq5wMqGg08BaeYiOfdwMTulp9Fn0ALfDz9wpFfVPvyuwECEEazFc3J3iYa7eQm6TOlsb41h1sYLOJyhGFaawoK5Gt2T4zg-qXF4MuRfcpiEzDPFfB28JRqqTnroT3pkZQwM28IfgdFgIb_FhvqNZE-zKsXvNAO6zZRHBn2TSbEScyaGM4DO2Uu8wy189XTsPBb7TpIlwVOrlmTppCAVAf7D8RjCoj5lQbik7xM_2_sm3S6fmkIUG3wMX_YmVI6H4HxOKzqNN8BWyoOl7ZtzVRdwow8aQiIQ7Jh-bAe8EdvO_hflA9WjvwU_nzxQJyuyhw1NY9Y6O5fOM1W1R_qEGkmmEH7y4drNE_7X6HLOLCUj6aiVtEV06pbjjQhmS3SGy203K-0B4hxjD32FU3tJ-o4itsv0jQ8D1TQM6yDPwwzFACz8yU-hkqk6FSlYgJesCVcGFlnv8gEsoSdDv03zGw-09Z-OpEUXi8AxzznpwQ5ynGpgeH8lqWEkBo6HUF4sge1QXcAa_WVc_w_TZPj7zi0dI6OEUhawRlhm0gkynIEB0M-9ph8gk-FO5vK94HVnbrVT2aH_vggsnaBE2Bszu58OLp_ygoPI3APaEBWTY_j5aFwO4K5sbwKgjGhcnw4-lcfGUQmNquV8rt5-GiEDpA==",
+    "summary": []
+   },
+   {
+    "id": "msg_05f60a7c1d856f6b016a9e6f2015fc87d2a3791b6c0099b8ae",
+    "type": "message",
+    "status": "completed",
+    "content": [
+     {
+      "type": "output_text",
+      "annotations": [],
+      "logprobs": [],
+      "text": "{\"more_ai\":\"A\",\"confidence\":4,\"tells_A\":[\"signposting with “Here’s the part”\",\"arrow-bullet lesson structure\",\"repeated negative parallelism\",\"frequent em-dash clause joins\",\"manufactured LinkedIn anecdote\",\"formulaic crowd-engagement question\",\"artificially helpful closing offer\"],\"tells_B\":[\"signposting with “Here’s what”\",\"repeated negative parallelism\",\"several exact triads\",\"frequent punchy fragments\",\"em-dash clause joins\"]}"
+     }
+    ],
+    "phase": "final_answer",
+    "role": "assistant"
+   }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0.0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+   "context": "all_turns",
+   "effort": "medium",
+   "mode": "standard",
+   "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": false,
+  "temperature": 1.0,
+  "text": {
+   "format": {
+    "type": "text"
+   },
+   "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+   "image_gen": {
+    "input_tokens": 0,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "output_tokens": 0,
+    "output_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "total_tokens": 0
+   },
+   "web_search": {
+    "num_requests": 0
+   }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+   "input_tokens": 1835,
+   "input_tokens_details": {
+    "cache_write_tokens": 1832,
+    "cached_tokens": 0
+   },
+   "output_tokens": 1144,
+   "output_tokens_details": {
+    "reasoning_tokens": 1034
+   },
+   "total_tokens": 2979
+  },
+  "user": null,
+  "metadata": {}
+ }
+}

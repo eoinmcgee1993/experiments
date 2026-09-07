@@ -1,0 +1,142 @@
+{
+ "judge": "sol",
+ "model": "gpt-5.6-sol",
+ "key": "calib-human-09-2022-08-07-vs-fable-3-HM",
+ "wall_s": 8.5,
+ "run_utc": "2026-09-07T08:24:50Z",
+ "request_body": {
+  "model": "gpt-5.6-sol",
+  "input": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n(One of the texts is a real LinkedIn post by a person, written on its own topic; judge tells, not topic.)\n\n=== TEXT A ===\nThe #Agile Manifesto was a success.\n\nBut it is outdated.\n\nIt did its job; it helped us move away from the waterfall. I support many of its values and principles.\n\nAt the same time, I think it wasn't well prepared. And most importantly, it has not been updated since 2001.\n\nWhat holds on, and what's missing?\n\nLet's start with the \"Working software is the primary measure of progress\" principle. Working software is just an output. How do we know it delivers any value? It's a perfect recipe for a feature factory. Today we understand we need to focus on the outcomes.\n\nThe Agile Manifesto also doesn't mention product discovery. Building a feature to find out nobody needs it, that it doesn't scale due to technical limitations, or that it doesn't produce value for the business is a waste, no matter how much you \"Welcome that change.\" We can mitigate those risks by validating our ideas with the help of prototypes.\n\nThe Agile Manifesto also lacks many necessary ingredients for a successful product organization:\n\n- Data and information are not present. Those are strategic assets every PM should understand and leverage.\n\n- Leadership is not even mentioned. In this context, \"Build projects around motivated individuals\" is just wishful thinking. \n\n- DevOps couldn't be included, as the term was born in 2008 - 7 years later.\n\n\nThe Agile Manifesto may be outdated, but the Agile principles and values existed long before it was created. And they have evolved significantly since 2001.\n\nI do not doubt that agility will thrive. Nothing, not even fake Agile frameworks like #SAFe, can change it.\n\nDo you agree? What are your thoughts?\n\nLet me know in the comments.\n\n- - - - -\n\nA few sources I highly recommend:\n\n- Product Discovery is perfectly described in \"Inspired\" by Marty Cagan\n\n- \"Outcomes Over Output: Why Customer Behavior is the Key Metric for Business Success\" by Joshua Seiden \n\n- \"Agile 2: The Next Iteration of Agile\" by Cliff Berg, Kurt Cagle, Adrian Lander, Philippa Fewell, Raj Nagappan, PhD, Lisa Cooney, and Murray Robinson.\n\n- The Agile Product Manifesto by David Pereira\n\n=== END OF TEXT A ===\n\n=== TEXT B ===\n**We spent eleven weeks building a feature that got used 47 times. Total. Across 12,000 accounts.**\n\nHere's what happened, and what I actually learned.\n\nLast year my team shipped an \"advanced export builder.\" Custom fields, saved templates, scheduled delivery, the works. We were proud of it. The demo got applause in the all-hands. Sales said customers had been asking for it for years.\n\nNinety days later I pulled the usage numbers expecting to write a victory lap. Instead I found that almost nobody had touched it, and the handful who did mostly opened it once and never came back.\n\nMy first instinct was to blame discoverability. We'd buried it two menus deep, surely that was it. So we added a banner. Then an onboarding tooltip. Then an email campaign. Usage barely moved.\n\nSo I did the thing I should have done in week one: I called ten customers who had explicitly requested \"better exports\" and asked them to show me their workflow.\n\nEvery single one had the same problem, and it wasn't the one we solved. They didn't want a *powerful* export. They wanted to stop exporting at all. They were pulling data out of our product to paste it into a slide for their boss every Monday. The export was a symptom. The disease was that our reporting page didn't answer the one question their boss kept asking.\n\nWe had taken \"customers want better exports\" at face value and built a Ferrari for people who wanted to stop driving.\n\n**The lesson I keep coming back to:** A feature request is a customer's *guess* at a solution. It is not the problem. When someone says \"I need X,\" the most valuable question is not \"how do we build X?\" but \"what will you do the moment X exists?\" If they can't answer that vividly, you haven't found the real need yet.\n\nA few things I do differently now:\n\n- **Every roadmap item needs a \"day after\" story.** Not \"users can schedule exports,\" but \"Priya opens her laptop Monday morning and the number is already in front of her.\" If we can't write that sentence, we're not ready to build.\n- **Talk to requesters *before* scoping, not after shipping.** Ten 20-minute calls would have cost us two days. Skipping them cost us eleven weeks.\n- **Watch, don't just ask.** People describe what they think they do. Screen-shares show what they actually do. The gap is where the real product lives.\n- **Define \"success\" before the kickoff.** We never agreed on what adoption would look like. So we couldn't recognize failure until it was obvious to everyone.\n\nThe export builder is still in the product. It works fine. Nobody uses it, and that's okay. It taught me more than most of the features that \"succeeded.\"\n\nIf you're a PM, engineer, or designer with a similar story, I'd genuinely love to hear it. The features that flopped quietly are the ones nobody writes case studies about, and I think that's a shame.\n\n#ProductManagement #LessonsLearned #BuildingProducts\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n",
+  "max_output_tokens": 16000,
+  "store": false,
+  "reasoning": {
+   "effort": "medium"
+  }
+ },
+ "usage": {
+  "input_tokens": 1903,
+  "output_tokens": 287,
+  "reasoning_tokens": 167,
+  "effort_echoed": "medium",
+  "served_model": "gpt-5.6-sol"
+ },
+ "verdict": {
+  "more_ai": "B",
+  "confidence": 5,
+  "tells_A": [
+   "Signposting: “Let's start”",
+   "Bulleted lists and source list",
+   "Overused term: “leverage”",
+   "Audience-engagement questions at the end"
+  ],
+  "tells_B": [
+   "Signposting: “Here's what happened”",
+   "Bold-label paragraph openers",
+   "Repeated negative parallelism: “not the one,” “not the problem,” “not after”",
+   "Highly structured lesson-and-action bullet list",
+   "Every point lands neatly in a polished, uplifting takeaway",
+   "Generic LinkedIn engagement invitation and hashtags"
+  ]
+ },
+ "response_raw": {
+  "id": "resp_050b1d74f1b71451016a9e74c8df0487d29c2f7d5c0636954c",
+  "object": "response",
+  "created_at": 1788769480,
+  "status": "completed",
+  "background": false,
+  "billing": {
+   "payer": "developer"
+  },
+  "completed_at": 1788769489,
+  "error": null,
+  "frequency_penalty": 0.0,
+  "incomplete_details": null,
+  "instructions": null,
+  "max_output_tokens": 16000,
+  "max_tool_calls": null,
+  "model": "gpt-5.6-sol",
+  "moderation": null,
+  "output": [
+   {
+    "id": "rs_050b1d74f1b71451016a9e74ca316487d2bf31c0af5d897cca",
+    "type": "reasoning",
+    "content": [],
+    "encrypted_content": "gAAAAABqnnTRqBJhAKo2rZTSBx_hf6q5PoM1GJqgTtUQDcQ9xIcqPeYUx0Mt5JONEkVj5YRyt8Bj9xVHszDqQxzmfYbeqU_Luu7Z2pSFNQ5Katotaj1viiAUIM30rpcnYcthhxiYzuhy6uThhyIqgQF6hBmMwJNV-I_7vmYUO0nKwhTxK34CGf2TC1XOzIeaUg9kwTlp7q5jFTbER1jqUDLx59qU9b-IvmjhLcAiGV8nn_Qag_70qmhfO3wNSuEXyhXuZe4lkkc-VwyqC4ftNVT7YFxV8W-9OCHXSTajasjNYQA7Xy6MhlTbsXB_WfIRJczHOydHBB3PA9CwEYR2v83QquIfuRFJJG3zPHxdijknyXNZLz3HjB1xQzFnC3Xc59ZtavcjQgBJht5IW6M8kx_6XP80nQhXPu5Tza3_Q1UzchS9rLRCoZq1CrqYmAOy2xf8JvM3tZqJdzUFeukphWWafaxaH_oeOUqBo8knu5DD8ZooItzqxu3_bdnH8-ou2mdKdOttHeVG2LI2OYBm4IdrUjzL26wP_EH9g5ijlWamh5eE9_wCZpCwSzhUTYyxYG2pkCvW1Zy73phhQAg781WIF1u5QfXt3l7OMdN8Cjk_wwROlnCq-8Qc9IirA9jt48f30OsmsWXomTIrdB_AO44wfQ0lH_iQ6Akh2xIIomCQjh9jrOLiy1hkumDbPru-pbS2xeOB8hxKfDWknhCeO6pR5R-WEAaOy8BlHlE0v45pUc65dLXs1RP58GcaWbpqNwDDfvWHXQGf-_WOtOvqCvbkQ7KTYA0836GLRTuIvxNhF-qOPTY0kI6rsh6raQIhxkYq5rdTUP9Os9GW9H-YCY5HFfGybNQSyw509rfXJTHxvYVptEl_-o77apEIehRdlSJLKimbz22aYmSX8DyCvhwVOo7X8pGTWoJ0H8Z3hhJPqmXt4drYn5LACs8cbL0G3V4Yw1WUBj10Zx2YEeV0edk-c70Ll56bkOIqqcdQfnk7h-UQayWXX_u-4t3n1BEwkuUZAI0pXUPheyigkjSUwNeH5PHLyN9Ia38QgRf-kfHixx1OOq7TpyTL05Ii9VMoD4xoZgzpdxJaBFfMWa5BNXh4Yj-xaJ_cFItTdEQ82d5lFJvDuQQf0-x1AMSsjV_BV8teuBnrMVVbCqZOS6_jYFBYIcOL_uckBnTe1pcokEYGML_LOT76C9bVWviBzUwd21VY5CVQd98am_fjUr743pM-LwIHz5Xpx8oX5rugs-xOx1reJf8y1dEeog2-9iyHJ3PTyxFgaCLo4rIioqWqwW2cjA9kRBmND3dQGSdIMfxHtUg1XsxfinV2SMpq_2atftJuBPX1l5S34oOCgtfKSFh-jACdWw5caskO9tcbjVA8_FViB9_0BM6sUT9sqmkLHb7EScHIk-aGHu-p9PuUpoHn8CaaADGmU4tNlAO7cYp13TCY4va0mqmUmLcxFAq7bMmSr3z3vLpzXHrLmWkQZDjmy8S2TnHRYqe57HohRn_abwlJ1kmFlI5gy80L3Giuwb-YB7Zz6523j6zPZoGqIVZC2ct0k4ae14ojJoyYevrwn2-1oAEzlz1e82yJ9EpnnbcZEXLFjOciAY3B35dnAke_C-GnAoMoLz0STwOWhbV2r-9X7e1lgnykSOxXH2A--GTwaVj1xEDA-71XZhrh5f4X8yzqUNzHQe8PVGE7efU8iyb6DJMDBvnmS7flkdzu3L2jLnqyVXeCXY8v9TG_Te5ll7Y7JIQHfYK00D9BRb0M2rwW36i9kqgcgU-NYy4uMXe4eBlAc1zRJhZNllU2sydI0Fhkf4XJGuh3Z57WNZA9zBHYK2nh8ZW3066F__3nCYwHnzdpAErHzAFyjyR3KPzK4jbQat_rRgeEZHZKQ3JJDRF6cCHbjdfe3stXRyEBOHGLyX36YRf0gyFh0wkZ9Xz4rAc_NZZZTMyyyfdVDiqaR4m1-agB-vVsPM9a83wL38pFpAumiE7YA2nL3vcmHEwYVhbJs17xo2fvJqkxz8TfrmVpAqjFG5LUq1MwLk66Cv_izXhMoEow4ZU9eEFHlxel1YkHkiBdAHMt3wxQZT6AB9X6tUi3N-eteULnGS76HuoCc1USiHOi8FT5P6s06VnYnzSp9LSyV72e8eLT5S7xCLxUjt9nOHzSy5CwSxg8zLjYGhQT_hJmE3WrwaAgTxxcT7asUwe3XCaowzfN2jiaseP8RRhQGKg=",
+    "summary": []
+   },
+   {
+    "id": "msg_050b1d74f1b71451016a9e74ce9c2087d28861319f641270b5",
+    "type": "message",
+    "status": "completed",
+    "content": [
+     {
+      "type": "output_text",
+      "annotations": [],
+      "logprobs": [],
+      "text": "{\"more_ai\":\"B\",\"confidence\":5,\"tells_A\":[\"Signposting: “Let's start”\",\"Bulleted lists and source list\",\"Overused term: “leverage”\",\"Audience-engagement questions at the end\"],\"tells_B\":[\"Signposting: “Here's what happened”\",\"Bold-label paragraph openers\",\"Repeated negative parallelism: “not the one,” “not the problem,” “not after”\",\"Highly structured lesson-and-action bullet list\",\"Every point lands neatly in a polished, uplifting takeaway\",\"Generic LinkedIn engagement invitation and hashtags\"]}"
+     }
+    ],
+    "phase": "final_answer",
+    "role": "assistant"
+   }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0.0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+   "context": "all_turns",
+   "effort": "medium",
+   "mode": "standard",
+   "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": false,
+  "temperature": 1.0,
+  "text": {
+   "format": {
+    "type": "text"
+   },
+   "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+   "image_gen": {
+    "input_tokens": 0,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "output_tokens": 0,
+    "output_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "total_tokens": 0
+   },
+   "web_search": {
+    "num_requests": 0
+   }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+   "input_tokens": 1903,
+   "input_tokens_details": {
+    "cache_write_tokens": 1900,
+    "cached_tokens": 0
+   },
+   "output_tokens": 287,
+   "output_tokens_details": {
+    "reasoning_tokens": 167
+   },
+   "total_tokens": 2190
+  },
+  "user": null,
+  "metadata": {}
+ }
+}

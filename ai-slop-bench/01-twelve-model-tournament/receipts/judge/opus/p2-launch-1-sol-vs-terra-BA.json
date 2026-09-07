@@ -1,0 +1,106 @@
+{
+ "judge": "opus",
+ "model": "anthropic/claude-opus-5",
+ "key": "p2-launch-1-sol-vs-terra-BA",
+ "wall_s": 7.6,
+ "run_utc": "2026-09-06T22:34:49Z",
+ "request_body": {
+  "model": "anthropic/claude-opus-5",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a launch announcement of up to 500 words for a new feature of a B2B helpdesk product: a Slack integration that posts a daily summary of open support tickets to a channel of the customer's choice. The audience is existing customers.\n\n=== TEXT A ===\n## New: Daily Open Ticket Summaries in Slack\n\nKeeping up with support shouldn’t require another dashboard check.\n\nWe’re excited to introduce our new **Slack integration**, which delivers a daily summary of your open support tickets directly to the Slack channel of your choice.\n\nEach day, your team can receive a clear snapshot of outstanding support work—making it easier to stay aligned on customer issues, spot priorities, and take action without leaving Slack.\n\n### What’s included\n\nYour daily Slack summary gives your team visibility into open tickets at a glance, including:\n\n- Total number of open tickets\n- Tickets grouped by status or priority\n- Key ticket details to help identify what needs attention\n- Direct links back to your helpdesk for quick follow-up\n\nWhether you share it in a dedicated support channel, an account-management channel, or a broader operations workspace, the summary helps the right people stay informed.\n\n### Why it matters\n\nSupport is a team effort. With daily ticket summaries in Slack, teams can:\n\n- Keep customer-facing teams aware of unresolved issues\n- Surface urgent or aging tickets before they slip through the cracks\n- Reduce manual status updates and dashboard checking\n- Create a shared daily rhythm around support priorities\n\n### Getting started\n\nAn administrator can connect your Slack workspace and choose the channel where daily summaries should be posted. Once configured, your team will begin receiving scheduled updates automatically.\n\nVisit **Settings → Integrations → Slack** to connect your workspace and set up your daily summary.\n\nWe’re excited to help your team keep support work visible, coordinated, and moving forward.\n=== END OF TEXT A ===\n\n=== TEXT B ===\n# Stay on top of open tickets with daily Slack summaries\n\nWe’re excited to introduce our new Slack integration, designed to help your team keep support work visible and moving.\n\nOnce enabled, the integration posts a daily summary of open support tickets to the Slack channel of your choice. Your team gets a clear, consistent view of outstanding requests—without needing to leave Slack or manually compile updates.\n\nWith daily ticket summaries, you can:\n\n- Keep open support issues visible across the team  \n- Quickly identify tickets that need attention  \n- Make daily stand-ups and handoffs more efficient  \n- Give stakeholders better visibility into support workloads  \n- Reduce time spent checking dashboards or sharing status updates  \n\nChoose the Slack channel that works best for your workflow, whether it’s a dedicated support channel, an operations channel, or a shared space for customer-facing teams.\n\nReady to get started? Open your integration settings, connect Slack, select a channel, and enable daily summaries.\n\nTurn open tickets into shared priorities—right where your team already works.\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n"
+   }
+  ],
+  "max_tokens": 16000,
+  "provider": {
+   "allow_fallbacks": false
+  },
+  "usage": {
+   "include": true
+  }
+ },
+ "usage": {
+  "input_tokens": 2174,
+  "output_tokens": 585,
+  "reasoning_tokens": 239,
+  "cost_usd": 0.02524005,
+  "served_model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS"
+ },
+ "verdict": {
+  "more_ai": "A",
+  "confidence": 3,
+  "tells_A": [
+   "\"We're excited to introduce\" and \"We're excited to help\" — artificial enthusiasm twice",
+   "Signposting headers: \"What's included\", \"Why it matters\", \"Getting started\"",
+   "Participial tail: \"—making it easier to stay aligned...\"",
+   "Triads: \"stay aligned, spot priorities, take action\"; \"visible, coordinated, and moving forward\"",
+   "Multiple bulleted lists where prose was asked for",
+   "Uplifting recap closing line",
+   "Generic benefit language with no concrete detail (no dates, names, numbers)"
+  ],
+  "tells_B": [
+   "\"We're excited to introduce\" — artificial enthusiasm",
+   "Rhetorical question answered: \"Ready to get started? Open your integration settings...\"",
+   "Bulleted benefit list",
+   "Em dash used as default clause joint",
+   "Punchy uplifting closer: \"Turn open tickets into shared priorities—right where your team already works\""
+  ]
+ },
+ "response_raw": {
+  "id": "gen-1788734081-J0YzxqFPzsLOUtjXRlqf",
+  "object": "chat.completion",
+  "created": 1788734081,
+  "model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"more_ai\": \"A\", \"confidence\": 3, \"tells_A\": [\"\\\"We're excited to introduce\\\" and \\\"We're excited to help\\\" — artificial enthusiasm twice\", \"Signposting headers: \\\"What's included\\\", \\\"Why it matters\\\", \\\"Getting started\\\"\", \"Participial tail: \\\"—making it easier to stay aligned...\\\"\", \"Triads: \\\"stay aligned, spot priorities, take action\\\"; \\\"visible, coordinated, and moving forward\\\"\", \"Multiple bulleted lists where prose was asked for\", \"Uplifting recap closing line\", \"Generic benefit language with no concrete detail (no dates, names, numbers)\"], \"tells_B\": [\"\\\"We're excited to introduce\\\" — artificial enthusiasm\", \"Rhetorical question answered: \\\"Ready to get started? Open your integration settings...\\\"\", \"Bulleted benefit list\", \"Em dash used as default clause joint\", \"Punchy uplifting closer: \\\"Turn open tickets into shared priorities—right where your team already works\\\"\"]}",
+     "refusal": null,
+     "reasoning": "Both texts read as AI-generated. Text A has headers, bullets, doubled \"We're excited to introduce,\" triads throughout, a \"Why it matters\" signpost, and a closing triad—more structural tells overall. Text B also opens with \"We're excited to introduce,\" uses five bullets, a rhetorical question (\"Ready to get started?\") with an answer, and an em dash in its close.\n\nWeighing the density of tells, I'd lean toward A as showing more AI-typical patterning.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "Both texts read as AI-generated. Text A has headers, bullets, doubled \"We're excited to introduce,\" triads throughout, a \"Why it matters\" signpost, and a closing triad—more structural tells overall. Text B also opens with \"We're excited to introduce,\" uses five bullets, a rhetorical question (\"Ready to get started?\") with an answer, and an em dash in its close.\n\nWeighing the density of tells, I'd lean toward A as showing more AI-typical patterning.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAIStwcKrgEIERgCKkAp8mD1BIeJ9mTdt8Gk9zWlvc4LDcJioefDkKn8dI0MeaJD1wQNq7yrkRgfivC7m4hKbtuusWjMo/+8JB1JQASWMg1jbGF1ZGUtb3B1cy01OAFCCHRoaW5raW5nWiQ0YzBmMDQ2Zi0yNWZkLTQ1ZmItYmZiMy1hMDhhOGUyNDljYTd6HnVwcm9mXzAxMUNlbkZSYjRqeFBLcXdMUXFXN3dtNqgBiNX31AYSDJhQN94urDoEl2r0fhoMxO4udJ9/M4lZT4aiIjA6EX3tB/6H8FV/kqUOHugpk1ip3Y9r/8poRE76Re1pbJTYUORz5ZgaSEwj/VpmcUIqtQWGo5jVjnaAhflY/gR63sgJYYCF3wW3s025FSxD+sdVr4SodtGL0B+Lbsoc/kuF7XFjTXbqq2T7p4mIPWlQBGXiCs7ScupHgypLuZ+Dj+SogGqF4vKJ5lAlt4BUDpkn1NErQvxFIV4oE0gjesbJz8vwXYGPCo2vZvNHlWttXm5kD+7eVMkR7ktNzImyu0CjN4J5Q28oWxmfROxbeu03GRDVcyCL6S9NoRPmnt5z1XEL3TXcrDlplV4BA50MWEF5SqTsuTY+0KqkU+SmxcJTdSkDBBN4xxNKt95AJPB/H4Qn9Km4sdTlFiRnbMf5+KGUGMAaUv34ZPan0UmpGBnwviJ3jIjbHtpuSpmoSS4sJzag3tIszpWV/1BcAmM90Kt5hR1HrPO3+9v9Yhaeziw/tDEyUTS+a4FcPvGuEzxDEt8EufazBByXVLjfb/ISSuBWNm5YtpYMEIID60Lw6LmPie4VgMZvNlUJda0jxeVvG7Vh/RsyrYirsQsaCx7np5dCHjB3eGP4RWQzUkdUHcX3zzlWZqMw/ameYP1ufHwS77DzNdPVgeZp0N/YuHEExPtJpybEnnR8uTO2zS8FZ90WpT7pDTIbDdRRLRUvuPBDT4X1eNxouIDkrzyexfcT6Xrs90xMOCY8Bx+M81gpWRFcTAIyJk6CJFQEw4cBlojPPXsrG6G312Gtq3WK8v9HVLTHt7cDRVaADXO9bXwmF5B1a8icR3T2zCDRBW3PikquXW1apjziu+ev8sMk/RqkhMqQzFCUXDeD0+R9r2lSLsuXqxFygvKP9nComJTYj2qKIOdM7pRygLMU1g3C1eFIO6H0dl9DCvqoTjAs/YD6oWAFvukeVy7WZU+ZuUCIFoysi5r+PGKJT1fOvq440STJa9o1SEu296OsrlqzHzrNcb5tstoGwj1gXPAYAQ=="
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2174,
+   "completion_tokens": 585,
+   "total_tokens": 2759,
+   "cost": 0.02524005,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.025495,
+    "upstream_inference_prompt_cost": 0.01087,
+    "upstream_inference_completions_cost": 0.014625
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 239,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

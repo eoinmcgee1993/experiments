@@ -1,0 +1,84 @@
+{
+ "judge": "grok",
+ "model": "grok-4.6",
+ "key": "calib-human-06-2022-07-12-vs-terra-1-HM",
+ "wall_s": 35.6,
+ "run_utc": "2026-09-07T00:36:51Z",
+ "request_body": {
+  "model": "grok-4.6",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n(One of the texts is a real LinkedIn post by a person, written on its own topic; judge tells, not topic.)\n\n=== TEXT A ===\nIn product-led growth, UX is king. And yet, many #product managers struggle to measure and improve it. Here comes Google's HEART framework 👇\n\nIt's measures five elements:\n\n✅ 1. Happiness. It is defined as the user's attitude or satisfaction. This is a highly subjective metric. We can collect the data, e.g., with surveys.\n\n💡 Be aware that changes may negatively impact Happiness but do not necessarily have long-term implications.\n\n✅ 2. Engagement. Measures how users interact with the application. For a streaming platform, it may be a total time spent watching videos. Other metrics may include regularity of use or usage patterns.\n\n💡 Make sure you measure activity connected with the value generated for the customers and the business. E.g., we do not want to increase the time required to configure an account.\n\n✅ 3. Adoption (customer acquisition). The number of users you gain over a period of time.\n\n💡 One of the most critical metrics for product-led companies is the time to value (TTV). It's time before customers experience the value promised after purchasing the product (e.g., free trial). Building the shortest path to value may boost your Adoption.\n\n✅ 4. Retention. Your product should be sticky enough to attract and retain customers for a very long time.\n\n💡 The best way to do it is to keep your customer happy. Changes in Happiness often precede changes in Retention.\n\n✅ 5. Task Success. It encompasses several traditional behavioral metrics of user experience, such as efficiency (e.g., time to complete a task), effectiveness (e.g., percent of tasks completed), and error rate.\n\n💡 You can do it remotely on a large scale by assigning users specific tasks. It's good practice to compare those results with your competition (benchmarking).\n\n---\n\nYou can use it in three steps:\n\n✅ 1. Goals. First, identify your product goals. What are you trying to achieve with this product or feature?\n\n✅ 2. Signals. How can you determine if you have succeeded or failed in each goal? Sometimes failure is easier to identify than success (e.g., the task was not completed).\n\n✅ 3. Metrics. Finally, consider how you can map signals to specific metrics (HEART).\n\nHEART metrics have helped Google's product teams make better, user-centric, data-driven decisions. Now you too can benefit from it :) \n\n---\n\nLike this thread?\n\nPlease let me know your thoughts in the comments below, follow me, and share it with your friends. They may find it useful too.\n\n=== END OF TEXT A ===\n\n=== TEXT B ===\nWe shipped a feature nobody used.\n\nNot “low adoption.”  \nNot “needs more time.”  \nNobody used it.\n\nWe had spent weeks building it: designs, edge cases, QA, release notes, internal excitement. It solved a problem we believed customers had.\n\nThe problem? We believed more than we listened.\n\nWe had seen a few support requests and assumed they represented a broad need. We jumped quickly from signal to solution.\n\nWhat we didn’t do was ask the harder questions:\n\n- How often does this problem occur?\n- Who experiences it most?\n- What are they doing instead today?\n- Is the current workaround actually painful enough to change behavior?\n- Would they use this solution if it existed?\n\nAfter launch, the data was clear. Customers weren’t ignoring the feature because it was hard to find. They were ignoring it because it wasn’t important.\n\nThat was an expensive lesson—but a valuable one.\n\nSince then, I’ve tried to treat every feature idea as a hypothesis, not a commitment.\n\nBefore building, we now aim to validate three things:\n\n1. **The problem is real** — not just anecdotal.  \n2. **The problem is painful** — not merely inconvenient.  \n3. **Our solution changes behavior** — not just sounds good in a roadmap meeting.  \n\nSometimes that means interviews. Sometimes it means a prototype. Sometimes it means a landing page, a manual workflow, or simply asking customers to choose between competing problems.\n\nThe goal isn’t to eliminate every failed feature.\n\nThe goal is to fail earlier, cheaper, and with more learning.\n\nShipping something nobody uses feels disappointing. But it’s also a reminder:\n\nOutput is not impact.  \nA released feature is not a successful feature.  \nAnd building faster is only useful when we’re building the right thing.\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n"
+   }
+  ],
+  "max_tokens": 16000,
+  "stream": true,
+  "stream_options": {
+   "include_usage": true
+  }
+ },
+ "usage": {
+  "input_tokens": 2341,
+  "output_tokens": 146,
+  "reasoning_tokens": 2273,
+  "cost_usd": null,
+  "served_model": "grok-4.6",
+  "provider": null
+ },
+ "verdict": {
+  "more_ai": "B",
+  "confidence": 5,
+  "tells_A": [
+   "emoji/checkmark numbered lists and headers (5)",
+   "three-step how-to plus metric triad (6)",
+   "crowd CTA recap ending (4, 15)"
+  ],
+  "tells_B": [
+   "repeated not-X / not-just-X parallelism (1)",
+   "rhetorical question then answer (10)",
+   "relentless short punchy fragments (9)",
+   "generic anecdote with no specifics (15, 16)",
+   "bold-label triad list (5, 6)",
+   "em dashes as default joints (13)",
+   "uplifting maxim close, every point lands (17)"
+  ]
+ },
+ "response_raw": {
+  "id": "d6258821-a915-91ef-b970-453aa564fb4d",
+  "model": "grok-4.6",
+  "created": 1788741410,
+  "system_fingerprint": "fp_e41c6060b2628547",
+  "object": "chat.completion",
+  "streamed": true,
+  "usage": {
+   "prompt_tokens": 2341,
+   "completion_tokens": 146,
+   "total_tokens": 4760,
+   "prompt_tokens_details": {
+    "text_tokens": 2341,
+    "audio_tokens": 0,
+    "image_tokens": 0,
+    "cached_tokens": 1280
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 2273,
+    "audio_tokens": 0,
+    "accepted_prediction_tokens": 0,
+    "rejected_prediction_tokens": 0
+   },
+   "num_sources_used": 0,
+   "cost_in_usd_ticks": 172760000
+  },
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "{\"more_ai\": \"B\", \"confidence\": 5, \"tells_A\": [\"emoji/checkmark numbered lists and headers (5)\", \"three-step how-to plus metric triad (6)\", \"crowd CTA recap ending (4, 15)\"], \"tells_B\": [\"repeated not-X / not-just-X parallelism (1)\", \"rhetorical question then answer (10)\", \"relentless short punchy fragments (9)\", \"generic anecdote with no specifics (15, 16)\", \"bold-label triad list (5, 6)\", \"em dashes as default joints (13)\", \"uplifting maxim close, every point lands (17)\"]}"
+    }
+   }
+  ]
+ }
+}

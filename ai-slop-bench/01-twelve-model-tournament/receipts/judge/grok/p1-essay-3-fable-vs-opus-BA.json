@@ -1,0 +1,87 @@
+{
+ "judge": "grok",
+ "model": "grok-4.6",
+ "key": "p1-essay-3-fable-vs-opus-BA",
+ "wall_s": 117.7,
+ "run_utc": "2026-09-07T00:03:30Z",
+ "request_body": {
+  "model": "grok-4.6",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite an essay of up to 500 words on why most product roadmaps fail.\n\n=== TEXT A ===\n# Why Most Product Roadmaps Fail\n\nMost product roadmaps fail not because teams lack discipline, but because the document is asked to do something impossible: promise the future in an environment defined by uncertainty. The failure is structural, and it recurs in predictable ways.\n\n**They confuse output with outcome.** The typical roadmap is a list of features arranged against dates. Shipping that list is treated as success, even when the features change nothing about customer behavior or business performance. A roadmap that says \"Q3: notifications redesign\" makes no claim that can be proven wrong. One that says \"reduce first-week churn by 15%\" does. The first invites busywork; the second invites judgment about whether the work is worth continuing.\n\n**They are political settlements, not strategies.** In many organizations, the roadmap is the negotiated peace between sales, marketing, support, and executive pet projects. Each stakeholder receives a slot in exchange for cooperation. The result is a document with no spine: everything is a priority, nothing is a bet, and there is no stated rationale that would justify saying no to the next urgent request. A roadmap without a strategy behind it is just a wishlist with quarters attached.\n\n**They mistake estimates for commitments.** A date twelve months out is a guess with enormous error bars, but once it appears in a slide deck it hardens into a promise. Sales sells it. Executives plan around it. When reality intervenes, teams face a choice between missing the commitment and shipping something hollow to satisfy it. They usually choose the latter, which quietly trains everyone that roadmap items get delivered in name only.\n\n**They ignore the true cost of running a product.** Plans are drawn as if capacity were fully available for new work, when in practice a substantial share goes to maintenance, incidents, security, compliance, onboarding, and technical debt. The roadmap is therefore overcommitted from the moment it is approved, and the overflow is absorbed by delay or by cutting quality.\n\n**They resist learning.** The purpose of building is partly to discover whether your assumptions were right. Yet once an item is on the roadmap, momentum and sunk cost keep it there. Evidence that a bet is failing arrives, and the plan does not move. Meanwhile, plans that are never revisited drift from reality until people stop consulting them altogether — the roadmap becomes theater, maintained for review meetings and ignored in daily decisions.\n\n**They serve too many audiences at once.** Engineers need sequencing and dependencies. Executives need to see how work ladders up to company goals. Customers need reassurance without specific dates. Forcing one artifact to satisfy all three guarantees it satisfies none.\n\nThe remedy is not to abandon planning but to change what the roadmap asserts. Organize it around problems and measurable outcomes rather than features. Express confidence honestly — near-term work specified, later work deliberately vague. Publish the reasoning, so the plan can be argued with. Revisit it on a fixed cadence, and treat removing items as evidence of learning rather than failure. A roadmap should be a statement of intent that survives contact with new information — not a contract that punishes anyone for discovering the truth.\n=== END OF TEXT A ===\n\n=== TEXT B ===\n**Why Most Product Roadmaps Fail**\n\nA product roadmap is supposed to be a compass. In practice, it usually becomes a contract—one that nobody intended to sign but everyone feels bound by. This tension between what a roadmap is meant to do and what it actually does explains why so many of them collapse under their own weight.\n\nThe first failure is one of certainty. Roadmaps are typically built as sequences of features with dates attached, presented with a confidence that the underlying knowledge does not justify. Teams commit to shipping Feature X in Q3 before anyone has validated that customers want Feature X, that it can be built in the time estimated, or that the market will still care by Q3. The document projects precision onto a fundamentally uncertain future. When reality diverges—as it always does—the roadmap either becomes a source of missed deadlines and eroded trust, or it is quietly abandoned. Either way, it has stopped functioning as a guide.\n\nThe second failure is that roadmaps are often lists of outputs rather than expressions of strategy. A good roadmap should answer *why*: what problem are we solving, for whom, and what will be different if we succeed? Most roadmaps instead answer *what*: a login redesign, a reporting dashboard, an integration with a popular tool. Stripped of intent, these items cannot be reprioritized intelligently. When a competitor moves or a customer churns, the team has no framework for deciding what to cut, because the roadmap never articulated what mattered most. It becomes a queue, and queues do not adapt.\n\nThird, roadmaps fail because they serve too many masters. Sales wants commitments to close deals. Executives want a narrative for the board. Engineering wants scope clarity. Customers want to know when their request will land. A single document straining to satisfy all of these becomes bloated, hedged, and ultimately incoherent. Features get added to placate a stakeholder rather than to advance the product, and the roadmap fills with items that exist for political rather than strategic reasons. Saying yes is easy; the roadmap becomes the graveyard of unspoken noes.\n\nFourth, roadmaps are rarely maintained as living documents. They are produced during planning season, circulated with fanfare, and then left to decay. Six months later, the team is working on things that never appeared on it, while items still listed have been silently deprioritized. The roadmap and the reality drift apart until the document is fiction. A roadmap that is not revisited regularly is not a plan—it is an artifact.\n\nUnderlying all of these is a deeper confusion: treating the roadmap as a promise rather than a hypothesis. The best product organizations frame their roadmaps around outcomes, express confidence honestly, keep near-term items specific and far-term items deliberately vague, and revise openly as they learn. They understand that the roadmap's value lies not in its accuracy but in the conversations it forces about priorities and trade-offs.\n\nMost roadmaps fail, then, not because planning is futile, but because they mistake the plan for the goal. A roadmap that cannot change is not a tool for navigation. It is a monument to what a team once believed.\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n"
+   }
+  ],
+  "max_tokens": 16000,
+  "stream": true,
+  "stream_options": {
+   "include_usage": true
+  }
+ },
+ "usage": {
+  "input_tokens": 2689,
+  "output_tokens": 114,
+  "reasoning_tokens": 6386,
+  "cost_usd": null,
+  "served_model": "grok-4.6",
+  "provider": null
+ },
+ "verdict": {
+  "more_ai": "B",
+  "confidence": 4,
+  "tells_A": [
+   "not-X-but-Y parallelism",
+   "bold-label paragraph openers",
+   "em dashes",
+   "one audience triad",
+   "every point lands"
+  ],
+  "tells_B": [
+   "repeated not-X-it's-Y parallelism",
+   "first/second/third/fourth signposting",
+   "recap ending",
+   "em dashes as default joints",
+   "multiple triads",
+   "generic no concrete details",
+   "explaining inferences",
+   "every point lands"
+  ]
+ },
+ "response_raw": {
+  "id": "ee88e755-ce9d-9e70-b793-5bb65c64b89e",
+  "model": "grok-4.6",
+  "created": 1788739409,
+  "system_fingerprint": "fp_e41c6060b2628547",
+  "object": "chat.completion",
+  "streamed": true,
+  "usage": {
+   "prompt_tokens": 2689,
+   "completion_tokens": 114,
+   "total_tokens": 9189,
+   "prompt_tokens_details": {
+    "text_tokens": 2689,
+    "audio_tokens": 0,
+    "image_tokens": 0,
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 6386,
+    "audio_tokens": 0,
+    "accepted_prediction_tokens": 0,
+    "rejected_prediction_tokens": 0
+   },
+   "num_sources_used": 0,
+   "cost_in_usd_ticks": 436100000
+  },
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "{\"more_ai\": \"B\", \"confidence\": 4, \"tells_A\": [\"not-X-but-Y parallelism\", \"bold-label paragraph openers\", \"em dashes\", \"one audience triad\", \"every point lands\"], \"tells_B\": [\"repeated not-X-it's-Y parallelism\", \"first/second/third/fourth signposting\", \"recap ending\", \"em dashes as default joints\", \"multiple triads\", \"generic no concrete details\", \"explaining inferences\", \"every point lands\"]}"
+    }
+   }
+  ]
+ }
+}

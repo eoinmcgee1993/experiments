@@ -1,0 +1,13 @@
+Most product roadmaps fail because they pretend we know more about the future than we do. Teams gather in a room, look at some data, listen to a few loud stakeholders, and then draw a line of features stretching six or twelve months ahead as if customer behavior, competitors, and technical surprises will all cooperate. They never do. The document that was supposed to create alignment quickly becomes a source of disappointment and quiet resentment.
+
+The bigger problem is how we treat the thing once it exists. A roadmap gets treated like a promise instead of a current best guess. Dates and features turn into commitments that people are afraid to change even when the original assumptions have already proven wrong. Updating it feels like admitting failure, so it sits there getting more and more disconnected from reality while everyone pretends they are still following it.
+
+We also fill these documents with the wrong content. Feature after feature gets listed because features are easy to argue about and easy to show in a slide. Outcomes, customer problems, and the actual bets we are making get less airtime. When users surprise us or the market moves, the feature list still looks official even though it no longer points at anything useful.
+
+A lot of roadmaps are created without the people who have to live with them. Product managers and executives produce a neat timeline, then hand it to engineering and design as if execution is just a detail. The people closest to the work see the holes immediately, the hidden dependencies, the technical debt that was never mentioned, the research that still needs to happen. They never really own the plan, so they work around it.
+
+Timelines are almost always optimistic to the point of fiction. We forget how long discovery actually takes, how many meetings will interrupt the work, and how often the first approach will not work. Then we feel pressure to look aggressive so we cut the buffers. The result is a calendar that starts slipping in week two.
+
+Priorities at the top of the company change faster than any roadmap can keep up. A new executive arrives, a competitor launches something, a big customer makes a demand. The old items never get formally killed. They just linger, creating a document that is half strategy and half political leftover.
+
+The ones that work better are usually messier and more honest. They talk about themes and questions instead of a sequence of deliverables. They get revisited often enough that people still trust them. Most teams never quite get there because looking certain feels safer than looking like you are still figuring it out.

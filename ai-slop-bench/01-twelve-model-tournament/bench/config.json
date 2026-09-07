@@ -1,0 +1,136 @@
+{
+  "samples_per_cell": 3,
+  "arms": {
+    "astra": {
+      "label": "GPT-6 Astra",
+      "vendor": "OpenAI",
+      "transport": "openai_responses",
+      "model": "gpt-6-astra",
+      "serving_path": "OpenAI first-party, Responses API"
+    },
+    "sol": {
+      "label": "GPT-5.6 Sol",
+      "vendor": "OpenAI",
+      "transport": "openai_responses",
+      "model": "gpt-5.6-sol",
+      "serving_path": "OpenAI first-party, Responses API"
+    },
+    "fable": {
+      "label": "Fable 5.1",
+      "vendor": "Anthropic",
+      "transport": "openrouter",
+      "model": "anthropic/claude-fable-5.1",
+      "serving_path": "OpenRouter -> Anthropic (first-party key unavailable at run time)"
+    },
+    "opus": {
+      "label": "Opus 5",
+      "vendor": "Anthropic",
+      "transport": "openrouter",
+      "model": "anthropic/claude-opus-5",
+      "serving_path": "OpenRouter -> Anthropic (first-party key unavailable at run time)"
+    },
+    "grok": {
+      "label": "Grok 4.6",
+      "vendor": "xAI",
+      "transport": "xai_chat",
+      "model": "grok-4.6",
+      "serving_path": "xAI first-party, chat completions"
+    },
+    "terra": {
+      "label": "GPT-5.6 Terra",
+      "vendor": "OpenAI",
+      "transport": "openai_responses",
+      "model": "gpt-5.6-terra",
+      "serving_path": "OpenAI first-party, Responses API"
+    },
+    "luna": {
+      "label": "GPT-5.6 Luna",
+      "vendor": "OpenAI",
+      "transport": "openai_responses",
+      "model": "gpt-5.6-luna",
+      "serving_path": "OpenAI first-party, Responses API"
+    },
+    "muse": {
+      "label": "Muse Spark 1.3",
+      "vendor": "Meta",
+      "transport": "openrouter",
+      "model": "meta/muse-spark-1.3",
+      "serving_path": "OpenRouter -> Meta"
+    },
+    "kimi": {
+      "label": "Kimi K3",
+      "vendor": "Moonshot AI",
+      "transport": "openrouter",
+      "model": "moonshotai/kimi-k3",
+      "serving_path": "OpenRouter -> Moonshot AI"
+    },
+    "gemini38": {
+      "label": "Gemini 3.8 Flash",
+      "vendor": "Google",
+      "transport": "google",
+      "model": "gemini-3.8-flash",
+      "params": {
+        "thinking": null
+      },
+      "serving_path": "Google first-party, generateContent (thinking level not set)"
+    },
+    "glm": {
+      "label": "GLM-5.3",
+      "vendor": "Z.ai",
+      "transport": "openrouter",
+      "model": "z-ai/glm-5.3",
+      "serving_path": "OpenRouter -> Z.ai"
+    },
+    "qwen": {
+      "label": "Qwen 3.8 Flash",
+      "vendor": "Alibaba",
+      "transport": "openrouter",
+      "model": "qwen/qwen3.8-flash",
+      "serving_path": "OpenRouter -> Alibaba"
+    }
+  },
+  "judges": {
+    "gemini": {
+      "label": "Gemini 3.8 Flash (thinking high)",
+      "vendor": "Google",
+      "transport": "google",
+      "model": "gemini-3.8-flash"
+    },
+    "grok": {
+      "label": "Grok 4.6",
+      "vendor": "xAI",
+      "transport": "xai_chat",
+      "model": "grok-4.6"
+    },
+    "opus": {
+      "label": "Opus 5",
+      "vendor": "Anthropic",
+      "transport": "openrouter",
+      "model": "anthropic/claude-opus-5"
+    },
+    "sol": {
+      "label": "GPT-5.6 Sol (medium)",
+      "vendor": "OpenAI",
+      "transport": "openai_responses",
+      "model": "gpt-5.6-sol",
+      "params": {
+        "effort": "medium"
+      }
+    }
+  },
+  "variants": {
+    "bare": {
+      "suffix": "",
+      "essays_dir": "essays",
+      "receipts_dir": "receipts/essays",
+      "note": "the task text only"
+    },
+    "steered": {
+      "suffix": "\n\nPlain prose only: no headers, no bullet points, no bold text, no em dashes. Write like a person.",
+      "essays_dir": "essays-steered",
+      "receipts_dir": "receipts/essays-steered",
+      "note": "the task text plus one line of style instruction, the kind a practitioner would type"
+    }
+  },
+  "judge_recusal": "A judge never scores a pair that contains a text from its own vendor. GPT-5.6 Sol joined the panel on 2026-09-07 at medium reasoning effort, after the first three judges had finished. Muse Spark 1.3 judged the pilot; it is an arm now and its verdicts (receipts/judge/muse) are kept on disk but not pooled."
+}

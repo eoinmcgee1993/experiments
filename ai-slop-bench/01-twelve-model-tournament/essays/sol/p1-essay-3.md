@@ -1,0 +1,15 @@
+# Why Most Product Roadmaps Fail
+
+Most product roadmaps fail not because teams lack ambition, but because they mistake a roadmap for a prediction. They present uncertain ideas as fixed commitments, often attaching features to dates months or years in advance. This creates an illusion of control while ignoring a basic truth of product development: customer needs, market conditions, technical constraints, and business priorities change continuously.
+
+A common failure is that roadmaps focus on outputs rather than outcomes. They list features to build—new dashboards, integrations, settings, or workflows—without explaining what those features should achieve. Shipping then becomes the measure of success, even if adoption remains low, customers are dissatisfied, or revenue does not improve. A useful roadmap should begin with problems and desired results, such as reducing onboarding time or increasing retention, while leaving room to discover the best solution.
+
+Roadmaps also fail when they become collections of stakeholder requests. Sales wants a feature for an important prospect, executives want a response to a competitor, and support wants fixes for frequent complaints. Each request may be reasonable in isolation, but adding them together produces a backlog rather than a strategy. Without clear choices about target customers, differentiation, and business goals, the roadmap reflects organizational politics more than product judgment.
+
+False precision makes the problem worse. Detailed timelines encourage stakeholders to treat estimates as promises, even when the work has not been researched or designed. Teams then optimize for meeting dates instead of learning. They may reduce scope, accept technical debt, or continue building an ineffective idea because changing direction would look like failure. The roadmap, intended to guide decisions, instead prevents adaptation.
+
+Another weakness is poor communication. Different audiences interpret the same roadmap differently: executives see a forecast, customers see a commitment, and engineers see an incomplete specification. If assumptions, confidence levels, dependencies, and decision criteria are not explicit, disappointment is almost inevitable.
+
+Effective roadmaps are not fixed schedules. They are strategic communication tools. They connect company objectives to customer problems, identify priorities, state what will not be pursued, and distinguish near-term commitments from longer-term possibilities. They are revisited as evidence emerges.
+
+Ultimately, most roadmaps fail because organizations ask them to eliminate uncertainty. Good product management does the opposite: it makes uncertainty visible and creates a disciplined process for learning through it. A roadmap succeeds not when reality follows the original plan, but when it helps a team make better decisions as reality changes.

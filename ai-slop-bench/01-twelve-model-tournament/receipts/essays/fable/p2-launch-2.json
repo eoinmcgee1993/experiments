@@ -1,0 +1,93 @@
+{
+ "arm": "fable",
+ "label": "Fable 5.1",
+ "vendor": "Anthropic",
+ "transport": "openrouter",
+ "model_requested": "anthropic/claude-fable-5.1",
+ "serving_path": "OpenRouter -> Anthropic (first-party key unavailable at run time)",
+ "prompt_id": "p2-launch",
+ "sample": 2,
+ "run_utc": "2026-09-06T13:24:18Z",
+ "wall_s": 26.7,
+ "request_body": {
+  "model": "anthropic/claude-fable-5.1",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Write a launch announcement of up to 500 words for a new feature of a B2B helpdesk product: a Slack integration that posts a daily summary of open support tickets to a channel of the customer's choice. The audience is existing customers."
+   }
+  ],
+  "max_tokens": 8000,
+  "provider": {
+   "allow_fallbacks": false
+  },
+  "usage": {
+   "include": true
+  }
+ },
+ "usage": {
+  "input_tokens": 81,
+  "output_tokens": 1374,
+  "reasoning_tokens": 452,
+  "cost_usd": 0.0688149,
+  "served_model": "anthropic/claude-fable-5.1",
+  "provider": "Anthropic"
+ },
+ "essay_sha256": "7be477c7d65874f76edc35fae5785910ffad5a91e4b5b456bd7a559f31330aae",
+ "essay_words": 510,
+ "response_raw": {
+  "id": "gen-1788701030-obyRnU2qZI9kw3GwnxbA",
+  "object": "chat.completion",
+  "created": 1788701030,
+  "model": "anthropic/claude-fable-5.1",
+  "provider": "Anthropic",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "**New: Daily Ticket Digest for Slack**\n\nStarting today, you can have a summary of your open support tickets delivered to Slack every morning — no dashboard required.\n\n**What it is**\n\nThe Daily Ticket Digest posts one message per day to a Slack channel you choose. It gives your team a shared, at-a-glance view of where support stands before the day starts, so nobody has to ask \"what's still open?\" in a standup or dig through their inbox to find out.\n\nEach digest includes:\n\n- Total open tickets, with the change since yesterday\n- Breakdown by priority and status (new, waiting on customer, waiting on us)\n- Tickets approaching or past their SLA, listed individually with a direct link\n- Oldest unresolved ticket and how long it's been open\n- Tickets assigned to nobody\n\nEvery ticket mentioned in the digest links straight back to the helpdesk, so you can act on it in one click.\n\n**Setting it up**\n\nIf you already have Slack connected, this takes about a minute:\n\n1. Go to **Settings → Integrations → Slack**\n2. Click **Add Daily Digest**\n3. Pick a channel, a delivery time, and the views you want included\n4. Save\n\nIf you haven't connected Slack yet, you'll be prompted to authorize the app first. Only admins can create or edit digests; anyone in the channel can read them.\n\n**Making it yours**\n\nYou can run more than one digest. Many teams set up a company-wide summary in a general channel and a more detailed one for the support team. Each digest can be filtered by team, queue, tag, or assignee, and scheduled independently — so your EMEA and US teams can each get their own at the right local time.\n\nPrefer weekdays only? Toggle off weekends. Want it quiet when there's nothing to report? Turn on \"Skip if no open tickets.\"\n\n**A few things to know**\n\n- The digest is read-only. It won't create, close, or reassign tickets from Slack.\n- It respects your existing permissions. If a queue is restricted, only digests configured by users with access to it can include its tickets.\n- Delivery times are in your account's timezone, and you can override this per digest.\n- It's available on all plans at no additional cost.\n\n**Why we built it**\n\nThe most common request we heard this year was some version of \"I just want to know what's open without logging in.\" The dashboard is great when you're actively working tickets; it's less great for the manager checking in before a meeting or the engineer who wants to know if their fix cleared the backlog. Putting the summary where people already are — Slack — felt like the right answer.\n\n**Tell us what you think**\n\nThis is the first version, and we'd like to shape it with you. If there's a metric you want included, a format that would work better, or a Teams equivalent you're waiting on (we hear you), reply to this email or leave feedback from the digest settings page.\n\nThanks for building with us.\n\n— The Product Team",
+     "refusal": null,
+     "reasoning": "I need to draft a launch announcement under 500 words for a Slack integration in this B2B helpdesk product, aimed at existing customers. I'll give the product a natural-sounding name rather than a bracketed placeholder so it reads like a real announcement.\n\nI'll structure it with a headline, a short intro on what it is and why, what's included in the daily digest, setup steps, customization details, availability across plans, and a feedback CTA—aiming for around 350-420 words.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I need to draft a launch announcement under 500 words for a Slack integration in this B2B helpdesk product, aimed at existing customers. I'll give the product a natural-sounding name rather than a bracketed placeholder so it reads like a real announcement.\n\nI'll structure it with a headline, a short intro on what it is and why, what's included in the daily digest, setup steps, customization details, availability across plans, and a feedback CTA—aiming for around 350-420 words.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "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"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 81,
+   "completion_tokens": 1374,
+   "total_tokens": 1455,
+   "cost": 0.0688149,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.06951,
+    "upstream_inference_prompt_cost": 0.00081,
+    "upstream_inference_completions_cost": 0.0687
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 452,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

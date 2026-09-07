@@ -1,0 +1,89 @@
+{
+ "judge": "grok",
+ "model": "grok-4.6",
+ "key": "calib-human-08-2022-07-30-vs-glm-2-MH",
+ "wall_s": 51.6,
+ "run_utc": "2026-09-07T08:38:37Z",
+ "request_body": {
+  "model": "grok-4.6",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n(One of the texts is a real LinkedIn post by a person, written on its own topic; judge tells, not topic.)\n\n=== TEXT A ===\nThe feature I was proudest of shipped to the sound of silence.\n\nTwo years ago, my team spent four months building an advanced reporting dashboard. Custom filters. Drag-and-drop charts. Scheduled exports. We rebuilt our entire data layer to support it. Our internal demo got actual applause.\n\nLaunch day: nothing. Week one: 47 opens across 20,000 users. Ninety days later, fewer than 2% of accounts had ever touched it — and most of them opened it once and never came back.\n\nI remember pulling up the usage report with my PM and just sitting there. Four months. Countless design reviews. A data migration that nearly broke us. And the market's response was a shrug.\n\nHere's the part that stings: we never talked to a single customer before building it.\n\nWe had assumptions, sure. \"Enterprise buyers want analytics.\" \"Competitors have dashboards, so we need one.\" \"This is obviously valuable.\" But we never asked the question that mattered: is this a problem anyone actually has?\n\nMeanwhile, the #1 request in our support queue — the one we kept deprioritizing because it felt too \"small\" — was bulk editing. We shipped it later in a single sprint. Today it's one of the most-used parts of the product.\n\nThat flop taught me more than any successful launch ever has:\n\n→ Talk to users before you write code. Not to pitch your idea — to understand their problem. If you can't name five people who have the problem, you don't have a feature. You have a hypothesis.\n\n→ Define success before launch. We never decided what \"good\" adoption looked like, so we couldn't tell we were failing until we'd already failed.\n\n→ Ship small, learn fast. A two-week prototype would have told us everything four months of building didn't.\n\n→ Your support queue is a roadmap written by your users. They were telling us exactly what to build. We just thought their requests were too boring.\n\n→ Building isn't the hard part. Adoption is. \"If you build it, they will come\" is a movie quote, not a go-to-market strategy.\n\nThe dashboard didn't die entirely. We stripped it down, paired it with real customer conversations, and a niche segment genuinely loves it now. But it found its audience after we started listening — not before.\n\nThese days, I get suspicious when a team is excited about a feature but can't recall the last time they watched a user struggle with the problem it solves.\n\nExcitement is easy to generate internally. Evidence only comes from customers.\n\nWhat's a feature you shipped into the void — and what did it teach you?\n\n---\n\n~420 words. Happy to swap in your actual feature, numbers, and industry details, or adjust the tone (more vulnerable, more data-driven, shorter) if you'd like.\n=== END OF TEXT A ===\n\n=== TEXT B ===\nToo much #Lean can undermine your product efforts.\n \nStop applying it without reflection.\n \nLean puts much emphasis on reducing waste and costs. If product managers focus on it too much, things go terribly wrong.\n \nLet's look at two areas of waste in lean manufacturing:\n \n1. Unused talent (\"underutilization of people\")\n \nKnowledge work is different from work on the production line. 100% utilization is never a good solution. The inevitable multitasking and constant context switching can drastically lower people's productivity.\n \nWe don't get paid for being fully utilized (feature factory). We get paid for delivering valuable outcomes. To do that, we need time to pause and think.\n \nYou should be \"utilized\" at about 50 to 60 percent to provide maximum value for your organization. More than that is a waste of talent.\n \n2. Extra-processing\n \nLean defines extra-processing as quality higher than required by the customer. It makes sense for screws or chairs. The product fulfills its function, which may be the only thing customers expect.\n \nIn #productmanagement, we need a different approach. Think about iPhone. Do people buy it only to make calls or take photos? Emotional and social outcomes can be more important than the core functionalities of the product.\n \nCustomers don't just want their needs to be met. They want to be delighted.\n \n-\n \nDon't get me wrong. Lean and #Agile can coexist. But it's important to remember that Lean comes from manufacturing. We should use it carefully.\n \n#Scrum doesn't implement Lean in its entirety. In my opinion, you shouldn't either.\n \nWhat are your thoughts? Let me know in the comments.\n\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n"
+   }
+  ],
+  "max_tokens": 16000,
+  "stream": true,
+  "stream_options": {
+   "include_usage": true
+  }
+ },
+ "usage": {
+  "input_tokens": 2386,
+  "output_tokens": 163,
+  "reasoning_tokens": 2625,
+  "cost_usd": null,
+  "served_model": "grok-4.6",
+  "provider": null
+ },
+ "verdict": {
+  "more_ai": "A",
+  "confidence": 5,
+  "tells_A": [
+   "repeated not-X-it's-Y parallelism",
+   "signposting (Here's the part that stings)",
+   "arrow-bullet list in place of prose",
+   "triads of punchy fragments",
+   "relentless short staccato rhythm",
+   "em dashes as default joints",
+   "manufactured generic anecdote",
+   "every point lands / tidy uplift",
+   "engagement-bait closer",
+   "unedited AI coda (word count, happy to swap/adjust tone)"
+  ],
+  "tells_B": [
+   "signposting (Let's look at)",
+   "numbered list",
+   "one don't-just-X parallelism",
+   "rhetorical question then answer",
+   "crowd closer (thoughts in the comments)"
+  ]
+ },
+ "response_raw": {
+  "id": "d16f3c92-5e1c-941c-9ee3-f1a6bc191285",
+  "model": "grok-4.6",
+  "created": 1788770316,
+  "system_fingerprint": "fp_e41c6060b2628547",
+  "object": "chat.completion",
+  "streamed": true,
+  "usage": {
+   "prompt_tokens": 2386,
+   "completion_tokens": 163,
+   "total_tokens": 5174,
+   "prompt_tokens_details": {
+    "text_tokens": 2386,
+    "audio_tokens": 0,
+    "image_tokens": 0,
+    "cached_tokens": 1280
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 2625,
+    "audio_tokens": 0,
+    "accepted_prediction_tokens": 0,
+    "rejected_prediction_tokens": 0
+   },
+   "num_sources_used": 0,
+   "cost_in_usd_ticks": 195800000
+  },
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "{\"more_ai\": \"A\", \"confidence\": 5, \"tells_A\": [\"repeated not-X-it's-Y parallelism\", \"signposting (Here's the part that stings)\", \"arrow-bullet list in place of prose\", \"triads of punchy fragments\", \"relentless short staccato rhythm\", \"em dashes as default joints\", \"manufactured generic anecdote\", \"every point lands / tidy uplift\", \"engagement-bait closer\", \"unedited AI coda (word count, happy to swap/adjust tone)\"], \"tells_B\": [\"signposting (Let's look at)\", \"numbered list\", \"one don't-just-X parallelism\", \"rhetorical question then answer\", \"crowd closer (thoughts in the comments)\"]}"
+    }
+   }
+  ]
+ }
+}

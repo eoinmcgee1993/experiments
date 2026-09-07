@@ -1,0 +1,93 @@
+{
+ "arm": "opus",
+ "label": "Opus 5",
+ "vendor": "Anthropic",
+ "transport": "openrouter",
+ "model_requested": "anthropic/claude-opus-5",
+ "serving_path": "OpenRouter -> Anthropic (first-party key unavailable at run time)",
+ "prompt_id": "p1-essay",
+ "sample": 2,
+ "run_utc": "2026-09-06T13:24:34Z",
+ "wall_s": 22.7,
+ "request_body": {
+  "model": "anthropic/claude-opus-5",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Write an essay of up to 500 words on why most product roadmaps fail."
+   }
+  ],
+  "max_tokens": 8000,
+  "provider": {
+   "allow_fallbacks": false
+  },
+  "usage": {
+   "include": true
+  }
+ },
+ "usage": {
+  "input_tokens": 30,
+  "output_tokens": 1384,
+  "reasoning_tokens": 412,
+  "cost_usd": 0.0344025,
+  "served_model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS"
+ },
+ "essay_sha256": "099916c041e9fa32f3d6dbd94af41bef098f6a3552a6d2568c32a7822a5d8fb5",
+ "essay_words": 499,
+ "response_raw": {
+  "id": "gen-1788701050-KpGTpqfwpTUYY1novRRb",
+  "object": "chat.completion",
+  "created": 1788701050,
+  "model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "# Why Most Product Roadmaps Fail\n\nMost product roadmaps fail not because teams lack discipline in following them, but because they follow them too faithfully. The roadmap, meant to be an instrument of strategy, becomes an instrument of obligation — and once that inversion happens, failure is nearly guaranteed.\n\n**They promise certainty the future cannot supply.**\nA typical roadmap presents next quarter and next year with identical confidence: neat bars on a timeline, features assigned to dates. But product development is a search problem. What a team will build in nine months depends on what it learns in the next three, and that learning hasn't happened yet. False precision doesn't reduce risk; it hides it. When reality intervenes, the team faces a choice between honesty and credibility, and credibility usually wins — so the roadmap is quietly defended long after it stopped being true.\n\n**They measure output instead of outcome.**\nShipping fourteen of fifteen planned features looks like success and is reported as such. But no customer ever wanted a feature; they wanted a problem solved. A roadmap organized around deliverables gives teams no way to notice that a shipped feature failed, and no incentive to look. Success becomes adherence, and adherence is the one metric that can be perfect while the business declines.\n\n**They are political documents.**\nRoadmaps are frequently assembled by aggregating requests — sales needs this to close a deal, the executive sponsor wants that, support has a list. The result is a negotiated settlement rather than a strategy. Strategy requires saying no, and a roadmap built to make everyone feel heard has said no to nothing. Such roadmaps are always overcommitted, because their real function is reassurance, not planning.\n\n**They ignore the actual cost of running a product.**\nPlans routinely allocate one hundred percent of capacity to new work, leaving nothing for defects, migrations, security, infrastructure decay, or the discovery work needed to make the next decision well. The unplanned work doesn't disappear; it consumes the plan from within, and every roadmap slips for reasons that were entirely foreseeable.\n\n**They lack a mechanism for change.**\nA plan without a revision process is a wish. Most organizations have elaborate rituals for creating roadmaps and none for revisiting them. Nobody is authorized to remove an item, so items accumulate. New information arrives and finds no door to enter through.\n\nThe alternative is not to abandon planning. Teams need shared direction, and stakeholders legitimately need to coordinate. But a roadmap works better when it is organized around problems rather than solutions, when confidence is expressed honestly — committed, next, later — and when it is reviewed on a known cadence with explicit permission to change course. Above all, it works when the surrounding organization judges teams by the outcomes they produce rather than the promises they keep.\n\nRoadmaps fail when they are asked to be contracts. They succeed when they remain arguments: this is what we believe, this is why, and this is what would change our minds.",
+     "refusal": null,
+     "reasoning": "I'm brainstorming the real reasons roadmaps fail — treating dates/features as commitments instead of hypotheses, mistaking output for outcome, and roadmaps becoming political documents to appease stakeholders rather than solve customer problems. I want to build the essay around these substantive points, keeping it tight under 500 words.\n\nI'm also considering false precision in far-out estimates, the lack of a mechanism to remove things or account for learning and tech debt, and how roadmaps become stale static documents that no longer reflect reality. I'm noting the failure to communicate the \"why\" behind priorities, ignoring team capacity, and measuring success by delivery adherence rather than actual value — then planning to structure the essay as framing, diagnosis, and a vision for what better roadmapping looks like.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm brainstorming the real reasons roadmaps fail — treating dates/features as commitments instead of hypotheses, mistaking output for outcome, and roadmaps becoming political documents to appease stakeholders rather than solve customer problems. I want to build the essay around these substantive points, keeping it tight under 500 words.\n\nI'm also considering false precision in far-out estimates, the lack of a mechanism to remove things or account for learning and tech debt, and how roadmaps become stale static documents that no longer reflect reality. I'm noting the failure to communicate the \"why\" behind priorities, ignoring team capacity, and measuring success by delivery adherence rather than actual value — then planning to structure the essay as framing, diagnosis, and a vision for what better roadmapping looks like.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAISuQsKrgEIERgCKkCt49fwpwVR7Gbmg6b7tLOr7UlO38fFCRDFWkQyDKCgAL070leUjjowOw355XDUOWuU4RyoE7Am4kZCqwTO7wjSMg1jbGF1ZGUtb3B1cy01OAFCCHRoaW5raW5nWiQ0YzBmMDQ2Zi0yNWZkLTQ1ZmItYmZiMy1hMDhhOGUyNDljYTd6HnVwcm9mXzAxMUNlbkZSYjRqeFBLcXdMUXFXN3dtNqgBg9P11AYSDHr6Xuoa79KFo7BlNRoMpD+ikq6P6BAb7FsAIjBuu/zjmKGsaYOHpw31I/o/9ve4Pbs8eu1J8L+W22PA15ZVNDIpBwslc3tYiv097wEqtwnB8bspmKWqH5rwActSxHp0F45G6U4/euyXm3ti0HOS/7XXgIlAJB3cdO0Z+c9s/fvZm+3fGNTbYhDcQE+MJbYssH9wPkvS7M0WS1CzEMf/Q2Pyf1SBv1DxB7ibdTC3G/HPhA3q31S2VFhz0qv2UN3BFL5QG2/lXbQzBtU9z5QSk+lgPjxaT9YLuPTgpEEd+h0qf6rePTaewk76RLVZ/Yqsk7pqF32wufpv75FFyLlNtZjOfrdNTvhiNvTMo9ymh7jbFG0OR2hI8g6n/Hy9aZKjV/CZIOVytFdJLcXEhWDq7Xqio9knYDjO7qFvoEEIRrngQi9ITfZqLNe12mF0Ov3I9K1HAmQHPhFoeOwbKIt6c32Eo8xPxkQ2jQqAdaQsQy8JqIZpu9sPR36vhwYJH82xGUgYL1vZcbv4yb0LvsPeuwFwPYK0cb1eZtBtOfHxI9RYIOq8VnIMA73PRIOfQ+H1Z9HdjFR5MUAXBluZk8NGnly30CxnItrx/6F8zVhTDKx+MvcbGXq2sWn+4wcUFFGwtRsJMclcpBv5Zt5JYtKIifvRsWr30bzZpyAQM26Curf+8wTavXt7db28Vy1Y1ftVquly1q+JrXfimbg3vvxsg9vDkazb8/5aV500PYR2PA/lxXYfUVFbVIQOSIPLSLecuZ/lCTyIh+wHfDy6sQebfjwqn6aUGeX+p3KYwVW6mZ3zX4zbIbfRmyZS8gRdVHe2zrxYncSkF3Njyt8LZ5CZKEpACcNBgBWViBSTcW7rMyniO27U/kw5j2IUou1qaQ6hucL5C1ffNN4uRr4jZojyW4lyq+ue409GaZlj0edLSl/m592Js+Y5FvY4vP9keA+fxrsDQDwvdIu0Ut7ddmVgp+D6Pt91OWllhFLKM5wmzBN1L6Av6so1JjVunqlGKUZsFsR/c2gBmjKmPoHnMHPoaDS7WQuDjgJuuLfNHYj3XfkTYH3ENHqQJ4TQjDrAX483EaC/3Cytdg9KdGqKZcUdE4tpfREBHdipny1wOa9YPs1hb4o+45dbI9sFJRzb1/F9fLOqYnbToeYxB18QcL1emOUj8HY0jmDu7+DI4Gds91nlX4AbfwredCR86OsQzMh2/c0w0ne6q+/mqzivzcX/xUbd9j7UskXZKOmcYjuLS1P47LEgi5YNzYhGGv6P689UxiMpCQTOoCLZcxpuZsg3rPam5VxBfa5RWVEDcUxvq6F8oIyfKE9hMQF3bqIUlQyTglCkccbi5SPWukhmtEUwbzwBCpBAmHDjQ9sPaXbM8Cgl0HjsMtvSw/1oBqBXnCiSxSQHeBdMPhD6iiFiJGUACc3n6m5E/YdFqpOEnAUVEW2tAKWvuxi7+a0IsOXoX9s7NY6T2gnSWDSo02xOlBfXq6W8rExPgOjbCiKJuMWY225pbWhleWPsRE0vQJ+hyEfl7P8pWgWWlRbzSaLx7yfqlq0Vi5J2uwcAJtKHs+7mg2Ael7MG7Holkw2wZfEJgWq/3AVsLB5JeJCpbmCRgOaRsRyboagDyM4y1gKMEsMDk61dLIVkF/kvtuTdA4NqTVB4DgEF45pb7OotnpIaqDJRBsX8pH9VCcWZ+r20Qn/LXw/OUK7Ia7ojGAE="
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 30,
+   "completion_tokens": 1384,
+   "total_tokens": 1414,
+   "cost": 0.0344025,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.03475,
+    "upstream_inference_prompt_cost": 0.00015,
+    "upstream_inference_completions_cost": 0.0346
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 412,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

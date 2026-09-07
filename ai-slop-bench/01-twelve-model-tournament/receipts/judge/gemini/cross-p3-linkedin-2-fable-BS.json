@@ -1,0 +1,76 @@
+{
+ "judge": "gemini",
+ "model": "gemini-3.8-flash",
+ "key": "cross-p3-linkedin-2-fable-BS",
+ "wall_s": 2.8,
+ "run_utc": "2026-09-06T14:14:25Z",
+ "request_body": {
+  "contents": [
+   {
+    "parts": [
+     {
+      "text": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n\n=== TEXT A ===\nSix months ago, we shipped a feature I was certain would change how our customers worked.\n\nIt was a customizable dashboard. Users could drag widgets around, pick their own metrics, save multiple layouts. We'd heard \"I wish I could see X next to Y\" in enough support tickets that it felt like an obvious win. Three engineers, two months, a design sprint, a launch email with a little animated GIF.\n\nAdoption after 90 days: 2.1%.\n\nNot \"2.1% used it daily.\" 2.1% opened it once.\n\nI spent a week feeling defensive about it. Then I actually went and talked to the people who'd asked for it. Here's what I learned.\n\n**People weren't asking for customization. They were asking for a specific answer.**\n\nWhen someone said \"I wish I could see X next to Y,\" they didn't want a drag-and-drop canvas. They wanted X next to Y. Every single one of them wanted the *same* X and the *same* Y. We heard a request for flexibility and built infrastructure for infinite flexibility, when a single hardcoded view would have solved 80% of the problem in three days.\n\n**Requests describe symptoms, not solutions.**\n\nWe took the literal words in the tickets and shipped them back. We never asked the one question that mattered: \"What are you trying to decide when you look at this?\" If we had, we'd have discovered they were all trying to figure out whether to escalate an account before a renewal call. That's not a dashboard problem. That's an alert.\n\n**\"Configurable\" often means \"we didn't want to make the call.\"**\n\nI've come to see customization features as a yellow flag in my own thinking. Sometimes they're the right answer. But often they're a way of handing the hard product decision to the user, dressed up as empowerment. Our customers didn't want to design their own tool. They wanted us to have already figured it out.\n\n**Low adoption isn't a marketing problem.**\n\nOur first instinct was to promote it harder. In-app tooltip, another email, a webinar. That would have been spending more to defend a decision instead of learning from it. If something genuinely solves a pain point, people find it. Adoption campaigns are for things people don't know they need, not for things they don't need.\n\nWhat we did next: we killed the customizable dashboard. Replaced it with one fixed view showing the two metrics everyone actually wanted, plus a notification when an account crossed a risk threshold. Took a week and a half.\n\nUsage of that view is now higher than any other page in the product.\n\nI don't regret shipping the thing nobody used. It's the most expensive product lesson I've had, and I'd rather have paid for it once than keep making the same mistake in smaller ways forever.\n\nThe lesson, if I had to compress it: when a customer tells you what to build, thank them, then ask what they're trying to do. Build that instead.\n\nCurious whether others have a \"feature nobody used\" story. What did yours teach you?\n=== END OF TEXT A ===\n\n=== TEXT B ===\nTwo years ago I spent about four months building a feature that, as far as I can tell, was used by nine people. Not nine thousand. Nine. And I think three of them were on my team testing it.\n\nThe feature was a customizable dashboard. Users could drag widgets around, pick which metrics showed up, save different layouts for different days. We had heard from a handful of customers that our default view didn't fit their workflow, and I took that and ran with it. I wrote a spec. I got design involved. We built a whole layout engine. I remember demoing it to the sales team and feeling genuinely proud of how smooth the drag and drop felt.\n\nThen we shipped it, and nothing happened. No spike in engagement. No support tickets, good or bad. A few people opened the customization panel, moved one widget, and never came back to it.\n\nFor a while I told myself it was a discoverability problem. We added a tooltip. We added a banner. We put it in the release notes twice. Nothing changed.\n\nWhat finally made it click was a call with one of the customers who had originally asked for it. I asked her why she hadn't set up her own layout. She said, and I'm paraphrasing only slightly, \"I don't want to design a dashboard. I want you to know what I need to see.\" She had never wanted flexibility. She wanted us to be right about the default. Flexibility was what she asked for because it was the easiest thing to say when the default was wrong.\n\nThat's the lesson I keep coming back to. When someone asks for a feature, they are usually describing a solution they can imagine, not the problem they actually have. My job was to dig underneath the request, and instead I took it at face value because it was concrete and buildable and I could picture the demo.\n\nThe honest version of the story is that I was also a little bored. The default view was a hard, unglamorous problem that required looking at a lot of data and talking to a lot of people and probably ending up somewhere unsatisfying. A layout engine was fun. I could see progress every day. I let that pull me.\n\nWhat I do differently now is pretty simple. Before I write a spec, I try to say the problem out loud without mentioning any solution, and I check whether the customer nods. If I can't do that, I'm not ready to build. And when a request comes in as a fully formed feature, I treat that as a signal that I haven't asked enough questions yet, not as a shortcut.\n\nWe eventually rebuilt the default view based on what people actually looked at first every morning. It took three weeks. Engagement went up noticeably. Nobody asked for customization again.\n\nI still think about those nine users sometimes. I hope the drag and drop was nice for them.\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n"
+     }
+    ]
+   }
+  ],
+  "generationConfig": {
+   "maxOutputTokens": 16000,
+   "thinkingConfig": {
+    "thinkingLevel": "high"
+   },
+   "responseMimeType": "application/json"
+  }
+ },
+ "usage": {
+  "input_tokens": 2114,
+  "output_tokens": 70,
+  "reasoning_tokens": 674,
+  "served_model": "gemini-3.8-flash"
+ },
+ "verdict": {
+  "more_ai": "A",
+  "confidence": 5,
+  "tells_A": [
+   "bold-label paragraph openers",
+   "heavy use of negative parallelism ('not X, but Y')",
+   "signposting ('Here\\'s what I learned')",
+   "formulaic crowd-engagement ending"
+  ],
+  "tells_B": [
+   "minor negative parallelism"
+  ]
+ },
+ "response_raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"more_ai\": \"A\", \"confidence\": 5, \"tells_A\": [\"bold-label paragraph openers\", \"heavy use of negative parallelism ('not X, but Y')\", \"signposting ('Here\\\\'s what I learned')\", \"formulaic crowd-engagement ending\"], \"tells_B\": [\"minor negative parallelism\"]}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 2114,
+   "candidatesTokenCount": 70,
+   "totalTokenCount": 2858,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 2114
+    }
+   ],
+   "thoughtsTokenCount": 674,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "PXWdauj-F8DokdUPusKh0AU"
+ }
+}

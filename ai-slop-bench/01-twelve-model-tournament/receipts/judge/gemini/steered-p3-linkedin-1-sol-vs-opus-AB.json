@@ -1,0 +1,74 @@
+{
+ "judge": "gemini",
+ "model": "gemini-3.8-flash",
+ "key": "steered-p3-linkedin-1-sol-vs-opus-AB",
+ "wall_s": 3.3,
+ "run_utc": "2026-09-06T14:10:43Z",
+ "request_body": {
+  "contents": [
+   {
+    "parts": [
+     {
+      "text": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n\nPlain prose only: no headers, no bullet points, no bold text, no em dashes. Write like a person.\n\n=== TEXT A ===\nWe once spent weeks building a feature customers said they wanted.\n\nThe requests sounded clear. The idea fit our product strategy. The team designed it carefully, handled the edge cases, polished the experience, and launched it with real excitement.\n\nThen almost nobody used it.\n\nOur first reaction was to question the launch. Maybe customers had not seen the announcement. Maybe the feature was hard to find. Maybe we needed better onboarding.\n\nThose things mattered, but they were not the real problem.\n\nWe had mistaken interest for urgency.\n\nCustomers liked the idea when we described it. They could imagine using it. Some even asked when it would be available. But the problem it solved was not painful enough to change their behavior.\n\nThe biggest lesson was that feature requests are not the same as evidence.\n\nNow, before committing significant time, we look for signs of real effort. Are customers using a workaround? Are they spending money on another solution? Are they repeatedly raising the issue without being prompted? Will they try an imperfect version today?\n\nWe also try to test behavior instead of collecting opinions. A prototype, a manual service, or a simple button can teach us more than a long list of enthusiastic responses.\n\nShipping unused work was frustrating, but it changed how I think about product development.\n\nThe goal is not to build what people say sounds useful.\n\nThe goal is to understand what matters enough for them to act.\n=== END OF TEXT A ===\n\n=== TEXT B ===\nTwo years ago I shipped a feature that almost nobody used.\n\nIt was a custom dashboard builder. Drag your widgets, pick your metrics, save your layout, share it with your team. Eleven weeks of work across four people. We wrote a launch email, recorded a demo video, added an in app announcement. Three months later, 0.6 percent of active accounts had created a dashboard. Most of those were internal.\n\nWhat stung was that we had done the research. Or thought we had. Sales had a spreadsheet with 34 mentions of \"custom reporting\" from lost deals. Support had tickets. Two enterprise customers said it out loud on calls with our CEO. By every measure we used at the time, this was the most requested thing on our list.\n\nHere is what I missed. We counted how many people asked. We never asked why.\n\nWhen I finally went back and interviewed twelve of the customers who had requested it, the answers had almost nothing to do with dashboards. One person needed a weekly number to paste into a slide for her board meeting. Another wanted an alert when churn crossed a threshold, so he could stop checking manually every Monday. A third had a data team that just wanted a clean export. They had all said \"custom dashboard\" because that was the closest word they had for the thing they were imagining. We built the word instead of the need.\n\nThe uncomfortable part is that a scheduled email with four numbers in it would have solved maybe eight of those twelve problems. That is roughly a two week project. We could have shipped it, watched what people did with it, and learned more in a month than we learned in eleven weeks of building the sophisticated thing.\n\nSince then I have changed one habit, and it is small enough that it actually stuck. Before we scope anything, I try to write down the specific moment in someone's week that the feature is supposed to change. Not the outcome, not the value prop, the moment. Tuesday morning, she opens the app, she is trying to do X, and right now she does Y instead. If I cannot describe that moment in plain language, I do not have a problem yet. I have a request.\n\nThe other thing I do now is ask customers what they currently do instead. People are unreliable when they predict their future behavior and very reliable when they describe their past behavior. \"I export to CSV and rebuild the same pivot table every Friday\" tells you more than an hour of feature brainstorming.\n\nWe eventually killed the dashboard builder. It took another year to admit it, because sunk cost is a real feeling and not just a bullet point in an economics class. Nobody complained when it went away, which was its own kind of answer.\n\nI do not think this makes me smarter than anyone. Plenty of teams learn this earlier than I did. But if you are staring at a request that shows up in every sales call, it is worth spending a week finding out what people actually mean before spending a quarter finding out they meant something else.\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n"
+     }
+    ]
+   }
+  ],
+  "generationConfig": {
+   "maxOutputTokens": 16000,
+   "thinkingConfig": {
+    "thinkingLevel": "high"
+   },
+   "responseMimeType": "application/json"
+  }
+ },
+ "usage": {
+  "input_tokens": 1766,
+  "output_tokens": 101,
+  "reasoning_tokens": 780,
+  "served_model": "gemini-3.8-flash"
+ },
+ "verdict": {
+  "more_ai": "A",
+  "confidence": 5,
+  "tells_A": [
+   "negative parallelism ('The goal is not... The goal is...')",
+   "generic anecdote with zero specific details, names, or numbers (Tells 15 & 16)",
+   "repeated triads of three items or parallel clauses (Tell 6)",
+   "relentless uniform rhythm of one- and two-sentence punchy paragraphs (Tell 9)"
+  ],
+  "tells_B": []
+ },
+ "response_raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"more_ai\": \"A\", \"confidence\": 5, \"tells_A\": [\"negative parallelism ('The goal is not... The goal is...')\", \"generic anecdote with zero specific details, names, or numbers (Tells 15 & 16)\", \"repeated triads of three items or parallel clauses (Tell 6)\", \"relentless uniform rhythm of one- and two-sentence punchy paragraphs (Tell 9)\"], \"tells_B\": []}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1766,
+   "candidatesTokenCount": 101,
+   "totalTokenCount": 2647,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 1766
+    }
+   ],
+   "thoughtsTokenCount": 780,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "XnSdavvsOYSAxs0PyvHg6AI"
+ }
+}

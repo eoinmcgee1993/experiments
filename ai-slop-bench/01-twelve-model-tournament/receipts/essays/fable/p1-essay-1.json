@@ -1,0 +1,93 @@
+{
+ "arm": "fable",
+ "label": "Fable 5.1",
+ "vendor": "Anthropic",
+ "transport": "openrouter",
+ "model_requested": "anthropic/claude-fable-5.1",
+ "serving_path": "OpenRouter -> Anthropic (first-party key unavailable at run time)",
+ "prompt_id": "p1-essay",
+ "sample": 1,
+ "run_utc": "2026-09-06T13:24:12Z",
+ "wall_s": 22.5,
+ "request_body": {
+  "model": "anthropic/claude-fable-5.1",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Write an essay of up to 500 words on why most product roadmaps fail."
+   }
+  ],
+  "max_tokens": 8000,
+  "provider": {
+   "allow_fallbacks": false
+  },
+  "usage": {
+   "include": true
+  }
+ },
+ "usage": {
+  "input_tokens": 32,
+  "output_tokens": 1229,
+  "reasoning_tokens": 278,
+  "cost_usd": 0.0611523,
+  "served_model": "anthropic/claude-fable-5.1",
+  "provider": "Anthropic"
+ },
+ "essay_sha256": "60013853579d746f10d774f3823b356869d635c3a2c632db31387db0ebe15765",
+ "essay_words": 489,
+ "response_raw": {
+  "id": "gen-1788701028-Md6F05Zl0U3NfxbZZ7ou",
+  "object": "chat.completion",
+  "created": 1788701028,
+  "model": "anthropic/claude-fable-5.1",
+  "provider": "Anthropic",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "**Why Most Product Roadmaps Fail**\n\nMost product roadmaps fail not because teams are lazy or unskilled, but because the document itself is asked to do something it cannot do: predict the future. A roadmap that lists features with delivery dates twelve months out is a forecast dressed up as a plan, and forecasts about what customers will want, what competitors will do, and how long software takes to build are wrong far more often than they are right.\n\nThe first failure is one of false certainty. Roadmaps are typically created during an annual planning cycle, when a team knows the least it will ever know about the coming year. Yet the artifact that emerges looks authoritative—neat rows, quarterly columns, confident labels. Executives read it as a promise. Sales teams sell against it. By the time the team learns that the assumptions were wrong, the roadmap has hardened into a set of obligations no one wants to renegotiate.\n\nThe second failure is the conflation of output with outcome. Most roadmaps are lists of things to ship rather than problems to solve. \"Build a mobile app\" is a feature; \"reduce time-to-first-value for new users\" is an outcome. When the roadmap specifies the solution in advance, it strips the team of the ability to discover a better one. Worse, it lets everyone declare victory when the feature launches, regardless of whether it changed anything.\n\nThe third failure is political. Roadmaps are often negotiated documents, shaped by whoever argued loudest in the planning meeting. Every stakeholder gets a line item, and prioritization dissolves into accommodation. A roadmap that tries to please everyone ends up representing no strategy at all—it becomes a to-do list with a budget attached. Real prioritization means saying no, and the roadmap is frequently where organizations avoid doing so.\n\nThe fourth failure is inertia. Good teams learn constantly: a customer interview reveals a misunderstanding, a competitor launches something unexpected, an experiment disproves a cherished belief. But the roadmap rarely absorbs this learning. Changing it feels like admitting failure, so teams keep executing against a plan they privately know is stale. The document meant to guide decisions ends up preventing them.\n\nFinally, roadmaps fail because they are disconnected from the strategy they should express. A roadmap is supposed to answer \"how do we get from here to there?\" But if \"there\" was never clearly articulated—if there is no crisp statement of which customers matter, which problems are worth solving, and what winning looks like—then the roadmap is simply a sequence of activities with no coherent reason behind it.\n\nThe alternative is not to abandon roadmaps but to change what they claim. A useful roadmap communicates intent, not commitments; problems, not solutions; sequences, not dates; and it is revised whenever the team learns something that matters. It should read less like a contract and more like a set of well-reasoned bets—bets the organization is willing to lose, and honest enough to revise.",
+     "refusal": null,
+     "reasoning": "I'm outlining the core reasons roadmaps fail: they're mistaken for commitments instead of hypotheses, focus on features over outcomes, rest on false certainty about a distant future, serve as political tools to appease stakeholders, and suffer from a lack of real prioritization. I'll aim to keep the essay around 420-480 words.\n\nThe essay should center on a clear thesis—that roadmaps fail because they masquerade as forecasts rather than serving as statements of intent and calculated bets, disconnected from strategy and rarely revised as new learning emerges.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm outlining the core reasons roadmaps fail: they're mistaken for commitments instead of hypotheses, focus on features over outcomes, rest on false certainty about a distant future, serve as political tools to appease stakeholders, and suffer from a lack of real prioritization. I'll aim to keep the essay around 420-480 words.\n\nThe essay should center on a clear thesis—that roadmaps fail because they masquerade as forecasts rather than serving as statements of intent and calculated bets, disconnected from strategy and rarely revised as new learning emerges.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQSlQoKEAgRGAI4AUIIdGhpbmtpbmcSDOMrQnaqLfQRMT9S4hoM5XoHHgw7X4+Ohdp+IjBR/54zlMfXi35C5w2mEguucJ+tHO2cp49Z0mcSjKfFgmWiL3mk0k0itLGBP+t9+BUqsgk11Jw6f6/okqvmVcSoK5QBkRXXi7yvlBHDNt4FvKMF2TqdxLjO2/BF9PtUwHP+W1TArCoYuyMVfqt9g3Mh17Q0PLGi9Mq47NsGdIBsTCmGxPTCNIBXZyv8ywkOCvIGUOeiaOKPP3O1AkoadNNkHJmJDpEQXyhvK1+6cwnw3KWJr2b7oIiKKVgYSVOzzD0UoeN27cBE4/diPY+NN4Qf59sufxOl9CPL9w1RPcT1WgNph0vD4793Wyvb3Zil60mIpaDGK72aDGU3LywouB7d9QFsiyZLlTRG0yqUYtMZRybXg6k6AAjFSxKEdASRnxYg/wfUGJfs8i6Afug6w8HF6T+ksA5yiHi1yOfe1M8Q/YwbjwPhQCGgZJKkXk9V8Cv3r7VsbS4RbB2LYV4HX+coe9HOgvq2YGKOO6Rq3FJGmfPv5R8agQJ6EEKcrJM3ptatD+EE2qOL/LeTvp3dSOcWRL0XgqMVs2r1Fc78KOxAaGcD/X6p6XpE5QRE2jgD+yclhPL5acjeuZb1GAU4TCT641WVJ4TlhmKkPZgXh1M57/5d8TWwhS8Wv2JR9LwbCT9N0VR9VVn95yPwY7TJvDTW5IJAyjk4Mmdpz858/ytsTTOpWTBtamWvqKWfOwGE6OTeIwb6ce9dtwkp9m2XDC06I5z6PXVA603Rf7QynQRq25/wj1RjQyAuKJpqxoBOfy4KFP+5LJMkdzDwz2w4ouIZ+exVWJ+6JjReBl2Bo0XpphR3EJKSkaRNUwmRWov3zzVkuXDPfrWu6osW0nks4kJQVCPr3CBtAgmywVibYv4Ap8VHxan3P9jQd/v6TcGs8iYsxzjcIzMrm4R3IphNoDBTQMg0gAT3W+YRHJeTSdk2ASg+b5JD7PYyYHUuUPrYrDY1swLKIPiM2bj7oMYcY50bsuzCKVaaq3Y1y7tOrnl7fT9vwh0hysqHSOj1lQlu7/GvduZH5ZxpkTEVxcok5xjZdXKPLLe/jHLdeyAff9skn8dSR2jm2YCR3AyPgbEIKXDgdb918H6Gu0GNCcIXIhpSdRMDttP8I4YJTi8+AlIKUDbbgVU45XlTC0EQtvAj/KNhSYS/Ee8uQM9/6POAv2pyAzlN45kT0uKMcaesqfEI+TWVk77zTqNuH+9zhP/Q7LVQmHEZKWRdF4k0ChNHRUeC7oLoYZ4E8qCtuJwv8CJPZFGJ4F7i1zLCAZTuRf87Chtwvw4r8fyHEY8dneEV1ajsc6VjmHYQGM29YnGHf8bTmL/2fCJWa0m2ea+wiUjmxNn/9lc3n+WmLmGA45rVIzMAi+TLpeho5SEOJdZl1O+eHGwnjyUGDXMuxVGqaewz+aGbNvfY22ygbQSbEBciBkSYXw9DFZztVH8f17lrF/DvlWInC3DSzzh0ReDyzvqJmzWdIgc00+UYldX+tJVo5GSjAvSUNf8Tdd8vXXRttVUuVESEeHvrNZKRakzP4pU6ddGDkChS60qVouZCbz6w1YtgoDASrUA6FoJO6k30/TOO+FQGcRwrRcOKHVEsuydrt3P5Zxg0S4HF8Uf+TT0dhbgUEu40q1QYVwWrGjNbjlRbNxSP4ipSpXZ6ZyB+p6PxZPbrRLXu/xgB"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 32,
+   "completion_tokens": 1229,
+   "total_tokens": 1261,
+   "cost": 0.0611523,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.06177,
+    "upstream_inference_prompt_cost": 0.00032,
+    "upstream_inference_completions_cost": 0.06145
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 278,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

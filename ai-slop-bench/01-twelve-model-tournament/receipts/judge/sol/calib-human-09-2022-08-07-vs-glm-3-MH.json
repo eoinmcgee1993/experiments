@@ -1,0 +1,144 @@
+{
+ "judge": "sol",
+ "model": "gpt-5.6-sol",
+ "key": "calib-human-09-2022-08-07-vs-glm-3-MH",
+ "wall_s": 7.4,
+ "run_utc": "2026-09-07T08:26:22Z",
+ "request_body": {
+  "model": "gpt-5.6-sol",
+  "input": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n(One of the texts is a real LinkedIn post by a person, written on its own topic; judge tells, not topic.)\n\n=== TEXT A ===\nSix weeks of work. Shipped to 40,000 users.\n\nTwelve people used it. Two of them were on our team.\n\nLast year, our users kept asking for \"more flexibility\" in their dashboards. So we did what excited product teams do: we built a fully customizable dashboard builder. Drag and drop. Ten widget types. Custom color themes. The demo looked incredible.\n\nWe shipped it with a launch email, a blog post, and a lot of pride.\n\nThirty days later, the numbers came in:\n\n→ 47 people opened the builder\n→ 12 saved a custom dashboard\n→ 0 came back a second week\n\nI remember staring at the analytics, genuinely confused. The feature worked flawlessly. Almost no bugs. So where was everybody?\n\nIt took a few humbling user conversations to find out.\n\n1. We heard \"more flexibility\" and translated it into \"build everything.\" When we finally sat down with the users who asked, they wanted one thing: their two most important metrics on a single screen. We could have shipped that in a week.\n\n2. We never defined success. No target, no baseline. We assumed adoption would just happen. \"If we build it, they will come\" isn't a strategy — it's a hope wearing a strategy costume.\n\n3. We hid it. The entrance lived in a settings menu most users never open. The feature didn't fail on value; it failed on discovery. Placement is part of the product.\n\nThe lesson I still carry:\n\nAdoption is designed, not assumed. Every feature has to clear three bars — it solves a real problem (validated, not guessed), people can find it, and it earns a second visit. We didn't deliberately clear any of them. We got lucky on none of them.\n\nNow, before we build anything, three questions get answered in writing:\n\n• What specific problem is this solving, and how do we know it's real?\n• How will people discover it? (If the answer is \"the changelog,\" we start over.)\n• What number tells us it worked — and what do we do if it doesn't?\n\nWe also run \"concierge tests\" now: manually delivering a feature's value to a handful of users before writing any code. It's humbling how often the manual version reveals nobody wants the automated one.\n\nBy the way — that simple side-by-side view? We finally built it months later. One week of work. Four thousand users in the first month.\n\nThe dashboard builder still sits in our feature graveyard, and I'm oddly grateful. It cost six weeks and taught us more about building the right thing than any successful launch did.\n\nUnused features aren't failures. They're tuition.\n\nJust try not to overpay.\n\nWhat's the most expensive lesson a feature ever taught you?\n\n#productmanagement #productdevelopment #lessonslearned\n=== END OF TEXT A ===\n\n=== TEXT B ===\nThe #Agile Manifesto was a success.\n\nBut it is outdated.\n\nIt did its job; it helped us move away from the waterfall. I support many of its values and principles.\n\nAt the same time, I think it wasn't well prepared. And most importantly, it has not been updated since 2001.\n\nWhat holds on, and what's missing?\n\nLet's start with the \"Working software is the primary measure of progress\" principle. Working software is just an output. How do we know it delivers any value? It's a perfect recipe for a feature factory. Today we understand we need to focus on the outcomes.\n\nThe Agile Manifesto also doesn't mention product discovery. Building a feature to find out nobody needs it, that it doesn't scale due to technical limitations, or that it doesn't produce value for the business is a waste, no matter how much you \"Welcome that change.\" We can mitigate those risks by validating our ideas with the help of prototypes.\n\nThe Agile Manifesto also lacks many necessary ingredients for a successful product organization:\n\n- Data and information are not present. Those are strategic assets every PM should understand and leverage.\n\n- Leadership is not even mentioned. In this context, \"Build projects around motivated individuals\" is just wishful thinking. \n\n- DevOps couldn't be included, as the term was born in 2008 - 7 years later.\n\n\nThe Agile Manifesto may be outdated, but the Agile principles and values existed long before it was created. And they have evolved significantly since 2001.\n\nI do not doubt that agility will thrive. Nothing, not even fake Agile frameworks like #SAFe, can change it.\n\nDo you agree? What are your thoughts?\n\nLet me know in the comments.\n\n- - - - -\n\nA few sources I highly recommend:\n\n- Product Discovery is perfectly described in \"Inspired\" by Marty Cagan\n\n- \"Outcomes Over Output: Why Customer Behavior is the Key Metric for Business Success\" by Joshua Seiden \n\n- \"Agile 2: The Next Iteration of Agile\" by Cliff Berg, Kurt Cagle, Adrian Lander, Philippa Fewell, Raj Nagappan, PhD, Lisa Cooney, and Murray Robinson.\n\n- The Agile Product Manifesto by David Pereira\n\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n",
+  "max_output_tokens": 16000,
+  "store": false,
+  "reasoning": {
+   "effort": "medium"
+  }
+ },
+ "usage": {
+  "input_tokens": 1841,
+  "output_tokens": 287,
+  "reasoning_tokens": 171,
+  "effort_echoed": "medium",
+  "served_model": "gpt-5.6-sol"
+ },
+ "verdict": {
+  "more_ai": "A",
+  "confidence": 5,
+  "tells_A": [
+   "Repeated negative parallelism",
+   "Heavy signposting and lesson framing",
+   "Numbered and bulleted LinkedIn structure",
+   "Multiple exact triads",
+   "Rhetorical questions answered by the post",
+   "Frequent em-dash clause joins",
+   "Polished recap ending with uplifting aphorisms",
+   "Crowd-engagement question and hashtags"
+  ],
+  "tells_B": [
+   "Signposting with “Let’s start”",
+   "Bulleted list in prose",
+   "Overused term “leverage”",
+   "Generic audience-engagement questions"
+  ]
+ },
+ "response_raw": {
+  "id": "resp_04672e174558472e016a9e75260af887d293911b2f7b2679bf",
+  "object": "response",
+  "created_at": 1788769574,
+  "status": "completed",
+  "background": false,
+  "billing": {
+   "payer": "developer"
+  },
+  "completed_at": 1788769581,
+  "error": null,
+  "frequency_penalty": 0.0,
+  "incomplete_details": null,
+  "instructions": null,
+  "max_output_tokens": 16000,
+  "max_tool_calls": null,
+  "model": "gpt-5.6-sol",
+  "moderation": null,
+  "output": [
+   {
+    "id": "rs_04672e174558472e016a9e7527618887d2b3c1955543b2e9ae",
+    "type": "reasoning",
+    "content": [],
+    "encrypted_content": "gAAAAABqnnUtpgKUakKAY4ZDAdNbWnFiSdtNFXaa3zTjDSdM9EKDagXwtr5O1TXAlxX1y7ZIlmqqaQpbY3PpKIdojpImwbsUHOIt888bF8FPh1yQ8Nbe-eu5Lzc8_JZPxf7AXyHSqh1e3wWPkpfoIyGkXfLQngynay61OMES6m5om9UtMSomrecUbPQcoD9upaFufkOHKLbHdFiUCKykujqUVe2cUQxGY3rJZITL_i_IIfWmAkZbkJ_U9GQO4RlErfp8pVGCVQBaXbaJCC8ayamHU1Wz3Fr_TNs0OPB1JZMESEWXzgFb-2rjMNl6HiziH_HFmEq0R8K_wgtwSYPnusBGJMtz8uTp9-lKAgsiBnZNF_xRdzm0_8-redRzuYtsWPA77-c04iFJg9ibfQVa-H5UL8qlZWZqHLKTOM_zUaK5jpgTD6n9FxtSBO0FUqGsHWtuWmJsslNwKp-9URYMD0G2GUr70PBmYvrmrVb_HmRECIgP631VaOxjf49vhZPgRoWBjULNM35anazexeFvkuHVqmzxKDYxGONvJwb3JEdf8JK_BGJMj3bBnLdN5jaCOBXzS9QXu5m9LRBMBlSb9JgRdGAdnQJpyV0bNxqzqVk4UOrg-Lx2UpkDuPDqwn_V87mVvpTszOALM05Gandmz33z0cDSW7NX5zUHr0zAVtlb9I5u4NZDXn0KCyGjX5BQNcBEsWO8IPkxpEZskLAJhXTywynf7J6wt3ZUe-jEKHCciT11Y-e60hlYoLrcP4kL4XgcL0wxDMDSMYrBVg8zRQ_MNKIecH4FhH1GHhuCLcwvd8PMMBbeDTuiaTdaQr4GpcX4YHYpbhcIL7dNbRaga-Ff_oybZpjQ_BSnMM5HwxLEBBiOdAgwtIZay2o0giX4xCSoyh0iadycMuNCwAPwgae4T0I2CCiUHOUSrXQFvuwHwZjG-U7tCszzB4N9bKQpmi-lTKHMlsYAkynpTQHAoq5LH5CuCyQUSjinxedL0C71x56YKww8hOJV_rRlCj_uuvED2c9nX5T11MnnbTAa-9Orbjne4wAjT4TNN8ATgv3Pl9wFydWqxCE4NKiIXpatn2XySriqtee6uLDfjmofdQiK2faHx7VCeZzjX_dGM3alzV_vi_-5u6e3vMs7gi88aBcpVhapNd_LUupThbCBjUuMVS72BD4lfgC4PQ62MUeAmsrhmVwIvRkHXkOdtaH0ICyjk_T9NeS1zThOP_HR8n9uQLNh_eIQ8gWPJhCaR2htxNtzju9d4aGR2pu-THIsP6Bg0eqIIhe5466JBrRj8mO5wurUxlPA25eKqXuBPAvuIwNiWebrW6BtuHxkSdRWP6Dgq8uszkCrOvVrnJqgZ-Lp2Ooy_sV-DOY_4AWpKF-iygpr3-m5oC-BBXn5M14KDpVsaWbbJcN3AuLDOjKQ5DuV3PYX2avZoi6LCT5Fu5DmKkq4WtNHevh_pL2UZPBUrowqEzoVTKj4qmAe6Nwd3wCR0ZbZvZlm2fdwuOMkOoWxmi1sRVfnBubwkkQMN2zzoOo6P75XTjP0clNtoMuKZluWg6k3pUID7XksPsRSPLslG6mzqf0aLscxAOKq0P06uYPUmv28_5yZvJBx89fupgMbB1HoFGqf8Nyitnlf8VhYtNo-7frj8YFRWbsBqNE3IEM38q5lZscTVpnxS5ZQTGYgJx_aHVkt3wgAPlWpUFCGj9xVGfTw25tJih_V27TcB_h-2b8ElDdDFPZLHjvy_h7gHelJQjfP06qFOT9kawO4enmA_dMnuTLE5bJwosrPKYzMnGV0y0sfHv4ZHpn39LlkHEIvj8e67AcQ2hflQ14dab1aJYeJjO5B16-Qwh5sAGey2EW1NvleZ7D1uKYC786HYlqKLMxDQiGZzLU8Kl-b_6tIckkvmAPXyzDGwwupRUHBbIgjxLo09d1O5ZLFirmXBsZdPukmi2xdKC6lAwSDdbcERvy2zgd_843sW1rVwR9idp7PYZYUHm88DnhEI2dyc-rU3S2lJduNTID2z1RD2yuJeJlboJjW5WpJjkn49VkfdgBmyov8jReT-osjevUzN0oIOWBRR2XIV29mHDXNdXTqxSwoygHoQPwfxDmek7fznSre1LSoy5s8WSNQIYFo3EGaMZhMPUV0sfbVIELzT3RVrMPRbBbcorXQbWSwJ7VUNF72TF5iyVk_kZJJbsgjDtHMGOsX2HHjw6kr-C94mczsIKNea04FecKDeIssiRVUW5d1pWdEBk249c-gHJxeIg6tmyxgooM61PjqXPQ56NQ3aLjJA8asafd-HxaXBzgx_qtzd5JL2qg1Knut216ZE9lVmR6AAQ==",
+    "summary": []
+   },
+   {
+    "id": "msg_04672e174558472e016a9e752b0dfc87d29351f21de6eeb41b",
+    "type": "message",
+    "status": "completed",
+    "content": [
+     {
+      "type": "output_text",
+      "annotations": [],
+      "logprobs": [],
+      "text": "{\"more_ai\":\"A\",\"confidence\":5,\"tells_A\":[\"Repeated negative parallelism\",\"Heavy signposting and lesson framing\",\"Numbered and bulleted LinkedIn structure\",\"Multiple exact triads\",\"Rhetorical questions answered by the post\",\"Frequent em-dash clause joins\",\"Polished recap ending with uplifting aphorisms\",\"Crowd-engagement question and hashtags\"],\"tells_B\":[\"Signposting with “Let’s start”\",\"Bulleted list in prose\",\"Overused term “leverage”\",\"Generic audience-engagement questions\"]}"
+     }
+    ],
+    "phase": "final_answer",
+    "role": "assistant"
+   }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0.0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+   "context": "all_turns",
+   "effort": "medium",
+   "mode": "standard",
+   "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": false,
+  "temperature": 1.0,
+  "text": {
+   "format": {
+    "type": "text"
+   },
+   "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+   "image_gen": {
+    "input_tokens": 0,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "output_tokens": 0,
+    "output_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "total_tokens": 0
+   },
+   "web_search": {
+    "num_requests": 0
+   }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+   "input_tokens": 1841,
+   "input_tokens_details": {
+    "cache_write_tokens": 1838,
+    "cached_tokens": 0
+   },
+   "output_tokens": 287,
+   "output_tokens_details": {
+    "reasoning_tokens": 171
+   },
+   "total_tokens": 2128
+  },
+  "user": null,
+  "metadata": {}
+ }
+}

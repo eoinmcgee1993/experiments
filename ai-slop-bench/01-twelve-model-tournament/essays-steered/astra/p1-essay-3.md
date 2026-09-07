@@ -1,0 +1,13 @@
+Most product roadmaps fail because they make uncertain work look certain. A row of features arranged neatly across four quarters suggests that a team knows what customers will need, how long development will take, and what the business should prioritize months from now. Usually, it knows much less than the roadmap implies.
+
+The trouble often starts with the question the roadmap is meant to answer. Instead of asking which customer problems matter most, teams ask what they can promise to deliver. Sales wants a feature that might close a deal. Leadership wants something impressive for the next board meeting. Existing customers want their requests acknowledged. The roadmap becomes a negotiated settlement between stakeholders rather than a coherent plan for improving the product.
+
+Once those promises acquire dates, changing direction gets harder. A team may discover that customers do not care about a planned feature, or that a simpler solution would work better. But removing the feature now looks like breaking a commitment. People keep building because the roadmap says they should, even when the original reason for building has disappeared. The plan survives at the expense of its purpose.
+
+Roadmaps also tend to confuse shipping with success. Launching a dashboard is easy to recognize as a completed task. Helping customers make better decisions is harder to measure and may require several attempts. When delivery is the main measure of progress, teams have an incentive to finish what they listed, not to investigate whether it helped. A roadmap can be completed on schedule while the product barely improves.
+
+Then there is the work that never makes it onto the slide: maintenance, security fixes, support, hiring, technical dependencies, and the unexpected complexity of changing an established system. Plans built around uninterrupted development are already behind before anyone starts. Adding more detail rarely fixes this. It can simply make unrealistic assumptions look more convincing.
+
+A useful roadmap does not eliminate uncertainty. It makes uncertainty visible. It explains which problems deserve attention, why they matter, and what evidence would justify changing course. Near-term commitments can be specific, while later work remains provisional. It leaves room for the less glamorous work that keeps a product reliable.
+
+The real test of a roadmap is not whether the team follows it exactly. It is whether it helps people make better decisions as they learn. Most roadmaps fail when they stop being tools for those decisions and become promises nobody feels allowed to question.

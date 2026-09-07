@@ -1,0 +1,89 @@
+{
+ "judge": "grok",
+ "model": "grok-4.6",
+ "key": "p3-linkedin-3-sol-vs-luna-AB",
+ "wall_s": 103.5,
+ "run_utc": "2026-09-07T00:33:21Z",
+ "request_body": {
+  "model": "grok-4.6",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n\n=== TEXT A ===\nWe shipped a feature nobody used.\n\nNot “low adoption.”  \nNot “slower than expected.”\n\nAlmost nobody touched it.\n\nThe team had spent weeks designing, building, testing, and polishing it. We believed the feature solved an obvious customer problem—and once we launched, we waited for the usage data to prove us right.\n\nIt didn’t.\n\nOur first instinct was to improve onboarding. Maybe users couldn’t find it. Maybe the messaging wasn’t clear. Maybe we needed another tooltip.\n\nBut after speaking with customers, the real issue became obvious:\n\nWe had validated the problem, but not the priority.\n\nYes, customers experienced the problem. They simply didn’t experience it often enough—or feel it was painful enough—to change their behavior.\n\nThat distinction taught me an important lesson:\n\n**A real problem is not automatically a problem worth building for.**\n\nBefore writing code, we should have asked:\n\n- How are customers solving this today?\n- How frequently does the problem occur?\n- What does it cost them?\n- What would they stop doing to use our solution?\n- Have they actively looked for an alternative?\n\nComplaints can be useful signals, but they aren’t commitments. Interest isn’t intent. And “I’d use that” is very different from changing an established workflow.\n\nThe feature wasn’t a total waste. It improved how we approach product discovery.\n\nNow, we look for evidence of urgency—not just agreement. We test behavior before building the full solution. And we define what adoption should look like before launch, not after.\n\nShipping the wrong feature taught us more than shipping an easy win would have.\n\nThe goal isn’t to build what customers say sounds useful.\n\nIt’s to understand what matters enough for them to act.\n=== END OF TEXT A ===\n\n=== TEXT B ===\nWe once shipped a feature that checked every box:\n\n✅ It solved a real problem  \n✅ It was technically well-built  \n✅ It had a polished user experience  \n✅ It was announced in our release notes  \n\nAnd almost nobody used it.\n\nAt first, we blamed discoverability. So we added a banner, updated the help center, and mentioned it in customer communications.\n\nUsage barely moved.\n\nThe uncomfortable truth was that we had built the feature based on what users *said would be useful*—not what they were already doing, struggling with, or willing to change.\n\nThe feature required users to adopt a new workflow. It was “better” in theory, but switching costs were real. Their existing workaround was imperfect, yet familiar and good enough.\n\nThat experience changed how I think about shipping.\n\nBefore building, we now ask:\n\n- How are users solving this problem today?\n- How often does the problem occur?\n- What would they stop doing if our solution existed?\n- Can we test the behavior before building the full feature?\n- Where will the feature fit into their existing workflow?\n\nWe also started treating adoption as part of the product—not a post-launch marketing task.\n\nA feature isn’t successful because it shipped, received positive feedback, or looks impressive in a demo.\n\nIt’s successful when it changes behavior and creates meaningful value.\n\nThe lesson wasn’t “don’t build features nobody asks for.”\n\nIt was: don’t confuse interest with intent, and don’t confuse intent with adoption.\n\nThe best validation isn’t someone saying, “That sounds useful.”\n\nIt’s someone saying, “Can I use it now?”\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n"
+   }
+  ],
+  "max_tokens": 16000,
+  "stream": true,
+  "stream_options": {
+   "include_usage": true
+  }
+ },
+ "usage": {
+  "input_tokens": 2092,
+  "output_tokens": 145,
+  "reasoning_tokens": 6582,
+  "cost_usd": null,
+  "served_model": "grok-4.6",
+  "provider": null
+ },
+ "verdict": {
+  "more_ai": "B",
+  "confidence": 4,
+  "tells_A": [
+   "Not X. Not Y. parallelism",
+   "signposting (taught me a lesson)",
+   "bold maxim + bullets",
+   "maybe/maybe/maybe triad",
+   "punchy fragment cadence",
+   "em dashes",
+   "generic no-specifics anecdote",
+   "uplifting isn't-X-it's-Y close"
+  ],
+  "tells_B": [
+   "stacked isn't-X-it's-Y (3x)",
+   "checkmark/bullet lists",
+   "multiple triads",
+   "em dashes",
+   "signposting (uncomfortable truth / the lesson)",
+   "generic no-specifics anecdote",
+   "uplifting recap close"
+  ]
+ },
+ "response_raw": {
+  "id": "48c53c11-3126-9145-9867-dadd24d713a4",
+  "model": "grok-4.6",
+  "created": 1788741201,
+  "system_fingerprint": "fp_e41c6060b2628547",
+  "object": "chat.completion",
+  "streamed": true,
+  "usage": {
+   "prompt_tokens": 2092,
+   "completion_tokens": 145,
+   "total_tokens": 8819,
+   "prompt_tokens_details": {
+    "text_tokens": 2092,
+    "audio_tokens": 0,
+    "image_tokens": 0,
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 6582,
+    "audio_tokens": 0,
+    "accepted_prediction_tokens": 0,
+    "rejected_prediction_tokens": 0
+   },
+   "num_sources_used": 0,
+   "cost_in_usd_ticks": 437780000
+  },
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "{\"more_ai\": \"B\", \"confidence\": 4, \"tells_A\": [\"Not X. Not Y. parallelism\", \"signposting (taught me a lesson)\", \"bold maxim + bullets\", \"maybe/maybe/maybe triad\", \"punchy fragment cadence\", \"em dashes\", \"generic no-specifics anecdote\", \"uplifting isn't-X-it's-Y close\"], \"tells_B\": [\"stacked isn't-X-it's-Y (3x)\", \"checkmark/bullet lists\", \"multiple triads\", \"em dashes\", \"signposting (uncomfortable truth / the lesson)\", \"generic no-specifics anecdote\", \"uplifting recap close\"]}"
+    }
+   }
+  ]
+ }
+}

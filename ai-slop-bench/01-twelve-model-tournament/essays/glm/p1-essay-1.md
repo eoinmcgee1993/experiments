@@ -1,0 +1,15 @@
+# Why Most Product Roadmaps Fail
+
+Every product organization builds roadmaps, yet most end up abandoned, ignored, or quietly rewritten into irrelevance. The failure is rarely about effort or intelligence. It is structural: roadmaps are asked to be a plan, a promise, and a persuasion tool at once — and those roles conflict.
+
+First, most roadmaps confuse outputs with outcomes. They are lists of features with dates attached — "launch X in Q2" — with the "why" missing. Which customer problem does X solve? Which metric will it move? Without stated outcomes, teams become feature factories, optimizing for shipping rather than value, and the roadmap can only be judged by whether things shipped on time, not whether they mattered.
+
+Second, they offer false precision. Attaching dates to unexplored work implies a certainty that product development never has. Building software is an exercise in learning, and learning resists scheduling. When reality diverges — an assumption fails, discovery reveals a better solution, a dependency slips — the dated roadmap becomes a ledger of broken promises rather than a planning tool. The dates convert hypotheses into commitments.
+
+Third, many roadmaps are political artifacts rather than strategic ones. They emerge from negotiation among stakeholders: sales needs a feature to close a deal, an executive wants a box checked from the vision deck, engineering lobbies for debt paydown. The result is a compromise that satisfies everyone individually and serves the customer not at all. Evidence — usage data, customer interviews, market signals — is conspicuously absent from the process.
+
+Fourth, a single roadmap cannot serve every audience. Leadership wants strategy; sales wants something sellable; engineering wants a plan; customers want commitments. Pressed into all these roles, the document fails at each. The most damaging version is when sales treats the roadmap as a catalog and sells future features to customers, at which point flexibility dies. The roadmap is now a contract, and every reprioritization is a breach.
+
+What would a better roadmap look like? It would express problems and goals rather than solutions: "reduce onboarding drop-off," not "launch onboarding wizard." It would use horizons — now, next, later — instead of dates, staying honest about uncertainty. It would be a living document, revised as learning accumulates rather than defended as it ages. And it would distinguish clearly between what is committed and what is merely being explored.
+
+The deepest issue is that most organizations treat the roadmap as a promise to keep when it should be a hypothesis to test. Plans fail when they pretend the future is known. Roadmaps survive only when they admit what they are: a statement of direction, grounded in evidence, flexible enough to change when the world does. The roadmap doesn't fail because plans changed; it fails because it pretended they wouldn't.

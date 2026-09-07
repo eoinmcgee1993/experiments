@@ -1,0 +1,15 @@
+# Why Most Product Roadmaps Fail
+
+The product roadmap is one of the most universal artifacts in business—and one of the most broken. Created to align teams around a shared direction, roadmaps more often produce the opposite: missed dates, demoralized engineers, and stakeholders who feel misled. The failure isn't in execution. It's baked into how roadmaps are conceived.
+
+First, most roadmaps traffic in false precision. A document that promises specific features on specific dates, twelve months out, pretends to knowledge nobody has. Markets shift, competitors move, technical surprises emerge, and—most importantly—teams learn things about their customers that invalidate earlier assumptions. Estimation error compounds with distance: a feature slotted for Q3 of next year carries months of embedded uncertainty. Yet the calendar format demands a date, and the date quietly becomes a commitment.
+
+Second, roadmaps are typically organized around outputs rather than outcomes. They list what will be built, not which problems will be solved or which results achieved. Product thinker Melissa Perri calls this the "build trap": organizations that measure themselves by shipping features rather than creating value. A feature-based roadmap can be executed flawlessly and still fail, because nobody validated whether those features were worth building.
+
+Third, roadmaps are political documents. They are assembled through negotiation—with executives championing pet ideas, sales teams promising features to close deals, and the loudest customers drowning out the quiet majority. The result is less a strategy than a treaty: a record of who won which argument. Such roadmaps reflect internal power dynamics, not customer need.
+
+Fourth, and most perniciously, roadmaps punish learning. Once published, a roadmap creates an audience. Changing it feels like breaking a promise; admitting a planned feature isn't worth building looks like failure. So teams ship things they no longer believe in to protect the document's credibility. The roadmap, designed to guide decisions, starts making them—badly. In a field where discovery is the entire point, the roadmap becomes a mechanism for ignoring what you discover.
+
+The organizations that escape this pattern share a few traits. They plan in horizons—"now, next, later"—with detail decreasing as distance increases, making uncertainty explicit instead of hiding it behind false dates. They commit to outcomes (reduce churn, shorten onboarding) rather than features, preserving the freedom to find the best solution. And they treat the roadmap as a living hypothesis to be revised, not a contract to be honored.
+
+A roadmap should be a compass, not a train schedule. The moment it hardens into a list of promises, it stops describing the future and starts preventing it. Most roadmaps fail not because teams can't execute them, but because the document itself encodes certainty where none exists—and then penalizes the learning that might have led somewhere better.

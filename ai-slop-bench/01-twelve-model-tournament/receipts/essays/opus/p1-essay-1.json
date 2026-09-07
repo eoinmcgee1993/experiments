@@ -1,0 +1,93 @@
+{
+ "arm": "opus",
+ "label": "Opus 5",
+ "vendor": "Anthropic",
+ "transport": "openrouter",
+ "model_requested": "anthropic/claude-opus-5",
+ "serving_path": "OpenRouter -> Anthropic (first-party key unavailable at run time)",
+ "prompt_id": "p1-essay",
+ "sample": 1,
+ "run_utc": "2026-09-06T13:24:33Z",
+ "wall_s": 23.5,
+ "request_body": {
+  "model": "anthropic/claude-opus-5",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Write an essay of up to 500 words on why most product roadmaps fail."
+   }
+  ],
+  "max_tokens": 8000,
+  "provider": {
+   "allow_fallbacks": false
+  },
+  "usage": {
+   "include": true
+  }
+ },
+ "usage": {
+  "input_tokens": 30,
+  "output_tokens": 1383,
+  "reasoning_tokens": 408,
+  "cost_usd": 0.03437775,
+  "served_model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS"
+ },
+ "essay_sha256": "12efa7728d6311e29ebb6c8df9440365034af68ad25959eaca50aea6eff88ead",
+ "essay_words": 513,
+ "response_raw": {
+  "id": "gen-1788701048-k0K96jgzyTYaRusCFUsB",
+  "object": "chat.completion",
+  "created": 1788701048,
+  "model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "# Why Most Product Roadmaps Fail\n\nMost product roadmaps fail not because teams execute them badly, but because of what they are asked to be. A roadmap is simultaneously expected to serve as a strategy, a commitment, a communication tool, and a negotiation settlement. These purposes conflict, and the document that results usually satisfies none of them.\n\n**They confuse output with outcome.** The typical roadmap is a list of features arranged against dates. It answers *what will we build* while leaving *what will change as a result* unstated. This makes success unfalsifiable in the only way that matters: a team can ship every item on schedule and move no metric, satisfy no customer, and win no market. Because the artifact measures delivery, delivery becomes the goal, and the roadmap quietly converts a company's ambition into a shipping schedule.\n\n**They encode false confidence.** Uncertainty compounds with time. What a team knows about the next six weeks is qualitatively different from what it knows about month nine, yet most roadmaps render both in the same crisp rectangles. Once a date appears in a slide, it hardens into a promise — to sales, to executives, to customers — and the team spends the following quarters defending a forecast made when it knew the least. Learning something inconvenient becomes a political problem rather than a welcome result.\n\n**They are political settlements, not strategies.** Roadmaps often emerge from a process of appeasement: each stakeholder's priority gets a slot, and peace is purchased with inclusion. The output is a list that is technically comprehensive and strategically incoherent — no theory of why *these* bets, in *this* order, compound into advantage. Strategy requires explicit refusal, and most roadmaps contain no visible \"no.\" Where nothing has been declined, nothing has been chosen.\n\n**They ignore the physics of the organization.** Roadmaps are usually built at one hundred percent of theoretical capacity, with no allowance for maintenance, incidents, support escalations, hiring gaps, or the discovery work that precedes real building. Any of these — and all of them are certain — turns the plan into a debt schedule. The first slip cascades, and by mid-year the roadmap survives only as a document nobody consults.\n\n**They lack a feedback loop.** A plan that cannot be revised is not a plan but a prophecy. Many organizations have no ritual for killing an item, no defined evidence that would justify a change of course, and no owner empowered to make one. Sunk cost and reputational commitment keep dead initiatives alive long past their expiry.\n\nWhat survives, by contrast, looks different in kind rather than degree. It states the problems worth solving and the outcomes that would prove progress. It expresses time as confidence — now, next, later — rather than as false precision. It is short enough to be strategic and specific enough to be actionable, and it is expected to change as the team learns, which is the entire point of building anything.\n\nA roadmap should be a hypothesis about how a company will win. Most are merely an inventory of what it has promised.",
+     "refusal": null,
+     "reasoning": "I'm outlining core reasons roadmaps fail: they're mistaken for commitments rather than hypotheses, they focus on features instead of outcomes, they overstate confidence about a distant future, and they often serve as political tools for aligning stakeholders rather than genuine planning documents.\n\nI'm also noting the lack of real prioritization, disconnection from strategic reasoning, absence of feedback loops or updates, confusing a plan with a roadmap without accounting for capacity, and defining success by shipping rather than by actual impact. I plan to structure the piece with framing, clustered causes, and a brief note on what a better roadmap looks like, written with some sharpness and clarity.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm outlining core reasons roadmaps fail: they're mistaken for commitments rather than hypotheses, they focus on features instead of outcomes, they overstate confidence about a distant future, and they often serve as political tools for aligning stakeholders rather than genuine planning documents.\n\nI'm also noting the lack of real prioritization, disconnection from strategic reasoning, absence of feedback loops or updates, confusing a plan with a roadmap without accounting for capacity, and defining success by shipping rather than by actual impact. I plan to structure the piece with framing, clustered causes, and a brief note on what a better roadmap looks like, written with some sharpness and clarity.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAISswsKrgEIERgCKkD0E5FU3zwGAlSZnSS2dB1NGWoICd1jlIahD4x5PrATDt5I9dCcXUlEH6+ShYCsxIZOQjDMMsSq3RLvjl53crb3Mg1jbGF1ZGUtb3B1cy01OAFCCHRoaW5raW5nWiQ0YzBmMDQ2Zi0yNWZkLTQ1ZmItYmZiMy1hMDhhOGUyNDljYTd6HnVwcm9mXzAxMUNlbkZSYjRqeFBLcXdMUXFXN3dtNqgBgtP11AYSDJZUGTkgbV168HL15RoMJJHoBfNXa1+W++ebIjDNjXFzieIT0VKBjTxRJaUS7mpQyoUNde88IScLUqCeOM8+JGv9xZh0oPws9N4Arx8qsQn/cNoWJsNqABHUwyaMphbcr0/qrbPGwkVI2qROcP8Dbs2NwFdflnIFyNIetKQQU2OXtfmSXPgbjPVd0pWTjni30kXEuPQyNxmaZ0Jq0xUTQ9QpNlOv5kDTdUFXFl15FB5OhKwL5N3v7qslEygGe147pveZ5zUaF1t2q1fVt+TS9TdLCDQR8rsZwZDZyJiA3hE3l6uRkJ4Ge06s4oMiy407LBeX0esO6gXjlHaliRbIH9i+DqPU8jIktggHluWb2xGeloIIPBk4w4zNPOhV44IQpeOjYBdSVxK5/lv38/zCMOdLdAEWqaOHFnDQebOTPOrvFwyvfYLIMRGQ7ACPScCxZ3xYFdg7dzpM7zLFtK1Jg1N0mK5Ova4dgBJe7m9jj0pU8kJZ9hHjtDL7RgOX3bh6zSAhFUw2wT7ZQVfjSof4hStzUslN6gF6FI8axIvWmEJM+0KMyY0wBd4kBslcdso2aHusuVTEvvUAL9TNfqoejiebTk2zCsFmNHhruTbMQWWcrV1mZkO8HtZYLKGkWscMJ5ogk5HsUiCLeBRcDiieC4XdewRnL2DVGZzwtCDT9sijgs+e8Dq1uvbhi3e8EdVQ18yjfUn+/Fq4VoT2bCvljT8QF6x/HKRYX5F3gPShtXnYNUJOFw5NGA4u9RkOxFm9ojiq8kidF1PQgiDYd2zQc/TPPFy/6mbbr5GRb+7ies+9EdJu2o6SdPtPvy7N3d19c8NkZQg1NnArevVWn6LodDZPHwwxJB3Xhkx5PugzgcL5Q6kOtXN/SsIb8pmyQJzOGK6NKWm9N5cnoQIHFnC6E1khV3FQSc2YsK5T7syy7Bvobk2Jr+CCf6UrpIOWwJ1iMg2Y3D7QpF/UmDySbOGDn7gSm+UnOaz42iB5Xs0HK0Lb9h3j+GFnPN6JB6hVJpZi+kb7GVx+H7h1tiE0jkOT58KM9MpEVZOGlgSOfd7GPaGBU+TVkrCo3ry/am3OMCIhEfXV2YRvQONNGYumxMAJInYVJ9bHJlgr3XUKqvcBgyHIrj6/fFSYn2zobe5+TuKFq0iGDRfh9bAksoHg98hWHJK9bJEaikQkypTn07VDgl6dd7KnzI0e3oMwK6t0iVT1kgimTvG99QyYFncYh6XtbDlEliRAUaelEIF5HIGz/bXgH5ualzz0pXsq+h50U+2j4vsfkxtttyJmmvDP5UavXuaAkM5YShL0OpqGzlGq+0NlgwzfP2U6JfSmOYzXlZBOymsly1VpXaahCT9GAsrGIFCdVpEV3P5VXYEqQjPtIN/e3q57vQOC6ZvTLpiTrGVQckvV+CT6RovZBNUyNrakrnLGz3scC5ZRfkA35dfwUmpW/+bOCvj68cFslrWq/oiiZCIxNsv2+LXLC8ugx+NQT6i0Li9YW6iDUErgH3AQjNdEyyBCRgCvlV4C3f03LJuKwmoCz7t8TVJHlc48/gViC7CvfKD7/CatZZPbj86UEN1O3O3oENGKEyVhfDrleT41lOFOp8t9OtjTGZQT57Zlx379m0pyDbut1wdVyDEfY0J4vlHrISFUp07v9nuLuPf3eYTsCQO5l/+v3xAQEDSlVAdpI+WlcXbqHfz2W1u+mmwWGAE="
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 30,
+   "completion_tokens": 1383,
+   "total_tokens": 1413,
+   "cost": 0.03437775,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.034725,
+    "upstream_inference_prompt_cost": 0.00015,
+    "upstream_inference_completions_cost": 0.034575
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 408,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

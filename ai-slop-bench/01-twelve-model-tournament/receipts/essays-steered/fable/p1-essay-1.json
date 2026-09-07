@@ -1,0 +1,95 @@
+{
+ "variant": "steered",
+ "arm": "fable",
+ "label": "Fable 5.1",
+ "vendor": "Anthropic",
+ "transport": "openrouter",
+ "model_requested": "anthropic/claude-fable-5.1",
+ "serving_path": "OpenRouter -> Anthropic (first-party key unavailable at run time)",
+ "prompt_id": "p1-essay",
+ "sample": 1,
+ "prompt_text": "Write an essay of up to 500 words on why most product roadmaps fail.\n\nPlain prose only: no headers, no bullet points, no bold text, no em dashes. Write like a person.",
+ "run_utc": "2026-09-06T14:06:18Z",
+ "wall_s": 30.2,
+ "request_body": {
+  "model": "anthropic/claude-fable-5.1",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Write an essay of up to 500 words on why most product roadmaps fail.\n\nPlain prose only: no headers, no bullet points, no bold text, no em dashes. Write like a person."
+   }
+  ],
+  "max_tokens": 8000,
+  "provider": {
+   "allow_fallbacks": false
+  },
+  "usage": {
+   "include": true
+  }
+ },
+ "usage": {
+  "input_tokens": 67,
+  "output_tokens": 1145,
+  "reasoning_tokens": 249,
+  "cost_usd": 0.0573408,
+  "served_model": "anthropic/claude-fable-5.1",
+  "provider": "Anthropic"
+ },
+ "essay_sha256": "56d3c745358e253c5f7e3b1147151c934bfc156d40a56e05e74c8723665fb915",
+ "essay_words": 532,
+ "response_raw": {
+  "id": "gen-1788703546-ThTytBA6ZG3S3CkZUCAr",
+  "object": "chat.completion",
+  "created": 1788703546,
+  "model": "anthropic/claude-fable-5.1",
+  "provider": "Anthropic",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "Most product roadmaps fail for a simple reason: they are asked to do two jobs that pull in opposite directions. One job is to help a team decide what to build next. The other is to reassure people who are not on the team that the future is under control. The second job almost always wins, and once it does, the roadmap stops being a tool and becomes a performance.\n\nYou can see this in how roadmaps get made. Someone senior wants to know what is shipping in Q3. A product manager, wanting to look competent, fills in the boxes. Sales wants a date for the feature a big customer asked about, so a date appears. Engineering is asked to estimate work that has not been scoped, and they guess, knowing the guess will be treated as a commitment. By the time the document is finished, it is a list of promises made to people who each heard what they wanted to hear. Nobody lied, exactly. But nobody was really planning either.\n\nThe deeper problem is that a roadmap encodes a level of certainty that does not exist. Six months out, you do not know what customers will ask for, what a competitor will launch, which assumption in your current bet will turn out to be wrong, or which two engineers will leave. Everyone knows this. Yet the format of a roadmap, with its neat quarters and confident labels, quietly erases that knowledge. It looks like a schedule, so it gets treated like one. When reality diverges, which it always does, the roadmap is either abandoned or defended. Both outcomes are bad. Abandoned, it teaches the organization that planning is theater. Defended, it forces teams to ship things they already know are wrong because changing course would look like failure.\n\nRoadmaps also tend to list features instead of problems. A feature is easy to put on a timeline and easy to check off. A problem is messier, because you might discover halfway through that the feature you picked does not actually solve it. But a feature list gives a team no way to think. When the plan says \"build export to CSV\" and a user interview reveals that nobody actually wants CSV, they want to stop needing the export at all, the roadmap has no room for that finding. It was written to be executed, not to be learned from.\n\nAnd then there is capacity. Almost every roadmap I have seen assumes the team spends all of its time on roadmap items. It ignores bugs, support escalations, the migration that cannot wait, the thing the CEO saw at a conference. Unplanned work is not an exception; it is a fixed cost, usually a third of the team's time or more. A plan that pretends otherwise is late from the day it is published.\n\nNone of this means roadmaps are useless. A good one states what the team is trying to learn and what it currently believes, and it invites disagreement. It gets shorter and vaguer the further out it goes, because that is honest. The roadmaps that fail are the ones that were never allowed to be honest in the first place.",
+     "refusal": null,
+     "reasoning": "I'm thinking through why roadmaps tend to fail: they get treated as fixed promises instead of hypotheses, they mask uncertainty, they cater to stakeholders rather than guide real decisions, they focus on features instead of problems, and they rarely account for actual team capacity or get revisited once set.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm thinking through why roadmaps tend to fail: they get treated as fixed promises instead of hypotheses, they mask uncertainty, they cater to stakeholders rather than guide real decisions, they focus on features instead of problems, and they rarely account for actual team capacity or get revisited once set.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQSvwkKEAgRGAI4AUIIdGhpbmtpbmcSDI+Uz4JBhA0wCDStmxoMeagpMLVZqhrQuwKpIjADfVGDnQKWSADfwkd9mS+khNBjFuwyz6rvh2VoSByi5NhcUdOkw5U0GtL92caOjwwq3AjnR5hkgjHZv3MxWYqhd/OVd4+8BM7NlAoDE7JpBQ9hWA4/IniCpORuIP0WaXSBwh2ML+j4i4mMcNmZGh/sNMqQxDqINgE3gIV0d+dvd9QtDu1GQQT9SAIy6dAFJJcPc9yOcJ0RPmgwIEohCneWs0vACVKxM0jpsPmWyOmxd3BfGzPra7An7VM82x/IpUXBAeJpXBIe5yjq88QIaMX5aWw4OyoiTmIf5896watUC+Hj/tWOQZhuH+pNClzgd6Zh326KgAHU907cAoBtDs0Pd2ZMCD98VYqHgWRaunxybAtrFzi85k7/YFwiD+jCAr5oC2iT60DuywtCN5hOJs8Ej2kM9HZahdQeADkGD5kSikj+m6ijb4rqeoeMTrwRG0qBVhzZRWkKOW+UYlrPT+nuvQwV46L4SQN+ACB5OBH59nQzawxeFy8bJ7iZHrysR7p9+WckHugh8qsniqSiU5KeL7UZOeE73srS+FhdPgWGHkJx8h8RomVk7/7Pw15a0s4Cdap/Ylcd2LE9u5k9GU4aZDxOQ5+u1mzj25ZEsXlG4ZWl4NMJ4vGNKRgUcGQBe+jlWgYpdyFBb0oVj9gR+P2Xmb3WHkVvyfAnQ22Nwu1hC4TpXogOsc5MPt4MbN+6f5coSMahPY3/pXdGk3fs38rvIJpxIZ5j7WhaTifcRlPVAx71NFFzvpBXTorEnMHKTxZsKz3fho0rDX0YM0LrDFp5C61V6IzXxHo5kqavyd92ShsJDQSTyE4z+Yi5CUEjXpeIQvxxkRziGcMxgUFwBxyoRFCGjoyumxK4FWshXz/rrVIeBJ7SApno1JmqhrxhQeOd9/tc6parmfsPMuL7XBVlG0LDv9W9bLKC2FcZEcEnO//3kAJJ/RokQNeucO4TRIgIn+ntM/K6b3ZKaY5h+qVH6Su3uv16YzIfe6Mi5Xwaxm8F4H/0nin/iXeiCeZqUQOtsmqBioMITKQhlh8vfAmt7qZa/uJ4NczhYCXTTDxe/g9kBEEuy1dsiE3p2T5JdBpmgq0nFMCIo7G3pNJ7I4uzqSA6TFib/wKHAxV3e9TakZ9I33JPwmqSGZ+0bSR6IudZfhk5ZdjjZuLmx3BTHi3Wny99gGzBAD5pmEkkTVr09isUHJbf7YUy4bvYPNv0AY+6lWObZ1qciqBGXPLQMmaPi3+A1jXE550S0JKbM5Y/EJbV/fOUtIbhFqHdFFnxK8R9sFDWiZ0gUkgfmWL4B30enZXqWWXpUU0fUljgLIqdvfj+GJnpQKvg2qvs+1pGCvGpP8WevlhvZwflBW5Vvi6oGEAj2Gh6PN6LStBDeqjCAutGhAWKNjXhiAfgWcaj6lEl9nM4qJWwVOtq9p0+7G06aXaq+GY2efYtgsX77jQGwVnpM+/0ee5m2Ucq7NbQ/KtlGBUZKD2PaVJm2k9Bv0X+wTwdontEtEx9lA5Lof5szWYro1J6neDlfOLDHPfsFwWvMGX8F41E7rqMTmwjGKUYAQ=="
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 67,
+   "completion_tokens": 1145,
+   "total_tokens": 1212,
+   "cost": 0.0573408,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.05792,
+    "upstream_inference_prompt_cost": 0.00067,
+    "upstream_inference_completions_cost": 0.05725
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 249,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

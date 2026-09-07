@@ -1,0 +1,123 @@
+{
+ "variant": "steered",
+ "arm": "astra",
+ "label": "GPT-6 Astra",
+ "vendor": "OpenAI",
+ "transport": "openai_responses",
+ "model_requested": "gpt-6-astra",
+ "serving_path": "OpenAI first-party, Responses API",
+ "prompt_id": "p1-essay",
+ "sample": 1,
+ "prompt_text": "Write an essay of up to 500 words on why most product roadmaps fail.\n\nPlain prose only: no headers, no bullet points, no bold text, no em dashes. Write like a person.",
+ "run_utc": "2026-09-06T14:05:44Z",
+ "wall_s": 18.1,
+ "request_body": {
+  "model": "gpt-6-astra",
+  "input": "Write an essay of up to 500 words on why most product roadmaps fail.\n\nPlain prose only: no headers, no bullet points, no bold text, no em dashes. Write like a person.",
+  "max_output_tokens": 8000,
+  "store": false
+ },
+ "usage": {
+  "input_tokens": 48,
+  "output_tokens": 481,
+  "reasoning_tokens": 0,
+  "effort_echoed": "medium",
+  "served_model": "gpt-6-astra"
+ },
+ "essay_sha256": "f04783d521fa43067d9be9fefc7670acad945df462095b9811ad65c1d82af245",
+ "essay_words": 411,
+ "response_raw": {
+  "id": "resp_0e76f43086048874016a9d732628a487d2961a9655ac325ac9",
+  "object": "response",
+  "created_at": 1788703526,
+  "status": "completed",
+  "background": false,
+  "billing": {
+   "payer": "developer"
+  },
+  "completed_at": 1788703542,
+  "error": null,
+  "frequency_penalty": 0.0,
+  "incomplete_details": null,
+  "instructions": null,
+  "max_output_tokens": 8000,
+  "max_tool_calls": null,
+  "model": "gpt-6-astra",
+  "moderation": null,
+  "output": [
+   {
+    "id": "msg_0e76f43086048874016a9d73274cfc87d2a530939946ea9e5f",
+    "type": "message",
+    "status": "completed",
+    "content": [
+     {
+      "type": "output_text",
+      "annotations": [],
+      "logprobs": [],
+      "text": "Most product roadmaps fail because they turn guesses into promises. A team identifies a problem, imagines a solution, estimates the work, and places a feature on a timeline. By the time that timeline reaches executives or customers, the uncertainty has disappeared. What began as “we think this might help” becomes “this will ship in September.”\n\nThat shift changes how teams behave. Instead of asking whether an idea is still worth pursuing, they ask how to deliver it on schedule. New evidence becomes an inconvenience. A customer interview that challenges the original assumption is treated as a threat to the plan rather than a reason to improve it. The roadmap starts protecting decisions that should still be open to question.\n\nMany roadmaps also confuse activity with progress. Launching a dashboard, rebuilding onboarding, or adding an integration sounds concrete, but none of those things is inherently valuable. Their value depends on what changes for users and the business. When success means shipping the promised feature, teams can complete the roadmap without solving the problems that justified it.\n\nThen there is the problem of competing interests. Sales wants features that close deals. Support wants fewer recurring complaints. Executives want visible moves into new markets. Engineering wants time to fix fragile systems. Each concern may be legitimate, but putting all of them on one timeline does not create a strategy. It often creates a compromise in which everything matters and nothing receives enough attention.\n\nThe calendar adds another distortion. Product work includes discovery, technical surprises, dependencies, and feedback that cannot be scheduled precisely months in advance. Yet roadmaps frequently present distant work with the same confidence as work already underway. Teams respond by padding estimates, cutting scope, or quietly sacrificing quality. The dates survive while the intended value shrinks.\n\nA useful roadmap makes choices visible without pretending the future is settled. It explains which problems matter, why they matter now, and what evidence would justify continuing, changing direction, or stopping. It distinguishes genuine commitments from possibilities and becomes less specific as it looks further ahead.\n\nThis does not mean abandoning deadlines or accountability. Some dates are real, and teams need to coordinate. But accountability should include noticing when a plan is wrong, not just executing it faithfully.\n\nMost roadmaps fail when people expect them to remove uncertainty rather than help manage it. A roadmap earns its place when it helps a team decide what to do next, including when to leave an old idea behind."
+     }
+    ],
+    "phase": "final_answer",
+    "role": "assistant"
+   }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0.0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+   "context": "all_turns",
+   "effort": "medium",
+   "mode": "standard",
+   "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": false,
+  "temperature": 1.0,
+  "text": {
+   "format": {
+    "type": "text"
+   },
+   "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+   "image_gen": {
+    "input_tokens": 0,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "output_tokens": 0,
+    "output_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "total_tokens": 0
+   },
+   "web_search": {
+    "num_requests": 0
+   }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+   "input_tokens": 48,
+   "input_tokens_details": {
+    "cache_write_tokens": 0,
+    "cached_tokens": 0
+   },
+   "output_tokens": 481,
+   "output_tokens_details": {
+    "reasoning_tokens": 0
+   },
+   "total_tokens": 529
+  },
+  "user": null,
+  "metadata": {}
+ }
+}

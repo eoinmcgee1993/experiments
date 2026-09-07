@@ -1,0 +1,73 @@
+{
+ "variant": "steered",
+ "arm": "grok",
+ "label": "Grok 4.6",
+ "vendor": "xAI",
+ "transport": "xai_chat",
+ "model_requested": "grok-4.6",
+ "serving_path": "xAI first-party, chat completions",
+ "prompt_id": "p3-linkedin",
+ "sample": 1,
+ "prompt_text": "Write a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n\nPlain prose only: no headers, no bullet points, no bold text, no em dashes. Write like a person.",
+ "run_utc": "2026-09-06T14:07:16Z",
+ "wall_s": 23.5,
+ "request_body": {
+  "model": "grok-4.6",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Write a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n\nPlain prose only: no headers, no bullet points, no bold text, no em dashes. Write like a person."
+   }
+  ],
+  "max_tokens": 8000
+ },
+ "usage": {
+  "input_tokens": 683,
+  "output_tokens": 280,
+  "reasoning_tokens": 1076,
+  "cost_usd": null,
+  "served_model": "grok-4.6",
+  "provider": null
+ },
+ "essay_sha256": "4dd6f6edf47ac4077d1afa32fd5679c4e5f48e4348a630ba14b502adfcdd8caa",
+ "essay_words": 247,
+ "response_raw": {
+  "id": "a3ed6d28-9869-93bc-af63-95f122bfd708",
+  "object": "chat.completion",
+  "created": 1788703612,
+  "model": "grok-4.6",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "I spent three months last year building a feature I was sure would change how our users worked. We had the data, or so I thought. Support tickets mentioned related pain points. A couple of power users had asked for something similar in passing. I sketched it, got buy-in, and we shipped it with a nice little announcement.\n\nThen nothing happened. Adoption sat at basically zero. A handful of people clicked around once and never came back. I checked the analytics every morning for weeks like it would suddenly start moving.\n\nThe hardest part was admitting I had built something for myself, not for them. I had filled in the gaps with my own assumptions. I never sat down with five actual customers and watched them try to solve the problem. I never asked if they even considered it a problem worth solving.\n\nWhat I learned is that enthusiasm is not evidence. A few loud voices are not a market. Shipping is not the finish line if nobody cares. Now I force myself to talk to users before we write a single line of code for anything non-trivial. I ask them to show me their current workaround. If they don't have one, maybe the problem isn't real enough.\n\nIt stung. It still stings a little when I think about the time we could have spent on something people actually wanted. But it made me slower in a good way. I'd rather ship less and have it matter.",
+     "reasoning_content": "The user wants a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\nI shipped a feature last quarter that I was convinced would transform how our users managed their workflows. It was elegant, well thought out, and I poured my heart into it. But after launch, the usage numbers were embarrassingly low. Almost nobody touched it. That stung, and it forced me to confront some hard truths about what I had built.\n\nI had convinced myself that the problem was real because I had heard about it in support tickets and from a couple of vocal customers. I never actually sat with users and watched them struggle with their current process. I assumed my solution was the obvious next step. When I finally did talk to people after the fact, they admitted they had never considered the feature worth their time. They had workarounds that worked fine for them.\n\nThe lesson I took away is that building something you love is not the same as building something people need. I had fallen in love with my own idea.",
+     "refusal": null
+    },
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 683,
+   "completion_tokens": 280,
+   "total_tokens": 2039,
+   "prompt_tokens_details": {
+    "text_tokens": 683,
+    "audio_tokens": 0,
+    "image_tokens": 0,
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1076,
+    "audio_tokens": 0,
+    "accepted_prediction_tokens": 0,
+    "rejected_prediction_tokens": 0
+   },
+   "num_sources_used": 0,
+   "cost_in_usd_ticks": 87340000
+  },
+  "system_fingerprint": "fp_e41c6060b2628547",
+  "service_tier": "default"
+ }
+}

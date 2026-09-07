@@ -1,0 +1,15 @@
+## Why Most Product Roadmaps Fail
+
+Most product roadmaps fail not because teams lack ambition or intelligence, but because roadmaps are often asked to do contradictory jobs. They are expected to predict the future, secure executive approval, coordinate departments, satisfy customers, and motivate employees—all while the underlying assumptions are still uncertain.
+
+The first problem is that many roadmaps are really feature lists. They describe what a team intends to build rather than the customer problem it hopes to solve or the business result it wants to achieve. A roadmap might promise “launch reporting dashboard” or “add mobile notifications,” but neither statement explains why the work matters. When outputs become the focus, teams can deliver every item and still fail to improve retention, revenue, usability, or customer satisfaction.
+
+A second problem is false precision. Roadmaps often assign exact dates to work that depends on unknown technical constraints, changing priorities, customer research, and other teams’ decisions. These dates quickly become commitments, even when they began as guesses. Once a prediction is treated as a promise, teams optimize for being on schedule rather than learning what is valuable. They may ship low-impact features simply because those features appeared on an old plan.
+
+Roadmaps also fail when they are built as political documents. Leaders may use them to demonstrate progress, sales teams to make promises, and executives to allocate resources. Each group adds requests, until the roadmap becomes a compromise among stakeholders rather than a coherent strategy. The loudest customer or most senior executive can determine priorities, even when evidence suggests that another problem deserves attention.
+
+Another weakness is that roadmaps often ignore discovery. Teams assume they already know what customers need, then move directly into delivery. As new information emerges, however, the plan becomes obsolete. A roadmap that cannot change is not a strategy; it is a constraint. Markets shift, competitors respond, regulations change, and experiments reveal that an appealing idea has little value.
+
+Finally, many organizations measure roadmap success by completion. This encourages activity instead of impact. Teams celebrate launching features but rarely examine whether those features changed user behavior or advanced company goals. Without explicit outcomes and feedback loops, failure remains hidden behind delivery metrics.
+
+Effective roadmaps are therefore less like train timetables and more like strategic hypotheses. They should communicate the problems worth solving, the outcomes expected, the evidence behind the priorities, and the conditions that would cause the plan to change. They should provide direction without pretending to offer certainty. Most roadmaps fail when they confuse planning with prediction. The best ones succeed by making uncertainty visible, aligning teams around outcomes, and preserving the flexibility to learn.

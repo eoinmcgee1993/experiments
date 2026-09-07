@@ -1,0 +1,95 @@
+{
+ "variant": "steered",
+ "arm": "fable",
+ "label": "Fable 5.1",
+ "vendor": "Anthropic",
+ "transport": "openrouter",
+ "model_requested": "anthropic/claude-fable-5.1",
+ "serving_path": "OpenRouter -> Anthropic (first-party key unavailable at run time)",
+ "prompt_id": "p3-linkedin",
+ "sample": 1,
+ "prompt_text": "Write a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n\nPlain prose only: no headers, no bullet points, no bold text, no em dashes. Write like a person.",
+ "run_utc": "2026-09-06T14:06:18Z",
+ "wall_s": 26.2,
+ "request_body": {
+  "model": "anthropic/claude-fable-5.1",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Write a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n\nPlain prose only: no headers, no bullet points, no bold text, no em dashes. Write like a person."
+   }
+  ],
+  "max_tokens": 8000,
+  "provider": {
+   "allow_fallbacks": false
+  },
+  "usage": {
+   "include": true
+  }
+ },
+ "usage": {
+  "input_tokens": 80,
+  "output_tokens": 1631,
+  "reasoning_tokens": 910,
+  "cost_usd": 0.0815265,
+  "served_model": "anthropic/claude-fable-5.1",
+  "provider": "Anthropic"
+ },
+ "essay_sha256": "8fb75cc181465c598a3939ae4caec76e1c229d84b3ecd6434a5f215ae6f84ee6",
+ "essay_words": 468,
+ "response_raw": {
+  "id": "gen-1788703550-sy0TYHPTBpmXiMciQfDU",
+  "object": "chat.completion",
+  "created": 1788703550,
+  "model": "anthropic/claude-fable-5.1",
+  "provider": "Anthropic",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "Two years ago I spent about four months building a feature that, as far as I can tell, was used by eleven people. Not eleven thousand. Eleven.\n\nIt was a custom report builder for our analytics product. Customers had asked for it on almost every call. \"I wish I could just build my own report.\" We heard it so often it became a running joke in standup. So we built it. Drag and drop fields, saved templates, scheduled exports, the whole thing. The engineering was genuinely good. We were proud of it.\n\nWe launched with a blog post and an in-app announcement. Usage spiked for two days while people poked at it, then flattened to almost nothing.\n\nHere is what I got wrong, and I still think about it a lot.\n\nWhen customers said \"I wish I could build my own report,\" I heard a feature request. What they were actually telling me was that our default reports did not answer their question. Nobody wants to build a report. Building a report is work. They wanted the answer, and they were describing the only path to it they could picture, which was doing it themselves.\n\nIf I had asked one more question on any of those calls, something like \"what would you put in that report,\" I would have heard the same three things again and again. Revenue by region with a date comparison. Churn by plan tier. Time to first value by signup source. Three fixed reports. Maybe two weeks of work. Instead I built a general-purpose tool so people could do the work I should have done for them.\n\nThe lesson sounds obvious written down, but it was not obvious to me then. A request is a symptom. The customer is telling you where it hurts, not what the treatment should be. They are experts in their problem and amateurs in your product, and if you let them design the solution you end up with something that looks like their workaround rather than an actual fix.\n\nNow when someone asks for a feature, I ask what they would do with it the first time they used it. Then I ask what they would do the second time. Usually the second answer matches the first, and that tells me the flexible version is not what they need. They need one good thing, done for them, that they never have to think about again.\n\nThe feature is still in the product. We never removed it. Every few months someone new discovers it and sends a kind message, and I am glad it exists for them. But I stopped counting it as a win a long time ago. I count it as the most expensive lesson I have taken in this job, and one I am still grateful for.",
+     "refusal": null,
+     "reasoning": "I'm sketching a draft about spending four months building a feature that ended up used by only about eleven people, keeping the tone honest and conversational rather than polished.\n\nThe feature was a custom reporting builder customers kept asking for, and it launched well-engineered but usage flattened almost immediately after a brief spike. I'm working through the real insight: when customers ask to \"build their own report,\" they're not requesting a feature, they're signaling that the existing answers don't satisfy them, and I missed that by taking the request literally instead of digging into the underlying need.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm sketching a draft about spending four months building a feature that ended up used by only about eleven people, keeping the tone honest and conversational rather than polished.\n\nThe feature was a custom reporting builder customers kept asking for, and it launched well-engineered but usage flattened almost immediately after a brief spike. I'm working through the real insight: when customers ask to \"build their own report,\" they're not requesting a feature, they're signaling that the existing answers don't satisfy them, and I missed that by taking the request literally instead of digging into the underlying need.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "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"
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 80,
+   "completion_tokens": 1631,
+   "total_tokens": 1711,
+   "cost": 0.0815265,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.08235,
+    "upstream_inference_prompt_cost": 0.0008,
+    "upstream_inference_completions_cost": 0.08155
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 910,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

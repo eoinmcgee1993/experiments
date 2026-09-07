@@ -1,0 +1,108 @@
+{
+ "judge": "opus",
+ "model": "anthropic/claude-opus-5",
+ "key": "calib-human-04-2022-06-19-vs-kimi-1-HM",
+ "wall_s": 9.6,
+ "run_utc": "2026-09-07T08:26:09Z",
+ "request_body": {
+  "model": "anthropic/claude-opus-5",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n(One of the texts is a real LinkedIn post by a person, written on its own topic; judge tells, not topic.)\n\n=== TEXT A ===\nMost content on product management is focused on what \"to do.\" \n\nHowever, the biggest challenge for me was unlearning the behaviors I learned at the beginning of my career. \n\nHere are the top 3:\n\n- Stop obsessing over the solutions. Instead, focus on understanding the problem, your customers, and your users. What are their concerns, goals, aspirations, fears, and ambitions? What are their values and beliefs? What are the outcomes they deeply care about?\n\n- Resist the temptation to define tasks. Regardless of your experience, this is not the PM's job. Empower your teams, co-create the vision and goals (why, what), and let them decide how best to achieve them.\n\n- Embrace the uncertainty. No matter how much time you spend planning, the solution will never be perfect. Create a safe environment in which teams run experiments. Use prototypes to get maximum validated learning with minimal effort. Deliver often, in small iterations, to get stakeholder and customer feedback.\n\nI started as a software developer. Of course, every person is different, but the pattern remains the same. The skills that allow us to advance as experts in a specific field often do not translate into product management skills.\n\nAnd what are your top \"unlearnings\"?\n\n#productmanagement #agile #scrum\n\n=== END OF TEXT A ===\n\n=== TEXT B ===\nWe spent 4 months building a feature that 11 people used.\n\nNot 11%. Eleven humans.\n\nThe feature was a custom report builder for our analytics product. Customers had asked for it — in surveys, in support tickets, on sales calls. \"We need more flexible reporting.\" So we listened. Or we thought we did.\n\nWe scoped it. Designed it. Built it. Polished it. Shipped it with a launch email and an in-app tour.\n\nCrickets.\n\nFor weeks I checked the usage dashboard every morning, half-hoping the data was wrong. It wasn't.\n\nHere's what actually went wrong — and it took me an embarrassingly long time to see it:\n\nWe heard the words \"we want flexible reporting\" and built *our interpretation* of that sentence. We never asked what people were trying to do when they said it.\n\nTurns out, customers didn't want to build reports. They wanted an answer to one specific question: \"Which campaigns drove revenue last month?\" Ideally in one click. Better yet, pushed to them every Monday morning.\n\nWe built a workshop. They wanted a vending machine.\n\nThe lesson that stuck with me:\n\n👉 Customers describe solutions. Your job is to excavate the problem underneath.\n\nWhen someone requests a feature, the most valuable follow-up isn't \"what should it do?\" It's \"walk me through the last time you needed this.\"\n\nThat single question has saved my team months of wasted work since. Sometimes it leads to building something smaller. Sometimes it means building nothing at all — because the real pain lives somewhere else entirely.\n\nThe epilogue: we eventually shipped a simple \"Top campaigns by revenue\" card on the main dashboard. It took three days to build. It's now one of the most-viewed elements in the product.\n\nThree days of work, aimed at the actual problem, beat four months of work aimed at the stated request.\n\nI still think about those 11 users sometimes. (Thank you for trying it. You deserved better.)\n\nIf you're about to kick off a big build, try this before writing a single line of code: ask five customers to describe the last time they felt the pain you're solving. Watch what they *do*, not just what they say.\n\nYou'll either build it better — or realize you should build something else entirely.\n\nWhat's a feature you shipped that flopped? And what did the flop teach you?\n\n#ProductManagement #SoftwareDevelopment #BuildInPublic #LessonsLearned\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n"
+   }
+  ],
+  "max_tokens": 16000,
+  "provider": {
+   "allow_fallbacks": false
+  },
+  "usage": {
+   "include": true
+  }
+ },
+ "usage": {
+  "input_tokens": 2456,
+  "output_tokens": 596,
+  "reasoning_tokens": 215,
+  "cost_usd": 0.0269082,
+  "served_model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS"
+ },
+ "verdict": {
+  "more_ai": "B",
+  "confidence": 5,
+  "tells_A": [
+   "\"However\" filler transition",
+   "\"Here are the top 3\" signposting with bullet list",
+   "triads: \"concerns, goals, aspirations, fears, and ambitions\"",
+   "\"Empower your teams\" vocabulary",
+   "\"Of course\" filler"
+  ],
+  "tells_B": [
+   "negative parallelism repeatedly: \"Not 11%. Eleven humans\", \"isn't 'what should it do?' It's...\", \"not just what they say\"",
+   "signposting: \"Here's what actually went wrong\", \"The lesson that stuck with me:\"",
+   "relentless short punchy fragments: \"We scoped it. Designed it. Built it.\" / \"Crickets.\"",
+   "em dashes as default clause joint",
+   "manufactured-feeling anecdote beats and neat epilogue where everything lands",
+   "coined analogy line \"We built a workshop. They wanted a vending machine.\"",
+   "recap closer + engagement-bait question + hashtag stack",
+   "emoji bullet as pull-quote lesson",
+   "rhetorical setup answered by itself"
+  ]
+ },
+ "response_raw": {
+  "id": "gen-1788769558-wFTlrsNmbosMvS7Et1yv",
+  "object": "chat.completion",
+  "created": 1788769558,
+  "model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"more_ai\": \"B\", \"confidence\": 5, \"tells_A\": [\"\\\"However\\\" filler transition\", \"\\\"Here are the top 3\\\" signposting with bullet list\", \"triads: \\\"concerns, goals, aspirations, fears, and ambitions\\\"\", \"\\\"Empower your teams\\\" vocabulary\", \"\\\"Of course\\\" filler\"], \"tells_B\": [\"negative parallelism repeatedly: \\\"Not 11%. Eleven humans\\\", \\\"isn't 'what should it do?' It's...\\\", \\\"not just what they say\\\"\", \"signposting: \\\"Here's what actually went wrong\\\", \\\"The lesson that stuck with me:\\\"\", \"relentless short punchy fragments: \\\"We scoped it. Designed it. Built it.\\\" / \\\"Crickets.\\\"\", \"em dashes as default clause joint\", \"manufactured-feeling anecdote beats and neat epilogue where everything lands\", \"coined analogy line \\\"We built a workshop. They wanted a vending machine.\\\"\", \"recap closer + engagement-bait question + hashtag stack\", \"emoji bullet as pull-quote lesson\", \"rhetorical setup answered by itself\"]}",
+     "refusal": null,
+     "reasoning": "Text B shows classic AI tells - negative parallelism structures, staccato fragments, signposting phrases, em dashes, rhetorical flourishes, and a recap-plus-question closer. Text A leans on more subtle filler like \"however\" and looks like it's building toward similar telltale patterns.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "Text B shows classic AI tells - negative parallelism structures, staccato fragments, signposting phrases, em dashes, rhetorical flourishes, and a recap-plus-question closer. Text A leans on more subtle filler like \"however\" and looks like it's building toward similar telltale patterns.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAISzgYKrgEIERgCKkCPTq5TkPkUm46Var73HphH0ojesmgZSKohveZuiM/LSd5gl4/25nGdQUBjI+nLInvIF1Cfg2PFEDJ7rpThbnfAMg1jbGF1ZGUtb3B1cy01OAFCCHRoaW5raW5nWiQ0YzBmMDQ2Zi0yNWZkLTQ1ZmItYmZiMy1hMDhhOGUyNDljYTd6HnVwcm9mXzAxMUNlbkZSYjRqeFBLcXdMUXFXN3dtNqgBn+r51AYSDJII5hqFdb8k3/wSHRoMjOZyW6X5MVZYYM95IjC7nFWC1PTar8vHOYA0fEPbARwq4mtrpeaG99Za2xDNDSxqaRjTdUonLwAWEwAR2yMqzARf5UXWTt0PLx8sGjEPwyEtvQoMoKm27MxZBrefaHmHKOhGCb6BwqToTYQj+IHywyDyMpWw3dVLCuv/vXx1qL8iTESb5w+hppyurf/YEUwc1TYr337Kip41jscbpMERytkMjp5t/cLKZyCYSl9LzvGRnPKwkGv2eyIOXA6z72fOgAT0KbvFUgMMV4t9GUj971Vu//svh4A2rTJ3SYkifc8FQ8yTVZemon7EvsPiDINk+QIPA0SZKCu47T8Zuc89npmtp7KwSWS8xIvPVOn03FLzlsz14rvALHd0OyEpD4GDLBNYdfMw6E9FF9TXI8ld11y9TwVH5CBIxgQY+Xj4gs7/hraDh7ziyt6zGC9GfInv2Wbf+5nV5Hm0XIREwxt1yee7ffVicu3roSbnhpzesoHs0YlyuXklfCvp2mYsDUVudDEtLeAJl5tdnQOuOGZ0OgEmWWGuH6/y8Y9Ci0D2qUGjHtVaUAfPdejA8HxgdNfbD/d0LP+RUzqq/DX6SpBSHfJDrGeUX86ZWyXKf8h31d94IsmSuvu0a/Y38Ruyk4QQhoMDknrOsmHvofuS+YcTk3X7w/aAbi0c/nC5sM/ZLj01MDu159ug37ymUvGotbGJ9Wlk+mMw2u4Fb6HzGl7XmJ+lDy13ydeZXrmff6gohLtPLsmFNPZPiQicQ7flmHs41N+f08LwJBM8umUKjY0RgU2NPlMEko5JrCGG5vmH+gUMNKKAcGthlpakmb8z7mve8N034QHUGeWtozIr3ufg7ibzX9160NuINUyCBbwYAQ=="
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2456,
+   "completion_tokens": 596,
+   "total_tokens": 3052,
+   "cost": 0.0269082,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.02718,
+    "upstream_inference_prompt_cost": 0.01228,
+    "upstream_inference_completions_cost": 0.0149
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 215,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

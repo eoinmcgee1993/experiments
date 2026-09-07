@@ -1,0 +1,15 @@
+**Why Most Product Roadmaps Fail**
+
+Every product team has a roadmap, and nearly every product team has watched one collapse. The ritual is familiar: a quarter of planning, a polished slide deck, executive nods of approval—followed by six months of slippage, reprioritization, and quiet embarrassment. The failure is so common that it deserves an explanation beyond "we were bad at estimating." Roadmaps fail because of what they pretend to be.
+
+The first problem is that most roadmaps are forecasts disguised as commitments. A roadmap should be a hypothesis about how a product will evolve given what the team currently believes. Instead, it becomes a contract. Sales promises features to close deals. Marketing schedules launches. Leadership reports timelines to the board. Once a hypothesis is treated as a promise, learning becomes a liability. Discovering that a feature is unnecessary—arguably the most valuable outcome of product work—now registers as failure rather than success. Teams stop learning and start defending.
+
+The second problem is that roadmaps are built from outputs rather than outcomes. A typical roadmap is a list of features with dates attached. But features are merely bets about how to move a metric or solve a customer problem, and bets frequently lose. When the roadmap names the feature instead of the problem, the team loses the freedom to find a cheaper, faster, or better solution once they understand the situation more deeply. They ship the thing they said they would ship, on time, and it doesn't matter.
+
+Third, roadmaps assume a stability the world never provides. A competitor launches. A key engineer leaves. A customer segment behaves unexpectedly. A regulation changes. Any twelve-month plan built in January is describing a company and market that will not exist by June. The problem is not that change happens—everyone knows it will—but that most roadmaps have no mechanism for absorbing it. They are static documents in a dynamic environment, revised only in crisis and therefore always in crisis.
+
+Underneath these lies a deeper cause: roadmaps often serve organizational comfort rather than product truth. They exist to make executives feel in control, to give stakeholders something to point to, to resolve arguments by fiat. A roadmap that honestly reflected uncertainty—"we think this matters, we're not sure how to solve it, we'll know more in eight weeks"—would be more accurate and less reassuring. Organizations tend to choose reassurance.
+
+None of this means roadmaps are useless. Direction matters. Teams need a shared understanding of where they are going and why, and stakeholders need enough visibility to plan their own work. The roadmaps that survive share a few traits: they are organized around problems and goals rather than features, they grow deliberately vaguer the further out they look, they are revisited on a fixed cadence rather than in emergencies, and they are communicated as strategy rather than schedule.
+
+A roadmap fails when it promises certainty. It succeeds when it provides clarity about intent while remaining honest about what nobody yet knows.

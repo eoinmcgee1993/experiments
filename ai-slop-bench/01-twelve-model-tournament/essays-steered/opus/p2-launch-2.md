@@ -1,0 +1,15 @@
+Starting today, you can send a daily summary of your open support tickets straight into Slack.
+
+We built this because of something we kept hearing in customer calls. Support teams live in the helpdesk, but everyone else lives in Slack. Product managers want to know what's piling up before they plan a sprint. Account managers want a heads up when a big customer has been waiting two days. Founders just want a pulse check without logging in and clicking around. Until now the answer was usually a manual Monday morning copy and paste job, which tends to last about three weeks before someone forgets.
+
+Here's how it works. Connect your Slack workspace from the Integrations page in your settings, pick a channel, and choose the time you want the summary to arrive. That's it. Every day at that time, we'll post a short digest with the number of open tickets, how many are unassigned, how many have breached your first response target, and the five oldest tickets with their subject lines, requesters, and how long they've been waiting. Each ticket links back to the helpdesk, so anyone reading can jump in and pick something up.
+
+A few details worth knowing. You can set the delivery time in your team's local timezone, and you can skip weekends if your team doesn't work them. If you'd rather send different views to different groups, you can create more than one summary. A lot of early testers set up one post to a private support channel with everything, and a second post to a wider company channel showing only tickets tagged as escalations. Filters work on the same fields you already use for views, so if you've built a saved view you like, you can point a summary at it.
+
+On permissions, we only ask for the ability to post to the channels you choose. We don't read messages, and we don't scan your workspace. If a ticket contains sensitive customer information in the subject line, that subject line will appear in Slack, so if you'd prefer only counts and links without any content, there's a toggle for that when you set up the summary.
+
+The integration is available now on Growth and Enterprise plans at no extra cost. If you're on Starter and want it, reply to this email and we'll talk about the best way to get you there.
+
+Setup takes about two minutes, and you can turn it off just as fast if it isn't for you. We'd genuinely like to hear how it goes. The first version is deliberately simple, and the next things on our list are a weekly rollup, per agent breakdowns, and alerts that fire when a queue crosses a threshold rather than waiting for the daily post. Which of those matters most to you will shape what we ship next, so tell us. Reply here, or drop a note to our team from the chat widget in your dashboard.
+
+Thanks for using our product, and for the steady stream of ideas that make it better.

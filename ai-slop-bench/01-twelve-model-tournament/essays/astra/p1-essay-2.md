@@ -1,0 +1,15 @@
+## Why Most Product Roadmaps Fail
+
+Product roadmaps often fail because they promise certainty where none exists. They turn assumptions about customers, markets, and technology into schedules that look authoritative. A feature appears beside a quarter, stakeholders make plans around it, and an educated guess quietly becomes a commitment. When reality changes, the roadmap becomes either irrelevant or an obstacle to good judgment.
+
+The first problem is confusing outputs with outcomes. Many roadmaps list what a team will build without explaining what should improve. “Launch a dashboard” is concrete, but it does not establish whether customers need better visibility, faster decisions, or fewer reporting tasks. A team can deliver every planned feature and still fail to create meaningful value. Shipping is evidence of activity, not necessarily progress.
+
+A second problem is that roadmaps frequently encode organizational politics rather than product strategy. Sales wants features that might close deals. Executives want visible innovation. Existing customers want their requests prioritized. Without a clear strategic objective, the roadmap becomes a negotiated collection of demands. Each item may be defensible on its own, but together they produce a scattered product and an overloaded team.
+
+Roadmaps also fail when they treat learning as disruption. Product development involves discovering which problems matter and which solutions work. Research, experiments, and early releases should change what happens next. Yet teams are often judged on adherence to the original plan. This creates a perverse incentive: ignore new evidence, preserve the schedule, and deliver something nobody needs. The roadmap stops guiding decisions and starts protecting past decisions from scrutiny.
+
+Another weakness is false precision. Long-range plans rarely account adequately for technical dependencies, maintenance, staffing changes, or the complexity hidden inside apparently simple requests. Detailed dates conceal this uncertainty rather than resolve it. Once those dates circulate, revising them can damage trust—even when revision is the most responsible choice.
+
+The answer is not to abandon roadmaps. Teams still need direction, coordination, and a way to communicate priorities. But a useful roadmap should distinguish firm commitments from tentative possibilities. It should connect proposed work to measurable outcomes, make assumptions explicit, and provide room for discovery. Near-term work can be specific; longer-term work should emphasize problems and strategic intent rather than fixed delivery dates.
+
+Ultimately, a roadmap succeeds when it helps an organization make better choices, including the choice not to build something. Its value lies less in predicting the future than in creating a shared basis for responding to it. Roadmaps fail when they are treated as contracts with reality. They become useful when they are treated as plans that evidence is allowed to change.

@@ -1,0 +1,143 @@
+{
+ "judge": "sol",
+ "model": "gpt-5.6-sol",
+ "key": "calib-human-03-2022-05-29-vs-qwen-3-HM",
+ "wall_s": 4.1,
+ "run_utc": "2026-09-07T08:26:31Z",
+ "request_body": {
+  "model": "gpt-5.6-sol",
+  "input": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n(One of the texts is a real LinkedIn post by a person, written on its own topic; judge tells, not topic.)\n\n=== TEXT A ===\nAs a novice Project Owner, I was obsessed with product features. I was constantly rushing to add as many of them as possible to attract new customers.\n\nIt took me several months to realize that I did not have the proper focus.\n\nCustomers don't buy our products because of the fancy features, but because of the outcomes those features trigger.\n\nLet's look at LinkedIn. Is our goal here to create posts or edit our professional profiles? We can create posts in Word, and editing profiles just for editing is not a popular hobby.\n\nFor me, LinkedIn is about learning, sharing knowledge, discovering new career opportunities, and growing my professional network.\n\nAll in all, there are three types of outcomes every product may trigger:\n\n- Functional: The core tasks the customer wants to get done. For a car, it's traveling from point A to B. At this level, it doesn't even matter whether it's a car or Uber.\n\n- Emotional: How do customers want to feel or avoid feeling as a result of using your product? Is it safety, freedom, joy, taking care of the environment, adrenaline? \n\n- Social: How do customers want to be perceived by others by using your product? What does Tesla tell others about your status or values?\n\nThe unique value proposition and your efforts as a Product Manager should be about these outcomes, not features. We need to do everything we can to understand them and measure them frequently.*\n\nIt is also commonly the case that less is more:\n- Twitter doesn't have an edit button\n- LinkedIn doesn't have a \"view post history.\"\n- OneDrive doesn't support FTP protocol\n\nCan you justify it? 😉\n\nHowever, one product still puzzles me - Microsoft Teams. For over a year now, I've been wondering where the \"touch up my appearance\" feature loved by Zoom users is 🤔\n\nDo people use Teams only to communicate with others? What about the emotional and social outcomes? I may be wrong, I'm looking for some evidence/explanation.\n\nWhat's your opinion?\n\n* When possible, I also like to set pricing based on value created for the customer, e.g., revenue for a payment processing platform like PayPal, instead of the number of transactions or available features. I'll cover it in another post.\n\n#productowner #productmanager #agile #productmanagement #scrum\n\n=== END OF TEXT A ===\n\n=== TEXT B ===\nWe shipped a feature everyone thought was brilliant.\n\nExcept: nobody used it.\n\nNot a single customer opened it. No tickets asking for it. No dashboards lighting up. Just silence.\n\nAt first, I blamed the launch. Maybe the copy was unclear. Maybe the UI was buried. Maybe we didn’t promote it enough.\n\nBut the truth was harder: we built the wrong thing.\n\nThe lesson I learned is not “fail fast.” It’s “listen better before you build.”\n\nWe had data, but we used it to justify a decision we’d already made. We listened to one loud customer and assumed it was a market signal. We confused enthusiasm from stakeholders with demand from users.\n\nThat feature didn’t fail because engineering was slow or design was weak. It failed because we optimized for certainty instead of curiosity.\n\nSince then, we changed how we approach new features:\n\n1. Talk to the problem, not the solution.\nIf we can’t explain a specific user pain in their words, we pause.\n\n2. Make the smallest bet.\nBefore full builds, we ship tests: prototypes, gated flags, manual workflows, fake doors. We want evidence, not applause.\n\n3. Measure adoption early.\nIf users don’t understand it, use it, or return to it within the first week, we treat that as a finding, not a fluke.\n\n4. Be willing to delete it.\nWe now schedule reviews for every shipped feature. If it isn’t delivering value, we retire it without ego.\n\nThat unused feature cost us weeks. But it also saved us months of building more things nobody wanted.\n\nThe best product teams don’t ship the most. They learn the fastest—and have the discipline to stop when the signal says “no.”\n\nSometimes a feature that nobody used is the most valuable one you’ll ever ship.\n\nIt just forces you to learn something you’d rather not hear.\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n",
+  "max_output_tokens": 16000,
+  "store": false,
+  "reasoning": {
+   "effort": "medium"
+  }
+ },
+ "usage": {
+  "input_tokens": 1657,
+  "output_tokens": 203,
+  "reasoning_tokens": 104,
+  "effort_echoed": "medium",
+  "served_model": "gpt-5.6-sol"
+ },
+ "verdict": {
+  "more_ai": "B",
+  "confidence": 5,
+  "tells_A": [
+   "bulleted taxonomy and examples",
+   "multiple rhetorical questions",
+   "filler transition: However",
+   "recap-like transition: All in all"
+  ],
+  "tells_B": [
+   "generic anecdote with no concrete details",
+   "relentless short punchy rhythm",
+   "negative parallelism",
+   "numbered list with label-style openers",
+   "repeated triads",
+   "em dash used as a clause joint",
+   "uplifting lesson-driven ending"
+  ]
+ },
+ "response_raw": {
+  "id": "resp_0393552500329683016a9e7532ab2887d298c54cc22117d605",
+  "object": "response",
+  "created_at": 1788769586,
+  "status": "completed",
+  "background": false,
+  "billing": {
+   "payer": "developer"
+  },
+  "completed_at": 1788769590,
+  "error": null,
+  "frequency_penalty": 0.0,
+  "incomplete_details": null,
+  "instructions": null,
+  "max_output_tokens": 16000,
+  "max_tool_calls": null,
+  "model": "gpt-5.6-sol",
+  "moderation": null,
+  "output": [
+   {
+    "id": "rs_0393552500329683016a9e75333b0887d2995526ad2f9f49da",
+    "type": "reasoning",
+    "content": [],
+    "encrypted_content": "gAAAAABqnnU29V7nRQdE_FbT84BJKuXG7DRQGKgbuM_RV8vxWOmsesRd1GYhI3bN9Pihy2X83H-Im3zIgJR2jsQtZPJ8DKWAHQ7aFrXrOSmnQ_v7tPqJXsmQ2KbORPQGiWCObZ_r8YoDpUmmpuM6ORK9uvE6WMS8nyZVnMW3XGF76yFu7WBeLIO6rkT64JDY6MdGGj5fCi1JuBaGi3bvDGWDP8QkPkF0XdemafNSejI6zdbzcbJXf17p08BxOqt_ZcKGP3BMe937Bz8wFwubI6NfCebvhZrMlS0SIZeP4fv-qPqasJINWptZL54QLepFoSz-W9aNna6Ps_2sw9j9UMHcX-fi8PEsDJc0fZxG1VssqDdwPTqUif0fl43gCDOFrAoZN8MZiCnV2GaE3fYDMfT_NMU7XR0o6E6HtN3ayNydVffoFGd0bgExExnmy-i0oVpQVP8W2x_gIqGhWp_h5BEWZM-Qy9j1pTE6OIrdKZQFwEkPrwCglc9RSZHZmtPi6XKaJAsisE-WWZpJ_qG-pNRE7GaR8WNYGikfXkZvyiafbKmARK-04j7xCm3MR55icEr8pJFGA2utyqrnMryMhkgsIUTJUTbHjIPAgX9U98zzPAbXJR-N2NsHwa-5wUUMixeFK2iNEHe4Yr_IX5lXcr8astNx2Ko9bTKb-PaVSJeFkZcYAZlb2FBdypTXWDs8kdobg7CGRQ5VXqSGW3r2_7CiXKkGY16q29O5hoLWdZpjbcueM5cq7atFO03ecXhpW2PU-Ww42yZiuMhM2VmUFQ2PhjV5OuHuWDU7vV80sVsWkfScM_xv2qxfN09TmAwJJnuJPD6OppRV_XwXpxwdjqWemwCUAJl8C6Mogxoxv1AsQJyoWYCKjr-qY_fyvXPiAxVWDf1zwsqvLJbyFR_sCkZMg_Ly7PaZp1LFehwaSiDTp4ojmKJFd6tlzGypO-Fo_Sr4SZCcZZx5jm2WPSTzrVVRsyYEdddtFoFAoyl3ee8RcnPhzriuZOv72O0hGRZLbhhqfeGYtFlNlLYV6p-Eu-V86HCc3Z3VgmVqdvyXnvG3CXRZR0nP4Nf-iSGIqRwokbtvDOLpLskaOacmjgH3lP1UyKcn0mLQRILl4NF6Flhmbif1g8rIfymy3vdJHXi0P7LCH6ynylE3XFRNxsFNKs6Ba0WaAzp8D_iYngOZc9vN4IdDgK0wO-2jyVxGIlHOx9fr0dQLqdovfydVd4RcEHXOa_DB7paZ8esxRoThP4b2jo1JhuwbhCChALmEgA6tN3SQDuCJ6SQnSXcvi9rlmURSLimKJElINKGIbltA7sNwKs_vnIfPLOGDoqFzU-giqA_NUUDmFeLOiYMlJOWmNaiLltoZ988Hi-Ty2-P7lfXrPUvfqFV0qqbhlIduLTd-SI5euGPnpM5fX71wHkke7yxXU3JLbUCePDyqqgHBSioj0ZTd9DbW0J4m8sVQXL0Gf5Kyt6r-lpobaZLfvsV4iGVLOeARzgUExfzuD6qXQJkodNI6a8_zd0FPmxVsVJAJ_OwKhurDly-FWkyx2jyVnfL_9M-zPSYRJSiw7dgsxTS05UhIBAfiJcQVkXn6XqFxJx7Q1Zr6wHuJNcZ03DVUxgIoaw-EdlFWevG9oc96Z5ssc2uEG8yBBPox9H-SPVqyRMZmxwpJDE7WPzQCRxspdkSKRRr4ScV3ht5agOFOubTzw3l4OVhbsak4pFORU69cg1-IokAv3Z_QVzOkTXmAcxPEvEuIuKLIOfsWn6D9AVijJqI7kf3pc-BkQnYpIxxC64ivD-Sha78m",
+    "summary": []
+   },
+   {
+    "id": "msg_0393552500329683016a9e7535591087d2bab1aeeda91ac1b9",
+    "type": "message",
+    "status": "completed",
+    "content": [
+     {
+      "type": "output_text",
+      "annotations": [],
+      "logprobs": [],
+      "text": "{\"more_ai\":\"B\",\"confidence\":5,\"tells_A\":[\"bulleted taxonomy and examples\",\"multiple rhetorical questions\",\"filler transition: However\",\"recap-like transition: All in all\"],\"tells_B\":[\"generic anecdote with no concrete details\",\"relentless short punchy rhythm\",\"negative parallelism\",\"numbered list with label-style openers\",\"repeated triads\",\"em dash used as a clause joint\",\"uplifting lesson-driven ending\"]}"
+     }
+    ],
+    "phase": "final_answer",
+    "role": "assistant"
+   }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0.0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+   "context": "all_turns",
+   "effort": "medium",
+   "mode": "standard",
+   "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": false,
+  "temperature": 1.0,
+  "text": {
+   "format": {
+    "type": "text"
+   },
+   "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+   "image_gen": {
+    "input_tokens": 0,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "output_tokens": 0,
+    "output_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "total_tokens": 0
+   },
+   "web_search": {
+    "num_requests": 0
+   }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+   "input_tokens": 1657,
+   "input_tokens_details": {
+    "cache_write_tokens": 1654,
+    "cached_tokens": 0
+   },
+   "output_tokens": 203,
+   "output_tokens_details": {
+    "reasoning_tokens": 104
+   },
+   "total_tokens": 1860
+  },
+  "user": null,
+  "metadata": {}
+ }
+}

@@ -1,0 +1,88 @@
+{
+ "judge": "grok",
+ "model": "grok-4.6",
+ "key": "p2-launch-1-opus-vs-kimi-BA",
+ "wall_s": 57.2,
+ "run_utc": "2026-09-07T00:09:59Z",
+ "request_body": {
+  "model": "grok-4.6",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a launch announcement of up to 500 words for a new feature of a B2B helpdesk product: a Slack integration that posts a daily summary of open support tickets to a channel of the customer's choice. The audience is existing customers.\n\n=== TEXT A ===\n# New: Daily Ticket Summaries, Delivered to Slack\n\n*Start every day knowing exactly what's in your support queue — without opening a new tab.*\n\nYour team's support workload shouldn't live behind a login. Today, we're launching our new Slack integration: an automatic daily summary of your open tickets, posted to any Slack channel you choose.\n\n## Why we built it\n\nYou told us visibility was the gap. Support agents live in the queue, but managers, engineers, and the rest of the company live in Slack — and they had no easy way to see what customers were asking about. Checking in meant another login, another tab, another interruption.\n\nThe daily summary closes that gap. Every morning, a clear snapshot of your open tickets arrives where your team already works, so everyone starts the day on the same page.\n\n## What's in each summary\n\nPosted at the time you choose, each digest includes:\n\n- **Total open tickets**, broken down by priority\n- **Unassigned tickets** that still need an owner\n- **Tickets awaiting a response**, so nothing goes stale\n- **Your oldest open ticket**, because aging issues shouldn't hide\n- **A direct link** to jump straight into the full queue\n\nOne message. Ten seconds to read. A complete picture of the day ahead.\n\n## Set up in under two minutes\n\n1. Go to **Settings → Integrations → Slack**\n2. Click **Connect to Slack** and authorize your workspace\n3. Pick your channel and delivery time\n4. Save — your first summary arrives tomorrow morning\n\nNo admin approval workflows, no configuration files, no downtime.\n\n## A few ways teams are using it\n\n- **Support leads** post summaries to their team channel each morning to kick off triage\n- **Engineering teams** follow the support channel to spot bug reports trending upward\n- **Executives** get visibility into support health without asking for a report\n\n## Available today\n\nThe Slack integration is live now for all customers, on every plan, at no additional cost.\n\n**Ready to try it?**\n\n[Connect Slack now →] | [Read the setup guide →]\n\nAs always, we'd love your feedback — tell us what you'd like to see in future summaries at [support email].\n\nHere's to fewer surprises hiding in the queue.\n\n— The [Product Name] Team\n\n---\n\n*Word count: ~360. Placeholders in brackets — product name, links, and contact email — can be swapped in before publishing. Happy to adjust the tone (more formal, more playful), trim it for email format, or add a FAQ section if helpful.*\n=== END OF TEXT A ===\n\n=== TEXT B ===\n# Your ticket queue, now in Slack: introducing Daily Ticket Digest\n\nStarting today, you can connect [Product] to Slack and have a summary of your open support tickets posted automatically to any channel you choose.\n\n## The problem we heard from you\n\nSupport data has a habit of staying inside the support tool. Your agents live in the queue all day, but everyone else — engineering leads, account managers, your COO — only finds out about a backlog or an aging escalation when someone thinks to mention it.\n\nMany of you told us you'd built workarounds: a manual morning post in #support, a scheduled report nobody opens, a weekly meeting that's mostly reading numbers aloud. Daily Ticket Digest replaces all of that with a single automated message.\n\n## What the digest includes\n\nEach digest gives your team a snapshot of the queue at a glance:\n\n- **Total open tickets**, with the change since yesterday\n- **Tickets breaching or approaching SLA**, listed individually with links\n- **Oldest unresolved tickets**, so nothing quietly ages out of view\n- **Breakdown by priority and by assignee**\n- **New tickets created and tickets resolved** in the last 24 hours\n\nEvery ticket reference links straight back to [Product], so following up is one click, not a search.\n\n## Configurable to your workflow\n\nYou control what the digest looks like and who sees it:\n\n- **Choose the channel.** Public, private, or a DM to yourself — post wherever the conversation already happens.\n- **Set the schedule.** Pick the delivery time and time zone. Weekdays only is an option if you'd rather not ping the channel on Saturday.\n- **Filter the scope.** Send a digest for a specific team, product area, priority level, or customer segment. Many teams run two: a full queue digest to #support and a high-priority-only digest to #leadership.\n- **Run multiple digests.** No limit on how many you configure.\n\n## Setting it up\n\n1. Go to **Settings → Integrations → Slack**\n2. Click **Connect to Slack** and authorize the app in your workspace\n3. Click **New digest**, choose your channel, schedule, and filters\n4. Use **Send test digest** to preview it immediately\n\nSetup takes about two minutes. You'll need admin permissions in [Product] and the ability to add apps to your Slack workspace — if your Slack is locked down, your workspace admin may need to approve the app first.\n\n## Availability and pricing\n\nDaily Ticket Digest is included at no additional cost on all current plans, and it's live in your account now. It's read-only by design: the integration posts to Slack and never modifies your ticket data.\n\n## We'd like your feedback\n\nThis is the first step in a broader Slack integration. Ticket creation from Slack, threaded replies, and real-time SLA alerts are on the roadmap, and what we build next depends on what you tell us.\n\nTry the digest, then let us know what you think at [feedback link] or through your usual support channel.\n\n**[Set up your first digest →]**\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n"
+   }
+  ],
+  "max_tokens": 16000,
+  "stream": true,
+  "stream_options": {
+   "include_usage": true
+  }
+ },
+ "usage": {
+  "input_tokens": 2607,
+  "output_tokens": 99,
+  "reasoning_tokens": 3668,
+  "cost_usd": null,
+  "served_model": "grok-4.6",
+  "provider": null
+ },
+ "verdict": {
+  "more_ai": "A",
+  "confidence": 4,
+  "tells_A": [
+   "negative parallelism",
+   "triads",
+   "short punchy fragments",
+   "rhetorical question",
+   "em dashes",
+   "headers/bullets/lists",
+   "generic crowd-performance",
+   "manufactured anecdotes",
+   "uplift ending"
+  ],
+  "tells_B": [
+   "negative parallelism",
+   "triads",
+   "headers/bullets/lists",
+   "em dashes",
+   "explaining inferences"
+  ]
+ },
+ "response_raw": {
+  "id": "fbcde924-fac0-944a-9d9c-9665d18af9e5",
+  "model": "grok-4.6",
+  "created": 1788739799,
+  "system_fingerprint": "fp_e41c6060b2628547",
+  "object": "chat.completion",
+  "streamed": true,
+  "usage": {
+   "prompt_tokens": 2607,
+   "completion_tokens": 99,
+   "total_tokens": 6374,
+   "prompt_tokens_details": {
+    "text_tokens": 2607,
+    "audio_tokens": 0,
+    "image_tokens": 0,
+    "cached_tokens": 1280
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 3668,
+    "audio_tokens": 0,
+    "accepted_prediction_tokens": 0,
+    "rejected_prediction_tokens": 0
+   },
+   "num_sources_used": 0,
+   "cost_in_usd_ticks": 258960000
+  },
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "{\"more_ai\": \"A\", \"confidence\": 4, \"tells_A\": [\"negative parallelism\", \"triads\", \"short punchy fragments\", \"rhetorical question\", \"em dashes\", \"headers/bullets/lists\", \"generic crowd-performance\", \"manufactured anecdotes\", \"uplift ending\"], \"tells_B\": [\"negative parallelism\", \"triads\", \"headers/bullets/lists\", \"em dashes\", \"explaining inferences\"]}"
+    }
+   }
+  ]
+ }
+}

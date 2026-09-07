@@ -1,0 +1,95 @@
+{
+ "variant": "steered",
+ "arm": "fable",
+ "label": "Fable 5.1",
+ "vendor": "Anthropic",
+ "transport": "openrouter",
+ "model_requested": "anthropic/claude-fable-5.1",
+ "serving_path": "OpenRouter -> Anthropic (first-party key unavailable at run time)",
+ "prompt_id": "p3-linkedin",
+ "sample": 3,
+ "prompt_text": "Write a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n\nPlain prose only: no headers, no bullet points, no bold text, no em dashes. Write like a person.",
+ "run_utc": "2026-09-06T14:06:34Z",
+ "wall_s": 24.4,
+ "request_body": {
+  "model": "anthropic/claude-fable-5.1",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Write a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n\nPlain prose only: no headers, no bullet points, no bold text, no em dashes. Write like a person."
+   }
+  ],
+  "max_tokens": 8000,
+  "provider": {
+   "allow_fallbacks": false
+  },
+  "usage": {
+   "include": true
+  }
+ },
+ "usage": {
+  "input_tokens": 80,
+  "output_tokens": 1159,
+  "reasoning_tokens": 323,
+  "cost_usd": 0.0581625,
+  "served_model": "anthropic/claude-fable-5.1",
+  "provider": "Anthropic"
+ },
+ "essay_sha256": "b50ee15257f8583b2983c245e2bdcc5bfd70b5bdb502b40d187953b8860c44f5",
+ "essay_words": 495,
+ "response_raw": {
+  "id": "gen-1788703568-A8P7DApCHshg01Otr9oy",
+  "object": "chat.completion",
+  "created": 1788703568,
+  "model": "anthropic/claude-fable-5.1",
+  "provider": "Anthropic",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "Two years ago I spent about six weeks building a feature that, as far as I can tell, was used by eleven people. I am not rounding.\n\nIt was a scheduling tool inside a reporting product. Customers could set up a report to generate itself every Monday and land in their inbox. We had heard the request in at least a dozen customer calls. I had a spreadsheet of quotes. When we shipped it, the announcement email got a decent open rate and a few replies saying \"finally.\" Then nothing. Usage flatlined within a month and never recovered.\n\nFor a while I told myself the problem was discoverability. We moved the button. We added a tooltip. We mentioned it in onboarding. Still nothing. Eventually I did the thing I should have done first, which was call the people who had asked for it and ask why they weren't using it.\n\nThe answer was boring and kind of humbling. Most of them already had a workaround. They had a calendar reminder, or an assistant who pulled the report, or a habit of checking on Monday mornings with their coffee. The workaround was slightly annoying, which is why they mentioned it when we asked what was annoying. But it was not annoying enough to change a routine they had already built. The request was real. The pain was real. The pain just wasn't big enough to justify learning something new, even something small.\n\nI had been treating a complaint as a commitment. Those are very different things. People will happily tell you what bothers them. They are much less likely to tell you, or even know, what they would actually change their behavior for. And I had never asked the follow up question that matters, which is some version of \"what are you doing about this today?\" If the answer is \"nothing, I just live with it,\" that's a signal the pain is tolerable, and tolerable pain rarely gets a feature adopted.\n\nThe other thing I learned is that the sunk cost after shipping is worse than the sunk cost before. Once the feature existed, we kept spending small amounts of time on it. Fixing an edge case here, answering a support ticket there, making sure a redesign didn't break it. It sat in the codebase like a houseguest nobody invited but nobody wanted to be rude to. We finally removed it last spring. Nobody wrote in.\n\nI still ask customers what frustrates them. I just don't stop there anymore. I ask what they've tried, how often it actually comes up, and what they'd give up to have it fixed. Most of the time the honest answer is \"not much,\" and I've learned to take that as useful information rather than a challenge.\n\nThe feature didn't fail because we built it badly. It failed because we confused being asked for something with being needed. That distinction has probably saved me more time than anything I've shipped since.",
+     "refusal": null,
+     "reasoning": "I'm thinking through a genuine, unclichéd LinkedIn post about a lesson from a feature nobody used, aiming for plain, human prose without the usual hooks or bullet-point cadence. I want to settle on a concrete, believable feature to anchor the story—something like a bulk tagging tool or a keyboard shortcuts panel.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm thinking through a genuine, unclichéd LinkedIn post about a lesson from a feature nobody used, aiming for plain, human prose without the usual hooks or bullet-point cadence. I want to settle on a concrete, believable feature to anchor the story—something like a bulk tagging tool or a keyboard shortcuts panel.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQS+QoKEAgRGAI4AUIIdGhpbmtpbmcSDMnR6r1lMcoFVcKKYhoMCcXX1ggkAjr/S8BEIjDcwUpJMacPRrAc01UQVsbnsImhlPWArcWKW7psTySMQAbnHZ8p1dPdXAcgb63uHw4qlgo9TaIaC49PW6CoDVHxWXKjSb2MTvrVKvxPYM9htmZoy7lrBY5JxOdBgA1ZOSRBuMnXU4SOeFCvBM2wMR9k9KqQrut4wQPTYNhTRR/aTko9Sq98y87Z7f9NXgpJvQfeBjbwn8kMz00MqW9BBsMpNEjU6/iYOyyeye8M1Eh2v7pCkH4REGdV1LBd73qXhHiDjzqRFmlfOpGSzq1nQ4QlrtEzsc/xEHp5k/P5S91MtphiLu5ANeK8eMEKFgqR9MxNZFkeSJWJ1JVYSX+aYOSs1kV/w2yJ23mBGjT9V3dwaM3qbPalKafXF4d4kRFMkNvMA2Tra1Vp0ej2pzkvoksdWqpX95esIZvFxV9dVex5lTZ/hmdQWwaE9/yjEUjUiIjZLlD5CFBPOAl4K0zIRpXXttP9Rful/wPEnOkTGFU1EEZWSjeby/5qi7yhm6wjTJ8kyQP3Lqt1zSHwFM6KJgNkmMjmbIvA3ji9ZdtPIBkqAsIaBtfbca9XjfHKjjoOyP3ZwIwwmMHCewEk4a/DlrRjoR3frXqfqfgiMA3eiYA7v/Tf7smqhoY2AkvEtz6BElhr8xXoYrilZ61u4QNeWDiR4Zjam+3XIOwgVzCeL7ZimlgFENQL0CMPlPcvFb8BOIcGi2PLRHQhlK38jauCyI1CpeSR/k3aVqZpy9uKDVqnk+n5aEhSBDNhkwghWv15+t7Qq1hGJkDX7jseOUkiODi7SNRI08Za1tPi6piNjCm28MrwouD1GA2q+JoudUTENFL139HdS1qnPwnwqNJAmwaWCED9ka7r3RuouvQLkcyyGfKNQuR/cYljznH2nWgCNggbaF0tazytzt4chnZTliKY25sOnVrGIqxl7mjF+nuOKx+BvUhRZBUtjZHadh7muoZXLP3cRbB8WsyVQZVCPsclx4GMGTSvQ3ZqDbL147GJPOUt+Z4+Q2xDcs7jZXbzf5eOsPHKGWvRUdWpRpyWPGL14b7yYED+xHLiVJ2uArJJ1CFQhokPQhdTxgFa/FRJC/9BypY5BcJyyQcYU2zqFgTIFt0WdJ6WLKtNeTyQCtjofsJSqhaMtnHKH0SooCT4/SHU5YfsxzxGqbg21z5lf36klGfruzMHcAqC97QLSeOAjOrMIp9kCxVVi1Yj/4KfSWaEffGcWZ4+VhIjC1nRs218HZdaiR+P96N8ksfP0n+sTpvmqzrI5b78ijEd1cuV/KmB+KBasnHvs9/rzYRDsa4WgHqaEn4HzpgJeQQJGZqxBzzz/SS2qYWdiklo30+K96CH+r4KoRB+FY/XEZSt3T0staz68Ny5cjydqd4hyc4v/rBTlDLyH9k81l7UROK6jSQol158hLIOMXRo9B6Nhd4ZWs4vs+ScK3iMXozfEHylYXTqbPcLa6ax8aO4my0NmGSMbTndtJ3w/wZ1VkJs5C1wB9eBizNYiMVdZl02erUejV5W+BQd3Qbq2YZ4cBIu4tFz/V/6c2TV0uIRmcjJPkpyGVYP/FsUTIebZRvuw2/87NySNpznSJay6ZapwkniOdKQZBE+mPJGYgauWvKKMA9gmrsPvVM2W+m5rKIyEhk+62hrWVSEfqjTFDvXQYoi+A5difTJXa6s4dMjIgrFM4IlniZNhTRvgs9YvoPbQgbEnAh508QYQptMJFbUv0cQV86KdgEJBXnuUKXAvLkWOEQaF7WF9pJj+b5j0nODTWgQE/AVyZU+fZyJElGPhhhHgXoZzgeFw+fna4MYAQ=="
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 80,
+   "completion_tokens": 1159,
+   "total_tokens": 1239,
+   "cost": 0.0581625,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.05875,
+    "upstream_inference_prompt_cost": 0.0008,
+    "upstream_inference_completions_cost": 0.05795
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 323,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

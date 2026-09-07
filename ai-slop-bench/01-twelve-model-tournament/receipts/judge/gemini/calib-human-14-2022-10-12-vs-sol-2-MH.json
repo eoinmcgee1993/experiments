@@ -1,0 +1,79 @@
+{
+ "judge": "gemini",
+ "model": "gemini-3.8-flash",
+ "key": "calib-human-14-2022-10-12-vs-sol-2-MH",
+ "wall_s": 4.7,
+ "run_utc": "2026-09-06T22:48:19Z",
+ "request_body": {
+  "contents": [
+   {
+    "parts": [
+     {
+      "text": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n(One of the texts is a real LinkedIn post by a person, written on its own topic; judge tells, not topic.)\n\n=== TEXT A ===\nWe shipped a feature nobody used.\n\nThe team had spent weeks designing it, building it, polishing edge cases, and preparing the launch. Internally, everyone agreed it was valuable.\n\nCustomers disagreed—mostly by ignoring it.\n\nAt first, we blamed discoverability. We changed the placement, added tooltips, and mentioned it in onboarding.\n\nUsage barely moved.\n\nThe uncomfortable truth: we had validated the problem, but not the urgency.\n\nCustomers agreed the feature sounded useful. But “useful” wasn’t enough to change their behavior. The problem wasn’t frequent, painful, or important enough to earn a place in their workflow.\n\nThat experience changed how I think about product development.\n\nBefore investing heavily, I now try to answer:\n\n- When did the customer last experience this problem?\n- What are they doing today to solve it?\n- What does that workaround cost them?\n- Would they change their behavior—or pay—to make the problem disappear?\n- What is the smallest experiment that could test real demand?\n\nPositive feedback can be misleading. People are generous with opinions, especially when saying yes costs nothing.\n\nBehavior is stronger evidence.\n\nA waitlist is stronger than enthusiasm.  \nA prototype test is stronger than a survey.  \nA manual pilot is stronger than a feature request.  \nRepeated use is stronger than all of them.\n\nThe feature wasn’t a complete failure. It gave us something more valuable than adoption: a better standard for deciding what to build.\n\nDon’t just validate that a problem exists.\n\nValidate that it matters enough for someone to act.\n\n#ProductManagement #ProductDevelopment #Startups #CustomerDiscovery #LessonsLearned\n=== END OF TEXT A ===\n\n=== TEXT B ===\nProduct management is, at its heart, risk management.\n\nPM should be obsessed with those questions:\n\n- Value. Will our customers desire it?\n- Usability. Will they be able to use it?\n- Viability. Can our business support it?\n- Feasibility. Is it possible?\n- Ethic. Should we do it?\n\nTo precise it further, desirability is not enough. Your solution must solve problems significantly better than others to persuade customers to switch. So I like to replace the first question with:\n\n- Value. Will our customers love it?\n\nBe aware that Agile frameworks, like Scrum, largely ignore PM. PM is a black box that generates ideas and places them in the product backlog. Therefore, mastering Agile and Scrum is not enough to succeed.\n\nHere is what can help:\n\n- Understanding customers, market, and business in depth. You need to become an expert in each of those areas.\n\n- Determining your target customers, their underserved needs, and the value proposition. Testing your product idea with the help of the MVP experiment.\n\n- Continuously discovering what to build: analyzing qualitative and quantitative data (e.g., customer interviews, Pendo); collaborating with designers and engineers to ideate possible solutions; identifying the riskiest assumptions and testing them with the help of prototypes.\n\n- Measuring key product metrics, understanding trends, and optimizing your product using analytics.\n\nHope that helps.\n\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n"
+     }
+    ]
+   }
+  ],
+  "generationConfig": {
+   "maxOutputTokens": 16000,
+   "thinkingConfig": {
+    "thinkingLevel": "high"
+   },
+   "responseMimeType": "application/json"
+  }
+ },
+ "usage": {
+  "input_tokens": 1508,
+  "output_tokens": 144,
+  "reasoning_tokens": 1168,
+  "served_model": "gemini-3.8-flash"
+ },
+ "verdict": {
+  "more_ai": "A",
+  "confidence": 5,
+  "tells_A": [
+   "Negative parallelism ('validated the problem, but not the urgency', 'Don’t just validate... Validate...')",
+   "Generic anecdote completely devoid of concrete details (no feature name, metric, or company)",
+   "Triads ('designing it, building it, polishing edge cases', 'frequent, painful, or important')",
+   "Relentless short punchy one-sentence paragraphs",
+   "Em dashes used as clause connectors",
+   "Uplifting wrap-up converting a failure into a neat lesson"
+  ],
+  "tells_B": [
+   "Signposting ('Here is what can help:')",
+   "Filler transition ('Therefore')"
+  ]
+ },
+ "response_raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"more_ai\": \"A\", \"confidence\": 5, \"tells_A\": [\"Negative parallelism ('validated the problem, but not the urgency', 'Don’t just validate... Validate...')\", \"Generic anecdote completely devoid of concrete details (no feature name, metric, or company)\", \"Triads ('designing it, building it, polishing edge cases', 'frequent, painful, or important')\", \"Relentless short punchy one-sentence paragraphs\", \"Em dashes used as clause connectors\", \"Uplifting wrap-up converting a failure into a neat lesson\"], \"tells_B\": [\"Signposting ('Here is what can help:')\", \"Filler transition ('Therefore')\"]}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1508,
+   "candidatesTokenCount": 144,
+   "totalTokenCount": 2820,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 1508
+    }
+   ],
+   "thoughtsTokenCount": 1168,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "ru2dau32ItL8nsEPuZnb0QY"
+ }
+}

@@ -1,0 +1,95 @@
+{
+ "variant": "steered",
+ "arm": "fable",
+ "label": "Fable 5.1",
+ "vendor": "Anthropic",
+ "transport": "openrouter",
+ "model_requested": "anthropic/claude-fable-5.1",
+ "serving_path": "OpenRouter -> Anthropic (first-party key unavailable at run time)",
+ "prompt_id": "p2-launch",
+ "sample": 2,
+ "prompt_text": "Write a launch announcement of up to 500 words for a new feature of a B2B helpdesk product: a Slack integration that posts a daily summary of open support tickets to a channel of the customer's choice. The audience is existing customers.\n\nPlain prose only: no headers, no bullet points, no bold text, no em dashes. Write like a person.",
+ "run_utc": "2026-09-06T14:06:15Z",
+ "wall_s": 24.0,
+ "request_body": {
+  "model": "anthropic/claude-fable-5.1",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Write a launch announcement of up to 500 words for a new feature of a B2B helpdesk product: a Slack integration that posts a daily summary of open support tickets to a channel of the customer's choice. The audience is existing customers.\n\nPlain prose only: no headers, no bullet points, no bold text, no em dashes. Write like a person."
+   }
+  ],
+  "max_tokens": 8000,
+  "provider": {
+   "allow_fallbacks": false
+  },
+  "usage": {
+   "include": true
+  }
+ },
+ "usage": {
+  "input_tokens": 116,
+  "output_tokens": 1167,
+  "reasoning_tokens": 341,
+  "cost_usd": 0.0589149,
+  "served_model": "anthropic/claude-fable-5.1",
+  "provider": "Anthropic"
+ },
+ "essay_sha256": "c975ea694068d6d028a3b35bca881ea9b76f54c6f89b305374f365ae59f74f60",
+ "essay_words": 498,
+ "response_raw": {
+  "id": "gen-1788703549-A4GfAlGSva3tBLBf6Fz6",
+  "object": "chat.completion",
+  "created": 1788703549,
+  "model": "anthropic/claude-fable-5.1",
+  "provider": "Anthropic",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "We just shipped something a lot of you have asked for: a daily Slack summary of your open support tickets.\n\nHere's how it works. You connect your Slack workspace, pick a channel, and choose a time. Every day at that time, we post a short summary of where your queue stands. You'll see how many tickets are open, how many came in over the last 24 hours, how many were closed, and which ones have been waiting the longest. Anything past its SLA target gets called out on its own so nobody has to go looking for it. Each ticket in the summary links straight back to the helpdesk, so if something jumps out you can click through and deal with it.\n\nWe built this because of a pattern we kept hearing about. Support leads were opening the dashboard first thing every morning, scanning the queue, and then pasting a rough summary into Slack for the rest of the team or for a manager who didn't have a helpdesk login. That's ten minutes a day of copying numbers around, and it usually happened only when someone remembered. This just does it for you, on a schedule, in the place your team already looks.\n\nA few details worth knowing. You can set up more than one summary, so a billing channel can get billing tickets while a general channel gets everything. Summaries can be filtered by team, tag, or priority. You can choose weekdays only if your queue is quiet on weekends. The Slack app only needs permission to post to the channels you pick, and it doesn't read messages or pull anything back out of Slack. If your workspace requires admin approval for new apps, you'll want to loop in whoever handles that.\n\nTo turn it on, go to Settings, then Integrations, then Slack. Connecting takes about a minute. Owners and admins can set it up; agents can view the configuration but not change it. If you already use our Slack notifications for individual ticket events, this lives alongside those and won't change anything you have running.\n\nThis first version is deliberately simple. It sends one message per summary, once a day, and it's text with links rather than charts. We wanted to get something useful out rather than wait on a more elaborate version. That said, we're already looking at a weekly digest, per-agent breakdowns, and the option to post to Microsoft Teams. If any of those matter to you, tell us and we'll factor it into the order.\n\nAs always, if something doesn't work the way you expect, reply to this email or open a ticket and it'll come to the team that built it. We'd also just like to hear whether the summary is showing you the right things. It's easy to guess what a support team wants to see first thing in the morning, and we'd rather know than guess.\n\nThanks for using the product, and for the nudges that got this one built.",
+     "refusal": null,
+     "reasoning": "I'm thinking through how to frame this as a genuine, personal-sounding announcement for existing customers, keeping it plain prose without headers or bullets, and considering whether to invent a product name or keep things generic to focus on the Slack integration itself.\n\n",
+     "reasoning_details": [
+      {
+       "type": "reasoning.text",
+       "text": "I'm thinking through how to frame this as a genuine, personal-sounding announcement for existing customers, keeping it plain prose without headers or bullets, and considering whether to invent a product name or keep things generic to focus on the Slack integration itself.\n\n",
+       "format": "anthropic-claude-v1",
+       "index": 0,
+       "signature": "CAQSxwsKEAgRGAI4AUIIdGhpbmtpbmcSDL+fNaNm+nQ9P0dGIxoMJkiiow6+q5jI0eznIjDbZ2iWOPYo4L5RF7oxXJGExbpwiTv0NziRk+2XPM6G12E9S/sCg5EVF4tkWtkuFMwq5Ap4cFpeWjJJ6ugz0Nr09CK5ixWtbDAZaeg0no/8GRuP9jJywVs54Cv9EY4vKQ5pNCguAvfRSe2zmeaZuXl8RkLotITGG4nYh1ricfyJ0+gRxwM1+iA3IAzEU9zOF3eM6vTDhUBydLeyMpYAe1vDZFCFePCiMVB9Cnu5Q/Px2tW2toIL0a6Z2WyHmauWsYPTb4AKmnJahpVsaB6754VTcRWkhJTYGWDtF7nMn7K81IXytYuGSuyJz0VeMOjKTYNzXKAyv9hq0tRWsYxYTk1CQlomxJ6iq6YdgLTgTq5IXGWLEf/0TBd1BXbOYJO0X3kwzSwqQFibPdJkST6Z+BVHKs7H4tSrS9pTjNciyN+dHRgKY+RWRzntzUjeySXx5PnLqPw3Fcknmnfou1OMr3jhbJJqpUmZ+a71lu9JwYw1QillfXh6zR6hKm22WBFmZH19BDlyitWULkPn+u2AD9JCt2VKvCqoAB+C3QFKsTw4gBSKyWYRkJPeO895q4DQ1VYVbxD3ndjGzd5c/ghvVcCGqOvpnkgh6IXAFv2zDzTd7LrcVieJKf5zphSL167RrZwppiF5YyMOZsFNFJPmt8arnuvIbjLLE+jc+vbvkcxHNWQ7VrnUKpm8kj9iCFjSFnjkjIh43IkBPvzBk33twJDwlsG3+ajll7qwsFIAjcvaj9DwNDm7vvKU7FwL2THWUxT8ZqlWdx5LeBwragpMYAD3qEywPkWc5yrzNILqT5J0LaXUgdNA5y2ig9/JdkkGEWfE4KGpFkdgy1WkXkscG5pRoiF9V+d17WazQTSqI5JZmu5UomhxqtAsMyuOVbpPtxAWXqQnnljT304coC139onILrQ0kALVFb8jhbENYRooqDleTCw4pL9GYQTkWXroN7EAhRE1t+DjKKL8uL5vpjnXYVNZJ6ggmC4MIO37vqgajgz018NZBnCRhg9O4GczJITmCagm0g7Qifx72ERWn/6YjN0TO9PiRM316xRFTDtzvy28LsSfG8072QiU+ektLe0N0u/+TIdvSnp+XWUGRL9HZEj5mNFpwv/QCisDpwsb2/xCnhvLEBAqYHOMP7oVgu+DiqSi7TzXrNqBb/NzZS61QU8jyFXZUK1pPnJHNi54LXKkcz0IfO8Ox1SrRjwKmwozGPm86l5sXwneMvlK0Yx9zmemi5SxIErEtKDx+rwJ0blpeEgy4+6SLGiGG9cFZ43A8LNeJ+mPlST6M2YW5s9XYn2AD+KQc57oywhw3SfHATj0j45McQx5GIRJBaQ/ouQWBj2ixIJP4T/f74nQupiBsJArflEWVCZJ5QKcT84eYjDsfgJhtCEqeSr12UdEU06XtUJBZpZI1yvJBwjqKQpAfVe9JuOSbDsTr/6ZhOsuMk26YAxBFi57oLl9X1tXnpQj2LIqZGSiOSIa23+eNL8ZLOVSDjReSQCqbA1HXU1QwR6LicEG5eGjN2AdDcu/0F71eaPb6I66edQQYDg+tTuJTLc7JBQyRHUOhH4clhm4ig60SyUO56LJDvliF/Wh0FXNkpVW0a3fz67bIXBMGBp+pTyKeihyD0nqhnM/ESdGjETgzvoa5Nd9WrfWUfd9y/eayr9Pj7bGNcLtUS1r0rqPLozisMykuBer5DJgkXviIOK1TH9RL7yskit0C4TlthLFk85j7cGwTDWJ7vx4SjX5KB5WiKAHgYE5fxHCNXSHsGonERD8XFgHRfWTEajjYjq9syotzfxyGbTaL6WIBdLQj8qTNdwVUPWtscK7eQLVXUDYVoomQC+H7FizwNtnODgjXrilYI9NPMgA8f2bAHTq96lgOFJRpGKax4IiJoLj1FB0RuFVWTsYAQ=="
+      }
+     ]
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 116,
+   "completion_tokens": 1167,
+   "total_tokens": 1283,
+   "cost": 0.0589149,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.05951,
+    "upstream_inference_prompt_cost": 0.00116,
+    "upstream_inference_completions_cost": 0.05835
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 341,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

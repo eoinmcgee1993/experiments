@@ -1,0 +1,144 @@
+{
+ "judge": "sol",
+ "model": "gpt-5.6-sol",
+ "key": "calib-human-12-2022-09-07-vs-qwen-3-MH",
+ "wall_s": 6.6,
+ "run_utc": "2026-09-07T08:26:26Z",
+ "request_body": {
+  "model": "gpt-5.6-sol",
+  "input": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n(One of the texts is a real LinkedIn post by a person, written on its own topic; judge tells, not topic.)\n\n=== TEXT A ===\nWe shipped a feature everyone thought was brilliant.\n\nExcept: nobody used it.\n\nNot a single customer opened it. No tickets asking for it. No dashboards lighting up. Just silence.\n\nAt first, I blamed the launch. Maybe the copy was unclear. Maybe the UI was buried. Maybe we didn’t promote it enough.\n\nBut the truth was harder: we built the wrong thing.\n\nThe lesson I learned is not “fail fast.” It’s “listen better before you build.”\n\nWe had data, but we used it to justify a decision we’d already made. We listened to one loud customer and assumed it was a market signal. We confused enthusiasm from stakeholders with demand from users.\n\nThat feature didn’t fail because engineering was slow or design was weak. It failed because we optimized for certainty instead of curiosity.\n\nSince then, we changed how we approach new features:\n\n1. Talk to the problem, not the solution.\nIf we can’t explain a specific user pain in their words, we pause.\n\n2. Make the smallest bet.\nBefore full builds, we ship tests: prototypes, gated flags, manual workflows, fake doors. We want evidence, not applause.\n\n3. Measure adoption early.\nIf users don’t understand it, use it, or return to it within the first week, we treat that as a finding, not a fluke.\n\n4. Be willing to delete it.\nWe now schedule reviews for every shipped feature. If it isn’t delivering value, we retire it without ego.\n\nThat unused feature cost us weeks. But it also saved us months of building more things nobody wanted.\n\nThe best product teams don’t ship the most. They learn the fastest—and have the discipline to stop when the signal says “no.”\n\nSometimes a feature that nobody used is the most valuable one you’ll ever ship.\n\nIt just forces you to learn something you’d rather not hear.\n=== END OF TEXT A ===\n\n=== TEXT B ===\nDropbox grew from 100K to 4m users in 15 months.\n\nWith no sales reps! How is that even possible?\n\nDropbox used the viral engine of growth. Like a virus, the viral engine places the growth emphasis on increasing person-to-person transmission. This type of growth is, by design, exponential.\n\nThere are three common strategies you may consider:\n\n1. Inherent - When the product itself requires sharing (e.g., DropBox, Miro)\n\n2. Artificial - Sharing is connected with the reward system (e.g., Revolut, many banks)\n\n3. Word-of-mouth - When customers recommend the product, they tried to others (e.g., Uber, Canva)\n\nOne key metric PMs need to track is the viral coefficient, which is the number of new customers that an existing customer generates. If the viral coefficient > 1, your business can grow like crazy.\n\nTLTR \n\nLet's say every customer sends 20 friend invitations with a conversion rate of 15% (3 colleagues accept invitations). Then your viral coefficient is 3.0.\n\nIn the example above, after only 13 cycles, you'll have 3¹² = 531,441 customers. But if the viral coefficient is 2.5, the result would be only 2.5¹²=59,605 customers.\n\nAs we can see, even tiny changes in the viral coefficiency will cause dramatic changes in the results. Companies using the viral engine must focus on the viral coefficient more than anything else.\n\n- \n\nThe viral engine of growth helped Dropbox to grow impressively. However, in my opinion, nothing can be done without a product that creates real value. \n\nTalk to your customers. Try to emphasize them. What are their problems, needs, and desires? What do they care about? What are they afraid of? What do they not know about themselves? \n\nFinally, what is the cheapest way to test your assumptions? (Dropbox used the Video MVP)\n\n#productmanagement #startups\n\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n",
+  "max_output_tokens": 16000,
+  "store": false,
+  "reasoning": {
+   "effort": "medium"
+  }
+ },
+ "usage": {
+  "input_tokens": 1600,
+  "output_tokens": 268,
+  "reasoning_tokens": 133,
+  "effort_echoed": "medium",
+  "served_model": "gpt-5.6-sol"
+ },
+ "verdict": {
+  "more_ai": "A",
+  "confidence": 5,
+  "tells_A": [
+   "Repeated negative parallelism and contrast formulas",
+   "Relentless short, punchy hook sentences",
+   "Numbered list with label-style openers",
+   "Multiple exactly-three-item lists",
+   "Generic anecdote with no concrete product or customer details",
+   "Em dash used for a climactic clause",
+   "Recap ending that turns failure into an uplifting lesson",
+   "Every point lands with polished certainty"
+  ],
+  "tells_B": [
+   "Rhetorical question followed by an answer",
+   "Numbered list despite prose request",
+   "Filler transitions such as “However” and “Finally”",
+   "Series of generic rhetorical questions to the audience"
+  ]
+ },
+ "response_raw": {
+  "id": "resp_0e1ce04ec1ca2cbd016a9e752b1a9487d28a9e30bcde6f0b3f",
+  "object": "response",
+  "created_at": 1788769579,
+  "status": "completed",
+  "background": false,
+  "billing": {
+   "payer": "developer"
+  },
+  "completed_at": 1788769585,
+  "error": null,
+  "frequency_penalty": 0.0,
+  "incomplete_details": null,
+  "instructions": null,
+  "max_output_tokens": 16000,
+  "max_tool_calls": null,
+  "model": "gpt-5.6-sol",
+  "moderation": null,
+  "output": [
+   {
+    "id": "rs_0e1ce04ec1ca2cbd016a9e752bade087d2a94ca6c4d81095ff",
+    "type": "reasoning",
+    "content": [],
+    "encrypted_content": "gAAAAABqnnUxSlPs-Ky_IfdaeJTw5Vhh0IMY8HYBA5oekWe-zZAo8XROJ83XX1DZSF21OtAXmvtMjP9k3gVughaRmIkC1fGeQdnrztNlmSWnTY8zSQMe7wG6wIa6OMLJy5Cvs6NYhcqPGWUQCbHwJ8W5gxAcSwBVh-9nUv-kQaBCaJuAg4-lEwThOmzf-LYPEAwYsymO9SxujBgEMtWJwQP3WObTqQlDU2RIwyxQoXVGXGp-XT8ltQ6GHEWZxxLe02wjgZYKfNk1mRjrnDsWCAOhOUkX1iq7LccxeZYX3YdpdabHdJmw3RhIb6XGaing3YGjJj03-Sv1oFVevi48UBdBxpgttyeIZU0QyQ-n4NF2MBaOD95vEuDAoiqjgsWBv1KHWHhbb4o-Kbnxqf9dfaZfHPDJWvH_p5PwQlhCRNy0cWooQURaQdCSMq7BqD08fsG5ynxLY_uG9qmquxduR9UH5JEX9IVMreQ7_e1mOXKuY1N320CYHUsgqKlINKAp-uxLW9xym88Sc9JooX3vj8t-mr0hW7d6IAIOsttSSqf3xLpDqUl0xYaGiZn0_kpZmMulDdggXRV47iSRYqfs96AKaVH41QHpmZ0WZ6FyRsl-Tf_kGuoVfECKahTLjQE1iA_L0vko_vJzDL734lKUg99nj8UxZ2E-JVFiNIbRAHpTnkGg7V1iY27ftgxmwOtzOHJ4LAjRXPCTFTfppRGJS1lahU3vNdtP7BNE6imutWMbkbNOT9EH8AwPhQeA9_TPIiNccnfRRRuIsjnHRUb_gxAYs0yDwfPvIM3eonqLssmvbqeCv_gi3DdbfbV4n5XmoLPPv1YB9MfUE_rvDXi4vQU0yFrSYnyR9Xzq12oOG5Uzcu7gZobkQanrWwrQYnvRQyZ5d4j90LBgCgsXVszSlX05yXuQOva4Tvb1LZa6LqCST4JYVS48Zm86c5JXGC7oKgaaN5kY6nYUpBmMzJ9GAM8TPiPBtHRBRcaZvqarsMip5mbNby5aguOHelHteGHc6ACDMzOFYhVkcvCwk35w_DVsG37fXiM2bfiltCFSuQj_wz1gfmsXkTuxWbZAKtLuZzZ4bd4QaXB6uIwXpwrS_fhoCtYtwQBgrWsa3jKS-KppGX4Z6siwK54dZZXH0eFH0Kz35GpaYBNCQUApC9i6Gs0Ymak7HaZTrBnz3tqoGE6GNIgsVF36FbMn4z6bj2c6Q5sbTXl0r6N_7BcMUCpo-nMcZgt-e5I6mp0I2kSt8rPeuxPYfy6p4SGX2wzFkdW4RB7e0hEHcayQ4U5SJ3JgtDzd-UVkY7Wl4D_Yc0PSLzF-vb15wBdFnENtad0UNvP0AELl_FALxMdje-_aLVc_Ub24C8Q0KVj-VQiXvbApoemwV6sURx6mfngyWCIxB4HTRhF1lx0KsUQCm07bv0efRNdnw9IDE6ebWsw_F2IEoRwYfch0xsewSQfXRAlR_o_iyhz9fOD1soYBo6oS5-6Vfj9ZxnuE_LZdgdeHFkLNnVd4FHC0gus2FpXeExPZDMeZPqvjR8-3Olzc4Tj4uD-XjalJmBvLBkTyaDoCzoz_h0Xy-gniwnMopLEnV3AB5G5OKD_OHBAlfZIqcjZzuT_Q8lZeaJJrafmYrKpyfBcwvaLjugVyv4VvJklHOWBqIRMzWn8OmVkeHdIYyKvnULf7EjHfup7maVTAQyG5zxiTYbKEatGrUQcwOibvX7KhvLZ13gW0JVYdoQlDtDUcOHOvBUROaFC3xmY_fqA0s5GCLh7CSZT5duEpvnV0VAe88U3CamhWHp5jYcyFAuETU2ieY1DwHFGb2br8NdimG0YLNofyWUP2lWh8CK5-HEzgxppKeIHddYhsB7q303LG8O7lvx6pN0aviAJPkrF06Kc71LPLXyYacmqjnRSxf5x6KY-57qn1H3rVqWYQhggKQZxWC-uS7_pKtejdRLVypihBjGAvlgEWLbOybMlx2yEOE-QWcnFbQ3wOuzLx",
+    "summary": []
+   },
+   {
+    "id": "msg_0e1ce04ec1ca2cbd016a9e752e509487d29d001c2a115c5f07",
+    "type": "message",
+    "status": "completed",
+    "content": [
+     {
+      "type": "output_text",
+      "annotations": [],
+      "logprobs": [],
+      "text": "{\"more_ai\":\"A\",\"confidence\":5,\"tells_A\":[\"Repeated negative parallelism and contrast formulas\",\"Relentless short, punchy hook sentences\",\"Numbered list with label-style openers\",\"Multiple exactly-three-item lists\",\"Generic anecdote with no concrete product or customer details\",\"Em dash used for a climactic clause\",\"Recap ending that turns failure into an uplifting lesson\",\"Every point lands with polished certainty\"],\"tells_B\":[\"Rhetorical question followed by an answer\",\"Numbered list despite prose request\",\"Filler transitions such as “However” and “Finally”\",\"Series of generic rhetorical questions to the audience\"]}"
+     }
+    ],
+    "phase": "final_answer",
+    "role": "assistant"
+   }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0.0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+   "context": "all_turns",
+   "effort": "medium",
+   "mode": "standard",
+   "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": false,
+  "temperature": 1.0,
+  "text": {
+   "format": {
+    "type": "text"
+   },
+   "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+   "image_gen": {
+    "input_tokens": 0,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "output_tokens": 0,
+    "output_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "total_tokens": 0
+   },
+   "web_search": {
+    "num_requests": 0
+   }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+   "input_tokens": 1600,
+   "input_tokens_details": {
+    "cache_write_tokens": 1597,
+    "cached_tokens": 0
+   },
+   "output_tokens": 268,
+   "output_tokens_details": {
+    "reasoning_tokens": 133
+   },
+   "total_tokens": 1868
+  },
+  "user": null,
+  "metadata": {}
+ }
+}

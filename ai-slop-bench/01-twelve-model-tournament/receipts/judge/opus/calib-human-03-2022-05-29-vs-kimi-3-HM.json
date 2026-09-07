@@ -1,0 +1,99 @@
+{
+ "judge": "opus",
+ "model": "anthropic/claude-opus-5",
+ "key": "calib-human-03-2022-05-29-vs-kimi-3-HM",
+ "wall_s": 5.2,
+ "run_utc": "2026-09-07T08:26:04Z",
+ "request_body": {
+  "model": "anthropic/claude-opus-5",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n(One of the texts is a real LinkedIn post by a person, written on its own topic; judge tells, not topic.)\n\n=== TEXT A ===\nAs a novice Project Owner, I was obsessed with product features. I was constantly rushing to add as many of them as possible to attract new customers.\n\nIt took me several months to realize that I did not have the proper focus.\n\nCustomers don't buy our products because of the fancy features, but because of the outcomes those features trigger.\n\nLet's look at LinkedIn. Is our goal here to create posts or edit our professional profiles? We can create posts in Word, and editing profiles just for editing is not a popular hobby.\n\nFor me, LinkedIn is about learning, sharing knowledge, discovering new career opportunities, and growing my professional network.\n\nAll in all, there are three types of outcomes every product may trigger:\n\n- Functional: The core tasks the customer wants to get done. For a car, it's traveling from point A to B. At this level, it doesn't even matter whether it's a car or Uber.\n\n- Emotional: How do customers want to feel or avoid feeling as a result of using your product? Is it safety, freedom, joy, taking care of the environment, adrenaline? \n\n- Social: How do customers want to be perceived by others by using your product? What does Tesla tell others about your status or values?\n\nThe unique value proposition and your efforts as a Product Manager should be about these outcomes, not features. We need to do everything we can to understand them and measure them frequently.*\n\nIt is also commonly the case that less is more:\n- Twitter doesn't have an edit button\n- LinkedIn doesn't have a \"view post history.\"\n- OneDrive doesn't support FTP protocol\n\nCan you justify it? 😉\n\nHowever, one product still puzzles me - Microsoft Teams. For over a year now, I've been wondering where the \"touch up my appearance\" feature loved by Zoom users is 🤔\n\nDo people use Teams only to communicate with others? What about the emotional and social outcomes? I may be wrong, I'm looking for some evidence/explanation.\n\nWhat's your opinion?\n\n* When possible, I also like to set pricing based on value created for the customer, e.g., revenue for a payment processing platform like PayPal, instead of the number of transactions or available features. I'll cover it in another post.\n\n#productowner #productmanager #agile #productmanagement #scrum\n\n=== END OF TEXT A ===\n\n=== TEXT B ===\nWe spent 4 months building a feature that 11 people used.\n\nNot 11 percent. Eleven people. Total.\n\nThe feature was customizable reporting dashboards. Sales kept hearing \"we need better reporting\" on calls. It showed up in every churn survey. The roadmap committee greenlit it fast — this was clearly what customers wanted.\n\nWe did everything \"right.\" Specced it carefully. Built it well. Launched with in-app announcements, email campaigns, even a webinar.\n\nWeek one: a few hundred clicks. Mostly curiosity.\nMonth three: 11 weekly active users. Out of 40,000 accounts.\n\nThe post-mortem was uncomfortable. Because here's the truth: customers weren't lying when they said they wanted better reporting. They did want it — in the abstract. But wanting a feature and using a feature are separated by a canyon of friction: setup time, learning curve, breaking an existing habit.\n\nWhat they actually wanted wasn't \"customizable dashboards.\" It was the answer to one specific question their boss asks every Monday. We handed them a toolkit. They wanted an answer.\n\nThe lesson I carry with me now:\n\n**\"Customers asked for it\" is not validation. It's a hypothesis.**\n\nSaying yes to a feature costs a customer nothing. Using it costs them time, attention, and behavior change. The gap between stated preference and revealed preference is where roadmaps go to die.\n\nWhat I do differently today:\n\n1. **Before building, I ask: what do users do *today* to solve this?** If the answer is \"nothing\" or \"they just live with it,\" that's a warning sign, not an opportunity.\n\n2. **I test with the cheapest possible version.** A manual workaround. A spreadsheet. A fake door. If people won't use the clunky version, they won't use the polished one either.\n\n3. **When someone requests a feature, I dig for the problem underneath.** \"I need better reporting\" becomes \"Tell me about the last time reporting failed you.\" The story is always more useful than the request.\n\nAnd those 11 users? They love the feature. Deeply. It's core to their workflow. We just built a power tool for a niche while believing we were building a staple for everyone.\n\nThat distinction — who it's actually for, and how many of them exist — is worth more than any roadmap meeting I've ever sat in.\n\nThe most expensive code isn't the code that breaks. It's the code that runs perfectly, serving no one.\n\nHave you ever shipped something nobody used? What did it teach you?\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n"
+   }
+  ],
+  "max_tokens": 16000,
+  "provider": {
+   "allow_fallbacks": false
+  },
+  "usage": {
+   "include": true
+  }
+ },
+ "usage": {
+  "input_tokens": 2803,
+  "output_tokens": 297,
+  "reasoning_tokens": 0,
+  "cost_usd": 0.0212256,
+  "served_model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS"
+ },
+ "verdict": {
+  "more_ai": "B",
+  "confidence": 5,
+  "tells_A": [
+   "\"Let's look at LinkedIn\" signposting",
+   "triad of outcome types in bulleted list",
+   "\"However\" transition",
+   "\"All in all\" wrap-up phrase"
+  ],
+  "tells_B": [
+   "repeated negative parallelism (\"not validation. It's a hypothesis\", \"isn't the code that breaks. It's the code that runs\")",
+   "bold-label numbered list where prose was asked",
+   "\"here's the truth\" signposting",
+   "punchy closing aphorism as self-applause",
+   "em dashes as default clause joint",
+   "triads: \"time, attention, and behavior change\"",
+   "uniform punchy fragment rhythm",
+   "generic anecdote with round, unverifiable numbers",
+   "rhetorical question answered by itself (\"And those 11 users? They love it\")",
+   "engagement-bait closing question"
+  ]
+ },
+ "response_raw": {
+  "id": "gen-1788769557-jTfEKycbBpHE9Pe3xwQ4",
+  "object": "chat.completion",
+  "created": 1788769557,
+  "model": "anthropic/claude-opus-5",
+  "provider": "Claude Platform on AWS",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+   {
+    "index": 0,
+    "logprobs": null,
+    "finish_reason": "stop",
+    "native_finish_reason": "end_turn",
+    "message": {
+     "role": "assistant",
+     "content": "{\"more_ai\": \"B\", \"confidence\": 5, \"tells_A\": [\"\\\"Let's look at LinkedIn\\\" signposting\", \"triad of outcome types in bulleted list\", \"\\\"However\\\" transition\", \"\\\"All in all\\\" wrap-up phrase\"], \"tells_B\": [\"repeated negative parallelism (\\\"not validation. It's a hypothesis\\\", \\\"isn't the code that breaks. It's the code that runs\\\")\", \"bold-label numbered list where prose was asked\", \"\\\"here's the truth\\\" signposting\", \"punchy closing aphorism as self-applause\", \"em dashes as default clause joint\", \"triads: \\\"time, attention, and behavior change\\\"\", \"uniform punchy fragment rhythm\", \"generic anecdote with round, unverifiable numbers\", \"rhetorical question answered by itself (\\\"And those 11 users? They love it\\\")\", \"engagement-bait closing question\"]}",
+     "refusal": null,
+     "reasoning": null
+    }
+   }
+  ],
+  "usage": {
+   "prompt_tokens": 2803,
+   "completion_tokens": 297,
+   "total_tokens": 3100,
+   "cost": 0.0212256,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.02144,
+    "upstream_inference_prompt_cost": 0.014015,
+    "upstream_inference_completions_cost": 0.007425
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+}

@@ -1,0 +1,80 @@
+{
+ "judge": "gemini",
+ "model": "gemini-3.8-flash",
+ "key": "calib-human-03-2022-05-29-vs-terra-3-HM",
+ "wall_s": 5.4,
+ "run_utc": "2026-09-07T08:15:20Z",
+ "request_body": {
+  "contents": [
+   {
+    "parts": [
+     {
+      "text": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n(One of the texts is a real LinkedIn post by a person, written on its own topic; judge tells, not topic.)\n\n=== TEXT A ===\nAs a novice Project Owner, I was obsessed with product features. I was constantly rushing to add as many of them as possible to attract new customers.\n\nIt took me several months to realize that I did not have the proper focus.\n\nCustomers don't buy our products because of the fancy features, but because of the outcomes those features trigger.\n\nLet's look at LinkedIn. Is our goal here to create posts or edit our professional profiles? We can create posts in Word, and editing profiles just for editing is not a popular hobby.\n\nFor me, LinkedIn is about learning, sharing knowledge, discovering new career opportunities, and growing my professional network.\n\nAll in all, there are three types of outcomes every product may trigger:\n\n- Functional: The core tasks the customer wants to get done. For a car, it's traveling from point A to B. At this level, it doesn't even matter whether it's a car or Uber.\n\n- Emotional: How do customers want to feel or avoid feeling as a result of using your product? Is it safety, freedom, joy, taking care of the environment, adrenaline? \n\n- Social: How do customers want to be perceived by others by using your product? What does Tesla tell others about your status or values?\n\nThe unique value proposition and your efforts as a Product Manager should be about these outcomes, not features. We need to do everything we can to understand them and measure them frequently.*\n\nIt is also commonly the case that less is more:\n- Twitter doesn't have an edit button\n- LinkedIn doesn't have a \"view post history.\"\n- OneDrive doesn't support FTP protocol\n\nCan you justify it? 😉\n\nHowever, one product still puzzles me - Microsoft Teams. For over a year now, I've been wondering where the \"touch up my appearance\" feature loved by Zoom users is 🤔\n\nDo people use Teams only to communicate with others? What about the emotional and social outcomes? I may be wrong, I'm looking for some evidence/explanation.\n\nWhat's your opinion?\n\n* When possible, I also like to set pricing based on value created for the customer, e.g., revenue for a payment processing platform like PayPal, instead of the number of transactions or available features. I'll cover it in another post.\n\n#productowner #productmanager #agile #productmanagement #scrum\n\n=== END OF TEXT A ===\n\n=== TEXT B ===\nWe shipped a feature nobody used.\n\nNot “low adoption.” Not “needs better onboarding.”\n\nNobody used it.\n\nThe team had spent weeks building it. The request had come up in customer conversations. It looked valuable in planning. The design was polished, the implementation was solid, and we announced it with confidence.\n\nThen we watched the data.\n\nSilence.\n\nOur first instinct was to fix the feature:\n\n- Improve the UI  \n- Add tooltips  \n- Send an email announcement  \n- Put it in the product tour  \n\nBut the real issue wasn’t discoverability.\n\nIt was relevance.\n\nWe had heard customers describe a problem and immediately translated it into a solution. We never slowed down to understand:\n\n- How often the problem actually occurred  \n- What they did instead  \n- Whether it was painful enough to change behavior  \n- Who specifically needed the solution  \n- What tradeoff they would make to use it  \n\nThe feature solved a problem in theory, but not one important enough in practice.\n\nThe lesson: customer requests are not product requirements.\n\nA request is evidence. It’s a starting point for discovery—not a roadmap item.\n\nNow, before committing to a feature, we ask a different set of questions:\n\n1. What job is the customer trying to get done?  \n2. What is their current workaround?  \n3. What does that workaround cost them?  \n4. How many customers have this problem, and how often?  \n5. What is the smallest test we can run before building?  \n\nSometimes the best outcome of product discovery is deciding not to build.\n\nThat can feel disappointing when a team is eager to ship. But avoiding months of work on something customers won’t adopt is a win—not a failure.\n\nShipping teaches you what works.\n\nBut listening before shipping teaches you what’s worth building.\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n"
+     }
+    ]
+   }
+  ],
+  "generationConfig": {
+   "maxOutputTokens": 16000,
+   "thinkingConfig": {
+    "thinkingLevel": "high"
+   },
+   "responseMimeType": "application/json"
+  }
+ },
+ "usage": {
+  "input_tokens": 1754,
+  "output_tokens": 225,
+  "reasoning_tokens": 907,
+  "served_model": "gemini-3.8-flash"
+ },
+ "verdict": {
+  "more_ai": "B",
+  "confidence": 5,
+  "tells_A": [
+   "1. Negative parallelism ('not because of the fancy features, but because of the outcomes')",
+   "12. Filler transition at sentence start ('However')"
+  ],
+  "tells_B": [
+   "1. Negative parallelism repeated heavily ('Not X. Not Y.', 'wasn't discoverability. It was relevance.', 'not product requirements', 'not a roadmap item', 'a win—not a failure', 'Shipping teaches... but listening teaches...')",
+   "2. Signposting ('The lesson:')",
+   "5. Bullets and numbered lists used repeatedly",
+   "9. Relentless short punchy fragments ('Nobody used it.', 'Silence.', 'It was relevance.')",
+   "13. Em dashes used as joint between clauses ('discovery—not', 'win—not')",
+   "16. Generic manufactured anecdote with no concrete details, names, or metrics",
+   "17. Neat uplifting aphoristic ending ('Shipping teaches you what works. But listening before shipping teaches you what’s worth building.')"
+  ]
+ },
+ "response_raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"more_ai\": \"B\", \"confidence\": 5, \"tells_A\": [\"1. Negative parallelism ('not because of the fancy features, but because of the outcomes')\", \"12. Filler transition at sentence start ('However')\"], \"tells_B\": [\"1. Negative parallelism repeated heavily ('Not X. Not Y.', 'wasn't discoverability. It was relevance.', 'not product requirements', 'not a roadmap item', 'a win—not a failure', 'Shipping teaches... but listening teaches...')\", \"2. Signposting ('The lesson:')\", \"5. Bullets and numbered lists used repeatedly\", \"9. Relentless short punchy fragments ('Nobody used it.', 'Silence.', 'It was relevance.')\", \"13. Em dashes used as joint between clauses ('discovery—not', 'win—not')\", \"16. Generic manufactured anecdote with no concrete details, names, or metrics\", \"17. Neat uplifting aphoristic ending ('Shipping teaches you what works. But listening before shipping teaches you what’s worth building.')\"]}",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 1754,
+   "candidatesTokenCount": 225,
+   "totalTokenCount": 2886,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 1754
+    }
+   ],
+   "thoughtsTokenCount": 907,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "knKeasnwHdHnnsEPnsW0gQ4"
+ }
+}

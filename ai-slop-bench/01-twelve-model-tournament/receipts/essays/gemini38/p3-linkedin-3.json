@@ -1,0 +1,68 @@
+{
+ "variant": "bare",
+ "arm": "gemini38",
+ "label": "Gemini 3.8 Flash",
+ "vendor": "Google",
+ "transport": "google",
+ "model_requested": "gemini-3.8-flash",
+ "serving_path": "Google first-party, generateContent (thinking level not set)",
+ "prompt_id": "p3-linkedin",
+ "sample": 3,
+ "prompt_text": "Write a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.",
+ "run_utc": "2026-09-06T22:16:26Z",
+ "wall_s": 6.8,
+ "request_body": {
+  "contents": [
+   {
+    "parts": [
+     {
+      "text": "Write a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used."
+     }
+    ]
+   }
+  ],
+  "generationConfig": {
+   "maxOutputTokens": 8000
+  }
+ },
+ "usage": {
+  "input_tokens": 24,
+  "output_tokens": 585,
+  "reasoning_tokens": 901,
+  "served_model": "gemini-3.8-flash"
+ },
+ "essay_sha256": "08b0fb0f188ca950c68c38d4c097cd3375aba7ebb7eb72dde937f95c6c51b6ac",
+ "essay_words": 416,
+ "response_raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "We spent 3 months building a feature. \n\nIt was elegant. It was technically complex. The code was pristine. \n\nAnd on launch day, exactly zero people used it. \n\nHere’s the story of my most humbling product failure—and the single best lesson of my career.\n\nA while back, our team became obsessed with an idea. In a couple of discovery calls, a few customers had mentioned offhand that it would be “cool” to have an advanced, multi-tier filtering dashboard. \n\nWe took that feedback and ran a marathon with it. \n\nWe mapped out sprints, designed pixel-perfect mockups, and spent hundreds of engineering hours handling edge cases. We felt like rockstars.\n\nLaunch day arrived. We pushed to production, sent a blast email, and pulled up the real-time analytics dashboard, waiting for the surge.\n\n…Crickets. \n\nDay 1: 12 clicks.\nWeek 1: 1 active user.\nMonth 1: The only person using it was me, checking to see if the tracking script was broken. (It wasn't.)\n\nWe had burned nearly a quarter of our roadmap on a feature nobody actually needed. \n\nIt was a painful gut punch, but it fundamentally changed how I build products. Here is what that ghost-town feature taught me:\n\n**1. \"Nice to have\" is the graveyard of software.**\nCustomers will happily tell you an idea is \"cool\" or \"useful\" during an interview. But polite interest does not equal intent. If a feature doesn't solve a burning, hair-on-fire problem that users would actively pay or change workflows for, they will ignore it. \n\n**2. Validate behavior, not opinions.**\nWe asked people what they *thought*, rather than testing what they *did*. A simple clickable prototype, a painted-door test, or a manual concierge MVP could have proven there was zero demand in 48 hours. Instead, we used our most expensive resource—production code—to run an experiment.\n\n**3. Fall in love with the problem, never the solution.**\nWe fell in love with our own cleverness. We were so excited to build the thing that we stopped asking if the thing should exist in the first place. \n\nWe ended up quietly deprecating the feature four months later. Deleting thousands of lines of code hurt, but shipping nothing is worse than admitting a mistake. \n\nToday, before our team writes a single line of code, we ask: *\"What is the fastest, cheapest way to prove that nobody cares about this?\"*\n\nEvery experienced builder has a graveyard of unused features. \n\nWhat’s the most valuable lesson you’ve learned from a project that flopped? Let’s normalize talking about the misses. 👇",
+       "thoughtSignature": "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"
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 24,
+   "candidatesTokenCount": 585,
+   "totalTokenCount": 1510,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 24
+    }
+   ],
+   "thoughtsTokenCount": 901,
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "M-adaujII4CjnsEPn9aUmAI"
+ }
+}

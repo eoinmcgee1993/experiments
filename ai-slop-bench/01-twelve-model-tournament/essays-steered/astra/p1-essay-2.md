@@ -1,0 +1,13 @@
+Most product roadmaps fail because they turn guesses into promises. A team makes a reasonable prediction about what customers need, how long the work will take, and what the business will prioritize. Then someone puts that prediction on a slide with dates. By the time it reaches customers, executives, and sales teams, the uncertainty has disappeared. What began as a plan for learning has become a contract for delivery.
+
+That creates the wrong definition of success. Teams get rewarded for shipping what the roadmap says, even when new evidence suggests they should build something else. A feature can arrive on time, satisfy every requirement, and make no meaningful difference to customers. The roadmap looks successful while the product stands still.
+
+The problem often starts before anyone estimates the work. Roadmaps become containers for competing demands rather than expressions of a strategy. Sales needs a feature to close a deal. Leadership wants a response to a competitor. An important customer has threatened to leave. Each request may be sensible on its own, but collecting them does not produce a coherent direction. Without a clear choice about which problems matter most, prioritization becomes a negotiation over whose request gets the earliest date.
+
+Then there is the work nobody can see yet. Teams discover technical constraints, awkward dependencies, and unanswered questions only after they begin. That is normal product development, not necessarily poor execution. Yet detailed roadmaps often assume this discovery has already happened. They schedule months of work with a confidence the available evidence cannot support.
+
+Once a plan is public, changing it becomes politically expensive. Removing a feature can look like breaking a promise. Moving a date can look like incompetence. Teams therefore keep defending assumptions they no longer believe, while new requests accumulate on top of old commitments. The roadmap becomes less useful precisely when people most need it to guide difficult decisions.
+
+A better roadmap does not eliminate dates or commitments. Some deadlines are real, and other teams need enough certainty to coordinate their work. But it distinguishes firm commitments from possibilities, connects planned work to customer or business outcomes, and leaves room to revise the approach as evidence improves.
+
+Ultimately, a roadmap should help a company decide what to do next and what not to do at all. When its main purpose becomes reassuring everyone that their request is coming, it stops being a useful plan. It becomes a record of promises the team may never have been equipped to keep.

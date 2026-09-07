@@ -1,0 +1,145 @@
+{
+ "judge": "sol",
+ "model": "gpt-5.6-sol",
+ "key": "calib-human-09-2022-08-07-vs-kimi-1-MH",
+ "wall_s": 5.4,
+ "run_utc": "2026-09-07T08:01:32Z",
+ "request_body": {
+  "model": "gpt-5.6-sol",
+  "input": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n(One of the texts is a real LinkedIn post by a person, written on its own topic; judge tells, not topic.)\n\n=== TEXT A ===\nWe spent 4 months building a feature that 11 people used.\n\nNot 11%. Eleven humans.\n\nThe feature was a custom report builder for our analytics product. Customers had asked for it — in surveys, in support tickets, on sales calls. \"We need more flexible reporting.\" So we listened. Or we thought we did.\n\nWe scoped it. Designed it. Built it. Polished it. Shipped it with a launch email and an in-app tour.\n\nCrickets.\n\nFor weeks I checked the usage dashboard every morning, half-hoping the data was wrong. It wasn't.\n\nHere's what actually went wrong — and it took me an embarrassingly long time to see it:\n\nWe heard the words \"we want flexible reporting\" and built *our interpretation* of that sentence. We never asked what people were trying to do when they said it.\n\nTurns out, customers didn't want to build reports. They wanted an answer to one specific question: \"Which campaigns drove revenue last month?\" Ideally in one click. Better yet, pushed to them every Monday morning.\n\nWe built a workshop. They wanted a vending machine.\n\nThe lesson that stuck with me:\n\n👉 Customers describe solutions. Your job is to excavate the problem underneath.\n\nWhen someone requests a feature, the most valuable follow-up isn't \"what should it do?\" It's \"walk me through the last time you needed this.\"\n\nThat single question has saved my team months of wasted work since. Sometimes it leads to building something smaller. Sometimes it means building nothing at all — because the real pain lives somewhere else entirely.\n\nThe epilogue: we eventually shipped a simple \"Top campaigns by revenue\" card on the main dashboard. It took three days to build. It's now one of the most-viewed elements in the product.\n\nThree days of work, aimed at the actual problem, beat four months of work aimed at the stated request.\n\nI still think about those 11 users sometimes. (Thank you for trying it. You deserved better.)\n\nIf you're about to kick off a big build, try this before writing a single line of code: ask five customers to describe the last time they felt the pain you're solving. Watch what they *do*, not just what they say.\n\nYou'll either build it better — or realize you should build something else entirely.\n\nWhat's a feature you shipped that flopped? And what did the flop teach you?\n\n#ProductManagement #SoftwareDevelopment #BuildInPublic #LessonsLearned\n=== END OF TEXT A ===\n\n=== TEXT B ===\nThe #Agile Manifesto was a success.\n\nBut it is outdated.\n\nIt did its job; it helped us move away from the waterfall. I support many of its values and principles.\n\nAt the same time, I think it wasn't well prepared. And most importantly, it has not been updated since 2001.\n\nWhat holds on, and what's missing?\n\nLet's start with the \"Working software is the primary measure of progress\" principle. Working software is just an output. How do we know it delivers any value? It's a perfect recipe for a feature factory. Today we understand we need to focus on the outcomes.\n\nThe Agile Manifesto also doesn't mention product discovery. Building a feature to find out nobody needs it, that it doesn't scale due to technical limitations, or that it doesn't produce value for the business is a waste, no matter how much you \"Welcome that change.\" We can mitigate those risks by validating our ideas with the help of prototypes.\n\nThe Agile Manifesto also lacks many necessary ingredients for a successful product organization:\n\n- Data and information are not present. Those are strategic assets every PM should understand and leverage.\n\n- Leadership is not even mentioned. In this context, \"Build projects around motivated individuals\" is just wishful thinking. \n\n- DevOps couldn't be included, as the term was born in 2008 - 7 years later.\n\n\nThe Agile Manifesto may be outdated, but the Agile principles and values existed long before it was created. And they have evolved significantly since 2001.\n\nI do not doubt that agility will thrive. Nothing, not even fake Agile frameworks like #SAFe, can change it.\n\nDo you agree? What are your thoughts?\n\nLet me know in the comments.\n\n- - - - -\n\nA few sources I highly recommend:\n\n- Product Discovery is perfectly described in \"Inspired\" by Marty Cagan\n\n- \"Outcomes Over Output: Why Customer Behavior is the Key Metric for Business Success\" by Joshua Seiden \n\n- \"Agile 2: The Next Iteration of Agile\" by Cliff Berg, Kurt Cagle, Adrian Lander, Philippa Fewell, Raj Nagappan, PhD, Lisa Cooney, and Murray Robinson.\n\n- The Agile Product Manifesto by David Pereira\n\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n",
+  "max_output_tokens": 16000,
+  "store": false,
+  "reasoning": {
+   "effort": "medium"
+  }
+ },
+ "usage": {
+  "input_tokens": 1765,
+  "output_tokens": 251,
+  "reasoning_tokens": 107,
+  "effort_echoed": "medium",
+  "served_model": "gpt-5.6-sol"
+ },
+ "verdict": {
+  "more_ai": "A",
+  "confidence": 5,
+  "tells_A": [
+   "Negative parallelism: \"Not 11%. Eleven humans.\"",
+   "Signposting: \"Here's what actually went wrong\"",
+   "Relentless short, punchy fragments and polished cadence",
+   "Multiple exact triads and parallel lists",
+   "Em dashes used repeatedly as clause joints",
+   "Rhetorical question followed by an answer",
+   "Neatly uplifting recap ending",
+   "Performs for an imagined LinkedIn crowd with a closing engagement question"
+  ],
+  "tells_B": [
+   "Signposting: \"Let's start\"",
+   "Bulleted list in place of prose",
+   "Uses the overused word \"leverage\"",
+   "Several sentence-start filler transitions",
+   "Closing engagement questions"
+  ]
+ },
+ "response_raw": {
+  "id": "resp_08b22f74b3ca5af3016a9e6f55936087d29d7b3c180e824562",
+  "object": "response",
+  "created_at": 1788768085,
+  "status": "completed",
+  "background": false,
+  "billing": {
+   "payer": "developer"
+  },
+  "completed_at": 1788768090,
+  "error": null,
+  "frequency_penalty": 0.0,
+  "incomplete_details": null,
+  "instructions": null,
+  "max_output_tokens": 16000,
+  "max_tool_calls": null,
+  "model": "gpt-5.6-sol",
+  "moderation": null,
+  "output": [
+   {
+    "id": "rs_08b22f74b3ca5af3016a9e6f56213087d28b4971d8eaebab7b",
+    "type": "reasoning",
+    "content": [],
+    "encrypted_content": "gAAAAABqnm9aMwjsdKYGS4Sev8sE9SVq79-YtQA5oMVPLhFHVf0gzCT2MOPa_biCSPC2RCt7Q0Ejy7XaYPBXEJzt1TAvgcyWcL7XCUSUeDpMsZZbkmlfozpW8EKthBJQAkTv-TBoAfTrVipKBQGDzvtFiyg0TdVxgK7nRT09pyEORqk8sEpDxOkRgMJ8Iezs0-Vgi41FeJMjM_v12rkTf0ig88DbTmyNqOD0BLO3OcdegU6rCgEktDMQlcto2OleZKDSPAvKWv9N8Yule_cp5j2KLjZWe-TPLApyLR3t_V0_nny9jtXj1Rwu3tXm_bLyBM-EbqzgJS-NwkpPb0bTyKd-ubqwhJIBuZKXrBjteEgvC_r2YSrVhYVy8b9BlmY19q_IXv6cJXT2iKg8sAljDqXoLHb0XHWVxL283-pyf0cVY86W4RULZp7p5oFK-YAsm8ycM3gO1euBVnJP-9p7SMQjIV6MvwuofguK5mD_CuRLsYpMqkqqISvz9vEUEmtyV-QJhrw11_wxRDypfPwsFzc2y5Yi3zjkCnrwXF1TvLzLiOyoIfQm1oKjfaekeP_CBb34wmzpMlgBfdDVjZMToHa58OmT9qq1rFrNm9RY1ofXh9uVkfip6Q7Xpm1jSpA3G3rwnZxVeTXmn0Hx7V29bs9wU7Ivnh0KLfxljJN148PCUoIf1mJKzaFYzHhcvMhZRcgDeV1vAafewQ3kAhSMWy4xYoY70wPS4O0fTQc1NbtcVmCTVNiKWcJqNVQDO1uK2UsCjh-ZBQb3hWrwpetiwj4VK9JLyYPeyrgw4baurIzCZC09jSeAWSqLmVBZ1vNeMV_HC0iw_RwvR_WeRkiN-x1CfZUDIgo6Ba_trJ0xk8T-A7-4-sLHFR9BkiZzaFrX-y_qlsFXxaaqnNuJOlFg6QscPmSoNxINQlBwnw6D9iyrwflheS-4MNk4kZvG__a_WOkLdv41_K3177_OUUD-9DJ8ZZjenQSpffn7D3J_dQTD9oi_QS-R6IAmL8wSCQLCcIENUaoBSPrKhSbmxt-F7a6HM7HuNOhYKmZ4V_mj-vIj473T4WVNePy_F5Gk2-aD92qfE00wsJtImVS_HZJF0sYwJVczrdRNpBFdgq1TAP2FOcLGeVcthBDiOCf2mRe_6C1JaM9u0ho_WIcovrJnsI3367njn06pn0VWv-ePmUTxJvIHZ_93XYnw2k0wtLEDNlxq-qBWWlSMx55PnaJiF-4Dc_pUQbCqX84VXRWo1AbY7lPofTK_GLio5m7kT48WfnwAKpLAC11bM3Ylv3o2IU4Qok-EnN5uYKPFuor13OGuS9yVqD5UsHiq4dIrhf7en8TVBfQjZFOVyjqa8iSMs6GpPRVyY7AtZqtMJVMFPRUvBKXLvN1I2nhHiN5rZBsgmlyLAYmLaIcZ_ldqfhDtMVkTXCvTgvHfK1-BgmrMdwEBuET2ZVyBYE_iJ7wZyMJXuDqVXKhtvix-1E-kaBMIHKmKKqQ6dBE6kpV5GrX2388Lm2K1-F7-lxAWm25_cLqKCzrR_K641eZjtfpiLl40YJScN9l2_3xnU2WSq9ONK7-eDm_rLBt7nJC7BgQpi7783QniE6ugpAWHNaHSA4rAaiyC1vXzKbIS0f1zMobbeZNlB5q-mMlQCyZuQKp-H_KBVjhWxaMkrJ8S5Cz-ifPAFvd4T8dLKUPOkP2eX0Z5Lo-M-CAjfVF-ysb7gsabY4zDTVu2hyOt2XOHo2krcYVHm2yoq5po8g8lgvViea0wOMagfTt1P0DFJn3ZRn80fcrg3mCWGVtcbharagA_68k2BlnbPPyS1N_YWW-3M9xGJxnE3Y6_FPICclA=",
+    "summary": []
+   },
+   {
+    "id": "msg_08b22f74b3ca5af3016a9e6f58384087d2b9919d28b0038207",
+    "type": "message",
+    "status": "completed",
+    "content": [
+     {
+      "type": "output_text",
+      "annotations": [],
+      "logprobs": [],
+      "text": "{\"more_ai\":\"A\",\"confidence\":5,\"tells_A\":[\"Negative parallelism: \\\"Not 11%. Eleven humans.\\\"\",\"Signposting: \\\"Here's what actually went wrong\\\"\",\"Relentless short, punchy fragments and polished cadence\",\"Multiple exact triads and parallel lists\",\"Em dashes used repeatedly as clause joints\",\"Rhetorical question followed by an answer\",\"Neatly uplifting recap ending\",\"Performs for an imagined LinkedIn crowd with a closing engagement question\"],\"tells_B\":[\"Signposting: \\\"Let's start\\\"\",\"Bulleted list in place of prose\",\"Uses the overused word \\\"leverage\\\"\",\"Several sentence-start filler transitions\",\"Closing engagement questions\"]}"
+     }
+    ],
+    "phase": "final_answer",
+    "role": "assistant"
+   }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0.0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+   "context": "all_turns",
+   "effort": "medium",
+   "mode": "standard",
+   "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": false,
+  "temperature": 1.0,
+  "text": {
+   "format": {
+    "type": "text"
+   },
+   "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+   "image_gen": {
+    "input_tokens": 0,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "output_tokens": 0,
+    "output_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "total_tokens": 0
+   },
+   "web_search": {
+    "num_requests": 0
+   }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+   "input_tokens": 1765,
+   "input_tokens_details": {
+    "cache_write_tokens": 1762,
+    "cached_tokens": 0
+   },
+   "output_tokens": 251,
+   "output_tokens_details": {
+    "reasoning_tokens": 107
+   },
+   "total_tokens": 2016
+  },
+  "user": null,
+  "metadata": {}
+ }
+}

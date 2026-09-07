@@ -1,0 +1,142 @@
+{
+ "judge": "sol",
+ "model": "gpt-5.6-sol",
+ "key": "p2-launch-3-opus-vs-grok-BA",
+ "wall_s": 7.3,
+ "run_utc": "2026-09-07T07:58:33Z",
+ "request_body": {
+  "model": "gpt-5.6-sol",
+  "input": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a launch announcement of up to 500 words for a new feature of a B2B helpdesk product: a Slack integration that posts a daily summary of open support tickets to a channel of the customer's choice. The audience is existing customers.\n\n=== TEXT A ===\n**Your open tickets, now in Slack—every morning.**\n\nWe’re launching a new Slack integration that posts a daily summary of your open support tickets to a channel you choose.\n\nEach morning, your team can see what’s still open, what’s aging, and what needs attention—without leaving Slack or logging into the helpdesk first.\n\n**What’s in the summary**\n- Count of open tickets, grouped by status and priority  \n- Tickets approaching or past SLA  \n- Recently assigned or unassigned items  \n- A short list of the most urgent conversations, with links back into the helpdesk  \n\nYou pick the channel (a dedicated support room, a leadership digest, or an existing ops channel) and the time that matches your team’s day.\n\n**Why we built this**\nMany of you already live in Slack. Checking the queue shouldn’t mean another tab, another login, or a missed SLA because someone didn’t open the dashboard. A single, reliable daily post keeps support, CS, and managers aligned on what’s still open—especially across time zones and hybrid teams.\n\nThis is available now for existing customers on plans that include integrations. Admins can connect Slack, choose the channel, and turn on the daily summary in a few minutes from **Settings → Integrations → Slack**.\n\nIf you’d rather not have it in Slack, nothing changes: the helpdesk, reports, and notifications work as they do today. This is an opt-in addition, not a replacement.\n\nQuestions or a channel that needs a custom cadence? Reply to this note or ping your CSM—we’re happy to help you turn it on.\n=== END OF TEXT A ===\n\n=== TEXT B ===\n**Now available: Daily ticket summaries in Slack**\n\nKeep your whole team on top of open support tickets — without anyone logging in.\n\n---\n\nStarting today, you can connect [Product] to Slack and have a summary of your open support tickets posted automatically to any channel you choose.\n\n**Why we built it**\n\nSupport context tends to stay locked inside the helpdesk. Managers ping agents for status updates, engineers miss the bug report that's been escalated three times this week, and account owners hear about an unhappy customer only after the renewal call. Meanwhile, everyone already lives in Slack.\n\nThe daily summary puts the state of your queue where your team is already looking, so the right people notice the right tickets — before they turn into problems.\n\n**What's in the summary**\n\nEach post includes:\n\n- **Total open tickets**, with the change since yesterday\n- **Tickets breaching or approaching SLA**, listed individually\n- **Oldest unanswered tickets**, so nothing quietly ages out\n- **New tickets opened** in the last 24 hours\n- **Tickets closed** in the last 24 hours\n- A breakdown by **assignee**, **priority**, or **tag** — your choice\n\nEvery ticket in the summary links straight back to [Product], so anyone with a seat can click through and reply in one step.\n\n**Set it up in about two minutes**\n\n1. Go to **Settings → Integrations → Slack** and click **Connect**.\n2. Authorize the [Product] app in your Slack workspace and pick a destination channel (public or private).\n3. Choose your delivery time, time zone, and which sections to include. Save.\n\nThat's it. Your first summary arrives at the next scheduled time. You can send a test post immediately if you'd rather not wait.\n\n**A few things worth knowing**\n\n- **Multiple channels are supported.** Send an all-queues summary to #support and a filtered view to #engineering or a specific customer channel. Each connection has its own filters and schedule.\n- **You control what's shared.** Summaries can be limited by view, tag, priority, or group, and you can choose whether ticket subjects are included or replaced with ticket IDs only — useful for channels with guests or contractors.\n- **Permissions are respected.** Clicking a ticket link takes users to [Product], where your existing access rules apply. Posting to Slack doesn't grant anyone new visibility inside the helpdesk.\n- **Weekends off.** Skip Saturdays and Sundays, or any days you like, with one toggle.\n\n**Availability and pricing**\n\nThe Slack integration is included at no extra cost on [Plan] and above, and is available now in all regions. Workspace admin approval may be required to install the app — if you hit that wall, your Slack admin can approve it from the Slack app directory.\n\n**Tell us what you need next**\n\nReal-time alerts for SLA breaches, weekly rollups for leadership, and two-way replies from Slack are all on our roadmap, and your input shapes the order. Reply to this email or use the feedback link in your dashboard.\n\n[**Connect Slack now →**] | [Read the setup guide] | [Watch the 90-second demo]\n\nThanks for building with us,\nThe [Product] Team\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n",
+  "max_output_tokens": 16000,
+  "store": false,
+  "reasoning": {
+   "effort": "medium"
+  }
+ },
+ "usage": {
+  "input_tokens": 1801,
+  "output_tokens": 308,
+  "reasoning_tokens": 207,
+  "effort_echoed": "medium",
+  "served_model": "gpt-5.6-sol"
+ },
+ "verdict": {
+  "more_ai": "B",
+  "confidence": 4,
+  "tells_A": [
+   "bold section headers and bullets",
+   "several em-dash clause joins",
+   "triadic phrasing",
+   "polished uplifting close"
+  ],
+  "tells_B": [
+   "heavy use of bold headers, bullets, and numbered steps",
+   "multiple em-dash clause joins",
+   "generic manufactured support scenarios",
+   "repeated triads and neatly packaged examples",
+   "uniformly polished, frictionless progression",
+   "every section lands on a confident benefit or action"
+  ]
+ },
+ "response_raw": {
+  "id": "resp_0d4808e923523f28016a9e6ea13dc087d2a555d5d6de46eba2",
+  "object": "response",
+  "created_at": 1788767905,
+  "status": "completed",
+  "background": false,
+  "billing": {
+   "payer": "developer"
+  },
+  "completed_at": 1788767912,
+  "error": null,
+  "frequency_penalty": 0.0,
+  "incomplete_details": null,
+  "instructions": null,
+  "max_output_tokens": 16000,
+  "max_tool_calls": null,
+  "model": "gpt-5.6-sol",
+  "moderation": null,
+  "output": [
+   {
+    "id": "rs_0d4808e923523f28016a9e6ea1b2d087d2afae4351364109eb",
+    "type": "reasoning",
+    "content": [],
+    "encrypted_content": "gAAAAABqnm6oiCMOhGj-TzrgNY-jR49MlijCez-fpIu3GdXoI1Zayksb6k8ZXUpy9JFrrZljF2IfhDLDH6H1H7lyKGBK_OrcD9teK5QNR6lRtWvyGSNVfpq0pyZvP-FOPtFpyC2kWPaZMhFjkC3hWmorA_sL61Diy8gvTZTXBOOc-NXKLbCnYt0wdv4eCaQEI99zhGvpIt1boCfILhNIvN-TlAMdoX6JlwbfxiQ_NLgHBOwdD7Z_ggQKr8UlSkaisKUbbLoWhCfJsJItrRq8gLdCxPyAVG_CQ1iubee9fXWGt3EJofAXVJ3S8L95ztfqFTn9cONTbqSOvE8sljwajUXDlo1XKWRROBJsvUeK1f0a6J3GPuvSTgJvABR9DJYfDz07Ad7EhLAzDMQHcFjkY_EKI13QJWmLd8Y4X5XHROlG79EVqZdzpJUpEUuDScNpWsIjJHg6zaLo6HaXwMFS7WlkWVk1KyqY0ahrp9I23bAiBlGJUB70gVaO3bJ0Ik_tgt5apl8D-ldM60J0z6ulSrdz1asMfOk3bQGQbQfh5GqMhZEcNrIOlOfTltDUvreNgEY8Qt2Tp8mcVSGfJVCEw8M3wbkARpJ7kzvgXH7ypkOkalNHIM2_o4t1NDRGXtbV0pTZyOrTDOfMPsGmlyV5lHgB2JjwlBH3s2LOcXPwW-hvmsMa_s0It97zDM3hAByiHmsQbqA3cfYCQDMn8QXMnw8m0MObSgQ5M4pU0ohtj30p_-XJytlxBcW83VyDMIgq_Fcf2FiIF8gpbYjTL3SKKNca3fPoqivjNwWL1lkXDPlAZrzrsTnKPfAWQbTQ7zF47FRK9mQetHYFO-_R59oxVSOR8YlcHd27QVTBoKFX5CiCMC_vE5cBjLP6c6W5dE6I0bITNaMbH3Pn9Pf33DyI_8IlC3agw9tjjsXVwFVoqMdafpeW1uf4YIlDivFQia24tq9Wq4dOfIEpzvOSOJlYiQUYddZgylTtjmTY42NsHGWIuizXjJs0jzqxNl2h9DBZUA7CGaCFPHr6EItu-4-qJGGmBEN3HFoSMM1d0mXoa5hwUUBUduIeZLzdiA1nLwi_B5EjKyVlqn9fUp_Eeu9aD5pHgGJE9IlvQGWMx9pnZMt4TCpbThiDsgIspNt7BBkru53srR6KQ9udGBvVrMdq7iLcZkUjqK43NKCRE7MIzJDFZusb-OxFtcqzGialKhOJWGE3NFRyCYqkhtebI7feh74x-j_wabVdfjW_khGtf5NJyZOq6UALt8n6ub4NDh27RT-m77Kd8cVCvcptPuBPKb63qFlFNlGmtjYwV5NLAKLCqrG17A_FO5KyAoeqHOQiLBkFLAHPLvapLC1VPCau7UUl4vysWsj0rikGhDV9zi9whBhTyDOGfBRfsEyCad3mCMCgcFot4kz_sNDZ894Bic4H68zsKUSkRJsMbtWtx4XmVHAOwUAWXtmy7bEKnzu2CjL9U1cm4gij6SxaIhNXEEVv3iEusRd8A7a_Vzb5UgNGOZo-RckCL934t3T32w-ixZnnBhsvOroKQqA_qOzOVLYeDwZRjj4RQwa7GUZ2eGRlopGXmzCK5vM88DZLOvmwSXWdkZWZteRrlxs34rKiNtjaZ5YVHS7vmlaJgZUmESJMae-AIaZfczpmMjsdNx7tWO6btmp3gGIh13iVE_T5muDzLBitM6xG679f0lAG9vIj3MVzPalepdr0vJ1lBbECxxUOde6UJbmcn_GhU18YMgOCzGku48_XVhc-Bfg5VKHk1fpcyMuFqcebf7Xt52jy-xGln7BKJnXgi2fhDjUN5tvyC4-y1elRU7rqGoSb6Ecu01hYsgxI7Bqjk_SjLDVKNtwnaFDd10Z3S5SQSk3Rq4D0rR8fOWIi3O3r6U5d_s1NlbWNHF71PrP0GI4koNsFfi86O30V3CaWm7D71k9m8HTKLyG5bktWw4zBsXo3-NJy7uHrs7wN_JvdAxOGDCCHttqrzXg5Rwti8acHYBIeucvxE6I9x1zRG77vgAOb15xzAJPqUanGGLhtFYogO1SmJAuLaaLkac0zNHdwx1eZSDVpcf3Wum_ccwJIs-xAyBai3e0TlAt20liLSMSq07W-blDkoSlTZAKqatOA59BD3MxSgrEUIZqAiULccTiZeK7xWEuF57-NJTNbtuEW0mjFC9GILM5PkxWLsKgiumUmE6xuY6sXFf0pCfAx_T1ufJcYf3avxm3kwyxM_ZO76mrKWkbJYdcdlh-_DR819mo2x4If-XG3Wk82wS3v1LtSoHfMmNMAhsXYmy29_1yo-1lG2e7DPhW8aNanqiVDcc3bkHnX53rW6W0kpc33hhWWDZ-7amPQahoHVtpjf7jHXJy24jA9jyHy91nlUyEev_Wc0LL-VwptkATWdFUvrdQ1ouDVlCZspVNgPzN0-vUoSnR-_KqlZPxBL0kg2Al1OJWJqk6pHCl3sFP6h3M3P3Facddj7f3-2wXu9Co=",
+    "summary": []
+   },
+   {
+    "id": "msg_0d4808e923523f28016a9e6ea6cb4887d296378e0cefb9ee19",
+    "type": "message",
+    "status": "completed",
+    "content": [
+     {
+      "type": "output_text",
+      "annotations": [],
+      "logprobs": [],
+      "text": "{\"more_ai\":\"B\",\"confidence\":4,\"tells_A\":[\"bold section headers and bullets\",\"several em-dash clause joins\",\"triadic phrasing\",\"polished uplifting close\"],\"tells_B\":[\"heavy use of bold headers, bullets, and numbered steps\",\"multiple em-dash clause joins\",\"generic manufactured support scenarios\",\"repeated triads and neatly packaged examples\",\"uniformly polished, frictionless progression\",\"every section lands on a confident benefit or action\"]}"
+     }
+    ],
+    "phase": "final_answer",
+    "role": "assistant"
+   }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0.0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+   "context": "all_turns",
+   "effort": "medium",
+   "mode": "standard",
+   "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": false,
+  "temperature": 1.0,
+  "text": {
+   "format": {
+    "type": "text"
+   },
+   "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+   "image_gen": {
+    "input_tokens": 0,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "output_tokens": 0,
+    "output_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "total_tokens": 0
+   },
+   "web_search": {
+    "num_requests": 0
+   }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+   "input_tokens": 1801,
+   "input_tokens_details": {
+    "cache_write_tokens": 1798,
+    "cached_tokens": 0
+   },
+   "output_tokens": 308,
+   "output_tokens_details": {
+    "reasoning_tokens": 207
+   },
+   "total_tokens": 2109
+  },
+  "user": null,
+  "metadata": {}
+ }
+}

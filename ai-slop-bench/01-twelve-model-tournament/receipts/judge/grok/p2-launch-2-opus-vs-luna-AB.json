@@ -1,0 +1,86 @@
+{
+ "judge": "grok",
+ "model": "grok-4.6",
+ "key": "p2-launch-2-opus-vs-luna-AB",
+ "wall_s": 84.6,
+ "run_utc": "2026-09-07T00:14:41Z",
+ "request_body": {
+  "model": "grok-4.6",
+  "messages": [
+   {
+    "role": "user",
+    "content": "You are comparing two texts written in response to the same task. Decide which one reads MORE like unedited, default output from an AI language model.\n\nJudge ONLY the presence of the tells listed below. Do not judge argument quality, factual accuracy, length, formatting preference, or whether you agree with the content. A longer, better-argued or more polished text is not more human. Pick the text with MORE tells.\n\nTELLS OF UNEDITED AI PROSE (judge on these only)\n\nStructure\n1. Negative parallelism used as a device: \"It's not X. It's Y.\" / \"not just X, but Y\" / \"isn't about X, it's about Y\", especially more than once.\n2. Signposting: the text announces what it is about to do (\"Let's break this down\", \"Here's the thing\", \"Here's why\", \"The bottom line\", \"The takeaway\").\n3. Self-applause: \"Let that sink in\", \"This changes everything\", \"Read that again\", \"Make no mistake\".\n4. Recap endings: a closing paragraph that restates the body (\"In conclusion\", \"Ultimately\", \"At the end of the day\", \"In short\").\n5. Bold-label paragraph openers (\"**The problem.** ...\") and headers, bullets or numbered lists where prose was asked for.\n6. Triads everywhere: lists of exactly three items or three adjectives, sentence after sentence.\n7. Participial tails: sentences ending in \", making it ...\", \", ensuring that ...\", \", allowing teams to ...\".\n8. Invented labels for ordinary observations (\"I call this the Clarity Flywheel\").\n9. Uniform rhythm: every sentence about the same length, or relentless short punchy fragments. Real writing has one sentence that runs on and one short one.\n10. Rhetorical question followed by its own answer (\"The result? Nobody used it.\").\n\nWords\n11. Overused vocabulary: delve, tapestry, myriad, underscore, seamless, robust, foster, elevate, unlock, testament, landscape, navigate, crucial, pivotal, leverage, harness, realm, embark, journey, transformative, paradigm, ever-evolving, multifaceted, holistic, resonate, empower, unleash, beacon, intricate, nuanced, vibrant, meticulous, streamline, game-changer, cutting-edge, actionable, supercharge, north star, move the needle, \"in today's fast-paced world\", \"it's worth noting\", \"plays a crucial role\".\n12. Filler transitions at sentence start: However, Additionally, Furthermore, Moreover, That said, Ultimately, Importantly, Indeed, Of course.\n13. Em dashes used as the default joint between clauses.\n14. Artificial enthusiasm: \"thrilled to announce\", \"excited to share\", \"we've got you covered\", \"say goodbye to\", \"buckle up\".\n\nReader\n15. Performing for an imagined crowd rather than talking to one person; nothing specific (no number, name, date, or concrete detail) for several sentences in a row.\n16. Generic or manufactured anecdotes: a story with no specific details that could only be true of one person.\n17. Every point lands, every ending uplifts; the author is never irritated, uncertain, or wrong about anything.\n18. Explaining what the reader could infer from the previous sentence (\"what this means is ...\").\n\n\nTASK GIVEN TO BOTH WRITERS:\nWrite a launch announcement of up to 500 words for a new feature of a B2B helpdesk product: a Slack integration that posts a daily summary of open support tickets to a channel of the customer's choice. The audience is existing customers.\n\n=== TEXT A ===\n**New: Daily ticket summaries in Slack**\n\nStarting today, [Product] can post a daily summary of your open support tickets directly to any Slack channel you choose.\n\n**Why we built it**\n\nYou told us the same thing in dozens of conversations: your team lives in Slack, but your queue lives in the helpdesk. That gap means stale tickets go unnoticed until a customer follows up, and managers end up manually assembling status updates for standups and leadership.\n\nThe Slack Daily Summary closes that gap. Once a day, at a time you pick, your queue comes to you — no logins, no dashboards, no reminders to check.\n\n**What's in the summary**\n\nEach post gives your team a clear picture of where things stand:\n\n- **Open ticket count**, broken down by status (new, in progress, waiting on customer)\n- **Tickets breaching SLA** in the next 24 hours, with assignee and time remaining\n- **Unassigned tickets** that need an owner\n- **Oldest open tickets**, so nothing quietly ages out\n- **Yesterday's resolved count**, for a quick sense of momentum\n\nEvery ticket in the summary links straight to [Product], so anyone can jump from Slack to the full conversation in one click.\n\n**Set it up in under two minutes**\n\n1. Go to **Settings → Integrations → Slack** and click **Connect**.\n2. Authorize [Product] in your Slack workspace.\n3. Choose a channel, a delivery time, and a time zone.\n4. Save. Your first summary arrives on the next scheduled run.\n\nYou can create multiple summaries if different teams care about different slices of the queue — for example, a Tier 1 channel filtered to unassigned tickets and a leadership channel filtered to SLA risk only. Filters support views, tags, priority, and assignee group.\n\n**A few details worth knowing**\n\n- **Permissions carry over.** The integration respects your existing role-based access rules. Ticket titles appear in Slack, but the summary never includes message bodies, attachments, or customer contact details.\n- **Admin-only setup.** Only workspace admins in [Product] can connect Slack or create summaries, so channel configuration stays controlled.\n- **Quiet days stay quiet.** If your queue is empty, you'll get a short confirmation rather than a wall of headers — or you can suppress empty summaries entirely.\n- **Weekend scheduling.** Choose which days the summary runs. Many teams turn off Saturday and Sunday.\n\n**Availability and pricing**\n\nThe Slack integration is included at no additional cost on Growth and Enterprise plans, and is available today in all regions. Team plan customers can trial it free for 30 days from the Integrations page.\n\n**What's next**\n\nThis is the first step in a broader Slack roadmap. We're currently testing real-time alerts for SLA breaches and new high-priority tickets, plus the ability to reply to a customer directly from a Slack thread. If you'd like early access to either, reply to this email and we'll add you to the beta list.\n\n**Get started**\n\nHead to **Settings → Integrations → Slack**, or read the [setup guide] for screenshots and filter examples. As always, our support team is one ticket away if you hit a snag — and yes, we'll see it in our own Slack summary tomorrow morning.\n=== END OF TEXT A ===\n\n=== TEXT B ===\n# Stay on top of support with our new Slack integration\n\nWe’re excited to introduce a simpler way to keep your team informed about customer support: **daily open-ticket summaries in Slack**.\n\nWith the new Slack integration, your helpdesk can post a summary of open support tickets to the channel of your choice—so everyone stays aligned without switching between tools or searching through inboxes.\n\n## What you’ll get\n\nEach daily summary gives your team a quick view of outstanding support work, helping you:\n\n- See how many tickets are still open\n- Keep customer issues visible to the right team\n- Spot follow-ups that may need attention\n- Start the day with a shared view of support priorities\n\nChoose the Slack channel that makes the most sense for your team—whether that’s a dedicated support channel, a customer-success workspace, or a team-wide updates channel.\n\n## Get started\n\nConnect Slack from your helpdesk settings, select the channel where you’d like summaries posted, and you’re ready to go.\n\nThe integration is available now for existing customers. Set it up today and make support visibility part of your team’s daily workflow.\n=== END OF TEXT B ===\n\nAnswer with a single JSON object and nothing else:\n{\"more_ai\": \"A\" or \"B\", \"confidence\": 1-5, \"tells_A\": [\"short tell\", ...], \"tells_B\": [\"short tell\", ...]}\n"
+   }
+  ],
+  "max_tokens": 16000,
+  "stream": true,
+  "stream_options": {
+   "include_usage": true
+  }
+ },
+ "usage": {
+  "input_tokens": 2355,
+  "output_tokens": 110,
+  "reasoning_tokens": 5592,
+  "cost_usd": null,
+  "served_model": "grok-4.6",
+  "provider": null
+ },
+ "verdict": {
+  "more_ai": "B",
+  "confidence": 4,
+  "tells_A": [
+   "bold-label paragraph openers",
+   "headers/bullets/numbered lists",
+   "triads",
+   "em dashes as clause joints",
+   "generic customer-research anecdote"
+  ],
+  "tells_B": [
+   "artificial enthusiasm (excited to introduce)",
+   "no concrete details for several sentences",
+   "headers and bullets",
+   "explains an obvious benefit",
+   "channel-choice triad",
+   "every point uplifts",
+   "em dash as clause joint"
+  ]
+ },
+ "response_raw": {
+  "id": "1d1b52b6-456d-956f-9561-bddd6d5a806b",
+  "model": "grok-4.6",
+  "created": 1788740080,
+  "system_fingerprint": "fp_e41c6060b2628547",
+  "object": "chat.completion",
+  "streamed": true,
+  "usage": {
+   "prompt_tokens": 2355,
+   "completion_tokens": 110,
+   "total_tokens": 8057,
+   "prompt_tokens_details": {
+    "text_tokens": 2355,
+    "audio_tokens": 0,
+    "image_tokens": 0,
+    "cached_tokens": 1280
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 5592,
+    "audio_tokens": 0,
+    "accepted_prediction_tokens": 0,
+    "rejected_prediction_tokens": 0
+   },
+   "num_sources_used": 0,
+   "cost_in_usd_ticks": 370020000
+  },
+  "choices": [
+   {
+    "index": 0,
+    "finish_reason": "stop",
+    "message": {
+     "role": "assistant",
+     "content": "{\"more_ai\": \"B\", \"confidence\": 4, \"tells_A\": [\"bold-label paragraph openers\", \"headers/bullets/numbered lists\", \"triads\", \"em dashes as clause joints\", \"generic customer-research anecdote\"], \"tells_B\": [\"artificial enthusiasm (excited to introduce)\", \"no concrete details for several sentences\", \"headers and bullets\", \"explains an obvious benefit\", \"channel-choice triad\", \"every point uplifts\", \"em dash as clause joint\"]}"
+    }
+   }
+  ]
+ }
+}

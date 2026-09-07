@@ -1,0 +1,123 @@
+{
+ "variant": "steered",
+ "arm": "astra",
+ "label": "GPT-6 Astra",
+ "vendor": "OpenAI",
+ "transport": "openai_responses",
+ "model_requested": "gpt-6-astra",
+ "serving_path": "OpenAI first-party, Responses API",
+ "prompt_id": "p3-linkedin",
+ "sample": 3,
+ "prompt_text": "Write a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n\nPlain prose only: no headers, no bullet points, no bold text, no em dashes. Write like a person.",
+ "run_utc": "2026-09-06T14:05:48Z",
+ "wall_s": 14.9,
+ "request_body": {
+  "model": "gpt-6-astra",
+  "input": "Write a LinkedIn post of up to 500 words about a lesson learned from shipping a feature that nobody used.\n\nPlain prose only: no headers, no bullet points, no bold text, no em dashes. Write like a person.",
+  "max_output_tokens": 8000,
+  "store": false
+ },
+ "usage": {
+  "input_tokens": 54,
+  "output_tokens": 389,
+  "reasoning_tokens": 0,
+  "effort_echoed": "medium",
+  "served_model": "gpt-6-astra"
+ },
+ "essay_sha256": "ab5406fb935eed68779aa17fd882d59edb24496dc25687366626a68c038b99d1",
+ "essay_words": 331,
+ "response_raw": {
+  "id": "resp_0f80760f2976e8fa016a9d732be42487d2bf53d711fbc291c9",
+  "object": "response",
+  "created_at": 1788703531,
+  "status": "completed",
+  "background": false,
+  "billing": {
+   "payer": "developer"
+  },
+  "completed_at": 1788703546,
+  "error": null,
+  "frequency_penalty": 0.0,
+  "incomplete_details": null,
+  "instructions": null,
+  "max_output_tokens": 8000,
+  "max_tool_calls": null,
+  "model": "gpt-6-astra",
+  "moderation": null,
+  "output": [
+   {
+    "id": "msg_0f80760f2976e8fa016a9d732cd52087d2b13a1a626dcee779",
+    "type": "message",
+    "status": "completed",
+    "content": [
+     {
+      "type": "output_text",
+      "annotations": [],
+      "logprobs": [],
+      "text": "The feature launched on a Tuesday. By Friday, I was checking the analytics dashboard like refreshing it might change the result.\n\nAlmost nobody had used it.\n\nWe had spent six weeks building it. The design was thoughtful. The engineering was solid. The launch announcement got a few enthusiastic replies.\n\nAnd then, nothing.\n\nMy first instinct was to blame discoverability. Maybe the button was in the wrong place. Maybe we needed another email. Maybe users just needed time.\n\nThose were easier explanations than the one we eventually found.\n\nWe had taken a handful of feature requests as proof of demand without asking enough questions about the work behind them.\n\nPeople had asked for a better way to generate reports. We built a flexible reporting tool with filters, saved views, and export options.\n\nWhen we went back and watched them work, most didn’t want to build a report at all. They wanted to answer one recurring question before a weekly meeting. Their spreadsheet already did that, badly but predictably.\n\nOur feature gave them more options. It also gave them another thing to learn and maintain.\n\nThe uncomfortable part was that we could have learned this before writing much code. We had asked, “Would this be useful?” We hadn’t asked, “Show me what you did last Friday.”\n\nThat changed how I approach feature requests.\n\nNow I want to see the current workaround. I want to know how often the problem happens, what it costs, and what someone would have to give up to use our solution.\n\nI also try to agree on what meaningful usage would look like before we start building. It makes the conversation after launch more honest, even when the numbers are disappointing.\n\nWe eventually replaced most of that reporting tool with a simple weekly summary. Fewer settings, less flexibility, much more use.\n\nI still wish we had those six weeks back. But I’m glad we stopped trying to improve the button and started asking why nobody needed to click it."
+     }
+    ],
+    "phase": "final_answer",
+    "role": "assistant"
+   }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0.0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+   "context": "all_turns",
+   "effort": "medium",
+   "mode": "standard",
+   "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": false,
+  "temperature": 1.0,
+  "text": {
+   "format": {
+    "type": "text"
+   },
+   "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+   "image_gen": {
+    "input_tokens": 0,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "output_tokens": 0,
+    "output_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 0
+    },
+    "total_tokens": 0
+   },
+   "web_search": {
+    "num_requests": 0
+   }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+   "input_tokens": 54,
+   "input_tokens_details": {
+    "cache_write_tokens": 0,
+    "cached_tokens": 0
+   },
+   "output_tokens": 389,
+   "output_tokens_details": {
+    "reasoning_tokens": 0
+   },
+   "total_tokens": 443
+  },
+  "user": null,
+  "metadata": {}
+ }
+}

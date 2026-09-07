@@ -1,0 +1,15 @@
+## Why Most Product Roadmaps Fail
+
+Product roadmaps are meant to provide direction: a shared view of where a product is going, why it matters, and how the organization intends to get there. Yet many roadmaps become obsolete, misleading, or ignored. Their failure is usually not caused by poor formatting or inadequate software. It stems from treating uncertainty as certainty.
+
+The most common mistake is presenting a roadmap as a fixed delivery schedule. Teams assign features to specific dates months in advance, despite limited knowledge about customer needs, technical complexity, and market conditions. Once executives, sales teams, or customers see those dates, tentative plans become commitments. Product teams then focus on meeting deadlines rather than validating whether the promised features still deserve to be built.
+
+Roadmaps also fail when they are organized around outputs instead of outcomes. A list of features may describe what a team plans to release, but it does not explain what success looks like. Without goals such as improving retention, reducing onboarding time, or increasing conversion, teams can deliver everything on schedule while producing little value. Shipping becomes a substitute for progress.
+
+Another problem is weak prioritization. Many roadmaps are compilations of requests from senior leaders, major customers, sales teams, and internal departments. To avoid difficult conversations, product managers place nearly every request somewhere on the timeline. The result is not a strategy but a queue. Resources are spread across too many initiatives, dependencies multiply, and the most important problems receive insufficient attention.
+
+Roadmaps can also disconnect strategy from execution. High-level ambitions such as “expand into new markets” are meaningless unless teams understand the assumptions behind them and the problems they must solve. Conversely, detailed feature plans become arbitrary when employees cannot connect them to a broader purpose. A useful roadmap must bridge these levels: vision, measurable outcomes, customer problems, and near-term initiatives.
+
+Poor maintenance further erodes trust. Markets change, experiments fail, competitors act, and new evidence emerges. A roadmap that never changes is probably not learning; one that changes without explanation appears chaotic. Effective roadmap management therefore requires regular review and clear communication about what changed, why it changed, and what trade-offs followed.
+
+Ultimately, most product roadmaps fail because organizations ask them to predict the future rather than guide decisions. A strong roadmap is not a contract or a feature calendar. It is a living strategic tool that communicates priorities, assumptions, intended outcomes, and areas of uncertainty. Its value lies less in accurately forecasting delivery than in helping people make coherent choices as new information arrives.
